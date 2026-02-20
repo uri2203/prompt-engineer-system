@@ -26,15 +26,15 @@ def verificar_credenciales(u, p):
         db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
-# --- INTERFACES VISUALES RECONSTRUIDAS (DISEÑO CORPORATE TECH) ---
+# --- DISEÑO CORPORATE TECH ORIGINAL RECUPERADO ---
 
 HTML_LOGIN = """
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><title>Acceso | AI System</title><script src="https://cdn.tailwindcss.com"></script></head>
 <body class="bg-[#0f172a] h-screen flex items-center justify-center font-sans">
     <div class="bg-[#1e293b] p-10 rounded-2xl shadow-2xl border border-slate-700 w-96 text-center">
-        <h2 class="text-blue-400 font-bold text-xl mb-2 tracking-widest">ADMIN LOGIN</h2>
-        <p class="text-slate-500 text-[10px] mb-8 uppercase">Acceso Restringido - Nivel 1</p>
+        <h2 class="text-blue-400 font-bold text-xl mb-2 tracking-widest uppercase">Admin Login</h2>
+        <p class="text-slate-500 text-[10px] mb-8 uppercase font-bold tracking-[0.2em]">Acceso Restringido</p>
         <form action="/login" method="POST" class="space-y-4">
             <input type="text" name="username" placeholder="Usuario" required class="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-800 text-white outline-none focus:border-blue-500 transition-all text-sm">
             <input type="password" name="password" placeholder="Contraseña" required class="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-800 text-white outline-none focus:border-blue-500 transition-all text-sm">
@@ -54,7 +54,7 @@ HTML_INDEX = """
     <style>
         body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
         .glass-panel { background: rgba(30, 41, 59, 0.7); border: 1px solid #334155; backdrop-filter: blur(10px); }
-        .active-tab { background-color: #2563eb; color: white; box-shadow: 0 4px 15px rgba(37,99,235,0.3); }
+        .active-tab { background-color: #2563eb; color: white; box-shadow: 0 4px 15px rgba(37,99,235,0.3); border-color: #3b82f6; }
         .inactive-tab { color: #94a3b8; border: 1px solid transparent; }
         .inactive-tab:hover { background: #1e293b; color: white; }
     </style>
@@ -66,47 +66,49 @@ HTML_INDEX = """
                 <h1 class="text-xl font-bold text-blue-400 tracking-tighter">AI PROMPT SYSTEM</h1>
                 <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Arquitectura Modular</p>
             </div>
-            <a href="/logout" class="text-[9px] bg-red-900/20 text-red-500 border border-red-900/50 px-2 py-1 rounded hover:bg-red-900/40">SALIR</a>
+            <a href="/logout" class="text-[9px] bg-red-900/20 text-red-500 border border-red-900/50 px-2 py-1 rounded hover:bg-red-900/40 font-bold">SALIR</a>
         </div>
         
         <nav class="flex-1 space-y-2">
-            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition-all active-tab">MOD 1: UNIVERSAL</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition-all inactive-tab uppercase">MOD 2: Guiones (Retención)</button>
-            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition-all inactive-tab uppercase">MOD 3: Micro-Hooks</button>
-            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition-all inactive-tab uppercase">MOD 4: Metadatos</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition-all inactive-tab uppercase">MOD 5: UGC & Ventas</button>
+            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all active-tab uppercase tracking-wider">Mod 1: Traductor Universal</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 3: Micro-Hooks</button>
+            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 4: Metadatos</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 5: UGC & Ventas</button>
         </nav>
 
         {% if is_admin %}
-        <div class="mt-auto p-4 bg-blue-900/10 border border-blue-900/30 rounded-2xl">
-            <p class="text-[10px] text-blue-400 font-bold uppercase mb-3">Registrar Colaborador</p>
-            <input type="text" id="new_u" placeholder="Usuario" class="w-full p-2 mb-2 rounded-lg bg-slate-950 text-[11px] border border-slate-800 outline-none focus:border-blue-500">
-            <input type="password" id="new_p" placeholder="Password" class="w-full p-2 mb-3 rounded-lg bg-slate-950 text-[11px] border border-slate-800 outline-none focus:border-blue-500">
-            <button onclick="registrar()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold py-2 rounded-lg transition-all">CREAR ACCESO</button>
+        <div class="mt-auto p-5 bg-blue-900/10 border border-blue-900/30 rounded-2xl shadow-inner">
+            <p class="text-[10px] text-blue-400 font-bold uppercase mb-3 tracking-widest">Registrar Colaborador</p>
+            <input type="text" id="new_u" placeholder="Usuario" class="w-full p-3 mb-2 rounded-lg bg-slate-950 text-[11px] border border-slate-800 text-white outline-none focus:border-blue-500">
+            <input type="password" id="new_p" placeholder="Password" class="w-full p-3 mb-4 rounded-lg bg-slate-950 text-[11px] border border-slate-800 text-white outline-none focus:border-blue-500">
+            <button onclick="registrar()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold py-3 rounded-lg transition-all shadow-lg shadow-emerald-900/20">CREAR ACCESO</button>
         </div>
         {% endif %}
     </aside>
 
-    <main class="flex-1 flex p-8 gap-8 overflow-hidden">
+    <main class="flex-1 flex p-8 gap-8 overflow-hidden bg-[#0B1120]">
         <div class="w-1/2 flex flex-col gap-6 overflow-y-auto pr-4">
             <div id="form_container" class="space-y-6">
-                <div id="ui_mod_1">
-                    <h2 class="text-2xl font-bold mb-6">Traductor Universal</h2>
+                <div id="ui_content">
+                    <h2 class="text-2xl font-bold mb-6 tracking-tight" id="mod_title">Traductor Universal</h2>
                     <div class="space-y-4">
-                        <input type="text" id="m1_rol" placeholder="Rol del Experto (Ej: Editor Técnico)" class="w-full p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm">
-                        <textarea id="m1_peticion" placeholder="¿Qué necesitas ejecutar?" class="w-full h-40 p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm resize-none"></textarea>
+                        <input type="text" id="field_1" placeholder="Rol del Experto (Ej: Editor Técnico)" class="w-full p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm focus:border-blue-500 transition-all">
+                        <textarea id="field_2" placeholder="¿Qué necesitas ejecutar?" class="w-full h-40 p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm resize-none focus:border-blue-500 transition-all"></textarea>
                     </div>
                 </div>
             </div>
-            <button onclick="ejecutar()" id="btn_main" class="w-full bg-blue-600 hover:bg-blue-500 py-5 rounded-2xl font-bold text-sm tracking-widest shadow-xl shadow-blue-900/20 transition-all">COMPILAR Y EJECUTAR</button>
+            <button onclick="ejecutar()" id="btn_main" class="w-full bg-blue-600 hover:bg-blue-500 py-5 rounded-2xl font-black text-xs tracking-[0.2em] shadow-xl shadow-blue-900/20 transition-all uppercase">Compilar y Ejecutar</button>
         </div>
 
-        <div class="w-1/2 flex flex-col glass-panel rounded-3xl p-8 shadow-2xl">
+        <div class="w-1/2 flex flex-col glass-panel rounded-3xl p-8 shadow-2xl relative">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-[10px] font-black text-emerald-400 uppercase tracking-[0.2em]">Output Blindado (Lenguaje IA)</h3>
-                <span id="status_tag" class="text-[9px] text-slate-500 font-mono">IDLE</span>
+                <h3 class="text-[10px] font-black text-emerald-400 uppercase tracking-[0.3em]">Output Blindado</h3>
+                <div class="flex gap-2">
+                    <span id="status_tag" class="text-[9px] bg-slate-800 px-2 py-1 rounded text-slate-400 font-mono">IDLE</span>
+                </div>
             </div>
-            <textarea id="output" class="flex-1 w-full bg-[#0a0f18]/50 border border-slate-800/50 rounded-2xl p-6 text-emerald-300 font-mono text-xs leading-relaxed resize-none focus:outline-none" readonly placeholder="Esperando inyección lógica..."></textarea>
+            <textarea id="output" class="flex-1 w-full bg-[#0a0f18]/40 border border-slate-800/50 rounded-2xl p-6 text-emerald-300 font-mono text-xs leading-relaxed resize-none focus:outline-none scrollbar-hide" readonly placeholder="Esperando inyección lógica..."></textarea>
         </div>
     </main>
 
@@ -116,21 +118,32 @@ HTML_INDEX = """
             moduloActivo = id;
             document.querySelectorAll('nav button').forEach(b => b.classList.replace('active-tab', 'inactive-tab'));
             document.getElementById('btn_' + id).classList.replace('inactive-tab', 'active-tab');
+            const titles = {mod_1:'Traductor Universal', mod_2:'Ingeniería de Guiones', mod_3:'Micro-Hooks Secuenciales', mod_4:'Empaquetado y Metadatos', mod_5:'Motor de Ventas y UGC'};
+            document.getElementById('mod_title').innerText = titles[id];
         }
 
         async function ejecutar() {
             const btn = document.getElementById('btn_main');
             const out = document.getElementById('output');
-            btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+            const status = document.getElementById('status_tag');
             
-            const res = await fetch('/api/ejecutar', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({modulo_id: moduloActivo, datos: {peticion: document.getElementById('m1_peticion')?.value}})
-            });
-            const data = await res.json();
-            out.value = data.resultado_ia || data.error;
-            btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
+            btn.innerHTML = "PROCESANDO LÓGICA..."; btn.disabled = true;
+            status.innerText = "RUNNING"; status.classList.replace('text-slate-400', 'text-yellow-400');
+            
+            try {
+                const res = await fetch('/api/ejecutar', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({modulo_id: moduloActivo, datos: {p: document.getElementById('field_1').value, c: document.getElementById('field_2').value}})
+                });
+                const data = await res.json();
+                out.value = data.resultado_ia || data.error;
+                status.innerText = "COMPLETED"; status.classList.replace('text-yellow-400', 'text-emerald-400');
+            } catch (e) {
+                out.value = "Error de conexión.";
+            } finally {
+                btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
+            }
         }
 
         async function registrar() {
@@ -156,7 +169,7 @@ def login():
             session['user'] = u
             session['isAdmin'] = (u == '1978')
             return redirect(url_for('dashboard'))
-        return "Error de acceso", 401
+        return "Acceso denegado", 401
     return render_template_string(HTML_LOGIN)
 
 @app.route('/')
@@ -175,7 +188,8 @@ def ejecutar_prompt():
     try:
         data = request.json
         model = genai.GenerativeModel('gemini-pro')
-        response = model.generate_content(f"MODULO: {data.get('modulo_id')}. DATOS: {data.get('datos')}")
+        prompt = f"Actúa como experto en {data.get('modulo_id')}. Datos: {data.get('datos')}. Respuesta profesional y directa."
+        response = model.generate_content(prompt)
         return jsonify({'status': 'success', 'resultado_ia': response.text})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -187,7 +201,7 @@ def registrar():
     with open(DB_PATH, 'r') as f: db = json.load(f)
     db[d.get('username')] = hashlib.sha256(d.get('password').encode()).hexdigest()
     with open(DB_PATH, 'w') as f: json.dump(db, f)
-    return jsonify({'status': 'success', 'message': 'Usuario creado'})
+    return jsonify({'status': 'success', 'message': f'Usuario {d.get("username")} registrado.'})
 
 if __name__ == '__main__':
     inicializar_db()
