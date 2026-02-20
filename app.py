@@ -7,18 +7,22 @@ import google.generativeai as genai
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 api_key = os.environ.get("GEMINI_API_KEY")
-if api_key: genai.configure(api_key=api_key)
+
+if api_key:
+    genai.configure(api_key=api_key)
 
 DB_PATH = 'usuarios_db.json'
 
 def inicializar_db():
     if not os.path.exists(DB_PATH):
         admin_pw = hashlib.sha256("1978".encode()).hexdigest()
-        with open(DB_PATH, 'w') as f: json.dump({"1978": admin_pw}, f)
+        with open(DB_PATH, 'w') as f:
+            json.dump({"1978": admin_pw}, f)
 
 def verificar_credenciales(u, p):
     inicializar_db()
-    with open(DB_PATH, 'r') as f: db = json.load(f)
+    with open(DB_PATH, 'r') as f:
+        db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
 # --- DISEÑO CORPORATE TECH CLONADO EXACTAMENTE DE LA CAPTURA ---
@@ -138,122 +142,4 @@ HTML_INDEX = """
                     </div>
 
                     <div>
-                        <label class="label-green block mb-1.5">RACCORD (ANCLAJE FÍSICO BLOQUE ANTERIOR)</label>
-                        <input type="text" id="m5_raccord" placeholder="Pega el prompt visual anterior..." class="w-full p-2.5 text-sm">
-                    </div>
-                </div>
-            </div>
-
-            <div id="ui_mod_1" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-blue block mb-1.5">ROL / INSTRUCCIÓN TÉCNICA</label>
-                        <input type="text" id="m1_rol" placeholder="Ej: Editor Técnico Estricto" class="w-full p-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">CUERPO DE LA PETICIÓN</label>
-                        <textarea id="m1_texto" placeholder="Describe lo que necesitas procesar..." class="w-full h-48 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-3.5 mt-2 rounded-lg font-bold text-[13px] tracking-wide shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all">COMPILAR Y EJECUTAR</button>
-        </div>
-
-        <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl relative">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-[#10b981] font-bold text-[11px] uppercase tracking-widest">Output Blindado (Lenguaje IA)</h3>
-                <button onclick="copiarOutput()" class="bg-[#1e293b] hover:bg-slate-700 text-slate-300 text-[10px] px-3 py-1.5 rounded transition-all border border-slate-700">Copiar Todo</button>
-            </div>
-            <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed resize-none outline-none scrollbar-hide" readonly placeholder="El resultado de la inyección lógica aparecerá aquí..."></textarea>
-        </div>
-    </main>
-
-    <script>
-        let moduloActivo = 'mod_5'; // Iniciamos en el Mod 5 como en tu captura
-        
-        function switchTab(id) {
-            moduloActivo = id;
-            // Estilos de botones
-            document.querySelectorAll('nav button').forEach(b => {
-                b.classList.remove('active-tab');
-                b.classList.add('inactive-tab');
-            });
-            document.getElementById('btn_' + id).classList.remove('inactive-tab');
-            document.getElementById('btn_' + id).classList.add('active-tab');
-            
-            // Mostrar contenido correcto
-            document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
-            const targetUI = document.getElementById('ui_' + id);
-            if(targetUI) { targetUI.classList.remove('hidden'); }
-        }
-
-        async function ejecutar() {
-            const btn = document.getElementById('btn_main');
-            const out = document.getElementById('output');
-            btn.innerHTML = "PROCESANDO LÓGICA..."; btn.disabled = true;
-            
-            // Recopilar datos según el módulo
-            let datos = {};
-            if(moduloActivo === 'mod_5') {
-                datos = {
-                    gatillo: document.getElementById('m5_gatillo').value,
-                    modalidad: document.getElementById('m5_modalidad').value,
-                    avatar: document.getElementById('m5_avatar').value,
-                    duracion: document.getElementById('m5_duracion').value,
-                    bloque: document.getElementById('m5_bloque').value,
-                    raccord: document.getElementById('m5_raccord').value
-                };
-            } else if (moduloActivo === 'mod_1') {
-                datos = { rol: document.getElementById('m1_rol').value, texto: document.getElementById('m1_texto').value };
-            }
-
-            try {
-                const res = await fetch('/api/ejecutar', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({modulo_id: moduloActivo, datos: datos})
-                });
-                const data = await res.json();
-                out.value = data.resultado_ia || data.error;
-            } catch (e) {
-                out.value = "Error de conexión con el motor IA.";
-            } finally {
-                btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
-            }
-        }
-
-        function copiarOutput() {
-            const out = document.getElementById('output');
-            out.select();
-            document.execCommand('copy');
-            alert('Código copiado al portapapeles');
-        }
-    </script>
-</body></html>
-"""
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        u, p = request.form.get('username'), request.form.get('password')
-        if verificar_credenciales(u, p):
-            session['user'] = u; session['isAdmin'] = (u == '1978')
-            return redirect(url_for('dashboard'))
-        return "Acceso denegado. Intenta de nuevo.", 401
-    return render_template_string(HTML_LOGIN)
-
-@app.route('/')
-def dashboard():
-    if 'user' not in session: return redirect(url_for('login'))
-    return render_template_string(HTML_INDEX, is_admin=session.get('isAdmin'))
-
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect(url_for('login'))
-
-@app.route('/api/ejecutar', methods=['POST'])
-def ejecutar_prompt():
-    if 'user' not in session:
+                        <label class="label-green block mb-
