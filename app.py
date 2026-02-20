@@ -1,9 +1,11 @@
-import os, json, hashlib
+import os
+import json
+import hashlib
 from flask import Flask, request, jsonify, render_template_string, session, redirect, url_for
 import google.generativeai as genai
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978")
+app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 api_key = os.environ.get("GEMINI_API_KEY")
 if api_key: genai.configure(api_key=api_key)
 
@@ -16,21 +18,22 @@ def inicializar_db():
 
 def verificar_credenciales(u, p):
     inicializar_db()
-    with open(DB_PATH, 'r') as f:
-        db = json.load(f)
+    with open(DB_PATH, 'r') as f: db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
-# --- DISEÑO "CORPORATE TECH" ORIGINAL ---
+# --- DISEÑO CORPORATE TECH CLONADO EXACTAMENTE DE LA CAPTURA ---
+
 HTML_LOGIN = """
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><title>Acceso | AI System</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#0f172a] h-screen flex items-center justify-center font-sans">
-    <div class="bg-[#1e293b] p-10 rounded-2xl shadow-2xl border border-slate-700 w-96 text-center">
-        <h2 class="text-blue-400 font-bold text-xl mb-6 tracking-widest uppercase">Admin Login</h2>
+<html lang="es"><head><meta charset="UTF-8"><title>AI Prompt System | Login</title><script src="https://cdn.tailwindcss.com"></script></head>
+<body class="bg-[#0B1120] h-screen flex items-center justify-center font-sans text-white">
+    <div class="bg-[#0F1523] p-10 rounded-xl shadow-2xl border border-slate-800 w-96 text-center">
+        <h2 class="text-[#3b82f6] font-bold text-xl mb-1 tracking-tight">AI Prompt System</h2>
+        <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-8 font-bold">Arquitectura Modular</p>
         <form action="/login" method="POST" class="space-y-4">
-            <input type="text" name="username" placeholder="Usuario" required class="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-800 text-white outline-none focus:border-blue-500 transition-all text-sm uppercase">
-            <input type="password" name="password" placeholder="Contraseña" required class="w-full p-4 rounded-xl bg-[#0f172a] border border-slate-800 text-white outline-none focus:border-blue-500 transition-all text-sm uppercase">
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-500/20 uppercase text-xs">Entrar</button>
+            <input type="text" name="username" placeholder="Usuario (Ej. 1978)" required class="w-full p-3 rounded-lg bg-[#0B1120] border border-slate-700 text-white outline-none focus:border-[#3b82f6] text-sm">
+            <input type="password" name="password" placeholder="Contraseña" required class="w-full p-3 rounded-lg bg-[#0B1120] border border-slate-700 text-white outline-none focus:border-[#3b82f6] text-sm">
+            <button type="submit" class="w-full bg-[#2563eb] hover:bg-blue-500 text-white font-bold py-3 rounded-lg transition-all text-sm">Ingresar al Sistema</button>
         </form>
     </div>
 </body></html>
@@ -41,83 +44,191 @@ HTML_INDEX = """
 <html lang="es">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt System | Pro</title>
+    <title>AI Prompt System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass-panel { background: rgba(30, 41, 59, 0.7); border: 1px solid #334155; backdrop-filter: blur(10px); }
-        .active-tab { background-color: #2563eb; color: white; border-color: #3b82f6; box-shadow: 0 4px 15px rgba(37,99,235,0.3); }
-        .inactive-tab { color: #94a3b8; border: 1px solid transparent; }
-        .inactive-tab:hover { background: #1e293b; color: white; }
+        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .sidebar { background-color: #0F1523; border-right: 1px solid #1e293b; }
+        .glass-panel { background-color: #0F1523; border: 1px solid #1e293b; border-radius: 12px; }
+        .active-tab { background-color: transparent; border: 2px solid #3b82f6; box-shadow: inset 0 0 10px rgba(59,130,246,0.2); border-radius: 8px; color: #f8fafc; }
+        .inactive-tab { color: #94a3b8; border: 2px solid transparent; }
+        .inactive-tab:hover { background-color: #1e293b; color: white; border-radius: 8px; }
+        input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; }
+        input:focus, select:focus, textarea:focus { border-color: #3b82f6; }
+        .label-red { color: #f43f5e; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .label-blue { color: #60a5fa; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .label-green { color: #34d399; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 </head>
-<body class="h-screen flex overflow-hidden">
-    <aside class="w-80 glass-panel border-r border-slate-800 flex flex-col p-6 z-10">
-        <div class="mb-10 flex justify-between items-center">
-            <div><h1 class="text-xl font-bold text-blue-400">AI SYSTEM</h1><p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Corporate Tech</p></div>
-            <a href="/logout" class="text-[9px] bg-red-900/20 text-red-500 border border-red-900/50 px-2 py-1 rounded">SALIR</a>
+<body class="h-screen flex overflow-hidden selection:bg-blue-500/30">
+    
+    <aside class="w-[280px] sidebar flex flex-col p-5 z-10">
+        <div class="mb-8">
+            <h1 class="text-xl font-bold text-[#3b82f6] tracking-tight">AI Prompt System</h1>
+            <p class="text-[9px] text-slate-500 font-bold uppercase tracking-[0.15em] mt-1">Arquitectura Modular</p>
         </div>
+        
         <nav class="flex-1 space-y-2">
-            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all active-tab uppercase tracking-wider">Mod 1: Universal</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 2: Guiones</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-5 py-3.5 rounded-xl text-xs font-bold transition-all inactive-tab uppercase tracking-wider">Mod 5: Ventas</button>
+            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 1: Traductor Universal</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks (Secuencia)</button>
+            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos y Visuales</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm font-medium transition-all active-tab">Mod 5: UGC 9:16 y Ventas</button>
         </nav>
-        {% if is_admin %}<div class="mt-auto p-5 bg-blue-900/10 border border-blue-900/30 rounded-2xl">
-            <p class="text-[10px] text-blue-400 font-bold uppercase mb-3 tracking-widest text-center">Registrar Acceso</p>
-            <input type="text" id="new_u" placeholder="USUARIO" class="w-full p-2 mb-2 rounded bg-slate-950 text-[11px] border border-slate-800 text-white">
-            <input type="password" id="new_p" placeholder="PASSWORD" class="w-full p-2 mb-3 rounded bg-slate-950 text-[11px] border border-slate-800 text-white">
-            <button onclick="registrar()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold py-3 rounded-lg transition-all shadow-lg shadow-emerald-900/20">CREAR</button>
-        </div>{% endif %}
+
+        <div class="mt-auto pt-4 border-t border-slate-800/50 flex justify-between items-center">
+            <p class="text-[11px] text-slate-400">Estado del Sistema: <span class="text-[#10b981] font-bold">EN LÍNEA</span></p>
+            {% if is_admin %}
+                <a href="/logout" class="text-[10px] text-slate-500 hover:text-red-400 transition-colors">Salir</a>
+            {% endif %}
+        </div>
     </aside>
 
-    <main class="flex-1 flex p-8 gap-8 bg-[#0B1120] overflow-hidden">
-        <div class="w-1/2 flex flex-col gap-6 overflow-y-auto pr-4">
-            <h2 class="text-2xl font-bold mb-6 tracking-tight" id="mod_title">Traductor Universal</h2>
-            <div class="space-y-4">
-                <input type="text" id="p1" placeholder="Rol / Instrucción Técnica" class="w-full p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm focus:border-blue-500 outline-none">
-                <textarea id="p2" placeholder="Cuerpo de la petición..." class="w-full h-44 p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm resize-none focus:border-blue-500 outline-none"></textarea>
+    <main class="flex-1 flex p-8 gap-6 bg-[#0B1120] overflow-hidden">
+        
+        <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2 scrollbar-hide">
+            
+            <div id="ui_mod_5" class="module-content block">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Ventas y UGC 9:16</h2>
+                
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-red block mb-1.5">GATILLO PSICOLÓGICO (NEURO-MARKETING)</label>
+                        <select id="m5_gatillo" class="w-full p-2.5 text-sm">
+                            <option>FOMO y Escasez (Urgencia / Exclusividad)</option>
+                            <option>Prueba Social (Validación de Masas)</option>
+                            <option>Riesgo Invertido (Garantías Absolutas)</option>
+                            <option>Curiosidad Extrema (Vacío de Información)</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="label-blue block mb-1.5">MODALIDAD</label>
+                            <select id="m5_modalidad" class="w-full p-2.5 text-sm">
+                                <option>Influencer Sintético (UGC)</option>
+                                <option>Voz en Off Dinámica</option>
+                                <option>Texto en Pantalla (Mudo)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">PERFIL DE AVATAR</label>
+                            <select id="m5_avatar" class="w-full p-2.5 text-sm">
+                                <option>Femenino Gen-Z</option>
+                                <option>Masculino Tech/Ejecutivo</option>
+                                <option>Especialista Clínico</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">DURACIÓN</label>
+                            <select id="m5_duracion" class="w-full p-2.5 text-sm">
+                                <option>4 segundos</option>
+                                <option>8 segundos</option>
+                                <option>15 segundos</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">NÚMERO DE BLOQUE</label>
+                            <select id="m5_bloque" class="w-full p-2.5 text-sm">
+                                <option>Bloque 1 (Inicio)</option>
+                                <option>Bloque 2 (Retención)</option>
+                                <option>Bloque 3 (Call to Action)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="label-green block mb-1.5">RACCORD (ANCLAJE FÍSICO BLOQUE ANTERIOR)</label>
+                        <input type="text" id="m5_raccord" placeholder="Pega el prompt visual anterior..." class="w-full p-2.5 text-sm">
+                    </div>
+                </div>
             </div>
-            <button onclick="ejecutar()" id="btn_main" class="w-full bg-blue-600 hover:bg-blue-500 py-5 rounded-2xl font-black text-xs tracking-[0.2em] shadow-xl shadow-blue-900/20 transition-all uppercase">Compilar y Ejecutar</button>
+
+            <div id="ui_mod_1" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-blue block mb-1.5">ROL / INSTRUCCIÓN TÉCNICA</label>
+                        <input type="text" id="m1_rol" placeholder="Ej: Editor Técnico Estricto" class="w-full p-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">CUERPO DE LA PETICIÓN</label>
+                        <textarea id="m1_texto" placeholder="Describe lo que necesitas procesar..." class="w-full h-48 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-3.5 mt-2 rounded-lg font-bold text-[13px] tracking-wide shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all">COMPILAR Y EJECUTAR</button>
         </div>
-        <div class="w-1/2 flex flex-col glass-panel rounded-3xl p-8 relative">
-            <h3 class="text-[10px] font-black text-emerald-400 uppercase tracking-[0.3em] mb-4">Output IA</h3>
-            <textarea id="output" class="flex-1 w-full bg-transparent text-emerald-300 font-mono text-xs leading-relaxed resize-none outline-none scrollbar-hide" readonly placeholder="Esperando inyección lógica..."></textarea>
+
+        <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl relative">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-[#10b981] font-bold text-[11px] uppercase tracking-widest">Output Blindado (Lenguaje IA)</h3>
+                <button onclick="copiarOutput()" class="bg-[#1e293b] hover:bg-slate-700 text-slate-300 text-[10px] px-3 py-1.5 rounded transition-all border border-slate-700">Copiar Todo</button>
+            </div>
+            <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed resize-none outline-none scrollbar-hide" readonly placeholder="El resultado de la inyección lógica aparecerá aquí..."></textarea>
         </div>
     </main>
 
     <script>
-        let moduloActivo = 'mod_1';
+        let moduloActivo = 'mod_5'; // Iniciamos en el Mod 5 como en tu captura
+        
         function switchTab(id) {
             moduloActivo = id;
-            document.querySelectorAll('nav button').forEach(b => b.classList.replace('active-tab', 'inactive-tab'));
-            document.getElementById('btn_'+id).classList.replace('inactive-tab', 'active-tab');
-            const t = {mod_1: 'Traductor Universal', mod_2: 'Ingeniería de Guiones', mod_5: 'Motor de Ventas'};
-            document.getElementById('mod_title').innerText = t[id];
+            // Estilos de botones
+            document.querySelectorAll('nav button').forEach(b => {
+                b.classList.remove('active-tab');
+                b.classList.add('inactive-tab');
+            });
+            document.getElementById('btn_' + id).classList.remove('inactive-tab');
+            document.getElementById('btn_' + id).classList.add('active-tab');
+            
+            // Mostrar contenido correcto
+            document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
+            const targetUI = document.getElementById('ui_' + id);
+            if(targetUI) { targetUI.classList.remove('hidden'); }
         }
+
         async function ejecutar() {
             const btn = document.getElementById('btn_main');
             const out = document.getElementById('output');
-            btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+            btn.innerHTML = "PROCESANDO LÓGICA..."; btn.disabled = true;
+            
+            // Recopilar datos según el módulo
+            let datos = {};
+            if(moduloActivo === 'mod_5') {
+                datos = {
+                    gatillo: document.getElementById('m5_gatillo').value,
+                    modalidad: document.getElementById('m5_modalidad').value,
+                    avatar: document.getElementById('m5_avatar').value,
+                    duracion: document.getElementById('m5_duracion').value,
+                    bloque: document.getElementById('m5_bloque').value,
+                    raccord: document.getElementById('m5_raccord').value
+                };
+            } else if (moduloActivo === 'mod_1') {
+                datos = { rol: document.getElementById('m1_rol').value, texto: document.getElementById('m1_texto').value };
+            }
+
             try {
                 const res = await fetch('/api/ejecutar', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({modulo_id: moduloActivo, datos: {p1: document.getElementById('p1').value, p2: document.getElementById('p2').value}})
+                    body: JSON.stringify({modulo_id: moduloActivo, datos: datos})
                 });
                 const data = await res.json();
                 out.value = data.resultado_ia || data.error;
-            } catch (e) { out.value = "Error de red."; }
-            finally { btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false; }
+            } catch (e) {
+                out.value = "Error de conexión con el motor IA.";
+            } finally {
+                btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
+            }
         }
-        async function registrar() {
-            const u = document.getElementById('new_u').value;
-            const p = document.getElementById('new_p').value;
-            const res = await fetch('/api/registrar', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({username: u, password: p})
-            });
-            const d = await res.json(); alert(d.message);
+
+        function copiarOutput() {
+            const out = document.getElementById('output');
+            out.select();
+            document.execCommand('copy');
+            alert('Código copiado al portapapeles');
         }
     </script>
 </body></html>
@@ -130,7 +241,7 @@ def login():
         if verificar_credenciales(u, p):
             session['user'] = u; session['isAdmin'] = (u == '1978')
             return redirect(url_for('dashboard'))
-        return "Acceso denegado", 401
+        return "Acceso denegado. Intenta de nuevo.", 401
     return render_template_string(HTML_LOGIN)
 
 @app.route('/')
@@ -139,27 +250,10 @@ def dashboard():
     return render_template_string(HTML_INDEX, is_admin=session.get('isAdmin'))
 
 @app.route('/logout')
-def logout(): session.clear(); return redirect(url_for('login'))
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
 
 @app.route('/api/ejecutar', methods=['POST'])
 def ejecutar_prompt():
-    if 'user' not in session: return jsonify({'error': 'No auth'}), 401
-    try:
-        data = request.json
-        model = genai.GenerativeModel('gemini-pro')
-        response = model.generate_content(f"MODULO: {data.get('modulo_id')}. INSTRUCCIÓN: {data.get('datos')}")
-        return jsonify({'status': 'success', 'resultado_ia': response.text})
-    except Exception as e: return jsonify({'error': str(e)}), 500
-
-@app.route('/api/registrar', methods=['POST'])
-def registrar():
-    if not session.get('isAdmin'): return jsonify({'error': 'Denegado'}), 403
-    d = request.json
-    with open(DB_PATH, 'r') as f: db = json.load(f)
-    db[d.get('username')] = hashlib.sha256(d.get('password').encode()).hexdigest()
-    with open(DB_PATH, 'w') as f: json.dump(db, f)
-    return jsonify({'status': 'success', 'message': 'Usuario registrado'})
-
-if __name__ == '__main__':
-    inicializar_db()
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    if 'user' not in session:
