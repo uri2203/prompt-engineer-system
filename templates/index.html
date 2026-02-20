@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Engineer Pro | Sistema Modular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .glass-panel { background: rgba(30, 41, 59, 0.8); border: 1px solid #334155; }
+        .active-tab { background-color: #2563eb; color: white; border-color: #3b82f6; }
+        .inactive-tab { background-color: #1e293b; color: #94a3b8; border-color: #334155; }
+        .inactive-tab:hover { background-color: #334155; color: #f1f5f9; }
+        textarea, input, select { background-color: #0f172a; border: 1px solid #334155; color: #e2e8f0; }
+        textarea:focus, input:focus, select:focus { outline: none; border-color: #3b82f6; ring: 1px; ring-color: #3b82f6; }
+    </style>
+</head>
+<body class="min-h-screen flex h-screen overflow-hidden">
+
+    <aside class="w-72 glass-panel border-r flex flex-col p-4 shadow-xl z-10">
+        <div class="mb-8 mt-2 px-2">
+            <h1 class="text-xl font-bold text-blue-400 tracking-tight">AI Prompt System</h1>
+            <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest font-semibold">Arquitectura Modular</p>
+        </div>
+        
+        <nav class="flex-1 space-y-3">
+            <button onclick="switchTab('mod_1_universal')" id="btn_mod_1_universal" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all active-tab shadow-lg shadow-blue-500/20">Mod 1: Traductor Universal</button>
+            <button onclick="switchTab('mod_2_guiones')" id="btn_mod_2_guiones" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all inactive-tab">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_3_hooks')" id="btn_mod_3_hooks" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks (Secuencia)</button>
+            <button onclick="switchTab('mod_4_empaquetado')" id="btn_mod_4_empaquetado" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos y Visuales</button>
+            <button onclick="switchTab('mod_5_ugc_ventas')" id="btn_mod_5_ugc_ventas" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all inactive-tab">Mod 5: UGC 9:16 y Ventas</button>
+        </nav>
+        
+        <div class="mt-auto p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+            <p class="text-xs text-slate-400">Estado del Sistema: <span class="text-emerald-400 font-bold ml-1">EN LÍNEA</span></p>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden bg-[#0B1120]">
+        <div class="flex-1 overflow-y-auto p-8 flex gap-8">
+            
+            <div class="w-1/2 flex flex-col gap-6">
+                
+                <div id="form_mod_1_universal" class="form-module block">
+                    <h2 class="text-2xl font-semibold mb-6 text-slate-100">Traductor Universal (Zero-Shot)</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Rol / Experto</label>
+                            <input type="text" id="m1_rol" class="w-full p-3 rounded-lg text-sm" placeholder="Ej. Ingeniero de Software, Asesor Estratégico...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Contexto inamovible</label>
+                            <textarea id="m1_contexto" class="w-full h-24 p-3 rounded-lg resize-none text-sm" placeholder="Datos clave del proyecto..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Petición Humana</label>
+                            <textarea id="m1_peticion" class="w-full h-32 p-3 rounded-lg resize-none text-sm" placeholder="¿Qué necesitas que haga exactamente?"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Formato de Salida</label>
+                            <select id="m1_formato" class="w-full p-3 rounded-lg text-sm">
+                                <option>Código listo para copiar y pegar</option>
+                                <option>Tabla Comparativa</option>
+                                <option>Documento Ejecutivo</option>
+                                <option>Lista de Acción Estratégica</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form_mod_2_guiones" class="form-module hidden">
+                    <h2 class="text-2xl font-semibold mb-6 text-slate-100">Ingeniería de Guiones (Super Retención)</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Arquetipo de Marca</label>
+                            <select id="m2_arquetipo" class="w-full p-3 rounded-lg text-sm">
+                                <option value="Realismo Clínico, Seco y Conciso (Geopolítica / Terror)">Realismo Clínico (Geopolítica / Terror)</option>
+                                <option value="Lenguaje de Eficiencia, Corporate Tech, Autoridad (Software/SaaS)">Corporate Tech (SaaS / IA)</option>
+                                <option value="Hype Urbano, Alta Energía, Mobile First (Jóvenes)">Hype Urbano (Jóvenes)</option>
+                                <option value="Sátira Viral, Humor Ácido, Tendencia TikTok (Apparel)">Sátira Viral (Apparel/Ropa)</option>
+                                <option value="Marketing Emocional, Empático, Persuasivo (Infoproductos Mujer)">Marketing Emocional (Bienestar/Productividad)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Límites Estrictos</label>
+                            <input type="text" id="m2_limites" class="w-full p-3 rounded-lg text-sm" placeholder="Ej. Evitar violencia gráfica, sin lenguaje genérico...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Longitud Estimada</label>
+                            <select id="m2_longitud" class="w-full p-3 rounded-lg text-sm">
+                                <option>Short/TikTok (150 palabras)</option>
+                                <option>Medio (1,500 palabras)</option>
+                                <option>Extenso/Documental (4,500 palabras)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Framework Narrativo</label>
+                            <select id="m2_framework" class="w-full p-3 rounded-lg text-sm">
+                                <option>Vacío de Información (Intriga constante)</option>
+                                <option>Problema-Agitación-Solución (Ventas)</option>
+                                <option>Análisis Lógico Deductivo (Informativo)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Premisa / Noticia Base</label>
+                            <textarea id="m2_premisa" class="w-full h-32 p-3 rounded-lg resize-none text-sm" placeholder="Pega aquí la información base..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form_mod_3_hooks" class="form-module hidden">
+                    <h2 class="text-2xl font-semibold mb-6 text-slate-100">Generador de Micro-Hooks Secuenciales</h2>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Duración del Bloque</label>
+                                <select id="m3_duracion" class="w-full p-3 rounded-lg text-sm">
+                                    <option>4 segundos</option>
+                                    <option>5 segundos</option>
+                                    <option>8 segundos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Número de Bloque</label>
+                                <select id="m3_bloque" class="w-full p-3 rounded-lg text-sm">
+                                    <option>Bloque 1 (Inicio)</option>
+                                    <option>Bloque 2</option>
+                                    <option>Bloque 3</option>
+                                    <option>Bloque 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-emerald-400 mb-1 uppercase tracking-wide">Memoria de Raccord (Solo Bloque 2+)</label>
+                            <textarea id="m3_memoria" class="w-full h-20 p-3 rounded-lg resize-none text-sm border-emerald-900 focus:border-emerald-500" placeholder="Pega aquí el final del bloque anterior para mantener continuidad visual..."></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Arquetipo de Marca</label>
+                            <select id="m3_arquetipo" class="w-full p-3 rounded-lg text-sm">
+                                <option value="Realismo Clínico (Geopolítica / Terror)">Realismo Clínico (Geopolítica / Terror)</option>
+                                <option value="Corporate Tech (SaaS / IA)">Corporate Tech (SaaS / IA)</option>
+                                <option value="Hype Urbano (Jóvenes)">Hype Urbano (Jóvenes)</option>
+                                <option value="Sátira Viral (Apparel)">Sátira Viral (Apparel/Ropa)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Premisa / Dato de Choque</label>
+                            <textarea id="m3_premisa" class="w-full h-24 p-3 rounded-lg resize-none text-sm" placeholder="Idea anómala que rompe el patrón..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form_mod_4_empaquetado" class="form-module hidden">
+                    <h2 class="text-2xl font-semibold mb-6 text-slate-100">Empaquetado y Visuales (CTR Extremo)</h2>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Plataforma</label>
+                                <select id="m4_plataforma" class="w-full p-3 rounded-lg text-sm">
+                                    <option>YouTube (Largo Formato)</option>
+                                    <option>TikTok / Shorts</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Enfoque de Título</label>
+                                <select id="m4_enfoque" class="w-full p-3 rounded-lg text-sm">
+                                    <option>Curiosidad / Secreto (Vacío de Info)</option>
+                                    <option>Amenaza / Urgencia</option>
+                                    <option>Contraste / Anomalía</option>
+                                    <option>Beneficio Extremo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-400 mb-1 uppercase tracking-wide">Dirección de Arte (1920x1080 - 16:9)</label>
+                            <select id="m4_estilo" class="w-full p-3 rounded-lg text-sm border-purple-900 focus:border-purple-500">
+                                <option>Documental/Fotoperiodismo de Guerra B/N</option>
+                                <option>Fotorrealismo Cinematográfico</option>
+                                <option>Terror Psicológico / Realismo Sucio</option>
+                                <option>Corporate Tech Limpio (Azules Profundos)</option>
+                                <option>Estética Neón Saturada / Urbano</option>
+                                <option>Sátira de Alto Impacto TikTok</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Límites Visuales Estrictos</label>
+                            <input type="text" id="m4_limites" class="w-full p-3 rounded-lg text-sm" placeholder="Ej. Prohibido rostros humanos, no renders 3D...">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Guion Completo</label>
+                            <textarea id="m4_guion" class="w-full h-32 p-3 rounded-lg resize-none text-sm" placeholder="Pega el guion finalizado aquí..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form_mod_5_ugc_ventas" class="form-module hidden">
+                    <h2 class="text-2xl font-semibold mb-6 text-slate-100">Motor de Ventas y UGC 9:16</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-rose-400 mb-1 uppercase tracking-wide">Gatillo Psicológico (Neuro-Marketing)</label>
+                            <select id="m5_gatillo" class="w-full p-3 rounded-lg text-sm border-rose-900 focus:border-rose-500">
+                                <option>Autoridad y Eficiencia (ROI / Ahorro de Tiempo)</option>
+                                <option>FOMO y Escasez (Urgencia / Exclusividad)</option>
+                                <option>Sátira y Rebeldía (Anti-Marketing Viral)</option>
+                                <option>Identidad y Pertenencia (Marketing Emocional)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Modalidad</label>
+                                <select id="m5_modalidad" class="w-full p-3 rounded-lg text-sm">
+                                    <option>Influencer Sintético (UGC)</option>
+                                    <option>Producto Solo (B-Roll Dinámico)</option>
+                                    <option>Recreación de Tendencia</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Perfil de Avatar</label>
+                                <select id="m5_avatar" class="w-full p-3 rounded-lg text-sm">
+                                    <option>Femenino Gen-Z</option>
+                                    <option>Masculino Urbano</option>
+                                    <option>Ejecutivo / Profesional</option>
+                                    <option>Sin Avatar (Solo Producto)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Duración</label>
+                                <select id="m5_duracion" class="w-full p-3 rounded-lg text-sm">
+                                    <option>4 segundos</option>
+                                    <option>5 segundos</option>
+                                    <option>8 segundos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-blue-400 mb-1 uppercase tracking-wide">Número de Bloque</label>
+                                <select id="m5_bloque" class="w-full p-3 rounded-lg text-sm">
+                                    <option>Bloque 1 (Inicio)</option>
+                                    <option>Bloque 2</option>
+                                    <option>Bloque 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-emerald-400 mb-1 uppercase tracking-wide">Raccord (Anclaje Físico Bloque Anterior)</label>
+                            <input type="text" id="m5_memoria" class="w-full p-3 rounded-lg text-sm border-emerald-900 focus:border-emerald-500" placeholder="Pega el prompt visual anterior...">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn_ejecutar" onclick="procesarPeticion()" class="mt-4 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all">
+                    COMPILAR Y EJECUTAR
+                </button>
+            </div>
+
+            <div class="w-1/2 flex flex-col h-full bg-slate-900/50 rounded-xl border border-slate-700 p-6 shadow-2xl relative">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Output Blindado (Lenguaje IA)</h3>
+                    <button onclick="copiarPortapapeles()" class="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded transition-colors">Copiar Todo</button>
+                </div>
+                
+                <textarea id="ai_output" class="flex-1 w-full bg-[#0a0f18] border border-slate-800 rounded-lg p-6 text-emerald-300 font-mono text-sm resize-none focus:outline-none" readonly placeholder="El resultado de la inyección lógica aparecerá aquí..."></textarea>
+                
+                <div id="status_bar" class="absolute bottom-6 left-6 right-6 text-center text-xs font-mono text-slate-500 hidden">
+                    Procesando inyección de parámetros...
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let moduloActivo = 'mod_1_universal';
+
+        function switchTab(moduloId) {
+            // Ocultar todos los formularios
+            document.querySelectorAll('.form-module').forEach(el => {
+                el.classList.remove('block');
+                el.classList.add('hidden');
+            });
+            // Resetear estilos de botones
+            document.querySelectorAll('nav button').forEach(el => {
+                el.classList.remove('active-tab');
+                el.classList.add('inactive-tab');
+            });
+
+            // Activar el seleccionado
+            document.getElementById(`form_${moduloId}`).classList.remove('hidden');
+            document.getElementById(`form_${moduloId}`).classList.add('block');
+            document.getElementById(`btn_${moduloId}`).classList.remove('inactive-tab');
+            document.getElementById(`btn_${moduloId}`).classList.add('active-tab');
+            
+            moduloActivo = moduloId;
+            document.getElementById('ai_output').value = '';
+        }
+
+        async function procesarPeticion() {
+            const btn = document.getElementById('btn_ejecutar');
+            const output = document.getElementById('ai_output');
+            const status = document.getElementById('status_bar');
+            
+            let payloadDatos = {};
+
+            // Recopilar datos según el módulo activo
+            if (moduloActivo === 'mod_1_universal') {
+                payloadDatos = {
+                    rol: document.getElementById('m1_rol').value,
+                    contexto: document.getElementById('m1_contexto').value,
+                    peticion: document.getElementById('m1_peticion').value,
+                    formato: document.getElementById('m1_formato').value
+                };
+            } else if (moduloActivo === 'mod_2_guiones') {
+                payloadDatos = {
+                    arquetipo_marca: document.getElementById('m2_arquetipo').value,
+                    limites_marca: document.getElementById('m2_limites').value,
+                    longitud: document.getElementById('m2_longitud').value,
+                    framework: document.getElementById('m2_framework').value,
+                    premisa: document.getElementById('m2_premisa').value
+                };
+            } else if (moduloActivo === 'mod_3_hooks') {
+                payloadDatos = {
+                    duracion: document.getElementById('m3_duracion').value,
+                    num_bloque: document.getElementById('m3_bloque').value,
+                    memoria_raccord: document.getElementById('m3_memoria').value,
+                    arquetipo_marca: document.getElementById('m3_arquetipo').value,
+                    premisa: document.getElementById('m3_premisa').value
+                };
+            } else if (moduloActivo === 'mod_4_empaquetado') {
+                payloadDatos = {
+                    plataforma: document.getElementById('m4_plataforma').value,
+                    enfoque_titulo: document.getElementById('m4_enfoque').value,
+                    estilo_visual: document.getElementById('m4_estilo').value,
+                    limites_marca: document.getElementById('m4_limites').value,
+                    guion: document.getElementById('m4_guion').value
+                };
+            } else if (moduloActivo === 'mod_5_ugc_ventas') {
+                payloadDatos = {
+                    gatillo_ventas: document.getElementById('m5_gatillo').value,
+                    modalidad: document.getElementById('m5_modalidad').value,
+                    perfil_avatar: document.getElementById('m5_avatar').value,
+                    duracion: document.getElementById('m5_duracion').value,
+                    num_bloque: document.getElementById('m5_bloque').value,
+                    memoria_raccord: document.getElementById('m5_memoria').value
+                };
+            }
+
+            // UI Feedback
+            btn.disabled = true;
+            btn.innerHTML = "PROCESANDO LÓGICA...";
+            btn.classList.replace('bg-blue-600', 'bg-slate-600');
+            status.classList.remove('hidden');
+            status.classList.add('animate-pulse');
+            output.value = "";
+
+            try {
+                const response = await fetch('/api/ejecutar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        modulo_id: moduloActivo,
+                        datos: payloadDatos
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === 'success') {
+                    output.value = data.resultado_ia;
+                    status.textContent = "Ejecución completada.";
+                    status.classList.replace('text-slate-500', 'text-emerald-500');
+                } else {
+                    output.value = "ERROR DEL SERVIDOR: " + (data.message || data.error);
+                    status.textContent = "Fallo en la conexión API.";
+                    status.classList.replace('text-slate-500', 'text-red-500');
+                }
+            } catch (error) {
+                output.value = "ERROR CRÍTICO DE RED.";
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = "COMPILAR Y EJECUTAR";
+                btn.classList.replace('bg-slate-600', 'bg-blue-600');
+                status.classList.remove('animate-pulse');
+            }
+        }
+
+        function copiarPortapapeles() {
+            const output = document.getElementById('ai_output');
+            output.select();
+            document.execCommand('copy');
+            alert('Bloque técnico copiado al portapapeles.');
+        }
+    </script>
+</body>
+</html>
