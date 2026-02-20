@@ -1,50 +1,75 @@
 import gradio as gr
-import os
-import google.generativeai as genai
+import sqlite3
+from datetime import datetime
 
-# ===================== MÓDULO 1: HOOKS VIRALES DE 8 SEGUNDOS =====================
-def generar_hooks_8s(canal, tema, cantidad, nivel):
-    prompt = f"""Eres Director Creativo de agencia premium especializada en short-form video (TikTok/Reels/Shorts México 2026).
+# ===================== CONFIGURACIÓN =====================
+conn = sqlite3.connect("prompt_history.db", check_same_thread=False)
 
-Canal: {canal}
-Tema del vídeo: {tema}
-Nivel de exigencia: {nivel}/10 (solo entregas hooks que realmente tengan CTR >15% y retención >70% en los primeros 3 segundos. Rechazas todo lo mediocre).
+# ===================== MÓDULO 1: GESTOR DE CANALES =====================
+conn.execute("""CREATE TABLE IF NOT EXISTS canales (
+    id INTEGER PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL,
+    nicho TEXT,
+    estilo_comunicacion TEXT,
+    publico_objetivo TEXT,
+    plataformas TEXT,
+    tono_voz TEXT,
+    palabras_clave TEXT,
+    brand_guidelines TEXT,
+    notas TEXT,
+    creado_en TEXT
+)""")
 
-Genera exactamente {cantidad} hooks de vídeo de 8 segundos con:
-
-Para cada hook incluye:
-- Título del hook
-- Script con timing exacto (0-3s | 3-6s | 6-8s)
-- Visuales + ángulos de cámara + iluminación + B-roll
-- Sound design y recomendaciones de voz
-- Prompt completo y ultra-detallado para generar el clip de 8s en Kling AI / Runway Gen-3 / Luma
-- Métricas estimadas (CTR, retención 3s, probabilidad full watch)
-
-Sé extremadamente exigente y profesional. Solo entrega material de calidad agencia internacional."""
-
+def agregar_canal(nombre, nicho, estilo, publico, plataformas, tono, palabras_clave, guidelines, notas):
     try:
-        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-        response = genai.GenerativeModel("gemini-1.5-flash").generate_content(prompt)
-        return response.text
+        conn.execute("""INSERT INTO canales 
+            (nombre, nicho, estilo_comunicacion, publico_objetivo, plataformas, tono_voz, palabras_clave, brand_guidelines, notas, creado_en) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (nombre, nicho, estilo, publico, plataformas, tono, palabras_clave, guidelines, notas, datetime.now().isoformat()))
+        conn.commit()
+        return "✅ Canal agregado correctamente"
     except:
-        return "❌ Error: Agrega tu GEMINI_API_KEY en Render → Environment Variables"
+        return "❌ Error: El nombre del canal ya existe"
 
-# ===================== INTERFAZ (solo este módulo por ahora) =====================
+def obtener_canales():
+    rows = conn.execute("SELECT id, nombre, nicho, estilo_comunicacion, publico_objetivo, plataformas FROM canales").fetchall()
+    return [[r[0], r[1], r[2][:80] if r[2] else "", r[3][:60] if r[3] else "", r[4]] for r in rows]
+
+def eliminar_canal(canal_id):
+    conn.execute("DELETE FROM canales WHERE id=?", (canal_id,))
+    conn.commit()
+    return "Canal eliminado"
+
+# ===================== INTERFAZ PRINCIPAL =====================
 with gr.Blocks(title="Prompt Engineer Pro 2026 - Edgar", theme=gr.themes.Soft()) as demo:
     gr.Markdown("# 🚀 Prompt Engineer Pro 2026")
-    gr.Markdown("**MÓDULO 1: Hooks Virales de 8 Segundos para Vídeo**")
+    gr.Markdown("### MÓDULO 1: Gestor de Canales (Base del Sistema)")
 
-    with gr.Row():
-        canal = gr.Dropdown(["Café Orgánico Chiapas"], label="Canal", value="Café Orgánico Chiapas")
-        tema = gr.Textbox(label="Tema del vídeo", lines=2, placeholder="Ej: Beneficios del café orgánico de Chiapas vs industrial")
-    
-    with gr.Row():
-        cantidad = gr.Slider(5, 20, value=12, label="Cantidad de hooks")
-        nivel = gr.Slider(9.0, 10.0, value=9.8, label="Nivel de exigencia (CTR + Retención)")
+    with gr.Tabs():
+        with gr.Tab("📋 Lista de Canales"):
+            tabla = gr.DataFrame(headers=["ID", "Nombre", "Nicho", "Estilo", "Plataformas"], value=obtener_canales())
+            refresh_btn = gr.Button("🔄 Actualizar Lista")
 
-    btn = gr.Button("🚀 Generar Hooks Profesionales de 8 Segundos", variant="primary", size="large")
-    output = gr.Markdown()
+        with gr.Tab("➕ Agregar Nuevo Canal"):
+            nombre = gr.Textbox(label="Nombre del Canal", placeholder="Café Orgánico Chiapas")
+            nicho = gr.Textarea(label="Nicho completo", lines=3)
+            estilo = gr.Textarea(label="Estilo de comunicación", lines=2)
+            publico = gr.Textarea(label="Público objetivo", lines=2)
+            plataformas = gr.Textbox(label="Plataformas", value="TikTok, Instagram Reels, YouTube Shorts")
+            tono = gr.Textbox(label="Tono de voz")
+            palabras = gr.Textarea(label="Palabras clave principales")
+            guidelines = gr.Textarea(label="Brand Guidelines / Reglas de marca")
+            notas = gr.Textarea(label="Notas adicionales")
+            btn_agregar = gr.Button("Guardar Canal", variant="primary")
+            msg = gr.Markdown()
 
-    btn.click(generar_hooks_8s, [canal, tema, cantidad, nivel], output)
+        with gr.Tab("🗑 Eliminar Canal"):
+            id_eliminar = gr.Number(label="ID del canal a eliminar", precision=0)
+            btn_eliminar = gr.Button("Eliminar Canal", variant="stop")
+
+    # Funciones
+    refresh_btn.click(lambda: obtener_canales(), None, tabla)
+    btn_agregar.click(agregar_canal, [nombre, nicho, estilo, publico, plataformas, tono, palabras, guidelines, notas], msg)
+    btn_eliminar.click(eliminar_canal, [id_eliminar], msg)
 
 demo.launch(server_name="0.0.0.0", server_port=int(os.getenv("PORT", 7860)))
