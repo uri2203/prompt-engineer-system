@@ -1,75 +1,110 @@
-import gradio as gr
-import sqlite3
-from datetime import datetime
+import os
+from flask import Flask, request, jsonify, render_template
+import google.generativeai as genai
 
-# ===================== CONFIGURACIÓN =====================
-conn = sqlite3.connect("prompt_history.db", check_same_thread=False)
+app = Flask(__name__)
 
-# ===================== MÓDULO 1: GESTOR DE CANALES =====================
-conn.execute("""CREATE TABLE IF NOT EXISTS canales (
-    id INTEGER PRIMARY KEY,
-    nombre TEXT UNIQUE NOT NULL,
-    nicho TEXT,
-    estilo_comunicacion TEXT,
-    publico_objetivo TEXT,
-    plataformas TEXT,
-    tono_voz TEXT,
-    palabras_clave TEXT,
-    brand_guidelines TEXT,
-    notas TEXT,
-    creado_en TEXT
-)""")
+# Configuración de seguridad. La API Key se leerá desde el servidor (Render).
+api_key = os.environ.get("GEMINI_API_KEY")
+if api_key:
+    genai.configure(api_key=api_key)
 
-def agregar_canal(nombre, nicho, estilo, publico, plataformas, tono, palabras_clave, guidelines, notas):
+@app.route('/')
+def dashboard():
+    """Renderiza la interfaz gráfica del sistema."""
+    return render_template('index.html')
+
+def compilar_prompt(modulo, datos):
+    """
+    Motor central: Ensambla el prompt estricto dependiendo del módulo, 
+    inyectando las reglas de negocio, retención y ventas ocultas.
+    """
+    if modulo == "mod_1_universal":
+        return f"""
+        [IDENTIDAD]: Actúa como un {datos.get('rol')}.
+        [CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto')}.
+        [TAREA]: Ejecuta la siguiente orden: {datos.get('peticion')}.
+        [RESTRICCIONES]: Actúa con profesionalismo ejecutivo. Sé directo y estratégico. Cero relleno. Si generas código, debe ser funcional y completo para copiar y pegar.
+        [FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato')}.
+        """
+
+    elif modulo == "mod_2_guiones":
+        return f"""
+        [IDENTIDAD Y TONO]: Eres un guionista experto en retención. Escribe estrictamente bajo este arquetipo: {datos.get('arquetipo_marca')}.
+        [CONTEXTO DE MARCA]: Respeta los siguientes límites inquebrantables: {datos.get('limites_marca')}. Cumplimiento absoluto de normas de monetización de YouTube.
+        [TAREA]: Desarrolla un guion de longitud {datos.get('longitud')} basado en esta premisa: {datos.get('premisa')}.
+        [ESTRUCTURA]: Aplica el framework narrativo: {datos.get('framework')}. Prohibido iniciar con saludos o introducciones genéricas. La primera línea debe atacar la curiosidad intelectual. Ritmo rápido, densidad alta.
+        [FORMATO DE SALIDA]: Formato limpio, dividido por bloques visuales lógicos, listo para locución.
+        """
+
+    elif modulo == "mod_3_hooks":
+        return f"""
+        [IDENTIDAD]: Director de cinematografía generativa y experto en retención. Tono: {datos.get('arquetipo_marca')}.
+        [SECUENCIA]: Bloque número {datos.get('num_bloque')}. Duración estricta: {datos.get('duracion')}.
+        [CONTEXTO DE MEMORIA]: Continuación estricta de: {datos.get('memoria_raccord', 'N/A - Inicio absoluto')}. Mantén continuidad absoluta de personajes y voz.
+        [TAREA]: Desarrolla este fragmento basado en: {datos.get('premisa')}.
+        [RESTRICCIONES]: El texto de locución debe tener matemáticamente el límite de palabras asignado para {datos.get('duracion')}. Aplica disonancia cognitiva y vacío de información.
+        [FORMATO DE SALIDA ESTRICTO]: 
+        [AUDIO-VOZ]: (Texto exacto para el generador de voz).
+        [PROMPT-VIDEO]: (Instrucción técnica en inglés, describiendo sujeto, cámara y continuidad visual).
+        """
+
+    elif modulo == "mod_4_empaquetado":
+        return f"""
+        [IDENTIDAD]: Estratega de contenido viral y experto SEO. Tono: {datos.get('arquetipo_marca')}.
+        [CONTEXTO]: Analiza el siguiente contenido: {datos.get('guion')}.
+        [TAREA]: Desarrolla el paquete de publicación para {datos.get('plataforma')} maximizando el CTR.
+        [RESTRICCIONES]: 
+        1. Títulos: No revelar la trama. Usar vacío de información y enfoque de {datos.get('enfoque_titulo')}.
+        2. Imágenes: Solicitar estrictamente resolución 1920x1080 (--ar 16:9). Estilo de arte: {datos.get('estilo_visual')}. {datos.get('limites_marca')}. Prohibido generar formatos cuadrados.
+        [FORMATO DE SALIDA ESTRICTO]:
+        TÍTULOS: (5 opciones)
+        PROMPT DE MINIATURA (En inglés): (1 instrucción técnica fotorrealista 16:9)
+        DESCRIPCIÓN Y TAGS: (Párrafo SEO optimizado y etiquetas)
+        """
+
+    elif modulo == "mod_5_ugc_ventas":
+        return f"""
+        [ESTRATEGIA DE CAMPAÑA Y VENTAS]: Eres un Media Buyer Senior y experto en Neuro-Marketing. 
+        [GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. Aplica la estrategia de: {datos.get('gatillo_ventas')}.
+        [SECUENCIA]: Bloque {datos.get('num_bloque')}. Duración: {datos.get('duracion')}. Memoria de continuidad: {datos.get('memoria_raccord', 'Ninguna')}.
+        [FASE 1: DISEÑO VISUAL]: Perfil de Avatar: {datos.get('perfil_avatar')}. El personaje debe ser 100% sintético. Integra el producto manteniendo proporciones y logotipos exactos.
+        [FASE 2: ACCIÓN Y FÍSICA]: Modalidad: {datos.get('modalidad')}. Render 4K fotorrealista. Física inquebrantable: cero deformaciones del producto o anatomía. Formato estricto 9:16 (1080x1920).
+        [FORMATO DE SALIDA ESTRICTO]:
+        [PROMPT VISUAL - VIDEO]: (Instrucción técnica para IA de video).
+        [GUION DE VENTA]: (Locución aplicando el sesgo psicológico para forzar urgencia de compra).
+        """
+        
+    else:
+        return "Error: Módulo no reconocido."
+
+@app.route('/api/ejecutar', methods=['POST'])
+def ejecutar_prompt():
+    """Recibe la solicitud de la interfaz, ensambla el prompt y consulta a la IA."""
     try:
-        conn.execute("""INSERT INTO canales 
-            (nombre, nicho, estilo_comunicacion, publico_objetivo, plataformas, tono_voz, palabras_clave, brand_guidelines, notas, creado_en) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (nombre, nicho, estilo, publico, plataformas, tono, palabras_clave, guidelines, notas, datetime.now().isoformat()))
-        conn.commit()
-        return "✅ Canal agregado correctamente"
-    except:
-        return "❌ Error: El nombre del canal ya existe"
+        payload = request.json
+        modulo_id = payload.get('modulo_id')
+        datos_usuario = payload.get('datos', {})
 
-def obtener_canales():
-    rows = conn.execute("SELECT id, nombre, nicho, estilo_comunicacion, publico_objetivo, plataformas FROM canales").fetchall()
-    return [[r[0], r[1], r[2][:80] if r[2] else "", r[3][:60] if r[3] else "", r[4]] for r in rows]
+        if not modulo_id:
+            return jsonify({'error': 'Falta el identificador del módulo.'}), 400
 
-def eliminar_canal(canal_id):
-    conn.execute("DELETE FROM canales WHERE id=?", (canal_id,))
-    conn.commit()
-    return "Canal eliminado"
+        # 1. Compilar el prompt con las reglas inyectadas
+        prompt_blindado = compilar_prompt(modulo_id, datos_usuario)
 
-# ===================== INTERFAZ PRINCIPAL =====================
-with gr.Blocks(title="Prompt Engineer Pro 2026 - Edgar", theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🚀 Prompt Engineer Pro 2026")
-    gr.Markdown("### MÓDULO 1: Gestor de Canales (Base del Sistema)")
+        # 2. Ejecutar la llamada a la IA
+        model = genai.GenerativeModel('gemini-pro')
+        response = model.generate_content(prompt_blindado)
 
-    with gr.Tabs():
-        with gr.Tab("📋 Lista de Canales"):
-            tabla = gr.DataFrame(headers=["ID", "Nombre", "Nicho", "Estilo", "Plataformas"], value=obtener_canales())
-            refresh_btn = gr.Button("🔄 Actualizar Lista")
+        # 3. Devolver el resultado al usuario
+        return jsonify({
+            'status': 'success',
+            'resultado_ia': response.text
+        })
 
-        with gr.Tab("➕ Agregar Nuevo Canal"):
-            nombre = gr.Textbox(label="Nombre del Canal", placeholder="Café Orgánico Chiapas")
-            nicho = gr.Textarea(label="Nicho completo", lines=3)
-            estilo = gr.Textarea(label="Estilo de comunicación", lines=2)
-            publico = gr.Textarea(label="Público objetivo", lines=2)
-            plataformas = gr.Textbox(label="Plataformas", value="TikTok, Instagram Reels, YouTube Shorts")
-            tono = gr.Textbox(label="Tono de voz")
-            palabras = gr.Textarea(label="Palabras clave principales")
-            guidelines = gr.Textarea(label="Brand Guidelines / Reglas de marca")
-            notas = gr.Textarea(label="Notas adicionales")
-            btn_agregar = gr.Button("Guardar Canal", variant="primary")
-            msg = gr.Markdown()
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
-        with gr.Tab("🗑 Eliminar Canal"):
-            id_eliminar = gr.Number(label="ID del canal a eliminar", precision=0)
-            btn_eliminar = gr.Button("Eliminar Canal", variant="stop")
-
-    # Funciones
-    refresh_btn.click(lambda: obtener_canales(), None, tabla)
-    btn_agregar.click(agregar_canal, [nombre, nicho, estilo, publico, plataformas, tono, palabras, guidelines, notas], msg)
-    btn_eliminar.click(eliminar_canal, [id_eliminar], msg)
-
-demo.launch(server_name="0.0.0.0", server_port=int(os.getenv("PORT", 7860)))
+if __name__ == '__main__':
+    puerto = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=puerto)
