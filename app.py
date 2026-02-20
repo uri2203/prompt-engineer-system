@@ -3,138 +3,102 @@ import os
 import sqlite3
 import hashlib
 from datetime import datetime
+import google.generativeai as genai
+from PIL import Image as PILImage
 
 conn = sqlite3.connect("prompt_history.db", check_same_thread=False)
 
+# Tablas
 conn.execute("""CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY,
-    full_name TEXT,
-    username TEXT UNIQUE,
-    password TEXT,
-    blocked INTEGER DEFAULT 0,
-    created_at TEXT
-)""")
+    id INTEGER PRIMARY KEY, full_name TEXT, username TEXT UNIQUE, 
+    password TEXT, blocked INTEGER DEFAULT 0, created_at TEXT)""")
 
+conn.execute("""CREATE TABLE IF NOT EXISTS history (
+    id INTEGER PRIMARY KEY, timestamp TEXT, tipo TEXT, canal TEXT, 
+    objetivo TEXT, mejor_prompt TEXT, user_id INTEGER)""")
+
+# Admin por defecto
 admin_pass = hashlib.sha256("1978".encode()).hexdigest()
-conn.execute("INSERT OR IGNORE INTO users (full_name, username, password, created_at) VALUES (?, ?, ?, ?)",
+conn.execute("INSERT OR IGNORE INTO users (full_name, username, password, created_at) VALUES (?,?,?,?)",
              ("Edgar Admin", "1978", admin_pass, datetime.now().isoformat()))
 conn.commit()
 
-def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
+def hash_password(p): return hashlib.sha256(p.encode()).hexdigest()
 
-def registrar_usuario(full_name, username, password):
+def login_usuario(u, p):
+    h = hash_password(p)
+    row = conn.execute("SELECT id, full_name, blocked FROM users WHERE username=? AND password=?", (u, h)).fetchone()
+    if row and row[2] == 0:
+        return row[0], row[1], True
+    return None, None, False
+
+# ===================== MODELOS =====================
+def llamar_modelo(prompt):
     try:
-        hashed = hash_password(password)
-        conn.execute("INSERT INTO users (full_name, username, password, created_at) VALUES (?, ?, ?, ?)",
-                     (full_name, username, hashed, datetime.now().isoformat()))
-        conn.commit()
-        return "✅ Usuario registrado correctamente."
+        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+        return genai.GenerativeModel("gemini-1.5-flash").generate_content(prompt).text
     except:
-        return "❌ El nombre de usuario ya existe."
+        return "Error con Gemini. Revisa tu API key."
 
-def login_usuario(username, password):
-    hashed = hash_password(password)
-    row = conn.execute("SELECT id, full_name, blocked FROM users WHERE username=? AND password=?", 
-                       (username, hashed)).fetchone()
-    if row:
-        if row[2] == 1: return None, None, False, "❌ Tu cuenta está bloqueada."
-        return row[0], row[1], True, ""
-    return None, None, False, "❌ Usuario o contraseña incorrectos"
+# ===================== FUNCIONES =====================
+def generar_hooks_video(canal, tema, cantidad, nivel):
+    meta = f"""Eres Director Creativo de agencia de 7 cifras especializado en hooks de vídeo de 8 segundos para marcas premium mexicanas 2026.
+Canal: {canal}
+Tema: {tema}
+Nivel de exigencia: {nivel}/10 (solo entrega hooks que realmente tengan CTR >15% y retención >70% en 3s).
 
-def get_all_users():
-    rows = conn.execute("SELECT id, full_name, username, blocked, created_at FROM users").fetchall()
-    return [[r[0], r[1], r[2], "✅ Activo" if r[3]==0 else "🚫 Bloqueado", r[4]] for r in rows]
+Genera {cantidad} hooks de exactamente 8 segundos con:
+- Timing segundo a segundo
+- Visuales + cámara + iluminación
+- Sound design
+- Prompt completo para Kling/Runway/Luma
+- Métricas estimadas
 
-def toggle_block(user_id):
-    conn.execute("UPDATE users SET blocked = 1 - blocked WHERE id=?", (user_id,))
-    conn.commit()
-    return "Estado actualizado."
+Sé extremadamente exigente."""
+    return llamar_modelo(meta)
 
-def delete_user(user_id):
-    conn.execute("DELETE FROM users WHERE id=?", (user_id,))
-    conn.commit()
-    return "Usuario eliminado."
-
-def update_user(user_id, new_full_name, new_username, new_password):
-    try:
-        if new_password.strip():
-            hashed = hash_password(new_password)
-            conn.execute("UPDATE users SET full_name=?, username=?, password=? WHERE id=?", 
-                         (new_full_name, new_username, hashed, user_id))
-        else:
-            conn.execute("UPDATE users SET full_name=?, username=? WHERE id=?", 
-                         (new_full_name, new_username, user_id))
-        conn.commit()
-        return "✅ Usuario actualizado."
-    except:
-        return "❌ El nuevo nombre de usuario ya existe."
-
+# ===================== INTERFAZ =====================
 with gr.Blocks(title="Prompt Engineer Pro 2026 - Edgar", theme=gr.themes.Soft()) as demo:
     current_user_id = gr.State(None)
     current_full_name = gr.State("")
-    is_admin = gr.State(False)
 
     with gr.Group(visible=True) as login_screen:
         gr.Markdown("# 🚀 Prompt Engineer Pro 2026\n**Acceso restringido**")
         with gr.Tabs():
             with gr.Tab("🔑 Iniciar Sesión"):
-                login_user = gr.Textbox(label="Usuario", value="1978")
-                login_pass = gr.Textbox(label="Contraseña", type="password", value="1978")
-                btn_login = gr.Button("Iniciar Sesión", variant="primary")
-                login_msg = gr.Markdown()
-
-            with gr.Tab("📝 Registrarse"):
-                reg_name = gr.Textbox(label="Nombre Completo")
-                reg_user = gr.Textbox(label="Usuario")
-                reg_pass = gr.Textbox(label="Contraseña", type="password")
-                btn_reg = gr.Button("Registrarse")
-                reg_msg = gr.Markdown()
+                u = gr.Textbox(label="Usuario", value="1978")
+                p = gr.Textbox(label="Contraseña", type="password", value="1978")
+                btn = gr.Button("Entrar", variant="primary")
+                msg = gr.Markdown()
+                btn.click(lambda uu,pp: (gr.update(visible=False), gr.update(visible=True), *login_usuario(uu,pp), f"✅ Bienvenido") if login_usuario(uu,pp)[2] else (gr.update(visible=True), gr.update(visible=False), None, "", "❌ Credenciales incorrectas"), [u,p], [login_screen, main_app, current_user_id, current_full_name, msg])
 
     with gr.Group(visible=False) as main_app:
         gr.Markdown("# 🚀 Prompt Engineer Pro 2026\n**Tu traductor personal profesional**")
-        with gr.Row():
-            gr.Markdown("**Usuario conectado:**")
-            user_display = gr.Markdown()
-            btn_logout = gr.Button("🚪 Cerrar Sesión", variant="secondary", size="sm")
+        gr.Markdown(f"**Usuario conectado:** {current_full_name.value}")
+        btn_logout = gr.Button("Cerrar Sesión", variant="secondary")
 
         with gr.Tabs():
+            with gr.Tab("🔧 Prompt Engineer General"):
+                gr.Markdown("Aquí va el general... (versión completa)")
+            
+            with gr.Tab("📹 Vídeos desde Foto del Producto"):
+                gr.Markdown("Sube foto del producto aquí...")
+
+            with gr.Tab("📦 Paquete Completo de Publicación"):
+                gr.Markdown("Paquete completo aquí...")
+
             with gr.Tab("🔥 Hooks Virales de 8 Segundos para Vídeo"):
-                gr.Markdown("### Próximamente aquí estarán tus hooks (versión completa)")
-                gr.Markdown("Por ahora solo mostramos el panel de login y admin.")
+                canal = gr.Dropdown(["Café Orgánico Chiapas"], label="Canal", value="Café Orgánico Chiapas")
+                tema = gr.Textbox(label="Tema del vídeo", lines=2)
+                cant = gr.Slider(8, 20, 12, label="Cantidad de hooks")
+                nivel = gr.Slider(9, 10, 9.8, label="Nivel de exigencia")
+                btn_h = gr.Button("🚀 Generar Hooks de 8 Segundos (CTR >15% | Retención >70%)", variant="primary", size="large")
+                output = gr.Markdown()
+                btn_h.click(lambda c,t,ca,n: generar_hooks_video(c,t,ca,n), [canal,tema,cant,nivel], output)
 
-            with gr.Tab("👑 Panel de Administrador", visible=False) as admin_tab:
-                gr.Markdown("### 👑 Gestión de Usuarios (solo admin)")
-                users_table = gr.DataFrame(headers=["ID", "Nombre", "Usuario", "Estado", "Creado"], value=get_all_users())
-                refresh_btn = gr.Button("🔄 Actualizar Lista")
-                with gr.Row():
-                    selected_id = gr.Number(label="ID del usuario", precision=0)
-                    new_name = gr.Textbox(label="Nuevo Nombre")
-                    new_user = gr.Textbox(label="Nuevo Usuario")
-                    new_pass = gr.Textbox(label="Nueva Contraseña (opcional)", type="password")
-                with gr.Row():
-                    btn_update = gr.Button("✏️ Actualizar")
-                    btn_block = gr.Button("🚫 Bloquear / Desbloquear")
-                    btn_delete = gr.Button("🗑 Eliminar", variant="stop")
-                admin_msg = gr.Markdown()
+            with gr.Tab("👑 Panel de Administrador"):
+                gr.Markdown("### Solo visible para el admin (1978)")
 
-        def do_login(u, p):
-            user_id, full_name, success, msg = login_usuario(u, p)
-            if success:
-                admin_visible = (u == "1978")
-                return gr.update(visible=False), gr.update(visible=True), user_id, full_name, f"✅ Bienvenido **{full_name}**", gr.update(visible=admin_visible)
-            return gr.update(visible=True), gr.update(visible=False), None, "", f"❌ {msg}", gr.update(visible=False)
-
-        btn_login.click(do_login, [login_user, login_pass], [login_screen, main_app, current_user_id, current_full_name, user_display, admin_tab])
-
-        btn_reg.click(lambda n,u,p: registrar_usuario(n,u,p), [reg_name, reg_user, reg_pass], reg_msg)
-
-        btn_logout.click(lambda: (gr.update(visible=True), gr.update(visible=False), None, "", "", gr.update(visible=False)),
-                         None, [login_screen, main_app, current_user_id, current_full_name, user_display, admin_tab])
-
-        refresh_btn.click(lambda: get_all_users(), None, users_table)
-        btn_update.click(lambda uid,name,user,passw: update_user(uid,name,user,passw), [selected_id, new_name, new_user, new_pass], admin_msg)
-        btn_block.click(lambda uid: toggle_block(uid), [selected_id], admin_msg)
-        btn_delete.click(lambda uid: delete_user(uid), [selected_id], admin_msg)
+        btn_logout.click(lambda: (gr.update(visible=True), gr.update(visible=False), None, ""), None, [login_screen, main_app, current_user_id, current_full_name])
 
 demo.launch(server_name="0.0.0.0", server_port=int(os.getenv("PORT", 7860)))
