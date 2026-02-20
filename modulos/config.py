@@ -1,10 +1,12 @@
-def obtener_prompt_base(modulo, datos):
-    """Encapsula la lógica de los prompts en un archivo independiente."""
-    prompts = {
-        "mod_1_universal": f"[IDENTIDAD]: Actúa como un {datos.get('rol')}. [TAREA]: {datos.get('peticion')}.",
-        "mod_2_guiones": f"[IDENTIDAD]: Guionista de {datos.get('arquetipo_marca')}. [TAREA]: Guion de {datos.get('longitud')}.",
-        "mod_3_hooks": f"[SECUENCIA]: Bloque {datos.get('num_bloque')}. Duración: {datos.get('duracion')}.",
-        "mod_4_empaquetado": f"[ESTRATEGIA]: CTR para {datos.get('plataforma')}. Arte: {datos.get('estilo_visual')}.",
-        "mod_5_ugc_ventas": f"[VENTAS]: Gatillo {datos.get('gatillo_ventas')}. Avatar: {datos.get('perfil_avatar')}."
+def obtener_prompt_ingenieria(modulo_id, datos):
+    """Silos de Ingeniería de Prompts. Sin mezclar contextos."""
+    p1 = datos.get('p1', '')
+    p2 = datos.get('p2', '')
+
+    config = {
+        "mod_1": f"[MODULO UNIVERSAL]: Actúa como {p1}. Procesa: {p2}.",
+        "mod_2": f"[INGENIERÍA DE GUIONES]: Aplicar estructura de retención para {p1}. Datos: {p2}.",
+        "mod_5": f"[MOTOR DE VENTAS]: Gatillo {p1}. Escala de conversión: {p2}."
     }
-    return prompts.get(modulo, "Error: Módulo no configurado.")
+    
+    return config.get(modulo_id, "Módulo no configurado.")
