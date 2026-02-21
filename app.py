@@ -88,12 +88,12 @@ HTML_INDEX = """
         </div>
         
         <nav class="flex-1 space-y-2 overflow-y-auto scrollbar-hide">
-            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-emerald-500">Mod 0: Núcleo (DB)</button>
-            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 1: Traductor Universal</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 2: Guiones (Retención)</button>
-            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks</button>
-            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos Visuales</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm font-medium transition-all active-tab">Mod 5: UGC 9:16 y Ventas</button>
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-transparent">Mod 0: Núcleo (DB)</button>
+            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-transparent">Mod 1: Traductor Universal</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-transparent">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-transparent">Mod 3: Micro-Hooks</button>
+            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-transparent">Mod 4: Metadatos Visuales</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm font-medium transition-all active-tab border-l-4 border-transparent">Mod 5: UGC 9:16 y Ventas</button>
         </nav>
 
         <div class="mt-auto pt-4 border-t border-slate-800/50 flex justify-between items-center">
@@ -312,7 +312,7 @@ HTML_INDEX = """
                 </div>
             </div>
 
-            <div id="ui_mod_5" class="module-content block">
+            <div id="ui_mod_5" class="module-content">
                 <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Ventas y UGC 9:16</h2>
                 
                 <div class="space-y-5">
@@ -385,28 +385,45 @@ HTML_INDEX = """
         
         function switchTab(id) {
             moduloActivo = id;
+            
+            // 1. Limpiar todos los botones
             document.querySelectorAll('nav button').forEach(b => {
                 b.classList.remove('active-tab');
                 b.classList.add('inactive-tab');
+                b.classList.remove('border-emerald-500');
+                b.classList.add('border-transparent');
             });
-            document.getElementById('btn_' + id).classList.remove('inactive-tab');
-            document.getElementById('btn_' + id).classList.add('active-tab');
             
-            document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
+            // 2. Activar el botón presionado
+            const activeBtn = document.getElementById('btn_' + id);
+            activeBtn.classList.remove('inactive-tab');
+            activeBtn.classList.add('active-tab');
+            if(id === 'mod_0') {
+                activeBtn.classList.remove('border-transparent');
+                activeBtn.classList.add('border-emerald-500');
+            }
+            
+            // 3. Ocultar todos los módulos
+            document.querySelectorAll('.module-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // 4. Mostrar solo el módulo objetivo
             const targetUI = document.getElementById('ui_' + id);
             if(targetUI) { 
                 targetUI.classList.remove('hidden'); 
             }
             
+            // 5. Ajustar el estilo del botón principal
             const btn = document.getElementById('btn_main');
             if (id === 'mod_0') {
                 btn.innerHTML = "GUARDAR IDENTIDAD EN BASE DE DATOS";
-                btn.classList.replace('bg-[#2563eb]', 'bg-[#10b981]');
-                btn.classList.replace('hover:bg-blue-500', 'hover:bg-emerald-500');
+                btn.classList.remove('bg-[#2563eb]', 'hover:bg-blue-500');
+                btn.classList.add('bg-[#10b981]', 'hover:bg-emerald-500');
             } else {
                 btn.innerHTML = "COMPILAR Y EJECUTAR";
-                btn.classList.replace('bg-[#10b981]', 'bg-[#2563eb]');
-                btn.classList.replace('hover:bg-emerald-500', 'hover:bg-blue-500');
+                btn.classList.remove('bg-[#10b981]', 'hover:bg-emerald-500');
+                btn.classList.add('bg-[#2563eb]', 'hover:bg-blue-500');
             }
         }
 
