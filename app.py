@@ -287,7 +287,8 @@ def ejecutar_prompt():
         return jsonify({'error': 'No auth'}), 401
     try:
         data = request.json
-        model = genai.GenerativeModel('gemini-pro')
+        # Actualización estricta de modelo para compatibilidad con v1beta de Google
+        model = genai.GenerativeModel('gemini-1.5-pro')
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
         
