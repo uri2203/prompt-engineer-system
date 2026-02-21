@@ -12,12 +12,16 @@ if api_key:
     genai.configure(api_key=api_key)
 
 DB_PATH = 'usuarios_db.json'
+PROYECTOS_DB = 'proyectos_db.json'
 
 def inicializar_db():
     if not os.path.exists(DB_PATH):
         admin_pw = hashlib.sha256("1978".encode()).hexdigest()
         with open(DB_PATH, 'w') as f:
             json.dump({"1978": admin_pw}, f)
+    if not os.path.exists(PROYECTOS_DB):
+        with open(PROYECTOS_DB, 'w') as f:
+            json.dump({}, f)
 
 def verificar_credenciales(u, p):
     inicializar_db()
@@ -25,7 +29,18 @@ def verificar_credenciales(u, p):
         db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
-# --- DISEÑO CORPORATE TECH INTACTO ---
+def cargar_proyectos():
+    inicializar_db()
+    with open(PROYECTOS_DB, 'r') as f:
+        return json.load(f)
+
+def guardar_proyecto(nombre, datos):
+    db = cargar_proyectos()
+    db[nombre] = datos
+    with open(PROYECTOS_DB, 'w') as f:
+        json.dump(db, f)
+
+# --- DISEÑO CORPORATE TECH INTACTO Y EXPANDIDO ---
 
 HTML_LOGIN = """
 <!DOCTYPE html>
@@ -72,16 +87,17 @@ HTML_INDEX = """
             <p class="text-[9px] text-slate-500 font-bold uppercase tracking-[0.15em] mt-1">Arquitectura Modular</p>
         </div>
         
-        <nav class="flex-1 space-y-2">
+        <nav class="flex-1 space-y-2 overflow-y-auto scrollbar-hide">
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab border-l-4 border-emerald-500">Mod 0: Núcleo (DB)</button>
             <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 1: Traductor Universal</button>
             <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 2: Guiones (Retención)</button>
-            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks (Secuencia)</button>
-            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos y Visuales</button>
+            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks</button>
+            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos Visuales</button>
             <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm font-medium transition-all active-tab">Mod 5: UGC 9:16 y Ventas</button>
         </nav>
 
         <div class="mt-auto pt-4 border-t border-slate-800/50 flex justify-between items-center">
-            <p class="text-[11px] text-slate-400">Estado del Sistema: <span class="text-[#10b981] font-bold">EN LÍNEA</span></p>
+            <p class="text-[11px] text-slate-400">Estado: <span class="text-[#10b981] font-bold">EN LÍNEA</span></p>
             {% if is_admin %}
                 <a href="/logout" class="text-[10px] text-slate-500 hover:text-red-400 transition-colors">Salir</a>
             {% endif %}
@@ -92,6 +108,210 @@ HTML_INDEX = """
         
         <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2 scrollbar-hide">
             
+            <div id="ui_mod_0" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Núcleo de Identidad (Base de Datos)</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-green block mb-1.5">NOMBRE DEL PROYECTO / MARCA</label>
+                        <input type="text" id="m0_nombre" placeholder="Ej. La Viuda, TuIALista, Monkygraff..." class="w-full p-2.5 text-sm">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="label-blue block mb-1.5">ARQUETIPO DE VOZ</label>
+                            <select id="m0_voz" class="w-full p-2.5 text-sm">
+                                <option>Realismo Clínico y Seco</option>
+                                <option>Eficiencia Corporate Tech</option>
+                                <option>Alta Energía Hype-Urbano</option>
+                                <option>Marketing Emocional Suave</option>
+                                <option>Sátira Viral y Humor Ácido</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">ESTRATEGIA DE TÍTULOS</label>
+                            <select id="m0_titulos" class="w-full p-2.5 text-sm">
+                                <option>Vacío de Información</option>
+                                <option>Beneficio Directo</option>
+                                <option>Gancho de Tendencia</option>
+                                <option>Curiosidad Emocional</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">ESTÉTICA VISUAL BASE</label>
+                        <select id="m0_estetica" class="w-full p-2.5 text-sm">
+                            <option>Documental/Fotoperiodismo B&N</option>
+                            <option>Azules Profundos Corporativos</option>
+                            <option>Saturación Neón-Gamer</option>
+                            <option>Elegancia Minimalista</option>
+                            <option>Parodia Alto Impacto TikTok</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-red block mb-1.5">LÍMITES ESTRICTOS (REGLAS INQUEBRANTABLES)</label>
+                        <textarea id="m0_limites" placeholder="Ej: Prohibido usar rostros humanos, Nunca resumir la noticia..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_1" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
+                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
+                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
+                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
+                        <select id="m1_formato" class="w-full p-2.5 text-sm">
+                            <option>Código listo para copiar</option>
+                            <option>Tabla Comparativa</option>
+                            <option>Documento Formal</option>
+                            <option>Lista de Acción Estratégica</option>
+                            <option>Markdown</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_2" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Ingeniería de Guiones (Super Retención)</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-green block mb-1.5">PROYECTO / MARCA (CARGA ADN)</label>
+                        <select id="m2_proyecto" class="w-full p-2.5 text-sm">
+                            {% for p in proyectos %}
+                            <option value="{{ p }}">{{ p }}</option>
+                            {% endfor %}
+                            {% if not proyectos %}<option value="">(Registra un proyecto en Mod 0)</option>{% endif %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PREMISA O NOTICIA BASE</label>
+                        <textarea id="m2_premisa" placeholder="Pega aquí la noticia o idea central..." class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="label-blue block mb-1.5">LONGITUD ESTIMADA</label>
+                            <select id="m2_longitud" class="w-full p-2.5 text-sm">
+                                <option>Short/TikTok (150 palabras)</option>
+                                <option>Medio (1,500 palabras)</option>
+                                <option>Extenso/Documental (4,500+ palabras)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">FRAMEWORK NARRATIVO</label>
+                            <select id="m2_framework" class="w-full p-2.5 text-sm">
+                                <option>Bucle Abierto (Intriga constante)</option>
+                                <option>Problema-Agitación-Solución (Ventas)</option>
+                                <option>Análisis Lógico Deductivo (Info)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PETICIÓN ESPECÍFICA (OPCIONAL)</label>
+                        <input type="text" id="m2_peticion" placeholder="¿Algún ángulo a destacar?" class="w-full p-2.5 text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_3" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Micro-Hooks (Fragmentación Secuencial)</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-green block mb-1.5">PROYECTO / MARCA</label>
+                        <select id="m3_proyecto" class="w-full p-2.5 text-sm">
+                            {% for p in proyectos %}
+                            <option value="{{ p }}">{{ p }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PREMISA O DATO DE CHOQUE</label>
+                        <textarea id="m3_premisa" placeholder="La idea central del gancho..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="label-red block mb-1.5">DURACIÓN DEL BLOQUE (LÍMITE IA)</label>
+                            <select id="m3_duracion" class="w-full p-2.5 text-sm">
+                                <option value="4">4 segundos (10 palabras max)</option>
+                                <option value="5">5 segundos (12-15 palabras)</option>
+                                <option value="8">8 segundos (18-22 palabras)</option>
+                                <option value="15">15 segundos (35-40 palabras)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">NÚMERO DE BLOQUE</label>
+                            <select id="m3_bloque" class="w-full p-2.5 text-sm">
+                                <option>Bloque 1 (Inicio Absoluto)</option>
+                                <option>Bloque 2 (Continuación)</option>
+                                <option>Bloque 3 (Continuación)</option>
+                                <option>Bloque 4 (Continuación)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-green block mb-1.5">MEMORIA DE CONTINUIDAD (SOLO BLOQUE 2+)</label>
+                        <textarea id="m3_memoria" placeholder="Pega el audio/prompt del bloque anterior para enlazar..." class="w-full h-20 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_4" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Metadatos y Visuales (CTR Extremo)</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-green block mb-1.5">PROYECTO / MARCA</label>
+                        <select id="m4_proyecto" class="w-full p-2.5 text-sm">
+                            {% for p in proyectos %}
+                            <option value="{{ p }}">{{ p }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">GUION O PREMISA FINAL</label>
+                        <textarea id="m4_guion" placeholder="Pega el guion completo aquí..." class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="label-red block mb-1.5">ENFOQUE DEL TÍTULO</label>
+                            <select id="m4_enfoque" class="w-full p-2.5 text-sm">
+                                <option>Amenaza/Urgencia</option>
+                                <option>Curiosidad/Secreto</option>
+                                <option>Contraste/Anomalía</option>
+                                <option>Beneficio Extremo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label-blue block mb-1.5">PLATAFORMA OBJETIVO</label>
+                            <select id="m4_plataforma" class="w-full p-2.5 text-sm">
+                                <option>YouTube (Largo formato)</option>
+                                <option>TikTok / Shorts</option>
+                                <option>Instagram Reels</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">ESTILO ARTÍSTICO DE IMAGEN (MINIATURA 16:9)</label>
+                        <select id="m4_estilo" class="w-full p-2.5 text-sm">
+                            <option>Fotorrealismo Cinematográfico</option>
+                            <option>Terror Psicológico / Realismo Sucio</option>
+                            <option>Fotoperiodismo Crudo en B/N</option>
+                            <option>Cyberpunk / Neón Saturado</option>
+                            <option>Minimalismo Conceptual</option>
+                            <option>Corporate Tech Limpio</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <div id="ui_mod_5" class="module-content block">
                 <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Ventas y UGC 9:16</h2>
                 
@@ -148,34 +368,6 @@ HTML_INDEX = """
                 </div>
             </div>
 
-            <div id="ui_mod_1" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
-                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
-                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
-                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
-                        <select id="m1_formato" class="w-full p-2.5 text-sm">
-                            <option>Código listo para copiar</option>
-                            <option>Tabla Comparativa</option>
-                            <option>Documento Formal</option>
-                            <option>Lista de Acción Estratégica</option>
-                            <option>Markdown</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
             <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-3.5 mt-2 rounded-lg font-bold text-[13px] tracking-wide shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all">COMPILAR Y EJECUTAR</button>
         </div>
 
@@ -205,6 +397,17 @@ HTML_INDEX = """
             if(targetUI) { 
                 targetUI.classList.remove('hidden'); 
             }
+            
+            const btn = document.getElementById('btn_main');
+            if (id === 'mod_0') {
+                btn.innerHTML = "GUARDAR IDENTIDAD EN BASE DE DATOS";
+                btn.classList.replace('bg-[#2563eb]', 'bg-[#10b981]');
+                btn.classList.replace('hover:bg-blue-500', 'hover:bg-emerald-500');
+            } else {
+                btn.innerHTML = "COMPILAR Y EJECUTAR";
+                btn.classList.replace('bg-[#10b981]', 'bg-[#2563eb]');
+                btn.classList.replace('hover:bg-emerald-500', 'hover:bg-blue-500');
+            }
         }
 
         async function ejecutar() {
@@ -214,14 +417,13 @@ HTML_INDEX = """
             btn.disabled = true;
             
             let datos = {};
-            if(moduloActivo === 'mod_5') {
+            if(moduloActivo === 'mod_0') {
                 datos = {
-                    gatillo: document.getElementById('m5_gatillo').value,
-                    modalidad: document.getElementById('m5_modalidad').value,
-                    avatar: document.getElementById('m5_avatar').value,
-                    duracion: document.getElementById('m5_duracion').value,
-                    bloque: document.getElementById('m5_bloque').value,
-                    raccord: document.getElementById('m5_raccord').value
+                    nombre: document.getElementById('m0_nombre').value,
+                    voz: document.getElementById('m0_voz').value,
+                    estetica: document.getElementById('m0_estetica').value,
+                    titulos: document.getElementById('m0_titulos').value,
+                    limites: document.getElementById('m0_limites').value
                 };
             } else if (moduloActivo === 'mod_1') {
                 datos = { 
@@ -229,6 +431,39 @@ HTML_INDEX = """
                     contexto: document.getElementById('m1_contexto').value,
                     texto: document.getElementById('m1_texto').value,
                     formato: document.getElementById('m1_formato').value
+                };
+            } else if (moduloActivo === 'mod_2') {
+                datos = {
+                    proyecto: document.getElementById('m2_proyecto').value,
+                    premisa: document.getElementById('m2_premisa').value,
+                    longitud: document.getElementById('m2_longitud').value,
+                    framework: document.getElementById('m2_framework').value,
+                    peticion: document.getElementById('m2_peticion').value
+                };
+            } else if (moduloActivo === 'mod_3') {
+                datos = {
+                    proyecto: document.getElementById('m3_proyecto').value,
+                    premisa: document.getElementById('m3_premisa').value,
+                    duracion: document.getElementById('m3_duracion').value,
+                    bloque: document.getElementById('m3_bloque').value,
+                    memoria: document.getElementById('m3_memoria').value
+                };
+            } else if (moduloActivo === 'mod_4') {
+                datos = {
+                    proyecto: document.getElementById('m4_proyecto').value,
+                    guion: document.getElementById('m4_guion').value,
+                    enfoque: document.getElementById('m4_enfoque').value,
+                    plataforma: document.getElementById('m4_plataforma').value,
+                    estilo: document.getElementById('m4_estilo').value
+                };
+            } else if (moduloActivo === 'mod_5') {
+                datos = {
+                    gatillo: document.getElementById('m5_gatillo').value,
+                    modalidad: document.getElementById('m5_modalidad').value,
+                    avatar: document.getElementById('m5_avatar').value,
+                    duracion: document.getElementById('m5_duracion').value,
+                    bloque: document.getElementById('m5_bloque').value,
+                    raccord: document.getElementById('m5_raccord').value
                 };
             }
 
@@ -239,11 +474,20 @@ HTML_INDEX = """
                     body: JSON.stringify({modulo_id: moduloActivo, datos: datos})
                 });
                 const data = await res.json();
-                out.value = data.resultado_ia || data.error;
+                
+                if(moduloActivo === 'mod_0' && data.status === 'success') {
+                    out.value = "PROYECTO GUARDADO CON ÉXITO EN LA BASE DE DATOS.\n\nRecarga la página (F5) para que el proyecto aparezca en los menús desplegables del resto de módulos.";
+                } else {
+                    out.value = data.resultado_ia || data.error;
+                }
             } catch (e) {
-                out.value = "Error de conexión con el motor IA.";
+                out.value = "Error de conexión con el motor IA o Base de Datos.";
             } finally {
-                btn.innerHTML = "COMPILAR Y EJECUTAR"; 
+                if (moduloActivo === 'mod_0') {
+                    btn.innerHTML = "GUARDAR IDENTIDAD EN BASE DE DATOS";
+                } else {
+                    btn.innerHTML = "COMPILAR Y EJECUTAR";
+                }
                 btn.disabled = false;
             }
         }
@@ -274,7 +518,8 @@ def login():
 def dashboard():
     if 'user' not in session:
         return redirect(url_for('login'))
-    return render_template_string(HTML_INDEX, is_admin=session.get('isAdmin'))
+    proyectos = cargar_proyectos()
+    return render_template_string(HTML_INDEX, is_admin=session.get('isAdmin'), proyectos=proyectos.keys())
 
 @app.route('/logout')
 def logout():
@@ -290,8 +535,15 @@ def ejecutar_prompt():
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
         
+        # --- MODULO 0: GUARDADO EN BASE DE DATOS LOCAL ---
+        if modulo_id == 'mod_0':
+            nombre = datos.get('nombre')
+            if not nombre:
+                return jsonify({'error': 'El nombre del proyecto es obligatorio.'}), 400
+            guardar_proyecto(nombre, datos)
+            return jsonify({'status': 'success', 'resultado_ia': 'Guardado'})
+
         # --- RUTINA DE AUTO-DESCUBRIMIENTO DE MODELO ---
-        # Le preguntamos a la API a qué modelos tienes acceso y tomamos el mejor.
         modelo_valido = None
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
@@ -300,45 +552,72 @@ def ejecutar_prompt():
                     break
                     
         if not modelo_valido:
-            return jsonify({'error': 'Error Crítico: Tu API Key no tiene modelos de texto habilitados en Google Cloud.'}), 500
+            return jsonify({'error': 'Error Crítico: Tu API Key no tiene modelos habilitados.'}), 500
 
         model = genai.GenerativeModel(modelo_valido)
         
+        # --- INYECCIÓN DE LÓGICA DE BACKEND MAESTRA ---
         prompt = ""
-        
-        # --- INYECCIÓN DE LÓGICA DE BACKEND (DOCUMENTO MAESTRO) ---
+        silenciador = "\n[REGLA MAESTRA INQUEBRANTABLE]: Entrega ÚNICAMENTE el output final estructurado. Tienes estrictamente prohibido incluir saludos, explicaciones, confirmaciones o texto conversacional previo/posterior como 'Aquí tienes...' o 'Claro que sí'."
+        proyectos_db = cargar_proyectos()
         
         if modulo_id == 'mod_1':
             prompt = f"""[IDENTIDAD]: Actúa como un {datos.get('rol', 'Experto')}.
 [CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto', '')}.
 [TAREA]: Ejecuta la siguiente orden: {datos.get('texto', '')}.
-[RESTRICCIONES]: Actúa con profesionalismo ejecutivo y experto. Prohibido el lenguaje genérico, el relleno y las obviedades. Sé directo y estratégico. Si se requiere código, entrégalo completo y final, sin fragmentos sueltos.
-[FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato', 'Texto')}.
-"""
+[RESTRICCIONES]: Actúa con profesionalismo ejecutivo. Prohibido el lenguaje genérico. Sé directo y estratégico. Si es código, entrégalo final sin fragmentos.
+[FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato', 'Texto')}. {silenciador}"""
+
+        elif modulo_id == 'mod_2':
+            p_data = proyectos_db.get(datos.get('proyecto', ''), {})
+            prompt = f"""[IDENTIDAD Y TONO]: Eres un guionista experto en retención. Escribe estrictamente bajo este arquetipo: {p_data.get('voz', 'Profesional')}.
+[CONTEXTO DE MARCA]: Respeta los siguientes límites inquebrantables: {p_data.get('limites', 'Ninguno')} y cumple normas de monetización.
+[TAREA]: Desarrolla un guion de longitud {datos.get('longitud')} basado en: {datos.get('premisa', '')}. Petición extra: {datos.get('peticion', 'N/A')}.
+[ESTRUCTURA]: Aplica framework: {datos.get('framework')}. Prohibido iniciar con saludos o introducciones lentas. La primera línea ataca la curiosidad. Densidad alta, ritmo rápido, frases cortas.
+[FORMATO DE SALIDA]: Guion limpio, dividido por bloques lógicos. {silenciador}"""
+
+        elif modulo_id == 'mod_3':
+            p_data = proyectos_db.get(datos.get('proyecto', ''), {})
+            dur = int(datos.get('duracion', 5))
+            limite_palabras = "10 palabras máximo" if dur == 4 else "12 a 15 palabras exactas" if dur == 5 else "18 a 22 palabras exactas" if dur == 8 else "35 a 40 palabras exactas"
+            
+            ctx_memoria = ""
+            if "Inicio" in datos.get('bloque', ''):
+                ctx_memoria = "Este es el segundo 0 del video. Aplica regla de 1 segundo (cero saludos, detonar intriga pura)."
+            else:
+                ctx_memoria = f"El bloque anterior terminó así: '{datos.get('memoria', '')}'. Mantén continuidad visual de personajes/entorno y continúa el guion exactamente donde se quedó."
+
+            prompt = f"""[IDENTIDAD]: Director de cinematografía y retención. Tono: {p_data.get('voz', 'Seco')}.
+[SECUENCIA]: {datos.get('bloque')}. Duración estricta: {dur} segundos.
+[CONTEXTO DE MEMORIA]: {ctx_memoria}.
+[TAREA]: Desarrolla gancho basado en: {datos.get('premisa')}.
+[RESTRICCIONES DURAS]: Límites de marca: {p_data.get('limites', 'N/A')}. El texto de locución DEBE tener matemáticamente: {limite_palabras}.
+[FORMATO DE SALIDA ESTRICTO]: Dos bloques exactos:
+[AUDIO-VOZ]: (Texto exacto para voz).
+[PROMPT-VIDEO]: (Instrucción técnica en inglés para IA de video). {silenciador}"""
+
+        elif modulo_id == 'mod_4':
+            p_data = proyectos_db.get(datos.get('proyecto', ''), {})
+            prompt = f"""[IDENTIDAD]: Estratega viral y SEO. Arquetipo: {p_data.get('voz', 'Experto')}.
+[CONTEXTO]: Analiza: {datos.get('guion', '')}.
+[TAREA]: Empaquetado para {datos.get('plataforma')}.
+[RESTRICCIONES]: Títulos: Usa Vacío de Información, no resumas. Enfoque: {datos.get('enfoque')}. Imágenes: Resolución 1920x1080 (16:9) estricto. Estilo de arte: {datos.get('estilo')}. Límites extra: {p_data.get('limites', 'Ninguno')}.
+[FORMATO DE SALIDA ESTRICTO]: 
+TÍTULOS: (5 opciones).
+PROMPT DE MINIATURA (Inglés): (1 instrucción técnica, garantizando 1920x1080 y estilo visual).
+DESCRIPCIÓN Y TAGS: (Párrafo SEO y etiquetas). {silenciador}"""
+
         elif modulo_id == 'mod_5':
-            gatillo_logic = ""
-            if datos.get('gatillo') == "FOMO":
-                gatillo_logic = "Aplica el sesgo de aversión a la pérdida. El guion debe generar ansiedad de oportunidad: el producto se agota rápido, pertenece a un lote exclusivo. Usa lenguaje de urgencia extrema."
-            elif datos.get('gatillo') == "Autoridad":
-                gatillo_logic = "Ataca el dolor de la ineficiencia. Demuestra cómo este producto digital elimina fricciones al instante. Lenguaje directo, corporativo y basado en ROI."
-            elif datos.get('gatillo') == "Identidad":
-                gatillo_logic = "Aplica marketing emocional. El guion debe hacer sentir al usuario que adquirir esto le otorga estatus social y pertenencia a un grupo exclusivo."
-            elif datos.get('gatillo') == "Satira":
-                gatillo_logic = "Aplica humor ácido y sátira viral. Usa el anti-marketing como herramienta de conexión. Lenguaje de tendencia para TikTok."
-
-            prompt = f"""[ESTRATEGIA DE CAMPAÑA Y VENTAS]: Eres un Media Buyer Senior y experto en Neuro-Marketing. Desarrolla esta secuencia publicitaria 9:16.
-[GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. {gatillo_logic}
-[SECUENCIA]: {datos.get('bloque', 'Bloque 1')}. Duración: {datos.get('duracion', '4 segundos')}. Continuación de (Si aplica): {datos.get('raccord', 'N/A')}.
-[FASE 1: DISEÑO VISUAL]: Modalidad: {datos.get('modalidad', 'UGC')}. Perfil: {datos.get('avatar', 'Gen-Z')}. Integra el producto de referencia manteniendo el 100% de su fidelidad.
-[FASE 2: ACCIÓN Y FÍSICA]: Render 4K fotorrealista. Física inquebrantable. Sin deformaciones corporales ni del producto.
+            gatillo_logic = "Aplica el sesgo de aversión a la pérdida. Urgencia extrema." if datos.get('gatillo') == "FOMO" else "Ataca el dolor de la ineficiencia. Lenguaje ROI." if datos.get('gatillo') == "Autoridad" else "Aplica marketing emocional y estatus social." if datos.get('gatillo') == "Identidad" else "Aplica humor ácido y sátira viral anti-marketing."
+            prompt = f"""[ESTRATEGIA]: Media Buyer Senior y Neuro-Marketing. Secuencia 9:16.
+[GATILLO]: Conversión inmediata. {gatillo_logic}
+[SECUENCIA]: {datos.get('bloque', 'Bloque 1')}. Duración: {datos.get('duracion', '4 segundos')}. Continuación: {datos.get('raccord', 'N/A')}.
+[FASE 1]: Modalidad: {datos.get('modalidad', 'UGC')}. Perfil: {datos.get('avatar', 'Gen-Z')}.
+[FASE 2]: Render 4K fotorrealista. Física inquebrantable.
 [FORMATO DE SALIDA ESTRICTO]:
-[PROMPT VISUAL - VIDEO]: (Instrucción técnica de cámara y acción para IA).
-[GUION DE VENTA]: (Texto exacto de locución. Debe aplicar el sesgo psicológico, atacando el dolor del cliente y forzando la urgencia. Límite estricto de palabras según la duración). Prohibido vender características, vende la transformación.
-"""
-        else:
-            prompt = f"Procesando Módulo: {modulo_id} con datos: {datos}"
+[PROMPT VISUAL - VIDEO]: (Cámara y acción).
+[GUION DE VENTA]: (Locución directa al dolor/urgencia). Prohibido vender características. {silenciador}"""
 
-        # Ejecución contra la API
         response = model.generate_content(prompt)
         return jsonify({'status': 'success', 'resultado_ia': response.text})
     
