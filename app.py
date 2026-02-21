@@ -25,7 +25,7 @@ def verificar_credenciales(u, p):
         db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
-# --- DISEÑO CORPORATE TECH CLONADO EXACTAMENTE DE LA CAPTURA ---
+# --- DISEÑO CORPORATE TECH INTACTO ---
 
 HTML_LOGIN = """
 <!DOCTYPE html>
@@ -99,10 +99,10 @@ HTML_INDEX = """
                     <div>
                         <label class="label-red block mb-1.5">GATILLO PSICOLÓGICO (NEURO-MARKETING)</label>
                         <select id="m5_gatillo" class="w-full p-2.5 text-sm">
-                            <option>FOMO y Escasez (Urgencia / Exclusividad)</option>
-                            <option>Prueba Social (Validación de Masas)</option>
-                            <option>Riesgo Invertido (Garantías Absolutas)</option>
-                            <option>Curiosidad Extrema (Vacío de Información)</option>
+                            <option value="FOMO">FOMO y Escasez (Urgencia / Exclusividad)</option>
+                            <option value="Autoridad">Autoridad y Eficiencia (Solución técnica, ahorro de tiempo/dinero)</option>
+                            <option value="Identidad">Identidad y Pertenencia (Marketing emocional, estatus social)</option>
+                            <option value="Satira">Sátira y Rebeldía (Humor ácido, anti-marketing viral)</option>
                         </select>
                     </div>
 
@@ -127,16 +127,16 @@ HTML_INDEX = """
                             <label class="label-blue block mb-1.5">DURACIÓN</label>
                             <select id="m5_duracion" class="w-full p-2.5 text-sm">
                                 <option>4 segundos</option>
+                                <option>5 segundos</option>
                                 <option>8 segundos</option>
-                                <option>15 segundos</option>
                             </select>
                         </div>
                         <div>
                             <label class="label-blue block mb-1.5">NÚMERO DE BLOQUE</label>
                             <select id="m5_bloque" class="w-full p-2.5 text-sm">
                                 <option>Bloque 1 (Inicio)</option>
-                                <option>Bloque 2 (Retención)</option>
-                                <option>Bloque 3 (Call to Action)</option>
+                                <option>Bloque 2</option>
+                                <option>Bloque 3</option>
                             </select>
                         </div>
                     </div>
@@ -152,12 +152,26 @@ HTML_INDEX = """
                 <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
                 <div class="space-y-5">
                     <div>
-                        <label class="label-blue block mb-1.5">ROL / INSTRUCCIÓN TÉCNICA</label>
-                        <input type="text" id="m1_rol" placeholder="Ej: Editor Técnico Estricto" class="w-full p-2.5 text-sm">
+                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
+                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
                     </div>
                     <div>
-                        <label class="label-blue block mb-1.5">CUERPO DE LA PETICIÓN</label>
-                        <textarea id="m1_texto" placeholder="Describe lo que necesitas procesar..." class="w-full h-48 p-2.5 text-sm resize-none"></textarea>
+                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
+                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
+                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
+                        <select id="m1_formato" class="w-full p-2.5 text-sm">
+                            <option>Código listo para copiar</option>
+                            <option>Tabla Comparativa</option>
+                            <option>Documento Formal</option>
+                            <option>Lista de Acción Estratégica</option>
+                            <option>Markdown</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -212,7 +226,9 @@ HTML_INDEX = """
             } else if (moduloActivo === 'mod_1') {
                 datos = { 
                     rol: document.getElementById('m1_rol').value, 
-                    texto: document.getElementById('m1_texto').value 
+                    contexto: document.getElementById('m1_contexto').value,
+                    texto: document.getElementById('m1_texto').value,
+                    formato: document.getElementById('m1_formato').value
                 };
             }
 
@@ -272,9 +288,47 @@ def ejecutar_prompt():
     try:
         data = request.json
         model = genai.GenerativeModel('gemini-pro')
-        prompt = f"MODULO: {data.get('modulo_id')}. PARÁMETROS: {data.get('datos')}. Genera contenido profesional acorde a la solicitud."
+        modulo_id = data.get('modulo_id')
+        datos = data.get('datos', {})
+        
+        prompt = ""
+        
+        # --- INYECCIÓN DE LÓGICA DE BACKEND (DOCUMENTO MAESTRO) ---
+        
+        if modulo_id == 'mod_1':
+            prompt = f"""[IDENTIDAD]: Actúa como un {datos.get('rol', 'Experto')}.
+[CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto', '')}.
+[TAREA]: Ejecuta la siguiente orden: {datos.get('texto', '')}.
+[RESTRICCIONES]: Actúa con profesionalismo ejecutivo y experto. Prohibido el lenguaje genérico, el relleno y las obviedades. Sé directo y estratégico. Si se requiere código, entrégalo completo y final, sin fragmentos sueltos.
+[FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato', 'Texto')}.
+"""
+        elif modulo_id == 'mod_5':
+            gatillo_logic = ""
+            if datos.get('gatillo') == "FOMO":
+                gatillo_logic = "Aplica el sesgo de aversión a la pérdida. El guion debe generar ansiedad de oportunidad: el producto se agota rápido, pertenece a un lote exclusivo. Usa lenguaje de urgencia extrema."
+            elif datos.get('gatillo') == "Autoridad":
+                gatillo_logic = "Ataca el dolor de la ineficiencia. Demuestra cómo este producto digital elimina fricciones al instante. Lenguaje directo, corporativo y basado en ROI."
+            elif datos.get('gatillo') == "Identidad":
+                gatillo_logic = "Aplica marketing emocional. El guion debe hacer sentir al usuario que adquirir esto le otorga estatus social y pertenencia a un grupo exclusivo."
+            elif datos.get('gatillo') == "Satira":
+                gatillo_logic = "Aplica humor ácido y sátira viral. Usa el anti-marketing como herramienta de conexión. Lenguaje de tendencia para TikTok."
+
+            prompt = f"""[ESTRATEGIA DE CAMPAÑA Y VENTAS]: Eres un Media Buyer Senior y experto en Neuro-Marketing. Desarrolla esta secuencia publicitaria 9:16.
+[GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. {gatillo_logic}
+[SECUENCIA]: {datos.get('bloque', 'Bloque 1')}. Duración: {datos.get('duracion', '4 segundos')}. Continuación de (Si aplica): {datos.get('raccord', 'N/A')}.
+[FASE 1: DISEÑO VISUAL]: Modalidad: {datos.get('modalidad', 'UGC')}. Perfil: {datos.get('avatar', 'Gen-Z')}. Integra el producto de referencia manteniendo el 100% de su fidelidad.
+[FASE 2: ACCIÓN Y FÍSICA]: Render 4K fotorrealista. Física inquebrantable. Sin deformaciones corporales ni del producto.
+[FORMATO DE SALIDA ESTRICTO]:
+[PROMPT VISUAL - VIDEO]: (Instrucción técnica de cámara y acción para IA).
+[GUION DE VENTA]: (Texto exacto de locución. Debe aplicar el sesgo psicológico, atacando el dolor del cliente y forzando la urgencia. Límite estricto de palabras según la duración). Prohibido vender características, vende la transformación.
+"""
+        else:
+            prompt = f"Procesando Módulo: {modulo_id} con datos: {datos}"
+
+        # Ejecución contra la API
         response = model.generate_content(prompt)
         return jsonify({'status': 'success', 'resultado_ia': response.text})
+    
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
