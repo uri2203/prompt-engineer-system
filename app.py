@@ -287,10 +287,22 @@ def ejecutar_prompt():
         return jsonify({'error': 'No auth'}), 401
     try:
         data = request.json
-        # Enrutamiento al modelo global de alta disponibilidad
-        model = genai.GenerativeModel('gemini-1.5-flash')
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
+        
+        # --- RUTINA DE AUTO-DESCUBRIMIENTO DE MODELO ---
+        # Le preguntamos a la API a qué modelos tienes acceso y tomamos el mejor.
+        modelo_valido = None
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                modelo_valido = m.name
+                if 'flash' in m.name.lower() or 'pro' in m.name.lower():
+                    break
+                    
+        if not modelo_valido:
+            return jsonify({'error': 'Error Crítico: Tu API Key no tiene modelos de texto habilitados en Google Cloud.'}), 500
+
+        model = genai.GenerativeModel(modelo_valido)
         
         prompt = ""
         
