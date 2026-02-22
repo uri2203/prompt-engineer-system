@@ -1,7 +1,5 @@
 class TraductorUniversal:
     def construir_prompt(self, d):
-        # [cite: 10] Aislamiento Total
-        # [cite: 11] Filtro de Calidad Inyectado
         return (f"[IDENTIDAD]: Actúa como un {d.get('rol')}.\n"
                 f"[CONTEXTO]: Considera los siguientes datos como base inamovible: {d.get('contexto')}.\n"
                 f"[TAREA]: Ejecuta la siguiente orden: {d.get('texto')}.\n"
