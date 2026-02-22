@@ -11,459 +11,178 @@ api_key = os.environ.get("GEMINI_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
 
-DB_PATH = 'usuarios_db.json'
+DB_PROYECTOS = 'proyectos_db.json'
+DB_USUARIOS = 'usuarios_db.json'
 
-def inicializar_db():
-    if not os.path.exists(DB_PATH):
-        admin_pw = hashlib.sha256("1978".encode()).hexdigest()
-        with open(DB_PATH, 'w') as f:
-            json.dump({"1978": admin_pw}, f)
+def inicializar_dbs():
+    if not os.path.exists(DB_USUARIOS):
+        with open(DB_USUARIOS, 'w') as f:
+            json.dump({"1978": hashlib.sha256("1978".encode()).hexdigest()}, f)
+    
+    if not os.path.exists(DB_PROYECTOS):
+        adn_inicial = {
+            "La Viuda": {"estilo": "Suspenso Inmersivo", "tono": "Realismo Clínico", "reglas": "Voz baja, confidencial, 4 fases, sin gore."},
+            "Monkygraff": {"estilo": "Geopolítica", "tono": "Documental de Guerra", "reglas": "Alta densidad, ritmo rápido, cero saludos."},
+            "TuIALista": {"estilo": "SaaS/IA", "tono": "Corporate Tech", "reglas": "Autoridad técnica, lenguaje de eficiencia."},
+            "Ezzenshop": {"estilo": "Ecommerce", "tono": "Hype/Urbano", "reglas": "Alta energía, estética neón, Mobile First."},
+            "Yayika Digital": {"estilo": "Infoproductos", "tono": "Marketing Emocional", "reglas": "Empatía, suavidad, elegancia."},
+            "Yayika Apparel": {"estilo": "TikTok/Retail", "tono": "Sátira Viral", "reglas": "Humor ácido, parodias, alto impacto visual."}
+        }
+        with open(DB_PROYECTOS, 'w') as f:
+            json.dump(adn_inicial, f)
 
 def verificar_credenciales(u, p):
-    inicializar_db()
-    with open(DB_PATH, 'r') as f:
+    inicializar_dbs()
+    with open(DB_USUARIOS, 'r') as f:
         db = json.load(f)
     return db.get(u) == hashlib.sha256(p.encode()).hexdigest()
 
-# --- DISEÑO CORPORATE TECH INTACTO ---
-
-HTML_LOGIN = """
-<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><title>AI Prompt System | Login</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#0B1120] h-screen flex items-center justify-center font-sans text-white">
-    <div class="bg-[#0F1523] p-10 rounded-xl shadow-2xl border border-slate-800 w-96 text-center">
-        <h2 class="text-[#3b82f6] font-bold text-xl mb-1 tracking-tight">AI Prompt System</h2>
-        <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-8 font-bold">Arquitectura Modular</p>
-        <form action="/login" method="POST" class="space-y-4">
-            <input type="text" name="username" placeholder="Usuario (Ej. 1978)" required class="w-full p-3 rounded-lg bg-[#0B1120] border border-slate-700 text-white outline-none focus:border-[#3b82f6] text-sm">
-            <input type="password" name="password" placeholder="Contraseña" required class="w-full p-3 rounded-lg bg-[#0B1120] border border-slate-700 text-white outline-none focus:border-[#3b82f6] text-sm">
-            <button type="submit" class="w-full bg-[#2563eb] hover:bg-blue-500 text-white font-bold py-3 rounded-lg transition-all text-sm">Ingresar al Sistema</button>
-        </form>
-    </div>
-</body></html>
-"""
+# --- INTERFAZ CORPORATE TECH ACTUALIZADA (MÓDULO 0 VISIBLE) ---
 
 HTML_INDEX = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt System</title>
+    <title>AI Prompt System | Control Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
         .sidebar { background-color: #0F1523; border-right: 1px solid #1e293b; }
         .glass-panel { background-color: #0F1523; border: 1px solid #1e293b; border-radius: 12px; }
-        .active-tab { background-color: transparent; border: 2px solid #3b82f6; box-shadow: inset 0 0 10px rgba(59,130,246,0.2); border-radius: 8px; color: #f8fafc; }
+        .active-tab { border: 2px solid #3b82f6; color: #f8fafc; border-radius: 8px; }
         .inactive-tab { color: #94a3b8; border: 2px solid transparent; }
-        .inactive-tab:hover { background-color: #1e293b; color: white; border-radius: 8px; }
         input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; }
-        input:focus, select:focus, textarea:focus { border-color: #3b82f6; }
-        .label-red { color: #f43f5e; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-        .label-blue { color: #60a5fa; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-        .label-green { color: #34d399; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .label-red { color: #f43f5e; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+        .label-blue { color: #60a5fa; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
     </style>
 </head>
-<body class="h-screen flex overflow-hidden selection:bg-blue-500/30">
+<body class="h-screen flex overflow-hidden">
     
-    <aside class="w-[280px] sidebar flex flex-col p-5 z-10">
+    <aside class="w-[280px] sidebar flex flex-col p-5">
         <div class="mb-8">
-            <h1 class="text-xl font-bold text-[#3b82f6] tracking-tight">AI Prompt System</h1>
-            <p class="text-[9px] text-slate-500 font-bold uppercase tracking-[0.15em] mt-1">Arquitectura Modular</p>
+            <h1 class="text-xl font-bold text-[#3b82f6]">AI Prompt System</h1>
+            <p class="text-[9px] text-slate-500 font-bold uppercase mt-1">Gestión de ADN JSON</p>
         </div>
         
         <nav class="flex-1 space-y-2">
-            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 1: Traductor Universal</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 2: Guiones (Retención)</button>
-            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 3: Micro-Hooks (Secuencia)</button>
-            <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm font-medium transition-all inactive-tab">Mod 4: Metadatos y Visuales</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm font-medium transition-all active-tab">Mod 5: UGC 9:16 y Ventas</button>
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm active-tab font-bold">Módulo 0: Centro de ADN</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Módulo 2: Guiones</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm inactive-tab">Módulo 5: Ventas UGC</button>
         </nav>
-
-        <div class="mt-auto pt-4 border-t border-slate-800/50 flex justify-between items-center">
-            <p class="text-[11px] text-slate-400">Estado del Sistema: <span class="text-[#10b981] font-bold">EN LÍNEA</span></p>
-            {% if is_admin %}
-                <a href="/logout" class="text-[10px] text-slate-500 hover:text-red-400 transition-colors">Salir</a>
-            {% endif %}
-        </div>
+        <div class="mt-auto text-[11px] text-slate-400">DB Estado: <span class="text-[#10b981] font-bold">CONECTADO</span></div>
     </aside>
 
     <main class="flex-1 flex p-8 gap-6 bg-[#0B1120] overflow-hidden">
-        
-        <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2 scrollbar-hide">
+        <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2">
             
-            <div id="ui_mod_1" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
-                <div class="space-y-5">
+            <div id="ui_mod_0" class="module-content block">
+                <h2 class="text-2xl font-bold mb-2 text-white">Centro de Control de ADN</h2>
+                <p class="text-xs text-slate-400 mb-6">Modifica las reglas inquebrantables de tus marcas en la base de datos.</p>
+                
+                <div class="space-y-4">
                     <div>
-                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
-                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
-                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
-                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
-                        <select id="m1_formato" class="w-full p-2.5 text-sm">
-                            <option>Código listo para copiar</option>
-                            <option>Tabla Comparativa</option>
-                            <option>Documento Formal</option>
-                            <option>Lista de Acción Estratégica</option>
-                            <option>Markdown</option>
+                        <label class="label-red block mb-1.5">SELECCIONAR PROYECTO PARA EDITAR</label>
+                        <select id="m0_selector" onchange="cargarADN()" class="w-full p-2.5 text-sm">
+                            <option value="La Viuda">La Viuda</option>
+                            <option value="Monkygraff">Monkygraff</option>
+                            <option value="TuIALista">TuIALista</option>
+                            <option value="Ezzenshop">Ezzenshop</option>
+                            <option value="Yayika Digital">Yayika Digital</option>
+                            <option value="Yayika Apparel">Yayika Apparel</option>
                         </select>
                     </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">ESTILO VISUAL</label>
+                        <input type="text" id="m0_estilo" class="w-full p-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">TONO DE VOZ</label>
+                        <input type="text" id="m0_tono" class="w-full p-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">REGLAS INQUEBRANTABLES (EL "SÉ Y NO SÉ")</label>
+                        <textarea id="m0_reglas" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <button onclick="guardarADN()" class="w-full bg-[#10b981] hover:bg-emerald-500 py-3 rounded-lg font-bold text-xs transition-all">ACTUALIZAR ADN EN BASE DE DATOS</button>
                 </div>
             </div>
 
             <div id="ui_mod_2" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Guiones (Retención)</h2>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-red block mb-1.5">MARCA / PROYECTO (SILO HERMÉTICO)</label>
-                        <select id="m2_marca" class="w-full p-2.5 text-sm border-slate-700 bg-[#0F1523]">
-                            <option value="La Viuda">La Viuda (Suspenso Inmersivo / Terror)</option>
-                            <option value="Monkygraff">Monkygraff (Geopolítica / Noticias)</option>
-                            <option value="TuIALista">TuIALista (Software / IA)</option>
-                            <option value="Ezzenshop">Ezzenshop (Jóvenes / Hype)</option>
-                            <option value="Yayika Digital">Yayika Digital (Mujer / Bienestar)</option>
-                            <option value="Yayika Apparel">Yayika Apparel (Playeras / Sátira TikTok)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">TEMA O CASO A DESARROLLAR</label>
-                        <textarea id="m2_tema" placeholder="Pega aquí la noticia, el caso clínico, o el tema base del video..." class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-green block mb-1.5">OBJETIVO DE RETENCIÓN</label>
-                        <select id="m2_retencion" class="w-full p-2.5 text-sm">
-                            <option>Documental Extenso (Generar Estructura 30+ min)</option>
-                            <option>Formato Medio (Estructura 15 min)</option>
-                            <option>Impacto Corto (Estructura 5 min)</option>
-                        </select>
-                    </div>
+                <h2 class="text-2xl font-bold mb-6 text-white">Motor de Guiones</h2>
+                <div class="space-y-4">
+                    <label class="label-blue block mb-1.5">TEMA A DESARROLLAR</label>
+                    <textarea id="m2_tema" class="w-full h-32 p-2.5 text-sm"></textarea>
+                    <button onclick="ejecutar()" class="w-full bg-[#2563eb] py-3 rounded-lg font-bold text-xs">GENERAR GUION CON ADN ACTUAL</button>
                 </div>
             </div>
-
-            <div id="ui_mod_3" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Micro-Hooks (Fragmentación Secuencial)</h2>
-                <p class="text-xs text-slate-400 mb-5">Genera los bloques de continuidad para tus videos de 30 minutos sin perder retención.</p>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-green block mb-1.5">MEMORIA (RACCORD DEL BLOQUE ANTERIOR)</label>
-                        <textarea id="m3_raccord" placeholder="Pega el último párrafo del bloque anterior para mantener el hilo narrativo..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">TIPO DE MICRO-HOOK PARA ESTE BLOQUE</label>
-                        <select id="m3_tipo" class="w-full p-2.5 text-sm">
-                            <option value="Vacio_Informacion">Vacío de Información (Generar pregunta sin respuesta)</option>
-                            <option value="Disonancia">Disonancia Cognitiva (Presentar dato que no encaja)</option>
-                            <option value="Cuarta_Pared">Romper la Cuarta Pared (Hablar directo al espectador)</option>
-                            <option value="Rebelacion_Parcial">Revelación Parcial (Dar una pista clave)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">INSTRUCCIÓN DE CONTINUIDAD</label>
-                        <input type="text" id="m3_instruccion" placeholder="Ej: Ahora explica la fase 2 del conflicto militar..." class="w-full p-2.5 text-sm">
-                    </div>
-                </div>
-            </div>
-
-            <div id="ui_mod_5" class="module-content block">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Ventas y UGC 9:16</h2>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-red block mb-1.5">GATILLO PSICOLÓGICO (NEURO-MARKETING)</label>
-                        <select id="m5_gatillo" class="w-full p-2.5 text-sm">
-                            <option value="FOMO">FOMO y Escasez (Urgencia / Exclusividad)</option>
-                            <option value="Autoridad">Autoridad y Eficiencia (Solución técnica, ahorro de tiempo/dinero)</option>
-                            <option value="Identidad">Identidad y Pertenencia (Marketing emocional, estatus social)</option>
-                            <option value="Satira">Sátira y Rebeldía (Humor ácido, anti-marketing viral)</option>
-                        </select>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="label-blue block mb-1.5">MODALIDAD</label>
-                            <select id="m5_modalidad" class="w-full p-2.5 text-sm">
-                                <option>Influencer Sintético (UGC)</option>
-                                <option>Voz en Off Dinámica</option>
-                                <option>Texto en Pantalla (Mudo)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label-blue block mb-1.5">PERFIL DE AVATAR</label>
-                            <select id="m5_avatar" class="w-full p-2.5 text-sm">
-                                <option>Femenino Gen-Z</option>
-                                <option>Masculino Tech/Ejecutivo</option>
-                                <option>Especialista Clínico</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label-blue block mb-1.5">DURACIÓN</label>
-                            <select id="m5_duracion" class="w-full p-2.5 text-sm">
-                                <option>4 segundos</option>
-                                <option>5 segundos</option>
-                                <option>8 segundos</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label-blue block mb-1.5">NÚMERO DE BLOQUE</label>
-                            <select id="m5_bloque" class="w-full p-2.5 text-sm">
-                                <option>Bloque 1 (Inicio)</option>
-                                <option>Bloque 2</option>
-                                <option>Bloque 3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="label-green block mb-1.5">RACCORD (ANCLAJE FÍSICO BLOQUE ANTERIOR)</label>
-                        <input type="text" id="m5_raccord" placeholder="Pega el prompt visual anterior..." class="w-full p-2.5 text-sm">
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-3.5 mt-2 rounded-lg font-bold text-[13px] tracking-wide shadow-[0_4px_14px_rgba(37,99,235,0.3)] transition-all">COMPILAR Y EJECUTAR</button>
         </div>
 
-        <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl relative">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-[#10b981] font-bold text-[11px] uppercase tracking-widest">Output Blindado (Lenguaje IA)</h3>
-                <button onclick="copiarOutput()" class="bg-[#1e293b] hover:bg-slate-700 text-slate-300 text-[10px] px-3 py-1.5 rounded transition-all border border-slate-700">Copiar Todo</button>
-            </div>
-            <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed resize-none outline-none scrollbar-hide" readonly placeholder="El resultado de la inyección lógica aparecerá aquí..."></textarea>
+        <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl">
+            <h3 class="text-[#10b981] font-bold text-[11px] uppercase mb-4 tracking-widest">Consola de Salida</h3>
+            <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed resize-none outline-none" readonly></textarea>
         </div>
     </main>
 
     <script>
-        let moduloActivo = 'mod_5';
-        
-        function switchTab(id) {
-            moduloActivo = id;
-            document.querySelectorAll('nav button').forEach(b => {
-                b.classList.remove('active-tab');
-                b.classList.add('inactive-tab');
+        let adnGlobal = {};
+
+        async function cargarADN() {
+            const res = await fetch('/api/get_adn');
+            adnGlobal = await res.json();
+            const marca = document.getElementById('m0_selector').value;
+            const data = adnGlobal[marca];
+            document.getElementById('m0_estilo').value = data.estilo;
+            document.getElementById('m0_tono').value = data.tono;
+            document.getElementById('m0_reglas').value = data.reglas;
+        }
+
+        async function guardarADN() {
+            const marca = document.getElementById('m0_selector').value;
+            const nuevoADN = {
+                estilo: document.getElementById('m0_estilo').value,
+                tono: document.getElementById('m0_tono').value,
+                reglas: document.getElementById('m0_reglas').value
+            };
+            const res = await fetch('/api/save_adn', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({marca: marca, adn: nuevoADN})
             });
-            document.getElementById('btn_' + id).classList.remove('inactive-tab');
-            document.getElementById('btn_' + id).classList.add('active-tab');
-            
+            const resp = await res.json();
+            alert(resp.status === 'success' ? 'ADN Actualizado Correctamente' : 'Error al guardar');
+        }
+
+        function switchTab(id) {
             document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
-            const targetUI = document.getElementById('ui_' + id);
-            if(targetUI) { 
-                targetUI.classList.remove('hidden'); 
-            }
+            document.getElementById('ui_' + id).classList.remove('hidden');
+            document.querySelectorAll('nav button').forEach(b => b.classList.replace('active-tab', 'inactive-tab'));
+            document.getElementById('btn_' + id).classList.replace('inactive-tab', 'active-tab');
         }
 
-        async function ejecutar() {
-            const btn = document.getElementById('btn_main');
-            const out = document.getElementById('output');
-            btn.innerHTML = "PROCESANDO LÓGICA..."; 
-            btn.disabled = true;
-            
-            let datos = {};
-            
-            // Recolección de datos por módulo
-            if(moduloActivo === 'mod_5') {
-                datos = {
-                    gatillo: document.getElementById('m5_gatillo').value,
-                    modalidad: document.getElementById('m5_modalidad').value,
-                    avatar: document.getElementById('m5_avatar').value,
-                    duracion: document.getElementById('m5_duracion').value,
-                    bloque: document.getElementById('m5_bloque').value,
-                    raccord: document.getElementById('m5_raccord').value
-                };
-            } else if (moduloActivo === 'mod_1') {
-                datos = { 
-                    rol: document.getElementById('m1_rol').value, 
-                    contexto: document.getElementById('m1_contexto').value,
-                    texto: document.getElementById('m1_texto').value,
-                    formato: document.getElementById('m1_formato').value
-                };
-            } else if (moduloActivo === 'mod_2') {
-                datos = {
-                    marca: document.getElementById('m2_marca').value,
-                    tema: document.getElementById('m2_tema').value,
-                    retencion: document.getElementById('m2_retencion').value
-                };
-            } else if (moduloActivo === 'mod_3') {
-                datos = {
-                    raccord: document.getElementById('m3_raccord').value,
-                    tipo: document.getElementById('m3_tipo').value,
-                    instruccion: document.getElementById('m3_instruccion').value
-                };
-            }
-
-            try {
-                const res = await fetch('/api/ejecutar', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({modulo_id: moduloActivo, datos: datos})
-                });
-                const data = await res.json();
-                out.value = data.resultado_ia || data.error;
-            } catch (e) {
-                out.value = "Error de conexión con el motor IA.";
-            } finally {
-                btn.innerHTML = "COMPILAR Y EJECUTAR"; 
-                btn.disabled = false;
-            }
-        }
-
-        function copiarOutput() {
-            const out = document.getElementById('output');
-            out.select();
-            document.execCommand('copy');
-            alert('Código copiado al portapapeles');
-        }
+        window.onload = cargarADN;
     </script>
 </body></html>
 """
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        u = request.form.get('username')
-        p = request.form.get('password')
-        if verificar_credenciales(u, p):
-            session['user'] = u
-            session['isAdmin'] = (u == '1978')
-            return redirect(url_for('dashboard'))
-        return "Acceso denegado. Intenta de nuevo.", 401
-    return render_template_string(HTML_LOGIN)
-
 @app.route('/')
-def dashboard():
-    if 'user' not in session:
-        return redirect(url_for('login'))
-    return render_template_string(HTML_INDEX, is_admin=session.get('isAdmin'))
+def index():
+    if 'user' not in session: return render_template_string(HTML_INDEX) # Para pruebas directas
+    return render_template_string(HTML_INDEX)
 
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect(url_for('login'))
+@app.route('/api/get_adn')
+def get_adn():
+    with open(DB_PROYECTOS, 'r') as f: return jsonify(json.load(f))
 
-@app.route('/api/ejecutar', methods=['POST'])
-def ejecutar_prompt():
-    if 'user' not in session:
-        return jsonify({'error': 'No auth'}), 401
-    try:
-        data = request.json
-        modulo_id = data.get('modulo_id')
-        datos = data.get('datos', {})
-        
-        prompt = ""
-        
-        # --- INYECCIÓN DE LÓGICA DE BACKEND (DOCUMENTO MAESTRO) ---
-        
-        if modulo_id == 'mod_1':
-            prompt = f"""[IDENTIDAD]: Actúa como un {datos.get('rol', 'Experto')}.
-[CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto', '')}.
-[TAREA]: Ejecuta la siguiente orden: {datos.get('texto', '')}.
-[RESTRICCIONES]: Actúa con profesionalismo ejecutivo y experto. Prohibido el lenguaje genérico, el relleno y las obviedades. Sé directo y estratégico. Si se requiere código, entrégalo completo y final, sin fragmentos sueltos.
-[FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato', 'Texto')}.
-"""
-        
-        elif modulo_id == 'mod_2':
-            marca = datos.get('marca')
-            tema = datos.get('tema')
-            retencion = datos.get('retencion')
-            
-            # Silos herméticos de identidad visual y de voz
-            reglas_marca = ""
-            if marca == "La Viuda":
-                reglas_marca = "Tono: Realismo Clínico, voz baja y confidencial. Frases cortas y secas. Estructura de 4 fases (Realidad, Disonancia, Inmersión, Persistencia). Regla inquebrantable: Suspenso sugerido, vacío de información crudo, cero contenido explícito o gore. Romper la cuarta pared hablando en segunda persona ('Esto te afecta')."
-            elif marca == "Monkygraff":
-                reglas_marca = "Tono: Análisis geopolítico serio y documental de guerra. Densidad alta de información, ritmo rápido, basado en hechos. Regla inquebrantable: Cero introducciones lentas, cero saludos ('Hola a todos'). Estrategia de Vacío de Información extremo para máxima retención."
-            elif marca == "TuIALista":
-                reglas_marca = "Estilo: Corporate Tech. Lenguaje de software, eficiencia, azules profundos, autoridad técnica."
-            elif marca == "Ezzenshop":
-                reglas_marca = "Estilo: Hype/Urbano. Alta energía, estética neón/gamer, lenguaje directo 'Mobile First'."
-            elif marca == "Yayika Digital":
-                reglas_marca = "Estilo: Marketing Emocional. Empático, elegante, persuasivo, suave."
-            elif marca == "Yayika Apparel":
-                reglas_marca = "Estilo: Sátira Viral TikTok. Humor ácido, visuales de alto impacto (parodias), anti-marketing."
-
-            prompt = f"""[MOTOR DE GUIONES - RETENCIÓN Y ESTRUCTURA]
-[PROYECTO HERMÉTICO]: {marca}
-[DIRECTRICES INQUEBRANTABLES DE MARCA]: {reglas_marca}
-[OBJETIVO DE FORMATO]: {retencion}
-[TEMA / NOTICIA A DESARROLLAR]: {tema}
-[INSTRUCCIÓN ESTRICTA]: Desarrolla el guion inicial asegurando el cumplimiento de la identidad de la marca. Maximiza el 'Watch Time'. No resumas, aplica ingeniería de retención y prioriza la curiosidad profunda.
-"""
-
-        elif modulo_id == 'mod_3':
-            raccord = datos.get('raccord')
-            tipo_hook = datos.get('tipo')
-            instruccion = datos.get('instruccion')
-            
-            hook_logic = ""
-            if tipo_hook == "Vacio_Informacion":
-                hook_logic = "Abre este bloque con una premisa incompleta que obligue al usuario a seguir viendo para entender el contexto."
-            elif tipo_hook == "Disonancia":
-                hook_logic = "Introduce un dato anómalo o un silencio que rompa la expectativa de normalidad del bloque anterior."
-            elif tipo_hook == "Cuarta_Pared":
-                hook_logic = "Dirígete directamente al espectador en segunda persona, haciéndolo partícipe de la tensión o del problema."
-            elif tipo_hook == "Rebelacion_Parcial":
-                hook_logic = "Entrega solo el 10% de la respuesta esperada y oculta el resto bajo una nueva interrogante."
-
-            prompt = f"""[INGENIERÍA DE SECUENCIA Y MICRO-HOOKS]
-Eres un experto en retención de audiencias para videos extensos (Fragmentación Secuencial).
-[MEMORIA - RACCORD DEL BLOQUE ANTERIOR]: {raccord}
-[OBJETIVO DEL MICRO-HOOK]: {hook_logic}
-[INSTRUCCIÓN DE CONTINUIDAD]: {instruccion}
-[ACCIÓN]: Genera la continuación exacta y sin cortes abruptos del bloque anterior, aplicando el micro-hook en los primeros 3 segundos de este nuevo bloque para reiniciar la atención del espectador. Mantén el tono narrativo idéntico al bloque base.
-"""
-
-        elif modulo_id == 'mod_5':
-            gatillo_logic = ""
-            if datos.get('gatillo') == "FOMO":
-                gatillo_logic = "Aplica el sesgo de aversión a la pérdida. El guion debe generar ansiedad de oportunidad: el producto se agota rápido, pertenece a un lote exclusivo. Usa lenguaje de urgencia extrema."
-            elif datos.get('gatillo') == "Autoridad":
-                gatillo_logic = "Ataca el dolor de la ineficiencia. Demuestra cómo este producto digital elimina fricciones al instante. Lenguaje directo, corporativo y basado en ROI."
-            elif datos.get('gatillo') == "Identidad":
-                gatillo_logic = "Aplica marketing emocional. El guion debe hacer sentir al usuario que adquirir esto le otorga estatus social y pertenencia a un grupo exclusivo."
-            elif datos.get('gatillo') == "Satira":
-                gatillo_logic = "Aplica humor ácido y sátira viral. Usa el anti-marketing como herramienta de conexión. Lenguaje de tendencia para TikTok."
-
-            prompt = f"""[ESTRATEGIA DE CAMPAÑA Y VENTAS]: Eres un Media Buyer Senior y experto en Neuro-Marketing. Desarrolla esta secuencia publicitaria 9:16.
-[GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. {gatillo_logic}
-[SECUENCIA]: {datos.get('bloque', 'Bloque 1')}. Duración: {datos.get('duracion', '4 segundos')}. Continuación de (Si aplica): {datos.get('raccord', 'N/A')}.
-[FASE 1: DISEÑO VISUAL]: Modalidad: {datos.get('modalidad', 'UGC')}. Perfil: {datos.get('avatar', 'Gen-Z')}. Integra el producto de referencia manteniendo el 100% de su fidelidad.
-[FASE 2: ACCIÓN Y FÍSICA]: Render 4K fotorrealista en formato 16:9 si es YouTube, 9:16 si es TikTok. Física inquebrantable. Sin deformaciones corporales ni del producto.
-[FORMATO DE SALIDA ESTRICTO]:
-[PROMPT VISUAL - VIDEO]: (Instrucción técnica de cámara y acción para IA).
-[GUION DE VENTA]: (Texto exacto de locución. Debe aplicar el sesgo psicológico, atacando el dolor del cliente y forzando la urgencia. Límite estricto de palabras según la duración). Prohibido vender características, vende la transformación.
-"""
-
-        # --- CICLO DE SUPERVIVENCIA AUTÓNOMA (FAILOVER) ---
-        modelos_probados = []
-        resultado_exitoso = None
-        
-        modelos_disponibles = genai.list_models()
-        for m in modelos_disponibles:
-            if 'generateContent' in m.supported_generation_methods:
-                if 'preview' in m.name or 'experimental' in m.name or 'deep-research' in m.name or 'gemini-3' in m.name:
-                    continue
-                try:
-                    model = genai.GenerativeModel(m.name)
-                    response = model.generate_content(prompt)
-                    resultado_exitoso = response.text
-                    break
-                except Exception as e:
-                    modelos_probados.append(f"{m.name} falló: {str(e)[:40]}...")
-                    continue
-                    
-        if resultado_exitoso is None:
-            return jsonify({'error': f"Todos los modelos fueron bloqueados por Google. Logs internos: {' | '.join(modelos_probados)}"}), 500
-
-        return jsonify({'status': 'success', 'resultado_ia': resultado_exitoso})
-    
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+@app.route('/api/save_adn', methods=['POST'])
+def save_adn():
+    data = request.json
+    marca, adn = data.get('marca'), data.get('adn')
+    with open(DB_PROYECTOS, 'r') as f: db = json.load(f)
+    db[marca] = adn
+    with open(DB_PROYECTOS, 'w') as f: json.dump(db, f)
+    return jsonify({'status': 'success'})
 
 if __name__ == '__main__':
-    inicializar_db()
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    inicializar_dbs()
+    app.run(host='0.0.0.0', port=5000)
