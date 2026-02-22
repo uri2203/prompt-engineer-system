@@ -28,22 +28,23 @@ mod_5 = MotorVentasUGC()
 
 @app.route('/')
 def index():
-    # Carga el cartucho de los módulos de IA
     return render_template('workspace.html', active_page='workspace')
+
+@app.route('/adn')
+def adn():
+    # Nueva ruta exclusiva para el gestor de base de datos
+    return render_template('adn.html', active_page='adn')
 
 @app.route('/usuarios')
 def usuarios():
-    # Carga el cartucho de usuarios
     return render_template('usuarios.html', active_page='usuarios')
 
 @app.route('/configuracion')
 def configuracion():
-    # Carga el cartucho de configuración
     return render_template('configuracion.html', active_page='configuracion')
 
 @app.route('/mantenimiento')
 def mantenimiento():
-    # Ruta temporal para secciones en construcción (Bot, Logs, etc.)
     return render_template('mantenimiento.html', active_page='mantenimiento')
 
 # --- RUTAS DE DATOS Y API ---
