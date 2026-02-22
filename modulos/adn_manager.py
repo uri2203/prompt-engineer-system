@@ -1,60 +1,27 @@
-import google.generativeai as genai
+import json
 import os
 
-class AIEngine:
+class ADNManager:  # <--- ESTE NOMBRE DEBE SER EXACTO
     def __init__(self):
-        self.api_key = os.environ.get("GEMINI_API_KEY")
-        if self.api_key:
-            genai.configure(api_key=self.api_key)
+        self.db_path = 'proyectos_db.json'
+        self._inicializar()
 
-    def procesar(self, request_data, adn_db):
-        mod_id = request_data.get('modulo_id')
-        d = request_data.get('datos', {})
-        adn_completo = adn_db.cargar_todo()
-        
-        prompt = ""
+    def _inicializar(self):
+        if not os.path.exists(self.db_path):
+            # ADN Inicial basado en tu arquitectura de Módulo 0
+            adn_inicial = {
+                "La Viuda": {"identidad": "Suspenso Inmersivo", "reglas_duras": "Voz baja, 4 fases, sin gore."},
+                "Monkygraff": {"identidad": "Geopolítica", "reglas_duras": "Alta densidad, documental de guerra."},
+                "TuIALista": {"identidad": "Corporate Tech", "reglas_duras": "Autoridad técnica."}
+            }
+            with open(self.db_path, 'w') as f:
+                json.dump(adn_inicial, f)
 
-        # MÓDULO 1: TRADUCTOR UNIVERSAL (Zero-Shot)
-        if mod_id == 'mod_1':
-            prompt = (f"[IDENTIDAD]: Actúa como un {d.get('rol')}. [cite: 14]\n"
-                      f"[CONTEXTO]: {d.get('contexto')}. [cite: 15]\n"
-                      f"[TAREA]: {d.get('texto')}. [cite: 16]\n"
-                      f"[RESTRICCIONES]: Actúa con profesionalismo ejecutivo. Sé directo y estratégico. Cero relleno. [cite: 11, 17]\n"
-                      f"[FORMATO DE SALIDA]: {d.get('formato')}. [cite: 19]")
+    def cargar_todo(self):
+        with open(self.db_path, 'r') as f: return json.load(f)
 
-        # MÓDULO 2: INGENIERÍA DE GUIONES (Super Retención)
-        elif mod_id == 'mod_2':
-            adn = adn_completo.get(d.get('marca'), {})
-            prompt = (f"[IDENTIDAD Y TONO]: Eres un guionista experto en retención. Arquetipo: {adn.get('tono')}. [cite: 51]\n"
-                      f"[CONTEXTO DE MARCA]: Respeta los límites: {adn.get('reglas')}. [cite: 52]\n"
-                      f"[TAREA]: Desarrolla un guion de {d.get('longitud')} sobre la premisa: {d.get('premisa')}. [cite: 53]\n"
-                      f"[ESTRUCTURA]: Aplica Super Retención. Prohibido iniciar con saludos. La primera línea debe atacar la curiosidad. [cite: 47, 54]\n"
-                      f"[FORMATO DE SALIDA]: Guion dividido por bloques visuales lógicos. [cite: 56]")
-
-        # MÓDULO 4: EMPAQUETADO (CTR EXTREMO)
-        elif mod_id == 'mod_4':
-            adn = adn_completo.get(d.get('marca'), {})
-            prompt = (f"[IDENTIDAD]: Estratega de contenido viral y experto en SEO. [cite: 127, 128]\n"
-                      f"[CONTEXTO]: Analiza este contenido: {d.get('guion')}. [cite: 129]\n"
-                      f"[TAREA]: Desarrolla el paquete para {d.get('plataforma')} maximizando CTR. [cite: 130]\n"
-                      f"[RESTRICCIONES]: Títulos con 'Vacío de Información' y enfoque {d.get('enfoque')}. [cite: 132]\n"
-                      f"Imagen: Resolución 1920x1080 (16:9), estilo {d.get('estilo')}. [cite: 122, 133]\n"
-                      f"Reglas inquebrantables del proyecto: {adn.get('reglas')}. [cite: 124]\n"
-                      f"[FORMATO DE SALIDA]: 5 Títulos, 1 Prompt de miniatura detallado en inglés (16:9), Descripción y Tags. [cite: 135, 138]")
-
-        # MÓDULO 5: VENTAS UGC (Neuro-Marketing)
-        elif mod_id == 'mod_5':
-            prompt = (f"[ESTRATEGIA DE VENTAS]: {d.get('gatillo')}. [cite: 157, 158]\n"
-                      f"[SECUENCIA]: Bloque {d.get('bloque')}, Duración {d.get('duracion')}. [cite: 160]\n"
-                      f"[FASE VISUAL]: {d.get('modalidad')}. Render 4K fotorrealista. [cite: 161, 163]\n"
-                      f"[FORMATO DE SALIDA]: Prompt visual de video y Guion de venta directa. [cite: 164, 166]")
-
-        # Bucle de Supervivencia (Failover)
-        for m in ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro']:
-            try:
-                model = genai.GenerativeModel(m)
-                response = model.generate_content(prompt)
-                return {'resultado_ia': response.text}
-            except:
-                continue
-        return {'error': 'Saturación total de modelos.'}
+    def guardar(self, marca, adn):
+        db = self.cargar_todo()
+        db[marca] = adn
+        with open(self.db_path, 'w') as f: json.dump(db, f)
+        return {'status': 'success'}
