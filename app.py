@@ -11,11 +11,15 @@ from modulos.mod_3_hooks import GeneradorHooks
 from modulos.mod_4_empaquetado import EmpaquetadoContenido
 from modulos.mod_5_ventas import MotorVentasUGC
 
+# Sistema Nervioso del Bot
+from modulos.bot_orquestador import PinpinelaOrchestrator
+
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
 server_start_time = time.time()
 
+# Instanciación del Clúster de Producción
 adn_db = ADNManager()
 ia_motor = AIEngine()
 mod_1 = TraductorUniversal()
@@ -23,6 +27,9 @@ mod_2 = IngenieriaGuiones()
 mod_3 = GeneradorHooks()
 mod_4 = EmpaquetadoContenido()
 mod_5 = MotorVentasUGC()
+
+# Instanciación del Orquestador Autónomo
+bot_pinpinela = PinpinelaOrchestrator()
 
 # --- RUTAS DE NAVEGACIÓN MODULAR ---
 
@@ -36,7 +43,6 @@ def adn():
 
 @app.route('/bot')
 def bot():
-    # Nueva ruta exclusiva para el Centro de Mando Pinpinela
     return render_template('bot_dashboard.html', active_page='bot')
 
 @app.route('/usuarios')
@@ -102,6 +108,20 @@ def ejecutar():
         return jsonify({'error': 'Módulo no detectado.'}), 400
 
     resultado = ia_motor.ejecutar_failover(prompt)
+    return jsonify(resultado)
+
+# --- RUTAS DEL ORQUESTADOR PINPINELA ---
+
+@app.route('/api/bot/lanzar_orden', methods=['POST'])
+def bot_lanzar_orden():
+    data = request.json
+    tarea_id = f"ORD-{int(time.time())}"
+    marca = data.get('marca', 'La Viuda')
+    premisa = data.get('premisa', 'Prueba de estrés de sistema autónomo. Operativa de inmersión confirmada.')
+    
+    # El Orquestador toma el control total del servidor
+    resultado = bot_pinpinela.procesar_orden(tarea_id, marca, premisa)
+    
     return jsonify(resultado)
 
 if __name__ == '__main__':
