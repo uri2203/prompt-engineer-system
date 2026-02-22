@@ -33,6 +33,23 @@ class AIEngine:
                       f"La primera línea debe atacar directamente la curiosidad intelectual o el vacío de información.\n"
                       f"[FORMATO DE SALIDA]: Guion dividido por bloques visuales lógicos.")
 
+        # MÓDULO 3: MICRO-HOOKS (Fragmentación Secuencial)
+        elif mod_id == 'mod_3':
+            adn = adn_completo.get(d.get('marca'), {})
+            memoria = d.get('memoria', '')
+            contexto_memoria = f"El bloque anterior terminó con esta imagen y este audio: '{memoria}'. Mantén continuidad absoluta de personajes y voz." if memoria else "Este es el segundo 0 del video."
+            
+            limite_palabras = "10 palabras máximo." if d.get('duracion') == "4 segundos" else ("entre 18 y 22 palabras." if d.get('duracion') == "8 segundos" else "límite ajustado a la duración.")
+            
+            prompt = (f"[IDENTIDAD]: Eres un director de cinematografía generativa y experto en retención. Tono: {adn.get('identidad')}.\n"
+                      f"[SECUENCIA]: Este es el {d.get('bloque')} de la secuencia. Su duración estricta es de {d.get('duracion')}.\n"
+                      f"[CONTEXTO DE MEMORIA]: {contexto_memoria}\n"
+                      f"[TAREA]: Desarrolla este fragmento basado en: {d.get('premisa')}.\n"
+                      f"[RESTRICCIONES]: {adn.get('reglas_duras')}. El texto de locución debe tener matemáticamente el límite de palabras asignado: {limite_palabras}. Aplica disonancia cognitiva.\n"
+                      f"[FORMATO DE SALIDA ESTRICTO]: Entrega el resultado en dos bloques exactos:\n"
+                      f"[AUDIO-VOZ]: (Texto exacto para el generador de voz, respetando el límite de palabras).\n"
+                      f"[PROMPT-VIDEO]: (Instrucción técnica en inglés, optimizada para IA de video, describiendo sujeto, cámara y continuidad visual. Sin cortes de cámara dentro de este bloque).")
+
         # MÓDULO 4: EMPAQUETADO (CTR EXTREMO)
         elif mod_id == 'mod_4':
             adn = adn_completo.get(d.get('marca'), {})
