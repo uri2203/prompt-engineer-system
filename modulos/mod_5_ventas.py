@@ -3,7 +3,6 @@ class MotorVentasUGC:
         gatillo = d.get('gatillo', '')
         instruccion_gatillo = ""
         
-        # [cite: 151, 152] Inyección invisible basada en el selector
         if "FOMO" in gatillo:
             instruccion_gatillo = "Aplica el sesgo de aversión a la pérdida. El guion debe generar ansiedad de oportunidad: el producto se agota rápido, pertenece a un lote exclusivo y no tenerlo significa quedarse fuera de la tendencia. Usa lenguaje de urgencia extrema."
         elif "Autoridad" in gatillo:
@@ -11,7 +10,6 @@ class MotorVentasUGC:
         else:
             instruccion_gatillo = "Aplica el sesgo seleccionado atacando el dolor del cliente y forzando la acción."
 
-        # [cite: 153, 154] Estructura AIDA acelerada y calidad 4K
         return (f"[ESTRATEGIA DE CAMPAÑA Y VENTAS]: Eres un Media Buyer Senior y experto en Neuro-Marketing. Desarrolla esta secuencia publicitaria 9:16.\n"
                 f"[GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. Aplica la estrategia de: {gatillo}. {instruccion_gatillo}\n"
                 f"Prohibido vender características. Vende la transformación. El hook debe señalar un problema doloroso o un deseo reprimido, la retención debe agitar ese dolor, y el Call to Action (CTA) debe exigir una acción inmediata.\n"
