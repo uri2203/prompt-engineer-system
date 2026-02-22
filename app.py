@@ -1,9 +1,9 @@
 import os
+import time
 from flask import Flask, render_template, request, jsonify
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
 
-# Importación hermética de silos
 from modulos.mod_1_traductor import TraductorUniversal
 from modulos.mod_2_guiones import IngenieriaGuiones
 from modulos.mod_3_hooks import GeneradorHooks
@@ -12,6 +12,9 @@ from modulos.mod_5_ventas import MotorVentasUGC
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
+
+# Tiempo de inicio del servidor para telemetría
+server_start_time = time.time()
 
 adn_db = ADNManager()
 ia_motor = AIEngine()
@@ -33,6 +36,24 @@ def get_adn():
 def save_adn():
     data = request.json
     return jsonify(adn_db.guardar(data['marca'], data['adn']))
+
+# NUEVA RUTA DE TELEMETRÍA (Adición)
+@app.route('/api/telemetria')
+def telemetria():
+    uptime_segundos = int(time.time() - server_start_time)
+    minutos, segundos = divmod(uptime_segundos, 60)
+    horas, minutos = divmod(minutos, 60)
+    uptime_str = f"{horas}h {minutos}m {segundos}s" if horas > 0 else f"{minutos}m {segundos}s"
+    
+    datos_motor = ia_motor.obtener_telemetria()
+    
+    return jsonify({
+        'uptime': uptime_str,
+        'system_status': 'ACTIVE',
+        'api_status': datos_motor['estado_api'],
+        'latencia': f"{datos_motor['latencia']}s",
+        'tokens': datos_motor['tokens']
+    })
 
 @app.route('/api/ejecutar', methods=['POST'])
 def ejecutar():
