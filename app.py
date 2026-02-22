@@ -6,12 +6,13 @@ from modulos.ai_engine import AIEngine
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
-# Inicialización de Silos
+# Inicialización de Silos Independientes
 adn_db = ADNManager()
 ia_motor = AIEngine()
 
 @app.route('/')
 def index():
+    # Flask busca automáticamente en la carpeta /templates/
     return render_template('index.html')
 
 @app.route('/api/get_adn')
@@ -27,11 +28,10 @@ def save_adn():
 def ejecutar():
     data = request.json
     try:
-        # El sistema delega la responsabilidad al motor de IA profesional
         resultado = ia_motor.procesar(data, adn_db)
         return jsonify(resultado)
     except Exception as e:
-        return jsonify({'error': f"Error en el Silo: {str(e)}"}), 500
+        return jsonify({'error': f"Fallo en el Silo: {str(e)}"}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
