@@ -5,13 +5,9 @@ class GeneradorHooks:
         bloque = d.get('bloque', 'Bloque 1 (Inicio)')
         duracion = d.get('duracion', '4 segundos')
 
-        # [cite: 98] Contexto de memoria para continuidad visual
         contexto_memoria = f"El bloque anterior terminó con esta imagen y este audio: '{memoria}'. Mantén continuidad absoluta de personajes y voz." if bloque != 'Bloque 1 (Inicio)' else "Este es el segundo 0 del video."
-        
-        # [cite: 91, 92] Algoritmo matemático de locución
         limite_palabras = "10 palabras máximo." if duracion == "4 segundos" else ("entre 18 y 22 palabras." if duracion == "8 segundos" else "límite estricto asignado.")
 
-        # [cite: 101, 102] Formato de salida estricto en 2 bloques
         return (f"[IDENTIDAD]: Eres un director de cinematografía generativa y experto en retención. Tono: {adn.get('identidad')}.\n"
                 f"[SECUENCIA]: Este es el {bloque} de la secuencia. Su duración estricta es de {duracion}.\n"
                 f"[CONTEXTO DE MEMORIA]: {contexto_memoria}\n"
