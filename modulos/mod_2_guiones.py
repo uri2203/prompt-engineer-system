@@ -1,8 +1,6 @@
 class IngenieriaGuiones:
     def construir_prompt(self, d, adn_completo):
         adn = adn_completo.get(d.get('marca'), {})
-        # [cite: 47] Inyección de Super Retención
-        # [cite: 48] Filtro de Densidad
         return (f"[IDENTIDAD Y TONO]: Eres un guionista experto en retención. Escribe estrictamente bajo este arquetipo: {adn.get('identidad')}.\n"
                 f"[CONTEXTO DE MARCA]: Respeta los siguientes límites inquebrantables: {adn.get('reglas_duras')} y asegúrate de cumplir con las normas de monetización de plataformas de video.\n"
                 f"[TAREA]: Desarrolla un guion de {d.get('longitud')} basado en esta premisa: {d.get('premisa')}.\n"
