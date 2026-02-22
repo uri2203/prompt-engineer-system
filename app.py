@@ -287,10 +287,24 @@ def ejecutar_prompt():
         return jsonify({'error': 'No auth'}), 401
     try:
         data = request.json
-        # Enrutamiento al modelo global de alta disponibilidad
-        model = genai.GenerativeModel('gemini-1.5-flash')
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
+        
+        # --- BÚSQUEDA DINÁMICA DE MODELOS (ANTIFRAGILIDAD) ---
+        modelo_valido = None
+        modelos_disponibles = genai.list_models()
+        
+        for m in modelos_disponibles:
+            if 'generateContent' in m.supported_generation_methods:
+                modelo_valido = m.name # Tomamos el primero que sí esté soportado
+                if '1.5-flash' in m.name:
+                    modelo_valido = m.name
+                    break # Si encontramos la versión flash, la priorizamos
+                    
+        if not modelo_valido:
+            return jsonify({'error': 'Tu API Key es válida, pero Google reporta que no tiene modelos autorizados para generación de contenido.'}), 500
+
+        model = genai.GenerativeModel(modelo_valido)
         
         prompt = ""
         
