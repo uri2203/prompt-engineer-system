@@ -8,7 +8,6 @@ class AIEngine:
             genai.configure(api_key=self.api_key)
 
     def ejecutar_failover(self, prompt):
-        # El motor intenta resolver con Pro, si falla pasa a Flash para evitar que el server caiga.
         modelos_disponibles = ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro']
         
         for nombre_modelo in modelos_disponibles:
@@ -21,4 +20,4 @@ class AIEngine:
                 print(f"Falla de cuota en {nombre_modelo}: {str(e)}")
                 continue 
         
-        return {'error': 'Saturación en todos los modelos. Requiere pausa táctica o actualizar API Key.'}
+        return {'error': 'Saturación en todos los modelos. Requiere pausa táctica.'}
