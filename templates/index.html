@@ -1,54 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8"><title>AI Master System | Corporate Tech</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .sidebar { background-color: #0F1523; border-right: 1px solid #1e293b; }
-        .active-tab { border: 2px solid #3b82f6; background: rgba(59,130,246,0.1); border-radius: 8px; }
-        input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; }
-        .label-red { color: #f43f5e; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
-    </style>
-</head>
 <body class="h-screen flex overflow-hidden">
     <aside class="w-[280px] sidebar flex flex-col p-5">
         <h1 class="text-xl font-bold text-[#3b82f6] mb-8 tracking-tight">AI Master System</h1>
         <nav class="flex-1 space-y-2">
-            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm active-tab">Mod 0: ADN JSON</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm">Mod 2: Guiones</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm">Mod 5: Ventas UGC</button>
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 0: ADN JSON</button>
+            <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm active-tab">Mod 1: Traductor Universal</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 5: Ventas UGC</button>
         </nav>
     </aside>
 
     <main class="flex-1 flex p-8 gap-6 bg-[#0B1120]">
         <div class="w-[55%] flex flex-col gap-6 overflow-y-auto">
-            <div id="ui_mod_0" class="module-content block">
-                <h2 class="text-2xl font-bold mb-4">Centro de ADN</h2>
-                <select id="m0_selector" onchange="cargarADN()" class="w-full p-2 mb-4"><option>La Viuda</option><option>Monkygraff</option></select>
-                <textarea id="m0_reglas" class="w-full h-40 p-2 mb-4" placeholder="Reglas inquebrantables..."></textarea>
-                <button onclick="guardarADN()" class="w-full bg-emerald-600 py-3 rounded font-bold">GUARDAR ADN</button>
+            
+            <div id="ui_mod_1" class="module-content block">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
+                <div class="space-y-4">
+                    <div><label class="label-blue block mb-1.5">ROL / EXPERTO</label><input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software" class="w-full p-2.5 text-sm"></div>
+                    <div><label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label><textarea id="m1_contexto" class="w-full h-24 p-2.5 text-sm"></textarea></div>
+                    <div><label class="label-blue block mb-1.5">PETICIÓN HUMANA</label><textarea id="m1_texto" class="w-full h-32 p-2.5 text-sm"></textarea></div>
+                    <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] py-4 rounded-lg font-bold text-xs">COMPILAR Y EJECUTAR</button>
+                </div>
             </div>
-            <div id="ui_mod_5" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-4">Motor UGC y Ventas</h2>
-                <label class="label-red">Gatillo Psicológico</label>
-                <select id="m5_gatillo" class="w-full p-2 mb-4"><option value="FOMO">FOMO</option><option value="Autoridad">Autoridad</option></select>
-                <button onclick="ejecutar()" class="w-full bg-blue-600 py-3 rounded font-bold">COMPILAR Y EJECUTAR</button>
+
             </div>
-        </div>
         <textarea id="output" class="w-[45%] bg-[#0F1523] p-6 text-slate-300 font-mono text-sm border border-slate-800 rounded-xl" readonly></textarea>
     </main>
 
     <script>
-        async function cargarADN() {
-            const res = await fetch('/api/get_adn'); const adn = await res.json();
-            const marca = document.getElementById('m0_selector').value;
-            document.getElementById('m0_reglas').value = adn[marca].reglas;
+        async function ejecutar() {
+            // Lógica de recolección para Mod 1
+            let datos = {};
+            if(moduloActivo === 'mod_1') {
+                datos = {
+                    rol: document.getElementById('m1_rol').value,
+                    contexto: document.getElementById('m1_contexto').value,
+                    texto: document.getElementById('m1_texto').value
+                };
+            }
+            // ... (Resto de la función fetch hacia /api/ejecutar)
         }
-        function switchTab(id) {
-            document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById('ui_' + id).classList.remove('hidden');
-        }
-        window.onload = cargarADN;
     </script>
-</body></html>
+</body>
