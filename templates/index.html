@@ -12,6 +12,11 @@
         input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; transition: border 0.2s; }
         input:focus, select:focus, textarea:focus { border-color: #3b82f6; }
         .label-blue { color: #60a5fa; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* Estilos de Telemetría */
+        .telemetry-panel { background-color: #111827; border-left: 1px solid #1e293b; font-size: 0.75rem; }
+        .status-indicator { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; margin-right: 6px; }
+        .bar-bg { width: 100%; height: 6px; background-color: #334155; border-radius: 3px; overflow: hidden; margin-top: 4px; }
+        .bar-fill { height: 100%; background-color: #10b981; width: 100%; transition: width 0.5s ease; }
     </style>
 </head>
 <body class="h-screen flex overflow-hidden">
@@ -27,8 +32,8 @@
         </nav>
     </aside>
 
-    <main class="flex-1 flex p-8 gap-6 bg-[#0B1120] overflow-hidden">
-        <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2 scrollbar-hide">
+    <main class="flex-1 flex bg-[#0B1120] overflow-hidden">
+        <div class="w-[45%] flex flex-col p-8 gap-6 overflow-y-auto scrollbar-hide">
             
             <div id="ui_mod_1" class="module-content block space-y-4">
                 <h2 class="text-2xl font-bold">Traductor Universal</h2>
@@ -54,7 +59,7 @@
                     <div><label class="label-blue">Duración</label><select id="m3_duracion" class="w-full p-2.5"><option>4 segundos</option><option>5 segundos</option><option>8 segundos</option></select></div>
                     <div><label class="label-blue">Bloque</label><select id="m3_bloque" class="w-full p-2.5"><option>Bloque 1 (Inicio)</option><option>Bloque 2</option><option>Bloque 3</option><option>Bloque 4</option><option>Bloque 5</option></select></div>
                 </div>
-                <div><label class="label-blue">Memoria de Continuidad (Raccord)</label><textarea id="m3_memoria" class="w-full h-24 p-2.5" placeholder="Pega el prompt y texto del bloque anterior (solo si es Bloque 2+)"></textarea></div>
+                <div><label class="label-blue">Memoria de Continuidad (Raccord)</label><textarea id="m3_memoria" class="w-full h-24 p-2.5" placeholder="Pega el prompt y texto del bloque anterior"></textarea></div>
             </div>
 
             <div id="ui_mod_4" class="module-content hidden space-y-4">
@@ -82,9 +87,29 @@
             <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] py-4 mt-2 rounded-lg font-bold text-xs tracking-widest transition-all shadow-lg hover:bg-blue-500">COMPILAR Y EJECUTAR</button>
         </div>
 
-        <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl">
+        <div class="flex-1 flex flex-col glass-panel p-8 shadow-2xl relative border-l border-slate-800">
             <h3 class="text-[#10b981] font-bold text-[11px] mb-4 uppercase tracking-widest">Consola de Salida</h3>
             <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed outline-none scrollbar-hide" readonly></textarea>
+        </div>
+
+        <div class="w-[240px] telemetry-panel p-5 flex flex-col space-y-6">
+            <h3 class="text-[#f8fafc] font-bold text-xs uppercase tracking-widest mb-2 border-b border-slate-700 pb-2">Data Visualization</h3>
+            
+            <div>
+                <div class="flex items-center text-[#10b981] mb-2"><span class="status-indicator" id="ind_system"></span> System: <span id="tel_system" class="ml-1 font-bold">ACTIVE</span></div>
+                <div class="flex items-center text-[#10b981] mb-2"><span class="status-indicator" id="ind_api"></span> API: <span id="tel_api" class="ml-1 font-bold">STABLE</span></div>
+                <div class="flex items-center text-slate-400 mb-2"><span class="status-indicator bg-purple-500"></span> Uptime: <span id="tel_uptime" class="ml-1">0m 0s</span></div>
+                <div class="flex items-center text-slate-400"><span class="status-indicator bg-blue-500"></span> Latency: <span id="tel_latency" class="ml-1">0.0s</span></div>
+            </div>
+
+            <div class="mt-4">
+                <div class="flex justify-between text-[10px] text-slate-400 mb-1"><span>Tokens Used</span><span id="tel_tokens">0</span></div>
+                <div class="bar-bg"><div class="bar-fill" id="bar_tokens" style="width: 2%;"></div></div>
+            </div>
+            
+            <div class="mt-auto border-t border-slate-700 pt-4">
+                <button onclick="actualizarTelemetria()" class="w-full bg-slate-800 hover:bg-slate-700 py-2 rounded text-[10px] text-slate-300 font-bold border border-slate-600 transition-colors">+ Refresh Data</button>
+            </div>
         </div>
     </main>
 
@@ -111,6 +136,7 @@
                 const res = await fetch('/api/ejecutar', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({modulo_id: moduloActivo, datos: datos}) });
                 const data = await res.json();
                 document.getElementById('output').value = data.resultado_ia || data.error;
+                actualizarTelemetria(); // Fuerza actualización visual al terminar
             } finally { btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false; }
         }
         async function cargarADN() {
@@ -127,6 +153,32 @@
             await fetch('/api/save_adn', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({marca, adn: data}) });
             alert("ADN JSON Actualizado");
         }
-        window.onload = cargarADN;
+        
+        // SCRIPT DE TELEMETRÍA (NUEVA ADICIÓN)
+        async function actualizarTelemetria() {
+            try {
+                const res = await fetch('/api/telemetria');
+                const data = await res.json();
+                
+                document.getElementById('tel_uptime').innerText = data.uptime;
+                document.getElementById('tel_latency').innerText = data.latencia;
+                document.getElementById('tel_tokens').innerText = data.tokens.toLocaleString();
+                
+                const apiEl = document.getElementById('tel_api');
+                const indApi = document.getElementById('ind_api');
+                apiEl.innerText = data.api_status;
+                if(data.api_status === 'OFFLINE') {
+                    apiEl.classList.replace('text-[#10b981]', 'text-red-500');
+                    indApi.classList.replace('bg-[#10b981]', 'bg-red-500');
+                }
+                
+                // Animación simple de barra de tokens
+                let percentage = (data.tokens % 100000) / 1000; 
+                document.getElementById('bar_tokens').style.width = Math.min(Math.max(percentage, 2), 100) + '%';
+                
+            } catch(e) { console.error("Falla al conectar con telemetría."); }
+        }
+        
+        window.onload = () => { cargarADN(); actualizarTelemetria(); setInterval(actualizarTelemetria, 10000); };
     </script>
 </body></html>
