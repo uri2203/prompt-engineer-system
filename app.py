@@ -1,18 +1,18 @@
 import os
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, jsonify, session
+# IMPORTACIÓN CORREGIDA
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
-# Inicialización de Silos Independientes
+# Instanciamos los Silos
 adn_db = ADNManager()
 ia_motor = AIEngine()
 
 @app.route('/')
 def index():
-    # Flask busca automáticamente en la carpeta /templates/
     return render_template('index.html')
 
 @app.route('/api/get_adn')
@@ -31,7 +31,7 @@ def ejecutar():
         resultado = ia_motor.procesar(data, adn_db)
         return jsonify(resultado)
     except Exception as e:
-        return jsonify({'error': f"Fallo en el Silo: {str(e)}"}), 500
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
