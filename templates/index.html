@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"><title>AI Master System</title>
+    <meta charset="UTF-8"><title>AI Master System | Corporate Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
@@ -16,20 +16,27 @@
         <h1 class="text-xl font-bold text-[#3b82f6] mb-8">AI Master System</h1>
         <nav class="flex-1 space-y-2">
             <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm active-tab font-bold">Mod 1: Traductor</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones</button>
-            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 5: Ventas UGC</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm">Mod 2: Guiones</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm">Mod 5: Ventas UGC</button>
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm text-emerald-500">Mod 0: ADN JSON</button>
         </nav>
     </aside>
-    <main class="flex-1 flex p-8 gap-6 bg-[#0B1120]">
+
+    <main class="flex-1 flex p-8 gap-6 bg-[#0B1120] overflow-hidden">
         <div class="w-[55%] flex flex-col gap-6 overflow-y-auto">
             <div id="ui_mod_1" class="module-content block">
-                <label class="label-blue">Rol / Experto</label>
-                <select id="m1_rol" class="w-full p-2.5 mb-4"><option>Ingeniero de Software</option><option>Asesor Estratégico</option></select>
-                <label class="label-blue">Petición Humana</label>
-                <textarea id="m1_texto" class="w-full h-32 p-2.5 mb-4"></textarea>
-                <button onclick="ejecutar()" class="w-full bg-[#2563eb] py-4 rounded font-bold">EJECUTAR</button>
+                <h2 class="text-2xl font-bold mb-4">Traductor Universal</h2>
+                <div class="space-y-4">
+                    <label class="label-blue">Rol / Experto</label>
+                    <select id="m1_rol" class="w-full p-2"><option>Ingeniero de Software</option><option>Asesor Estratégico</option></select>
+                    <label class="label-blue">Contexto</label>
+                    <textarea id="m1_contexto" class="w-full h-24 p-2"></textarea>
+                    <label class="label-blue">Petición Humana</label>
+                    <textarea id="m1_texto" class="w-full h-32 p-2"></textarea>
+                </div>
             </div>
-            </div>
+            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] py-4 rounded font-bold">COMPILAR Y EJECUTAR</button>
+        </div>
         <textarea id="output" class="w-[45%] bg-[#0F1523] p-6 text-slate-300 font-mono text-sm border border-slate-800 rounded-xl" readonly></textarea>
     </main>
     <script>
@@ -40,10 +47,17 @@
             document.getElementById('ui_' + id).classList.remove('hidden');
         }
         async function ejecutar() {
-            const payload = { modulo_id: moduloActivo, datos: { rol: document.getElementById('m1_rol').value, texto: document.getElementById('m1_texto').value } };
+            const btn = document.getElementById('btn_main');
+            btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+            const payload = { modulo_id: moduloActivo, datos: { 
+                rol: document.getElementById('m1_rol').value, 
+                texto: document.getElementById('m1_texto').value,
+                contexto: document.getElementById('m1_contexto').value 
+            }};
             const res = await fetch('/api/ejecutar', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload) });
             const data = await res.json();
             document.getElementById('output').value = data.resultado_ia || data.error;
+            btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
         }
     </script>
 </body></html>
