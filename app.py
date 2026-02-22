@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, jsonify
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
 
+# Silos Herméticos Intactos
 from modulos.mod_1_traductor import TraductorUniversal
 from modulos.mod_2_guiones import IngenieriaGuiones
 from modulos.mod_3_hooks import GeneradorHooks
@@ -13,7 +14,6 @@ from modulos.mod_5_ventas import MotorVentasUGC
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
-# Tiempo de inicio del servidor para telemetría
 server_start_time = time.time()
 
 adn_db = ADNManager()
@@ -37,7 +37,6 @@ def save_adn():
     data = request.json
     return jsonify(adn_db.guardar(data['marca'], data['adn']))
 
-# NUEVA RUTA DE TELEMETRÍA (Adición)
 @app.route('/api/telemetria')
 def telemetria():
     uptime_segundos = int(time.time() - server_start_time)
@@ -51,8 +50,10 @@ def telemetria():
         'uptime': uptime_str,
         'system_status': 'ACTIVE',
         'api_status': datos_motor['estado_api'],
-        'latencia': f"{datos_motor['latencia']}s",
-        'tokens': datos_motor['tokens']
+        'latencia': f"{datos_motor['latencia_actual']}s",
+        'tokens_totales': datos_motor['tokens_totales'],
+        'historial_latencia': datos_motor['historial_latencia'],
+        'historial_tokens': datos_motor['historial_tokens']
     })
 
 @app.route('/api/ejecutar', methods=['POST'])
