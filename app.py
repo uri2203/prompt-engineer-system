@@ -290,19 +290,24 @@ def ejecutar_prompt():
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
         
-        # --- BÚSQUEDA DINÁMICA DE MODELOS (ANTIFRAGILIDAD) ---
-        modelo_valido = None
+        # --- BÚSQUEDA DINÁMICA DE MODELOS CON FILTRO ESTRICTO ---
+        modelo_valido = "gemini-1.5-flash" # Fallback garantizado
         modelos_disponibles = genai.list_models()
         
         for m in modelos_disponibles:
             if 'generateContent' in m.supported_generation_methods:
-                modelo_valido = m.name # Tomamos el primero que sí esté soportado
-                if '1.5-flash' in m.name:
+                # Evitar modelos experimentales, bloqueados o de investigación
+                if 'preview' in m.name or 'experimental' in m.name or 'deep-research' in m.name:
+                    continue
+                
+                # Priorizar la versión Flash (rápida, estable y con cuota libre)
+                if 'gemini-1.5-flash' in m.name:
                     modelo_valido = m.name
-                    break # Si encontramos la versión flash, la priorizamos
-                    
-        if not modelo_valido:
-            return jsonify({'error': 'Tu API Key es válida, pero Google reporta que no tiene modelos autorizados para generación de contenido.'}), 500
+                    break
+                
+                # Segunda opción: la versión Pro estable
+                if 'gemini-1.0-pro' in m.name or 'gemini-pro' in m.name:
+                    modelo_valido = m.name
 
         model = genai.GenerativeModel(modelo_valido)
         
