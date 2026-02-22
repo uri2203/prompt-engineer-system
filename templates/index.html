@@ -19,7 +19,8 @@
         <h1 class="text-xl font-bold text-[#3b82f6] mb-8 tracking-tight">AI Master System</h1>
         <nav class="flex-1 space-y-2">
             <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm active-tab">Mod 1: Traductor Universal</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones (Super Retención)</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 3: Micro-Hooks</button>
             <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 4: Empaquetado CTR</button>
             <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 5: Ventas UGC</button>
             <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm inactive-tab text-emerald-500 font-bold">Mod 0: ADN JSON</button>
@@ -39,10 +40,21 @@
 
             <div id="ui_mod_2" class="module-content hidden space-y-4">
                 <h2 class="text-2xl font-bold">Guiones (Super Retención)</h2>
-                <div><label class="label-blue">Proyecto</label><select id="m2_marca" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option></select></div>
+                <div><label class="label-blue">Proyecto</label><select id="m2_marca" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option><option>TuIALista</option><option>Ezzenshop</option><option>Yayika Digital</option><option>Yayika Apparel</option></select></div>
                 <div><label class="label-blue">Premisa o Noticia</label><textarea id="m2_premisa" class="w-full h-32 p-2.5"></textarea></div>
                 <div><label class="label-blue">Longitud</label><select id="m2_longitud" class="w-full p-2.5"><option>Medio (1,500 palabras)</option><option>Extenso (4,500+ palabras)</option></select></div>
                 <div><label class="label-blue">Framework</label><select id="m2_framework" class="w-full p-2.5"><option>Bucle Abierto</option><option>Análisis Lógico Deductivo</option></select></div>
+            </div>
+
+            <div id="ui_mod_3" class="module-content hidden space-y-4">
+                <h2 class="text-2xl font-bold">Micro-Hooks (Fragmentación)</h2>
+                <div><label class="label-blue">Proyecto</label><select id="m3_marca" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option><option>TuIALista</option><option>Ezzenshop</option><option>Yayika Digital</option><option>Yayika Apparel</option></select></div>
+                <div><label class="label-blue">Premisa o Dato de Choque</label><textarea id="m3_premisa" class="w-full h-24 p-2.5"></textarea></div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="label-blue">Duración</label><select id="m3_duracion" class="w-full p-2.5"><option>4 segundos</option><option>5 segundos</option><option>8 segundos</option></select></div>
+                    <div><label class="label-blue">Bloque</label><select id="m3_bloque" class="w-full p-2.5"><option>Bloque 1 (Inicio)</option><option>Bloque 2</option><option>Bloque 3</option><option>Bloque 4</option><option>Bloque 5</option></select></div>
+                </div>
+                <div><label class="label-blue">Memoria de Continuidad (Raccord)</label><textarea id="m3_memoria" class="w-full h-24 p-2.5" placeholder="Pega el prompt y texto del bloque anterior (solo si es Bloque 2+)"></textarea></div>
             </div>
 
             <div id="ui_mod_4" class="module-content hidden space-y-4">
@@ -61,7 +73,7 @@
 
             <div id="ui_mod_0" class="module-content hidden space-y-4">
                 <h2 class="text-2xl font-bold">ADN de Marca (Módulo 0)</h2>
-                <div><label class="label-blue">Marca</label><select id="m0_selector" onchange="cargarADN()" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option></select></div>
+                <div><label class="label-blue">Marca</label><select id="m0_selector" onchange="cargarADN()" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option><option>TuIALista</option><option>Ezzenshop</option><option>Yayika Digital</option><option>Yayika Apparel</option></select></div>
                 <div><label class="label-blue">Arquetipo Voz</label><input type="text" id="m0_tono" class="w-full p-2.5"></div>
                 <div><label class="label-blue">Límites Estrictos</label><textarea id="m0_reglas" class="w-full h-40 p-2.5"></textarea></div>
                 <button onclick="guardarADN()" class="w-full bg-emerald-600 py-3 rounded font-bold transition-colors hover:bg-emerald-500">GUARDAR ADN EN JSON</button>
@@ -91,6 +103,7 @@
             let datos = {};
             if(moduloActivo === 'mod_1') datos = { rol: document.getElementById('m1_rol').value, texto: document.getElementById('m1_texto').value, contexto: document.getElementById('m1_contexto').value, formato: document.getElementById('m1_formato').value };
             if(moduloActivo === 'mod_2') datos = { marca: document.getElementById('m2_marca').value, premisa: document.getElementById('m2_premisa').value, longitud: document.getElementById('m2_longitud').value, framework: document.getElementById('m2_framework').value };
+            if(moduloActivo === 'mod_3') datos = { marca: document.getElementById('m3_marca').value, premisa: document.getElementById('m3_premisa').value, duracion: document.getElementById('m3_duracion').value, bloque: document.getElementById('m3_bloque').value, memoria: document.getElementById('m3_memoria').value };
             if(moduloActivo === 'mod_4') datos = { marca: document.getElementById('m2_marca').value, guion: document.getElementById('m4_guion').value, enfoque: document.getElementById('m4_enfoque').value, estilo: document.getElementById('m4_estilo').value, plataforma: 'YouTube' };
             if(moduloActivo === 'mod_5') datos = { gatillo: document.getElementById('m5_gatillo').value, duracion: document.getElementById('m5_duracion').value, bloque: '1', modalidad: document.getElementById('m5_modalidad').value };
             
@@ -103,8 +116,10 @@
         async function cargarADN() {
             const res = await fetch('/api/get_adn'); const adn = await res.json();
             const marca = document.getElementById('m0_selector').value;
-            document.getElementById('m0_tono').value = adn[marca].identidad;
-            document.getElementById('m0_reglas').value = adn[marca].reglas_duras;
+            if(adn[marca]) {
+                document.getElementById('m0_tono').value = adn[marca].identidad || '';
+                document.getElementById('m0_reglas').value = adn[marca].reglas_duras || '';
+            }
         }
         async function guardarADN() {
             const marca = document.getElementById('m0_selector').value;
