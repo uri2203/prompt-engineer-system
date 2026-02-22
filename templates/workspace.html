@@ -7,7 +7,6 @@
     <button onclick="switchTab('mod_3')" id="btn_mod_3" class="w-full text-left px-4 py-3 text-xs inactive-tab">Mod 3: Hooks</button>
     <button onclick="switchTab('mod_4')" id="btn_mod_4" class="w-full text-left px-4 py-3 text-xs inactive-tab">Mod 4: Empaquetado</button>
     <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-xs inactive-tab">Mod 5: Ventas</button>
-    <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-xs inactive-tab text-emerald-500">Mod 0: ADN</button>
 </div>
 
 <div class="flex-1 flex flex-col p-8 gap-6 overflow-y-auto scrollbar-hide">
@@ -53,14 +52,6 @@
         <div><label class="label-blue">Modalidad</label><select id="m5_modalidad" class="w-full p-2.5"><option>Producto Solo</option><option>Influencer Sintético</option></select></div>
     </div>
 
-    <div id="ui_mod_0" class="module-content hidden space-y-4">
-        <h2 class="text-xl font-bold">ADN de Marca</h2>
-        <div><label class="label-blue">Marca</label><select id="m0_selector" onchange="cargarADN()" class="w-full p-2.5"><option>La Viuda</option><option>Monkygraff</option><option>TuIALista</option><option>Ezzenshop</option><option>Yayika Digital</option><option>Yayika Apparel</option></select></div>
-        <div><label class="label-blue">Arquetipo Voz</label><input type="text" id="m0_tono" class="w-full p-2.5"></div>
-        <div><label class="label-blue">Límites Estrictos</label><textarea id="m0_reglas" class="w-full h-40 p-2.5"></textarea></div>
-        <button onclick="guardarADN()" class="w-full bg-emerald-600 py-3 rounded font-bold hover:bg-emerald-500">GUARDAR ADN EN JSON</button>
-    </div>
-
     <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] py-4 mt-2 rounded-lg font-bold text-xs tracking-widest hover:bg-blue-500">COMPILAR Y EJECUTAR</button>
 </div>
 
@@ -95,17 +86,5 @@
             if(window.actualizarTelemetria) window.actualizarTelemetria(); 
         } finally { btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false; }
     }
-    async function cargarADN() {
-        const res = await fetch('/api/get_adn'); const adn = await res.json();
-        const marca = document.getElementById('m0_selector').value;
-        if(adn[marca]) { document.getElementById('m0_tono').value = adn[marca].identidad || ''; document.getElementById('m0_reglas').value = adn[marca].reglas_duras || ''; }
-    }
-    async function guardarADN() {
-        const marca = document.getElementById('m0_selector').value;
-        const data = { identidad: document.getElementById('m0_tono').value, reglas_duras: document.getElementById('m0_reglas').value };
-        await fetch('/api/save_adn', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({marca, adn: data}) });
-        alert("ADN Guardado");
-    }
-    window.addEventListener('load', cargarADN);
 </script>
 {% endblock %}
