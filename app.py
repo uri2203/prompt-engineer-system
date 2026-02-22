@@ -24,9 +24,29 @@ mod_3 = GeneradorHooks()
 mod_4 = EmpaquetadoContenido()
 mod_5 = MotorVentasUGC()
 
+# --- RUTAS DE NAVEGACIÓN MODULAR ---
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # Carga el cartucho de los módulos de IA
+    return render_template('workspace.html', active_page='workspace')
+
+@app.route('/usuarios')
+def usuarios():
+    # Carga el cartucho de usuarios
+    return render_template('usuarios.html', active_page='usuarios')
+
+@app.route('/configuracion')
+def configuracion():
+    # Carga el cartucho de configuración
+    return render_template('configuracion.html', active_page='configuracion')
+
+@app.route('/mantenimiento')
+def mantenimiento():
+    # Ruta temporal para secciones en construcción (Bot, Logs, etc.)
+    return render_template('mantenimiento.html', active_page='mantenimiento')
+
+# --- RUTAS DE DATOS Y API ---
 
 @app.route('/api/get_adn')
 def get_adn():
