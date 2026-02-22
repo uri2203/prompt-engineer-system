@@ -92,9 +92,89 @@ HTML_INDEX = """
         
         <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2 scrollbar-hide">
             
+            <div id="ui_mod_1" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
+                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
+                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
+                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
+                        <select id="m1_formato" class="w-full p-2.5 text-sm">
+                            <option>Código listo para copiar</option>
+                            <option>Tabla Comparativa</option>
+                            <option>Documento Formal</option>
+                            <option>Lista de Acción Estratégica</option>
+                            <option>Markdown</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_2" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Guiones (Retención)</h2>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-red block mb-1.5">MARCA / PROYECTO (SILO HERMÉTICO)</label>
+                        <select id="m2_marca" class="w-full p-2.5 text-sm border-slate-700 bg-[#0F1523]">
+                            <option value="La Viuda">La Viuda (Suspenso Inmersivo / Terror)</option>
+                            <option value="Monkygraff">Monkygraff (Geopolítica / Noticias)</option>
+                            <option value="TuIALista">TuIALista (Software / IA)</option>
+                            <option value="Ezzenshop">Ezzenshop (Jóvenes / Hype)</option>
+                            <option value="Yayika Digital">Yayika Digital (Mujer / Bienestar)</option>
+                            <option value="Yayika Apparel">Yayika Apparel (Playeras / Sátira TikTok)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">TEMA O CASO A DESARROLLAR</label>
+                        <textarea id="m2_tema" placeholder="Pega aquí la noticia, el caso clínico, o el tema base del video..." class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-green block mb-1.5">OBJETIVO DE RETENCIÓN</label>
+                        <select id="m2_retencion" class="w-full p-2.5 text-sm">
+                            <option>Documental Extenso (Generar Estructura 30+ min)</option>
+                            <option>Formato Medio (Estructura 15 min)</option>
+                            <option>Impacto Corto (Estructura 5 min)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui_mod_3" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Micro-Hooks (Fragmentación Secuencial)</h2>
+                <p class="text-xs text-slate-400 mb-5">Genera los bloques de continuidad para tus videos de 30 minutos sin perder retención.</p>
+                <div class="space-y-5">
+                    <div>
+                        <label class="label-green block mb-1.5">MEMORIA (RACCORD DEL BLOQUE ANTERIOR)</label>
+                        <textarea id="m3_raccord" placeholder="Pega el último párrafo del bloque anterior para mantener el hilo narrativo..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">TIPO DE MICRO-HOOK PARA ESTE BLOQUE</label>
+                        <select id="m3_tipo" class="w-full p-2.5 text-sm">
+                            <option value="Vacio_Informacion">Vacío de Información (Generar pregunta sin respuesta)</option>
+                            <option value="Disonancia">Disonancia Cognitiva (Presentar dato que no encaja)</option>
+                            <option value="Cuarta_Pared">Romper la Cuarta Pared (Hablar directo al espectador)</option>
+                            <option value="Rebelacion_Parcial">Revelación Parcial (Dar una pista clave)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-1.5">INSTRUCCIÓN DE CONTINUIDAD</label>
+                        <input type="text" id="m3_instruccion" placeholder="Ej: Ahora explica la fase 2 del conflicto militar..." class="w-full p-2.5 text-sm">
+                    </div>
+                </div>
+            </div>
+
             <div id="ui_mod_5" class="module-content block">
                 <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Motor de Ventas y UGC 9:16</h2>
-                
                 <div class="space-y-5">
                     <div>
                         <label class="label-red block mb-1.5">GATILLO PSICOLÓGICO (NEURO-MARKETING)</label>
@@ -105,7 +185,6 @@ HTML_INDEX = """
                             <option value="Satira">Sátira y Rebeldía (Humor ácido, anti-marketing viral)</option>
                         </select>
                     </div>
-
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="label-blue block mb-1.5">MODALIDAD</label>
@@ -140,38 +219,9 @@ HTML_INDEX = """
                             </select>
                         </div>
                     </div>
-
                     <div>
                         <label class="label-green block mb-1.5">RACCORD (ANCLAJE FÍSICO BLOQUE ANTERIOR)</label>
                         <input type="text" id="m5_raccord" placeholder="Pega el prompt visual anterior..." class="w-full p-2.5 text-sm">
-                    </div>
-                </div>
-            </div>
-
-            <div id="ui_mod_1" class="module-content hidden">
-                <h2 class="text-2xl font-bold mb-6 text-white tracking-tight">Traductor Universal</h2>
-                <div class="space-y-5">
-                    <div>
-                        <label class="label-blue block mb-1.5">ROL / EXPERTO</label>
-                        <input type="text" id="m1_rol" placeholder="Ej: Ingeniero de Software, Asesor Estratégico" class="w-full p-2.5 text-sm">
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">CONTEXTO (VARIABLES)</label>
-                        <textarea id="m1_contexto" placeholder="Datos clave, antecedentes..." class="w-full h-24 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">PETICIÓN HUMANA</label>
-                        <textarea id="m1_texto" placeholder="¿Qué necesitas que haga exactamente?" class="w-full h-32 p-2.5 text-sm resize-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="label-blue block mb-1.5">FORMATO DE SALIDA</label>
-                        <select id="m1_formato" class="w-full p-2.5 text-sm">
-                            <option>Código listo para copiar</option>
-                            <option>Tabla Comparativa</option>
-                            <option>Documento Formal</option>
-                            <option>Lista de Acción Estratégica</option>
-                            <option>Markdown</option>
-                        </select>
                     </div>
                 </div>
             </div>
@@ -214,6 +264,8 @@ HTML_INDEX = """
             btn.disabled = true;
             
             let datos = {};
+            
+            // Recolección de datos por módulo
             if(moduloActivo === 'mod_5') {
                 datos = {
                     gatillo: document.getElementById('m5_gatillo').value,
@@ -229,6 +281,18 @@ HTML_INDEX = """
                     contexto: document.getElementById('m1_contexto').value,
                     texto: document.getElementById('m1_texto').value,
                     formato: document.getElementById('m1_formato').value
+                };
+            } else if (moduloActivo === 'mod_2') {
+                datos = {
+                    marca: document.getElementById('m2_marca').value,
+                    tema: document.getElementById('m2_tema').value,
+                    retencion: document.getElementById('m2_retencion').value
+                };
+            } else if (moduloActivo === 'mod_3') {
+                datos = {
+                    raccord: document.getElementById('m3_raccord').value,
+                    tipo: document.getElementById('m3_tipo').value,
+                    instruccion: document.getElementById('m3_instruccion').value
                 };
             }
 
@@ -293,6 +357,7 @@ def ejecutar_prompt():
         prompt = ""
         
         # --- INYECCIÓN DE LÓGICA DE BACKEND (DOCUMENTO MAESTRO) ---
+        
         if modulo_id == 'mod_1':
             prompt = f"""[IDENTIDAD]: Actúa como un {datos.get('rol', 'Experto')}.
 [CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto', '')}.
@@ -300,6 +365,58 @@ def ejecutar_prompt():
 [RESTRICCIONES]: Actúa con profesionalismo ejecutivo y experto. Prohibido el lenguaje genérico, el relleno y las obviedades. Sé directo y estratégico. Si se requiere código, entrégalo completo y final, sin fragmentos sueltos.
 [FORMATO DE SALIDA]: Entrega el resultado estrictamente como {datos.get('formato', 'Texto')}.
 """
+        
+        elif modulo_id == 'mod_2':
+            marca = datos.get('marca')
+            tema = datos.get('tema')
+            retencion = datos.get('retencion')
+            
+            # Silos herméticos de identidad visual y de voz
+            reglas_marca = ""
+            if marca == "La Viuda":
+                reglas_marca = "Tono: Realismo Clínico, voz baja y confidencial. Frases cortas y secas. Estructura de 4 fases (Realidad, Disonancia, Inmersión, Persistencia). Regla inquebrantable: Suspenso sugerido, vacío de información crudo, cero contenido explícito o gore. Romper la cuarta pared hablando en segunda persona ('Esto te afecta')."
+            elif marca == "Monkygraff":
+                reglas_marca = "Tono: Análisis geopolítico serio y documental de guerra. Densidad alta de información, ritmo rápido, basado en hechos. Regla inquebrantable: Cero introducciones lentas, cero saludos ('Hola a todos'). Estrategia de Vacío de Información extremo para máxima retención."
+            elif marca == "TuIALista":
+                reglas_marca = "Estilo: Corporate Tech. Lenguaje de software, eficiencia, azules profundos, autoridad técnica."
+            elif marca == "Ezzenshop":
+                reglas_marca = "Estilo: Hype/Urbano. Alta energía, estética neón/gamer, lenguaje directo 'Mobile First'."
+            elif marca == "Yayika Digital":
+                reglas_marca = "Estilo: Marketing Emocional. Empático, elegante, persuasivo, suave."
+            elif marca == "Yayika Apparel":
+                reglas_marca = "Estilo: Sátira Viral TikTok. Humor ácido, visuales de alto impacto (parodias), anti-marketing."
+
+            prompt = f"""[MOTOR DE GUIONES - RETENCIÓN Y ESTRUCTURA]
+[PROYECTO HERMÉTICO]: {marca}
+[DIRECTRICES INQUEBRANTABLES DE MARCA]: {reglas_marca}
+[OBJETIVO DE FORMATO]: {retencion}
+[TEMA / NOTICIA A DESARROLLAR]: {tema}
+[INSTRUCCIÓN ESTRICTA]: Desarrolla el guion inicial asegurando el cumplimiento de la identidad de la marca. Maximiza el 'Watch Time'. No resumas, aplica ingeniería de retención y prioriza la curiosidad profunda.
+"""
+
+        elif modulo_id == 'mod_3':
+            raccord = datos.get('raccord')
+            tipo_hook = datos.get('tipo')
+            instruccion = datos.get('instruccion')
+            
+            hook_logic = ""
+            if tipo_hook == "Vacio_Informacion":
+                hook_logic = "Abre este bloque con una premisa incompleta que obligue al usuario a seguir viendo para entender el contexto."
+            elif tipo_hook == "Disonancia":
+                hook_logic = "Introduce un dato anómalo o un silencio que rompa la expectativa de normalidad del bloque anterior."
+            elif tipo_hook == "Cuarta_Pared":
+                hook_logic = "Dirígete directamente al espectador en segunda persona, haciéndolo partícipe de la tensión o del problema."
+            elif tipo_hook == "Rebelacion_Parcial":
+                hook_logic = "Entrega solo el 10% de la respuesta esperada y oculta el resto bajo una nueva interrogante."
+
+            prompt = f"""[INGENIERÍA DE SECUENCIA Y MICRO-HOOKS]
+Eres un experto en retención de audiencias para videos extensos (Fragmentación Secuencial).
+[MEMORIA - RACCORD DEL BLOQUE ANTERIOR]: {raccord}
+[OBJETIVO DEL MICRO-HOOK]: {hook_logic}
+[INSTRUCCIÓN DE CONTINUIDAD]: {instruccion}
+[ACCIÓN]: Genera la continuación exacta y sin cortes abruptos del bloque anterior, aplicando el micro-hook en los primeros 3 segundos de este nuevo bloque para reiniciar la atención del espectador. Mantén el tono narrativo idéntico al bloque base.
+"""
+
         elif modulo_id == 'mod_5':
             gatillo_logic = ""
             if datos.get('gatillo') == "FOMO":
@@ -315,39 +432,33 @@ def ejecutar_prompt():
 [GATILLO PSICOLÓGICO]: Tu único objetivo es la conversión inmediata. {gatillo_logic}
 [SECUENCIA]: {datos.get('bloque', 'Bloque 1')}. Duración: {datos.get('duracion', '4 segundos')}. Continuación de (Si aplica): {datos.get('raccord', 'N/A')}.
 [FASE 1: DISEÑO VISUAL]: Modalidad: {datos.get('modalidad', 'UGC')}. Perfil: {datos.get('avatar', 'Gen-Z')}. Integra el producto de referencia manteniendo el 100% de su fidelidad.
-[FASE 2: ACCIÓN Y FÍSICA]: Render 4K fotorrealista. Física inquebrantable. Sin deformaciones corporales ni del producto.
+[FASE 2: ACCIÓN Y FÍSICA]: Render 4K fotorrealista en formato 16:9 si es YouTube, 9:16 si es TikTok. Física inquebrantable. Sin deformaciones corporales ni del producto.
 [FORMATO DE SALIDA ESTRICTO]:
 [PROMPT VISUAL - VIDEO]: (Instrucción técnica de cámara y acción para IA).
 [GUION DE VENTA]: (Texto exacto de locución. Debe aplicar el sesgo psicológico, atacando el dolor del cliente y forzando la urgencia. Límite estricto de palabras según la duración). Prohibido vender características, vende la transformación.
 """
 
         # --- CICLO DE SUPERVIVENCIA AUTÓNOMA (FAILOVER) ---
-        # El sistema probará TODOS los modelos hasta que uno funcione
         modelos_probados = []
         resultado_exitoso = None
         
         modelos_disponibles = genai.list_models()
         for m in modelos_disponibles:
             if 'generateContent' in m.supported_generation_methods:
-                # Omitimos modelos que ya sabemos que son conflictivos o de cuota 0
                 if 'preview' in m.name or 'experimental' in m.name or 'deep-research' in m.name or 'gemini-3' in m.name:
                     continue
                 try:
-                    # Intento de generación
                     model = genai.GenerativeModel(m.name)
                     response = model.generate_content(prompt)
                     resultado_exitoso = response.text
-                    break # SI FUNCIONA, ROMPE EL CICLO Y ENTREGA EL RESULTADO
+                    break
                 except Exception as e:
-                    # Si falla (404, 429, etc.), guarda el error y pasa al siguiente modelo
                     modelos_probados.append(f"{m.name} falló: {str(e)[:40]}...")
                     continue
                     
-        # Si absolutamente todos los modelos fallaron
         if resultado_exitoso is None:
             return jsonify({'error': f"Todos los modelos fueron bloqueados por Google. Logs internos: {' | '.join(modelos_probados)}"}), 500
 
-        # Si hubo éxito, devuelve el texto al frontend
         return jsonify({'status': 'success', 'resultado_ia': resultado_exitoso})
     
     except Exception as e:
