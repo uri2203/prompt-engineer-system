@@ -290,15 +290,9 @@ def ejecutar_prompt():
         modulo_id = data.get('modulo_id')
         datos = data.get('datos', {})
         
-        # --- FORZAR MODELO LIGERO Y GRATUITO (Bypass de Error 429) ---
-        # Bloqueamos la búsqueda dinámica. Forzamos la versión 1.5-flash
-        # que tiene cuota gratuita universal por defecto.
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        
         prompt = ""
         
         # --- INYECCIÓN DE LÓGICA DE BACKEND (DOCUMENTO MAESTRO) ---
-        
         if modulo_id == 'mod_1':
             prompt = f"""[IDENTIDAD]: Actúa como un {datos.get('rol', 'Experto')}.
 [CONTEXTO]: Considera los siguientes datos como base inamovible: {datos.get('contexto', '')}.
@@ -326,12 +320,35 @@ def ejecutar_prompt():
 [PROMPT VISUAL - VIDEO]: (Instrucción técnica de cámara y acción para IA).
 [GUION DE VENTA]: (Texto exacto de locución. Debe aplicar el sesgo psicológico, atacando el dolor del cliente y forzando la urgencia. Límite estricto de palabras según la duración). Prohibido vender características, vende la transformación.
 """
-        else:
-            prompt = f"Procesando Módulo: {modulo_id} con datos: {datos}"
 
-        # Ejecución contra la API
-        response = model.generate_content(prompt)
-        return jsonify({'status': 'success', 'resultado_ia': response.text})
+        # --- CICLO DE SUPERVIVENCIA AUTÓNOMA (FAILOVER) ---
+        # El sistema probará TODOS los modelos hasta que uno funcione
+        modelos_probados = []
+        resultado_exitoso = None
+        
+        modelos_disponibles = genai.list_models()
+        for m in modelos_disponibles:
+            if 'generateContent' in m.supported_generation_methods:
+                # Omitimos modelos que ya sabemos que son conflictivos o de cuota 0
+                if 'preview' in m.name or 'experimental' in m.name or 'deep-research' in m.name or 'gemini-3' in m.name:
+                    continue
+                try:
+                    # Intento de generación
+                    model = genai.GenerativeModel(m.name)
+                    response = model.generate_content(prompt)
+                    resultado_exitoso = response.text
+                    break # SI FUNCIONA, ROMPE EL CICLO Y ENTREGA EL RESULTADO
+                except Exception as e:
+                    # Si falla (404, 429, etc.), guarda el error y pasa al siguiente modelo
+                    modelos_probados.append(f"{m.name} falló: {str(e)[:40]}...")
+                    continue
+                    
+        # Si absolutamente todos los modelos fallaron
+        if resultado_exitoso is None:
+            return jsonify({'error': f"Todos los modelos fueron bloqueados por Google. Logs internos: {' | '.join(modelos_probados)}"}), 500
+
+        # Si hubo éxito, devuelve el texto al frontend
+        return jsonify({'status': 'success', 'resultado_ia': resultado_exitoso})
     
     except Exception as e:
         return jsonify({'error': str(e)}), 500
