@@ -2,18 +2,25 @@ import os
 from flask import Flask, render_template, request, jsonify
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
-# Importación estricta de cada silo independiente
+
+# IMPORTACIÓN ESTRICTA Y SEPARADA DE CADA SILO
 from modulos.mod_1_traductor import TraductorUniversal
 from modulos.mod_2_guiones import IngenieriaGuiones
+from modulos.mod_3_hooks import GeneradorHooks
+from modulos.mod_4_empaquetado import EmpaquetadoContenido
+from modulos.mod_5_ventas import MotorVentasUGC
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
-# Instancias
+# Instanciación de los Microservicios
 adn_db = ADNManager()
 ia_motor = AIEngine()
 mod_1 = TraductorUniversal()
 mod_2 = IngenieriaGuiones()
+mod_3 = GeneradorHooks()
+mod_4 = EmpaquetadoContenido()
+mod_5 = MotorVentasUGC()
 
 @app.route('/')
 def index():
@@ -35,15 +42,21 @@ def ejecutar():
     d = data.get('datos', {})
     
     prompt = ""
-    # Enrutamiento hacia los silos físicos
+    # EL ENRUTADOR DIRIGE EL TRÁFICO AL SILO CORRESPONDIENTE
     if mod_id == 'mod_1':
         prompt = mod_1.construir_prompt(d)
     elif mod_id == 'mod_2':
         prompt = mod_2.construir_prompt(d, adn_db.cargar_todo())
+    elif mod_id == 'mod_3':
+        prompt = mod_3.construir_prompt(d, adn_db.cargar_todo())
+    elif mod_id == 'mod_4':
+        prompt = mod_4.construir_prompt(d, adn_db.cargar_todo())
+    elif mod_id == 'mod_5':
+        prompt = mod_5.construir_prompt(d)
     else:
-        return jsonify({'error': 'Este módulo aún no ha sido migrado a su propio silo.'}), 400
+        return jsonify({'error': 'Módulo no reconocido en la arquitectura.'}), 400
 
-    # Ejecución aislada a través del motor
+    # Ejecución agnóstica a través del motor
     resultado = ia_motor.ejecutar_failover(prompt)
     return jsonify(resultado)
 
