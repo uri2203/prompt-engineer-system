@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="flex-1 flex flex-col p-10 overflow-y-auto bg-[#0B1120]">
+    <div class="max-w-4xl mx-auto w-full">
+        
+        <header class="mb-10 border-b border-slate-800 pb-6">
+            <h2 class="text-3xl font-bold text-slate-200 mb-2 tracking-tight">ADN Manager</h2>
+            <p class="text-slate-400 text-sm">Base de datos central. Gestión de identidades narrativas, tonos de voz y reglas inquebrantables por marca (JSON).</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-1 space-y-4">
+                <div class="bg-[#0F1523] p-6 rounded-xl border border-slate-800 shadow-lg">
+                    <h3 class="text-[#10b981] font-bold text-xs uppercase tracking-widest mb-4">Selección de Entorno</h3>
+                    <label class="label-blue block mb-2">Canal / Marca</label>
+                    <select id="m0_selector" onchange="cargarADN()" class="w-full p-3 bg-[#0B1120] border border-slate-700 text-slate-200 rounded focus:border-[#3b82f6] outline-none">
+                        <option>La Viuda</option>
+                        <option>Monkygraff</option>
+                        <option>TuIALista</option>
+                        <option>Ezzenshop</option>
+                        <option>Yayika Digital</option>
+                        <option>Yayika Apparel</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 space-y-6">
+                <div class="bg-[#0F1523] p-8 rounded-xl border border-slate-800 shadow-lg space-y-6">
+                    <h3 class="text-[#3b82f6] font-bold text-sm uppercase tracking-widest mb-2 border-b border-slate-800 pb-3">Editor de Matriz (Mod 0)</h3>
+                    
+                    <div>
+                        <label class="label-blue block mb-2">Arquetipo y Tono de Voz</label>
+                        <input type="text" id="m0_tono" class="w-full p-3 bg-[#0B1120] border border-slate-700 text-slate-200 rounded focus:border-[#3b82f6] outline-none" placeholder="Ej. Realismo clínico, voz baja, confidencial...">
+                    </div>
+                    
+                    <div>
+                        <label class="label-blue block mb-2">Límites Estrictos y Frameworks Duros</label>
+                        <textarea id="m0_reglas" class="w-full h-48 p-3 bg-[#0B1120] border border-slate-700 text-slate-200 rounded focus:border-[#3b82f6] outline-none resize-none font-mono text-sm leading-relaxed" placeholder="Ingresa las directrices que el modelo de IA nunca debe ignorar..."></textarea>
+                    </div>
+                    
+                    <button onclick="guardarADN()" class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded font-bold text-white tracking-widest text-xs transition-colors shadow-lg mt-4">
+                        GUARDAR CONFIGURACIÓN EN BASE DE DATOS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function cargarADN() {
+        try {
+            const res = await fetch('/api/get_adn'); 
+            const adn = await res.json();
+            const marca = document.getElementById('m0_selector').value;
+            
+            if(adn[marca]) { 
+                document.getElementById('m0_tono').value = adn[marca].identidad || ''; 
+                document.getElementById('m0_reglas').value = adn[marca].reglas_duras || ''; 
+            } else {
+                document.getElementById('m0_tono').value = ''; 
+                document.getElementById('m0_reglas').value = ''; 
+            }
+        } catch (error) {
+            console.error("Error cargando ADN de la base de datos", error);
+        }
+    }
+
+    async function guardarADN() {
+        const marca = document.getElementById('m0_selector').value;
+        const data = { 
+            identidad: document.getElementById('m0_tono').value, 
+            reglas_duras: document.getElementById('m0_reglas').value 
+        };
+        
+        try {
+            await fetch('/api/save_adn', { 
+                method: 'POST', 
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({marca, adn: data}) 
+            });
+            
+            // Efecto visual de guardado exitoso
+            const btn = document.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "¡ADN ACTUALIZADO Y ASEGURADO!";
+            btn.classList.replace('bg-emerald-600', 'bg-blue-600');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.replace('bg-blue-600', 'bg-emerald-600');
+            }, 2000);
+            
+        } catch (error) {
+            alert("Error al conectar con la base de datos.");
+        }
+    }
+
+    // Cargar datos al iniciar la pantalla
+    window.addEventListener('load', cargarADN);
+</script>
+{% endblock %}
