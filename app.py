@@ -32,8 +32,12 @@ def index():
 
 @app.route('/adn')
 def adn():
-    # Nueva ruta exclusiva para el gestor de base de datos
     return render_template('adn.html', active_page='adn')
+
+@app.route('/bot')
+def bot():
+    # Nueva ruta exclusiva para el Centro de Mando Pinpinela
+    return render_template('bot_dashboard.html', active_page='bot')
 
 @app.route('/usuarios')
 def usuarios():
