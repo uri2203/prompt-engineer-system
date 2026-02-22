@@ -8,9 +8,10 @@ class AIEngine:
         if self.api_key:
             genai.configure(api_key=self.api_key)
         
-        # Variables de Telemetría (Adición)
-        self.ultima_latencia = 0.0
-        self.tokens_consumidos = 0
+        # Historial de memoria para las gráficas (20 puntos de datos)
+        self.historial_latencia = [0.0] * 20
+        self.historial_tokens = [0] * 20
+        self.tokens_totales = 0
 
     def ejecutar_failover(self, prompt):
         modelos_disponibles = ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro']
@@ -23,24 +24,32 @@ class AIEngine:
                 tiempo_fin = time.time()
                 
                 if response and response.text:
-                    # Registro de telemetría en caso de éxito
-                    self.ultima_latencia = round(tiempo_fin - tiempo_inicio, 2)
+                    latencia = round(tiempo_fin - tiempo_inicio, 2)
+                    tokens_peticion = 0
                     try:
-                        self.tokens_consumidos += response.usage_metadata.total_token_count
+                        tokens_peticion = response.usage_metadata.total_token_count
                     except:
-                        pass # Bypass si la API no devuelve los metadatos en este intento
+                        pass # Bypass si la API oculta los metadatos
+                        
+                    # Actualización matemática de los historiales
+                    self.tokens_totales += tokens_peticion
+                    self.historial_latencia.append(latencia)
+                    self.historial_latencia.pop(0) # Elimina el dato más viejo
+                    self.historial_tokens.append(tokens_peticion)
+                    self.historial_tokens.pop(0)
                         
                     return {'resultado_ia': response.text}
             except Exception as e:
                 print(f"Falla de cuota en {nombre_modelo}: {str(e)}")
                 continue 
         
-        self.ultima_latencia = 0.0
         return {'error': 'Saturación en todos los modelos. Requiere pausa táctica o actualizar API Key.'}
     
     def obtener_telemetria(self):
         return {
-            'latencia': self.ultima_latencia,
-            'tokens': self.tokens_consumidos,
-            'estado_api': 'STABLE' if self.api_key else 'OFFLINE'
+            'estado_api': 'STABLE' if self.api_key else 'OFFLINE',
+            'tokens_totales': self.tokens_totales,
+            'historial_latencia': self.historial_latencia,
+            'historial_tokens': self.historial_tokens,
+            'latencia_actual': self.historial_latencia[-1]
         }
