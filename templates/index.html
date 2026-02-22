@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Master System | Corporate Tech</title>
+    <meta charset="UTF-8"><title>AI Master System | Corporate Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
@@ -10,44 +9,39 @@
         .active-tab { border: 2px solid #3b82f6; background: rgba(59,130,246,0.1); border-radius: 8px; color: #f8fafc; }
         .inactive-tab { color: #94a3b8; border: 2px solid transparent; }
         input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; }
-        input:focus, select:focus, textarea:focus { border-color: #3b82f6; }
         .label-blue { color: #60a5fa; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 </head>
 <body class="h-screen flex overflow-hidden">
     <aside class="w-[280px] sidebar flex flex-col p-5">
-        <div class="mb-8">
-            <h1 class="text-xl font-bold text-[#3b82f6]">AI Master System</h1>
-            <p class="text-[9px] text-slate-500 font-bold uppercase mt-1 tracking-widest">Sistemas de Ingeniería</p>
-        </div>
+        <h1 class="text-xl font-bold text-[#3b82f6] mb-8">AI Master System</h1>
         <nav class="flex-1 space-y-2">
             <button onclick="switchTab('mod_1')" id="btn_mod_1" class="w-full text-left px-4 py-3 text-sm active-tab font-bold">Mod 1: Traductor Universal</button>
-            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones (Retención)</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 2: Guiones</button>
             <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 5: Ventas UGC</button>
-            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm inactive-tab">Módulo 0: ADN JSON</button>
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm inactive-tab">Mod 0: ADN JSON</button>
         </nav>
     </aside>
 
     <main class="flex-1 flex p-8 gap-6 bg-[#0B1120] overflow-hidden">
         <div class="w-[55%] flex flex-col gap-6 overflow-y-auto pr-2">
             <div id="ui_mod_1" class="module-content block">
-                <h2 class="text-2xl font-bold mb-2 text-white">Traductor Universal</h2>
-                <p class="text-xs text-slate-400 mb-6">Transforma peticiones operativas en prompts de alta precisión[cite: 3].</p>
+                <h2 class="text-2xl font-bold mb-2">Traductor Universal</h2>
                 <div class="space-y-4">
                     <div>
-                        <label class="label-blue block mb-1.5">Rol / Experto </label>
-                        <select id="m1_rol" class="w-full p-2.5 text-sm">
+                        <label class="label-blue">Rol / Experto</label>
+                        <select id="m1_rol" class="w-full p-2.5">
                             <option>Ingeniero de Software</option>
                             <option>Analista de Datos</option>
                             <option>Asesor Estratégico</option>
                             <option>Perfil Ejecutivo Colaborativo</option>
                         </select>
                     </div>
-                    <div><label class="label-blue block mb-1.5">Contexto </label><textarea id="m1_contexto" class="w-full h-24 p-2.5 text-sm"></textarea></div>
-                    <div><label class="label-blue block mb-1.5">Petición Humana </label><textarea id="m1_texto" class="w-full h-32 p-2.5 text-sm"></textarea></div>
+                    <div><label class="label-blue">Contexto (Variables)</label><textarea id="m1_contexto" class="w-full h-24 p-2.5"></textarea></div>
+                    <div><label class="label-blue">Petición Humana</label><textarea id="m1_texto" class="w-full h-32 p-2.5"></textarea></div>
                     <div>
-                        <label class="label-blue block mb-1.5">Formato de Salida </label>
-                        <select id="m1_formato" class="w-full p-2.5 text-sm">
+                        <label class="label-blue">Formato de Salida</label>
+                        <select id="m1_formato" class="w-full p-2.5">
                             <option>Código listo para copiar</option>
                             <option>Tabla Comparativa</option>
                             <option>Documento Formal</option>
@@ -56,14 +50,13 @@
                     </div>
                 </div>
             </div>
-            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-4 mt-2 rounded-lg font-bold text-xs tracking-widest">COMPILAR Y EJECUTAR</button>
+            <button onclick="ejecutar()" id="btn_main" class="w-full bg-[#2563eb] hover:bg-blue-500 py-4 mt-2 rounded-lg font-bold text-xs tracking-widest transition-all">COMPILAR Y EJECUTAR</button>
         </div>
         <div class="w-[45%] flex flex-col glass-panel p-6 shadow-2xl">
             <h3 class="text-[#10b981] font-bold text-[11px] uppercase mb-4 tracking-widest">Output Blindado</h3>
             <textarea id="output" class="flex-1 w-full bg-transparent text-slate-300 font-mono text-sm leading-relaxed outline-none" readonly></textarea>
         </div>
     </main>
-
     <script>
         let moduloActivo = 'mod_1';
         function switchTab(id) {
@@ -74,21 +67,16 @@
             document.getElementById('btn_' + id).classList.replace('inactive-tab', 'active-tab');
         }
         async function ejecutar() {
-            const btn = document.getElementById('btn_main');
-            btn.innerHTML = "INYECTANDO LÓGICA..."; btn.disabled = true;
-            const payload = {
-                modulo_id: moduloActivo,
-                datos: {
-                    rol: document.getElementById('m1_rol').value,
-                    contexto: document.getElementById('m1_contexto').value,
-                    texto: document.getElementById('m1_texto').value,
-                    formato: document.getElementById('m1_formato').value
-                }
-            };
+            const out = document.getElementById('output');
+            const payload = { modulo_id: moduloActivo, datos: { 
+                rol: document.getElementById('m1_rol').value, 
+                contexto: document.getElementById('m1_contexto').value, 
+                texto: document.getElementById('m1_texto').value,
+                formato: document.getElementById('m1_formato').value
+            }};
             const res = await fetch('/api/ejecutar', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload) });
             const data = await res.json();
-            document.getElementById('output').value = data.resultado_ia || data.error;
-            btn.innerHTML = "COMPILAR Y EJECUTAR"; btn.disabled = false;
+            out.value = data.resultado_ia || data.error;
         }
     </script>
 </body></html>
