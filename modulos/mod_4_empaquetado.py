@@ -1,8 +1,6 @@
 class EmpaquetadoContenido:
     def construir_prompt(self, d, adn_completo):
         adn = adn_completo.get(d.get('marca'), {})
-        # [cite: 120] Vacío de información
-        # [cite: 122] Resolución estricta 16:9
         return (f"[IDENTIDAD]: Eres un estratega de contenido viral y experto en SEO audiovisual.\n"
                 f"Trabajas bajo los parámetros de: {adn.get('identidad')}.\n"
                 f"[CONTEXTO]: Analiza el siguiente contenido: {d.get('guion')}.\n"
