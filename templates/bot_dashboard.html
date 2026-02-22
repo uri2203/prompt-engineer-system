@@ -13,7 +13,7 @@
         </div>
         <div class="flex space-x-3">
             <button class="bg-[#1e293b] text-slate-300 px-4 py-2 rounded text-xs font-bold border border-slate-700 hover:bg-slate-700 transition-colors">VER CALENDARIO</button>
-            <button class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
+            <button onclick="lanzarOrdenPrueba()" id="btn_lanzar" class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
         </div>
     </header>
 
@@ -22,27 +22,27 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-[#3b82f6] font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>1. Scripting Engine</h3>
-                <span class="text-slate-500 text-xs">Cola: 2</span>
+                <span class="text-slate-500 text-xs">Sistema Operativo</span>
             </div>
             
             <div class="space-y-3 flex-1 overflow-y-auto pr-2">
-                <div class="bg-[#0B1120] p-4 rounded border border-blue-900/50 relative overflow-hidden">
+                <div id="status_scripting" class="bg-[#0B1120] p-4 rounded border border-slate-800 relative overflow-hidden hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
                     <div class="flex justify-between items-start mb-2">
-                        <span class="text-white text-sm font-bold">La Viuda - Episodio #45</span>
-                        <span class="text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono">GENERANDO...</span>
+                        <span class="text-white text-sm font-bold" id="task_title">La Viuda - Generación en Curso</span>
+                        <span class="text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono" id="task_badge">PROCESANDO...</span>
                     </div>
-                    <p class="text-xs text-slate-400 mb-2 font-mono">Tokens proyectados: ~4,500. Framework: Lógico Deductivo.</p>
-                    <div class="w-full bg-slate-800 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full" style="width: 45%"></div></div>
+                    <p class="text-xs text-slate-400 mb-2 font-mono" id="task_desc">Extrayendo ADN de JSON y conectando a Gemini API.</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full animate-pulse" style="width: 100%"></div></div>
                 </div>
-                
+
                 <div class="bg-[#0B1120] p-4 rounded border border-slate-800 relative opacity-60">
                     <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
                     <div class="flex justify-between items-start mb-2">
-                        <span class="text-slate-300 text-sm font-bold">Monkygraff - Reporte Semanal</span>
+                        <span class="text-slate-300 text-sm font-bold">Monitor Orquestador</span>
                         <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">EN ESPERA</span>
                     </div>
-                    <p class="text-xs text-slate-500 font-mono">Requiere: Llave API 2 (Libre)</p>
+                    <p class="text-xs text-slate-500 font-mono">Esperando disparador (Trigger) manual o Cron.</p>
                 </div>
             </div>
         </div>
@@ -50,23 +50,11 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-purple-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-purple-400 mr-2 animate-pulse"></span>2. Voice & Audio Synth</h3>
-                <span class="text-slate-500 text-xs">Cola: 1</span>
+                <span class="text-slate-500 text-xs">Desconectado</span>
             </div>
-            
-            <div class="space-y-3 flex-1 overflow-y-auto pr-2">
-                <div class="bg-[#0B1120] p-5 rounded border border-purple-900/50 flex flex-col items-center justify-center h-full">
-                    <div class="flex items-center space-x-1 mb-4 h-12">
-                        <div class="w-2 h-4 bg-purple-500 rounded animate-[pulse_1s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-8 bg-purple-400 rounded animate-[pulse_1.2s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-12 bg-purple-300 rounded animate-[pulse_0.8s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-6 bg-purple-400 rounded animate-[pulse_1.5s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-10 bg-purple-500 rounded animate-[pulse_1.1s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-5 bg-purple-400 rounded animate-[pulse_0.9s_ease-in-out_infinite]"></div>
-                        <div class="w-2 h-8 bg-purple-300 rounded animate-[pulse_1.3s_ease-in-out_infinite]"></div>
-                    </div>
-                    <span class="text-white text-sm font-bold mb-1">TuIALista - Venta UGC #12</span>
-                    <span class="text-xs text-purple-300 font-mono">Clonando voz: "Autoridad Eficiente" (API ElevenLabs)</span>
-                </div>
+            <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
+                <p class="text-slate-400 text-sm font-bold">Módulo de Síntesis en Construcción</p>
+                <p class="text-slate-500 text-xs mt-1">A la espera de integración con API externa (ElevenLabs / Google TTS).</p>
             </div>
         </div>
 
@@ -75,7 +63,6 @@
                 <h3 class="text-amber-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>3. Video Compiler (FFmpeg)</h3>
                 <span class="text-slate-500 text-xs">Ocioso</span>
             </div>
-            
             <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
                 <svg class="w-12 h-12 text-slate-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
                 <p class="text-slate-400 text-sm font-bold">Sin renderizados activos</p>
@@ -86,27 +73,85 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-emerald-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>4. Review & Publishing Queue</h3>
-                <span class="text-emerald-500 text-xs font-bold border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 rounded">1 REQUIERE APROBACIÓN</span>
+                <span class="text-emerald-500 text-xs font-bold border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 rounded" id="queue_count">0 PENDIENTES</span>
             </div>
             
-            <div class="space-y-3 flex-1 overflow-y-auto pr-2">
-                <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <span class="text-white text-sm font-bold block">Yayika Digital - "5 Hábitos..."</span>
-                            <span class="text-xs text-slate-400 block mt-0.5">Empaquetado completo: MP4 + Miniatura + Título CTR</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-2 mt-4">
-                        <button class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded text-[10px] font-bold tracking-widest transition-colors">APROBAR & PUBLICAR</button>
-                        <button class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-2 rounded text-[10px] font-bold border border-slate-600 transition-colors">VER / RECHAZAR</button>
-                    </div>
-                </div>
+            <div class="space-y-3 flex-1 overflow-y-auto pr-2" id="review_queue">
+                <p class="text-slate-500 text-xs text-center mt-10">La cola de revisión humana está limpia.</p>
             </div>
         </div>
 
     </div>
 </div>
+
+<script>
+    async function lanzarOrdenPrueba() {
+        const btn = document.getElementById('btn_lanzar');
+        const statusDiv = document.getElementById('status_scripting');
+        const taskDesc = document.getElementById('task_desc');
+        const taskBadge = document.getElementById('task_badge');
+        
+        // UI Updates
+        btn.innerHTML = "PROCESANDO EN BACKEND...";
+        btn.disabled = true;
+        btn.classList.replace('bg-emerald-600', 'bg-slate-600');
+        
+        statusDiv.classList.remove('hidden');
+        taskDesc.innerText = "Operando en Fase 1 y 2. Compilando guion de La Viuda y estructurando empaquetado...";
+        
+        try {
+            // Gatillo del Orquestador
+            const res = await fetch('/api/bot/lanzar_orden', { 
+                method: 'POST', 
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                    marca: 'La Viuda', 
+                    premisa: 'Genera una premisa de suspenso psicológico sobre un búnker subterráneo militar encontrado bajo un vecindario moderno. Aplica vacío de información extremo.'
+                }) 
+            });
+            
+            const data = await res.json();
+            
+            // UI Updates post-ejecución
+            if(data.status === "PENDING_REVIEW") {
+                taskBadge.innerText = "COMPLETADO";
+                taskBadge.classList.replace('bg-blue-900', 'bg-emerald-900');
+                taskBadge.classList.replace('text-blue-300', 'text-emerald-300');
+                taskDesc.innerText = "Fase 1 y 2 ejecutadas con éxito. Guion y empaquetado en memoria. Pausa requerida para Audio.";
+                
+                // Inyectar en la cola de revisión visual
+                document.getElementById('queue_count').innerText = "1 REQUIERE APROBACIÓN";
+                document.getElementById('review_queue').innerHTML = `
+                    <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="text-white text-sm font-bold block">La Viuda - ${data.tarea_id}</span>
+                                <span class="text-xs text-slate-400 block mt-0.5">Fase 2 Terminada (Texto/Empaquetado)</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-[10px] text-slate-500 max-h-16 overflow-hidden">${data.empaquetado.substring(0, 100)}...</div>
+                        <div class="flex space-x-2 mt-4">
+                            <button class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded text-[10px] font-bold tracking-widest transition-colors">ENVIAR A AUDIO (FASE 3)</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                taskBadge.innerText = "ERROR API";
+                taskBadge.classList.replace('bg-blue-900', 'bg-red-900');
+                taskBadge.classList.replace('text-blue-300', 'text-red-300');
+                taskDesc.innerText = "Google Gemini rechazó la conexión. Probable cuota agotada. Verifica Bóveda.";
+            }
+            
+            if(window.actualizarTelemetria) window.actualizarTelemetria(); 
+            
+        } catch (error) {
+            taskDesc.innerText = "Fallo de conexión crítica con el servidor. Revisa logs.";
+        } finally { 
+            btn.innerHTML = "+ NUEVA ORDEN DE PRODUCCIÓN"; 
+            btn.disabled = false; 
+            btn.classList.replace('bg-slate-600', 'bg-emerald-600');
+        }
+    }
+</script>
 {% endblock %}
