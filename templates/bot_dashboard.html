@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="flex-1 flex flex-col p-8 overflow-y-auto bg-[#0B1120] scrollbar-hide">
+<div class="flex-1 flex flex-col p-8 overflow-y-auto bg-[#0B1120] scrollbar-hide relative">
     
     <header class="mb-8 border-b border-slate-800 pb-4 flex justify-between items-end">
         <div>
@@ -13,7 +13,7 @@
         </div>
         <div class="flex space-x-3">
             <button class="bg-[#1e293b] text-slate-300 px-4 py-2 rounded text-xs font-bold border border-slate-700 hover:bg-slate-700 transition-colors">VER CALENDARIO</button>
-            <button onclick="lanzarOrdenPrueba()" id="btn_lanzar" class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
+            <button onclick="abrirModalOrden()" class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
         </div>
     </header>
 
@@ -25,11 +25,11 @@
                 <span class="text-slate-500 text-xs">Sistema Operativo</span>
             </div>
             
-            <div class="space-y-3 flex-1 overflow-y-auto pr-2">
+            <div class="space-y-3 flex-1 overflow-y-auto pr-2" id="scripting_queue">
                 <div id="status_scripting" class="bg-[#0B1120] p-4 rounded border border-slate-800 relative overflow-hidden hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
                     <div class="flex justify-between items-start mb-2">
-                        <span class="text-white text-sm font-bold" id="task_title">La Viuda - Generación en Curso</span>
+                        <span class="text-white text-sm font-bold" id="task_title">Generación en Curso</span>
                         <span class="text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono" id="task_badge">PROCESANDO...</span>
                     </div>
                     <p class="text-xs text-slate-400 mb-2 font-mono" id="task_desc">Extrayendo ADN de JSON y conectando a Gemini API.</p>
@@ -42,7 +42,7 @@
                         <span class="text-slate-300 text-sm font-bold">Monitor Orquestador</span>
                         <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">EN ESPERA</span>
                     </div>
-                    <p class="text-xs text-slate-500 font-mono">Esperando disparador (Trigger) manual o Cron.</p>
+                    <p class="text-xs text-slate-500 font-mono">Esperando disparador manual o Cronjob.</p>
                 </div>
             </div>
         </div>
@@ -50,11 +50,11 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-purple-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-purple-400 mr-2 animate-pulse"></span>2. Voice & Audio Synth</h3>
-                <span class="text-slate-500 text-xs">Desconectado</span>
+                <span class="text-slate-500 text-xs">Conectado (Mockup TTS)</span>
             </div>
             <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
-                <p class="text-slate-400 text-sm font-bold">Módulo de Síntesis en Construcción</p>
-                <p class="text-slate-500 text-xs mt-1">A la espera de integración con API externa (ElevenLabs / Google TTS).</p>
+                <p class="text-slate-400 text-sm font-bold">Motor Neuronal Edge-TTS Activo</p>
+                <p class="text-slate-500 text-xs mt-1">A la espera de texto purgado para renderizado .mp3.</p>
             </div>
         </div>
 
@@ -66,7 +66,7 @@
             <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
                 <svg class="w-12 h-12 text-slate-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
                 <p class="text-slate-400 text-sm font-bold">Sin renderizados activos</p>
-                <p class="text-slate-500 text-xs mt-1">Esperando archivos de audio y prompts de imagen para iniciar ensamble de línea de tiempo.</p>
+                <p class="text-slate-500 text-xs mt-1">Motor preparado para formatos 16:9 y 9:16.</p>
             </div>
         </div>
 
@@ -80,77 +80,173 @@
                 <p class="text-slate-500 text-xs text-center mt-10">La cola de revisión humana está limpia.</p>
             </div>
         </div>
+    </div>
 
+    <div id="modal_orden" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-[#0F1523] border border-slate-700 rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
+            
+            <div class="bg-[#1e293b] px-6 py-4 border-b border-slate-700 flex justify-between items-center">
+                <h3 class="text-white font-bold tracking-tight flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    Parametrización de Orquestador (Nueva Orden)
+                </h3>
+                <button onclick="cerrarModalOrden()" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-5">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="label-blue block mb-2 text-[10px] text-[#60a5fa] font-bold uppercase tracking-widest">Canal / Marca</label>
+                        <select id="orden_marca" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-blue-500 outline-none transition-colors">
+                            <option value="La Viuda">La Viuda (Suspenso)</option>
+                            <option value="Monkygraff">Monkygraff (Geopolítica)</option>
+                            <option value="TuIALista">TuIALista (IA / Tech)</option>
+                            <option value="Ezzenshop">Ezzenshop (Jóvenes)</option>
+                            <option value="Yayika Digital">Yayika Digital (Mujer)</option>
+                            <option value="Yayika Apparel">Yayika Apparel (Sátira/TikTok)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="label-blue block mb-2 text-[10px] text-amber-500 font-bold uppercase tracking-widest">Formato de Render (FFmpeg)</label>
+                        <select id="orden_formato" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-amber-500 outline-none transition-colors">
+                            <option value="16:9">YouTube Clásico (16:9 - 1280x720)</option>
+                            <option value="9:16">TikTok / Shorts (9:16 - 720x1280)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="label-blue block mb-2 text-[10px] text-purple-400 font-bold uppercase tracking-widest">Premisa / Instrucción de Guion</label>
+                    <textarea id="orden_premisa" rows="3" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-purple-500 outline-none transition-colors placeholder-slate-600 font-mono" placeholder="Ej: Episodio sobre un búnker militar bajo una ciudad moderna. Aplicar vacío de información extremo..."></textarea>
+                </div>
+
+                <div class="bg-[#0B1120] border border-slate-700 p-4 rounded-lg flex justify-between items-center">
+                    <div>
+                        <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1">Reloj de Ejecución (Cronjob)</label>
+                        <select id="orden_reloj" class="bg-transparent text-white font-bold text-sm outline-none cursor-pointer">
+                            <option value="inmediato">Ejecutar Inmediatamente (Prioridad Alta)</option>
+                            <option value="cron_noche">Programar para Madrugada (03:00 AM)</option>
+                        </select>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600">
+                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e293b] px-6 py-4 border-t border-slate-700 flex justify-end space-x-3">
+                <button onclick="cerrarModalOrden()" class="px-5 py-2 rounded text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors border border-transparent">CANCELAR</button>
+                <button onclick="ejecutarOrden()" id="btn_modal_ejecutar" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded text-xs font-bold transition-colors shadow-lg shadow-emerald-900/50">INYECTAR A LA LÍNEA DE ENSAMBLAJE</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    async function lanzarOrdenPrueba() {
-        const btn = document.getElementById('btn_lanzar');
+    // Controladores del Modal
+    function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); }
+    function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
+
+    // Función principal de inyección
+    async function ejecutarOrden() {
+        const btn = document.getElementById('btn_modal_ejecutar');
+        const marca = document.getElementById('orden_marca').value;
+        const formato = document.getElementById('orden_formato').value;
+        const premisa = document.getElementById('orden_premisa').value || "Premisa automática generada por sistema.";
+        const reloj = document.getElementById('orden_reloj').value;
+
+        // Si es programado, solo simulamos agregarlo a la cola y cerramos
+        if (reloj === 'cron_noche') {
+            document.getElementById('scripting_queue').innerHTML += `
+                <div class="bg-[#0B1120] p-4 rounded border border-slate-800 relative opacity-60 mt-3">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-slate-300 text-sm font-bold">${marca} (${formato})</span>
+                        <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">CRON: 03:00 AM</span>
+                    </div>
+                    <p class="text-xs text-slate-500 font-mono truncate">${premisa}</p>
+                </div>
+            `;
+            cerrarModalOrden();
+            return;
+        }
+
+        // Si es Inmediato, disparamos la máquina
+        btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+        
+        cerrarModalOrden(); // Cerramos modal para ver el dashboard trabajar
+        
         const statusDiv = document.getElementById('status_scripting');
+        const taskTitle = document.getElementById('task_title');
         const taskDesc = document.getElementById('task_desc');
         const taskBadge = document.getElementById('task_badge');
         
-        // UI Updates
-        btn.innerHTML = "PROCESANDO EN BACKEND...";
-        btn.disabled = true;
-        btn.classList.replace('bg-emerald-600', 'bg-slate-600');
-        
+        // Setup Visual
         statusDiv.classList.remove('hidden');
-        taskDesc.innerText = "Operando en Fase 1 y 2. Compilando guion de La Viuda y estructurando empaquetado...";
+        taskTitle.innerText = `${marca} - ${formato}`;
+        taskBadge.innerText = "FASES 1-3 EN CURSO...";
+        taskBadge.className = "text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono";
+        taskDesc.innerText = "Extrayendo ADN, compilando guion y renderizando Audio Neuronal.";
         
         try {
-            // Gatillo del Orquestador
+            // Payload enviado al Backend (Orquestador)
+            const payload = {
+                marca: marca, 
+                formato: formato, // <-- Ahora el backend sabe si es 16:9 o 9:16
+                premisa: premisa
+            };
+
             const res = await fetch('/api/bot/lanzar_orden', { 
                 method: 'POST', 
                 headers: {'Content-Type': 'application/json'}, 
-                body: JSON.stringify({
-                    marca: 'La Viuda', 
-                    premisa: 'Genera una premisa de suspenso psicológico sobre un búnker subterráneo militar encontrado bajo un vecindario moderno. Aplica vacío de información extremo.'
-                }) 
+                body: JSON.stringify(payload) 
             });
             
             const data = await res.json();
             
-            // UI Updates post-ejecución
             if(data.status === "PENDING_REVIEW") {
                 taskBadge.innerText = "COMPLETADO";
                 taskBadge.classList.replace('bg-blue-900', 'bg-emerald-900');
                 taskBadge.classList.replace('text-blue-300', 'text-emerald-300');
-                taskDesc.innerText = "Fase 1 y 2 ejecutadas con éxito. Guion y empaquetado en memoria. Pausa requerida para Audio.";
+                taskDesc.innerText = `Fases 1, 2 y 3 ejecutadas. Audio .mp3 listo. Geometría ${formato} fijada.`;
                 
-                // Inyectar en la cola de revisión visual
+                // Inyectar en la Cola de Revisión
                 document.getElementById('queue_count').innerText = "1 REQUIERE APROBACIÓN";
                 document.getElementById('review_queue').innerHTML = `
-                    <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative">
+                    <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative mt-2 shadow-lg">
                         <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <span class="text-white text-sm font-bold block">La Viuda - ${data.tarea_id}</span>
-                                <span class="text-xs text-slate-400 block mt-0.5">Fase 2 Terminada (Texto/Empaquetado)</span>
+                                <span class="text-white text-sm font-bold block">${data.marca} - ${formato}</span>
+                                <span class="text-[10px] text-slate-400 block mt-0.5">ORDEN: ${data.tarea_id}</span>
                             </div>
                         </div>
-                        <div class="mt-2 text-[10px] text-slate-500 max-h-16 overflow-hidden">${data.empaquetado.substring(0, 100)}...</div>
+                        <div class="bg-black/30 p-2 rounded mt-2 border border-slate-800">
+                            <span class="text-[9px] text-slate-500 uppercase tracking-widest font-bold block mb-1">Archivo de Audio (Fase 3):</span>
+                            <span class="text-[10px] text-purple-400 font-mono break-all">${data.ruta_audio || 'audio_generado.mp3'}</span>
+                        </div>
                         <div class="flex space-x-2 mt-4">
-                            <button class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded text-[10px] font-bold tracking-widest transition-colors">ENVIAR A AUDIO (FASE 3)</button>
+                            <button class="flex-1 bg-amber-600 hover:bg-amber-500 text-white py-2 rounded text-[10px] font-bold tracking-widest transition-colors shadow-lg">ENVIAR A FFMPEG (FASE 4)</button>
                         </div>
                     </div>
                 `;
             } else {
-                taskBadge.innerText = "ERROR API";
-                taskBadge.classList.replace('bg-blue-900', 'bg-red-900');
-                taskBadge.classList.replace('text-blue-300', 'text-red-300');
-                taskDesc.innerText = "Google Gemini rechazó la conexión. Probable cuota agotada. Verifica Bóveda.";
+                throw new Error("Error devuelto por la API de Google o Microsoft.");
             }
             
             if(window.actualizarTelemetria) window.actualizarTelemetria(); 
             
         } catch (error) {
-            taskDesc.innerText = "Fallo de conexión crítica con el servidor. Revisa logs.";
+            taskBadge.innerText = "ERROR API";
+            taskBadge.classList.replace('bg-blue-900', 'bg-red-900');
+            taskBadge.classList.replace('text-blue-300', 'text-red-300');
+            taskDesc.innerText = "El motor se detuvo por falta de cuota en Google Gemini o fallo de red.";
         } finally { 
-            btn.innerHTML = "+ NUEVA ORDEN DE PRODUCCIÓN"; 
+            btn.innerHTML = "INYECTAR A LA LÍNEA DE ENSAMBLAJE"; 
             btn.disabled = false; 
-            btn.classList.replace('bg-slate-600', 'bg-emerald-600');
         }
     }
 </script>
