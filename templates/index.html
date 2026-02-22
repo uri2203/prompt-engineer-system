@@ -1,88 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt System | Pro</title>
+    <meta charset="UTF-8"><title>AI Master System | Corporate Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass-panel { background: rgba(30, 41, 59, 0.8); border: 1px solid #334155; }
-        .active-tab { background-color: #2563eb; color: white; border-color: #3b82f6; }
-        .inactive-tab { background-color: #1e293b; color: #94a3b8; border-color: #334155; }
-        textarea, input, select { background-color: #0f172a; border: 1px solid #334155; color: #e2e8f0; }
+        body { background-color: #0B1120; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .sidebar { background-color: #0F1523; border-right: 1px solid #1e293b; }
+        .active-tab { border: 2px solid #3b82f6; background: rgba(59,130,246,0.1); border-radius: 8px; }
+        input, select, textarea { background-color: #0B1120; border: 1px solid #334155; border-radius: 6px; color: #e2e8f0; outline: none; }
+        .label-red { color: #f43f5e; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
     </style>
 </head>
-<body class="min-h-screen flex h-screen overflow-hidden">
-
-    <aside class="w-72 glass-panel border-r flex flex-col p-4 shadow-xl z-10">
-        <div class="mb-8 mt-2 px-2 flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold text-blue-400">AI Prompt System</h1>
-                <p class="text-[10px] text-slate-500 uppercase font-semibold">Arquitectura Modular</p>
-            </div>
-            <a href="/logout" class="text-[10px] bg-red-900/30 text-red-400 px-2 py-1 rounded hover:bg-red-800/50">SALIR</a>
-        </div>
-        
-        <nav class="flex-1 space-y-3">
-            <button onclick="switchTab('mod_1_universal')" id="btn_mod_1_universal" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium active-tab">Mod 1: Universal</button>
-            <button onclick="switchTab('mod_2_guiones')" id="btn_mod_2_guiones" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium inactive-tab">Mod 2: Guiones</button>
-            <button onclick="switchTab('mod_3_hooks')" id="btn_mod_3_hooks" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium inactive-tab">Mod 3: Micro-Hooks</button>
-            <button onclick="switchTab('mod_4_empaquetado')" id="btn_mod_4_empaquetado" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium inactive-tab">Mod 4: Metadatos</button>
-            <button onclick="switchTab('mod_5_ugc_ventas')" id="btn_mod_5_ugc_ventas" class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium inactive-tab">Mod 5: UGC & Ventas</button>
+<body class="h-screen flex overflow-hidden">
+    <aside class="w-[280px] sidebar flex flex-col p-5">
+        <h1 class="text-xl font-bold text-[#3b82f6] mb-8 tracking-tight">AI Master System</h1>
+        <nav class="flex-1 space-y-2">
+            <button onclick="switchTab('mod_0')" id="btn_mod_0" class="w-full text-left px-4 py-3 text-sm active-tab">Mod 0: ADN JSON</button>
+            <button onclick="switchTab('mod_2')" id="btn_mod_2" class="w-full text-left px-4 py-3 text-sm">Mod 2: Guiones</button>
+            <button onclick="switchTab('mod_5')" id="btn_mod_5" class="w-full text-left px-4 py-3 text-sm">Mod 5: Ventas UGC</button>
         </nav>
-
-        <div id="admin_section" class="mt-6 p-4 bg-slate-900/80 rounded-lg border border-blue-900/50 hidden">
-            <p class="text-[10px] text-blue-400 font-bold uppercase mb-2">Registrar Colaborador</p>
-            <input type="text" id="new_user" placeholder="Usuario" class="w-full p-2 mb-2 rounded bg-slate-950 text-xs text-white">
-            <input type="password" id="new_pass" placeholder="Password" class="w-full p-2 mb-2 rounded bg-slate-950 text-xs text-white">
-            <button onclick="registrarUsuario()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold py-2 rounded">CREAR ACCESO</button>
-        </div>
     </aside>
 
-    <main class="flex-1 flex overflow-hidden bg-[#0B1120] p-8 gap-8">
-        <div class="w-1/2 flex flex-col gap-6 overflow-y-auto pr-4" id="forms_container">
-            <div id="form_mod_1_universal" class="form-module block">
-                <h2 class="text-2xl font-semibold mb-6">Traductor Universal</h2>
-                <input type="text" id="m1_rol" class="w-full p-3 rounded-lg mb-4" placeholder="Rol del experto">
-                <textarea id="m1_peticion" class="w-full h-32 p-3 rounded-lg" placeholder="¿Qué necesitas?"></textarea>
+    <main class="flex-1 flex p-8 gap-6 bg-[#0B1120]">
+        <div class="w-[55%] flex flex-col gap-6 overflow-y-auto">
+            <div id="ui_mod_0" class="module-content block">
+                <h2 class="text-2xl font-bold mb-4">Centro de ADN</h2>
+                <select id="m0_selector" onchange="cargarADN()" class="w-full p-2 mb-4"><option>La Viuda</option><option>Monkygraff</option></select>
+                <textarea id="m0_reglas" class="w-full h-40 p-2 mb-4" placeholder="Reglas inquebrantables..."></textarea>
+                <button onclick="guardarADN()" class="w-full bg-emerald-600 py-3 rounded font-bold">GUARDAR ADN</button>
             </div>
-            <button id="btn_ejecutar" onclick="procesarPeticion()" class="w-full bg-blue-600 py-4 rounded-xl font-bold mt-4">EJECUTAR</button>
+            <div id="ui_mod_5" class="module-content hidden">
+                <h2 class="text-2xl font-bold mb-4">Motor UGC y Ventas</h2>
+                <label class="label-red">Gatillo Psicológico</label>
+                <select id="m5_gatillo" class="w-full p-2 mb-4"><option value="FOMO">FOMO</option><option value="Autoridad">Autoridad</option></select>
+                <button onclick="ejecutar()" class="w-full bg-blue-600 py-3 rounded font-bold">COMPILAR Y EJECUTAR</button>
+            </div>
         </div>
-
-        <div class="w-1/2 flex flex-col glass-panel rounded-xl p-6">
-            <h3 class="text-xs font-bold text-emerald-400 uppercase mb-4">Resultado de IA</h3>
-            <textarea id="ai_output" class="flex-1 w-full bg-[#0a0f18] p-6 text-emerald-300 font-mono text-sm resize-none" readonly></textarea>
-        </div>
+        <textarea id="output" class="w-[45%] bg-[#0F1523] p-6 text-slate-300 font-mono text-sm border border-slate-800 rounded-xl" readonly></textarea>
     </main>
 
     <script>
-        // Lógica para mostrar panel de admin
-        const isAdmin = {{ 'true' if is_admin else 'false' }};
-        if(isAdmin) document.getElementById('admin_section').classList.remove('hidden');
-
-        let moduloActivo = 'mod_1_universal';
-
-        async function registrarUsuario() {
-            const user = document.getElementById('new_user').value;
-            const pass = document.getElementById('new_pass').value;
-            const res = await fetch('/api/registrar', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({username: user, password: pass})
-            });
-            const data = await res.json();
-            alert(data.message || data.error);
+        async function cargarADN() {
+            const res = await fetch('/api/get_adn'); const adn = await res.json();
+            const marca = document.getElementById('m0_selector').value;
+            document.getElementById('m0_reglas').value = adn[marca].reglas;
         }
-
-        async function procesarPeticion() {
-            // Lógica de fetch a /api/ejecutar idéntica a la anterior
-        }
-
         function switchTab(id) {
-            moduloActivo = id;
-            // Lógica de pestañas idéntica a la anterior
+            document.querySelectorAll('.module-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('ui_' + id).classList.remove('hidden');
         }
+        window.onload = cargarADN;
     </script>
-</body>
-</html>
+</body></html>
