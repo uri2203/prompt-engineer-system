@@ -1,167 +1,89 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="flex-1 p-8 bg-[#0B1120] overflow-y-auto scrollbar-hide">
-    <header class="mb-8 border-b border-slate-800 pb-4 flex justify-between items-end">
-        <div>
-            <h2 class="text-3xl font-black text-slate-200 tracking-tighter flex items-center">
-                <svg class="w-8 h-8 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                Bóveda de Configuración
-            </h2>
-            <p class="text-slate-500 text-[10px] font-mono uppercase tracking-widest mt-2">Gestión de credenciales, rotación de API Keys y accesos OAuth para el clúster de producción Pinpinela.</p>
-        </div>
-        <button id="btn_guardar" onclick="guardarConfiguracion()" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded text-[10px] font-black transition-all shadow-lg shadow-blue-900/40 uppercase tracking-widest border border-blue-500/50 flex items-center">
-            Guardar Toda La Matriz
-        </button>
+<div class="flex-1 p-8 overflow-y-auto scrollbar-hide bg-[#0B1120]">
+    <header class="mb-8 border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-black text-white tracking-tighter uppercase">Bóveda de Configuración</h2>
+        <p class="label-blue mt-1">Gestión de Credenciales y Nodos API</p>
     </header>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg">
-            <h3 class="text-blue-400 text-xs font-black uppercase tracking-widest mb-6 flex items-center border-b border-slate-800 pb-3">
-                <span class="mr-2">🔑</span> MATRIZ DE INYECCIÓN: GOOGLE GEMINI (TANQUES)
-            </h3>
-            <div class="space-y-4">
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 1 (MASTER / RENDER.COM ENV)</label>
-                    <input type="password" id="gemini_master" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-emerald-500 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 2 (FAILOVER 1)</label>
-                    <input type="password" id="gemini_failover1" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 3 (FAILOVER 2)</label>
-                    <input type="password" id="gemini_failover2" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 4 (FAILOVER 3)</label>
-                    <input type="password" id="gemini_failover3" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 5 (RESERVA)</label>
-                    <input type="password" id="gemini_reserva" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
-                </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-[#0F1523] p-6 rounded-xl border border-slate-800 shadow-2xl">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Tanques API: Gemini (IA Engine)</h3>
+                <span class="text-[9px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded">Failover Activo</span>
             </div>
-        </div>
-
-        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg h-fit">
-            <h3 class="text-purple-400 text-xs font-black uppercase tracking-widest mb-6 flex items-center border-b border-slate-800 pb-3">
-                <span class="mr-2">🎙️</span> MATRIZ DE AUDIO: API DE SÍNTESIS
-            </h3>
-            <div class="space-y-4">
+            
+            <p class="text-xs text-slate-500 mb-4">Ingrese hasta 5 API Keys. El sistema rotará automáticamente si una llave agota su cuota de procesamiento.</p>
+            
+            <form id="form_boveda" class="space-y-4">
                 <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">ELEVENLABS / MASTER KEY</label>
-                    <input type="password" id="elevenlabs_master" placeholder="sk_..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-purple-400 outline-none text-sm focus:border-purple-500 transition-colors font-mono">
+                    <label class="label-blue block mb-2">Llave Principal (Tanque 1)</label>
+                    <input type="password" id="key_1" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
                 </div>
-                <div class="mt-4 p-4 border border-slate-800 bg-[#0B1120]/50 rounded text-[9px] font-mono text-slate-500 leading-relaxed uppercase tracking-widest">
-                    ADVERTENCIA DEL SISTEMA: Esta cuota es de pago (Pay-as-you-go). El Bot Pinpinela solo consumirá tokens de audio en la Fase 3 del renderizado. Asegurar saldo positivo para evitar interrupciones asíncronas.
+                <div>
+                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 2)</label>
+                    <input type="password" id="key_2" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
                 </div>
-            </div>
+                <div>
+                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 3)</label>
+                    <input type="password" id="key_3" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
+                </div>
+                <div>
+                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 4)</label>
+                    <input type="password" id="key_4" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
+                </div>
+                <div>
+                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 5)</label>
+                    <input type="password" id="key_5" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
+                </div>
+                
+                <button type="button" onclick="guardarBoveda()" id="btn_guardar_boveda" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 rounded shadow-lg shadow-emerald-900/40 uppercase text-xs tracking-widest transition-all mt-4">
+                    Sincronizar Bóveda
+                </button>
+            </form>
         </div>
     </div>
-
-    <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg mb-8">
-        <h3 class="text-emerald-500 text-xs font-black uppercase tracking-widest mb-6 flex items-center border-b border-slate-800 pb-3">
-            <span class="mr-2">🔗</span> NODOS DE DISTRIBUCIÓN AUTOMÁTICA (OAUTH2)
-        </h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="space-y-4">
-                <h4 class="text-red-500 text-[10px] font-bold uppercase tracking-widest border-b border-slate-800/50 pb-2 mb-4">YouTube API V3</h4>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">Client ID</label>
-                    <input type="password" id="youtube_client_id" placeholder="ID de cliente OAuth..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-red-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">Client Secret</label>
-                    <input type="password" id="youtube_client_secret" placeholder="Secreto de cliente OAuth..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-red-500 transition-colors font-mono">
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="text-cyan-400 text-[10px] font-bold uppercase tracking-widest border-b border-slate-800/50 pb-2 mb-4">TikTok Graph API</h4>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">Client Key</label>
-                    <input type="password" id="tiktok_client_key" placeholder="Key de cliente..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-cyan-500 transition-colors font-mono">
-                </div>
-                <div>
-                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">Client Secret</label>
-                    <input type="password" id="tiktok_client_secret" placeholder="Secreto de cliente..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-cyan-500 transition-colors font-mono">
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div id="toast_notification" class="fixed bottom-5 right-5 bg-emerald-600 border border-emerald-400 text-white px-6 py-3 rounded shadow-[0_0_20px_rgba(5,150,105,0.4)] font-bold text-[10px] uppercase tracking-widest transform translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
-    Bóveda Actualizada Exitosamente
 </div>
 
 <script>
-    async function cargarConfiguracion() {
-        try {
-            const res = await fetch('/api/get_config');
-            const data = await res.json();
-            
-            // APIs Core
-            document.getElementById('gemini_master').value = data.gemini_master || '';
-            document.getElementById('gemini_failover1').value = data.gemini_failover1 || '';
-            document.getElementById('gemini_failover2').value = data.gemini_failover2 || '';
-            document.getElementById('gemini_failover3').value = data.gemini_failover3 || '';
-            document.getElementById('gemini_reserva').value = data.gemini_reserva || '';
-            document.getElementById('elevenlabs_master').value = data.elevenlabs_master || '';
-            
-            // Redes Sociales
-            document.getElementById('youtube_client_id').value = data.youtube_client_id || '';
-            document.getElementById('youtube_client_secret').value = data.youtube_client_secret || '';
-            document.getElementById('tiktok_client_key').value = data.tiktok_client_key || '';
-            document.getElementById('tiktok_client_secret').value = data.tiktok_client_secret || '';
-        } catch (e) {
-            console.error("Error cargando bóveda:", e);
-        }
-    }
-
-    async function guardarConfiguracion() {
-        const btn = document.getElementById('btn_guardar');
-        const originalText = btn.innerText;
-        btn.innerText = "GUARDANDO MATRIZ...";
+async function cargarBoveda() {
+    try {
+        const res = await fetch('/api/get_boveda');
+        const data = await res.json();
+        const llaves = data.gemini_keys || [];
         
-        const payload = {
-            gemini_master: document.getElementById('gemini_master').value,
-            gemini_failover1: document.getElementById('gemini_failover1').value,
-            gemini_failover2: document.getElementById('gemini_failover2').value,
-            gemini_failover3: document.getElementById('gemini_failover3').value,
-            gemini_reserva: document.getElementById('gemini_reserva').value,
-            elevenlabs_master: document.getElementById('elevenlabs_master').value,
-            youtube_client_id: document.getElementById('youtube_client_id').value,
-            youtube_client_secret: document.getElementById('youtube_client_secret').value,
-            tiktok_client_key: document.getElementById('tiktok_client_key').value,
-            tiktok_client_secret: document.getElementById('tiktok_client_secret').value
-        };
-
-        try {
-            const response = await fetch('/api/save_config', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(payload)
-            });
-            
-            if(response.ok) {
-                const toast = document.getElementById('toast_notification');
-                toast.classList.remove('translate-y-20', 'opacity-0');
-                setTimeout(() => {
-                    toast.classList.add('translate-y-20', 'opacity-0');
-                }, 3000);
-            } else {
-                alert("Error devuelto por el servidor de Bóveda.");
-            }
-        } catch (e) {
-            alert("Error crítico de red al contactar la Bóveda.");
-        } finally {
-            btn.innerText = originalText;
+        for(let i = 0; i < 5; i++) {
+            if(llaves[i]) document.getElementById(`key_${i+1}`).value = llaves[i];
         }
+    } catch(e) { console.error("Error al cargar bóveda"); }
+}
+
+async function guardarBoveda() {
+    const btn = document.getElementById('btn_guardar_boveda');
+    let llaves_activas = [];
+    
+    for(let i = 1; i <= 5; i++) {
+        const val = document.getElementById(`key_${i}`).value.trim();
+        if(val) llaves_activas.push(val);
     }
 
-    window.onload = cargarConfiguracion;
+    btn.innerHTML = "SINCRONIZANDO...";
+    btn.classList.add('bg-slate-600');
+    
+    const res = await fetch('/api/save_boveda', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ gemini_keys: llaves_activas })
+    });
+
+    if(res.ok) {
+        btn.innerHTML = "BÓVEDA SINCRONIZADA";
+        btn.classList.remove('bg-slate-600');
+        btn.classList.add('bg-emerald-600');
+        setTimeout(() => { btn.innerHTML = "Sincronizar Bóveda"; }, 2000);
+    }
+}
+
+window.onload = cargarBoveda;
 </script>
 {% endblock %}
