@@ -6,67 +6,78 @@
     <title>Pinpinela - Master Control</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #070B14; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="h-screen flex text-slate-200 overflow-hidden">
+<body class="h-screen w-screen flex bg-[#070B14] text-slate-200 overflow-hidden">
 
-    <aside class="w-20 lg:w-64 bg-[#0F1523] border-r border-slate-800 flex flex-col justify-between transition-all duration-300 z-20">
+    <aside class="w-64 flex-shrink-0 bg-[#0B1120] border-r border-slate-800 flex flex-col justify-between z-20 shadow-[4px_0_24px_rgba(0,0,0,0.5)]">
         <div>
-            <div class="h-20 flex items-center justify-center lg:justify-start lg:px-6 border-b border-slate-800">
-                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-black text-white shadow-lg shadow-blue-900/50">
+            <div class="h-20 flex items-center px-6 border-b border-slate-800/80 bg-[#070b14]/50">
+                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-black text-white shadow-lg shadow-blue-900/40 border border-blue-400/20">
                     P
                 </div>
-                <span class="hidden lg:block ml-3 font-black tracking-tighter text-lg uppercase">Pinpinela</span>
+                <span class="ml-4 font-black tracking-tighter text-xl uppercase text-slate-100">Pinpinela</span>
             </div>
             
-            <nav class="p-4 space-y-2">
-                <a href="{{ url_for('index') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'workspace' %}bg-slate-800/80 text-blue-400{% endif %}">
-                    <span class="text-xl">⌂</span>
-                    <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Workspace</span>
+            <nav class="p-4 space-y-1 mt-2">
+                <a href="{{ url_for('index') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'workspace' %}bg-blue-900/20 border-blue-500 text-blue-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                    <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Workspace</span>
                 </a>
-                <a href="{{ url_for('bot') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'bot' %}bg-slate-800/80 text-blue-400{% endif %}">
-                    <span class="text-xl">⚡</span>
-                    <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Orquestador</span>
+
+                <a href="{{ url_for('bot') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'bot' %}bg-blue-900/20 border-blue-500 text-blue-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                    <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Orquestador</span>
                 </a>
-                <a href="{{ url_for('adn') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'adn' %}bg-slate-800/80 text-blue-400{% endif %}">
-                    <span class="text-xl">🧬</span>
-                    <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Matriz ADN</span>
+
+                <a href="{{ url_for('adn') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'adn' %}bg-blue-900/20 border-blue-500 text-blue-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                    <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Matriz ADN</span>
                 </a>
                 
-                <div class="pt-4 mt-4 border-t border-slate-800/50">
-                    <p class="hidden lg:block text-[8px] font-mono uppercase tracking-widest text-slate-600 mb-2 px-3">Administración</p>
+                <div class="pt-6 mt-4 border-t border-slate-800/80">
+                    <p class="text-[9px] font-mono uppercase tracking-widest text-slate-600 mb-3 px-4">Administración</p>
                     
-                    <a href="{{ url_for('usuarios') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'usuarios' %}bg-slate-800/80 text-blue-400{% endif %}">
-                        <span class="text-xl">👤</span>
-                        <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Usuarios</span>
+                    <a href="{{ url_for('usuarios') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'usuarios' %}bg-blue-900/20 border-blue-500 text-blue-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                        <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4a4 4 0 100 8 4 4 0 000-8zM2 20a10 10 0 0120 0H2z"></path></svg>
+                        <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Usuarios</span>
                     </a>
-                    <a href="{{ url_for('configuracion') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'configuracion' %}bg-slate-800/80 text-blue-400{% endif %}">
-                        <span class="text-xl">⚙️</span>
-                        <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Bóveda API</span>
+
+                    <a href="{{ url_for('configuracion') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'configuracion' %}bg-blue-900/20 border-blue-500 text-blue-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                        <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Bóveda API</span>
                     </a>
-                    <a href="{{ url_for('mantenimiento') }}" class="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-white group {% if active_page == 'mantenimiento' %}bg-slate-800/80 text-emerald-400{% endif %}">
-                        <span class="text-xl">📟</span>
-                        <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Auditoría</span>
+
+                    <a href="{{ url_for('mantenimiento') }}" class="flex items-center px-4 py-3 rounded-md transition-all group border-l-2 {% if active_page == 'mantenimiento' %}bg-emerald-900/20 border-emerald-500 text-emerald-400{% else %}border-transparent text-slate-400 hover:bg-slate-800/40 hover:text-slate-200{% endif %}">
+                        <svg class="w-5 h-5 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Auditoría</span>
                     </a>
                 </div>
             </nav>
         </div>
 
-        <div class="p-4 border-t border-slate-800">
-            <a href="{{ url_for('logout') }}" class="flex items-center p-3 rounded-lg hover:bg-red-900/30 transition-colors text-slate-500 hover:text-red-400 group">
-                <span class="text-xl">🚪</span>
-                <span class="hidden lg:block ml-3 text-[10px] font-bold uppercase tracking-widest">Desconectar</span>
+        <div class="p-6 border-t border-slate-800/80 bg-[#070b14]/30">
+            <a href="{{ url_for('logout') }}" class="flex items-center px-4 py-3 rounded-md transition-all group text-slate-500 hover:bg-red-900/20 hover:text-red-400 border-l-2 border-transparent hover:border-red-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                <span class="ml-3 text-[10px] font-bold uppercase tracking-widest">Desconectar</span>
             </a>
-            <div class="hidden lg:flex items-center mt-4 px-3">
-                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-2 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                <span class="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Sistema Operativo</span>
+            
+            <div class="mt-6 flex items-center px-4">
+                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-3 shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
+                <div class="flex flex-col">
+                    <span class="text-[8px] font-mono text-slate-400 uppercase tracking-widest">Núcleo Activo</span>
+                    <span class="text-[8px] font-bold text-slate-600 uppercase">V 2.0.1</span>
+                </div>
             </div>
         </div>
     </aside>
 
-    {% block content %}{% endblock %}
+    <main class="flex-1 flex h-full overflow-hidden bg-[#070B14]">
+        {% block content %}{% endblock %}
+    </main>
 
 </body>
 </html>
