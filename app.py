@@ -19,58 +19,82 @@ config_db = ConfigManager()
 ia_motor = AIEngine()
 bot_pinpinela = PinpinelaOrchestrator()
 
+# --- CORTAFUEGOS DE AUTENTICACIÓN ---
+@app.before_request
+def require_login():
+    rutas_libres = ['login', 'static']
+    if request.endpoint not in rutas_libres and 'usuario' not in session:
+        return redirect(url_for('login'))
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        
+        usuarios_actuales = user_db.listar_usuarios()
+        
+        # Validación: ID existe en BD y Clave Maestra coincide
+        if username in usuarios_actuales and password == "pinpinela2026":
+            session['usuario'] = username
+            session['rol'] = usuarios_actuales[username].get('rol', 'Desconocido')
+            logger.registrar("SEGURIDAD", f"Enlace seguro establecido por: {username}", "SUCCESS")
+            return redirect(url_for('index'))
+        else:
+            error = "CREDENCIALES DENEGADAS"
+            logger.registrar("SEGURIDAD", f"Intento de vulneración con ID: {username}", "WARNING")
+            
+    return render_template('login.html', error=error)
+
+@app.route('/logout')
+def logout():
+    usuario = session.get('usuario', 'Desconocido')
+    session.clear()
+    logger.registrar("SEGURIDAD", f"Enlace cerrado por: {usuario}", "INFO")
+    return redirect(url_for('login'))
+
 # --- RUTAS DE NAVEGACIÓN ---
 @app.route('/')
-def index(): 
-    return render_template('workspace.html', active_page='workspace')
+def index(): return render_template('workspace.html', active_page='workspace')
 
 @app.route('/adn')
-def adn(): 
-    return render_template('adn.html', active_page='adn')
+def adn(): return render_template('adn.html', active_page='adn')
 
 @app.route('/bot')
-def bot(): 
-    return render_template('bot_dashboard.html', active_page='bot')
+def bot(): return render_template('bot_dashboard.html', active_page='bot')
 
 @app.route('/usuarios')
-def usuarios(): 
-    return render_template('usuarios.html', active_page='usuarios')
+def usuarios(): return render_template('usuarios.html', active_page='usuarios')
 
 @app.route('/mantenimiento')
-def mantenimiento(): 
-    return render_template('mantenimiento.html', active_page='mantenimiento')
+def mantenimiento(): return render_template('mantenimiento.html', active_page='mantenimiento')
 
 @app.route('/configuracion')
-def configuracion(): 
-    return render_template('configuracion.html', active_page='configuracion')
+def configuracion(): return render_template('configuracion.html', active_page='configuracion')
 
-# --- API DE DATOS (ESTRUCTURA DE CONTROL) ---
+# --- API DE DATOS ---
 @app.route('/api/get_usuarios')
-def api_get_usuarios():
-    return jsonify(user_db.listar_usuarios())
+def api_get_usuarios(): return jsonify(user_db.listar_usuarios())
 
 @app.route('/api/crear_usuario', methods=['POST'])
 def api_crear_usuario():
     try:
         data = request.json
         user_db.agregar_usuario(data['username'], data['rol'])
-        logger.registrar("SEGURIDAD", f"Nuevo usuario creado: {data['username']}", "SUCCESS")
+        logger.registrar("SEGURIDAD", f"Nuevo operador autorizado: {data['username']}", "SUCCESS")
         return jsonify({"status": "success"})
     except Exception as e:
         return jsonify({"status": "error", "mensaje": str(e)}), 500
 
 @app.route('/api/get_adn')
-def api_get_adn():
-    return jsonify(adn_db.cargar_todo())
+def api_get_adn(): return jsonify(adn_db.cargar_todo())
 
 @app.route('/api/get_logs')
-def api_get_logs():
-    return jsonify({'logs': logger.leer_ultimos()})
+def api_get_logs(): return jsonify({'logs': logger.leer_ultimos()})
 
-# Rutas de la Bóveda de Configuración
 @app.route('/api/get_config')
-def api_get_config():
-    return jsonify(config_db.leer_configuracion())
+def api_get_config(): return jsonify(config_db.leer_configuracion())
 
 @app.route('/api/save_config', methods=['POST'])
 def api_save_config():
