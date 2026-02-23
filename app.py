@@ -1,6 +1,6 @@
 import os
 import time
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, jsonify, session
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
 from modulos.auditoria import AuditoriaSystem
@@ -10,14 +10,14 @@ from modulos.bot_orquestador import PinpinelaOrchestrator
 app = Flask(__name__)
 app.secret_key = "admin_secret_1978_secure"
 
-# INICIALIZACIÓN DE MOTORES
+# INICIALIZACIÓN PROTEGIDA
 logger = AuditoriaSystem()
 user_db = UsuarioManager()
 adn_db = ADNManager()
 ia_motor = AIEngine()
 bot_pinpinela = PinpinelaOrchestrator()
 
-# --- RUTAS DE NAVEGACIÓN (Restauración de Menú) ---
+# --- RUTAS DE NAVEGACIÓN ---
 @app.route('/')
 def index(): return render_template('workspace.html', active_page='workspace')
 
@@ -36,7 +36,8 @@ def mantenimiento(): return render_template('mantenimiento.html', active_page='m
 @app.route('/configuracion')
 def configuracion(): return render_template('configuracion.html', active_page='configuracion')
 
-# --- API DE DATOS (Para llenar las tablas vacías) ---
+# --- API DE DATOS (EL PEGAMENTO) ---
+# Estas rutas son las que llenan tus tablas. Si no están aquí, las tablas salen vacías.
 @app.route('/api/get_usuarios')
 def api_get_usuarios():
     return jsonify(user_db.listar_usuarios())
@@ -48,6 +49,13 @@ def api_get_adn():
 @app.route('/api/get_logs')
 def api_get_logs():
     return jsonify({'logs': logger.leer_ultimos()})
+
+@app.route('/api/bot/lanzar_orden', methods=['POST'])
+def bot_lanzar_orden():
+    data = request.json
+    tarea_id = f"ORD-{int(time.time())}"
+    res = bot_pinpinela.procesar_orden(tarea_id, data.get('marca'), data.get('premisa'), data.get('formato', '16:9'))
+    return jsonify(res)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
