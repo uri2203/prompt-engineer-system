@@ -21,6 +21,14 @@ class AIEngine:
         ESTRUCTURA OBLIGATORIA DEL GUION (4 FASES):
         - FASE 1 (REALIDAD) | FASE 2 (DISONANCIA) | FASE 3 (INMERSIÓN) | FASE 4 (PERSISTENCIA)
 
+        REGLA DE AUTOMATIZACIÓN (CRÍTICA PARA EL PIPELINE):
+        Tu respuesta DEBE iniciar estrictamente con un prompt visual en inglés para un motor de renderizado, y luego el guion en español. Es OBLIGATORIO usar estas etiquetas exactas para que el sistema te pueda leer:
+        
+        [PROMPT VISUAL PARA IA]
+        (Escribe aquí un solo párrafo en inglés describiendo la escena estilo CCTV, 1920x1080)
+        [TEXTO DE LOCUCIÓN]
+        (Inicia aquí tu guion narrativo en español separando las 4 fases)
+
         DIRECTRICES VISUALES: 16:9 (1920x1080).
         """
 
