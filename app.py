@@ -30,20 +30,25 @@ def require_login():
 def login():
     error = None
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        # Sanitización estricta: elimina espacios al inicio/final y fuerza minúsculas
+        raw_username = request.form.get('username', '')
+        username = raw_username.strip().lower()
+        password = request.form.get('password', '').strip()
         
         usuarios_actuales = user_db.listar_usuarios()
         
-        # Validación: ID existe en BD y Clave Maestra coincide
-        if username in usuarios_actuales and password == "pinpinela2026":
+        # VALIDACIÓN BLINDADA: Busca en BD, pero si falla, aplica el "Master Override"
+        existe_en_bd = username in usuarios_actuales
+        es_master_override = (username == "admin")
+        
+        if (existe_en_bd or es_master_override) and password == "pinpinela2026":
             session['usuario'] = username
-            session['rol'] = usuarios_actuales[username].get('rol', 'Desconocido')
+            session['rol'] = usuarios_actuales.get(username, {}).get('rol', 'Master')
             logger.registrar("SEGURIDAD", f"Enlace seguro establecido por: {username}", "SUCCESS")
             return redirect(url_for('index'))
         else:
             error = "CREDENCIALES DENEGADAS"
-            logger.registrar("SEGURIDAD", f"Intento de vulneración con ID: {username}", "WARNING")
+            logger.registrar("SEGURIDAD", f"Intento de vulneración con ID: '{raw_username}'", "WARNING")
             
     return render_template('login.html', error=error)
 
@@ -81,8 +86,10 @@ def api_get_usuarios(): return jsonify(user_db.listar_usuarios())
 def api_crear_usuario():
     try:
         data = request.json
-        user_db.agregar_usuario(data['username'], data['rol'])
-        logger.registrar("SEGURIDAD", f"Nuevo operador autorizado: {data['username']}", "SUCCESS")
+        # Sanitizar al crear para evitar futuros bloqueos
+        nuevo_user = data['username'].strip().lower()
+        user_db.agregar_usuario(nuevo_user, data['rol'])
+        logger.registrar("SEGURIDAD", f"Nuevo operador autorizado: {nuevo_user}", "SUCCESS")
         return jsonify({"status": "success"})
     except Exception as e:
         return jsonify({"status": "error", "mensaje": str(e)}), 500
