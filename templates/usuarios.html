@@ -15,8 +15,7 @@
                 </tr>
             </thead>
             <tbody id="tabla_usuarios_body" class="divide-y divide-slate-800">
-                <tr><td colspan="3" class="p-10 text-center text-slate-500 font-mono animate-pulse">SOLICITANDO DATOS AL KERNEL...</td></tr>
-            </tbody>
+                </tbody>
         </table>
     </div>
 </div>
@@ -25,9 +24,8 @@
     async function cargarUsuarios() {
         const body = document.getElementById('tabla_usuarios_body');
         try {
-            const res = await fetch('/api/get_usuarios');
+            const res = await fetch('/api/get_usuarios'); // Llama a la nueva ruta en app.py
             const data = await res.json();
-            
             body.innerHTML = Object.keys(data).map(user => `
                 <tr class="hover:bg-slate-800/50 transition-colors">
                     <td class="px-6 py-4 font-bold text-white">${user}</td>
@@ -36,7 +34,7 @@
                 </tr>
             `).join('');
         } catch (e) {
-            body.innerHTML = '<tr><td colspan="3" class="p-10 text-center text-red-500 font-bold uppercase">ERROR: NODO DE DATOS NO RESPONDE</td></tr>';
+            body.innerHTML = '<tr><td colspan="3" class="p-10 text-center text-red-500">Error conectando con el servidor</td></tr>';
         }
     }
     window.onload = cargarUsuarios;
