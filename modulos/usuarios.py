@@ -3,7 +3,6 @@ import os
 
 class UsuarioManager:
     def __init__(self):
-        # Cambiamos la ruta a la raíz para evitar problemas de permisos
         self.db_path = os.path.join(os.getcwd(), "usuarios_db.json")
         if not os.path.exists(self.db_path):
             with open(self.db_path, "w") as f:
