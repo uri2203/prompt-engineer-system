@@ -7,40 +7,46 @@
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
         <div class="bg-[#0F1523] p-6 rounded-xl border border-slate-800 shadow-2xl">
             <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-2">
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Tanques API: Gemini (IA Engine)</h3>
                 <span class="text-[9px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded">Failover Activo</span>
             </div>
-            
-            <p class="text-xs text-slate-500 mb-4">Ingrese hasta 5 API Keys. El sistema rotará automáticamente si una llave agota su cuota de procesamiento.</p>
-            
-            <form id="form_boveda" class="space-y-4">
-                <div>
-                    <label class="label-blue block mb-2">Llave Principal (Tanque 1)</label>
-                    <input type="password" id="key_1" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
-                </div>
-                <div>
-                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 2)</label>
-                    <input type="password" id="key_2" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
-                </div>
-                <div>
-                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 3)</label>
-                    <input type="password" id="key_3" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
-                </div>
-                <div>
-                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 4)</label>
-                    <input type="password" id="key_4" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
-                </div>
-                <div>
-                    <label class="label-blue block mb-2">Llave de Respaldo (Tanque 5)</label>
-                    <input type="password" id="key_5" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none placeholder-slate-600" placeholder="AIzaSy...">
-                </div>
-                
-                <button type="button" onclick="guardarBoveda()" id="btn_guardar_boveda" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 rounded shadow-lg shadow-emerald-900/40 uppercase text-xs tracking-widest transition-all mt-4">
-                    Sincronizar Bóveda
-                </button>
+            <form id="form_gemini" class="space-y-4">
+                <div><label class="label-blue block mb-2">Llave Principal (Tanque 1)</label><input type="password" id="key_1" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none" placeholder="AIzaSy..."></div>
+                <div><label class="label-blue block mb-2">Respaldo (Tanque 2)</label><input type="password" id="key_2" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none"></div>
+                <div><label class="label-blue block mb-2">Respaldo (Tanque 3)</label><input type="password" id="key_3" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none"></div>
+                <div><label class="label-blue block mb-2">Respaldo (Tanque 4)</label><input type="password" id="key_4" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none"></div>
+                <div><label class="label-blue block mb-2">Respaldo (Tanque 5)</label><input type="password" id="key_5" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none"></div>
             </form>
+        </div>
+
+        <div class="flex flex-col gap-8">
+            <div class="bg-[#0F1523] p-6 rounded-xl border border-slate-800 shadow-2xl">
+                <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-2">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Integración de Voz y Redes</h3>
+                    <span class="text-[9px] font-mono text-blue-400 bg-blue-900/20 px-2 py-1 border border-blue-900 rounded">Módulos Activos</span>
+                </div>
+                <form id="form_redes" class="space-y-4">
+                    <div>
+                        <label class="label-blue block mb-2">API Key - IA de Voz (ElevenLabs/etc)</label>
+                        <input type="password" id="api_voice" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none" placeholder="Ingresa credencial de voz...">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-2">API Key - YouTube (Publicación)</label>
+                        <input type="password" id="api_youtube" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none" placeholder="Ingresa credencial de YouTube...">
+                    </div>
+                    <div>
+                        <label class="label-blue block mb-2">API Key - TikTok (Publicación)</label>
+                        <input type="password" id="api_tiktok" class="w-full p-3 text-sm font-mono bg-[#0B1120] border border-slate-700 rounded text-white focus:border-blue-500 outline-none" placeholder="Ingresa credencial de TikTok...">
+                    </div>
+                </form>
+            </div>
+
+            <button type="button" onclick="guardarBoveda()" id="btn_guardar_boveda" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded shadow-lg shadow-blue-900/40 uppercase text-xs tracking-widest transition-all">
+                Sincronizar Toda la Bóveda
+            </button>
         </div>
     </div>
 </div>
@@ -50,37 +56,50 @@ async function cargarBoveda() {
     try {
         const res = await fetch('/api/get_boveda');
         const data = await res.json();
-        const llaves = data.gemini_keys || [];
         
+        const llaves = data.gemini_keys || [];
         for(let i = 0; i < 5; i++) {
             if(llaves[i]) document.getElementById(`key_${i+1}`).value = llaves[i];
         }
+        
+        document.getElementById('api_voice').value = data.voice_api || "";
+        document.getElementById('api_youtube').value = data.youtube_api || "";
+        document.getElementById('api_tiktok').value = data.tiktok_api || "";
     } catch(e) { console.error("Error al cargar bóveda"); }
 }
 
 async function guardarBoveda() {
     const btn = document.getElementById('btn_guardar_boveda');
     let llaves_activas = [];
-    
     for(let i = 1; i <= 5; i++) {
         const val = document.getElementById(`key_${i}`).value.trim();
         if(val) llaves_activas.push(val);
     }
 
+    const payload = {
+        gemini_keys: llaves_activas,
+        voice_api: document.getElementById('api_voice').value,
+        youtube_api: document.getElementById('api_youtube').value,
+        tiktok_api: document.getElementById('api_tiktok').value
+    };
+
     btn.innerHTML = "SINCRONIZANDO...";
-    btn.classList.add('bg-slate-600');
+    btn.classList.add('bg-slate-600', 'cursor-not-allowed');
     
     const res = await fetch('/api/save_boveda', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ gemini_keys: llaves_activas })
+        body: JSON.stringify(payload)
     });
 
     if(res.ok) {
         btn.innerHTML = "BÓVEDA SINCRONIZADA";
-        btn.classList.remove('bg-slate-600');
+        btn.classList.remove('bg-slate-600', 'cursor-not-allowed');
         btn.classList.add('bg-emerald-600');
-        setTimeout(() => { btn.innerHTML = "Sincronizar Bóveda"; }, 2000);
+        setTimeout(() => { 
+            btn.innerHTML = "Sincronizar Toda la Bóveda"; 
+            btn.classList.remove('bg-emerald-600');
+        }, 2000);
     }
 }
 
