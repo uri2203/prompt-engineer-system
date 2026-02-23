@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 from functools import wraps
 from modulos.usuarios import UsuarioManager
 from modulos.boveda import BovedaManager
+from modulos.ai_engine import AIEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
@@ -10,6 +11,7 @@ app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 # Instancias de Bases de Datos Locales
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
+ai_engine = AIEngine() # El motor inicializado
 
 def login_required(f):
     @wraps(f)
@@ -66,7 +68,7 @@ def bot(): return render_template('bot_dashboard.html', active_page='bot')
 @app.route('/api/get_logs')
 @login_required
 def api_get_logs():
-    return jsonify({"logs": ["[SISTEMA] Motor Pinpinela en Standby.", "[SEGURIDAD] Bóveda de llaves inicializada."] })
+    return jsonify({"logs": ["[SISTEMA] Motor Pinpinela en Standby.", "[INFO] Enlace con Workspace establecido."] })
 
 @app.route('/api/get_usuarios')
 @login_required
@@ -83,7 +85,6 @@ def api_telemetria():
         "historial_tokens": [0, 0, 0, 0, 0]
     })
 
-# --- APIS DE BÓVEDA (NUEVO) ---
 @app.route('/api/get_boveda')
 @login_required
 def api_get_boveda():
@@ -95,7 +96,22 @@ def api_save_boveda():
     data = request.json
     llaves = data.get('gemini_keys', [])
     boveda_db.guardar_llaves(llaves)
-    return jsonify({"status": "success", "message": "Bóveda actualizada correctamente"})
+    return jsonify({"status": "success", "message": "Bóveda actualizada"})
+
+# --- API DEL MOTOR DE GUIONES (LA CONEXIÓN) ---
+@app.route('/api/generate_script', methods=['POST'])
+@login_required
+def api_generate_script():
+    data = request.json
+    marca = data.get('marca', 'La Viuda')
+    contexto = data.get('contexto', '')
+    peticion = data.get('peticion', '')
+    longitud = data.get('longitud', '4900 palabras') # Por defecto formato largo
+    
+    # Pasamos los datos al motor hermético
+    resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
+    
+    return jsonify({"status": "success", "data": resultado})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
