@@ -23,11 +23,22 @@ class BovedaManager:
         try:
             with open(self.db_path, "r", encoding="utf-8") as f:
                 datos = json.load(f)
-                # Persistencia: Si la Bóveda está vacía, intenta leer del Servidor
-                if not datos.get("gemini_keys"):
+                
+                # PERSISTENCIA TOTAL: Si la Bóveda está vacía (post-deploy), recupera de Render
+                if not datos.get("gemini_keys") or len(datos.get("gemini_keys")) == 0:
                     env_keys = os.environ.get("GEMINI_KEYS", "")
                     if env_keys:
                         datos["gemini_keys"] = [k.strip() for k in env_keys.split(",") if k.strip()]
+                
+                if not datos.get("voice_api"):
+                    datos["voice_api"] = os.environ.get("VOICE_API", "")
+                
+                if not datos.get("youtube_api"):
+                    datos["youtube_api"] = os.environ.get("YOUTUBE_API", "")
+                
+                if not datos.get("tiktok_api"):
+                    datos["tiktok_api"] = os.environ.get("TIKTOK_API", "")
+                    
                 return datos
         except Exception:
             return {"gemini_keys": [], "voice_api": "", "youtube_api": "", "tiktok_api": ""}
