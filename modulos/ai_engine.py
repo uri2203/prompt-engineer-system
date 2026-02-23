@@ -37,7 +37,7 @@ class AIEngine:
         llaves = self.boveda.obtener_llaves()
         
         if not llaves:
-            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda de Configuración."
+            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda ni en el Entorno."
 
         system_instruction = self.adn_la_viuda if marca.lower() == "la viuda" else ""
         if not system_instruction:
@@ -47,11 +47,9 @@ class AIEngine:
 
         errores_detallados = []
         
-        # SISTEMA DE FAILOVER CON SONDA DE DIAGNÓSTICO ABSOLUTA
         for index, key in enumerate(llaves):
             try:
                 genai.configure(api_key=key)
-                # Cambio a Identificador Absoluto para evitar Error 404 [cite: 2026-02-23]
                 model = genai.GenerativeModel(
                     model_name="models/gemini-1.5-flash-latest",
                     system_instruction=system_instruction
@@ -59,16 +57,15 @@ class AIEngine:
                 response = model.generate_content(prompt_final)
                 return response.text
             except Exception as e:
-                # Sonda: Intentar listar modelos si falla el principal para diagnóstico
                 try:
                     available_models = [m.name for m in genai.list_models()]
-                    model_list_str = f"Modelos disponibles en esta llave: {available_models}"
+                    model_list_str = f"Modelos disponibles: {available_models}"
                 except:
-                    model_list_str = "No se pudo listar modelos autorizados."
+                    model_list_str = "No se pudo listar modelos."
                 
                 mensaje_error = str(e).replace(key, f"[*LLAVE_TANQUE_{index+1}*]")
-                errores_detallados.append(f"> Fallo en Tanque {index + 1}: {mensaje_error}\n  {model_list_str}")
+                errores_detallados.append(f"> Tanque {index + 1}: {mensaje_error}\n  {model_list_str}")
                 continue
                 
         reporte_final = "\n".join(errores_detallados)
-        return f"ERROR CRÍTICO EN API DE GOOGLE:\nDiagnóstico técnico detallado:\n\n{reporte_final}"
+        return f"ERROR CRÍTICO EN API DE GOOGLE:\n\n{reporte_final}"
