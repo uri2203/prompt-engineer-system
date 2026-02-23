@@ -1,19 +1,20 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 from functools import wraps
+from modulos.usuarios import UsuarioManager
+from modulos.boveda import BovedaManager
 
 app = Flask(__name__)
-app.secret_key = 'admin_secret_1978_secure' 
+app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 
-# CREDENCIALES MAESTRAS
-MASTER_USER = "admin"
-MASTER_PASS = "admin1978"
+# Instancias de Bases de Datos Locales
+user_db = UsuarioManager()
+boveda_db = BovedaManager()
 
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'user' not in session:
-            # Si es una petición de API, devolvemos error 401 en lugar de redirección
             if request.path.startswith('/api/'):
                 return jsonify({"status": "error", "message": "No autorizado"}), 401
             return redirect(url_for('login'))
@@ -22,14 +23,17 @@ def login_required(f):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if 'user' in session: return redirect(url_for('index'))
     if request.method == 'POST':
-        username = request.form.get('username', '').strip()
-        password = request.form.get('password', '').strip()
-        if username == MASTER_USER and password == MASTER_PASS:
-            session['user'] = username
+        user = request.form.get('username', '').strip()
+        pw = request.form.get('password', '').strip()
+        usuarios = user_db.listar_usuarios()
+        if user in usuarios and usuarios[user]['pass'] == pw:
+            session.permanent = True
+            session['user'] = user
             return redirect(url_for('index'))
         else:
-            flash('Credenciales Incorrectas', 'error')
+            flash('ACCESO DENEGADO', 'error')
     return render_template('login.html')
 
 @app.route('/logout')
@@ -41,10 +45,6 @@ def logout():
 @app.route('/')
 @login_required
 def index(): return render_template('workspace.html', active_page='workspace')
-
-@app.route('/adn')
-@login_required
-def adn(): return render_template('adn.html', active_page='adn')
 
 @app.route('/usuarios')
 @login_required
@@ -62,29 +62,40 @@ def mantenimiento(): return render_template('mantenimiento.html', active_page='l
 @login_required
 def bot(): return render_template('bot_dashboard.html', active_page='bot')
 
-# --- APIS DE DATOS (REPARADAS PARA SU DISEÑO) ---
-@app.route('/api/telemetria')
-@login_required
-def api_telemetria():
-    return jsonify({
-        "uptime": "5m 12s",
-        "latencia": "0.04s",
-        "tokens_totales": 0,
-        "api_status": "STABLE",
-        "historial_latencia": [0.04, 0.05, 0.04, 0.06, 0.04],
-        "historial_tokens": [0, 0, 0, 0, 0]
-    })
-
-@app.route('/api/get_usuarios')
-@login_required
-def api_get_usuarios():
-    # Devuelve la lista para que la tabla de su diseño no marque error
-    return jsonify({"admin": {"rol": "Master Control", "estado": "Activo"}})
-
+# --- APIS DEL SISTEMA ---
 @app.route('/api/get_logs')
 @login_required
 def api_get_logs():
-    return jsonify({"logs": ["[SISTEMA] Muro de autenticación activo.", "[INFO] Esperando órdenes del operador."] })
+    return jsonify({"logs": ["[SISTEMA] Motor Pinpinela en Standby.", "[SEGURIDAD] Bóveda de llaves inicializada."] })
+
+@app.route('/api/get_usuarios')
+@login_required
+def api_get_usuarios(): return jsonify(user_db.listar_usuarios())
+
+@app.route('/api/telemetria')
+@login_required
+def api_telemetria():
+    llaves_activas = len(boveda_db.obtener_llaves())
+    return jsonify({
+        "uptime": "Sincronizado", "latencia": "0.02s", "tokens_totales": 0,
+        "api_status": f"TANQUES API: {llaves_activas}/5", 
+        "historial_latencia": [0.02, 0.02, 0.02, 0.02, 0.02],
+        "historial_tokens": [0, 0, 0, 0, 0]
+    })
+
+# --- APIS DE BÓVEDA (NUEVO) ---
+@app.route('/api/get_boveda')
+@login_required
+def api_get_boveda():
+    return jsonify({"gemini_keys": boveda_db.obtener_llaves()})
+
+@app.route('/api/save_boveda', methods=['POST'])
+@login_required
+def api_save_boveda():
+    data = request.json
+    llaves = data.get('gemini_keys', [])
+    boveda_db.guardar_llaves(llaves)
+    return jsonify({"status": "success", "message": "Bóveda actualizada correctamente"})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
