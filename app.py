@@ -6,15 +6,16 @@ from modulos.ai_engine import AIEngine
 from modulos.auditoria import AuditoriaSystem
 from modulos.usuarios import UsuarioManager
 from modulos.bot_orquestador import PinpinelaOrchestrator
+from modulos.config_manager import ConfigManager
 
 app = Flask(__name__)
-# Llave maestra para sesiones y seguridad
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
 # Instanciación de Silos de Ingeniería
 logger = AuditoriaSystem()
 user_db = UsuarioManager()
 adn_db = ADNManager()
+config_db = ConfigManager()
 ia_motor = AIEngine()
 bot_pinpinela = PinpinelaOrchestrator()
 
@@ -65,6 +66,22 @@ def api_get_adn():
 @app.route('/api/get_logs')
 def api_get_logs():
     return jsonify({'logs': logger.leer_ultimos()})
+
+# Rutas de la Bóveda de Configuración
+@app.route('/api/get_config')
+def api_get_config():
+    return jsonify(config_db.leer_configuracion())
+
+@app.route('/api/save_config', methods=['POST'])
+def api_save_config():
+    try:
+        data = request.json
+        config_db.guardar_configuracion(data)
+        logger.registrar("BÓVEDA", "Actualización manual de Matriz de API Keys", "SUCCESS")
+        return jsonify({"status": "success"})
+    except Exception as e:
+        logger.registrar("BÓVEDA", f"Fallo al guardar matriz: {e}", "ERROR")
+        return jsonify({"status": "error", "mensaje": str(e)}), 500
 
 @app.route('/api/bot/lanzar_orden', methods=['POST'])
 def bot_lanzar_orden():
