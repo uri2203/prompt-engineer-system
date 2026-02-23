@@ -1,81 +1,124 @@
 {% extends "layout.html" %}
-
 {% block content %}
-<div class="flex-1 flex flex-col p-10 overflow-y-auto bg-[#0B1120] scrollbar-hide">
-    <div class="max-w-5xl mx-auto w-full">
-        
-        <header class="mb-10 border-b border-slate-800 pb-6 flex justify-between items-end">
-            <div>
-                <h2 class="text-3xl font-black text-slate-200 mb-2 tracking-tight flex items-center">
-                    <svg class="w-8 h-8 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    Bóveda de Configuración
-                </h2>
-                <p class="text-slate-400 text-sm font-mono">Gestión de credenciales, rotación de API Keys y accesos OAuth para el clúster de producción Pinpinela.</p>
-            </div>
-            <button class="bg-[#2563eb] hover:bg-blue-500 text-white px-6 py-2 rounded text-xs font-bold transition-colors shadow-lg shadow-blue-900/50 tracking-widest">GUARDAR TODA LA MATRIZ</button>
-        </header>
+<div class="flex-1 p-8 bg-[#0B1120] overflow-y-auto scrollbar-hide">
+    <header class="mb-8 border-b border-slate-800 pb-4 flex justify-between items-end">
+        <div>
+            <h2 class="text-3xl font-black text-slate-200 tracking-tighter flex items-center">
+                <svg class="w-8 h-8 mr-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                Bóveda de Configuración
+            </h2>
+            <p class="text-slate-500 text-[10px] font-mono uppercase tracking-widest mt-2">Gestión de credenciales, rotación de API Keys y accesos OAuth para el clúster de producción Pinpinela.</p>
+        </div>
+        <button id="btn_guardar" onclick="guardarConfiguracion()" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded text-[10px] font-black transition-all shadow-lg shadow-blue-900/40 uppercase tracking-widest border border-blue-500/50 flex items-center">
+            Guardar Toda La Matriz
+        </button>
+    </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg">
-                <h3 class="text-[#3b82f6] font-bold text-xs uppercase tracking-widest mb-4 border-b border-slate-800 pb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
-                    Matriz de Inyección: Google Gemini (Tanques)
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <label class="label-blue block mb-1">Tanque 1 (Master / Render.com Env)</label>
-                        <input type="password" class="w-full p-2.5 text-sm font-mono opacity-50 cursor-not-allowed" value="VINCULADO_DESDE_RENDER" disabled>
-                    </div>
-                    <div><label class="label-blue block mb-1">Tanque 2 (Failover 1)</label><input type="password" class="w-full p-2.5 text-sm font-mono" placeholder="Ingresar API Key virgen..."></div>
-                    <div><label class="label-blue block mb-1">Tanque 3 (Failover 2)</label><input type="password" class="w-full p-2.5 text-sm font-mono" placeholder="Ingresar API Key virgen..."></div>
-                    <div><label class="label-blue block mb-1">Tanque 4 (Failover 3)</label><input type="password" class="w-full p-2.5 text-sm font-mono" placeholder="Ingresar API Key virgen..."></div>
-                    <div><label class="label-blue block mb-1">Tanque 5 (Reserva)</label><input type="password" class="w-full p-2.5 text-sm font-mono" placeholder="Ingresar API Key virgen..."></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg">
+            <h3 class="text-blue-400 text-xs font-black uppercase tracking-widest mb-6 flex items-center border-b border-slate-800 pb-3">
+                <span class="mr-2">🔑</span> MATRIZ DE INYECCIÓN: GOOGLE GEMINI (TANQUES)
+            </h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 1 (MASTER / RENDER.COM ENV)</label>
+                    <input type="password" id="gemini_master" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-emerald-500 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
+                </div>
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 2 (FAILOVER 1)</label>
+                    <input type="password" id="gemini_failover1" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
+                </div>
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 3 (FAILOVER 2)</label>
+                    <input type="password" id="gemini_failover2" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
+                </div>
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 4 (FAILOVER 3)</label>
+                    <input type="password" id="gemini_failover3" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
+                </div>
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">TANQUE 5 (RESERVA)</label>
+                    <input type="password" id="gemini_reserva" placeholder="Ingresar API Key virgen..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-slate-300 outline-none text-sm focus:border-blue-500 transition-colors font-mono">
                 </div>
             </div>
+        </div>
 
-            <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg">
-                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-4 border-b border-slate-800 pb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
-                    Matriz de Audio: API de Síntesis
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <label class="label-blue block mb-1">ElevenLabs / Master Key</label>
-                        <input type="password" class="w-full p-2.5 text-sm font-mono" placeholder="sk_...">
-                    </div>
-                    <div class="p-4 bg-[#0B1120] border border-slate-800 rounded mt-4">
-                        <p class="text-[11px] text-slate-400 leading-relaxed font-mono">ADVERTENCIA DEL SISTEMA: Esta cuota es de pago (Pay-as-you-go). El Bot Pinpinela solo consumirá tokens de audio en la Fase 3 del renderizado. Asegurar saldo positivo para evitar interrupciones asíncronas.</p>
-                    </div>
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg h-fit">
+            <h3 class="text-purple-400 text-xs font-black uppercase tracking-widest mb-6 flex items-center border-b border-slate-800 pb-3">
+                <span class="mr-2">🎙️</span> MATRIZ DE AUDIO: API DE SÍNTESIS
+            </h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="text-[9px] text-slate-400 font-bold uppercase block mb-1 tracking-widest">ELEVENLABS / MASTER KEY</label>
+                    <input type="password" id="elevenlabs_master" placeholder="sk_..." class="w-full bg-[#0B1120] border border-slate-700 p-3 rounded text-purple-400 outline-none text-sm focus:border-purple-500 transition-colors font-mono">
+                </div>
+                <div class="mt-4 p-4 border border-slate-800 bg-[#0B1120]/50 rounded text-[9px] font-mono text-slate-500 leading-relaxed uppercase tracking-widest">
+                    ADVERTENCIA DEL SISTEMA: Esta cuota es de pago (Pay-as-you-go). El Bot Pinpinela solo consumirá tokens de audio en la Fase 3 del renderizado. Asegurar saldo positivo para evitar interrupciones asíncronas.
                 </div>
             </div>
-
-            <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-6 shadow-lg lg:col-span-2">
-                <h3 class="text-emerald-500 font-bold text-xs uppercase tracking-widest mb-4 border-b border-slate-800 pb-3 flex items-center">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                    Nodos de Distribución Automática (OAuth2)
-                </h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="border border-slate-700 bg-[#0B1120] p-4 rounded flex justify-between items-center">
-                        <div>
-                            <span class="text-white font-bold text-sm block">YouTube API v3</span>
-                            <span class="text-[10px] text-red-500 font-mono mt-1 block tracking-widest">ESTADO: DESCONECTADO</span>
-                        </div>
-                        <button class="bg-slate-800 text-slate-300 px-4 py-2 rounded text-[10px] font-bold border border-slate-600 hover:bg-slate-700 transition-colors">VINCULAR NODO</button>
-                    </div>
-                    
-                    <div class="border border-slate-700 bg-[#0B1120] p-4 rounded flex justify-between items-center">
-                        <div>
-                            <span class="text-white font-bold text-sm block">TikTok Graph API</span>
-                            <span class="text-[10px] text-red-500 font-mono mt-1 block tracking-widest">ESTADO: DESCONECTADO</span>
-                        </div>
-                        <button class="bg-slate-800 text-slate-300 px-4 py-2 rounded text-[10px] font-bold border border-slate-600 hover:bg-slate-700 transition-colors">VINCULAR NODO</button>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
 </div>
+
+<div id="toast_notification" class="fixed bottom-5 right-5 bg-emerald-600 border border-emerald-400 text-white px-6 py-3 rounded shadow-[0_0_20px_rgba(5,150,105,0.4)] font-bold text-[10px] uppercase tracking-widest transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+    Bóveda Actualizada Exitosamente
+</div>
+
+<script>
+    async function cargarConfiguracion() {
+        try {
+            const res = await fetch('/api/get_config');
+            const data = await res.json();
+            
+            document.getElementById('gemini_master').value = data.gemini_master || '';
+            document.getElementById('gemini_failover1').value = data.gemini_failover1 || '';
+            document.getElementById('gemini_failover2').value = data.gemini_failover2 || '';
+            document.getElementById('gemini_failover3').value = data.gemini_failover3 || '';
+            document.getElementById('gemini_reserva').value = data.gemini_reserva || '';
+            document.getElementById('elevenlabs_master').value = data.elevenlabs_master || '';
+        } catch (e) {
+            console.error("Error cargando bóveda:", e);
+        }
+    }
+
+    async function guardarConfiguracion() {
+        const btn = document.getElementById('btn_guardar');
+        const originalText = btn.innerText;
+        btn.innerText = "GUARDANDO MATRIZ...";
+        
+        const payload = {
+            gemini_master: document.getElementById('gemini_master').value,
+            gemini_failover1: document.getElementById('gemini_failover1').value,
+            gemini_failover2: document.getElementById('gemini_failover2').value,
+            gemini_failover3: document.getElementById('gemini_failover3').value,
+            gemini_reserva: document.getElementById('gemini_reserva').value,
+            elevenlabs_master: document.getElementById('elevenlabs_master').value
+        };
+
+        try {
+            const response = await fetch('/api/save_config', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+            });
+            
+            if(response.ok) {
+                // Mostrar notificación verde
+                const toast = document.getElementById('toast_notification');
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            } else {
+                alert("Error devuelto por el servidor de Bóveda.");
+            }
+        } catch (e) {
+            alert("Error crítico de red al contactar la Bóveda.");
+        } finally {
+            btn.innerText = originalText;
+        }
+    }
+
+    window.onload = cargarConfiguracion;
+</script>
 {% endblock %}
