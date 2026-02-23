@@ -21,7 +21,7 @@ class AIEngine:
         ESTRUCTURA OBLIGATORIA DEL GUION (4 FASES):
         - FASE 1 (REALIDAD) | FASE 2 (DISONANCIA) | FASE 3 (INMERSIÓN) | FASE 4 (PERSISTENCIA)
 
-        DIRECTRICES VISUALES: 16:9 (1280x720).
+        DIRECTRICES VISUALES: 16:9 (1920x1080).
         """
 
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras"):
@@ -33,7 +33,6 @@ class AIEngine:
         system_instruction = self.adn_la_viuda if marca.lower() == "la viuda" else ""
         prompt_final = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}"
 
-        # FAILOVER DE NUEVA GENERACIÓN: Basado en disponibilidad confirmada por su consola
         modelos_prioridad = [
             "models/gemini-2.5-flash", 
             "models/gemini-2.0-flash", 
@@ -53,7 +52,6 @@ class AIEngine:
                     return response.text
                 except Exception as e:
                     mensaje_error = str(e).replace(key, f"[*TANQUE_{index+1}*]")
-                    # Priorizamos identificar errores de cuota para el diagnóstico
                     if "429" in mensaje_error:
                         errores_detallados.append(f"> {modelo} | Tanque {index + 1}: CUOTA AGOTADA (429)")
                     else:
