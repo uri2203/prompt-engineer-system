@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="flex-1 p-8 bg-[#0B1120] overflow-y-auto scrollbar-hide">
+    <header class="mb-8 border-b border-slate-800 pb-4 flex justify-between items-end">
+        <div>
+            <h2 class="text-3xl font-black text-slate-200 uppercase tracking-tighter">Caja Negra (Auditoría)</h2>
+            <p class="text-slate-500 text-[10px] font-mono uppercase tracking-widest mt-1">Bitácora del Servidor y Eventos del Motor</p>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-emerald-500 text-[10px] font-bold uppercase tracking-widest font-mono">Logger Active</span>
+        </div>
+    </header>
+
+    <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-4 shadow-lg flex flex-col h-[70vh]">
+        <div class="border-b border-slate-800 pb-2 mb-2 flex justify-between items-center">
+            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest font-mono">Terminal Output</span>
+            <button onclick="cargarLogs()" class="text-blue-500 hover:text-blue-400 text-[10px] font-bold uppercase tracking-widest transition-colors font-mono">
+                [ Refrescar ]
+            </button>
+        </div>
+        
+        <div id="terminal_logs" class="flex-1 bg-black rounded p-4 overflow-y-auto font-mono text-[11px] text-emerald-500 whitespace-pre-wrap border border-slate-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.8)] scrollbar-hide">
+            <span class="animate-pulse text-slate-500">Conectando con el núcleo de auditoría...</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function cargarLogs() {
+        const terminal = document.getElementById('terminal_logs');
+        try {
+            const res = await fetch('/api/get_logs');
+            const data = await res.json();
+            
+            if (data.logs && data.logs.length > 0) {
+                terminal.innerHTML = data.logs.join('');
+                // Auto-scroll al fondo
+                terminal.scrollTop = terminal.scrollHeight;
+            } else {
+                terminal.innerHTML = "<span class='text-slate-500'>[SISTEMA] No hay eventos registrados.</span>";
+            }
+        } catch (e) {
+            terminal.innerHTML = '<span class="text-red-500 font-bold uppercase">[ERROR CRÍTICO] NODO DE AUDITORÍA NO RESPONDE.</span>';
+        }
+    }
+    
+    // Carga inicial y auto-refresco cada 5 segundos
+    window.onload = cargarLogs;
+    setInterval(cargarLogs, 5000); 
+</script>
+{% endblock %}
