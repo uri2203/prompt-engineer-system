@@ -52,7 +52,9 @@ class AIEngine:
         PETICIÓN DEL OPERADOR: {peticion}
         """
 
-        # SISTEMA DE FAILOVER: Intenta cada llave hasta que una funcione
+        errores_detallados = []
+        
+        # SISTEMA DE FAILOVER CON SONDA DE DIAGNÓSTICO
         for index, key in enumerate(llaves):
             try:
                 genai.configure(api_key=key)
@@ -63,8 +65,10 @@ class AIEngine:
                 response = model.generate_content(prompt_final)
                 return response.text
             except Exception as e:
-                # Si la llave falla (ej. límite de cuota), el loop continúa con la siguiente
-                print(f"[FAILOVER] Llave {index + 1} falló. Saltando a la siguiente... Error: {e}")
+                # Ocultamos la llave real por seguridad en la consola
+                mensaje_error = str(e).replace(key, f"[*LLAVE_TANQUE_{index+1}*]")
+                errores_detallados.append(f"> Fallo en Tanque {index + 1}: {mensaje_error}")
                 continue
                 
-        return "ERROR CRÍTICO: Todas las API Keys en la Bóveda fallaron o están agotadas."
+        reporte_final = "\n".join(errores_detallados)
+        return f"ERROR CRÍTICO EN API DE GOOGLE:\nTodas las llaves fueron rechazadas. Diagnóstico técnico:\n\n{reporte_final}"
