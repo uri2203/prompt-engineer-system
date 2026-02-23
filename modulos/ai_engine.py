@@ -38,7 +38,6 @@ class AIEngine:
         errores_detallados = []
         
         for modelo in modelos_prioridad:
-            print(f"[FAILOVER] Intentando con modelo: {modelo}")
             for index, key in enumerate(llaves):
                 try:
                     genai.configure(api_key=key)
@@ -50,11 +49,8 @@ class AIEngine:
                     return response.text
                 except Exception as e:
                     mensaje_error = str(e).replace(key, f"[*TANQUE_{index+1}*]")
-                    # Si es error de cuota, lo registramos y seguimos al siguiente tanque/modelo
-                    if "429" in mensaje_error:
-                        errores_detallados.append(f"> {modelo} | Tanque {index + 1}: AGOTADO (429)")
-                    else:
-                        errores_detallados.append(f"> {modelo} | Tanque {index + 1}: {mensaje_error}")
+                    # Registro silencioso para no ensuciar la consola de salida
+                    errores_detallados.append(f"> {modelo} | Tanque {index + 1}: {mensaje_error}")
                     continue
                 
-        return "ERROR DE CUOTA TOTAL:\nTodos los modelos y tanques están agotados por hoy.\n\n" + "\n".join(errores_detallados)
+        return "ERROR DE CUOTA O CONEXIÓN TOTAL:\n" + "\n".join(errores_detallados)
