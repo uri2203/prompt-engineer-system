@@ -2,18 +2,18 @@
 {% block content %}
 <div class="flex flex-col lg:flex-row h-full overflow-hidden">
     
-    <div class="w-full lg:w-1/3 bg-[#0B1120] border-r border-slate-800 p-6 flex flex-col overflow-y-auto">
+    <div class="w-full lg:w-1/3 bg-[#0B1120] border-r border-slate-800 p-6 flex flex-col overflow-y-auto custom-scrollbar">
         <header class="mb-6 border-b border-slate-800 pb-4">
             <h2 class="text-2xl font-black text-white tracking-tighter uppercase">Terminal de Producción</h2>
             <p class="label-blue mt-1">Generación de Guiones Nivel 1</p>
         </header>
 
-        <form id="form_generacion" class="space-y-5 flex-1">
+        <form id="form_generacion" class="space-y-5">
             <div>
                 <label class="label-blue block mb-2">Silo de Marca (ADN)</label>
                 <select id="input_marca" class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none">
                     <option value="La Viuda">La Viuda (Terror Psicológico)</option>
-                    </select>
+                </select>
             </div>
 
             <div>
@@ -30,30 +30,71 @@
                 <input type="text" id="input_contexto" placeholder="Ej. Un hospital abandonado en 1999..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none">
             </div>
 
-            <div class="flex-1 flex flex-col">
+            <div class="flex flex-col">
                 <label class="label-blue block mb-2">Directriz para el Operador IA</label>
-                <textarea id="input_peticion" placeholder="Escribe la anomalía o el vacío de información que detonará la historia..." class="w-full flex-1 p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[120px] resize-none"></textarea>
+                <textarea id="input_peticion" placeholder="Escribe la anomalía o el vacío de información que detonará la historia..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[120px] resize-none"></textarea>
             </div>
 
             <button type="button" onclick="ejecutarMotor()" id="btn_ejecutar" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded shadow-lg shadow-blue-900/40 uppercase text-xs tracking-widest transition-all mt-4">
-                Compilar y Ejecutar
+                Compilar y Ejecutar Guion
+            </button>
+        </form>
+
+        <hr class="border-slate-800 my-8">
+
+        <header class="mb-4">
+            <h2 class="text-lg font-black text-slate-300 tracking-tighter uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Motor Visual CCTV
+            </h2>
+            <p class="text-[10px] text-slate-500 font-mono mt-1">Renderizado Liminal 1920x1080 (16:9)</p>
+        </header>
+
+        <form id="form_cctv" class="space-y-4 pb-6">
+            <div class="flex flex-col">
+                <label class="label-blue block mb-2 text-xs">Prompt Visual (Inglés recomendado)</label>
+                <textarea id="input_prompt_visual" placeholder="Ej. A dark empty morgue corridor, flickering lights, strange shadow in the corner..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
+            </div>
+
+            <button type="button" onclick="ejecutarCCTV()" id="btn_cctv" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
+                Generar Frame de Seguridad
             </button>
         </form>
     </div>
 
-    <div class="w-full lg:w-2/3 bg-[#0F1523] flex flex-col p-6">
-        <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-2">
-            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Consola de Salida</h3>
-            <span class="text-[9px] font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded">Esperando Instrucciones</span>
-        </div>
+    <div class="w-full lg:w-2/3 bg-[#0F1523] flex flex-col p-6 gap-6 h-full overflow-hidden">
         
-        <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner">
+        <div class="w-full max-w-3xl mx-auto flex flex-col shrink-0">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Video 01</h3>
+                <span class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+            </div>
+            
+            <div id="cctv_visor" class="w-full aspect-video bg-black rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden relative shadow-inner">
+                <span class="text-slate-700 font-mono text-sm tracking-widest">[ SIN SEÑAL DE VIDEO ]</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col flex-1 overflow-hidden">
+            <div class="flex justify-between items-center mb-2 border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Consola de Salida</h3>
+                <span class="text-[9px] font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded">Log de Compilación</span>
+            </div>
+            
+            <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">
 > Sistema inicializado.
 > Silos herméticos en línea.
 > Seleccione los parámetros en el panel izquierdo e inicie la secuencia.
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0B1120; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #334155; }
+</style>
 
 <script>
 async function ejecutarMotor() {
@@ -72,7 +113,6 @@ async function ejecutarMotor() {
         return;
     }
 
-    // Estado de carga
     btn.disabled = true;
     btn.innerHTML = "PROCESANDO MATRIZ...";
     btn.classList.add('bg-slate-600', 'cursor-not-allowed');
@@ -97,12 +137,66 @@ async function ejecutarMotor() {
     } catch (error) {
         consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] No se pudo establecer conexión con el motor IA.</span>`;
     } finally {
-        // Restaurar botón
         btn.disabled = false;
-        btn.innerHTML = "COMPILAR Y EJECUTAR";
+        btn.innerHTML = "COMPILAR Y EJECUTAR GUION";
         btn.classList.remove('bg-slate-600', 'cursor-not-allowed');
         btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
     }
 }
-</script>
-{% endblock %}
+
+async function ejecutarCCTV() {
+    const btn = document.getElementById('btn_cctv');
+    const visor = document.getElementById('cctv_visor');
+    const consola = document.getElementById('consola_salida');
+    const prompt = document.getElementById('input_prompt_visual').value;
+
+    if(!prompt) {
+        consola.innerHTML += `\n<span class="text-red-500">> [SISTEMA VISUAL] Error: Prompt visual vacío. Ingrese descripción de la escena.</span>`;
+        consola.scrollTop = consola.scrollHeight;
+        return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = "PROCESANDO FRAME...";
+    btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
+    btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+
+    visor.innerHTML = `
+        <div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div>
+            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO CON CÁMARA SDXL...</span>
+        </div>`;
+
+    try {
+        const response = await fetch('/api/generate_image', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ prompt: prompt })
+        });
+
+        const data = await response.json();
+
+        if(data.status === "success") {
+            visor.innerHTML = `
+                <img src="${data.image_url}" alt="Render CCTV" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded">
+                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
+                    <span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span>
+                </div>
+                <div class="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded">
+                    <span class="text-slate-300 font-mono text-[10px]">CAM 04 - 1920x1080</span>
+                </div>`;
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080).</span>`;
+        } else {
+            visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE VISUAL ]</span>`;
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR RENDER] ${data.message}</span>`;
+        }
+    } catch (error) {
+        visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ PÉRDIDA DE SEÑAL ]</span>`;
+        consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE RED] Falla al conectar con el motor visual.</span>`;
+    } finally {
+        consola.scrollTop = consola.scrollHeight;
+        btn.disabled = false;
+        btn.innerHTML = "GENERAR FRAME DE SEGURIDAD";
+        btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
+        btn.classList
