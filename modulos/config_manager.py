@@ -3,7 +3,7 @@ import os
 
 class ConfigManager:
     def __init__(self):
-        # La bóveda se almacena en la raíz para evitar bloqueos de permisos en Render
+        # La bóveda se almacena en la raíz para persistencia en Render
         self.db_path = os.path.join(os.getcwd(), "config_db.json")
         self._inicializar_db()
 
@@ -18,7 +18,11 @@ class ConfigManager:
             "gemini_failover2": "",
             "gemini_failover3": "",
             "gemini_reserva": "",
-            "elevenlabs_master": ""
+            "elevenlabs_master": "",
+            "youtube_client_id": "",
+            "youtube_client_secret": "",
+            "tiktok_client_key": "",
+            "tiktok_client_secret": ""
         }
         with open(self.db_path, "w", encoding="utf-8") as f:
             json.dump(default_config, f, indent=4)
@@ -34,8 +38,11 @@ class ConfigManager:
 
     def guardar_configuracion(self, config_data):
         try:
+            # Fusiona los datos nuevos con los existentes para no sobreescribir vacíos
+            actual = self.leer_configuracion()
+            actual.update(config_data)
             with open(self.db_path, "w", encoding="utf-8") as f:
-                json.dump(config_data, f, indent=4)
+                json.dump(actual, f, indent=4)
             return True
         except Exception:
             return False
