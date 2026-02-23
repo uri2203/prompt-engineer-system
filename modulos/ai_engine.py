@@ -47,9 +47,11 @@ class AIEngine:
 
         errores_detallados = []
         
+        # SISTEMA DE FAILOVER CON SONDA DE DIAGNÓSTICO ABSOLUTA
         for index, key in enumerate(llaves):
             try:
                 genai.configure(api_key=key)
+                # Identificador Absoluto para evitar Error 404
                 model = genai.GenerativeModel(
                     model_name="models/gemini-1.5-flash-latest",
                     system_instruction=system_instruction
