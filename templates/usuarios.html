@@ -1,42 +1,107 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="flex-1 flex flex-col p-8 bg-[#0B1120] overflow-y-auto">
+<div class="flex-1 p-8 overflow-y-auto scrollbar-hide bg-[#0B1120]">
     <header class="mb-8 border-b border-slate-800 pb-4">
-        <h2 class="text-3xl font-black text-slate-200 tracking-tighter uppercase">Control de Acceso (Personal)</h2>
+        <h2 class="text-2xl font-black text-white tracking-tighter uppercase">Gestión de Operadores</h2>
+        <p class="label-blue mt-1">Alta y Control de Accesos Nivel 1</p>
     </header>
 
-    <div class="bg-[#0F1523] border border-slate-800 rounded-xl overflow-hidden shadow-lg">
-        <table class="w-full text-left text-sm text-slate-300">
-            <thead class="bg-[#1e293b] text-[10px] uppercase tracking-widest font-bold">
-                <tr>
-                    <th class="px-6 py-4">Usuario</th>
-                    <th class="px-6 py-4">Rol de Sistema</th>
-                    <th class="px-6 py-4">Estado</th>
-                </tr>
-            </thead>
-            <tbody id="tabla_usuarios_body" class="divide-y divide-slate-800">
-                </tbody>
-        </table>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1 bg-[#0F1523] p-6 rounded-xl border border-slate-800 shadow-2xl h-fit">
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-800 pb-2">Registrar Nuevo Perfil</h3>
+            
+            <form id="form_usuario" class="space-y-4">
+                <div>
+                    <label class="label-blue block mb-2">Nombre Completo</label>
+                    <input type="text" id="reg_nombre" placeholder="Ej. Juan Pérez" class="w-full p-3 text-sm" required>
+                </div>
+                <div>
+                    <label class="label-blue block mb-2">ID de Usuario (Login)</label>
+                    <input type="text" id="reg_user" placeholder="Ej. jperez" class="w-full p-3 text-sm font-mono" required>
+                </div>
+                <div>
+                    <label class="label-blue block mb-2">Password de Acceso</label>
+                    <input type="password" id="reg_pass" placeholder="••••••••" class="w-full p-3 text-sm" required>
+                </div>
+                <div>
+                    <label class="label-blue block mb-2">Rol de Sistema</label>
+                    <select id="reg_rol" class="w-full p-3 text-sm">
+                        <option value="Operador">Operador de Producción</option>
+                        <option value="Editor">Editor Técnico</option>
+                        <option value="Analista">Analista ADN</option>
+                    </select>
+                </div>
+                <button type="button" onclick="crearUsuario()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded text-[10px] uppercase tracking-widest transition-all mt-4">
+                    Autorizar Acceso
+                </button>
+            </form>
+        </div>
+
+        <div class="lg:col-span-2 bg-[#0F1523] rounded-xl border border-slate-800 shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 bg-[#0B1120]/50 flex justify-between items-center">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Base de Datos de Usuarios</h3>
+                <span class="text-[9px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded">Sincronizado</span>
+            </div>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="text-[9px] uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                        <th class="p-4">Nombre</th>
+                        <th class="p-4">Usuario</th>
+                        <th class="p-4">Rol</th>
+                        <th class="p-4">Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla_usuarios_body" class="text-xs text-slate-300">
+                    </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
 <script>
-    async function cargarUsuarios() {
+async function cargarUsuarios() {
+    try {
+        const res = await fetch('/api/get_usuarios');
+        const data = await res.json();
         const body = document.getElementById('tabla_usuarios_body');
-        try {
-            const res = await fetch('/api/get_usuarios'); // Llama a la nueva ruta en app.py
-            const data = await res.json();
-            body.innerHTML = Object.keys(data).map(user => `
-                <tr class="hover:bg-slate-800/50 transition-colors">
-                    <td class="px-6 py-4 font-bold text-white">${user}</td>
-                    <td class="px-6 py-4"><span class="bg-blue-900/30 text-blue-400 px-2 py-1 rounded text-[10px] font-bold">${data[user].rol}</span></td>
-                    <td class="px-6 py-4"><span class="text-emerald-500 flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>${data[user].status}</span></td>
+        body.innerHTML = '';
+        
+        Object.keys(data).forEach(key => {
+            const u = data[key];
+            body.innerHTML += `
+                <tr class="border-b border-slate-800/50 hover:bg-slate-800/20 transition-colors">
+                    <td class="p-4 font-bold text-white">${u.nombre || 'N/A'}</td>
+                    <td class="p-4 font-mono text-blue-400">${key}</td>
+                    <td class="p-4"><span class="bg-slate-800 px-2 py-1 rounded text-[10px] uppercase">${u.rol}</span></td>
+                    <td class="p-4"><span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span> Activo</span></td>
                 </tr>
-            `).join('');
-        } catch (e) {
-            body.innerHTML = '<tr><td colspan="3" class="p-10 text-center text-red-500">Error conectando con el servidor</td></tr>';
-        }
+            `;
+        });
+    } catch(e) { console.error("Error al refrescar usuarios"); }
+}
+
+async function crearUsuario() {
+    const payload = {
+        nombre: document.getElementById('reg_nombre').value,
+        user: document.getElementById('reg_user').value,
+        pass: document.getElementById('reg_pass').value,
+        rol: document.getElementById('reg_rol').value
+    };
+
+    if(!payload.user || !payload.pass) return alert("Campos obligatorios vacíos.");
+
+    const res = await fetch('/api/crear_usuario', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+    });
+
+    if(res.ok) {
+        document.getElementById('form_usuario').reset();
+        cargarUsuarios();
     }
-    window.onload = cargarUsuarios;
+}
+
+window.onload = cargarUsuarios;
 </script>
 {% endblock %}
