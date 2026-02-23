@@ -1,10 +1,8 @@
 {% extends "layout.html" %}
-
 {% block content %}
-<div class="flex-1 flex flex-col p-8 overflow-y-auto bg-[#0B1120]">
+<div class="flex-1 flex flex-col p-8 bg-[#0B1120] overflow-y-auto">
     <header class="mb-8 border-b border-slate-800 pb-4">
-        <h2 class="text-3xl font-black text-slate-200 tracking-tighter">CONTROL DE ACCESO (PERSONAL)</h2>
-        <p class="text-slate-400 text-xs font-mono uppercase tracking-widest">Gestión de credenciales y jerarquías del sistema</p>
+        <h2 class="text-3xl font-black text-slate-200 tracking-tighter uppercase">Control de Acceso (Personal)</h2>
     </header>
 
     <div class="bg-[#0F1523] border border-slate-800 rounded-xl overflow-hidden shadow-lg">
@@ -14,12 +12,33 @@
                     <th class="px-6 py-4">Usuario</th>
                     <th class="px-6 py-4">Rol de Sistema</th>
                     <th class="px-6 py-4">Estado</th>
-                    <th class="px-6 py-4 text-right">Acciones</th>
                 </tr>
             </thead>
-            <tbody id="tabla_usuarios" class="divide-y divide-slate-800">
-                </tbody>
+            <tbody id="tabla_usuarios_body" class="divide-y divide-slate-800">
+                <tr><td colspan="3" class="p-10 text-center text-slate-500 font-mono animate-pulse">SOLICITANDO DATOS AL KERNEL...</td></tr>
+            </tbody>
         </table>
     </div>
 </div>
+
+<script>
+    async function cargarUsuarios() {
+        const body = document.getElementById('tabla_usuarios_body');
+        try {
+            const res = await fetch('/api/get_usuarios');
+            const data = await res.json();
+            
+            body.innerHTML = Object.keys(data).map(user => `
+                <tr class="hover:bg-slate-800/50 transition-colors">
+                    <td class="px-6 py-4 font-bold text-white">${user}</td>
+                    <td class="px-6 py-4"><span class="bg-blue-900/30 text-blue-400 px-2 py-1 rounded text-[10px] font-bold">${data[user].rol}</span></td>
+                    <td class="px-6 py-4"><span class="text-emerald-500 flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>${data[user].status}</span></td>
+                </tr>
+            `).join('');
+        } catch (e) {
+            body.innerHTML = '<tr><td colspan="3" class="p-10 text-center text-red-500 font-bold uppercase">ERROR: NODO DE DATOS NO RESPONDE</td></tr>';
+        }
+    }
+    window.onload = cargarUsuarios;
+</script>
 {% endblock %}
