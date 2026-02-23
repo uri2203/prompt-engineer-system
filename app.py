@@ -1,45 +1,78 @@
 import os
 import time
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 from modulos.adn_manager import ADNManager
 from modulos.ai_engine import AIEngine
-from modulos.auditoria import AuditoriaSystem  # <--- Inyección de Auditoría
-
-# Silos de Producción
-from modulos.mod_1_traductor import TraductorUniversal
-from modulos.mod_2_guiones import IngenieriaGuiones
-from modulos.mod_3_hooks import GeneradorHooks
-from modulos.mod_4_empaquetado import EmpaquetadoContenido
-from modulos.mod_5_ventas import MotorVentasUGC
+from modulos.auditoria import AuditoriaSystem
+from modulos.usuarios import UsuarioManager
 from modulos.bot_orquestador import PinpinelaOrchestrator
 
 app = Flask(__name__)
+# Llave maestra para las sesiones
 app.secret_key = os.environ.get("FLASK_KEY", "admin_secret_1978_secure")
 
-# Instanciación del Sistema de Auditoría (La Caja Negra)
+# Instanciación de Silos
 logger = AuditoriaSystem()
-
-# Instanciación del Clúster
+user_db = UsuarioManager()
 adn_db = ADNManager()
 ia_motor = AIEngine()
 bot_pinpinela = PinpinelaOrchestrator()
 
+# --- PROTECCIÓN DE RUTAS (Middleware) ---
+@app.before_request
+def verificar_acceso():
+    # Rutas permitidas sin login
+    rutas_publicas = ['login', 'static']
+    if 'user' not in session and request.endpoint not in rutas_publicas:
+        return redirect(url_for('login'))
+
+# --- RUTAS DE NAVEGACIÓN ---
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        user = request.form.get('username')
+        pw = request.form.get('password')
+        # Credenciales de emergencia
+        if user == "admin" and pw == "admin_secret_1978_secure":
+            session['user'] = user
+            logger.registrar("SEGURIDAD", f"Usuario {user} inició sesión.", "SUCCESS")
+            return redirect(url_for('index'))
+        return "Acceso Denegado", 401
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect(url_for('login'))
+
 @app.route('/')
-def index(): return render_template('workspace.html', active_page='workspace')
+def index(): 
+    return render_template('workspace.html', active_page='workspace')
 
 @app.route('/mantenimiento')
-def mantenimiento(): return render_template('mantenimiento.html', active_page='mantenimiento')
+def mantenimiento(): 
+    return render_template('mantenimiento.html', active_page='mantenimiento')
 
 @app.route('/configuracion')
-def configuracion(): return render_template('configuracion.html', active_page='configuracion')
+def configuracion(): 
+    return render_template('configuracion.html', active_page='configuracion')
 
 @app.route('/bot')
-def bot(): return render_template('bot_dashboard.html', active_page='bot')
+def bot(): 
+    return render_template('bot_dashboard.html', active_page='bot')
 
-# --- API DE AUDITORÍA ---
+# --- API DE DATOS (Para que los apartados NO estén vacíos) ---
 @app.route('/api/get_logs')
 def get_logs():
     return jsonify({'logs': logger.leer_ultimos()})
+
+@app.route('/api/get_adn')
+def get_adn():
+    return jsonify(adn_db.cargar_todo())
+
+@app.route('/api/get_usuarios')
+def get_usuarios():
+    return jsonify(user_db.listar_usuarios())
 
 @app.route('/api/bot/lanzar_orden', methods=['POST'])
 def bot_lanzar_orden():
@@ -47,16 +80,8 @@ def bot_lanzar_orden():
     tarea_id = f"ORD-{int(time.time())}"
     marca = data.get('marca', 'La Viuda')
     formato = data.get('formato', '16:9')
-    
-    logger.registrar("ORQUESTADOR", f"Nueva orden recibida: {tarea_id} para {marca} ({formato})", "INFO")
-    
+    logger.registrar("ORQUESTADOR", f"Ejecutando orden {tarea_id} para {marca} ({formato})", "INFO")
     resultado = bot_pinpinela.procesar_orden(tarea_id, marca, data.get('premisa', ''), formato)
-    
-    if resultado.get("status") == "PENDING_REVIEW":
-        logger.registrar("ORQUESTADOR", f"Orden {tarea_id} completada exitosamente hasta Fase 4", "SUCCESS")
-    else:
-        logger.registrar("ORQUESTADOR", f"Fallo en orden {tarea_id}: {resultado.get('detalle')}", "ERROR")
-        
     return jsonify(resultado)
 
 if __name__ == '__main__':
