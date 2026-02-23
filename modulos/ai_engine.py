@@ -1,55 +1,71 @@
-import google.generativeai as genai
 import os
-import time
+import google.generativeai as genai
 
 class AIEngine:
     def __init__(self):
-        self.api_key = os.environ.get("GEMINI_API_KEY")
+        # En producción, esto se conectará a su Bóveda de Configuración
+        self.api_key = os.environ.get("GEMINI_API_KEY", "")
         if self.api_key:
             genai.configure(api_key=self.api_key)
-        
-        # Historial de memoria para las gráficas (20 puntos de datos)
-        self.historial_latencia = [0.0] * 20
-        self.historial_tokens = [0] * 20
-        self.tokens_totales = 0
+            
+        # ADN Maestro: La Viuda (Silo Hermético)
+        self.adn_la_viuda = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
+        ERES UN ESCRITOR EXPERTO EN TERROR PSICOLÓGICO INMERSIVO Y RETENCIÓN EXTREMA PARA YOUTUBE. 
+        TU OBJETIVO ES PARALIZAR AL ESPECTADOR MEDIANTE LA PARANOIA Y LA DISONANCIA COGNITIVA, IMPIDIENDO QUE ABANDONE EL VIDEO.
 
-    def ejecutar_failover(self, prompt):
-        modelos_disponibles = ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-pro']
-        
-        for nombre_modelo in modelos_disponibles:
-            try:
-                tiempo_inicio = time.time()
-                model = genai.GenerativeModel(nombre_modelo)
-                response = model.generate_content(prompt)
-                tiempo_fin = time.time()
-                
-                if response and response.text:
-                    latencia = round(tiempo_fin - tiempo_inicio, 2)
-                    tokens_peticion = 0
-                    try:
-                        tokens_peticion = response.usage_metadata.total_token_count
-                    except:
-                        pass # Bypass si la API oculta los metadatos
-                        
-                    # Actualización matemática de los historiales
-                    self.tokens_totales += tokens_peticion
-                    self.historial_latencia.append(latencia)
-                    self.historial_latencia.pop(0) # Elimina el dato más viejo
-                    self.historial_tokens.append(tokens_peticion)
-                    self.historial_tokens.pop(0)
-                        
-                    return {'resultado_ia': response.text}
-            except Exception as e:
-                print(f"Falla de cuota en {nombre_modelo}: {str(e)}")
-                continue 
-        
-        return {'error': 'Saturación en todos los modelos. Requiere pausa táctica o actualizar API Key.'}
-    
-    def obtener_telemetria(self):
-        return {
-            'estado_api': 'STABLE' if self.api_key else 'OFFLINE',
-            'tokens_totales': self.tokens_totales,
-            'historial_latencia': self.historial_latencia,
-            'historial_tokens': self.historial_tokens,
-            'latencia_actual': self.historial_latencia[-1]
-        }
+        REGLAS DE FORMATO Y ESTILO (INQUEBRANTABLES):
+        1. REALISMO CLÍNICO: Redacta con frases cortas, secas y objetivas. Prioriza la lógica fría. Cero adjetivos exagerados.
+        2. TONO DE VOZ: Masculino, latino, grave, bajo, cercano y confidencial.
+        3. RETENCIÓN Y HOOKS: "Vacío de Información". Inicia con una anomalía o dato perturbador. Cero saludos.
+        4. ROMPER LA CUARTA PARED: Usa la 2da persona de forma invasiva ("Esto te afecta").
+        5. BLINDAJE DE MONETIZACIÓN: PROHIBIDO violencia gráfica, gore o palabras penalizadas. Terror 100% psicológico.
+
+        ESTRUCTURA OBLIGATORIA DEL GUION (4 FASES):
+        - FASE 1 (REALIDAD): Presenta un caso o situación aparentemente normal.
+        - FASE 2 (DISONANCIA): Introduce un elemento que no encaja.
+        - FASE 3 (INMERSIÓN): Haz notar al espectador que esto ocurre en su realidad.
+        - FASE 4 (PERSISTENCIA): Final abierto y abrupto.
+
+        DIRECTRICES VISUALES (PROMPTS DE IMAGEN):
+        - Relación de aspecto estricta: 16:9 (1920x1080 Full HD).
+        - Estética Principal: Terror Psicológico Implícito, Realismo Forense y Espacios Liminales. 
+        - Atmósfera: Entornos vacíos, iluminación fluorescente fría, flash frontal duro o CCTV. 
+        - PROHIBIDO: Mostrar la amenaza directamente, monstruos, rostros definidos, renders 3D.
+
+        FORMATO DE SALIDA EXIGIDO:
+        Entrega el guion con etiquetas claras: [TIEMPO APROXIMADO], [PROMPT VISUAL PARA IA 1920x1080], y [TEXTO DE LOCUCIÓN].
+        """
+
+    def generar_guion(self, marca, contexto, peticion, longitud="130 palabras"):
+        if not self.api_key:
+            return "ERROR CRÍTICO: API Key de Gemini no configurada en el sistema."
+
+        try:
+            # Selección estricta de silo
+            system_instruction = ""
+            if marca.lower() == "la viuda":
+                system_instruction = self.adn_la_viuda
+            else:
+                return f"ERROR: ADN para la marca '{marca}' no encontrado o no inicializado."
+
+            # Construcción del Prompt Final
+            prompt_final = f"""
+            CONTEXTO DEL PROYECTO: {contexto}
+            LONGITUD OBJETIVO: {longitud}
+            PETICIÓN DEL OPERADOR: {peticion}
+            
+            Ejecuta la petición cumpliendo estrictamente con tus instrucciones de sistema.
+            """
+
+            # Inicialización del modelo (Gemini 3.1 Pro para razonamiento profundo)
+            model = genai.GenerativeModel(
+                model_name="gemini-1.5-pro", # Usamos la nomenclatura de API actual equivalente a Pro
+                system_instruction=system_instruction
+            )
+
+            response = model.generate_content(prompt_final)
+            return response.text
+
+        except Exception as e:
+            return f"ERROR DE COMPILACIÓN EN AI ENGINE: {str(e)}"
