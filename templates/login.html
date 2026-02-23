@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PINPINELA | SECURE ACCESS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0B1120] h-screen flex items-center justify-center font-sans">
+    <div class="bg-[#0F1523] border border-slate-800 p-10 rounded-2xl shadow-2xl w-full max-w-md">
+        <div class="text-center mb-10">
+            <h1 class="text-emerald-500 font-black text-4xl tracking-tighter">PINPINELA</h1>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.3em] mt-2 font-bold">Terminal de Acceso Restringido</p>
+        </div>
+        <form action="/login" method="POST" class="space-y-6">
+            <div>
+                <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2 tracking-widest">ID de Operador</label>
+                <input type="text" name="username" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-white outline-none focus:border-emerald-500 transition-colors" required>
+            </div>
+            <div>
+                <label class="block text-[10px] text-slate-400 font-bold uppercase mb-2 tracking-widest">Código de Seguridad</label>
+                <input type="password" name="password" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-white outline-none focus:border-emerald-500 transition-colors" required>
+            </div>
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-lg shadow-lg shadow-emerald-900/40 transition-all uppercase tracking-widest text-xs">Iniciar Operaciones</button>
+        </form>
+    </div>
+</body>
+</html>
