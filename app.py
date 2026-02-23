@@ -8,10 +8,9 @@ from modulos.ai_engine import AIEngine
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 
-# Instancias de Bases de Datos Locales
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
-ai_engine = AIEngine() # El motor inicializado
+ai_engine = AIEngine()
 
 def login_required(f):
     @wraps(f)
@@ -43,7 +42,6 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
-# --- RUTAS DE INTERFAZ ---
 @app.route('/')
 @login_required
 def index(): return render_template('workspace.html', active_page='workspace')
@@ -64,7 +62,6 @@ def mantenimiento(): return render_template('mantenimiento.html', active_page='l
 @login_required
 def bot(): return render_template('bot_dashboard.html', active_page='bot')
 
-# --- APIS DEL SISTEMA ---
 @app.route('/api/get_logs')
 @login_required
 def api_get_logs():
@@ -85,20 +82,24 @@ def api_telemetria():
         "historial_tokens": [0, 0, 0, 0, 0]
     })
 
+# --- APIS DE BÓVEDA RESTAURADAS ---
 @app.route('/api/get_boveda')
 @login_required
 def api_get_boveda():
-    return jsonify({"gemini_keys": boveda_db.obtener_llaves()})
+    return jsonify(boveda_db.obtener_datos())
 
 @app.route('/api/save_boveda', methods=['POST'])
 @login_required
 def api_save_boveda():
     data = request.json
-    llaves = data.get('gemini_keys', [])
-    boveda_db.guardar_llaves(llaves)
+    boveda_db.guardar_boveda_completa(
+        data.get('gemini_keys', []),
+        data.get('voice_api', ''),
+        data.get('youtube_api', ''),
+        data.get('tiktok_api', '')
+    )
     return jsonify({"status": "success", "message": "Bóveda actualizada"})
 
-# --- API DEL MOTOR DE GUIONES (LA CONEXIÓN) ---
 @app.route('/api/generate_script', methods=['POST'])
 @login_required
 def api_generate_script():
@@ -106,11 +107,8 @@ def api_generate_script():
     marca = data.get('marca', 'La Viuda')
     contexto = data.get('contexto', '')
     peticion = data.get('peticion', '')
-    longitud = data.get('longitud', '4900 palabras') # Por defecto formato largo
-    
-    # Pasamos los datos al motor hermético
+    longitud = data.get('longitud', '4900 palabras') 
     resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
-    
     return jsonify({"status": "success", "data": resultado})
 
 if __name__ == '__main__':
