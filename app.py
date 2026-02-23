@@ -4,6 +4,7 @@ from functools import wraps
 from modulos.usuarios import UsuarioManager
 from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
+from modulos.cctv_engine import CCTVEngine  # Importación del nuevo silo visual
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
@@ -11,6 +12,7 @@ app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
 ai_engine = AIEngine()
+cctv_engine = CCTVEngine() # Instanciación del motor visual
 
 def login_required(f):
     @wraps(f)
@@ -82,7 +84,6 @@ def api_telemetria():
         "historial_tokens": [0, 0, 0, 0, 0]
     })
 
-# --- APIS DE BÓVEDA RESTAURADAS ---
 @app.route('/api/get_boveda')
 @login_required
 def api_get_boveda():
@@ -111,7 +112,7 @@ def api_generate_script():
     resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
     return jsonify({"status": "success", "data": resultado})
 
-# --- NUEVA API DE GENERACIÓN VISUAL (CCTV) ---
+# --- API DE GENERACIÓN VISUAL (Aislada a cctv_engine) ---
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
 def api_generate_image():
@@ -120,7 +121,7 @@ def api_generate_image():
     if not prompt_visual:
         return jsonify({"status": "error", "message": "Prompt visual vacío."})
         
-    resultado = ai_engine.generar_imagen_cctv(prompt_visual)
+    resultado = cctv_engine.generar_imagen(prompt_visual)
     
     if "ERROR" in resultado:
         return jsonify({"status": "error", "message": resultado})
