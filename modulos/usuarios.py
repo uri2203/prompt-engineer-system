@@ -3,20 +3,13 @@ import os
 
 class UsuarioManager:
     def __init__(self):
-        self.db_path = os.path.join(os.getcwd(), "data", "usuarios.json")
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+        # Cambiamos la ruta a la raíz para evitar problemas de permisos
+        self.db_path = os.path.join(os.getcwd(), "usuarios_db.json")
         if not os.path.exists(self.db_path):
-            # Usuario maestro por defecto
             with open(self.db_path, "w") as f:
                 json.dump({"admin": {"rol": "Master", "status": "Activo"}}, f)
 
     def listar_usuarios(self):
+        if not os.path.exists(self.db_path): return {}
         with open(self.db_path, "r") as f:
             return json.load(f)
-
-    def agregar_usuario(self, username, rol):
-        usuarios = self.listar_usuarios()
-        usuarios[username] = {"rol": rol, "status": "Activo"}
-        with open(self.db_path, "w") as f:
-            json.dump(usuarios, f, indent=4)
-        return True
