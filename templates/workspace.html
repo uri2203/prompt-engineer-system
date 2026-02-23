@@ -36,7 +36,7 @@
             </div>
 
             <button type="button" onclick="ejecutarMotor()" id="btn_ejecutar" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded shadow-lg shadow-blue-900/40 uppercase text-xs tracking-widest transition-all mt-4">
-                Compilar y Ejecutar Guion
+                Generar Pipeline Completo (Texto + CCTV)
             </button>
         </form>
 
@@ -51,12 +51,12 @@
 
         <form id="form_cctv" class="space-y-4 pb-6">
             <div class="flex flex-col">
-                <label class="label-blue block mb-2 text-xs">Prompt Visual (Inglés recomendado)</label>
-                <textarea id="input_prompt_visual" placeholder="Ej. A dark empty morgue corridor, flickering lights, strange shadow in the corner..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
+                <label class="label-blue block mb-2 text-xs">Prompt Visual (Auto-extraído de IA)</label>
+                <textarea id="input_prompt_visual" placeholder="Esperando inyección automática del generador de guiones..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
             </div>
 
             <button type="button" onclick="ejecutarCCTV()" id="btn_cctv" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
-                Generar Frame de Seguridad
+                Forzar Generación Manual
             </button>
         </form>
     </div>
@@ -83,7 +83,7 @@
             <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">
 > Sistema inicializado.
 > Silos herméticos en línea.
-> Seleccione los parámetros en el panel izquierdo e inicie la secuencia.
+> Pipeline automático activado. Esperando detonación.
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@ async function ejecutarMotor() {
     }
 
     btn.disabled = true;
-    btn.innerHTML = "PROCESANDO MATRIZ...";
+    btn.innerHTML = "PROCESANDO MATRIZ (FASE 1/2)...";
     btn.classList.add('bg-slate-600', 'cursor-not-allowed');
     btn.classList.remove('bg-blue-600', 'hover:bg-blue-500');
     
@@ -130,7 +130,28 @@ async function ejecutarMotor() {
         const data = await response.json();
 
         if(data.status === "success") {
-            consola.innerHTML = `<span class="text-blue-400">> [COMPILACIÓN EXITOSA]</span>\n\n<span class="text-slate-300">${data.data}</span>`;
+            const script = data.data;
+            consola.innerHTML = `<span class="text-blue-400">> [COMPILACIÓN EXITOSA]</span>\n\n<span class="text-slate-300">${script}</span>`;
+            
+            // AUTOMATIZACIÓN: Búsqueda del prompt visual en la respuesta
+            const regex = /\[PROMPT VISUAL PARA IA\]([\s\S]*?)\[TEXTO DE LOCUCIÓN\]/i;
+            const match = script.match(regex);
+
+            if (match && match[1]) {
+                const promptExtraido = match[1].trim();
+                document.getElementById('input_prompt_visual').value = promptExtraido;
+                
+                consola.innerHTML += `\n\n<span class="text-yellow-400">> [SISTEMA] Etiqueta de prompt visual detectada.</span>`;
+                consola.innerHTML += `\n<span class="text-yellow-400 animate-pulse">> [SISTEMA] Disparando salto automatizado al Motor CCTV...</span>`;
+                consola.scrollTop = consola.scrollHeight;
+                
+                // Dispara el segundo proceso automáticamente
+                await ejecutarCCTV();
+            } else {
+                consola.innerHTML += `\n\n<span class="text-red-400">> [ADVERTENCIA] No se detectó la etiqueta estricta [PROMPT VISUAL PARA IA]. Generación CCTV en modo manual.</span>`;
+                consola.scrollTop = consola.scrollHeight;
+            }
+
         } else {
             consola.innerHTML = `<span class="text-red-500">> [ERROR DEL SERVIDOR] ${data.message || "Falla desconocida"}</span>`;
         }
@@ -138,7 +159,7 @@ async function ejecutarMotor() {
         consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] No se pudo establecer conexión con el motor IA.</span>`;
     } finally {
         btn.disabled = false;
-        btn.innerHTML = "COMPILAR Y EJECUTAR GUION";
+        btn.innerHTML = "GENERAR PIPELINE COMPLETO (TEXTO + CCTV)";
         btn.classList.remove('bg-slate-600', 'cursor-not-allowed');
         btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
     }
@@ -157,14 +178,14 @@ async function ejecutarCCTV() {
     }
 
     btn.disabled = true;
-    btn.innerHTML = "PROCESANDO FRAME...";
+    btn.innerHTML = "PROCESANDO FRAME (FASE 2/2)...";
     btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
     btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
 
     visor.innerHTML = `
         <div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]">
             <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div>
-            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO CON CÁMARA SDXL...</span>
+            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO CON CÁMARA SDXL A 1920x1080...</span>
         </div>`;
 
     try {
@@ -184,9 +205,9 @@ async function ejecutarCCTV() {
                     <span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span>
                 </div>
                 <div class="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded">
-                    <span class="text-slate-300 font-mono text-[10px]">CAM 04 - 1920x1080</span>
+                    <span class="text-slate-300 font-mono text-[10px]">CAM 04 - 1920x1080 Full HD</span>
                 </div>`;
-            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080).</span>`;
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080). PIPELINE COMPLETADO.</span>`;
         } else {
             visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE VISUAL ]</span>`;
             consola.innerHTML += `\n<span class="text-red-500">> [ERROR RENDER] ${data.message}</span>`;
@@ -197,6 +218,10 @@ async function ejecutarCCTV() {
     } finally {
         consola.scrollTop = consola.scrollHeight;
         btn.disabled = false;
-        btn.innerHTML = "GENERAR FRAME DE SEGURIDAD";
+        btn.innerHTML = "FORZAR GENERACIÓN MANUAL";
         btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
-        btn.classList
+        btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+    }
+}
+</script>
+{% endblock %}
