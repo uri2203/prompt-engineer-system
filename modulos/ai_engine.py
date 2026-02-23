@@ -51,9 +51,9 @@ class AIEngine:
         for index, key in enumerate(llaves):
             try:
                 genai.configure(api_key=key)
-                # Identificador Absoluto para evitar Error 404
+                # Actualizado a Gemini 2.0 Flash según diagnóstico de consola
                 model = genai.GenerativeModel(
-                    model_name="models/gemini-1.5-flash-latest",
+                    model_name="models/gemini-2.0-flash",
                     system_instruction=system_instruction
                 )
                 response = model.generate_content(prompt_final)
