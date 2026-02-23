@@ -7,7 +7,6 @@ class BovedaManager:
         self._inicializar_db()
 
     def _inicializar_db(self):
-        # Mantiene la estructura completa sin borrar APIs anteriores
         if not os.path.exists(self.db_path) or os.path.getsize(self.db_path) == 0:
             self._guardar({
                 "gemini_keys": [],
@@ -23,7 +22,13 @@ class BovedaManager:
     def obtener_datos(self):
         try:
             with open(self.db_path, "r", encoding="utf-8") as f:
-                return json.load(f)
+                datos = json.load(f)
+                # Persistencia: Si la Bóveda está vacía, intenta leer del Servidor
+                if not datos.get("gemini_keys"):
+                    env_keys = os.environ.get("GEMINI_KEYS", "")
+                    if env_keys:
+                        datos["gemini_keys"] = [k.strip() for k in env_keys.split(",") if k.strip()]
+                return datos
         except Exception:
             return {"gemini_keys": [], "voice_api": "", "youtube_api": "", "tiktok_api": ""}
 
