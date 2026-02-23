@@ -111,6 +111,22 @@ def api_generate_script():
     resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
     return jsonify({"status": "success", "data": resultado})
 
+# --- NUEVA API DE GENERACIÓN VISUAL (CCTV) ---
+@app.route('/api/generate_image', methods=['POST'])
+@login_required
+def api_generate_image():
+    data = request.json
+    prompt_visual = data.get('prompt', '')
+    if not prompt_visual:
+        return jsonify({"status": "error", "message": "Prompt visual vacío."})
+        
+    resultado = ai_engine.generar_imagen_cctv(prompt_visual)
+    
+    if "ERROR" in resultado:
+        return jsonify({"status": "error", "message": resultado})
+        
+    return jsonify({"status": "success", "image_url": resultado})
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
