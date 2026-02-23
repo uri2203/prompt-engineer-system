@@ -5,11 +5,12 @@ from flask import Flask, render_template, request, jsonify
 # Importación de Silos
 try:
     from modulos.adn_manager import ADNManager
+    from modulos.ai_engine import AIEngine
     from modulos.auditoria import AuditoriaSystem
     from modulos.usuarios import UsuarioManager
     from modulos.bot_orquestador import PinpinelaOrchestrator
-except ImportError as e:
-    print(f"ERROR DE IMPORTACIÓN: {e}")
+except Exception as e:
+    print(f"ALERTA: Algunos módulos no cargaron: {e}")
 
 app = Flask(__name__)
 app.secret_key = "admin_secret_1978_secure"
@@ -20,7 +21,7 @@ logger = AuditoriaSystem()
 user_db = UsuarioManager()
 bot_pinpinela = PinpinelaOrchestrator()
 
-# --- RUTAS DE NAVEGACIÓN (Vínculos Directos) ---
+# --- RUTAS DE NAVEGACIÓN (EL MAPA DEL MENÚ) ---
 @app.route('/')
 def index(): return render_template('workspace.html', active_page='workspace')
 
@@ -36,22 +37,21 @@ def usuarios(): return render_template('usuarios.html', active_page='usuarios')
 @app.route('/mantenimiento')
 def mantenimiento(): return render_template('mantenimiento.html', active_page='mantenimiento')
 
-# --- API DE DATOS (EL MOTOR DE LAS TABLAS) ---
+@app.route('/configuracion')
+def configuracion(): return render_template('configuracion.html', active_page='configuracion')
+
+# --- API DE DATOS (PARA RELLENAR LAS TABLAS) ---
 @app.route('/api/get_usuarios')
 def get_usuarios():
-    # Retorna los datos directamente del silo de usuarios
     return jsonify(user_db.listar_usuarios())
 
 @app.route('/api/get_adn')
 def get_adn():
-    # Retorna el ADN guardado en el sistema
     return jsonify(adn_db.cargar_todo())
 
 @app.route('/api/get_logs')
 def get_logs():
-    # Retorna la bitácora de auditoría
     return jsonify({'logs': logger.leer_ultimos()})
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
