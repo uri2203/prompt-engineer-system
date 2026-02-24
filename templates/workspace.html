@@ -13,6 +13,7 @@
                 <label class="label-blue block mb-2">Silo de Marca (ADN)</label>
                 <select id="input_marca" class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none">
                     <option value="La Viuda">La Viuda (Terror Psicológico)</option>
+                    <option value="Monkygraff">Monkygraff (Documental Geopolítico)</option>
                 </select>
             </div>
 
@@ -257,7 +258,10 @@ async function ejecutarAudio() {
     const contenedor = document.getElementById('audio_contenedor');
     const badge = document.getElementById('badge_audio');
     const consola = document.getElementById('consola_salida');
+    
+    // Extracción dual: Narrativa + Silo
     const texto = document.getElementById('input_texto_locucion').value;
+    const marca = document.getElementById('input_marca').value;
 
     if(!texto) {
         consola.innerHTML += `\n<span class="text-red-500">> [SISTEMA VOCAL] Error: Matriz de texto vacía.</span>`;
@@ -278,7 +282,8 @@ async function ejecutarAudio() {
         const response = await fetch('/api/generate_audio', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ texto: texto })
+            // Inyección del payload con la marca para enrutamiento exacto
+            body: JSON.stringify({ texto: texto, marca: marca }) 
         });
         const data = await response.json();
 
