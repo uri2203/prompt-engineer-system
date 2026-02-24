@@ -5,31 +5,33 @@ from modulos.boveda import BovedaManager
 class VoiceEngine:
     def __init__(self):
         self.boveda = BovedaManager()
-        # ADN Vocal: La Viuda (Silo Hermético)
-        # Tono exigido: Voz latina, baja, cercana y confidencial.
-        # ID de voz por defecto (Ajustar al ID de la voz clonada en ElevenLabs)
-        self.voice_id = "pNInz6obbfIdGqcJhcBz" 
 
-    def generar_audio(self, texto_locucion):
+    def generar_audio(self, texto_locucion, marca="La Viuda"):
         datos_boveda = self.boveda.obtener_datos()
         api_key = datos_boveda.get('voice_api', '')
 
+        # ENRUTADOR DINÁMICO DE SILOS HERMÉTICOS
+        if marca == "Monkygraff":
+            # Silo: Documental Geopolítico / Análisis serio
+            voice_id = "PHKlYg202ODwQRa3Fxuo" 
+        else:
+            # Silo: La Viuda (Por defecto) / Terror Psicológico, tono bajo y confidencial
+            voice_id = "GTY55jD77hLBRrnQOhNk" 
+
         if not api_key:
             # MODO DE SIMULACIÓN (MOCKING) ACTIVADO
-            # Evita el colapso del pipeline si ElevenLabs no está configurado.
-            # Retorna un archivo WAV de calibración (silencio corto codificado) para validar el frontend.
             mock_wav_b64 = "UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA="
             return f"data:audio/wav;base64,{mock_wav_b64}"
 
         # BYPASS HACIA PRODUCCIÓN (ELEVENLABS REST API)
-        url = f"https://api.elevenlabs.io/v1/text-to-speech/{self.voice_id}"
+        url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
         headers = {
             "Accept": "audio/mpeg",
             "Content-Type": "application/json",
             "xi-api-key": api_key
         }
         
-        # Configuración acústica inyectada para forzar suspenso y disonancia (estabilidad baja)
+        # Configuración acústica inyectada
         payload = {
             "text": texto_locucion,
             "model_id": "eleven_multilingual_v2",
