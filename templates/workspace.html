@@ -36,7 +36,7 @@
             </div>
 
             <button type="button" onclick="ejecutarMotor()" id="btn_ejecutar" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded shadow-lg shadow-blue-900/40 uppercase text-xs tracking-widest transition-all mt-4">
-                Generar Pipeline Completo (Texto + CCTV)
+                Generar Pipeline Completo (Texto + CCTV + Voz)
             </button>
         </form>
 
@@ -49,28 +49,55 @@
             <p class="text-[10px] text-slate-500 font-mono mt-1">Renderizado Liminal 1920x1080 (16:9)</p>
         </header>
 
-        <form id="form_cctv" class="space-y-4 pb-6">
+        <form id="form_cctv" class="space-y-4 pb-6 border-b border-slate-800">
             <div class="flex flex-col">
                 <label class="label-blue block mb-2 text-xs">Prompt Visual (Auto-extraído de IA)</label>
-                <textarea id="input_prompt_visual" placeholder="Esperando inyección automática del generador de guiones..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
+                <textarea id="input_prompt_visual" placeholder="Esperando inyección automática..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
             </div>
-
             <button type="button" onclick="ejecutarCCTV()" id="btn_cctv" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
-                Forzar Generación Manual
+                Forzar Generación Visual
+            </button>
+        </form>
+
+        <header class="mt-6 mb-4">
+            <h2 class="text-lg font-black text-slate-300 tracking-tighter uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Motor de Locución
+            </h2>
+            <p class="text-[10px] text-slate-500 font-mono mt-1">Síntesis Neuronal (ElevenLabs)</p>
+        </header>
+
+        <form id="form_audio" class="space-y-4 pb-6">
+            <div class="flex flex-col">
+                <label class="label-blue block mb-2 text-xs">Texto Narrativo (Auto-extraído de IA)</label>
+                <textarea id="input_texto_locucion" placeholder="Esperando inyección automática..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[100px] resize-none"></textarea>
+            </div>
+            <button type="button" onclick="ejecutarAudio()" id="btn_audio" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
+                Forzar Generación Vocal
             </button>
         </form>
     </div>
 
     <div class="w-full lg:w-2/3 bg-[#0F1523] flex flex-col p-6 gap-6 h-full overflow-hidden">
         
-        <div class="w-full max-w-3xl mx-auto flex flex-col shrink-0">
-            <div class="flex justify-between items-center mb-2">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Video 01</h3>
-                <span class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+        <div class="w-full max-w-3xl mx-auto flex flex-col shrink-0 gap-4">
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Video 01</h3>
+                    <span class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+                </div>
+                <div id="cctv_visor" class="w-full aspect-video bg-black rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden relative shadow-inner">
+                    <span class="text-slate-700 font-mono text-sm tracking-widest">[ SIN SEÑAL DE VIDEO ]</span>
+                </div>
             </div>
-            
-            <div id="cctv_visor" class="w-full aspect-video bg-black rounded-lg border border-slate-800 flex items-center justify-center overflow-hidden relative shadow-inner">
-                <span class="text-slate-700 font-mono text-sm tracking-widest">[ SIN SEÑAL DE VIDEO ]</span>
+
+            <div class="bg-[#0B1120] border border-slate-800 rounded-lg p-4">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Audio 01</h3>
+                    <span id="badge_audio" class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+                </div>
+                <div id="audio_contenedor" class="w-full h-12 flex items-center justify-center bg-black border border-slate-800 rounded shadow-inner">
+                    <span class="text-slate-700 font-mono text-xs tracking-widest">[ SIN SEÑAL DE AUDIO ]</span>
+                </div>
             </div>
         </div>
 
@@ -79,11 +106,10 @@
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Consola de Salida</h3>
                 <span class="text-[9px] font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded">Log de Compilación</span>
             </div>
-            
             <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">
-> Sistema inicializado.
+> Sistema operativo inicializado.
 > Silos herméticos en línea.
-> Pipeline automático activado. Esperando detonación.
+> Pipeline automático (Texto + CCTV + Voz) en Standby. Esperando detonación.
             </div>
         </div>
     </div>
@@ -94,6 +120,9 @@
     .custom-scrollbar::-webkit-scrollbar-track { background: #0B1120; }
     .custom-scrollbar::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #334155; }
+    
+    /* Estilo del reproductor de audio nativo para integrarse al diseño Corporate Tech */
+    audio { filter: invert(90%) hue-rotate(180deg) grayscale(100%) contrast(1.5); height: 35px; outline: none; }
 </style>
 
 <script>
@@ -114,11 +143,11 @@ async function ejecutarMotor() {
     }
 
     btn.disabled = true;
-    btn.innerHTML = "PROCESANDO MATRIZ (FASE 1/2)...";
+    btn.innerHTML = "PROCESANDO MATRIZ (FASE 1/3)...";
     btn.classList.add('bg-slate-600', 'cursor-not-allowed');
     btn.classList.remove('bg-blue-600', 'hover:bg-blue-500');
     
-    consola.innerHTML = `> Inyectando ADN de [${payload.marca}]...\n> Calibrando formato para [${payload.longitud}]...\n> Contactando servidor Gemini...\n<span class="animate-pulse text-yellow-500">> Generando guion de alta retención...</span>`;
+    consola.innerHTML = `> Inyectando ADN de [${payload.marca}]...\n> Contactando servidor Gemini...\n<span class="animate-pulse text-yellow-500">> Generando guion de alta retención...</span>`;
 
     try {
         const response = await fetch('/api/generate_script', {
@@ -133,33 +162,38 @@ async function ejecutarMotor() {
             const script = data.data;
             consola.innerHTML = `<span class="text-blue-400">> [COMPILACIÓN EXITOSA]</span>\n\n<span class="text-slate-300">${script}</span>`;
             
-            // AUTOMATIZACIÓN: Búsqueda del prompt visual en la respuesta
-            const regex = /\[PROMPT VISUAL PARA IA\]([\s\S]*?)\[TEXTO DE LOCUCIÓN\]/i;
-            const match = script.match(regex);
+            // EXTRACCIÓN DUAL: Visual y Narrativa
+            const regexVisual = /\[PROMPT VISUAL PARA IA\]([\s\S]*?)\[TEXTO DE LOCUCIÓN\]/i;
+            const matchVisual = script.match(regexVisual);
+            
+            const regexLocucion = /\[TEXTO DE LOCUCIÓN\]([\s\S]*)/i;
+            const matchLocucion = script.match(regexLocucion);
 
-            if (match && match[1]) {
-                const promptExtraido = match[1].trim();
-                document.getElementById('input_prompt_visual').value = promptExtraido;
-                
+            if (matchVisual && matchVisual[1]) {
+                document.getElementById('input_prompt_visual').value = matchVisual[1].trim();
                 consola.innerHTML += `\n\n<span class="text-yellow-400">> [SISTEMA] Etiqueta de prompt visual detectada.</span>`;
-                consola.innerHTML += `\n<span class="text-yellow-400 animate-pulse">> [SISTEMA] Disparando salto automatizado al Motor CCTV...</span>`;
-                consola.scrollTop = consola.scrollHeight;
-                
-                // Dispara el segundo proceso automáticamente
-                await ejecutarCCTV();
-            } else {
-                consola.innerHTML += `\n\n<span class="text-red-400">> [ADVERTENCIA] No se detectó la etiqueta estricta [PROMPT VISUAL PARA IA]. Generación CCTV en modo manual.</span>`;
-                consola.scrollTop = consola.scrollHeight;
+            }
+            
+            if (matchLocucion && matchLocucion[1]) {
+                document.getElementById('input_texto_locucion').value = matchLocucion[1].trim();
+                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Matriz narrativa detectada y enrutada.</span>`;
             }
 
+            // EJECUCIÓN EN CASCADA
+            if (matchVisual) await ejecutarCCTV();
+            if (matchLocucion) await ejecutarAudio();
+
+            consola.innerHTML += `\n\n<span class="text-green-500 font-bold">> [SISTEMA CENTRAL] PIPELINE TOTAL COMPLETADO.</span>`;
+
         } else {
-            consola.innerHTML = `<span class="text-red-500">> [ERROR DEL SERVIDOR] ${data.message || "Falla desconocida"}</span>`;
+            consola.innerHTML = `<span class="text-red-500">> [ERROR DEL SERVIDOR] ${data.message}</span>`;
         }
     } catch (error) {
-        consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] No se pudo establecer conexión con el motor IA.</span>`;
+        consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] Falla al conectar con el motor de IA.</span>`;
     } finally {
+        consola.scrollTop = consola.scrollHeight;
         btn.disabled = false;
-        btn.innerHTML = "GENERAR PIPELINE COMPLETO (TEXTO + CCTV)";
+        btn.innerHTML = "GENERAR PIPELINE COMPLETO (TEXTO + CCTV + VOZ)";
         btn.classList.remove('bg-slate-600', 'cursor-not-allowed');
         btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
     }
@@ -171,21 +205,17 @@ async function ejecutarCCTV() {
     const consola = document.getElementById('consola_salida');
     const prompt = document.getElementById('input_prompt_visual').value;
 
-    if(!prompt) {
-        consola.innerHTML += `\n<span class="text-red-500">> [SISTEMA VISUAL] Error: Prompt visual vacío. Ingrese descripción de la escena.</span>`;
-        consola.scrollTop = consola.scrollHeight;
-        return;
-    }
+    if(!prompt) return;
 
     btn.disabled = true;
-    btn.innerHTML = "PROCESANDO FRAME (FASE 2/2)...";
+    btn.innerHTML = "PROCESANDO FRAME (FASE 2/3)...";
     btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
     btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
 
     visor.innerHTML = `
         <div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]">
             <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div>
-            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO CON CÁMARA SDXL A 1920x1080...</span>
+            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO MOTOR VISUAL...</span>
         </div>`;
 
     try {
@@ -194,7 +224,6 @@ async function ejecutarCCTV() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ prompt: prompt })
         });
-
         const data = await response.json();
 
         if(data.status === "success") {
@@ -207,18 +236,73 @@ async function ejecutarCCTV() {
                 <div class="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded">
                     <span class="text-slate-300 font-mono text-[10px]">CAM 04 - 1920x1080 Full HD</span>
                 </div>`;
-            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080). PIPELINE COMPLETADO.</span>`;
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080).</span>`;
         } else {
             visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE VISUAL ]</span>`;
             consola.innerHTML += `\n<span class="text-red-500">> [ERROR RENDER] ${data.message}</span>`;
         }
     } catch (error) {
         visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ PÉRDIDA DE SEÑAL ]</span>`;
-        consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE RED] Falla al conectar con el motor visual.</span>`;
     } finally {
         consola.scrollTop = consola.scrollHeight;
         btn.disabled = false;
-        btn.innerHTML = "FORZAR GENERACIÓN MANUAL";
+        btn.innerHTML = "FORZAR GENERACIÓN VISUAL";
+        btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
+        btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+    }
+}
+
+async function ejecutarAudio() {
+    const btn = document.getElementById('btn_audio');
+    const contenedor = document.getElementById('audio_contenedor');
+    const badge = document.getElementById('badge_audio');
+    const consola = document.getElementById('consola_salida');
+    const texto = document.getElementById('input_texto_locucion').value;
+
+    if(!texto) {
+        consola.innerHTML += `\n<span class="text-red-500">> [SISTEMA VOCAL] Error: Matriz de texto vacía.</span>`;
+        return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = "SINTETIZANDO VOZ (FASE 3/3)...";
+    btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
+    btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+
+    badge.className = "text-[9px] font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded animate-pulse";
+    badge.innerText = "SINTETIZANDO...";
+
+    contenedor.innerHTML = `<span class="text-blue-500 font-mono text-xs tracking-widest animate-pulse">PROCESANDO ONDAS NEURONALES...</span>`;
+
+    try {
+        const response = await fetch('/api/generate_audio', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ texto: texto })
+        });
+        const data = await response.json();
+
+        if(data.status === "success") {
+            contenedor.innerHTML = `
+                <audio controls class="w-full max-w-md">
+                    <source src="${data.audio_url}" type="audio/mpeg">
+                    Su navegador no soporta el elemento de audio.
+                </audio>`;
+            badge.className = "text-[9px] font-mono text-green-400 border border-green-900 bg-green-900/20 px-2 py-1 rounded";
+            badge.innerText = "ACTIVO";
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VOCAL] Renderizado de audio completado y empaquetado.</span>`;
+        } else {
+            contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ ERROR DE SÍNTESIS VOCAL ]</span>`;
+            badge.className = "text-[9px] font-mono text-red-400 border border-red-900 bg-red-900/20 px-2 py-1 rounded";
+            badge.innerText = "FALLO";
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR AUDIO] ${data.message}</span>`;
+        }
+    } catch (error) {
+        contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ PÉRDIDA DE ENLACE DE VOZ ]</span>`;
+    } finally {
+        consola.scrollTop = consola.scrollHeight;
+        btn.disabled = false;
+        btn.innerHTML = "FORZAR GENERACIÓN VOCAL";
         btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
         btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-white');
     }
