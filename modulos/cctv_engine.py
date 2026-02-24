@@ -1,6 +1,6 @@
-import google.generativeai as genai
-from modulos.boveda import BovedaManager
+import requests
 import base64
+from modulos.boveda import BovedaManager
 
 class CCTVEngine:
     def __init__(self):
@@ -20,31 +20,43 @@ class CCTVEngine:
 
         for index, key in enumerate(llaves):
             try:
-                genai.configure(api_key=key)
-                # Invocamos el motor visual nativo de Google
-                imagen_model = genai.ImageGenerationModel("imagen-3.0-generate-001")
+                # Bypass REST Directo (Inmune a versiones del SDK)
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={key}"
+                headers = {"Content-Type": "application/json"}
                 
-                # Renderizado estricto a 16:9 panorámico
-                resultado = imagen_model.generate_images(
-                    prompt=prompt_maestro,
-                    number_of_images=1,
-                    aspect_ratio="16:9",
-                    output_mime_type="image/jpeg"
-                )
+                # Payload estándar para la API Visual de Google
+                payload = {
+                    "instances": [{"prompt": prompt_maestro}],
+                    "parameters": {
+                        "sampleCount": 1,
+                        "aspectRatio": "16:9"
+                    }
+                }
                 
-                if resultado.images:
-                    # Empaquetado Base64 para inyección directa en el frontend (sin uso de disco local)
-                    imagen_b64 = base64.b64encode(resultado.images[0].image.image_bytes).decode('utf-8')
-                    return f"data:image/jpeg;base64,{imagen_b64}"
+                response = requests.post(url, headers=headers, json=payload)
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    if 'predictions' in data and len(data['predictions']) > 0:
+                        # Extraemos la imagen codificada en Base64 devuelta por el servidor REST
+                        imagen_b64 = data['predictions'][0].get('bytesBase64Encoded', '')
+                        if imagen_b64:
+                            return f"data:image/jpeg;base64,{imagen_b64}"
+                        else:
+                            errores_detallados.append(f"> Tanque {index + 1}: El servidor no devolvió la cadena Base64.")
+                    else:
+                        errores_detallados.append(f"> Tanque {index + 1}: El servidor de Google no devolvió datos visuales.")
                 else:
-                    errores_detallados.append(f"> Tanque {index + 1}: El servidor de Google no devolvió datos visuales.")
+                    error_json = response.json()
+                    error_msg = error_json.get('error', {}).get('message', response.text)
+                    
+                    if "429" in str(response.status_code):
+                        errores_detallados.append(f"> Tanque {index + 1}: CUOTA AGOTADA (429 REST)")
+                    else:
+                        errores_detallados.append(f"> Tanque {index + 1}: ERROR REST -> {error_msg}")
                     
             except Exception as e:
-                mensaje_error = str(e).replace(key, f"[*TANQUE_{index+1}*]")
-                if "429" in mensaje_error:
-                    errores_detallados.append(f"> Tanque {index + 1}: CUOTA AGOTADA (429)")
-                else:
-                    errores_detallados.append(f"> Tanque {index + 1}: {mensaje_error}")
+                errores_detallados.append(f"> Tanque {index + 1}: FALLA LOCAL -> {str(e)}")
                 continue
                 
-        return "ERROR DE RENDERIZADO VISUAL (GOOGLE IMAGEN):\n" + "\n".join(errores_detallados)
+        return "ERROR DE RENDERIZADO VISUAL (REST BYPASS):\n" + "\n".join(errores_detallados)
