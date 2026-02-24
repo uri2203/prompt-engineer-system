@@ -1,5 +1,6 @@
 import requests
 import base64
+import urllib.parse
 from modulos.boveda import BovedaManager
 
 class CCTVEngine:
@@ -10,58 +11,29 @@ class CCTVEngine:
         self.negative_prompt = "3d render, illustration, monsters, gore, blood, cinematic lighting, professional photography, oversaturated, clean, text, watermark"
 
     def generar_imagen(self, prompt_visual):
-        llaves = self.boveda.obtener_llaves()
-        if not llaves:
-            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda ni en el Entorno."
-        
         # Inyectamos la estética estricta y limitantes al prompt de la IA de texto
         prompt_maestro = f"{self.estetica_base} {prompt_visual}. Avoid: {self.negative_prompt}"
         errores_detallados = []
 
-        for index, key in enumerate(llaves):
-            try:
-                # Bypass REST Directo hacia el modelo unificado 2.5 Flash
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
-                headers = {"Content-Type": "application/json"}
-                
-                # Payload configurado para modalidad visual nativa
-                payload = {
-                    "contents": [{"parts": [{"text": prompt_maestro}]}],
-                    "generationConfig": {
-                        "responseModalities": ["IMAGE"]
-                    }
-                }
-                
-                response = requests.post(url, headers=headers, json=payload)
-                
-                if response.status_code == 200:
-                    data = response.json()
-                    try:
-                        # Extraemos la imagen codificada en Base64 de la matriz de partes
-                        partes = data['candidates'][0]['content']['parts']
-                        imagen_b64 = ""
-                        for part in partes:
-                            if 'inlineData' in part:
-                                imagen_b64 = part['inlineData']['data']
-                                break
-                        
-                        if imagen_b64:
-                            return f"data:image/jpeg;base64,{imagen_b64}"
-                        else:
-                            errores_detallados.append(f"> Tanque {index + 1}: El servidor no devolvió la cadena Base64 en inlineData.")
-                    except (KeyError, IndexError):
-                        errores_detallados.append(f"> Tanque {index + 1}: El servidor de Google devolvió una estructura JSON inesperada.")
-                else:
-                    error_json = response.json()
-                    error_msg = error_json.get('error', {}).get('message', response.text)
+        try:
+            # HARD BYPASS: Enrutamiento a infraestructura abierta (Pollinations)
+            # Evade el error 402 (Replicate) y el bloqueo de modalidad (Google)
+            prompt_codificado = urllib.parse.quote(prompt_maestro)
+            
+            # Forzamos resolución panorámica estricta 1920x1080 (16:9)
+            url = f"https://image.pollinations.ai/prompt/{prompt_codificado}?width=1920&height=1080&nologo=true"
+            
+            # Petición HTTP pura sin autenticación ni barreras de pago
+            response = requests.get(url)
+            
+            if response.status_code == 200:
+                # Empaquetamos los bytes en Base64 para inyección directa en el frontend
+                imagen_b64 = base64.b64encode(response.content).decode('utf-8')
+                return f"data:image/jpeg;base64,{imagen_b64}"
+            else:
+                errores_detallados.append(f"> BYPASS FALLIDO: El servidor abierto rechazó la conexión (HTTP {response.status_code}).")
                     
-                    if "429" in str(response.status_code):
-                        errores_detallados.append(f"> Tanque {index + 1}: CUOTA AGOTADA (429 REST)")
-                    else:
-                        errores_detallados.append(f"> Tanque {index + 1}: ERROR REST -> {error_msg}")
-                    
-            except Exception as e:
-                errores_detallados.append(f"> Tanque {index + 1}: FALLA LOCAL -> {str(e)}")
-                continue
+        except Exception as e:
+            errores_detallados.append(f"> ERROR CRÍTICO LOCAL -> {str(e)}")
                 
-        return "ERROR DE RENDERIZADO VISUAL (REST BYPASS):\n" + "\n".join(errores_detallados)
+        return "ERROR DE RENDERIZADO VISUAL (HARD BYPASS):\n" + "\n".join(errores_detallados)
