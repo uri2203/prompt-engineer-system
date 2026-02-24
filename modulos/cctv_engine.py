@@ -6,7 +6,7 @@ class CCTVEngine:
     def __init__(self):
         self.boveda = BovedaManager()
         # ADN Visual: La Viuda (Silo Hermético)
-        self.estetica_base = "CCTV security camera footage, liminal space, psychological horror, forensic realism, low light, grainy, vhs glitch, realistic, photorealistic."
+        self.estetica_base = "CCTV security camera footage, liminal space, psychological horror, forensic realism, low light, grainy, vhs glitch, realistic, photorealistic. Strictly 16:9 aspect ratio."
         self.negative_prompt = "3d render, illustration, monsters, gore, blood, cinematic lighting, professional photography, oversaturated, clean, text, watermark"
 
     def generar_imagen(self, prompt_visual):
@@ -20,16 +20,15 @@ class CCTVEngine:
 
         for index, key in enumerate(llaves):
             try:
-                # Bypass REST Directo (Inmune a versiones del SDK)
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={key}"
+                # Bypass REST Directo hacia el modelo unificado 2.5 Flash
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
                 headers = {"Content-Type": "application/json"}
                 
-                # Payload estándar para la API Visual de Google
+                # Payload configurado para modalidad visual nativa
                 payload = {
-                    "instances": [{"prompt": prompt_maestro}],
-                    "parameters": {
-                        "sampleCount": 1,
-                        "aspectRatio": "16:9"
+                    "contents": [{"parts": [{"text": prompt_maestro}]}],
+                    "generationConfig": {
+                        "responseModalities": ["IMAGE"]
                     }
                 }
                 
@@ -37,15 +36,21 @@ class CCTVEngine:
                 
                 if response.status_code == 200:
                     data = response.json()
-                    if 'predictions' in data and len(data['predictions']) > 0:
-                        # Extraemos la imagen codificada en Base64 devuelta por el servidor REST
-                        imagen_b64 = data['predictions'][0].get('bytesBase64Encoded', '')
+                    try:
+                        # Extraemos la imagen codificada en Base64 de la matriz de partes
+                        partes = data['candidates'][0]['content']['parts']
+                        imagen_b64 = ""
+                        for part in partes:
+                            if 'inlineData' in part:
+                                imagen_b64 = part['inlineData']['data']
+                                break
+                        
                         if imagen_b64:
                             return f"data:image/jpeg;base64,{imagen_b64}"
                         else:
-                            errores_detallados.append(f"> Tanque {index + 1}: El servidor no devolvió la cadena Base64.")
-                    else:
-                        errores_detallados.append(f"> Tanque {index + 1}: El servidor de Google no devolvió datos visuales.")
+                            errores_detallados.append(f"> Tanque {index + 1}: El servidor no devolvió la cadena Base64 en inlineData.")
+                    except (KeyError, IndexError):
+                        errores_detallados.append(f"> Tanque {index + 1}: El servidor de Google devolvió una estructura JSON inesperada.")
                 else:
                     error_json = response.json()
                     error_msg = error_json.get('error', {}).get('message', response.text)
