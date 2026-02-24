@@ -16,28 +16,41 @@ class BovedaManager:
             })
 
     def _guardar(self, datos):
-        with open(self.db_path, "w", encoding="utf-8") as f:
-            json.dump(datos, f, indent=4)
+        try:
+            with open(self.db_path, "w", encoding="utf-8") as f:
+                json.dump(datos, f, indent=4)
+        except Exception:
+            pass # Falla silenciosa permitida para entornos de nube estrictos
 
     def obtener_datos(self):
+        datos_locales = {"gemini_keys": [], "voice_api": "", "youtube_api": "", "tiktok_api": ""}
+        
+        # 1. Recuperación de caché efímera (Sesión Activa de UI)
         try:
-            datos = {"gemini_keys": [], "voice_api": "", "youtube_api": "", "tiktok_api": ""}
             if os.path.exists(self.db_path) and os.path.getsize(self.db_path) > 0:
                 with open(self.db_path, "r", encoding="utf-8") as f:
-                    datos = json.load(f)
-            
-            # BLINDAJE RENDER: Recuperación forzada de Variables de Entorno
-            env_keys = os.environ.get("GEMINI_KEYS", "")
-            if env_keys and (not datos.get("gemini_keys") or len(datos.get("gemini_keys")) == 0):
-                datos["gemini_keys"] = [k.strip() for k in env_keys.split(",") if k.strip()]
-            
-            if not datos.get("voice_api"): datos["voice_api"] = os.environ.get("VOICE_API", "")
-            if not datos.get("youtube_api"): datos["youtube_api"] = os.environ.get("YOUTUBE_API", "")
-            if not datos.get("tiktok_api"): datos["tiktok_api"] = os.environ.get("TIKTOK_API", "")
-                
-            return datos
-        except Exception as e:
-            return {"gemini_keys": [], "voice_api": "", "youtube_api": "", "tiktok_api": ""}
+                    datos_locales = json.load(f)
+        except Exception:
+            pass
+
+        # 2. INYECCIÓN ABSOLUTA (Variables de Entorno)
+        # Las variables del servidor siempre tendrán prioridad y sobrevivirán a cualquier reinicio.
+        env_gemini = os.environ.get("GEMINI_KEYS", "")
+        env_voice = os.environ.get("VOICE_API", "")
+        env_youtube = os.environ.get("YOUTUBE_API", "")
+        env_tiktok = os.environ.get("TIKTOK_API", "")
+
+        if env_gemini:
+            # Soporta múltiples llaves separadas por coma
+            datos_locales["gemini_keys"] = [k.strip() for k in env_gemini.split(",") if k.strip()]
+        if env_voice:
+            datos_locales["voice_api"] = env_voice.strip()
+        if env_youtube:
+            datos_locales["youtube_api"] = env_youtube.strip()
+        if env_tiktok:
+            datos_locales["tiktok_api"] = env_tiktok.strip()
+
+        return datos_locales
 
     def obtener_llaves(self):
         datos = self.obtener_datos()
