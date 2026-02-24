@@ -5,7 +5,7 @@ from modulos.usuarios import UsuarioManager
 from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
 from modulos.cctv_engine import CCTVEngine  
-from modulos.voice_engine import VoiceEngine  # Importación del nuevo silo vocal
+from modulos.voice_engine import VoiceEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
@@ -14,7 +14,7 @@ user_db = UsuarioManager()
 boveda_db = BovedaManager()
 ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
-voice_engine = VoiceEngine() # Instanciación del motor de voz
+voice_engine = VoiceEngine()
 
 def login_required(f):
     @wraps(f)
@@ -129,16 +129,17 @@ def api_generate_image():
         
     return jsonify({"status": "success", "image_url": resultado})
 
-# --- API DE GENERACIÓN VOCAL (Aislada a voice_engine) ---
 @app.route('/api/generate_audio', methods=['POST'])
 @login_required
 def api_generate_audio():
     data = request.json
     texto_locucion = data.get('texto', '')
+    marca = data.get('marca', 'La Viuda') # Extracción dinámica de silo
+    
     if not texto_locucion:
         return jsonify({"status": "error", "message": "Texto de locución vacío."})
         
-    resultado = voice_engine.generar_audio(texto_locucion)
+    resultado = voice_engine.generar_audio(texto_locucion, marca) # Enrutamiento
     
     if "ERROR" in resultado:
         return jsonify({"status": "error", "message": resultado})
