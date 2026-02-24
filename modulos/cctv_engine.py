@@ -9,13 +9,13 @@ class CCTVEngine:
         self.negative_prompt = "3d render, illustration, monsters, gore, blood, cinematic lighting, professional photography, oversaturated, clean, text, watermark"
 
     def generar_imagen(self, prompt_visual):
-        # MODO DE SIMULACIÓN (MOCKING) ACTIVADO
+        # MODO DE SIMULACIÓN (MOCKING) ACTIVADO - SEÑAL DE PRUEBA DE ALTA VISIBILIDAD
         # El sistema evade conexiones externas defectuosas para garantizar la continuidad del Pipeline.
         
         try:
-            # Cadena Base64 real de una imagen de calibración (Píxel oscuro).
-            # El frontend (CSS) se encargará de escalarla al formato 16:9 de la interfaz.
-            mock_b64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
+            # Cadena Base64 real de una imagen de calibración (Píxel Rojo Puro).
+            # El frontend (CSS) se encargará de escalarla al formato panorámico 16:9 de la interfaz.
+            mock_b64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
             
             # Retorno instantáneo y garantizado sin consumo de red ni de cuotas.
             return f"data:image/png;base64,{mock_b64}"
