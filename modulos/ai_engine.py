@@ -5,7 +5,7 @@ class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
         
-        # ADN Maestro: La Viuda (Silo Hermético)
+        # ADN Maestro: La Viuda (Silo Hermético 1)
         self.adn_la_viuda = """
         [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
         ERES UN ESCRITOR EXPERTO EN TERROR PSICOLÓGICO INMERSIVO Y RETENCIÓN EXTREMA PARA YOUTUBE. 
@@ -32,13 +32,44 @@ class AIEngine:
         DIRECTRICES VISUALES: 16:9 (1920x1080).
         """
 
+        # ADN Maestro: Monkygraff (Silo Hermético 2)
+        self.adn_monkygraff = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "MONKYGRAFF"]
+        ERES UN ANALISTA GEOPOLÍTICO EXPERTO Y ESTRATEGA DE RETENCIÓN EXTREMA PARA YOUTUBE.
+        TU OBJETIVO ES ENTREGAR ANÁLISIS TÁCTICO DE ALTO IMPACTO BASADO EN HECHOS Y MANTENER AL ESPECTADOR ENGANCHADO MEDIANTE LA DENSIDAD DE INFORMACIÓN.
+
+        REGLAS DE FORMATO Y ESTILO (INQUEBRANTABLES):
+        1. TONO GEOPOLÍTICO: Informativo, serio, seco, conciso y basado en hechos. Sin saludos, sin relleno ni introducciones lentas.
+        2. ESTRATEGIA DE RETENCIÓN: Aplica la regla del "Vacío de Información" extremo en los ganchos iniciales.
+        3. DENSIDAD INFORMATIVA: Alto nivel técnico, deducción lógica y datos precisos. Prioriza la curiosidad intelectual.
+        4. BLINDAJE DE MONETIZACIÓN: Cumple estrictamente las normas de la comunidad de YouTube (evitar lenguaje prohibido o violencia gráfica excesiva).
+
+        REGLA DE AUTOMATIZACIÓN (CRÍTICA PARA EL PIPELINE):
+        Tu respuesta DEBE iniciar estrictamente con un prompt visual en inglés para un motor de renderizado, y luego el guion en español. Es OBLIGATORIO usar estas etiquetas exactas para que el sistema te pueda leer:
+        
+        [PROMPT VISUAL PARA IA]
+        (Escribe aquí un solo párrafo en inglés describiendo la escena con estética estricta de "High-Contrast Hazard Overlay": alto contraste, interfaz táctica de alerta, colores de advertencia, urgencia informativa, 1920x1080)
+        [TEXTO DE LOCUCIÓN]
+        (Inicia aquí tu guion narrativo en español de análisis geopolítico, directo y sin preámbulos)
+
+        DIRECTRICES VISUALES: 16:9 (1920x1080).
+        """
+
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras"):
         llaves = self.boveda.obtener_llaves()
         
         if not llaves:
             return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda ni en el Entorno."
 
-        system_instruction = self.adn_la_viuda if marca.lower() == "la viuda" else ""
+        # ENRUTADOR DINÁMICO DE SILOS
+        marca_lower = marca.lower()
+        if "viuda" in marca_lower:
+            system_instruction = self.adn_la_viuda
+        elif "monkygraff" in marca_lower:
+            system_instruction = self.adn_monkygraff
+        else:
+            system_instruction = self.adn_la_viuda # Fallback de seguridad
+
         prompt_final = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}"
 
         modelos_prioridad = [
