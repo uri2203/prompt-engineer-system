@@ -4,7 +4,6 @@ import time
 from PIL import Image
 
 # BLINDAJE DE INFRAESTRUCTURA (MONKEY PATCH)
-# Resuelve la incompatibilidad estricta entre MoviePy 1.0.3 y Pillow 10+ en la nube de Render.
 if not hasattr(Image, 'ANTIALIAS'):
     try:
         Image.ANTIALIAS = Image.Resampling.LANCZOS
@@ -16,7 +15,6 @@ from moviepy.editor import VideoFileClip, ImageClip, AudioFileClip, concatenate_
 class VideoEngine:
     def __init__(self):
         self.workspace_dir = os.getcwd()
-        # Rutas dinámicas para Assets inmutables (Intros/Outros) y Renders temporales
         self.assets_dir = os.path.join(self.workspace_dir, "static", "assets")
         self.temp_dir = os.path.join(self.workspace_dir, "static", "temp")
         self._inicializar_directorios()
@@ -28,71 +26,67 @@ class VideoEngine:
             os.makedirs(os.path.join(self.assets_dir, marca), exist_ok=True)
 
     def _limpiar_b64(self, b64_string):
-        """Remueve las cabeceras URI de los strings de telemetría del Frontend."""
         if "," in b64_string:
             return b64_string.split(",")[1]
         return b64_string
 
     def ensamblar_pipeline(self, marca, img_b64, audio_b64):
         try:
-            # Normalización del silo hermético
             marca_folder = marca.lower().replace(" ", "_")
             timestamp = int(time.time())
             
-            # 1. Preparación de Rutas Físicas
+            # Rutas
             temp_img = os.path.join(self.temp_dir, f"frame_{timestamp}.png")
             temp_audio = os.path.join(self.temp_dir, f"voz_{timestamp}.mp3")
             output_file = os.path.join(self.temp_dir, f"render_final_{timestamp}.mp4")
             output_url = f"/static/temp/render_final_{timestamp}.mp4"
 
-            # 2. Decodificación de Matrices (Base64 -> Físico)
+            # Decodificación
             with open(temp_img, "wb") as fh:
                 fh.write(base64.b64decode(self._limpiar_b64(img_b64)))
             with open(temp_audio, "wb") as fh:
                 fh.write(base64.b64decode(self._limpiar_b64(audio_b64)))
 
-            # Rutas de Hook/Intro y Outro
             intro_path = os.path.join(self.assets_dir, marca_folder, "intro.mp4")
             outro_path = os.path.join(self.assets_dir, marca_folder, "outro.mp4")
 
             clips_a_unir = []
+            
+            # TÁCTICA DE OPTIMIZACIÓN DE RECURSOS (NUBE GRATUITA)
+            fps_optimo = 5 # Drástica reducción de carga en RAM (Suficiente para estáticos)
 
-            # 3. Ensamblaje: FASE A (Hook de Inicio / Presentación)
+            # Fase A (Intro)
             if os.path.exists(intro_path):
-                intro_clip = VideoFileClip(intro_path)
-                # Forzar 1920x1080 para evitar colapsos por diferencias de formato
-                intro_clip = intro_clip.resize((1920, 1080))
+                intro_clip = VideoFileClip(intro_path).resize((1920, 1080))
                 clips_a_unir.append(intro_clip)
 
-            # 4. Ensamblaje: FASE B (Cuerpo IA: Imagen CCTV + Clonación ElevenLabs)
+            # Fase B (Cuerpo)
             audio_clip = AudioFileClip(temp_audio)
-            # Redimensionado estricto al estándar de YouTube (16:9) y ajuste de duración
             main_clip = ImageClip(temp_img).resize((1920, 1080)).set_duration(audio_clip.duration)
             main_clip = main_clip.set_audio(audio_clip)
-            main_clip = main_clip.set_fps(24) # FPS cinematográfico estándar
+            main_clip = main_clip.set_fps(fps_optimo)
             clips_a_unir.append(main_clip)
 
-            # 5. Ensamblaje: FASE C (Outro / Llamado a la Acción)
+            # Fase C (Outro)
             if os.path.exists(outro_path):
-                outro_clip = VideoFileClip(outro_path)
-                outro_clip = outro_clip.resize((1920, 1080))
+                outro_clip = VideoFileClip(outro_path).resize((1920, 1080))
                 clips_a_unir.append(outro_clip)
 
-            # 6. Compilación Final
+            # Compilación
             video_final = concatenate_videoclips(clips_a_unir, method="compose")
             
-            # Renderizado (Preset ultrafast para optimizar el CPU de Render)
+            # Renderizado Estratégico para CPU de 0.1 Cores
             video_final.write_videofile(
                 output_file, 
-                fps=24, 
+                fps=fps_optimo, 
                 codec="libx264", 
                 audio_codec="aac", 
                 preset="ultrafast", 
-                threads=4,
+                threads=1, # Obligatorio para evitar congelamiento del contenedor
                 logger=None
             )
 
-            # 7. Liberación de RAM y limpieza de temporales residuales
+            # Limpieza
             video_final.close()
             audio_clip.close()
             if os.path.exists(temp_img): os.remove(temp_img)
