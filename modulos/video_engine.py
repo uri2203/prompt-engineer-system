@@ -1,6 +1,16 @@
 import os
 import base64
 import time
+from PIL import Image
+
+# BLINDAJE DE INFRAESTRUCTURA (MONKEY PATCH)
+# Resuelve la incompatibilidad estricta entre MoviePy 1.0.3 y Pillow 10+ en la nube de Render.
+if not hasattr(Image, 'ANTIALIAS'):
+    try:
+        Image.ANTIALIAS = Image.Resampling.LANCZOS
+    except AttributeError:
+        Image.ANTIALIAS = Image.LANCZOS
+
 from moviepy.editor import VideoFileClip, ImageClip, AudioFileClip, concatenate_videoclips
 
 class VideoEngine:
