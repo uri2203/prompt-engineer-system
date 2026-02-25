@@ -37,7 +37,7 @@
             </div>
 
             <button type="button" onclick="ejecutarMotor()" id="btn_ejecutar" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded shadow-lg shadow-blue-900/40 uppercase text-xs tracking-widest transition-all mt-4">
-                Generar Pipeline Completo (Texto + CCTV + Voz)
+                Detonar Pipeline Total (Texto > Img > Voz > MP4)
             </button>
         </form>
 
@@ -55,9 +55,6 @@
                 <label class="label-blue block mb-2 text-xs">Prompt Visual (Auto-extraído de IA)</label>
                 <textarea id="input_prompt_visual" placeholder="Esperando inyección automática..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[80px] resize-none"></textarea>
             </div>
-            <button type="button" onclick="ejecutarCCTV()" id="btn_cctv" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
-                Forzar Generación Visual
-            </button>
         </form>
 
         <header class="mt-6 mb-4">
@@ -72,9 +69,6 @@
                 <label class="label-blue block mb-2 text-xs">Texto Narrativo (Auto-extraído de IA)</label>
                 <textarea id="input_texto_locucion" placeholder="Esperando inyección automática..." class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none min-h-[100px] resize-none"></textarea>
             </div>
-            <button type="button" onclick="ejecutarAudio()" id="btn_audio" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-black py-3 rounded border border-slate-600 uppercase text-[10px] tracking-widest transition-all">
-                Forzar Generación Vocal
-            </button>
         </form>
     </div>
 
@@ -91,13 +85,24 @@
                 </div>
             </div>
 
-            <div class="bg-[#0B1120] border border-slate-800 rounded-lg p-4">
-                <div class="flex justify-between items-center mb-3">
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Audio 01</h3>
-                    <span id="badge_audio" class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+            <div class="bg-[#0B1120] border border-slate-800 rounded-lg p-4 flex items-center justify-between">
+                <div class="flex-1 mr-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Canal de Audio 01</h3>
+                        <span id="badge_audio" class="text-[9px] font-mono text-slate-500 border border-slate-700 bg-slate-800/50 px-2 py-1 rounded">ESTADO: STANDBY</span>
+                    </div>
+                    <div id="audio_contenedor" class="w-full h-12 flex items-center justify-center bg-black border border-slate-800 rounded shadow-inner">
+                        <span class="text-slate-700 font-mono text-xs tracking-widest">[ SIN SEÑAL DE AUDIO ]</span>
+                    </div>
                 </div>
-                <div id="audio_contenedor" class="w-full h-12 flex items-center justify-center bg-black border border-slate-800 rounded shadow-inner">
-                    <span class="text-slate-700 font-mono text-xs tracking-widest">[ SIN SEÑAL DE AUDIO ]</span>
+                
+                <div class="w-1/3 border-l border-slate-800 pl-4 flex flex-col justify-center items-center">
+                    <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 text-center">Motor de Ensamblaje</h3>
+                    <div id="render_btn_container" class="w-full">
+                        <button disabled class="w-full bg-slate-900 border border-slate-700 text-slate-600 font-mono text-[10px] py-2 rounded cursor-not-allowed">
+                            ESPERANDO ASSETS
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,8 +114,8 @@
             </div>
             <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">
 > Sistema operativo inicializado.
-> Silos herméticos en línea.
-> Pipeline automático (Texto + CCTV + Voz) en Standby. Esperando detonación.
+> Motor FFmpeg enrutado.
+> Pipeline automático (Texto > Img > Voz > MP4) en Standby. Esperando detonación.
             </div>
         </div>
     </div>
@@ -121,16 +126,24 @@
     .custom-scrollbar::-webkit-scrollbar-track { background: #0B1120; }
     .custom-scrollbar::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #334155; }
-    
-    /* Estilo del reproductor de audio nativo para integrarse al diseño Corporate Tech */
     audio { filter: invert(90%) hue-rotate(180deg) grayscale(100%) contrast(1.5); height: 35px; outline: none; }
 </style>
 
 <script>
+// Variables globales para el ensamblaje
+let currentImageB64 = "";
+let currentAudioB64 = "";
+
 async function ejecutarMotor() {
     const btn = document.getElementById('btn_ejecutar');
     const consola = document.getElementById('consola_salida');
+    const renderBtnContainer = document.getElementById('render_btn_container');
     
+    // Resetear variables y botones
+    currentImageB64 = "";
+    currentAudioB64 = "";
+    renderBtnContainer.innerHTML = `<button disabled class="w-full bg-slate-900 border border-slate-700 text-slate-600 font-mono text-[10px] py-2 rounded cursor-not-allowed">ESPERANDO ASSETS</button>`;
+
     const payload = {
         marca: document.getElementById('input_marca').value,
         longitud: document.getElementById('input_longitud').value,
@@ -139,16 +152,16 @@ async function ejecutarMotor() {
     };
 
     if(!payload.contexto || !payload.peticion) {
-        consola.innerHTML = `<span class="text-red-500">> [ERROR CRÍTICO] Campos de contexto o petición vacíos. Imposible compilar.</span>`;
+        consola.innerHTML = `<span class="text-red-500">> [ERROR CRÍTICO] Campos vacíos. Imposible compilar.</span>`;
         return;
     }
 
     btn.disabled = true;
-    btn.innerHTML = "PROCESANDO MATRIZ (FASE 1/3)...";
+    btn.innerHTML = "PROCESANDO MATRIZ (FASE 1/4)...";
     btn.classList.add('bg-slate-600', 'cursor-not-allowed');
     btn.classList.remove('bg-blue-600', 'hover:bg-blue-500');
     
-    consola.innerHTML = `> Inyectando ADN de [${payload.marca}]...\n> Contactando servidor Gemini...\n<span class="animate-pulse text-yellow-500">> Generando guion de alta retención...</span>`;
+    consola.innerHTML = `> Inyectando ADN de [${payload.marca}]...\n> Contactando IA...`;
 
     try {
         const response = await fetch('/api/generate_script', {
@@ -156,68 +169,55 @@ async function ejecutarMotor() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(payload)
         });
-
         const data = await response.json();
 
         if(data.status === "success") {
             const script = data.data;
             consola.innerHTML = `<span class="text-blue-400">> [COMPILACIÓN EXITOSA]</span>\n\n<span class="text-slate-300">${script}</span>`;
             
-            // EXTRACCIÓN DUAL: Visual y Narrativa
-            const regexVisual = /\[PROMPT VISUAL PARA IA\]([\s\S]*?)\[TEXTO DE LOCUCIÓN\]/i;
-            const matchVisual = script.match(regexVisual);
-            
-            const regexLocucion = /\[TEXTO DE LOCUCIÓN\]([\s\S]*)/i;
-            const matchLocucion = script.match(regexLocucion);
+            const matchVisual = script.match(/\[PROMPT VISUAL PARA IA\]([\s\S]*?)\[TEXTO DE LOCUCIÓN\]/i);
+            const matchLocucion = script.match(/\[TEXTO DE LOCUCIÓN\]([\s\S]*)/i);
 
             if (matchVisual && matchVisual[1]) {
                 document.getElementById('input_prompt_visual').value = matchVisual[1].trim();
-                consola.innerHTML += `\n\n<span class="text-yellow-400">> [SISTEMA] Etiqueta de prompt visual detectada.</span>`;
+                consola.innerHTML += `\n\n<span class="text-yellow-400">> [SISTEMA] Disparando Fase 2 (CCTV)...</span>`;
+                await ejecutarCCTV();
             }
             
             if (matchLocucion && matchLocucion[1]) {
                 document.getElementById('input_texto_locucion').value = matchLocucion[1].trim();
-                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Matriz narrativa detectada y enrutada.</span>`;
+                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Disparando Fase 3 (Locución)...</span>`;
+                await ejecutarAudio();
             }
 
-            // EJECUCIÓN EN CASCADA
-            if (matchVisual) await ejecutarCCTV();
-            if (matchLocucion) await ejecutarAudio();
-
-            consola.innerHTML += `\n\n<span class="text-green-500 font-bold">> [SISTEMA CENTRAL] PIPELINE TOTAL COMPLETADO.</span>`;
+            // FASE 4: ENSAMBLAJE AUTOMÁTICO
+            if(currentImageB64 && currentAudioB64) {
+                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Assets recolectados. Disparando Fase 4 (Ensamblaje FFmpeg)...</span>`;
+                await ejecutarEnsamblaje();
+            }
 
         } else {
-            consola.innerHTML = `<span class="text-red-500">> [ERROR DEL SERVIDOR] ${data.message}</span>`;
+            consola.innerHTML = `<span class="text-red-500">> [ERROR] ${data.message}</span>`;
         }
     } catch (error) {
-        consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] Falla al conectar con el motor de IA.</span>`;
+        consola.innerHTML = `<span class="text-red-500">> [ERROR DE RED] Falla al conectar.</span>`;
     } finally {
         consola.scrollTop = consola.scrollHeight;
         btn.disabled = false;
-        btn.innerHTML = "GENERAR PIPELINE COMPLETO (TEXTO + CCTV + VOZ)";
+        btn.innerHTML = "DETONAR PIPELINE TOTAL (TEXTO > IMG > VOZ > MP4)";
         btn.classList.remove('bg-slate-600', 'cursor-not-allowed');
         btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
     }
 }
 
 async function ejecutarCCTV() {
-    const btn = document.getElementById('btn_cctv');
     const visor = document.getElementById('cctv_visor');
     const consola = document.getElementById('consola_salida');
     const prompt = document.getElementById('input_prompt_visual').value;
 
     if(!prompt) return;
 
-    btn.disabled = true;
-    btn.innerHTML = "PROCESANDO FRAME (FASE 2/3)...";
-    btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
-    btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
-
-    visor.innerHTML = `
-        <div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]">
-            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div>
-            <span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO MOTOR VISUAL...</span>
-        </div>`;
+    visor.innerHTML = `<div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div><span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO MOTOR VISUAL...</span></div>`;
 
     try {
         const response = await fetch('/api/generate_image', {
@@ -228,89 +228,86 @@ async function ejecutarCCTV() {
         const data = await response.json();
 
         if(data.status === "success") {
-            visor.innerHTML = `
-                <img src="${data.image_url}" alt="Render CCTV" class="w-full h-full object-cover">
-                <div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded">
-                    <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
-                    <span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span>
-                </div>
-                <div class="absolute bottom-4 right-4 bg-black/60 px-2 py-1 rounded">
-                    <span class="text-slate-300 font-mono text-[10px]">CAM 04 - 1920x1080 Full HD</span>
-                </div>`;
-            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción de frame exitosa (1920x1080).</span>`;
+            currentImageB64 = data.image_url; // Guardar en RAM para Fase 4
+            visor.innerHTML = `<img src="${data.image_url}" alt="Render CCTV" class="w-full h-full object-cover"><div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded"><div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div><span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span></div>`;
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción exitosa.</span>`;
         } else {
-            visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE VISUAL ]</span>`;
-            consola.innerHTML += `\n<span class="text-red-500">> [ERROR RENDER] ${data.message}</span>`;
+            visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR VISUAL ]</span>`;
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR] ${data.message}</span>`;
         }
     } catch (error) {
         visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ PÉRDIDA DE SEÑAL ]</span>`;
-    } finally {
-        consola.scrollTop = consola.scrollHeight;
-        btn.disabled = false;
-        btn.innerHTML = "FORZAR GENERACIÓN VISUAL";
-        btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
-        btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-white');
     }
 }
 
 async function ejecutarAudio() {
-    const btn = document.getElementById('btn_audio');
     const contenedor = document.getElementById('audio_contenedor');
     const badge = document.getElementById('badge_audio');
     const consola = document.getElementById('consola_salida');
-    
-    // Extracción dual: Narrativa + Silo
     const texto = document.getElementById('input_texto_locucion').value;
     const marca = document.getElementById('input_marca').value;
 
-    if(!texto) {
-        consola.innerHTML += `\n<span class="text-red-500">> [SISTEMA VOCAL] Error: Matriz de texto vacía.</span>`;
-        return;
-    }
-
-    btn.disabled = true;
-    btn.innerHTML = "SINTETIZANDO VOZ (FASE 3/3)...";
-    btn.classList.add('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
-    btn.classList.remove('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+    if(!texto) return;
 
     badge.className = "text-[9px] font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded animate-pulse";
     badge.innerText = "SINTETIZANDO...";
-
-    contenedor.innerHTML = `<span class="text-blue-500 font-mono text-xs tracking-widest animate-pulse">PROCESANDO ONDAS NEURONALES...</span>`;
+    contenedor.innerHTML = `<span class="text-blue-500 font-mono text-xs tracking-widest animate-pulse">PROCESANDO...</span>`;
 
     try {
         const response = await fetch('/api/generate_audio', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // Inyección del payload con la marca para enrutamiento exacto
             body: JSON.stringify({ texto: texto, marca: marca }) 
         });
         const data = await response.json();
 
         if(data.status === "success") {
-            contenedor.innerHTML = `
-                <audio controls class="w-full max-w-md">
-                    <source src="${data.audio_url}" type="audio/mpeg">
-                    Su navegador no soporta el elemento de audio.
-                </audio>`;
+            currentAudioB64 = data.audio_url; // Guardar en RAM para Fase 4
+            contenedor.innerHTML = `<audio controls class="w-full max-w-md"><source src="${data.audio_url}" type="audio/mpeg"></audio>`;
             badge.className = "text-[9px] font-mono text-green-400 border border-green-900 bg-green-900/20 px-2 py-1 rounded";
             badge.innerText = "ACTIVO";
-            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VOCAL] Renderizado de audio completado y empaquetado.</span>`;
+            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VOCAL] Renderizado completado.</span>`;
         } else {
-            contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ ERROR DE SÍNTESIS VOCAL ]</span>`;
+            contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ ERROR VOCAL ]</span>`;
             badge.className = "text-[9px] font-mono text-red-400 border border-red-900 bg-red-900/20 px-2 py-1 rounded";
             badge.innerText = "FALLO";
-            consola.innerHTML += `\n<span class="text-red-500">> [ERROR AUDIO] ${data.message}</span>`;
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR] ${data.message}</span>`;
         }
     } catch (error) {
-        contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ PÉRDIDA DE ENLACE DE VOZ ]</span>`;
-    } finally {
-        consola.scrollTop = consola.scrollHeight;
-        btn.disabled = false;
-        btn.innerHTML = "FORZAR GENERACIÓN VOCAL";
-        btn.classList.remove('bg-slate-900', 'cursor-not-allowed', 'text-slate-500');
-        btn.classList.add('bg-slate-800', 'hover:bg-slate-700', 'text-white');
+        contenedor.innerHTML = `<span class="text-red-600 font-mono text-xs tracking-widest">[ PÉRDIDA DE SEÑAL ]</span>`;
     }
+}
+
+async function ejecutarEnsamblaje() {
+    const renderBtnContainer = document.getElementById('render_btn_container');
+    const consola = document.getElementById('consola_salida');
+    const marca = document.getElementById('input_marca').value;
+
+    renderBtnContainer.innerHTML = `<button disabled class="w-full bg-blue-900 border border-blue-700 text-blue-400 font-mono text-[10px] py-2 rounded animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.5)]">COMPILANDO MP4...</button>`;
+
+    try {
+        const response = await fetch('/api/assemble_video', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ marca: marca, image_b64: currentImageB64, audio_b64: currentAudioB64 }) 
+        });
+        const data = await response.json();
+
+        if(data.status === "success") {
+            renderBtnContainer.innerHTML = `
+                <a href="${data.video_url}" download="Render_La_Viuda.mp4" class="block w-full text-center bg-green-600 hover:bg-green-500 border border-green-500 text-white font-black text-[11px] py-2 rounded shadow-[0_0_15px_rgba(34,197,94,0.4)] transition-all animate-bounce">
+                    ⬇️ DESCARGAR MP4
+                </a>`;
+            consola.innerHTML += `\n\n<span class="text-green-500 font-bold text-lg">> [ÉXITO TOTAL] PIPELINE DE 4 FASES COMPLETADO. VIDEO LISTO.</span>`;
+        } else {
+            renderBtnContainer.innerHTML = `<button disabled class="w-full bg-red-900 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded">FALLA DE RENDER</button>`;
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR FFmpeg] ${data.message}</span>`;
+        }
+    } catch (error) {
+        renderBtnContainer.innerHTML = `<button disabled class="w-full bg-red-900 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded">ERROR DE RED</button>`;
+        consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE RED] Falla al ensamblar video.</span>`;
+    }
+    consola.scrollTop = consola.scrollHeight;
 }
 </script>
 {% endblock %}
