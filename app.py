@@ -6,6 +6,7 @@ from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
 from modulos.cctv_engine import CCTVEngine  
 from modulos.voice_engine import VoiceEngine
+from modulos.video_engine import VideoEngine # Importación del Ensamblador MP4
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
@@ -15,6 +16,7 @@ boveda_db = BovedaManager()
 ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
 voice_engine = VoiceEngine()
+video_engine = VideoEngine() # Instanciación del motor de video
 
 def login_required(f):
     @wraps(f)
@@ -134,18 +136,34 @@ def api_generate_image():
 def api_generate_audio():
     data = request.json
     texto_locucion = data.get('texto', '')
-    marca = data.get('marca', 'La Viuda') # Extracción dinámica de silo
+    marca = data.get('marca', 'La Viuda') 
     
     if not texto_locucion:
         return jsonify({"status": "error", "message": "Texto de locución vacío."})
         
-    resultado = voice_engine.generar_audio(texto_locucion, marca) # Enrutamiento
+    resultado = voice_engine.generar_audio(texto_locucion, marca) 
     
     if "ERROR" in resultado:
         return jsonify({"status": "error", "message": resultado})
         
     return jsonify({"status": "success", "audio_url": resultado})
 
+# --- API DE ENSAMBLAJE (Aislada a video_engine) ---
+@app.route('/api/assemble_video', methods=['POST'])
+@login_required
+def api_assemble_video():
+    data = request.json
+    marca = data.get('marca', 'La Viuda')
+    img_b64 = data.get('image_b64', '')
+    audio_b64 = data.get('audio_b64', '')
+    
+    if not img_b64 or not audio_b64:
+        return jsonify({"status": "error", "message": "Faltan assets para el ensamblaje."})
+        
+    resultado = video_engine.ensamblar_pipeline(marca, img_b64, audio_b64)
+    return jsonify(resultado)
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
+    # Para asegurar que la carpeta static sea servida correctamente
     app.run(host='0.0.0.0', port=port)
