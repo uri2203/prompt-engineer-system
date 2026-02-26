@@ -163,7 +163,21 @@ def api_assemble_video():
     resultado = video_engine.ensamblar_pipeline(marca, img_b64, audio_b64)
     return jsonify(resultado)
 
+# --- PUERTA DE ENLACE FÍSICO (NUEVO) ---
+@app.route('/api/nodo/polling', methods=['POST'])
+def nodo_polling():
+    datos_nodo = request.get_json()
+    nodo_id = datos_nodo.get("nodo_id", "DESCONOCIDO")
+    tipo_motor = datos_nodo.get("tipo", "DESCONOCIDO")
+    
+    print(f"📡 [ENLACE] El obrero {nodo_id} ({tipo_motor}) se ha reportado para trabajar.")
+    
+    return jsonify({
+        "status": "success",
+        "hay_trabajo": False,
+        "mensaje": f"Cerebro Pinpinela reconoce al nodo {nodo_id}. Manténgase en Standby."
+    }), 200
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    # Para asegurar que la carpeta static sea servida correctamente
     app.run(host='0.0.0.0', port=port)
