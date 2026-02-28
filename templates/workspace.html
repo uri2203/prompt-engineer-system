@@ -114,8 +114,8 @@
             </div>
             <div id="consola_salida" class="flex-1 bg-black rounded-lg border border-slate-800 p-6 overflow-y-auto font-mono text-sm text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">
 > Sistema operativo inicializado.
-> Motor FFmpeg enrutado.
-> Pipeline automático (Texto > Img > Voz > MP4) en Standby. Esperando detonación.
+> Motor FFmpeg enrutado hacia Nodo Local.
+> Pipeline automático (Texto > Img > Voz > Inyección MP4) en Standby.
             </div>
         </div>
     </div>
@@ -190,9 +190,9 @@ async function ejecutarMotor() {
                 await ejecutarAudio();
             }
 
-            // FASE 4: ENSAMBLAJE AUTOMÁTICO
+            // FASE 4: ENSAMBLAJE AUTOMÁTICO HACIA EL SERVIDOR FÍSICO
             if(currentImageB64 && currentAudioB64) {
-                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Assets recolectados. Disparando Fase 4 (Ensamblaje FFmpeg)...</span>`;
+                consola.innerHTML += `\n<span class="text-yellow-400">> [SISTEMA] Assets recolectados. Transfiriendo orden al servidor local...</span>`;
                 await ejecutarEnsamblaje();
             }
 
@@ -228,7 +228,7 @@ async function ejecutarCCTV() {
         const data = await response.json();
 
         if(data.status === "success") {
-            currentImageB64 = data.image_url; // Guardar en RAM para Fase 4
+            currentImageB64 = data.image_url; 
             visor.innerHTML = `<img src="${data.image_url}" alt="Render CCTV" class="w-full h-full object-cover"><div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded"><div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div><span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span></div>`;
             consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción exitosa.</span>`;
         } else {
@@ -262,7 +262,7 @@ async function ejecutarAudio() {
         const data = await response.json();
 
         if(data.status === "success") {
-            currentAudioB64 = data.audio_url; // Guardar en RAM para Fase 4
+            currentAudioB64 = data.audio_url; 
             contenedor.innerHTML = `<audio controls class="w-full max-w-md"><source src="${data.audio_url}" type="audio/mpeg"></audio>`;
             badge.className = "text-[9px] font-mono text-green-400 border border-green-900 bg-green-900/20 px-2 py-1 rounded";
             badge.innerText = "ACTIVO";
@@ -283,7 +283,7 @@ async function ejecutarEnsamblaje() {
     const consola = document.getElementById('consola_salida');
     const marca = document.getElementById('input_marca').value;
 
-    renderBtnContainer.innerHTML = `<button disabled class="w-full bg-blue-900 border border-blue-700 text-blue-400 font-mono text-[10px] py-2 rounded animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.5)]">COMPILANDO MP4...</button>`;
+    renderBtnContainer.innerHTML = `<div class="w-full bg-blue-900/30 border border-blue-800 text-blue-400 font-mono text-[10px] py-2 rounded text-center">ENVIANDO AL NODO FÍSICO...</div>`;
 
     try {
         const response = await fetch('/api/assemble_video', {
@@ -295,17 +295,17 @@ async function ejecutarEnsamblaje() {
 
         if(data.status === "success") {
             renderBtnContainer.innerHTML = `
-                <a href="${data.video_url}" download="Render_La_Viuda.mp4" class="block w-full text-center bg-green-600 hover:bg-green-500 border border-green-500 text-white font-black text-[11px] py-2 rounded shadow-[0_0_15px_rgba(34,197,94,0.4)] transition-all animate-bounce">
-                    ⬇️ DESCARGAR MP4
-                </a>`;
-            consola.innerHTML += `\n\n<span class="text-green-500 font-bold text-lg">> [ÉXITO TOTAL] PIPELINE DE 4 FASES COMPLETADO. VIDEO LISTO.</span>`;
+                <div class="w-full bg-[#0F1523] border border-blue-600 text-blue-400 font-mono font-bold tracking-widest text-[10px] py-2 rounded text-center shadow-inner">
+                    [ TAREA ENVIADA AL XEON ]
+                </div>`;
+            consola.innerHTML += `\n\n<span class="text-blue-500 font-bold text-lg">> [ÉXITO DE RED] PAQUETE INYECTADO EN LA DARK FACTORY. REVISE LA TERMINAL DE SU SERVIDOR LOCAL.</span>`;
         } else {
-            renderBtnContainer.innerHTML = `<button disabled class="w-full bg-red-900 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded">FALLA DE RENDER</button>`;
-            consola.innerHTML += `\n<span class="text-red-500">> [ERROR FFmpeg] ${data.message}</span>`;
+            renderBtnContainer.innerHTML = `<div class="w-full bg-red-900/30 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded text-center">FALLA DE TRANSMISIÓN</div>`;
+            consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE NUBE] ${data.message}</span>`;
         }
     } catch (error) {
-        renderBtnContainer.innerHTML = `<button disabled class="w-full bg-red-900 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded">ERROR DE RED</button>`;
-        consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE RED] Falla al ensamblar video.</span>`;
+        renderBtnContainer.innerHTML = `<div class="w-full bg-red-900/30 border border-red-700 text-red-400 font-mono text-[10px] py-2 rounded text-center">ERROR DE ENLACE</div>`;
+        consola.innerHTML += `\n<span class="text-red-500">> [ERROR DE RED] Falla al comunicar con el buzón.</span>`;
     }
     consola.scrollTop = consola.scrollHeight;
 }
