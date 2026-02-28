@@ -1,4 +1,5 @@
 import os
+import time
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 from functools import wraps
 from modulos.usuarios import UsuarioManager
@@ -17,6 +18,9 @@ ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
 voice_engine = VoiceEngine()
 video_engine = VideoEngine() # Instanciación del motor de video
+
+# --- SISTEMA DE COLA EN MEMORIA (BUZÓN DE ÓRDENES PARA DARK FACTORY) ---
+cola_de_renderizado = []
 
 def login_required(f):
     @wraps(f)
@@ -148,7 +152,7 @@ def api_generate_audio():
         
     return jsonify({"status": "success", "audio_url": resultado})
 
-# --- API DE ENSAMBLAJE (Aislada a video_engine) ---
+# --- INYECCIÓN EN RUTA DE ENSAMBLAJE (ENVÍO A NODO FÍSICO) ---
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
 def api_assemble_video():
@@ -160,23 +164,42 @@ def api_assemble_video():
     if not img_b64 or not audio_b64:
         return jsonify({"status": "error", "message": "Faltan assets para el ensamblaje."})
         
-    resultado = video_engine.ensamblar_pipeline(marca, img_b64, audio_b64)
-    return jsonify(resultado)
+    # Empaquetamos el trabajo y lo metemos a la cola
+    tarea = {
+        "id": f"video_{int(time.time())}",
+        "marca": marca,
+        "image_b64": img_b64,
+        "audio_b64": audio_b64
+    }
+    cola_de_renderizado.append(tarea)
+    
+    return jsonify({
+        "status": "success", 
+        "message": "Paquete inyectado en la Dark Factory. El Nodo Gamma iniciará el renderizado físico."
+    })
 
-# --- PUERTA DE ENLACE FÍSICO (NUEVO) ---
+# --- PUERTA DE ENLACE FÍSICO CON EXTRACCIÓN DE COLA ---
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     datos_nodo = request.get_json()
     nodo_id = datos_nodo.get("nodo_id", "DESCONOCIDO")
-    tipo_motor = datos_nodo.get("tipo", "DESCONOCIDO")
     
-    print(f"📡 [ENLACE] El obrero {nodo_id} ({tipo_motor}) se ha reportado para trabajar.")
-    
-    return jsonify({
-        "status": "success",
-        "hay_trabajo": False,
-        "mensaje": f"Cerebro Pinpinela reconoce al nodo {nodo_id}. Manténgase en Standby."
-    }), 200
+    # Si hay trabajos en la cola, enviamos el primero
+    if len(cola_de_renderizado) > 0:
+        tarea_actual = cola_de_renderizado.pop(0)
+        print(f"📡 [DESPACHO] Enviando paquete de render {tarea_actual['id']} al obrero {nodo_id}.")
+        return jsonify({
+            "status": "success",
+            "hay_trabajo": True,
+            "tarea": tarea_actual
+        }), 200
+    else:
+        # Si no hay trabajos, mantenemos el standby
+        return jsonify({
+            "status": "success",
+            "hay_trabajo": False,
+            "mensaje": f"Cerebro Pinpinela reconoce al nodo {nodo_id}. Manténgase en Standby."
+        }), 200
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
