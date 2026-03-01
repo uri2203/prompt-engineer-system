@@ -5,14 +5,14 @@ import logging
 
 class CCTVEngine:
     def __init__(self):
-        # 🔗 ENLACE DE SU TÚNEL ACTIVO (SSH localhost.run)
-        self.url_tunnel = "https://969d8f9d4291e9.lhr.life" 
+        # 🔗 ENLACE ACTIVO HACIA SU RTX 3050 (Gradio Live)
+        self.url_tunnel = "https://5861cbcf9596bfb6aa.gradio.live" 
         self.temp_dir = os.path.join(os.getcwd(), "workspace_temp", "imagenes")
         
         if not os.path.exists(self.temp_dir):
             os.makedirs(self.temp_dir, exist_ok=True)
             
-        logging.info(f"🛡️ [SISTEMA] Motor CCTV conectado vía SSH: {self.url_tunnel}")
+        logging.info(f"🛡️ [SISTEMA] Motor CCTV conectado vía Gradio: {self.url_tunnel}")
 
     def generar_imagen(self, prompt_visual, tarea_id):
         ruta_guardado = os.path.join(self.temp_dir, f"cctv_{tarea_id}.png")
@@ -30,7 +30,7 @@ class CCTVEngine:
         try:
             logging.info(f"📡 [FASE 2] Solicitando renderizado a GPU local...")
             
-            # Petición directa a su túnel SSH sin intermediarios
+            # Petición directa a su túnel de Gradio
             response = requests.post(
                 f"{self.url_tunnel}/sdapi/v1/txt2img", 
                 json=payload, 
