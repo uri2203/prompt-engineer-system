@@ -122,7 +122,11 @@ def api_generate_script():
     marca = data.get('marca', 'La Viuda')
     contexto_base = data.get('contexto', '')
     peticion = data.get('peticion', '')
-    longitud = data.get('longitud', '4900 palabras')
+    longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
+
+    # INYECCIÓN DE DIRECTRIZ PARA FRAGMENTACIÓN EXTREMA
+    # Esto asegura que el prompt genere una matriz de 12-15 escenas para mayor dinamismo visual.
+    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo."
 
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
     formato_crudo = formato_crudo.lower()
@@ -135,7 +139,7 @@ def api_generate_script():
     resultado = compliance_engine.blindar_guion(
         ai_engine_instancia=ai_engine,
         marca=marca, contexto=contexto_absoluto,
-        peticion=peticion, longitud=longitud, formato=formato_calculado
+        peticion=peticion_enriquecida, longitud=longitud, formato=formato_calculado
     )
     return jsonify({"status": "success", "data": resultado})
 
@@ -147,7 +151,7 @@ def api_generate_audio():
     return jsonify({"status": "success", "audio_url": resultado})
 
 # ========================================================
-# NUEVA RUTA: INYECCIÓN DE AUDIO AL NODO LOCAL
+# RUTA ACTUALIZADA: ENSAMBLAJE CON SOPORTE PARA SUBTÍTULOS
 # ========================================================
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
@@ -155,11 +159,12 @@ def api_assemble_video():
     data = request.json
     tarea_id = str(uuid.uuid4())
     
-    # Encolamos el audio y la instrucción para que el Xeon inicie FFmpeg
+    # Se añade 'texto_locucion' para que el nodo local pueda realizar la transcripción/subtitulado.
     cola_de_renderizado.append({
         "id": tarea_id,
         "tipo": "ENSAMBLAJE",
         "audio_b64": data.get('audio_b64'),
+        "texto_locucion": data.get('texto_locucion', ''),
         "marca": data.get('marca')
     })
     return jsonify({
