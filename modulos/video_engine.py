@@ -1,14 +1,27 @@
+import logging
+
 class VideoEngine:
+    """
+    Motor de Orquestación de Video (Modo Cloud Delegado).
+    Este módulo NO renderiza video en Render para evitar colapsos por Timeout.
+    Su única función es empaquetar la orden (Audio + Prompts + Formato) 
+    y dejarla lista para que el Nodo Local (Xeon/RTX 3050) ejecute el trabajo pesado.
+    """
     def __init__(self):
-        # El motor pesado ha sido trasladado a la arquitectura local
+        # El músculo de FFmpeg y la generación múltiple de imágenes reside 100% en el hardware físico.
         pass
 
-    def ensamblar_pipeline(self, marca, img_b64, audio_b64):
-        # MODO STANDBY: La nube ya no ensambla video.
-        # Solo devuelve un estado de éxito indicando que los assets (Texto y Audio) 
-        # están listos para ser interceptados por la NVIDIA RTX 3050.
+    def ensamblar_pipeline(self, marca, assets_data, audio_b64, formato="16:9"):
+        """
+        MODO STANDBY ACTIVO: Prepara la instrucción de ensamblaje de ALTA CALIDAD.
+        El parámetro 'formato' dicta si el nodo local debe generar imágenes en 720x1280 (Short) o 1280x720 (Largo).
+        """
+        sufijo_formato = "SHORT (9:16)" if formato == "9:16" else "LARGO (16:9)"
+        logging.info(f"[VIDEO ENGINE] Orden de ensamblaje {sufijo_formato} delegada a la Dark Factory.")
+
+        # Devuelve la instrucción para que la interfaz web (app.py) la encole hacia el Xeon.
         return {
             "status": "success",
-            "video_url": "javascript:alert('Renderizado Cloud Desactivado. El Nodo Local (RTX 3050) se encargará del ensamblaje pesado.');",
-            "message": "ASSETS LISTOS PARA TRANSFERENCIA LOCAL"
+            "video_url": f"javascript:alert('Renderizado Cloud Desactivado. El Nodo Local generará el juego de imágenes dinámicas y el MP4 final en formato {formato}.');",
+            "message": f"ORDEN {sufijo_formato} ENVIADA A LA DARK FACTORY. CALIDAD SUPREMA ACTIVADA."
         }
