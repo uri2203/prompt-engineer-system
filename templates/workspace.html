@@ -217,7 +217,11 @@ async function ejecutarCCTV() {
 
     if(!prompt) return;
 
-    visor.innerHTML = `<div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mb-3"></div><span class="text-red-600 font-mono text-[10px] tracking-widest animate-pulse">ENLAZANDO MOTOR VISUAL...</span></div>`;
+    visor.innerHTML = `
+        <div class="flex flex-col items-center justify-center w-full h-full bg-[#0a0a0a]">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600 mb-3"></div>
+            <span class="text-yellow-600 font-mono text-[10px] tracking-widest animate-pulse">ENVIANDO ORDEN A NODO LOCAL...</span>
+        </div>`;
 
     try {
         const response = await fetch('/api/generate_image', {
@@ -227,17 +231,46 @@ async function ejecutarCCTV() {
         });
         const data = await response.json();
 
-        if(data.status === "success") {
-            currentImageB64 = data.image_url; 
-            visor.innerHTML = `<img src="${data.image_url}" alt="Render CCTV" class="w-full h-full object-cover"><div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded"><div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div><span class="text-red-500 font-mono text-[10px] font-bold tracking-widest">REC</span></div>`;
-            consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Extracción exitosa.</span>`;
-        } else {
-            visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR VISUAL ]</span>`;
-            consola.innerHTML += `\n<span class="text-red-500">> [ERROR] ${data.message}</span>`;
+        if(data.status === "EN_COLA") {
+            const tareaId = data.tarea_id;
+            consola.innerHTML += `\n<span class="text-yellow-500">> [COLA] Orden #${tareaId} recibida por el Nodo. Renderizando con Máxima Calidad...</span>`;
+            
+            // Iniciar Polling de resultado
+            await esperarImagen(tareaId);
         }
     } catch (error) {
-        visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ PÉRDIDA DE SEÑAL ]</span>`;
+        visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE ]</span>`;
     }
+}
+
+// NUEVA FUNCIÓN: Pregunta a Render cada 5 segundos si la imagen ya está lista
+async function esperarImagen(tareaId) {
+    const visor = document.getElementById('cctv_visor');
+    const consola = document.getElementById('consola_salida');
+
+    const checkInterval = setInterval(async () => {
+        try {
+            const res = await fetch(`/api/check_image/${tareaId}`);
+            const data = await res.json();
+
+            if(data.status === "READY") {
+                clearInterval(checkInterval);
+                currentImageB64 = data.image_url; 
+                visor.innerHTML = `
+                    <img src="${data.image_url}" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 flex items-center gap-2 bg-black/60 px-2 py-1 rounded">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-green-500 font-mono text-[10px] font-bold tracking-widest">LIVE - NODO GAMMA</span>
+                    </div>`;
+                consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA VISUAL] Imagen de alta fidelidad recibida.</span>`;
+                
+                // Continuar con el siguiente paso del pipeline automáticamente
+                if(currentAudioB64) await ejecutarEnsamblaje();
+            }
+        } catch (e) {
+            console.log("Esperando nodo...");
+        }
+    }, 5000);
 }
 
 async function ejecutarAudio() {
