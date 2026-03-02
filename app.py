@@ -4,22 +4,18 @@ import uuid
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 from functools import wraps
 
-# --- [SILO: MÓDULOS DE INGENIERÍA - RESTAURACIÓN COMPLETA] ---
 from modulos.usuarios import UsuarioManager
 from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
 from modulos.cctv_engine import CCTVEngine  
 from modulos.voice_engine import VoiceEngine
 from modulos.video_engine import VideoEngine 
-
-# --- [NUEVOS SILOS: INTELIGENCIA Y GOBERNANZA] ---
 from modulos.trend_engine import TrendEngine
 from modulos.compliance_engine import ComplianceEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 
-# --- [INSTANCIACIÓN DE MOTORES] ---
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
 ai_engine = AIEngine()
@@ -29,8 +25,7 @@ video_engine = VideoEngine()
 trend_engine = TrendEngine()
 compliance_engine = ComplianceEngine()
 
-# --- [ESTRUCTURA DE MEMORIA DINÁMICA: DARK FACTORY] ---
-# Esta sección maneja al Xeon sin bloquear el servidor de Render.
+# COLA DE TAREAS PARA LA DARK FACTORY
 cola_de_renderizado = []
 resultados_itinerantes = {} 
 
@@ -44,7 +39,6 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# --- [RUTAS DE INTERFAZ: DISEÑO CORPORATE TECH] ---
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if 'user' in session: return redirect(url_for('index'))
@@ -85,7 +79,6 @@ def mantenimiento(): return render_template('mantenimiento.html', active_page='l
 @login_required
 def bot(): return render_template('bot_dashboard.html', active_page='bot')
 
-# --- [API: TELEMETRÍA Y GESTIÓN DE BÓVEDA (SILO RECUPERADO)] ---
 @app.route('/api/get_logs')
 @login_required
 def api_get_logs():
@@ -122,7 +115,6 @@ def api_save_boveda():
     )
     return jsonify({"status": "success", "message": "Bóveda actualizada"})
 
-# --- [API: MOTORES DE GENERACIÓN] ---
 @app.route('/api/generate_script', methods=['POST'])
 @login_required
 def api_generate_script():
@@ -132,34 +124,19 @@ def api_generate_script():
     peticion = data.get('peticion', '')
     longitud = data.get('longitud', '4900 palabras')
 
-    # [NUEVO] TRADUCTOR DE FORMATO: Analiza si el frontend pidió un short
-    # Busca en el campo 'longitud' o 'formato' la palabra "short" o "9:16"
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
     formato_crudo = formato_crudo.lower()
-    
-    if "short" in formato_crudo or "9:16" in formato_crudo:
-        formato_calculado = "9:16"
-    else:
-        formato_calculado = "16:9"
+    formato_calculado = "9:16" if "short" in formato_crudo or "9:16" in formato_crudo else "16:9"
 
-    # 1. Espionaje Algorítmico (Trend Engine)
     yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
     contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
-    
-    # Fusionamos el contexto del usuario con la directriz viral
     contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
 
-    # 2. Generación y Filtro de Gobernanza (Compliance Engine)
-    # Pasamos el formato_calculado al escudo
     resultado = compliance_engine.blindar_guion(
         ai_engine_instancia=ai_engine,
-        marca=marca,
-        contexto=contexto_absoluto,
-        peticion=peticion,
-        longitud=longitud,
-        formato=formato_calculado
+        marca=marca, contexto=contexto_absoluto,
+        peticion=peticion, longitud=longitud, formato=formato_calculado
     )
-    
     return jsonify({"status": "success", "data": resultado})
 
 @app.route('/api/generate_audio', methods=['POST'])
@@ -169,14 +146,27 @@ def api_generate_audio():
     resultado = voice_engine.generar_audio(data.get('texto', ''), data.get('marca', 'La Viuda')) 
     return jsonify({"status": "success", "audio_url": resultado})
 
+# ========================================================
+# NUEVA RUTA: INYECCIÓN DE AUDIO AL NODO LOCAL
+# ========================================================
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
 def api_assemble_video():
     data = request.json
-    resultado = video_engine.ensamblar_pipeline(data.get('marca'), data.get('image_b64'), data.get('audio_b64'))
-    return jsonify(resultado)
+    tarea_id = str(uuid.uuid4())
+    
+    # Encolamos el audio y la instrucción para que el Xeon inicie FFmpeg
+    cola_de_renderizado.append({
+        "id": tarea_id,
+        "tipo": "ENSAMBLAJE",
+        "audio_b64": data.get('audio_b64'),
+        "marca": data.get('marca')
+    })
+    return jsonify({
+        "status": "success", 
+        "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"
+    })
 
-# --- [API: INTEGRACIÓN XEON ASÍNCRONA - CERO BLOQUEOS] ---
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
 def api_generate_image():
@@ -185,13 +175,8 @@ def api_generate_image():
     if not prompt: return jsonify({"status": "error", "message": "Prompt vacío"})
     
     tarea_id = str(uuid.uuid4())
-    cola_de_renderizado.append({"id": tarea_id, "prompt": prompt})
-    
-    return jsonify({
-        "status": "EN_COLA", 
-        "tarea_id": tarea_id,
-        "message": "Orden enviada a la Dark Factory (Xeon)."
-    })
+    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt})
+    return jsonify({"status": "EN_COLA", "tarea_id": tarea_id, "message": "Orden enviada a la Dark Factory."})
 
 @app.route('/api/check_image/<tarea_id>')
 @login_required
@@ -200,7 +185,6 @@ def check_image(tarea_id):
         return jsonify({"status": "READY", "image_url": resultados_itinerantes.pop(tarea_id)})
     return jsonify({"status": "PENDING"})
 
-# --- [NODO LOCAL: PROTOCOLO DE COMUNICACIÓN FÍSICA] ---
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     if len(cola_de_renderizado) > 0:
