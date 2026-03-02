@@ -1,4 +1,7 @@
 import os
+import uuid # 🔧 NUEVO: Para crearle un ID único a cada orden
+import time # 🔧 NUEVO: Para que la web espere al Xeon
+
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 from functools import wraps
 from modulos.usuarios import UsuarioManager
@@ -17,6 +20,13 @@ ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
 voice_engine = VoiceEngine()
 video_engine = VideoEngine() # Instanciación del motor de video
+
+# ==========================================
+# 🔧 MEMORIA RAM DEL SERVIDOR PARA EL XEON
+# ==========================================
+tareas_pendientes = []
+resultados_completados = {}
+# ==========================================
 
 def login_required(f):
     @wraps(f)
@@ -116,20 +126,38 @@ def api_generate_script():
     resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
     return jsonify({"status": "success", "data": resultado})
 
+
+# 🔧 MODIFICADO: Ahora manda la orden al Xeon en vez de intentar hacerla en la nube
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
 def api_generate_image():
     data = request.json
     prompt_visual = data.get('prompt', '')
+    
     if not prompt_visual:
         return jsonify({"status": "error", "message": "Prompt visual vacío."})
         
-    resultado = cctv_engine.generar_imagen(prompt_visual)
+    tarea_id = str(uuid.uuid4())
     
-    if "ERROR" in resultado:
-        return jsonify({"status": "error", "message": resultado})
+    # Metemos la orden a la sala de espera
+    tareas_pendientes.append({
+        "id": tarea_id,
+        "prompt": prompt_visual
+    })
+    
+    print(f"📦 [NUBE] Orden {tarea_id} en cola. Esperando al Obrero Xeon...")
+
+    # La web se queda esperando hasta 10 minutos a que el Xeon entregue
+    tiempo_espera = 0
+    while tiempo_espera < 600:
+        if tarea_id in resultados_completados:
+            img_b64 = resultados_completados.pop(tarea_id)
+            return jsonify({"status": "success", "image_url": img_b64})
+        time.sleep(2)
+        tiempo_espera += 2
         
-    return jsonify({"status": "success", "image_url": resultado})
+    return jsonify({"status": "error", "message": "El motor local (Xeon) no entregó a tiempo."})
+
 
 @app.route('/api/generate_audio', methods=['POST'])
 @login_required
@@ -148,7 +176,6 @@ def api_generate_audio():
         
     return jsonify({"status": "success", "audio_url": resultado})
 
-# --- API DE ENSAMBLAJE (Aislada a video_engine) ---
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
 def api_assemble_video():
@@ -163,20 +190,42 @@ def api_assemble_video():
     resultado = video_engine.ensamblar_pipeline(marca, img_b64, audio_b64)
     return jsonify(resultado)
 
-# --- PUERTA DE ENLACE FÍSICO (NUEVO) ---
+# ==========================================
+# 🔧 PUERTAS DE ENLACE FÍSICO (Para el Xeon)
+# ==========================================
+
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     datos_nodo = request.get_json()
     nodo_id = datos_nodo.get("nodo_id", "DESCONOCIDO")
-    tipo_motor = datos_nodo.get("tipo", "DESCONOCIDO")
     
-    print(f"📡 [ENLACE] El obrero {nodo_id} ({tipo_motor}) se ha reportado para trabajar.")
-    
+    # Si hay trabajo pendiente, se lo damos al obrero que pregunte
+    if len(tareas_pendientes) > 0:
+        tarea = tareas_pendientes.pop(0)
+        return jsonify({
+            "status": "success",
+            "hay_trabajo": True,
+            "tarea": tarea
+        }), 200
+        
     return jsonify({
         "status": "success",
         "hay_trabajo": False,
         "mensaje": f"Cerebro Pinpinela reconoce al nodo {nodo_id}. Manténgase en Standby."
     }), 200
+
+@app.route('/api/nodo/upload_result', methods=['POST'])
+def nodo_upload_result():
+    data = request.json
+    tarea_id = data.get('tarea_id')
+    img_b64 = data.get('image_b64')
+    
+    if tarea_id and img_b64:
+        # Guardamos el resultado para que /api/generate_image lo recoja y se lo dé a la web
+        resultados_completados[tarea_id] = img_b64
+        return jsonify({"status": "success"}), 200
+        
+    return jsonify({"status": "error", "message": "Faltan datos en la entrega"}), 400
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
