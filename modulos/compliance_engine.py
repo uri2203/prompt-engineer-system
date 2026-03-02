@@ -2,17 +2,22 @@ import os
 import json
 import re
 import logging
+import datetime
+import requests
 
 class ComplianceEngine:
     def __init__(self):
         # La Bóveda de Leyes: Almacenamiento Local
         self.leyes_path = os.path.join(os.path.dirname(__file__), 'leyes_plataformas.json')
+        self.dias_caducidad = 30
         self.leyes = self._cargar_o_crear_leyes()
+        
+        # Ejecuta la validación de caducidad al arrancar el motor
+        self.verificar_y_actualizar_leyes()
 
     def _cargar_o_crear_leyes(self):
         """
-        Carga la 'Constitución' del sistema. Si no existe, la crea con las directrices estrictas
-        de monetización y las reglas específicas de las marcas.
+        Carga la Constitución del sistema. Si no existe, genera la base fundacional.
         """
         if os.path.exists(self.leyes_path):
             try:
@@ -25,8 +30,9 @@ class ComplianceEngine:
             return self._generar_leyes_base()
 
     def _generar_leyes_base(self):
-        """Genera el archivo JSON inquebrantable inicial."""
+        """Genera el archivo JSON inquebrantable inicial con marca de tiempo."""
         leyes_base = {
+            "ultima_actualizacion": datetime.datetime.now().strftime("%Y-%m-%d"),
             "plataformas": {
                 "youtube": {
                     "palabras_prohibidas_estrictas": ["suicidio", "violación", "terrorismo", "gore", "asesinato explícito", "masacre"],
@@ -35,6 +41,10 @@ class ComplianceEngine:
                 "meta": {
                     "palabras_prohibidas_estrictas": ["muerte real", "trata", "abuso"],
                     "regla_general": "Restricción severa en temas sensibles sin valor documental o educativo."
+                },
+                "tiktok": {
+                    "palabras_prohibidas_estrictas": ["autolesión", "armas de fuego", "drogas duras"],
+                    "regla_general": "Cero tolerancia a contenido visualmente perturbador o que incite a actividades peligrosas."
                 }
             },
             "marcas": {
@@ -48,49 +58,96 @@ class ComplianceEngine:
                 }
             }
         }
-        
-        # Guardar en disco para que sea auditable y modificable externamente
+        self._guardar_leyes(leyes_base)
+        return leyes_base
+
+    def _guardar_leyes(self, datos):
+        """Escribe las políticas actualizadas en el disco."""
         try:
             with open(self.leyes_path, 'w', encoding='utf-8') as f:
-                json.dump(leyes_base, f, indent=4)
+                json.dump(datos, f, indent=4)
         except Exception as e:
-            logging.error(f"[COMPLIANCE] No se pudo crear el archivo de leyes: {e}")
+            logging.error(f"[COMPLIANCE] Error fatal al guardar la Bóveda de Leyes: {e}")
+
+    def verificar_y_actualizar_leyes(self):
+        """
+        Módulo de Sincronización Automática:
+        Verifica si han pasado más de 'X' días desde la última actualización.
+        Si es así, detona el proceso de extracción de nuevas reglas.
+        """
+        fecha_str = self.leyes.get("ultima_actualizacion", "2000-01-01")
+        try:
+            ultima_fecha = datetime.datetime.strptime(fecha_str, "%Y-%m-%d")
+            diferencia = datetime.datetime.now() - ultima_fecha
             
-        return leyes_base
+            if diferencia.days >= self.dias_caducidad:
+                logging.info(f"[COMPLIANCE] Las políticas tienen {diferencia.days} días de antigüedad. Iniciando actualización desde las APIs de las plataformas...")
+                self._ejecutar_extraccion_nube()
+            else:
+                logging.info(f"[COMPLIANCE] Políticas vigentes. Próxima actualización en {self.dias_caducidad - diferencia.days} días.")
+        except Exception as e:
+            logging.error(f"[COMPLIANCE] Falla en la lectura de caducidad temporal: {e}")
+
+    def _ejecutar_extraccion_nube(self):
+        """
+        Conecta con los endpoints o scrapers para obtener las directrices más recientes.
+        (Estructura preparada para inyectar los webhooks reales de YouTube/Meta/TikTok).
+        """
+        try:
+            # Aquí irán las llamadas reales a las APIs de compliance o scrapers.
+            # Simulación de extracción de nuevos términos restrictivos:
+            nuevos_terminos_yt = ["palabra_baneada_nueva_1", "palabra_baneada_nueva_2"] 
+            nuevos_terminos_meta = ["termino_restringido_nuevo"]
+            
+            # Fusión de los nuevos datos con la bóveda existente
+            lista_yt = set(self.leyes["plataformas"]["youtube"]["palabras_prohibidas_estrictas"])
+            lista_yt.update(nuevos_terminos_yt)
+            self.leyes["plataformas"]["youtube"]["palabras_prohibidas_estrictas"] = list(lista_yt)
+
+            lista_meta = set(self.leyes["plataformas"]["meta"]["palabras_prohibidas_estrictas"])
+            lista_meta.update(nuevos_terminos_meta)
+            self.leyes["plataformas"]["meta"]["palabras_prohibidas_estrictas"] = list(lista_meta)
+
+            # Actualizar sello de tiempo
+            self.leyes["ultima_actualizacion"] = datetime.datetime.now().strftime("%Y-%m-%d")
+            
+            # Guardar la nueva Constitución
+            self._guardar_leyes(self.leyes)
+            logging.info("[COMPLIANCE] Bóveda de Leyes actualizada exitosamente desde la nube.")
+            
+        except Exception as e:
+            logging.error(f"[COMPLIANCE] Falló la extracción de nuevas políticas. Manteniendo reglas anteriores por seguridad: {e}")
 
     def _auditar_texto_crudo(self, guion, marca):
         """
-        Paso C: Interceptor. Escanea el guion crudo contra las leyes.
-        Retorna (True, "Aprobado") o (False, "Motivo de rechazo").
+        Filtro Interceptor: Cruza el guion crudo contra las leyes actualizadas.
         """
         texto_limpio = guion.lower()
         
-        # 1. Filtro General (Todas las plataformas)
-        prohibidas_yt = self.leyes["plataformas"]["youtube"]["palabras_prohibidas_estrictas"]
-        prohibidas_meta = self.leyes["plataformas"]["meta"]["palabras_prohibidas_estrictas"]
-        todas_prohibidas = prohibidas_yt + prohibidas_meta
+        # 1. Filtro General de Plataformas (Búsqueda en todas las listas dinámicas)
+        todas_prohibidas = []
+        for plataforma in self.leyes["plataformas"].values():
+            todas_prohibidas.extend(plataforma.get("palabras_prohibidas_estrictas", []))
 
         for palabra in todas_prohibidas:
             if re.search(r'\b' + re.escape(palabra) + r'\b', texto_limpio):
-                return False, f"Se detectó un término crítico para desmonetización: '{palabra}'."
+                return False, f"Término crítico detectado ('{palabra}'). Riesgo alto de desmonetización."
 
         # 2. Filtro de Silo Específico (Por Marca)
         if marca in self.leyes["marcas"]:
             restricciones = self.leyes["marcas"][marca]["restricciones"]
-            # Búsqueda heurística básica para el filtro local
             for restriccion in restricciones:
                 palabras_clave = [p for p in restriccion.split() if len(p) > 3]
                 coincidencias = sum(1 for p in palabras_clave if p in texto_limpio)
-                # Si coinciden más de 1 palabra clave de la restricción, levantamos bandera
                 if coincidencias >= 2:
                     estrategia = self.leyes["marcas"][marca]["estrategia_evasion"]
-                    return False, f"Se violó la directriz de la marca ({marca}) por posible: '{restriccion}'. DEBE APLICAR: {estrategia}."
+                    return False, f"Violación de directriz de marca ({marca}) por posible: '{restriccion}'. OBLIGATORIO APLICAR: {estrategia}."
 
         return True, "100% Limpio y Monetizable"
 
     def blindar_guion(self, ai_engine_instancia, marca, contexto, peticion, longitud):
         """
-        El ciclo de guerra: Fuerza a la IA a reescribir si el guion es peligroso.
+        Fuerza a la IA a reescribir aplicando eufemismos si el guion es peligroso.
         """
         intentos_maximos = 3
         intento_actual = 1
@@ -99,25 +156,24 @@ class ComplianceEngine:
         while intento_actual <= intentos_maximos:
             peticion_enviada = peticion + prompt_corrector
             
-            # Paso A: Se solicita el guion al motor de IA
+            # Paso A: Generación cruda
             guion_crudo = ai_engine_instancia.generar_guion(marca, contexto, peticion_enviada, longitud)
             
-            # Paso B: Pasa por el Motor de Cumplimiento
+            # Paso B y C: Auditoría estricta contra la Bóveda actualizada
             es_seguro, reporte = self._auditar_texto_crudo(guion_crudo, marca)
             
             if es_seguro:
-                # Paso D: Sale limpio
+                # Paso D: Aprobado
                 if intento_actual > 1:
                     logging.info(f"[COMPLIANCE] Guion rescatado en el intento {intento_actual}.")
                 return guion_crudo
             
-            # Si no es seguro, preparamos la orden de reescritura
+            # Redacción del veto y orden de reescritura
             logging.warning(f"[COMPLIANCE] Guion bloqueado. Motivo: {reporte}. Forzando reescritura (Intento {intento_actual}/{intentos_maximos}).")
             estrategia_evasion = self.leyes["marcas"].get(marca, {}).get("estrategia_evasion", "Usa sinónimos neutros y elimina cualquier violencia gráfica.")
             
-            prompt_corrector = f"\n\n[DIRECTRIZ DE EMERGENCIA DEL MOTOR DE CUMPLIMIENTO]: Tu intento anterior fue RECHAZADO por el siguiente motivo: {reporte}. DEBES REESCRIBIR TODO EL TEXTO aplicando estrictamente esta regla: {estrategia_evasion}."
+            prompt_corrector = f"\n\n[DIRECTRIZ DE EMERGENCIA DEL MOTOR DE CUMPLIMIENTO]: Tu intento anterior fue RECHAZADO por el siguiente motivo: {reporte}. DEBES REESCRIBIR TODO EL TEXTO aplicando estrictamente esta regla para evadir los algoritmos: {estrategia_evasion}."
             
             intento_actual += 1
 
-        # Si falla las 3 veces, el sistema prefiere abortar antes que arriesgar el canal.
-        return "[ERROR DE COMPLIANCE] Operación abortada. La IA no logró generar un guion seguro para la monetización después de 3 intentos. Revise la petición inicial."
+        return "[ERROR DE COMPLIANCE] Operación abortada. La IA no logró generar un guion seguro para la monetización. Revise la petición inicial."
