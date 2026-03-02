@@ -12,6 +12,10 @@ from modulos.cctv_engine import CCTVEngine
 from modulos.voice_engine import VoiceEngine
 from modulos.video_engine import VideoEngine 
 
+# --- [NUEVOS SILOS: INTELIGENCIA Y GOBERNANZA] ---
+from modulos.trend_engine import TrendEngine
+from modulos.compliance_engine import ComplianceEngine
+
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 
@@ -22,6 +26,8 @@ ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
 voice_engine = VoiceEngine()
 video_engine = VideoEngine()
+trend_engine = TrendEngine()
+compliance_engine = ComplianceEngine()
 
 # --- [ESTRUCTURA DE MEMORIA DINÁMICA: DARK FACTORY] ---
 # Esta sección maneja al Xeon sin bloquear el servidor de Render.
@@ -121,10 +127,29 @@ def api_save_boveda():
 @login_required
 def api_generate_script():
     data = request.json
-    resultado = ai_engine.generar_guion(
-        data.get('marca', 'La Viuda'), data.get('contexto', ''),
-        data.get('peticion', ''), data.get('longitud', '4900 palabras')
+    marca = data.get('marca', 'La Viuda')
+    contexto_base = data.get('contexto', '')
+    peticion = data.get('peticion', '')
+    longitud = data.get('longitud', '4900 palabras')
+
+    # 1. Espionaje Algorítmico (Trend Engine)
+    # Obtenemos la llave de YouTube de la Bóveda si existe
+    yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+    
+    # Fusionamos el contexto del usuario con la directriz viral
+    contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+
+    # 2. Generación y Filtro de Gobernanza (Compliance Engine)
+    # El Compliance Engine usa la instancia de AIEngine para generar y auditar internamente
+    resultado = compliance_engine.blindar_guion(
+        ai_engine_instancia=ai_engine,
+        marca=marca,
+        contexto=contexto_absoluto,
+        peticion=peticion,
+        longitud=longitud
     )
+    
     return jsonify({"status": "success", "data": resultado})
 
 @app.route('/api/generate_audio', methods=['POST'])
