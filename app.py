@@ -132,8 +132,17 @@ def api_generate_script():
     peticion = data.get('peticion', '')
     longitud = data.get('longitud', '4900 palabras')
 
+    # [NUEVO] TRADUCTOR DE FORMATO: Analiza si el frontend pidió un short
+    # Busca en el campo 'longitud' o 'formato' la palabra "short" o "9:16"
+    formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
+    formato_crudo = formato_crudo.lower()
+    
+    if "short" in formato_crudo or "9:16" in formato_crudo:
+        formato_calculado = "9:16"
+    else:
+        formato_calculado = "16:9"
+
     # 1. Espionaje Algorítmico (Trend Engine)
-    # Obtenemos la llave de YouTube de la Bóveda si existe
     yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
     contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
     
@@ -141,13 +150,14 @@ def api_generate_script():
     contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
 
     # 2. Generación y Filtro de Gobernanza (Compliance Engine)
-    # El Compliance Engine usa la instancia de AIEngine para generar y auditar internamente
+    # Pasamos el formato_calculado al escudo
     resultado = compliance_engine.blindar_guion(
         ai_engine_instancia=ai_engine,
         marca=marca,
         contexto=contexto_absoluto,
         peticion=peticion,
-        longitud=longitud
+        longitud=longitud,
+        formato=formato_calculado
     )
     
     return jsonify({"status": "success", "data": resultado})
