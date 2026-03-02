@@ -61,6 +61,9 @@ class ComplianceEngine:
         self._guardar_leyes(leyes_base)
         return leyes_base
 
+    def _guardar_leyes(self):
+        pass # Definida abajo correctamente
+
     def _guardar_leyes(self, datos):
         """Escribe las políticas actualizadas en el disco."""
         try:
@@ -120,7 +123,7 @@ class ComplianceEngine:
 
     def _auditar_texto_crudo(self, guion, marca):
         """
-        Filtro Interceptor: Cruza el guion crudo contra las leyes actualizadas.
+        Filtro Interceptor: Cruza el guion crudo (o JSON) contra las leyes actualizadas.
         """
         texto_limpio = guion.lower()
         
@@ -145,9 +148,10 @@ class ComplianceEngine:
 
         return True, "100% Limpio y Monetizable"
 
-    def blindar_guion(self, ai_engine_instancia, marca, contexto, peticion, longitud):
+    def blindar_guion(self, ai_engine_instancia, marca, contexto, peticion, longitud, formato="16:9"):
         """
         Fuerza a la IA a reescribir aplicando eufemismos si el guion es peligroso.
+        Recibe el parámetro 'formato' y lo transfiere al motor de IA.
         """
         intentos_maximos = 3
         intento_actual = 1
@@ -156,8 +160,8 @@ class ComplianceEngine:
         while intento_actual <= intentos_maximos:
             peticion_enviada = peticion + prompt_corrector
             
-            # Paso A: Generación cruda
-            guion_crudo = ai_engine_instancia.generar_guion(marca, contexto, peticion_enviada, longitud)
+            # Paso A: Generación cruda (Ahora enviamos el formato)
+            guion_crudo = ai_engine_instancia.generar_guion(marca, contexto, peticion_enviada, longitud, formato)
             
             # Paso B y C: Auditoría estricta contra la Bóveda actualizada
             es_seguro, reporte = self._auditar_texto_crudo(guion_crudo, marca)
