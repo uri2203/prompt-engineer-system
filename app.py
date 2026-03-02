@@ -1,32 +1,30 @@
 import os
-import uuid # 🔧 NUEVO: Para crearle un ID único a cada orden
-import time # 🔧 NUEVO: Para que la web espere al Xeon
-
+import time
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 from functools import wraps
+
+# --- 1. SUS MÓDULOS ORIGINALES (INTACTOS) ---
 from modulos.usuarios import UsuarioManager
 from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
 from modulos.cctv_engine import CCTVEngine  
 from modulos.voice_engine import VoiceEngine
-from modulos.video_engine import VideoEngine # Importación del Ensamblador MP4
+from modulos.video_engine import VideoEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 
+# --- 2. INSTANCIACIÓN DE MOTORES ---
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
 ai_engine = AIEngine()
 cctv_engine = CCTVEngine() 
 voice_engine = VoiceEngine()
-video_engine = VideoEngine() # Instanciación del motor de video
+video_engine = VideoEngine()
 
-# ==========================================
-# 🔧 MEMORIA RAM DEL SERVIDOR PARA EL XEON
-# ==========================================
-tareas_pendientes = []
-resultados_completados = {}
-# ==========================================
+# --- 3. SISTEMAS DE COLA PARA EL XEON ---
+cola_de_renderizado = []
+resultados_itinerantes = {} 
 
 def login_required(f):
     @wraps(f)
@@ -38,6 +36,7 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# --- RUTAS DE INTERFAZ ---
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if 'user' in session: return redirect(url_for('index'))
@@ -78,6 +77,7 @@ def mantenimiento(): return render_template('mantenimiento.html', active_page='l
 @login_required
 def bot(): return render_template('bot_dashboard.html', active_page='bot')
 
+# --- RUTAS DE TELEMETRÍA Y BÓVEDA ---
 @app.route('/api/get_logs')
 @login_required
 def api_get_logs():
@@ -100,18 +100,15 @@ def api_telemetria():
 
 @app.route('/api/get_boveda')
 @login_required
-def api_get_boveda():
-    return jsonify(boveda_db.obtener_datos())
+def api_get_boveda(): return jsonify(boveda_db.obtener_datos())
 
 @app.route('/api/save_boveda', methods=['POST'])
 @login_required
 def api_save_boveda():
     data = request.json
     boveda_db.guardar_boveda_completa(
-        data.get('gemini_keys', []),
-        data.get('voice_api', ''),
-        data.get('youtube_api', ''),
-        data.get('tiktok_api', '')
+        data.get('gemini_keys', []), data.get('voice_api', ''),
+        data.get('youtube_api', ''), data.get('tiktok_api', '')
     )
     return jsonify({"status": "success", "message": "Bóveda actualizada"})
 
@@ -119,113 +116,69 @@ def api_save_boveda():
 @login_required
 def api_generate_script():
     data = request.json
-    marca = data.get('marca', 'La Viuda')
-    contexto = data.get('contexto', '')
-    peticion = data.get('peticion', '')
-    longitud = data.get('longitud', '4900 palabras') 
-    resultado = ai_engine.generar_guion(marca, contexto, peticion, longitud)
+    resultado = ai_engine.generar_guion(
+        data.get('marca', 'La Viuda'), data.get('contexto', ''),
+        data.get('peticion', ''), data.get('longitud', '4900 palabras')
+    )
     return jsonify({"status": "success", "data": resultado})
 
-
-# 🔧 MODIFICADO: Ahora manda la orden al Xeon en vez de intentar hacerla en la nube
+# --- GENERACIÓN DE IMAGEN (XEON COMPATIBLE) ---
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
 def api_generate_image():
     data = request.json
-    prompt_visual = data.get('prompt', '')
+    prompt = data.get('prompt', '')
+    if not prompt: return jsonify({"status": "error", "message": "Prompt vacío"})
     
-    if not prompt_visual:
-        return jsonify({"status": "error", "message": "Prompt visual vacío."})
-        
-    tarea_id = str(uuid.uuid4())
+    # CCTV Engine empaqueta la tarea (como en su versión que funcionó)
+    tarea = cctv_engine.empaquetar_tarea(prompt)
+    cola_de_renderizado.append(tarea)
     
-    # Metemos la orden a la sala de espera
-    tareas_pendientes.append({
-        "id": tarea_id,
-        "prompt": prompt_visual
+    return jsonify({
+        "status": "EN_COLA", 
+        "tarea_id": tarea['id'],
+        "message": "Orden enviada a la Dark Factory (Xeon)."
     })
-    
-    print(f"📦 [NUBE] Orden {tarea_id} en cola. Esperando al Obrero Xeon...")
 
-    # La web se queda esperando hasta 10 minutos a que el Xeon entregue
-    tiempo_espera = 0
-    while tiempo_espera < 600:
-        if tarea_id in resultados_completados:
-            img_b64 = resultados_completados.pop(tarea_id)
-            return jsonify({"status": "success", "image_url": img_b64})
-        time.sleep(2)
-        tiempo_espera += 2
-        
-    return jsonify({"status": "error", "message": "El motor local (Xeon) no entregó a tiempo."})
+@app.route('/api/check_image/<tarea_id>')
+@login_required
+def check_image(tarea_id):
+    if tarea_id in resultados_itinerantes:
+        return jsonify({"status": "READY", "image_url": resultados_itinerantes[tarea_id]})
+    return jsonify({"status": "PENDING"})
 
-
+# --- OTROS MOTORES ---
 @app.route('/api/generate_audio', methods=['POST'])
 @login_required
 def api_generate_audio():
     data = request.json
-    texto_locucion = data.get('texto', '')
-    marca = data.get('marca', 'La Viuda') 
-    
-    if not texto_locucion:
-        return jsonify({"status": "error", "message": "Texto de locución vacío."})
-        
-    resultado = voice_engine.generar_audio(texto_locucion, marca) 
-    
-    if "ERROR" in resultado:
-        return jsonify({"status": "error", "message": resultado})
-        
+    resultado = voice_engine.generar_audio(data.get('texto'), data.get('marca')) 
     return jsonify({"status": "success", "audio_url": resultado})
 
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
 def api_assemble_video():
     data = request.json
-    marca = data.get('marca', 'La Viuda')
-    img_b64 = data.get('image_b64', '')
-    audio_b64 = data.get('audio_b64', '')
-    
-    if not img_b64 or not audio_b64:
-        return jsonify({"status": "error", "message": "Faltan assets para el ensamblaje."})
-        
-    resultado = video_engine.ensamblar_pipeline(marca, img_b64, audio_b64)
+    resultado = video_engine.ensamblar_pipeline(data.get('marca'), data.get('image_b64'), data.get('audio_b64'))
     return jsonify(resultado)
 
-# ==========================================
-# 🔧 PUERTAS DE ENLACE FÍSICO (Para el Xeon)
-# ==========================================
-
+# --- PUERTAS DE ENLACE PARA EL XEON ---
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
-    datos_nodo = request.get_json()
-    nodo_id = datos_nodo.get("nodo_id", "DESCONOCIDO")
-    
-    # Si hay trabajo pendiente, se lo damos al obrero que pregunte
-    if len(tareas_pendientes) > 0:
-        tarea = tareas_pendientes.pop(0)
-        return jsonify({
-            "status": "success",
-            "hay_trabajo": True,
-            "tarea": tarea
-        }), 200
-        
-    return jsonify({
-        "status": "success",
-        "hay_trabajo": False,
-        "mensaje": f"Cerebro Pinpinela reconoce al nodo {nodo_id}. Manténgase en Standby."
-    }), 200
+    if len(cola_de_renderizado) > 0:
+        tarea_actual = cola_de_renderizado.pop(0)
+        return jsonify({"status": "success", "hay_trabajo": True, "tarea": tarea_actual}), 200
+    return jsonify({"status": "success", "hay_trabajo": False}), 200
 
 @app.route('/api/nodo/upload_result', methods=['POST'])
-def nodo_upload_result():
+def upload_result():
     data = request.json
     tarea_id = data.get('tarea_id')
     img_b64 = data.get('image_b64')
-    
     if tarea_id and img_b64:
-        # Guardamos el resultado para que /api/generate_image lo recoja y se lo dé a la web
-        resultados_completados[tarea_id] = img_b64
+        resultados_itinerantes[tarea_id] = img_b64
         return jsonify({"status": "success"}), 200
-        
-    return jsonify({"status": "error", "message": "Faltan datos en la entrega"}), 400
+    return jsonify({"status": "error"}), 400
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
