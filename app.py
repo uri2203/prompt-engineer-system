@@ -1,3 +1,4 @@
+# app.py completo, sin alteraciones
 import os
 import time
 import uuid
