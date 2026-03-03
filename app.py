@@ -9,7 +9,7 @@ from modulos.boveda import BovedaManager
 from modulos.ai_engine import AIEngine
 from modulos.cctv_engine import CCTVEngine  
 from modulos.voice_engine import VoiceEngine
-from modulos.video_engine import VideoEngine 
+from modulos.video_engine import VideoEngine  
 from modulos.trend_engine import TrendEngine
 from modulos.compliance_engine import ComplianceEngine
 
@@ -19,7 +19,7 @@ app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
 user_db = UsuarioManager()
 boveda_db = BovedaManager()
 ai_engine = AIEngine()
-cctv_engine = CCTVEngine() 
+cctv_engine = CCTVEngine()  
 voice_engine = VoiceEngine()
 video_engine = VideoEngine()
 trend_engine = TrendEngine()
@@ -27,7 +27,7 @@ compliance_engine = ComplianceEngine()
 
 # COLA DE TAREAS PARA LA DARK FACTORY
 cola_de_renderizado = []
-resultados_itinerantes = {} 
+resultados_itinerantes = {}  
 
 def login_required(f):
     @wraps(f)
@@ -124,9 +124,9 @@ def api_generate_script():
     peticion = data.get('peticion', '')
     longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
 
-    # INYECCIÓN DE DIRECTRIZ PARA FRAGMENTACIÓN EXTREMA
-    # Esto asegura que el prompt genere una matriz de 12-15 escenas para mayor dinamismo visual.
-    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo."
+    # INYECCIÓN CONSOLIDADA: FRAGMENTACIÓN EXTREMA (Respaldo) + FOTORREALISMO (Fase 1)
+    # Protege la matriz de 12-15 escenas y aplica los modificadores visuales para el renderizado
+    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo.\n\n[INSTRUCCIÓN VISUAL OBLIGATORIA]: Al generar la descripción de cada escena, asegúrate de incorporar al final de ella los siguientes parámetros para el renderizado: 'Cinematografía hiperrealista, 8k, Unreal Engine 5, iluminación volumétrica'."
 
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
     formato_crudo = formato_crudo.lower()
