@@ -124,9 +124,9 @@ def api_generate_script():
     peticion = data.get('peticion', '')
     longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
 
-    # INYECCIÓN DE DIRECTRIZ PARA FRAGMENTACIÓN EXTREMA
-    # Esto asegura que el prompt genere una matriz de 12-15 escenas para mayor dinamismo visual.
-    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo."
+    # INYECCIÓN FOTORREALISTA CORPORATE TECH
+    # Se obliga a la IA a incluir parámetros de alta fidelidad y aumentar la frecuencia de corte visual.
+    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN EXTREMA]: Divide el guion en bloques de máximo 3 a 4 segundos. [DIRECTRIZ VISUAL ESTRICTA]: Todos los prompts de imagen deben describir escenas altamente realistas. Incluye obligatoriamente al final de cada prompt: 'Cinematografía hiperrealista, 8k, Unreal Engine 5, iluminación volumétrica, fotorrealismo, alto contraste'."
 
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
     formato_crudo = formato_crudo.lower()
