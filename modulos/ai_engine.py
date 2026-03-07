@@ -22,6 +22,16 @@ class AIEngine:
         Ya no generarás un solo texto largo y un solo prompt. Ahora DEBES estructurar el guion en ESCENAS DINÁMICAS.
         Dependiendo de la longitud solicitada, dividirás el relato en fragmentos (Ej. 5 escenas para Shorts, 20 escenas para Largos).
         
+        [REGLAS CRÍTICAS PARA LOS PROMPTS VISUALES - OBLIGATORIO]
+        Cada prompt_visual DEBE seguir estas reglas sin excepción:
+        1. SIEMPRE comenzar con: "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain,"
+        2. Estilo oscuro, cinematográfico, suspenso psicológico. Ambientes reales, no CGI.
+        3. PROHIBIDO: CGI, render 3D, videojuego, anime, cartoon, ilustración, digital art.
+        4. PROHIBIDO: personajes femeninos a menos que el guion lo exija explícitamente.
+        5. PROHIBIDO: ropa reveladora, bikini, ropa interior, escenas sugestivas.
+        6. Si aparece un personaje, DEBE estar completamente vestido con ropa apropiada al contexto.
+        7. Describir ESCENAS y AMBIENTES, no solo personajes — edificios, calles, objetos, sombras.
+
         REGLA DE SALIDA ESTRICTA (CRÍTICA PARA EL PIPELINE):
         Debes responder ÚNICA Y EXCLUSIVAMENTE en formato JSON válido. No agregues saludos ni explicaciones fuera del JSON.
         
@@ -33,15 +43,14 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "Prompt detallado en INGLÉS para el motor de renderizado. Estilo realista, oscuro, CCTV, cinematic lighting.",
+              "prompt_visual": "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain, [descripción de la escena en INGLÉS, ambiente oscuro, suspenso, sin personajes femeninos no solicitados, sin CGI]",
               "texto_locucion": "Texto exacto en ESPAÑOL que el narrador leerá en esta escena. Frases contundentes."
             },
             {
               "id_escena": 2,
-              "prompt_visual": "Siguiente prompt visual en INGLÉS que continúe la historia de forma visual.",
+              "prompt_visual": "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain, [siguiente escena en INGLÉS, continuando la atmósfera]",
               "texto_locucion": "Siguiente fragmento de texto en ESPAÑOL."
             }
-            // ... (Continuar hasta completar la historia solicitada)
           ]
         }
         """
@@ -61,7 +70,17 @@ class AIEngine:
         [NUEVO PROTOCOLO DE ESTRUCTURA MULTIESCENA]
         Ya no generarás un solo texto largo y un solo prompt. Ahora DEBES estructurar el guion en ESCENAS DINÁMICAS para mantener la atención visual.
         Dependiendo de la longitud solicitada, dividirás el relato en fragmentos narrativos.
-        
+
+        [REGLAS CRÍTICAS PARA LOS PROMPTS VISUALES - OBLIGATORIO]
+        Cada prompt_visual DEBE seguir estas reglas sin excepción:
+        1. SIEMPRE comenzar con: "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain,"
+        2. Estética táctica, geopolítica: mapas, satélites, salas de control, vehículos militares, paisajes reales.
+        3. PROHIBIDO: CGI, render 3D, videojuego, anime, cartoon, ilustración, digital art.
+        4. PROHIBIDO: personajes femeninos a menos que el análisis lo requiera explícitamente.
+        5. PROHIBIDO: ropa reveladora, bikini, ropa interior, escenas sugestivas.
+        6. Si aparece un personaje, DEBE estar completamente vestido con ropa táctica o formal.
+        7. Priorizar LUGARES, MAPAS, EQUIPOS y AMBIENTES sobre personajes.
+
         REGLA DE SALIDA ESTRICTA (CRÍTICA PARA EL PIPELINE):
         Debes responder ÚNICA Y EXCLUSIVAMENTE en formato JSON válido. No agregues texto fuera del JSON.
         
@@ -73,15 +92,14 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "Prompt detallado en INGLÉS para el motor de renderizado. Estética 'High-Contrast Hazard Overlay', interfaz táctica, mapas, satélite, hiperrealista.",
+              "prompt_visual": "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain, [descripción táctica en INGLÉS: mapas, interfaces, ambientes reales, sin CGI, sin personajes femeninos no solicitados]",
               "texto_locucion": "Texto exacto en ESPAÑOL que el narrador leerá. Directo al grano."
             },
             {
               "id_escena": 2,
-              "prompt_visual": "Siguiente prompt en INGLÉS con cambio de plano táctico.",
+              "prompt_visual": "RAW photo, photorealistic, hyperrealistic, shot on Canon EOS R5, cinematic lighting, 8k uhd, ultra detailed, sharp focus, film grain, [siguiente escena táctica en INGLÉS con cambio de plano]",
               "texto_locucion": "Siguiente fragmento de análisis en ESPAÑOL."
             }
-            // ... (Continuar hasta completar el análisis solicitado)
           ]
         }
         """
@@ -103,7 +121,7 @@ class AIEngine:
         elif "monkygraff" in marca_lower:
             system_instruction = self.adn_monkygraff
         else:
-            system_instruction = self.adn_la_viuda # Fallback de seguridad
+            system_instruction = self.adn_la_viuda  # Fallback de seguridad
 
         # Inyección de directriz de ritmo basada en el formato
         instruccion_ritmo = (
@@ -125,7 +143,6 @@ class AIEngine:
             for index, key in enumerate(llaves):
                 try:
                     genai.configure(api_key=key)
-                    # Forzamos a Gemini a responder estrictamente en formato JSON
                     model = genai.GenerativeModel(
                         model_name=modelo,
                         system_instruction=system_instruction,
@@ -133,14 +150,10 @@ class AIEngine:
                     )
                     response = model.generate_content(prompt_final)
                     
-                    # Intentamos parsear para asegurar que entregó un JSON válido
                     try:
                         json_parseado = json.loads(response.text)
-                        # Devolvemos el JSON como string formateado para la interfaz, o podemos pasarlo crudo.
-                        # Para la etapa actual, devolver el string JSON estructurado es perfecto.
                         return json.dumps(json_parseado, indent=4, ensure_ascii=False)
                     except json.JSONDecodeError:
-                        # Si Gemini falla y entrega texto plano a pesar de la orden
                         return response.text
                         
                 except Exception as e:
