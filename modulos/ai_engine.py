@@ -78,41 +78,13 @@ class AIEngine:
         }
         """
 
-    def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
-        """
-        Punto de entrada. Incorpora el parámetro 'formato' para decirle a la IA 
-        cuántas escenas debe calcular lógicamente.
-        """
-        llaves = self.boveda.obtener_llaves()
-        
-        if not llaves:
-            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda ni en el Entorno."
-
-        # ENRUTADOR DINÁMICO DE SILOS
-        marca_lower = marca.lower()
-        if "viuda" in marca_lower:
-            system_instruction = self.adn_la_viuda
-        elif "monkygraff" in marca_lower:
-            system_instruction = self.adn_monkygraff
-        else:
-            system_instruction = self.adn_la_viuda  # Fallback de seguridad
-
-        # Inyección de directriz de ritmo basada en el formato
-        instruccion_ritmo = (
-            f"\n\n[DIRECTRIZ DE RITMO VISUAL]: El usuario ha solicitado formato {formato}. "
-            f"Si es para SHORTS (9:16), genera una estructura rápida de entre 5 y 7 escenas cortas para un video de 60 segundos. "
-            f"Si es para LARGO (16:9), genera una estructura profunda con cambios de escena cada 2 o 3 párrafos, cubriendo la longitud solicitada de {longitud}."
-        )
-
-        prompt_final = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
-
+    def _llamar_gemini(self, system_instruction, prompt, llaves):
+        """Llamada única a Gemini — reutilizable."""
         modelos_prioridad = [
-            "models/gemini-2.5-flash", 
-            "models/gemini-2.0-flash", 
+            "models/gemini-2.5-flash",
+            "models/gemini-2.0-flash",
             "models/gemini-2.0-flash-lite"
         ]
-        errores_detallados = []
-        
         for modelo in modelos_prioridad:
             for index, key in enumerate(llaves):
                 try:
@@ -122,20 +94,81 @@ class AIEngine:
                         system_instruction=system_instruction,
                         generation_config={"response_mime_type": "application/json"}
                     )
-                    response = model.generate_content(prompt_final)
-                    
-                    try:
-                        json_parseado = json.loads(response.text)
-                        return json.dumps(json_parseado, indent=4, ensure_ascii=False)
-                    except json.JSONDecodeError:
-                        return response.text
-                        
+                    response = model.generate_content(prompt)
+                    return json.loads(response.text)
                 except Exception as e:
-                    mensaje_error = str(e).replace(key, f"[*TANQUE_{index+1}*]")
-                    if "429" in mensaje_error:
-                        errores_detallados.append(f"> {modelo} | Tanque {index + 1}: CUOTA AGOTADA (429)")
-                    else:
-                        errores_detallados.append(f"> {modelo} | Tanque {index + 1}: {mensaje_error}")
                     continue
-                
-        return "BLOQUEO TOTAL DE CUOTA (NIVEL 2.5):\nGoogle ha restringido todas las llaves y modelos por hoy.\n\n" + "\n".join(errores_detallados)
+        return None
+
+    def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
+        """
+        Para SHORTS: una sola llamada (5-7 escenas).
+        Para LARGOS: 3 llamadas de ~20 escenas cada una, unidas en un solo JSON.
+        Evita OOM en Render plan gratuito.
+        """
+        llaves = self.boveda.obtener_llaves()
+        if not llaves:
+            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda."
+
+        marca_lower = marca.lower()
+        if "viuda" in marca_lower:
+            system_instruction = self.adn_la_viuda
+        elif "monkygraff" in marca_lower:
+            system_instruction = self.adn_monkygraff
+        else:
+            system_instruction = self.adn_la_viuda
+
+        es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
+
+        if not es_largo:
+            # SHORT — una sola llamada
+            instruccion_ritmo = (
+                f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
+                f"Genera entre 5 y 7 escenas cortas para un video de 60 segundos."
+            )
+            prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
+            resultado = self._llamar_gemini(system_instruction, prompt, llaves)
+            if resultado:
+                return json.dumps(resultado, indent=4, ensure_ascii=False)
+            return "ERROR: No se pudo generar el guion."
+
+        else:
+            # LARGO — 3 llamadas de ~20 escenas para no saturar RAM de Render
+            partes = [
+                ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
+                ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
+                ("CIERRE",     "escenas 41 a 60 — clímax, revelación, cierre emocional y llamado a la acción"),
+            ]
+
+            todas_las_escenas = []
+            titulo = ""
+            marca_final = marca
+
+            for i, (bloque, descripcion) in enumerate(partes):
+                instruccion_bloque = (
+                    f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
+                    f"Genera SOLO el bloque de {descripcion}. "
+                    f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
+                    f"Formato 16:9 video largo. "
+                    f"NO generes título ni estructura completa, solo las escenas de este bloque."
+                )
+                prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
+                print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
+                resultado = self._llamar_gemini(system_instruction, prompt, llaves)
+
+                if resultado:
+                    if i == 0 and "titulo_sugerido" in resultado:
+                        titulo = resultado.get("titulo_sugerido", "")
+                        marca_final = resultado.get("marca", marca)
+                    escenas_bloque = resultado.get("escenas", [])
+                    todas_las_escenas.extend(escenas_bloque)
+                else:
+                    print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló, continuando...")
+
+            guion_final = {
+                "marca": marca_final,
+                "formato": "LARGO",
+                "titulo_sugerido": titulo,
+                "escenas": todas_las_escenas
+            }
+            return json.dumps(guion_final, indent=4, ensure_ascii=False)
