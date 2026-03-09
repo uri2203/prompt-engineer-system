@@ -262,8 +262,11 @@ async function ejecutarCCTV() {
         const response = await fetch('/api/generate_image', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // Ahora mandamos el JSON Array completo como si fuera el prompt
-            body: JSON.stringify({ prompt: promptData })
+            // formato 9:16 para shorts, 16:9 para largos
+            body: JSON.stringify({
+                prompt: promptData,
+                formato: document.getElementById('input_longitud').value === '4900 palabras' ? '16:9' : '9:16'
+            })
         });
         const data = await response.json();
 
