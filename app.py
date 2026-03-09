@@ -180,7 +180,8 @@ def api_generate_image():
     if not prompt: return jsonify({"status": "error", "message": "Prompt vacío"})
     
     tarea_id = str(uuid.uuid4())
-    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt})
+    formato = data.get('formato', '16:9')
+    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt, "formato": formato})
     return jsonify({"status": "EN_COLA", "tarea_id": tarea_id, "message": "Orden enviada a la Dark Factory."})
 
 @app.route('/api/check_image/<tarea_id>')
