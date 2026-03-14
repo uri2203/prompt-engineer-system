@@ -149,6 +149,7 @@ async function ejecutarMotor() {
     const payload = {
         marca: document.getElementById('input_marca').value,
         longitud: document.getElementById('input_longitud').value,
+        formato: document.getElementById('input_longitud').value === '4900 palabras' ? '16:9' : '9:16',
         contexto: document.getElementById('input_contexto').value,
         peticion: document.getElementById('input_peticion').value
     };
