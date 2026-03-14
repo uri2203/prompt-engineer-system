@@ -124,7 +124,7 @@ class AIEngine:
             # SHORT — una sola llamada
             instruccion_ritmo = (
                 f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
-                f"Genera entre 5 y 7 escenas cortas para un video de 60 segundos."
+                f"Genera entre 12 y 15 escenas para un video de 60 segundos."
             )
             prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
             resultado = self._llamar_gemini(system_instruction, prompt, llaves)
