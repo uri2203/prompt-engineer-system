@@ -160,22 +160,24 @@ def api_assemble_video():
     data = request.json
     tarea_id = str(uuid.uuid4())
     marca = data.get('marca', 'La Viuda')
-
-    # Enrutar voz por marca
     voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
 
-    cola_de_renderizado.append({
+    tarea = {
         "id": tarea_id,
         "tipo": "ENSAMBLAJE",
         "texto_locucion": data.get('texto_locucion', ''),
         "voice_id": voice_id,
         "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
         "marca": marca
-    })
-    return jsonify({
-        "status": "success",
-        "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"
-    })
+    }
+
+    # Guardar en disco — sobrevive reinicios de Render
+    import json as _json
+    with open(f"/tmp/ensamblaje_{tarea_id}.json", "w") as f:
+        _json.dump(tarea, f)
+
+    cola_de_renderizado.append(tarea)
+    return jsonify({"status": "success", "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"})
 
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
@@ -198,6 +200,19 @@ def check_image(tarea_id):
 
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
+    import json as _json, glob
+    # Si la cola está vacía, recuperar tareas de ensamblaje guardadas en disco
+    if len(cola_de_renderizado) == 0:
+        archivos = glob.glob("/tmp/ensamblaje_*.json")
+        for archivo in archivos:
+            try:
+                with open(archivo, "r") as f:
+                    tarea = _json.load(f)
+                cola_de_renderizado.append(tarea)
+                os.remove(archivo)
+                break  # procesar una a la vez
+            except:
+                pass
     if len(cola_de_renderizado) > 0:
         return jsonify({"status": "success", "hay_trabajo": True, "tarea": cola_de_renderizado.pop(0)}), 200
     return jsonify({"status": "success", "hay_trabajo": False}), 200
