@@ -275,8 +275,16 @@ async function ejecutarCCTV() {
             const tareaId = data.tarea_id;
             consola.innerHTML += `\n<span class="text-yellow-500">> [COLA] Lote Multiescena #${tareaId} recibido por el Nodo. Iniciando renderizado secuencial...</span>`;
             
-            // Iniciar Polling de resultado
-            await esperarImagen(tareaId);
+            const esLargo = document.getElementById('input_longitud').value === '4900 palabras';
+            if(esLargo) {
+                // LARGO: no esperar preview — ir directo al ensamblaje cuando el audio esté listo
+                consola.innerHTML += `\n<span class="text-blue-400">> [SISTEMA] Modo LARGO — esperando que el nodo termine las 60 escenas...</span>`;
+                currentImageB64 = "LARGO";  // señal para que la fase 4 no espere
+                if(currentAudioB64) await ejecutarEnsamblaje();
+            } else {
+                // SHORT: esperar preview como siempre
+                await esperarImagen(tareaId);
+            }
         }
     } catch (error) {
         visor.innerHTML = `<span class="text-red-600 font-mono text-sm tracking-widest">[ ERROR DE ENLACE ]</span>`;
