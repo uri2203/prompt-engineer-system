@@ -27,7 +27,8 @@ compliance_engine = ComplianceEngine()
 
 # COLA DE TAREAS PARA LA DARK FACTORY
 cola_de_renderizado = []
-resultados_itinerantes = {}  
+resultados_itinerantes = {}
+audios_temporales = {}  # Almacén temporal de audios grandes
 
 def login_required(f):
     @wraps(f)
@@ -159,11 +160,13 @@ def api_assemble_video():
     data = request.json
     tarea_id = str(uuid.uuid4())
     
-    # Se añade 'texto_locucion' para que el nodo local pueda realizar la transcripción/subtitulado.
+    # Guardar audio en dict separado — evita corrupción por base64 gigante en JSON
+    audios_temporales[tarea_id] = data.get('audio_b64', '')
+    
     cola_de_renderizado.append({
         "id": tarea_id,
         "tipo": "ENSAMBLAJE",
-        "audio_b64": data.get('audio_b64'),
+        "audio_tarea_id": tarea_id,  # worker descarga el audio por separado
         "texto_locucion": data.get('texto_locucion', ''),
         "marca": data.get('marca')
     })
@@ -171,6 +174,19 @@ def api_assemble_video():
         "status": "success", 
         "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"
     })
+
+@app.route('/api/nodo/get_audio/<tarea_id>')
+def nodo_get_audio(tarea_id):
+    """El worker descarga el audio directamente por esta ruta — sin base64 en JSON."""
+    from flask import Response
+    audio_b64 = audios_temporales.pop(tarea_id, None)
+    if not audio_b64:
+        return jsonify({"status": "error"}), 404
+    import base64
+    audio_data = audio_b64.split(",")[1] if "," in audio_b64 else audio_b64
+    audio_data += "=" * (4 - len(audio_data) % 4)
+    audio_bytes = base64.b64decode(audio_data)
+    return Response(audio_bytes, mimetype="audio/mpeg")
 
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
