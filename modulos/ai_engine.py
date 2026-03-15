@@ -149,7 +149,8 @@ class AIEngine:
                     f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
                     f"Genera SOLO el bloque de {descripcion}. "
                     f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
-                    f"Formato 16:9 video largo. "
+                    f"Formato 16:9 video largo de 30 MINUTOS. "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español — es narración continua y densa, no frases cortas. "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
