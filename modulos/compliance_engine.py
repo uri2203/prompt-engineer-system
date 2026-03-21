@@ -142,7 +142,7 @@ class ComplianceEngine:
             for restriccion in restricciones:
                 palabras_clave = [p for p in restriccion.split() if len(p) > 3]
                 coincidencias = sum(1 for p in palabras_clave if p in texto_limpio)
-                if coincidencias >= 2:
+                if coincidencias >= 4:
                     estrategia = self.leyes["marcas"][marca]["estrategia_evasion"]
                     return False, f"Violación de directriz de marca ({marca}) por posible: '{restriccion}'. OBLIGATORIO APLICAR: {estrategia}."
 
