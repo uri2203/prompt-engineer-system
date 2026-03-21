@@ -128,7 +128,9 @@ class AIEngine:
             # SHORT — una sola llamada
             instruccion_ritmo = (
                 f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
-                f"Genera entre 12 y 15 escenas para un video de 60 segundos."
+                f"Genera entre 12 y 15 escenas para un video de 60 segundos. "
+                f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos del español (á, é, í, ó, ú, ñ). "
+                f"PROHIBIDO escribir sin acentos. Ejemplos obligatorios: después, también, así, más, qué, cómo, están, pasó, Rusia, Dinamarca, rutas, región, Pekín."
             )
             prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
             resultado = self._llamar_gemini(system_instruction, prompt, llaves)
@@ -155,6 +157,7 @@ class AIEngine:
                     f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
                     f"Formato 16:9 video largo de 30 MINUTOS. "
                     f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español — es narración continua y densa, no frases cortas. "
+                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). PROHIBIDO escribir sin acentos. "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
