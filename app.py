@@ -166,6 +166,7 @@ def api_assemble_video():
         "id": tarea_id,
         "tipo": "ENSAMBLAJE",
         "texto_locucion": data.get('texto_locucion', ''),
+        "escenas_texto": data.get('escenas_texto', []),
         "voice_id": voice_id,
         "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
         "marca": marca
