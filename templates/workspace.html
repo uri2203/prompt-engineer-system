@@ -194,6 +194,9 @@ async function ejecutarMotor() {
                 // 1. Extraer y concatenar el audio
                 let textoCompletoAudio = jsonParseado.escenas.map(e => e.texto_locucion).join(" ");
                 document.getElementById('input_texto_locucion').value = textoCompletoAudio;
+                
+                // Guardar textos por escena para subtítulos sincronizados
+                window.currentEscenasTexto = jsonParseado.escenas.map(e => e.texto_locucion);
 
                 // 2. Extraer los prompts visuales y guardarlos como Data Array para el Xeon
                 let arrayPrompts = jsonParseado.escenas.map(e => {
@@ -364,7 +367,8 @@ async function ejecutarEnsamblaje() {
                 marca: marca, 
                 image_b64: currentImageB64, 
                 audio_b64: currentAudioB64,
-                texto_locucion: document.getElementById('input_texto_locucion').value
+                texto_locucion: document.getElementById('input_texto_locucion').value,
+                escenas_texto: window.currentEscenasTexto || []
             })
         });
         const data = await response.json();
