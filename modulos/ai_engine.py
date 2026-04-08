@@ -83,12 +83,13 @@ class AIEngine:
         """
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
-        """Llamada única a Gemini — reutilizable y con telemetría de errores."""
+        """Llamada a Gemini con captura de telemetría para el Frontend."""
         modelos_prioridad = [
             "models/gemini-2.5-flash",
             "models/gemini-2.0-flash",
             "models/gemini-2.0-flash-lite"
         ]
+        log_errores = []
         for modelo in modelos_prioridad:
             for index, key in enumerate(llaves):
                 try:
@@ -99,17 +100,17 @@ class AIEngine:
                         generation_config={"response_mime_type": "application/json"}
                     )
                     response = model.generate_content(prompt)
-                    return json.loads(response.text)
+                    return json.loads(response.text), log_errores
                 except Exception as e:
-                    print(f"[ALERTA API GEMINI] Fallo con modelo {modelo} (Llave {index}): {str(e)}")
+                    error_msg = f"Llave {index} ({modelo}): {str(e)}"
+                    print(f"[ALERTA API GEMINI] {error_msg}")
+                    log_errores.append(error_msg)
                     continue
-        return None
+        return None, log_errores
 
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
         """
-        Para SHORTS: una sola llamada (5-7 escenas).
-        Para LARGOS: 3 llamadas de ~20 escenas cada una, unidas en un solo JSON.
-        Evita OOM en Render plan gratuito.
+        Arquitectura unificada con entrega de errores a la UI.
         """
         llaves = self.boveda.obtener_llaves()
         if not llaves:
@@ -134,13 +135,16 @@ class AIEngine:
                 f"PROHIBIDO escribir sin acentos. Ejemplos obligatorios: después, también, así, más, qué, cómo, están, pasó, Rusia, Dinamarca, rutas, región, Pekín."
             )
             prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
-            resultado = self._llamar_gemini(system_instruction, prompt, llaves)
+            resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
+            
             if resultado:
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
-            return "ERROR: No se pudo generar el guion."
+            
+            # Retorna el log completo de fallos a la interfaz gráfica
+            return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
-            # LARGO — 3 llamadas de ~20 escenas para no saturar RAM de Render
+            # LARGO — 3 llamadas de ~20 escenas
             partes = [
                 ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
                 ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
@@ -150,6 +154,7 @@ class AIEngine:
             todas_las_escenas = []
             titulo = ""
             marca_final = marca
+            errores_totales = []
 
             for i, (bloque, descripcion) in enumerate(partes):
                 instruccion_bloque = (
@@ -163,7 +168,8 @@ class AIEngine:
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
-                resultado = self._llamar_gemini(system_instruction, prompt, llaves)
+                
+                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
                     if i == 0 and "titulo_sugerido" in resultado:
@@ -172,7 +178,12 @@ class AIEngine:
                     escenas_bloque = resultado.get("escenas", [])
                     todas_las_escenas.extend(escenas_bloque)
                 else:
-                    print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló, continuando...")
+                    print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló...")
+                    errores_totales.extend(errores)
+
+            if not todas_las_escenas:
+                # Retorna el log completo de fallos a la interfaz gráfica
+                return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
             guion_final = {
                 "marca": marca_final,
