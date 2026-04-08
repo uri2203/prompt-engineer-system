@@ -180,6 +180,69 @@ def api_assemble_video():
     cola_de_renderizado.append(tarea)
     return jsonify({"status": "success", "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"})
 
+@app.route('/api/generar_paquete', methods=['POST'])
+@login_required
+def api_generar_paquete():
+    import json as _json
+
+    data          = request.json
+    marca         = data.get('marca', 'La Viuda')
+    titulo        = data.get('titulo', '')
+    texto_locucion = data.get('texto_locucion', '')
+    formato       = data.get('formato', '9:16')
+
+    if not texto_locucion:
+        return jsonify({"status": "error", "message": "No hay texto de locución"}), 400
+
+    # Generar paquete con Gemini
+    print(f"[PAQUETE] Generando paquete de publicación para {marca}...")
+    paquete = ai_engine.generar_paquete_publicacion(marca, titulo, texto_locucion, formato)
+
+    if not paquete:
+        return jsonify({"status": "error", "message": "Error generando paquete con Gemini"}), 500
+
+    # Guardar en carpeta más reciente igual que worker_cpu
+    CARPETA_LOCAL = "C:\\DarkFactory_Renders"
+    try:
+        carpetas = [
+            os.path.join(CARPETA_LOCAL, d)
+            for d in os.listdir(CARPETA_LOCAL)
+            if os.path.isdir(os.path.join(CARPETA_LOCAL, d))
+        ]
+        carpeta_reciente = max(carpetas, key=os.path.getmtime) if carpetas else None
+    except:
+        carpeta_reciente = None
+
+    if carpeta_reciente:
+        ruta_paquete = os.path.join(carpeta_reciente, "paquete_publicacion.json")
+        with open(ruta_paquete, "w", encoding="utf-8") as f:
+            _json.dump(paquete, f, indent=4, ensure_ascii=False)
+        print(f"[PAQUETE] Guardado en: {ruta_paquete}")
+
+        # Si es LARGO → encolar generación de miniaturas A/B/C en Xeon
+        es_largo = "16:9" in formato or formato.upper() == "LARGO"
+        if es_largo:
+            for opcion in ['A', 'B', 'C']:
+                prompt_key = f"prompt_miniatura_{opcion}"
+                prompt_min = paquete.get(prompt_key, "")
+                if prompt_min:
+                    tarea_min = {
+                        "id": str(uuid.uuid4()),
+                        "tipo": "IMAGEN",
+                        "prompt": prompt_min,
+                        "formato": "16:9",
+                        "carpeta_destino": carpeta_reciente,
+                        "nombre_archivo": f"miniatura_{opcion}.png"
+                    }
+                    cola_de_renderizado.append(tarea_min)
+            print(f"[PAQUETE] 3 miniaturas encoladas para renderizado en Xeon.")
+
+    return jsonify({
+        "status": "success",
+        "message": "Paquete generado y guardado",
+        "paquete": paquete
+    })
+
 @app.route('/api/generate_image', methods=['POST'])
 @login_required
 def api_generate_image():
