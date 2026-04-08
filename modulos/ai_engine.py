@@ -23,9 +23,9 @@ class AIEngine:
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
         2. SOLO AMBIENTES: lugares, edificios, calles vacías, objetos, sombras, puertas, ventanas, habitaciones.
-        3. SIEMPRE iniciar con: "cinematic empty environment, no people, no humans, photorealistic, dramatic lighting, 8k uhd, ultra detailed, film grain,"
-        4. PROHIBIDO: Canon, Nikon, Sony, logos, marcas, CGI, render 3D, videojuego, anime.
-        5. ESTILO: oscuro, suspenso, atmósfera opresiva, iluminación dramática.
+        3. SIEMPRE iniciar con: "CCTV security camera footage, low quality, heavily grainy, VHS glitch, amateur dashcam, disposable camera flash, underexposed, 1990s realistic photography, dirty lens, no people,"
+        4. PROHIBIDO: 3d render, illustration, painting, vibrant colors, neon, perfect lighting, professional photography, artificial, smooth plastic, CGI, unreal engine.
+        5. ESTILO: oscuro, suspenso, realismo sucio, baja fidelidad, metraje encontrado.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -37,7 +37,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "cinematic empty environment, no people, no humans, photorealistic, dramatic lighting, 8k uhd, ultra detailed, film grain, [descripción del ambiente en INGLÉS: lugar, atmósfera, objetos, sin personas]",
+              "prompt_visual": "CCTV security camera footage, low quality, heavily grainy, VHS glitch, amateur dashcam, disposable camera flash, underexposed, 1990s realistic photography, dirty lens, no people, [descripción del ambiente en INGLÉS: lugar, atmósfera, objetos, sin personas]",
               "texto_locucion": "Texto en ESPAÑOL impecable para el narrador."
             }
           ]
@@ -61,9 +61,9 @@ class AIEngine:
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
         2. SOLO AMBIENTES Y OBJETOS: mapas, satélites, salas de control vacías, vehículos sin conductor, infraestructura, paisajes.
-        3. SIEMPRE iniciar con: "cinematic empty environment, no people, no humans, photorealistic, dramatic lighting, 8k uhd, ultra detailed, film grain,"
-        4. PROHIBIDO: Canon, Nikon, Sony, logos, marcas, CGI, render 3D, videojuego, anime.
-        5. ESTILO: táctico, serio, alta tecnología, atmósfera de sala de guerra.
+        3. SIEMPRE iniciar con: "Macro photography, photojournalism, Reuters style, desaturated colors, realistic environment, harsh industrial lighting, highly detailed, no people,"
+        4. PROHIBIDO: Sci-fi interface, glowing lines, hologram, 3d render, vibrant colors, neon, cyberpunk, illustration, plastic, glowing lights, unreal engine, video game.
+        5. ESTILO: táctico, serio, fotoperiodismo de guerra, documental crudo.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -75,7 +75,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "cinematic empty environment, no people, no humans, photorealistic, dramatic lighting, 8k uhd, ultra detailed, film grain, [descripción táctica en INGLÉS: mapa, sala vacía, vehículo, infraestructura, sin personas]",
+              "prompt_visual": "Macro photography, photojournalism, Reuters style, desaturated colors, realistic environment, harsh industrial lighting, highly detailed, no people, [descripción táctica en INGLÉS: mapa, sala vacía, vehículo, infraestructura, sin personas]",
               "texto_locucion": "Texto en ESPAÑOL impecable y directo al grano."
             }
           ]
@@ -83,7 +83,7 @@ class AIEngine:
         """
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
-        """Llamada única a Gemini — reutilizable."""
+        """Llamada única a Gemini — reutilizable y con telemetría de errores."""
         modelos_prioridad = [
             "models/gemini-2.5-flash",
             "models/gemini-2.0-flash",
@@ -101,6 +101,7 @@ class AIEngine:
                     response = model.generate_content(prompt)
                     return json.loads(response.text)
                 except Exception as e:
+                    print(f"[ALERTA API GEMINI] Fallo con modelo {modelo} (Llave {index}): {str(e)}")
                     continue
         return None
 
