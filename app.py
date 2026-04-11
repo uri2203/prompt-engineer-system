@@ -181,45 +181,12 @@ def api_assemble_video():
     return jsonify({"status": "success", "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"})
 
 def _procesar_paquete(marca, titulo, texto_locucion, formato):
-    import json as _json
     print(f"[PAQUETE] Generando paquete de publicación para {marca}...")
     paquete = ai_engine.generar_paquete_publicacion(marca, titulo, texto_locucion, formato)
     if not paquete:
         return jsonify({"status": "error", "message": "Error generando paquete con Gemini"}), 500
-
-    CARPETA_LOCAL = "C:\\DarkFactory_Renders"
-    try:
-        carpetas = [
-            os.path.join(CARPETA_LOCAL, d)
-            for d in os.listdir(CARPETA_LOCAL)
-            if os.path.isdir(os.path.join(CARPETA_LOCAL, d))
-        ]
-        carpeta_reciente = max(carpetas, key=os.path.getmtime) if carpetas else None
-    except:
-        carpeta_reciente = None
-
-    if carpeta_reciente:
-        ruta_paquete = os.path.join(carpeta_reciente, "paquete_publicacion.json")
-        with open(ruta_paquete, "w", encoding="utf-8") as f:
-            _json.dump(paquete, f, indent=4, ensure_ascii=False)
-        print(f"[PAQUETE] Guardado en: {ruta_paquete}")
-
-        es_largo = "16:9" in formato or formato.upper() == "LARGO"
-        if es_largo:
-            for opcion in ['A', 'B', 'C']:
-                prompt_min = paquete.get(f"prompt_miniatura_{opcion}", "")
-                if prompt_min:
-                    cola_de_renderizado.append({
-                        "id": str(uuid.uuid4()),
-                        "tipo": "IMAGEN",
-                        "prompt": prompt_min,
-                        "formato": "16:9",
-                        "carpeta_destino": carpeta_reciente,
-                        "nombre_archivo": f"miniatura_{opcion}.png"
-                    })
-            print(f"[PAQUETE] 3 miniaturas encoladas para renderizado en Xeon.")
-
-    return jsonify({"status": "success", "message": "Paquete generado y guardado", "paquete": paquete})
+    # Solo devuelve el JSON — el worker es quien guarda en disco local
+    return jsonify({"status": "success", "paquete": paquete})
 
 # Ruta para el frontend (requiere login)
 @app.route('/api/generar_paquete', methods=['POST'])
@@ -264,6 +231,14 @@ def check_image(tarea_id):
     if tarea_id in resultados_itinerantes:
         return jsonify({"status": "READY", "image_url": resultados_itinerantes.pop(tarea_id)})
     return jsonify({"status": "PENDING"})
+
+@app.route('/api/nodo/encolar_tarea', methods=['POST'])
+def nodo_encolar_tarea():
+    tarea = request.json
+    if tarea:
+        cola_de_renderizado.append(tarea)
+        return jsonify({"status": "success"}), 200
+    return jsonify({"status": "error"}), 400
 
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
