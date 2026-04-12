@@ -133,16 +133,24 @@ Formato: {"VIDEO LARGO 16:9 YouTube" if es_largo else "SHORT 9:16 YouTube Shorts
 
 Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
 
+INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
+- NUNCA generes prompts oscuros que resulten en imágenes negras
+- SIEMPRE incluir: dramatic lighting, high contrast, visible details, sharp focus
+- SIEMPRE incluir elementos visuales concretos y descriptivos
+- PROHIBIDO: total darkness, pitch black, all black, completely dark
+- Los prompts deben generar imágenes impactantes y visibles, no oscuras
+- Sin personas, sin rostros, sin cuerpos humanos
+
 {{
   "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, con número o pregunta si aplica",
   "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Incluir timestamps si es largo. Terminar con links de redes.",
   "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
   "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
   "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
-  "prompt_hook": "Prompt cinematográfico para generar imagen del HOOK de apertura del video. Debe capturar la esencia más perturbadora/impactante del video. En inglés.",
-  "prompt_miniatura_A": "Prompt para miniatura opción A. Estilo clickbait extremo, colores contrastantes, sin personas. En inglés. 1920x1080.",
-  "prompt_miniatura_B": "Prompt para miniatura opción B. Estilo misterioso oscuro, texto implícito en la imagen. Sin personas. En inglés. 1920x1080.",
-  "prompt_miniatura_C": "Prompt para miniatura opción C. Estilo documental impactante, realismo extremo. Sin personas. En inglés. 1920x1080."
+  "prompt_hook": "Prompt cinematográfico para imagen del HOOK. Alta retención, impactante, visible. dramatic lighting, high contrast, detailed. Sin personas. En inglés.",
+  "prompt_miniatura_A": "Photorealistic dramatic scene, [elemento visual específico del tema], high contrast lighting, sharp focus, visible details, moody atmosphere, cinematic composition, no people, no faces, 8k uhd, [2-3 elementos visuales concretos relacionados al tema del video]",
+  "prompt_miniatura_B": "Hyperrealistic environment, [elemento visual específico diferente], dramatic side lighting, deep shadows with visible details, atmospheric fog or mist, cinematic still, no humans, no faces, ultra detailed, [2-3 elementos visuales del tema]",
+  "prompt_miniatura_C": "Photojournalism style, [elemento visual impactante del tema], harsh directional lighting, gritty realistic texture, visible and detailed composition, no people, raw documentary feel, [2-3 elementos visuales del tema]"
 }}
 """
         # Para shorts no incluir miniaturas
