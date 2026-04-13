@@ -3,10 +3,65 @@ from modulos.boveda import BovedaManager
 import json
 import re
 import time
+import os
+from datetime import datetime, timedelta, timezone
+
+class GestorCuotas:
+    """
+    Cerebro local y silencioso del nodo Xeon. 
+    Lleva la cuenta de los usos sin conectarse a internet ni a Render.
+    """
+    def __init__(self, limite_diario=20, archivo_bd="cuotas_gemini.json"):
+        self.archivo_bd = archivo_bd
+        self.limite_diario = limite_diario
+        self.estado = self._cargar_estado()
+
+    def _obtener_fecha_pt_actual(self):
+        # Google resetea a la 1:00 AM de CDMX (Medianoche del Pacífico).
+        tz_pt = timezone(timedelta(hours=-7))
+        return datetime.now(tz_pt).strftime("%Y-%m-%d")
+
+    def _cargar_estado(self):
+        fecha_actual = self._obtener_fecha_pt_actual()
+        if os.path.exists(self.archivo_bd):
+            try:
+                with open(self.archivo_bd, "r") as f:
+                    data = json.load(f)
+                # Si es un día nuevo en California, limpiar contadores
+                if data.get("fecha_corte") != fecha_actual:
+                    print("♻️ [SISTEMA] Nuevo día detectado. Reseteando contadores de llaves a 0.")
+                    return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+                return data
+            except Exception:
+                pass
+        return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+
+    def _guardar_estado(self):
+        with open(self.archivo_bd, "w") as f:
+            json.dump(self.estado, f, indent=4)
+
+    def puede_usar_llave(self, index_llave):
+        idx_str = str(index_llave)
+        usos = self.estado["uso_por_llave"].get(idx_str, 0)
+        return usos < self.limite_diario
+
+    def registrar_exito(self, index_llave):
+        idx_str = str(index_llave)
+        usos_actuales = self.estado["uso_por_llave"].get(idx_str, 0)
+        self.estado["uso_por_llave"][idx_str] = usos_actuales + 1
+        self._guardar_estado()
+        print(f"📊 [CUOTA] Llave {index_llave}: {usos_actuales + 1}/{self.limite_diario} usos diarios.")
+
+    def bloquear_llave_por_agotamiento(self, index_llave):
+        idx_str = str(index_llave)
+        self.estado["uso_por_llave"][idx_str] = self.limite_diario
+        self._guardar_estado()
+        print(f"🔒 [CUOTA] Llave {index_llave} SELLADA. Límite de Google alcanzado.")
 
 class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
+        self.cuotas = GestorCuotas(limite_diario=20)
         
         # ADN Maestro: La Viuda (Silo Hermético 1)
         self.adn_la_viuda = """
@@ -86,7 +141,7 @@ class AIEngine:
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
         """
-        Llamada a Gemini con freno real de rate limiting y Kill Switch de seguridad.
+        Llamada a Gemini con freno real de rate limiting, contabilidad local y Kill Switch de seguridad.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -104,6 +159,11 @@ class AIEngine:
                 if modelo_agotado:
                     break
 
+                # 🛑 FILTRO LOCAL: El nodo rechaza trabajar si la llave ya llegó a su límite.
+                if not self.cuotas.puede_usar_llave(index):
+                    print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
+                    continue
+
                 for intento in range(MAX_REINTENTOS):
                     try:
                         genai.configure(api_key=key)
@@ -113,6 +173,9 @@ class AIEngine:
                             generation_config={"response_mime_type": "application/json"}
                         )
                         response = model.generate_content(prompt)
+                        
+                        # ✅ ÉXITO: El nodo registra el gasto internamente.
+                        self.cuotas.registrar_exito(index)
                         print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
                         return json.loads(response.text), log_errores
 
@@ -122,9 +185,11 @@ class AIEngine:
                         # --- CUOTA DIARIA AGOTADA: límite 0 -> saltar modelo completo ---
                         if ("PerDay" in error_str and "limit: 0" in error_str) or \
                            ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
-                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria disponible. Saltando al siguiente modelo."
+                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria disponible. Saltando modelo."
                             print(msg)
                             log_errores.append(msg)
+                            # 🔒 Registrar agotamiento total de esta llave en el archivo local
+                            self.cuotas.bloquear_llave_por_agotamiento(index)
                             modelo_agotado = True
                             break
 
@@ -143,7 +208,7 @@ class AIEngine:
                         log_errores.append(error_msg)
                         
                         # ===================================================================
-                        # 🛑 KILL SWITCH DE SEGURIDAD (INYECCIÓN CRÍTICA DE PROTECCIÓN)
+                        # 🛑 KILL SWITCH DE SEGURIDAD (PROTECCIÓN CONTRA BUCLES)
                         # ===================================================================
                         if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
                             print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo para proteger llaves restantes.")
@@ -152,11 +217,12 @@ class AIEngine:
                         break  # sale del loop de reintentos, pasa a siguiente llave
 
                 else:
-                    # Agotó todos los reintentos sin éxito en esta llave
                     error_msg = f"Llave {index} ({modelo}): agotó {MAX_REINTENTOS} reintentos sin éxito."
                     print(f"[FALLO] {error_msg}")
                     log_errores.append(error_msg)
 
+        # Si llegamos aquí, todas las llaves fueron rechazadas por el Gestor Local o fallaron.
+        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron. Orden ignorada.")
         return None, log_errores
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
