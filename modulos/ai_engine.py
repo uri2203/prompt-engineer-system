@@ -1,6 +1,8 @@
 import google.generativeai as genai
 from modulos.boveda import BovedaManager
 import json
+import re
+import time
 
 class AIEngine:
     def __init__(self):
@@ -83,29 +85,78 @@ class AIEngine:
         """
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
-        """Llamada a Gemini con captura de telemetría para el Frontend."""
+        """
+        Llamada a Gemini con freno real de rate limiting y Kill Switch de seguridad.
+        """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
             "models/gemini-2.0-flash",
             "models/gemini-2.0-flash-lite"
         ]
         log_errores = []
+        MAX_REINTENTOS = 3
+        MAX_ESPERA_SEGUNDOS = 65
+
         for modelo in modelos_prioridad:
+            modelo_agotado = False
+
             for index, key in enumerate(llaves):
-                try:
-                    genai.configure(api_key=key)
-                    model = genai.GenerativeModel(
-                        model_name=modelo,
-                        system_instruction=system_instruction,
-                        generation_config={"response_mime_type": "application/json"}
-                    )
-                    response = model.generate_content(prompt)
-                    return json.loads(response.text), log_errores
-                except Exception as e:
-                    error_msg = f"Llave {index} ({modelo}): {str(e)}"
-                    print(f"[ALERTA API GEMINI] {error_msg}")
+                if modelo_agotado:
+                    break
+
+                for intento in range(MAX_REINTENTOS):
+                    try:
+                        genai.configure(api_key=key)
+                        model = genai.GenerativeModel(
+                            model_name=modelo,
+                            system_instruction=system_instruction,
+                            generation_config={"response_mime_type": "application/json"}
+                        )
+                        response = model.generate_content(prompt)
+                        print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
+                        return json.loads(response.text), log_errores
+
+                    except Exception as e:
+                        error_str = str(e)
+
+                        # --- CUOTA DIARIA AGOTADA: límite 0 -> saltar modelo completo ---
+                        if ("PerDay" in error_str and "limit: 0" in error_str) or \
+                           ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
+                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria disponible. Saltando al siguiente modelo."
+                            print(msg)
+                            log_errores.append(msg)
+                            modelo_agotado = True
+                            break
+
+                        # --- RATE LIMIT (429): esperar y reintentar la MISMA llave ---
+                        if "429" in error_str:
+                            match = re.search(r'seconds:\s*(\d+)', error_str)
+                            espera = int(match.group(1)) if match else 60
+                            espera = min(espera, MAX_ESPERA_SEGUNDOS)
+                            print(f"[RATE LIMIT] Llave {index} ({modelo}) — intento {intento+1}/{MAX_REINTENTOS} — esperando {espera}s...")
+                            time.sleep(espera)
+                            continue  # reintenta la MISMA llave
+
+                        # --- OTRO ERROR: saltar a la siguiente llave ---
+                        error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
+                        print(f"[ERROR] {error_msg}")
+                        log_errores.append(error_msg)
+                        
+                        # ===================================================================
+                        # 🛑 KILL SWITCH DE SEGURIDAD (INYECCIÓN CRÍTICA DE PROTECCIÓN)
+                        # ===================================================================
+                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo para proteger llaves restantes.")
+                            return None, log_errores
+
+                        break  # sale del loop de reintentos, pasa a siguiente llave
+
+                else:
+                    # Agotó todos los reintentos sin éxito en esta llave
+                    error_msg = f"Llave {index} ({modelo}): agotó {MAX_REINTENTOS} reintentos sin éxito."
+                    print(f"[FALLO] {error_msg}")
                     log_errores.append(error_msg)
-                    continue
+
         return None, log_errores
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
@@ -207,7 +258,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             if resultado:
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
             
-            # Retorna el log completo de fallos a la interfaz gráfica
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
@@ -249,7 +299,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
                     errores_totales.extend(errores)
 
             if not todas_las_escenas:
-                # Retorna el log completo de fallos a la interfaz gráfica
                 return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
             guion_final = {
