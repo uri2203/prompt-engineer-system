@@ -141,7 +141,7 @@ class AIEngine:
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
         """
-        Llamada a Gemini con freno real de rate limiting, contabilidad local y Kill Switch de seguridad.
+        Llamada a Gemini con Timeout estricto (Limpieza de cola) y Kill Switch.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -149,8 +149,9 @@ class AIEngine:
             "models/gemini-2.0-flash-lite"
         ]
         log_errores = []
-        MAX_REINTENTOS = 3
+        MAX_REINTENTOS = 2 # 🚨 CAMBIO CRÍTICO: Reducido a 2 para abortar más rápido
         MAX_ESPERA_SEGUNDOS = 65
+        TIMEOUT_SEGUNDOS = 25 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
 
         for modelo in modelos_prioridad:
             modelo_agotado = False
@@ -159,7 +160,7 @@ class AIEngine:
                 if modelo_agotado:
                     break
 
-                # 🛑 FILTRO LOCAL: El nodo rechaza trabajar si la llave ya llegó a su límite.
+                # 🛑 FILTRO LOCAL
                 if not self.cuotas.puede_usar_llave(index):
                     print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
                     continue
@@ -172,9 +173,16 @@ class AIEngine:
                             system_instruction=system_instruction,
                             generation_config={"response_mime_type": "application/json"}
                         )
-                        response = model.generate_content(prompt)
                         
-                        # ✅ ÉXITO: El nodo registra el gasto internamente.
+                        # 🚨 CAMBIO CRÍTICO: INYECCIÓN DE TIMEOUT
+                        request_options = {"timeout": TIMEOUT_SEGUNDOS}
+
+                        response = model.generate_content(
+                            prompt,
+                            request_options=request_options
+                        )
+                        
+                        # ✅ ÉXITO
                         self.cuotas.registrar_exito(index)
                         print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
                         return json.loads(response.text), log_errores
@@ -182,46 +190,56 @@ class AIEngine:
                     except Exception as e:
                         error_str = str(e)
 
-                        # --- CUOTA DIARIA AGOTADA: límite 0 -> saltar modelo completo ---
-                        if ("PerDay" in error_str and "limit: 0" in error_str) or \
-                           ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
-                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria disponible. Saltando modelo."
+                        # --- TIME OUT: Limpieza de cola por atasco de red ---
+                        if "Timeout" in error_str or "deadline exceeded" in error_str.lower() or "504" in error_str:
+                            msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
                             print(msg)
                             log_errores.append(msg)
-                            # 🔒 Registrar agotamiento total de esta llave en el archivo local
+                            break # Rompe el ciclo de reintentos, salta a la siguiente llave inmediatamente
+
+                        # --- ERRORES DE SERVIDOR GOOGLE (500/503): No reintentar ---
+                        if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
+                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída. Abortando reintentos inútiles."
+                            print(msg)
+                            log_errores.append(msg)
+                            break # Rompe el ciclo de reintentos, salta de llave
+
+                        # --- CUOTA DIARIA AGOTADA ---
+                        if ("PerDay" in error_str and "limit: 0" in error_str) or \
+                           ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
+                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria. Saltando modelo."
+                            print(msg)
+                            log_errores.append(msg)
                             self.cuotas.bloquear_llave_por_agotamiento(index)
                             modelo_agotado = True
                             break
 
-                        # --- RATE LIMIT (429): esperar y reintentar la MISMA llave ---
+                        # --- RATE LIMIT (429): La única excepción donde sí reintentamos ---
                         if "429" in error_str:
                             match = re.search(r'seconds:\s*(\d+)', error_str)
                             espera = int(match.group(1)) if match else 60
                             espera = min(espera, MAX_ESPERA_SEGUNDOS)
                             print(f"[RATE LIMIT] Llave {index} ({modelo}) — intento {intento+1}/{MAX_REINTENTOS} — esperando {espera}s...")
                             time.sleep(espera)
-                            continue  # reintenta la MISMA llave
+                            continue  
 
-                        # --- OTRO ERROR: saltar a la siguiente llave ---
+                        # --- OTROS ERRORES ---
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
                         print(f"[ERROR] {error_msg}")
                         log_errores.append(error_msg)
                         
-                        # ===================================================================
-                        # 🛑 KILL SWITCH DE SEGURIDAD (PROTECCIÓN CONTRA BUCLES)
-                        # ===================================================================
+                        # 🛑 KILL SWITCH
                         if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
-                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo para proteger llaves restantes.")
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo.")
                             return None, log_errores
 
-                        break  # sale del loop de reintentos, pasa a siguiente llave
+                        break  
 
                 else:
-                    error_msg = f"Llave {index} ({modelo}): agotó {MAX_REINTENTOS} reintentos sin éxito."
+                    error_msg = f"Llave {index} ({modelo}): agotó reintentos sin éxito."
                     print(f"[FALLO] {error_msg}")
                     log_errores.append(error_msg)
 
-        # Si llegamos aquí, todas las llaves fueron rechazadas por el Gestor Local o fallaron.
         print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron. Orden ignorada.")
         return None, log_errores
 
@@ -270,7 +288,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
   "prompt_miniatura_C": "Photojournalism style, [elemento visual impactante del tema], harsh directional lighting, gritty realistic texture, visible and detailed composition, no people, raw documentary feel, [2-3 elementos visuales del tema]"
 }}
 """
-        # Para shorts no incluir miniaturas
         if not es_largo:
             prompt_paquete = prompt_paquete.replace(
                 '"prompt_miniatura_A": "Prompt para miniatura opción A. Estilo clickbait extremo, colores contrastantes, sin personas. En inglés. 1920x1080.",',
@@ -311,7 +328,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
         es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
 
         if not es_largo:
-            # SHORT — una sola llamada
             instruccion_ritmo = (
                 f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
                 f"Genera entre 12 y 15 escenas para un video de 60 segundos. "
@@ -327,7 +343,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
-            # LARGO — 3 llamadas de ~20 escenas
             partes = [
                 ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
                 ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
