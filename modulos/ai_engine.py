@@ -258,13 +258,36 @@ class AIEngine:
         else:
             canal_info = "Canal de análisis geopolítico táctico, conflictos internacionales, estrategia militar, inteligencia."
 
-        prompt_paquete = f"""
+        if not es_largo:
+            # Shorts: NO incluir prompts de miniatura
+            prompt_paquete = f"""
 Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
 Canal: {marca}
 Nicho: {canal_info}
 Título sugerido del video: {titulo}
 Guión/locución: {texto_locucion[:1500]}
-Formato: {"VIDEO LARGO 16:9 YouTube" if es_largo else "SHORT 9:16 YouTube Shorts y TikTok"}
+Formato: SHORT 9:16 YouTube Shorts y TikTok
+
+Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
+
+{{
+  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, con número o pregunta si aplica",
+  "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Terminar con links de redes.",
+  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
+  "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
+  "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
+  "prompt_hook": "Prompt cinematográfico para imagen del HOOK. Alta retención, impactante, visible. dramatic lighting, high contrast, detailed. Sin personas. En inglés."
+}}
+"""
+        else:
+            # Largos: incluir prompts de miniatura A/B/C
+            prompt_paquete = f"""
+Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
+Canal: {marca}
+Nicho: {canal_info}
+Título sugerido del video: {titulo}
+Guión/locución: {texto_locucion[:1500]}
+Formato: VIDEO LARGO 16:9 YouTube
 
 Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
 
@@ -278,7 +301,7 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
 
 {{
   "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, con número o pregunta si aplica",
-  "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Incluir timestamps si es largo. Terminar con links de redes.",
+  "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Incluir timestamps. Terminar con links de redes.",
   "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
   "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
   "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
@@ -288,17 +311,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
   "prompt_miniatura_C": "Photojournalism style, [elemento visual impactante del tema], harsh directional lighting, gritty realistic texture, visible and detailed composition, no people, raw documentary feel, [2-3 elementos visuales del tema]"
 }}
 """
-        if not es_largo:
-            prompt_paquete = prompt_paquete.replace(
-                '"prompt_miniatura_A": "Prompt para miniatura opción A. Estilo clickbait extremo, colores contrastantes, sin personas. En inglés. 1920x1080.",',
-                ''
-            ).replace(
-                '"prompt_miniatura_B": "Prompt para miniatura opción B. Estilo misterioso oscuro, texto implícito en la imagen. Sin personas. En inglés. 1920x1080.",',
-                ''
-            ).replace(
-                '"prompt_miniatura_C": "Prompt para miniatura opción C. Estilo documental impactante, realismo extremo. Sin personas. En inglés. 1920x1080."',
-                ''
-            )
 
         system_pub = (
             "Eres un experto en SEO de YouTube y TikTok. "
