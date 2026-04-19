@@ -123,8 +123,10 @@ def api_generate_script():
     marca = data.get('marca', 'La Viuda')
     contexto_base = data.get('contexto', '')
     peticion = data.get('peticion', '')
-    longitud = data.get('longitud', '130 palabras') 
+    longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
 
+    # INYECCIÓN CONSOLIDADA: FRAGMENTACIÓN EXTREMA (Respaldo) + FOTORREALISMO (Fase 1)
+    # Protege la matriz de 12-15 escenas y aplica los modificadores visuales para el renderizado
     peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo.\n\n[INSTRUCCIÓN VISUAL OBLIGATORIA]: Al generar la descripción de cada escena, asegúrate de incorporar al final de ella los siguientes parámetros para el renderizado: 'Cinematografía hiperrealista, 8k, Unreal Engine 5, iluminación volumétrica'."
 
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
@@ -149,6 +151,9 @@ def api_generate_audio():
     resultado = voice_engine.generar_audio(data.get('texto', ''), data.get('marca', 'La Viuda')) 
     return jsonify({"status": "success", "audio_url": resultado})
 
+# ========================================================
+# RUTA ACTUALIZADA: ENSAMBLAJE CON SOPORTE PARA SUBTÍTULOS
+# ========================================================
 @app.route('/api/assemble_video', methods=['POST'])
 @login_required
 def api_assemble_video():
@@ -157,7 +162,6 @@ def api_assemble_video():
     marca = data.get('marca', 'La Viuda')
     voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
 
-    # INYECCIÓN DEL FORMATO: Asegura que el Worker sepa exactamente si es LARGO (16:9)
     tarea = {
         "id": tarea_id,
         "tipo": "ENSAMBLAJE",
@@ -165,10 +169,10 @@ def api_assemble_video():
         "escenas_texto": data.get('escenas_texto', []),
         "voice_id": voice_id,
         "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
-        "marca": marca,
-        "formato": data.get('formato', '16:9') # CORRECCIÓN APLICADA AQUÍ
+        "marca": marca
     }
 
+    # Guardar en disco — sobrevive reinicios de Render
     import json as _json
     with open(f"/tmp/ensamblaje_{tarea_id}.json", "w") as f:
         _json.dump(tarea, f)
@@ -181,8 +185,10 @@ def _procesar_paquete(marca, titulo, texto_locucion, formato):
     paquete = ai_engine.generar_paquete_publicacion(marca, titulo, texto_locucion, formato)
     if not paquete:
         return jsonify({"status": "error", "message": "Error generando paquete con Gemini"}), 500
+    # Solo devuelve el JSON — el worker es quien guarda en disco local
     return jsonify({"status": "success", "paquete": paquete})
 
+# Ruta para el frontend (requiere login)
 @app.route('/api/generar_paquete', methods=['POST'])
 @login_required
 def api_generar_paquete():
@@ -194,6 +200,7 @@ def api_generar_paquete():
         data.get('formato', '9:16')
     )
 
+# Ruta interna para el worker (sin login, usa clave compartida)
 @app.route('/api/interna/generar_paquete', methods=['POST'])
 def api_generar_paquete_interna():
     data = request.json
@@ -236,6 +243,7 @@ def nodo_encolar_tarea():
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     import json as _json, glob
+    # Si la cola está vacía, recuperar tareas de ensamblaje guardadas en disco
     if len(cola_de_renderizado) == 0:
         archivos = glob.glob("/tmp/ensamblaje_*.json")
         for archivo in archivos:
@@ -244,7 +252,7 @@ def nodo_polling():
                     tarea = _json.load(f)
                 cola_de_renderizado.append(tarea)
                 os.remove(archivo)
-                break  
+                break  # procesar una a la vez
             except:
                 pass
     if len(cola_de_renderizado) > 0:
