@@ -48,9 +48,9 @@ class GestorCuotas:
     def registrar_exito(self, index_llave):
         idx_str = str(index_llave)
         usos_actuales = self.estado["uso_por_llave"].get(idx_str, 0)
-        self.estado["uso_por_llave"][idx_str] = usos_actuales + 1
+        self.estado["uso_por_llave"][idx_str] = int(usos_actuales) + 1
         self._guardar_estado()
-        print(f"📊 [CUOTA] Llave {index_llave}: {usos_actuales + 1}/{self.limite_diario} usos diarios.")
+        print(f"📊 [CUOTA] Llave {index_llave}: {int(usos_actuales) + 1}/{self.limite_diario} usos diarios.")
 
     def bloquear_llave_por_agotamiento(self, index_llave):
         idx_str = str(index_llave)
@@ -150,8 +150,8 @@ class AIEngine:
         ]
         log_errores = []
         MAX_REINTENTOS = 2 # 🚨 CAMBIO CRÍTICO: Reducido a 2 para abortar más rápido
-        MAX_ESPERA_SEGUNDOS = 65
-        TIMEOUT_SEGUNDOS = 25 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
+        MAX_ESPERA_SEGUNDOS = 125
+        TIMEOUT_SEGUNDOS = 120 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
 
         for modelo in modelos_prioridad:
             modelo_agotado = False
