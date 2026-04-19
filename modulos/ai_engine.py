@@ -176,13 +176,23 @@ class AIEngine:
                 for intento in range(MAX_REINTENTOS):
                     try:
                         genai.configure(api_key=key)
+                        
+                        # 🚨 CIRUGÍA ANTICENSURA: INYECCIÓN DE SAFETY SETTINGS AL MODELO
+                        safety_settings = [
+                            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                        ]
+
                         model = genai.GenerativeModel(
                             model_name=modelo,
                             system_instruction=system_instruction,
-                            generation_config={"response_mime_type": "application/json"}
+                            generation_config={"response_mime_type": "application/json"},
+                            safety_settings=safety_settings
                         )
                         
-                        # 🚨 CAMBIO CRÍTICO: INYECCIÓN DE TIMEOUT
+                        # 🚨 TIMEOUT DE RED
                         request_options = {"timeout": TIMEOUT_SEGUNDOS}
 
                         response = model.generate_content(
@@ -231,14 +241,14 @@ class AIEngine:
                             time.sleep(espera)
                             continue  
 
-                        # --- OTROS ERRORES ---
+                        # --- BANEO POR SEGURIDAD O ERROR 400/403 ---
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
                         print(f"[ERROR] {error_msg}")
                         log_errores.append(error_msg)
                         
-                        # 🛑 KILL SWITCH
+                        # 🛑 KILL SWITCH PROTEGIDO
                         if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
-                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo.")
+                            print("🛑 [CRÍTICO] A pesar del BLOCK_NONE, Google censuró el prompt. Abortando.")
                             return None, log_errores
 
                         break  
