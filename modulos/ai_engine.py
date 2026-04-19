@@ -6,14 +6,6 @@ import time
 import os
 from datetime import datetime, timedelta, timezone
 
-try:
-    from modulos.neuro_engine import NeuroEngine
-    _neuro = NeuroEngine()
-    print("[NEURO ENGINE] Módulo de neuromarketing cargado.")
-except Exception as e:
-    _neuro = None
-    print(f"[NEURO ENGINE] No disponible: {e}")
-
 class GestorCuotas:
     """
     Cerebro local y silencioso del nodo Xeon. 
@@ -70,8 +62,6 @@ class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
         self.cuotas = GestorCuotas(limite_diario=20)
-        # Ban persistente por sesión — no se resetea entre llamadas
-        self._llaves_baneadas = {}  # {modelo: set(indices)}
         
         # ADN Maestro: La Viuda (Silo Hermético 1)
         self.adn_la_viuda = """
@@ -149,10 +139,9 @@ class AIEngine:
         }
         """
 
-    def _llamar_gemini(self, system_instruction, prompt, llaves, llaves_baneadas_sesion=None):
+    def _llamar_gemini(self, system_instruction, prompt, llaves):
         """
-        Llamada a Gemini con Timeout estricto y rotador inteligente.
-        Usa ban persistente de instancia para no reintentar llaves ya fallidas.
+        Llamada a Gemini con Timeout estricto (Limpieza de cola) y Kill Switch.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -160,52 +149,32 @@ class AIEngine:
             "models/gemini-2.0-flash-lite"
         ]
         log_errores = []
-        MAX_REINTENTOS = 2
+        MAX_REINTENTOS = 2 # 🚨 CAMBIO CRÍTICO: Reducido a 2 para abortar más rápido
         MAX_ESPERA_SEGUNDOS = 65
-        TIMEOUT_SEGUNDOS = 25
-
-        # Usar ban persistente de instancia — recuerda llaves fallidas entre llamadas
-        llaves_baneadas = self._llaves_baneadas
+        TIMEOUT_SEGUNDOS = 25 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
 
         for modelo in modelos_prioridad:
             modelo_agotado = False
-            timeouts_este_modelo = 0
-
-            if modelo not in llaves_baneadas:
-                llaves_baneadas[modelo] = set()
 
             for index, key in enumerate(llaves):
                 if modelo_agotado:
                     break
 
+                # 🛑 FILTRO LOCAL
                 if not self.cuotas.puede_usar_llave(index):
                     print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
-                    continue
-
-                if index in llaves_baneadas[modelo]:
-                    print(f"⛔ [SKIP BAN] Llave {index} baneada para {modelo}. Saltando.")
                     continue
 
                 for intento in range(MAX_REINTENTOS):
                     try:
                         genai.configure(api_key=key)
-                        
-                        # 🚨 CIRUGÍA ANTICENSURA: INYECCIÓN DE SAFETY SETTINGS AL MODELO
-                        safety_settings = [
-                            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
-                            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
-                            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
-                        ]
-
                         model = genai.GenerativeModel(
                             model_name=modelo,
                             system_instruction=system_instruction,
-                            generation_config={"response_mime_type": "application/json"},
-                            safety_settings=safety_settings
+                            generation_config={"response_mime_type": "application/json"}
                         )
                         
-                        # 🚨 TIMEOUT DE RED
+                        # 🚨 CAMBIO CRÍTICO: INYECCIÓN DE TIMEOUT
                         request_options = {"timeout": TIMEOUT_SEGUNDOS}
 
                         response = model.generate_content(
@@ -226,17 +195,7 @@ class AIEngine:
                             msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
                             print(msg)
                             log_errores.append(msg)
-                            timeouts_este_modelo += 1  # 🆕
-
-                            # 🆕 COLAPSO TOTAL: Si más de la mitad de las llaves dio timeout,
-                            # el servicio está caído. Abandonar este modelo de inmediato.
-                            if timeouts_este_modelo >= max(3, len(llaves) // 2):
-                                msg_colapso = f"[COLAPSO] {modelo} dio {timeouts_este_modelo} timeouts consecutivos. Servicio caído. Saltando modelo."
-                                print(msg_colapso)
-                                log_errores.append(msg_colapso)
-                                modelo_agotado = True  # Fuerza salida del loop de llaves
-
-                            break # Rompe el ciclo de reintentos, salta a la siguiente llave
+                            break # Rompe el ciclo de reintentos, salta a la siguiente llave inmediatamente
 
                         # --- ERRORES DE SERVIDOR GOOGLE (500/503): No reintentar ---
                         if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
@@ -264,21 +223,14 @@ class AIEngine:
                             time.sleep(espera)
                             continue  
 
-                        if "403" in error_str:
-                            msg = f"[BAN] Llave {index} ({modelo}): proyecto sin acceso (403). Baneada permanentemente esta sesión."
-                            print(msg)
-                            log_errores.append(msg)
-                            llaves_baneadas[modelo].add(index)
-                            break
-
-                        # --- BANEO POR SEGURIDAD O ERROR 400 ---
+                        # --- OTROS ERRORES ---
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
                         print(f"[ERROR] {error_msg}")
                         log_errores.append(error_msg)
                         
-                        # 🛑 KILL SWITCH PROTEGIDO
+                        # 🛑 KILL SWITCH
                         if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
-                            print("🛑 [CRÍTICO] A pesar del BLOCK_NONE, Google censuró el prompt. Abortando.")
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo.")
                             return None, log_errores
 
                         break  
@@ -288,54 +240,8 @@ class AIEngine:
                     print(f"[FALLO] {error_msg}")
                     log_errores.append(error_msg)
 
-        print("🚫 [GEMINI CAÍDO] Todas las llaves fallaron o están sin cuota.")
-        print("ℹ️  Verifica el estado en: https://aistudio.google.com")
-        print("ℹ️  Cuando Gemini esté en línea, lanza la orden de nuevo manualmente.")
+        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron. Orden ignorada.")
         return None, log_errores
-
-    def _llamar_claude(self, system_instruction, prompt):
-        """
-        Fallback a Claude Sonnet cuando Gemini está caído o sin cuota.
-        Usa CLAUDE_API_KEY de variables de entorno o de la Bóveda.
-        """
-        try:
-            import anthropic
-        except ImportError:
-            return None, ["[CLAUDE] Librería 'anthropic' no instalada. Ejecuta: pip install anthropic"]
-
-        api_key = (
-            self.boveda.obtener_datos().get("claude_api_key") or
-            self.boveda.obtener_datos().get("CLAUDE_API_KEY") or
-            os.getenv("CLAUDE_API_KEY")
-        )
-        if not api_key:
-            return None, ["[CLAUDE] No se encontró CLAUDE_API_KEY en Bóveda ni en variables de entorno."]
-
-        try:
-            print("[CLAUDE FALLBACK] 🟣 Gemini inaccesible. Activando Claude Sonnet...")
-            client = anthropic.Anthropic(api_key=api_key)
-
-            message = client.messages.create(
-                model="claude-sonnet-4-20250514",
-                max_tokens=8000,
-                system=system_instruction + "\n\nIMPORTANTE: Tu respuesta debe ser ÚNICAMENTE JSON válido, sin texto antes ni después, sin bloques de código markdown.",
-                messages=[{"role": "user", "content": prompt}]
-            )
-
-            texto = message.content[0].text.strip()
-            # Limpiar por si Claude agrega backticks de markdown
-            if texto.startswith("```"):
-                texto = re.sub(r"^```(?:json)?\n?", "", texto)
-                texto = re.sub(r"\n?```$", "", texto)
-
-            resultado = json.loads(texto)
-            print("[CLAUDE FALLBACK] ✅ Claude Sonnet respondió correctamente.")
-            return resultado, []
-
-        except json.JSONDecodeError as e:
-            return None, [f"[CLAUDE] Respuesta no es JSON válido: {str(e)[:150]}"]
-        except Exception as e:
-            return None, [f"[CLAUDE ERROR] {str(e)[:200]}"]
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
         """
@@ -414,6 +320,7 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
 
         resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
         return resultado
+
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
         """
         Arquitectura unificada con entrega de errores a la UI.
@@ -432,12 +339,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
 
         es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
 
-        # ── INYECCIÓN DE NEUROMARKETING AUTOMÁTICA ─────────────────────────
-        yt_api_key = self.boveda.obtener_datos().get('youtube_api', '')
-        if _neuro:
-            contexto = _neuro.enriquecer_contexto(contexto, marca, formato, yt_api_key)
-        # ───────────────────────────────────────────────────────────────────
-
         if not es_largo:
             instruccion_ritmo = (
                 f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
@@ -447,10 +348,10 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             )
             prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
-
+            
             if resultado:
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
-
+            
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
@@ -464,25 +365,20 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             titulo = ""
             marca_final = marca
             errores_totales = []
-            servicio_caido = False
 
             for i, (bloque, descripcion) in enumerate(partes):
-                if servicio_caido:
-                    print(f"[AI ENGINE] ⏭️ Saltando bloque {i+1} ({bloque}) — servicio caído.")
-                    continue
-
                 instruccion_bloque = (
                     f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
                     f"Genera SOLO el bloque de {descripcion}. "
                     f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
                     f"Formato 16:9 video largo de 30 MINUTOS. "
-                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español. "
-                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español — es narración continua y densa, no frases cortas. "
+                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). PROHIBIDO escribir sin acentos. "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
-
+                
                 resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
@@ -495,17 +391,8 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
                     print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló...")
                     errores_totales.extend(errores)
 
-                    # 🆕 Detectar colapso de servicio (timeouts masivos o error de servidor)
-                    es_colapso = any(
-                        "[COLAPSO]" in e or "[ERROR SERVIDOR]" in e
-                        for e in errores
-                    )
-                    if es_colapso:
-                        print(f"[AI ENGINE] 🔴 COLAPSO DE SERVICIO detectado. Abortando bloques restantes.")
-                        servicio_caido = True
-
             if not todas_las_escenas:
-                return "ERROR CRÍTICO GEMINI + CLAUDE:\n" + "\n".join(errores_totales)
+                return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
             guion_final = {
                 "marca": marca_final,
