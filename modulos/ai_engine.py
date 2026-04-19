@@ -70,6 +70,8 @@ class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
         self.cuotas = GestorCuotas(limite_diario=20)
+        # Ban persistente por sesión — no se resetea entre llamadas
+        self._llaves_baneadas = {}  # {modelo: set(indices)}
         
         # ADN Maestro: La Viuda (Silo Hermético 1)
         self.adn_la_viuda = """
@@ -149,8 +151,8 @@ class AIEngine:
 
     def _llamar_gemini(self, system_instruction, prompt, llaves, llaves_baneadas_sesion=None):
         """
-        Llamada a Gemini con Timeout estricto (Limpieza de cola) y Kill Switch.
-        llaves_baneadas_sesion: dict {modelo: set(indices)} — se modifica en lugar para persistir entre bloques.
+        Llamada a Gemini con Timeout estricto y rotador inteligente.
+        Usa ban persistente de instancia para no reintentar llaves ya fallidas.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -158,34 +160,30 @@ class AIEngine:
             "models/gemini-2.0-flash-lite"
         ]
         log_errores = []
-        MAX_REINTENTOS = 2 # 🚨 CAMBIO CRÍTICO: Reducido a 2 para abortar más rápido
+        MAX_REINTENTOS = 2
         MAX_ESPERA_SEGUNDOS = 65
-        TIMEOUT_SEGUNDOS = 25 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
+        TIMEOUT_SEGUNDOS = 25
 
-        # 🆕 Bans de sesión: si nos pasan el dict compartido entre bloques lo usamos;
-        # si no, creamos uno local (comportamiento igual al anterior para llamadas únicas).
-        if llaves_baneadas_sesion is None:
-            llaves_baneadas_sesion = {}
+        # Usar ban persistente de instancia — recuerda llaves fallidas entre llamadas
+        llaves_baneadas = self._llaves_baneadas
 
         for modelo in modelos_prioridad:
             modelo_agotado = False
-            timeouts_este_modelo = 0  # 🆕 Contador de timeouts consecutivos en este modelo
+            timeouts_este_modelo = 0
 
-            if modelo not in llaves_baneadas_sesion:
-                llaves_baneadas_sesion[modelo] = set()
+            if modelo not in llaves_baneadas:
+                llaves_baneadas[modelo] = set()
 
             for index, key in enumerate(llaves):
                 if modelo_agotado:
                     break
 
-                # 🛑 FILTRO LOCAL DE CUOTA
                 if not self.cuotas.puede_usar_llave(index):
                     print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
                     continue
 
-                # 🆕 FILTRO DE BANEO DE SESIÓN (403 previo de este modelo+llave)
-                if index in llaves_baneadas_sesion[modelo]:
-                    print(f"⛔ [SKIP SESIÓN] Llave {index} baneada para {modelo} en esta sesión. Saltando.")
+                if index in llaves_baneadas[modelo]:
+                    print(f"⛔ [SKIP BAN] Llave {index} baneada para {modelo}. Saltando.")
                     continue
 
                 for intento in range(MAX_REINTENTOS):
@@ -266,12 +264,11 @@ class AIEngine:
                             time.sleep(espera)
                             continue  
 
-                        # 🆕 --- 403: BAN DE PROYECTO PARA ESTE MODELO EN ESTA SESIÓN ---
                         if "403" in error_str:
-                            msg = f"[BAN SESIÓN] Llave {index} ({modelo}): proyecto sin acceso (403). No se reintentará en esta sesión."
+                            msg = f"[BAN] Llave {index} ({modelo}): proyecto sin acceso (403). Baneada permanentemente esta sesión."
                             print(msg)
                             log_errores.append(msg)
-                            llaves_baneadas_sesion[modelo].add(index)
+                            llaves_baneadas[modelo].add(index)
                             break
 
                         # --- BANEO POR SEGURIDAD O ERROR 400 ---
@@ -467,14 +464,11 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             titulo = ""
             marca_final = marca
             errores_totales = []
-            servicio_caido = False  # 🆕 Flag de colapso total
-            llaves_baneadas_sesion = {}  # 🆕 Dict compartido entre bloques para no re-intentar 403s
+            servicio_caido = False
 
             for i, (bloque, descripcion) in enumerate(partes):
-                # 🆕 Si el servicio colapsó en un bloque anterior, no gastar tiempo en los siguientes
                 if servicio_caido:
-                    print(f"[AI ENGINE] ⏭️ Saltando bloque {i+1} ({bloque}) — servicio caído detectado en bloque anterior.")
-                    errores_totales.append(f"[SKIP BLOQUE] {bloque} no ejecutado por colapso de servicio previo.")
+                    print(f"[AI ENGINE] ⏭️ Saltando bloque {i+1} ({bloque}) — servicio caído.")
                     continue
 
                 instruccion_bloque = (
@@ -482,14 +476,14 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
                     f"Genera SOLO el bloque de {descripcion}. "
                     f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
                     f"Formato 16:9 video largo de 30 MINUTOS. "
-                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español — es narración continua y densa, no frases cortas. "
-                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). PROHIBIDO escribir sin acentos. "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español. "
+                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
-                
-                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves, llaves_baneadas_sesion)
+
+                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
                     if i == 0 and "titulo_sugerido" in resultado:
