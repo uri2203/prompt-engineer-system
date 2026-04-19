@@ -147,9 +147,10 @@ class AIEngine:
         }
         """
 
-    def _llamar_gemini(self, system_instruction, prompt, llaves):
+    def _llamar_gemini(self, system_instruction, prompt, llaves, llaves_baneadas_sesion=None):
         """
         Llamada a Gemini con Timeout estricto (Limpieza de cola) y Kill Switch.
+        llaves_baneadas_sesion: dict {modelo: set(indices)} — se modifica en lugar para persistir entre bloques.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -161,16 +162,30 @@ class AIEngine:
         MAX_ESPERA_SEGUNDOS = 65
         TIMEOUT_SEGUNDOS = 25 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
 
+        # 🆕 Bans de sesión: si nos pasan el dict compartido entre bloques lo usamos;
+        # si no, creamos uno local (comportamiento igual al anterior para llamadas únicas).
+        if llaves_baneadas_sesion is None:
+            llaves_baneadas_sesion = {}
+
         for modelo in modelos_prioridad:
             modelo_agotado = False
+            timeouts_este_modelo = 0  # 🆕 Contador de timeouts consecutivos en este modelo
+
+            if modelo not in llaves_baneadas_sesion:
+                llaves_baneadas_sesion[modelo] = set()
 
             for index, key in enumerate(llaves):
                 if modelo_agotado:
                     break
 
-                # 🛑 FILTRO LOCAL
+                # 🛑 FILTRO LOCAL DE CUOTA
                 if not self.cuotas.puede_usar_llave(index):
                     print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
+                    continue
+
+                # 🆕 FILTRO DE BANEO DE SESIÓN (403 previo de este modelo+llave)
+                if index in llaves_baneadas_sesion[modelo]:
+                    print(f"⛔ [SKIP SESIÓN] Llave {index} baneada para {modelo} en esta sesión. Saltando.")
                     continue
 
                 for intento in range(MAX_REINTENTOS):
@@ -213,7 +228,17 @@ class AIEngine:
                             msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
                             print(msg)
                             log_errores.append(msg)
-                            break # Rompe el ciclo de reintentos, salta a la siguiente llave inmediatamente
+                            timeouts_este_modelo += 1  # 🆕
+
+                            # 🆕 COLAPSO TOTAL: Si más de la mitad de las llaves dio timeout,
+                            # el servicio está caído. Abandonar este modelo de inmediato.
+                            if timeouts_este_modelo >= max(3, len(llaves) // 2):
+                                msg_colapso = f"[COLAPSO] {modelo} dio {timeouts_este_modelo} timeouts consecutivos. Servicio caído. Saltando modelo."
+                                print(msg_colapso)
+                                log_errores.append(msg_colapso)
+                                modelo_agotado = True  # Fuerza salida del loop de llaves
+
+                            break # Rompe el ciclo de reintentos, salta a la siguiente llave
 
                         # --- ERRORES DE SERVIDOR GOOGLE (500/503): No reintentar ---
                         if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
@@ -241,7 +266,15 @@ class AIEngine:
                             time.sleep(espera)
                             continue  
 
-                        # --- BANEO POR SEGURIDAD O ERROR 400/403 ---
+                        # 🆕 --- 403: BAN DE PROYECTO PARA ESTE MODELO EN ESTA SESIÓN ---
+                        if "403" in error_str:
+                            msg = f"[BAN SESIÓN] Llave {index} ({modelo}): proyecto sin acceso (403). No se reintentará en esta sesión."
+                            print(msg)
+                            log_errores.append(msg)
+                            llaves_baneadas_sesion[modelo].add(index)
+                            break
+
+                        # --- BANEO POR SEGURIDAD O ERROR 400 ---
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
                         print(f"[ERROR] {error_msg}")
                         log_errores.append(error_msg)
@@ -258,8 +291,54 @@ class AIEngine:
                     print(f"[FALLO] {error_msg}")
                     log_errores.append(error_msg)
 
-        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron. Orden ignorada.")
+        print("🚫 [GEMINI CAÍDO] Todas las llaves fallaron o están sin cuota.")
+        print("ℹ️  Verifica el estado en: https://aistudio.google.com")
+        print("ℹ️  Cuando Gemini esté en línea, lanza la orden de nuevo manualmente.")
         return None, log_errores
+
+    def _llamar_claude(self, system_instruction, prompt):
+        """
+        Fallback a Claude Sonnet cuando Gemini está caído o sin cuota.
+        Usa CLAUDE_API_KEY de variables de entorno o de la Bóveda.
+        """
+        try:
+            import anthropic
+        except ImportError:
+            return None, ["[CLAUDE] Librería 'anthropic' no instalada. Ejecuta: pip install anthropic"]
+
+        api_key = (
+            self.boveda.obtener_datos().get("claude_api_key") or
+            self.boveda.obtener_datos().get("CLAUDE_API_KEY") or
+            os.getenv("CLAUDE_API_KEY")
+        )
+        if not api_key:
+            return None, ["[CLAUDE] No se encontró CLAUDE_API_KEY en Bóveda ni en variables de entorno."]
+
+        try:
+            print("[CLAUDE FALLBACK] 🟣 Gemini inaccesible. Activando Claude Sonnet...")
+            client = anthropic.Anthropic(api_key=api_key)
+
+            message = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=8000,
+                system=system_instruction + "\n\nIMPORTANTE: Tu respuesta debe ser ÚNICAMENTE JSON válido, sin texto antes ni después, sin bloques de código markdown.",
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            texto = message.content[0].text.strip()
+            # Limpiar por si Claude agrega backticks de markdown
+            if texto.startswith("```"):
+                texto = re.sub(r"^```(?:json)?\n?", "", texto)
+                texto = re.sub(r"\n?```$", "", texto)
+
+            resultado = json.loads(texto)
+            print("[CLAUDE FALLBACK] ✅ Claude Sonnet respondió correctamente.")
+            return resultado, []
+
+        except json.JSONDecodeError as e:
+            return None, [f"[CLAUDE] Respuesta no es JSON válido: {str(e)[:150]}"]
+        except Exception as e:
+            return None, [f"[CLAUDE ERROR] {str(e)[:200]}"]
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
         """
@@ -338,7 +417,6 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
 
         resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
         return resultado
-
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
         """
         Arquitectura unificada con entrega de errores a la UI.
@@ -372,10 +450,10 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             )
             prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
-            
+
             if resultado:
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
-            
+
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
@@ -389,8 +467,16 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             titulo = ""
             marca_final = marca
             errores_totales = []
+            servicio_caido = False  # 🆕 Flag de colapso total
+            llaves_baneadas_sesion = {}  # 🆕 Dict compartido entre bloques para no re-intentar 403s
 
             for i, (bloque, descripcion) in enumerate(partes):
+                # 🆕 Si el servicio colapsó en un bloque anterior, no gastar tiempo en los siguientes
+                if servicio_caido:
+                    print(f"[AI ENGINE] ⏭️ Saltando bloque {i+1} ({bloque}) — servicio caído detectado en bloque anterior.")
+                    errores_totales.append(f"[SKIP BLOQUE] {bloque} no ejecutado por colapso de servicio previo.")
+                    continue
+
                 instruccion_bloque = (
                     f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
                     f"Genera SOLO el bloque de {descripcion}. "
@@ -403,7 +489,7 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
                 
-                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
+                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves, llaves_baneadas_sesion)
 
                 if resultado:
                     if i == 0 and "titulo_sugerido" in resultado:
@@ -415,8 +501,17 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
                     print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló...")
                     errores_totales.extend(errores)
 
+                    # 🆕 Detectar colapso de servicio (timeouts masivos o error de servidor)
+                    es_colapso = any(
+                        "[COLAPSO]" in e or "[ERROR SERVIDOR]" in e
+                        for e in errores
+                    )
+                    if es_colapso:
+                        print(f"[AI ENGINE] 🔴 COLAPSO DE SERVICIO detectado. Abortando bloques restantes.")
+                        servicio_caido = True
+
             if not todas_las_escenas:
-                return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
+                return "ERROR CRÍTICO GEMINI + CLAUDE:\n" + "\n".join(errores_totales)
 
             guion_final = {
                 "marca": marca_final,
