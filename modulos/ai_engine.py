@@ -6,6 +6,14 @@ import time
 import os
 from datetime import datetime, timedelta, timezone
 
+try:
+    from modulos.neuro_engine import NeuroEngine
+    _neuro = NeuroEngine()
+    print("[NEURO ENGINE] Módulo de neuromarketing cargado.")
+except Exception as e:
+    _neuro = None
+    print(f"[NEURO ENGINE] No disponible: {e}")
+
 class GestorCuotas:
     """
     Cerebro local y silencioso del nodo Xeon. 
@@ -338,6 +346,12 @@ INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
             system_instruction = self.adn_la_viuda
 
         es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
+
+        # ── INYECCIÓN DE NEUROMARKETING AUTOMÁTICA ─────────────────────────
+        yt_api_key = self.boveda.obtener_datos().get('youtube_api', '')
+        if _neuro:
+            contexto = _neuro.enriquecer_contexto(contexto, marca, formato, yt_api_key)
+        # ───────────────────────────────────────────────────────────────────
 
         if not es_largo:
             instruccion_ritmo = (
