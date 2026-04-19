@@ -169,7 +169,8 @@ def api_assemble_video():
         "escenas_texto": data.get('escenas_texto', []),
         "voice_id": voice_id,
         "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
-        "marca": marca
+        "marca": marca,
+        "formato": data.get('formato', '9:16')
     }
 
     # Guardar en disco — sobrevive reinicios de Render
