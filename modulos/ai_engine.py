@@ -41,6 +41,12 @@ class GestorCuotas:
             json.dump(self.estado, f, indent=4)
 
     def puede_usar_llave(self, index_llave):
+        # Verificar si cambió el día PT en cada consulta — no solo al arrancar
+        fecha_actual = self._obtener_fecha_pt_actual()
+        if self.estado.get("fecha_corte") != fecha_actual:
+            print("♻️ [SISTEMA] Nuevo día detectado en consulta. Reseteando contadores.")
+            self.estado = {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+            self._guardar_estado()
         idx_str = str(index_llave)
         usos = self.estado["uso_por_llave"].get(idx_str, 0)
         return usos < self.limite_diario
