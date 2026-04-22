@@ -126,37 +126,25 @@ class ComplianceEngine:
         Filtro Interceptor: Cruza el guion crudo (o JSON) contra las leyes actualizadas.
         """
         texto_limpio = guion.lower()
-
-        # Si Gemini devolvió error, no auditar
-        if "error crítico" in texto_limpio or "error de compliance" in texto_limpio:
-            return True, "Texto de error — sin auditoría"
-
-        # 1. Filtro General de Plataformas — solo palabras ESTRICTAMENTE prohibidas
+        
+        # 1. Filtro General de Plataformas (Búsqueda en todas las listas dinámicas)
         todas_prohibidas = []
         for plataforma in self.leyes["plataformas"].values():
             todas_prohibidas.extend(plataforma.get("palabras_prohibidas_estrictas", []))
 
         for palabra in todas_prohibidas:
-            # Usar word boundary para evitar falsos positivos
-            if re.search(r'\b' + re.escape(palabra.lower()) + r'\b', texto_limpio):
+            if re.search(r'\b' + re.escape(palabra) + r'\b', texto_limpio):
                 return False, f"Término crítico detectado ('{palabra}'). Riesgo alto de desmonetización."
 
-        # 2. Filtro de Marca — umbral subido a 6 coincidencias y palabras largas únicamente
+        # 2. Filtro de Silo Específico (Por Marca)
         if marca in self.leyes["marcas"]:
             restricciones = self.leyes["marcas"][marca]["restricciones"]
             for restriccion in restricciones:
-                # Solo palabras de más de 6 caracteres para evitar falsos positivos
-                palabras_clave = [p for p in restriccion.split() if len(p) > 6]
-                if not palabras_clave:
-                    continue
-                coincidencias = sum(
-                    1 for p in palabras_clave
-                    if re.search(r'\b' + re.escape(p) + r'\b', texto_limpio)
-                )
-                # Subido de 4 a 6 — requiere más coincidencias para rechazar
-                if coincidencias >= 6:
+                palabras_clave = [p for p in restriccion.split() if len(p) > 3]
+                coincidencias = sum(1 for p in palabras_clave if p in texto_limpio)
+                if coincidencias >= 4:
                     estrategia = self.leyes["marcas"][marca]["estrategia_evasion"]
-                    return False, f"Violación de directriz de marca ({marca}): '{restriccion}'. APLICAR: {estrategia}."
+                    return False, f"Violación de directriz de marca ({marca}) por posible: '{restriccion}'. OBLIGATORIO APLICAR: {estrategia}."
 
         return True, "100% Limpio y Monetizable"
 
