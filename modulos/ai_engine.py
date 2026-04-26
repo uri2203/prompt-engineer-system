@@ -96,10 +96,23 @@ class AIEngine:
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
-        2. AMBIENTES DE TERROR COTIDIANO: habitaciones oscuras, pasillos vacíos, ventanas de noche, puertas entreabiertas, escaleras en penumbra, bosques nocturnos, casas viejas vacías.
-        3. ESTILO VISUAL: oscuro, grano de película, VHS, subexpuesto, found footage, atmósfera opresiva.
+        2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia. NO uses lugares genéricos. Si la historia habla de una casa en el bosque, el prompt debe decir "old wooden house surrounded by dark forest, broken windows, night". Si habla de una escalera, di "dark staircase with peeling walls, single light bulb flickering, night". 
+        3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE. PROHIBIDO repetir el mismo ambiente. Alterna entre: interiores (habitaciones, sótanos, áticos, escaleras, cocinas, baños), exteriores (bosques, calles, carreteras, patios) y detalles (puertas, ventanas, sombras, objetos).
         4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens". Solo describe el lugar.
-        5. OVERRIDE ANTI-CGI: Ignora cualquier instrucción de "Unreal Engine 5", "iluminación volumétrica" o "hiperrealista". Siempre termina con: ", found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people".
+        5. TERMINA SIEMPRE CON: ", found footage aesthetic, grainy, vhs glitch, underexposed, no people"
+
+        EJEMPLOS DE prompts_visual CORRECTOS:
+        - "old wooden bedroom with broken mirror, moonlight through cracked window, dusty floor, night"
+        - "dark forest path with twisted trees, thick fog, no visibility ahead, night"
+        - "abandoned kitchen with overturned chairs, rusted sink, single flickering light, night"
+        - "narrow basement stairs going down into complete darkness, water stains on walls"
+        - "empty living room with old furniture covered in sheets, broken clock on wall, dusk"
+
+        EJEMPLOS DE prompts_visual PROHIBIDOS:
+        - "dark corridor" (demasiado genérico)
+        - "dark room" (demasiado genérico)
+        - "scary place" (no descriptivo)
+        - cualquier cosa con "camera", "hospital", "forensic"
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
