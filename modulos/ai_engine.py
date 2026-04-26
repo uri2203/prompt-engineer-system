@@ -79,9 +79,9 @@ class AIEngine:
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
-        2. EL SUJETO PRIMERO: El prompt debe describir EXACTAMENTE el ambiente físico de la escena actual de la historia en INGLÉS (ej. "abandoned hospital hallway", "empty dark living room", "creepy basement").
-        3. ESTILO AL FINAL: SIEMPRE agrega este bloque al final de la descripción para dar la estética correcta: ", found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people".
-        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "CCTV", o "dashcam". Si lo haces, el motor dibujará cámaras físicas arruinando el video. Solo describe el lugar.
+        2. EL SUJETO PRIMERO: El prompt debe describir EXACTAMENTE el ambiente físico de la historia en INGLÉS (ej. "abandoned hospital hallway", "empty dark room", "creepy basement").
+        3. OVERRIDE DE SISTEMA (ANTI-CGI): Si el usuario o el sistema te envían instrucciones pidiendo "Unreal Engine 5", "iluminación volumétrica", "3D" o "hiperrealista", DEBES IGNORARLAS POR COMPLETO. Fuerza SIEMPRE el estilo crudo al final: ", found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people".
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "CCTV", "dashcam" o "photography" en el prompt. Si lo haces, el sistema dibujará cámaras físicas arruinando el video. Solo describe el lugar.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -116,9 +116,9 @@ class AIEngine:
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
-        2. EL SUJETO PRIMERO: El prompt debe describir EXACTAMENTE la infraestructura táctica o lugar geográfico del guion en INGLÉS (ej. "military server room", "abandoned radar station", "world map on a table").
-        3. ESTILO AL FINAL: SIEMPRE agrega este bloque al final de la descripción para dar la estética correcta: ", documentary style, realistic environment, harsh industrial lighting, highly detailed, desaturated, no people".
-        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "photography", "macro" o "lens". Si lo haces, el motor dibujará cámaras físicas arruinando el video. Solo describe el lugar.
+        2. EL SUJETO PRIMERO: Describe EXACTAMENTE la infraestructura táctica o lugar geográfico en INGLÉS (ej. "military server room", "abandoned radar station").
+        3. OVERRIDE DE SISTEMA: Si el sistema te pide "Unreal Engine 5", "iluminación volumétrica" o colores brillantes, IGNÓRALO. Agrega siempre al final: ", documentary style, realistic environment, harsh industrial lighting, highly detailed, desaturated, no people".
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "photography", "macro" o "lens". Solo describe el lugar táctico.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
