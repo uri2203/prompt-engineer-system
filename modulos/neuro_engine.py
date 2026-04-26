@@ -17,42 +17,38 @@ from datetime import datetime, timezone
 ADN_NEURO = {
     "La Viuda": {
         "gatillos_primarios": [
-            "miedo_a_lo_desconocido",   # Horror vacui — el cerebro llena los vacíos con terror
-            "disonancia_cognitiva",      # Información que contradice la realidad percibida
-            "loop_tension_alivio",       # Tensión sostenida con micro-alivios que enganchan
-            "efecto_testigo",            # "Esto le pasó a alguien real" — activa empatía y miedo
+            "miedo_a_lo_desconocido",
+            "disonancia_cognitiva",
+            "loop_tension_alivio",
+            "efecto_testigo",
         ],
         "estructura_narrativa": "tension_progresiva",
-        # Hook: primeros 3 segundos deben crear vacío de información extremo
         "formula_hook": (
-            "Abre con una afirmación perturbadora en segunda persona que el espectador "
-            "no puede ignorar. Nunca expliques en el hook — solo planta la semilla del miedo. "
-            "Ejemplo de estructura: 'Lo que estás a punto de escuchar cambió la forma en que "
-            "duermo. Y va a hacer lo mismo contigo.'"
+            "Abre con una experiencia personal perturbadora en segunda persona. "
+            "Nunca expliques en el hook — planta la semilla del miedo inexplicable. "
+            "Ejemplo: 'Alguna vez te has despertado a las 3 de la mañana sintiendo que alguien te observa. "
+            "Y no había nadie. O eso creías.'"
         ),
-        # Ritmo: cortes cada 3-4 segundos en shorts, cada 8-12 en largos
         "ritmo_cortes": {"short": 4, "largo": 10},
-        # Palabras de alto impacto neurológico para este nicho
         "palabras_gatillo": [
-            "nadie sabe", "nunca encontraron", "desapareció", "lo ocultaron",
-            "tú sabes", "no estás solo", "lo vieron", "silencio absoluto",
-            "no puedes ignorar", "algo no está bien", "lo clasificaron"
+            "no estabas solo", "algo no está bien", "lo sentiste antes",
+            "no puedes ignorarlo", "nadie lo vio", "silencio absoluto",
+            "tú lo sabes", "no fue tu imaginación", "esa sensación",
+            "lo que no se ve", "en la oscuridad", "esa noche"
         ],
-        # Colores y atmósfera para miniaturas de alto CTR
         "estetica_miniatura": (
-            "Paleta: negro profundo, rojo sangre, verde tenue. "
-            "Sin personas. Objetos que implican presencia humana: sillas vacías, "
-            "puertas entreabiertas, ventanas con luz tenue. Alto contraste. "
-            "Elemento de misterio visible pero no explicado."
+            "Paleta: negro profundo, azul oscuro, verde tenue. "
+            "Sin personas. Objetos cotidianos en contextos perturbadores: "
+            "silla vacía iluminada, puerta entreabierta con luz tenue, ventana oscura. "
+            "Alto contraste. Elemento de misterio visible pero sin explicación."
         ),
-        # Estructura de retención para videos largos
         "arco_retencion_largo": [
-            "0-2min: Hook extremo + promesa de revelación",
-            "2-8min: Contexto perturbador que aumenta la tensión",
-            "8-15min: Primer giro — algo no cuadra",
-            "15-22min: Escalada de tensión máxima",
-            "22-28min: Revelación parcial — el espectador quiere más",
-            "28-30min: Cierre abierto + llamado a la acción"
+            "0-2min: Hook perturbador + promesa de algo inexplicable",
+            "2-8min: Contexto que construye atmósfera de tensión psicológica",
+            "8-15min: Primer giro — algo no cuadra con la realidad",
+            "15-22min: Escalada de paranoia y tensión psicológica máxima",
+            "22-28min: Revelación perturbadora — más preguntas que respuestas",
+            "28-30min: Cierre abierto que persigue al espectador"
         ],
     },
 
