@@ -11,8 +11,18 @@ class TrendEngine:
     def __init__(self):
         # Aislamiento por Silos Herméticos
         self.nicho_marcas = {
-            "La Viuda": ["misterio sin resolver", "hospitales abandonados", "casos forenses reales", "leyendas urbanas reales"],
-            "Monkygraff": ["geopolítica actual", "conflictos internacionales", "tecnología militar", "estrategia global"]
+            "La Viuda": [
+                "terror psicologico narrado",
+                "historias de miedo extremo",
+                "paranoia perturbadora",
+                "experiencias paranormales reales"
+            ],
+            "Monkygraff": [
+                "geopolitica actual",
+                "conflictos internacionales",
+                "tecnologia militar",
+                "estrategia global"
+            ]
         }
 
     def _calcular_vph(self, vistas, fecha_publicacion):
