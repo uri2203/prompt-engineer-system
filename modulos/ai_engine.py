@@ -41,12 +41,6 @@ class GestorCuotas:
             json.dump(self.estado, f, indent=4)
 
     def puede_usar_llave(self, index_llave):
-        # Verificar si cambió el día PT en cada consulta — no solo al arrancar
-        fecha_actual = self._obtener_fecha_pt_actual()
-        if self.estado.get("fecha_corte") != fecha_actual:
-            print("♻️ [SISTEMA] Nuevo día detectado en consulta. Reseteando contadores.")
-            self.estado = {"fecha_corte": fecha_actual, "uso_por_llave": {}}
-            self._guardar_estado()
         idx_str = str(index_llave)
         usos = self.estado["uso_por_llave"].get(idx_str, 0)
         return usos < self.limite_diario
@@ -54,9 +48,9 @@ class GestorCuotas:
     def registrar_exito(self, index_llave):
         idx_str = str(index_llave)
         usos_actuales = self.estado["uso_por_llave"].get(idx_str, 0)
-        self.estado["uso_por_llave"][idx_str] = int(usos_actuales) + 1
+        self.estado["uso_por_llave"][idx_str] = usos_actuales + 1
         self._guardar_estado()
-        print(f"📊 [CUOTA] Llave {index_llave}: {int(usos_actuales) + 1}/{self.limite_diario} usos diarios.")
+        print(f"📊 [CUOTA] Llave {index_llave}: {usos_actuales + 1}/{self.limite_diario} usos diarios.")
 
     def bloquear_llave_por_agotamiento(self, index_llave):
         idx_str = str(index_llave)
@@ -72,23 +66,22 @@ class AIEngine:
         # ADN Maestro: La Viuda (Silo Hermético 1)
         self.adn_la_viuda = """
         [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
-        ERES UN ESCRITOR EXPERTO EN TERROR PSICOLÓGICO INMERSIVO Y DIRECTOR DE CINE DE RETENCIÓN EXTREMA.
-        TU OBJETIVO ES PARALIZAR AL ESPECTADOR MEDIANTE LA PARANOIA Y LA DISONANCIA COGNITIVA.
+        ERES UN ESCRITOR EXPERTO EN SUSPENSO NARRATIVO Y DIRECTOR DE CINE DE MISTERIO INMERSIVO.
+        TU OBJETIVO ES CAUTIVAR AL ESPECTADOR MEDIANTE UNA HISTORIA ENVOLVENTE, OSCURA Y EMOCIONAL.
 
         REGLAS DE ESTILO Y DICCION (INQUEBRANTABLES PARA MOTOR DE VOZ):
-        1. REALISMO CLÍNICO: Frases cortas, secas y objetivas. Solo suspenso psicológico.
-        2. TONO DE VOZ: Masculino, latino, grave, cercano y confidencial.
+        1. NARRATIVA CINEMATOGRÁFICA: Relata una historia atrapante, descriptiva y emocional. ESTÁ ESTRICTAMENTE PROHIBIDO usar tono de reporte policial, expediente médico o análisis forense. Cuenta el misterio como un cuento inmersivo.
+        2. TONO DE VOZ: Masculino, latino, grave, misterioso y cautivador.
         3. HOOKS: "Vacío de Información" extremo en los primeros segundos.
-        4. CUARTA PARED: Usa 2da persona invasiva ("Tú sabes de lo que hablo").
+        4. CUARTA PARED: Usa 2da persona sugestiva ("¿Te has preguntado alguna vez...?").
         5. ORTOGRAFÍA PERFECTA PARA TTS: Escribe EXCLUSIVAMENTE en español neutro impecable. PROHIBIDO inventar palabras o hacer traducciones raras. 
         6. FORMATO DE LOCUCIÓN: PROHIBIDO usar emojis, asteriscos, corchetes o hashtags en 'texto_locucion'. Usa únicamente letras, comas y puntos para que el motor de voz respire.
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
-        2. SOLO AMBIENTES: lugares, edificios, calles vacías, objetos, sombras, puertas, ventanas, habitaciones.
-        3. SIEMPRE iniciar con: "CCTV security camera footage, low quality, heavily grainy, VHS glitch, amateur dashcam, disposable camera flash, underexposed, 1990s realistic photography, dirty lens, no people,"
-        4. PROHIBIDO: 3d render, illustration, painting, vibrant colors, neon, perfect lighting, professional photography, artificial, smooth plastic, CGI, unreal engine.
-        5. ESTILO: oscuro, suspenso, realismo sucio, baja fidelidad, metraje encontrado.
+        2. EL SUJETO PRIMERO: El prompt debe describir EXACTAMENTE el ambiente físico de la escena actual de la historia en INGLÉS (ej. "abandoned hospital hallway", "empty dark living room", "creepy basement").
+        3. ESTILO AL FINAL: SIEMPRE agrega este bloque al final de la descripción para dar la estética correcta: ", found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people".
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "CCTV", o "dashcam". Si lo haces, el motor dibujará cámaras físicas arruinando el video. Solo describe el lugar.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -100,7 +93,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "CCTV security camera footage, low quality, heavily grainy, VHS glitch, amateur dashcam, disposable camera flash, underexposed, 1990s realistic photography, dirty lens, no people, [descripción del ambiente en INGLÉS: lugar, atmósfera, objetos, sin personas]",
+              "prompt_visual": "[Lugar exacto de la historia en INGLÉS], found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people",
               "texto_locucion": "Texto en ESPAÑOL impecable para el narrador."
             }
           ]
@@ -123,10 +116,9 @@ class AIEngine:
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: absolutamente ningún ser humano, hombre, mujer, niño, rostro, cuerpo, silueta.
-        2. SOLO AMBIENTES Y OBJETOS: mapas, satélites, salas de control vacías, vehículos sin conductor, infraestructura, paisajes.
-        3. SIEMPRE iniciar con: "Macro photography, photojournalism, Reuters style, desaturated colors, realistic environment, harsh industrial lighting, highly detailed, no people,"
-        4. PROHIBIDO: Sci-fi interface, glowing lines, hologram, 3d render, vibrant colors, neon, cyberpunk, illustration, plastic, glowing lights, unreal engine, video game.
-        5. ESTILO: táctico, serio, fotoperiodismo de guerra, documental crudo.
+        2. EL SUJETO PRIMERO: El prompt debe describir EXACTAMENTE la infraestructura táctica o lugar geográfico del guion en INGLÉS (ej. "military server room", "abandoned radar station", "world map on a table").
+        3. ESTILO AL FINAL: SIEMPRE agrega este bloque al final de la descripción para dar la estética correcta: ", documentary style, realistic environment, harsh industrial lighting, highly detailed, desaturated, no people".
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses la palabra "camera", "photography", "macro" o "lens". Si lo haces, el motor dibujará cámaras físicas arruinando el video. Solo describe el lugar.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -138,7 +130,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "Macro photography, photojournalism, Reuters style, desaturated colors, realistic environment, harsh industrial lighting, highly detailed, no people, [descripción táctica en INGLÉS: mapa, sala vacía, vehículo, infraestructura, sin personas]",
+              "prompt_visual": "[Lugar táctico exacto en INGLÉS], documentary style, realistic environment, harsh industrial lighting, highly detailed, desaturated, no people",
               "texto_locucion": "Texto en ESPAÑOL impecable y directo al grano."
             }
           ]
@@ -155,9 +147,9 @@ class AIEngine:
             "models/gemini-2.0-flash-lite"
         ]
         log_errores = []
-        MAX_REINTENTOS = 2 # 🚨 CAMBIO CRÍTICO: Reducido a 2 para abortar más rápido
+        MAX_REINTENTOS = 2
         MAX_ESPERA_SEGUNDOS = 125
-        TIMEOUT_SEGUNDOS = 120 # 🚨 CAMBIO CRÍTICO: Límite de tiempo absoluto para Google
+        TIMEOUT_SEGUNDOS = 120
 
         for modelo in modelos_prioridad:
             modelo_agotado = False
@@ -180,7 +172,6 @@ class AIEngine:
                             generation_config={"response_mime_type": "application/json"}
                         )
                         
-                        # 🚨 CAMBIO CRÍTICO: INYECCIÓN DE TIMEOUT
                         request_options = {"timeout": TIMEOUT_SEGUNDOS}
 
                         response = model.generate_content(
@@ -201,14 +192,14 @@ class AIEngine:
                             msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
                             print(msg)
                             log_errores.append(msg)
-                            break # Rompe el ciclo de reintentos, salta a la siguiente llave inmediatamente
+                            break 
 
                         # --- ERRORES DE SERVIDOR GOOGLE (500/503): No reintentar ---
                         if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
                             msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída. Abortando reintentos inútiles."
                             print(msg)
                             log_errores.append(msg)
-                            break # Rompe el ciclo de reintentos, salta de llave
+                            break 
 
                         # --- CUOTA DIARIA AGOTADA ---
                         if ("PerDay" in error_str and "limit: 0" in error_str) or \
@@ -260,12 +251,11 @@ class AIEngine:
         es_largo = "16:9" in formato or formato.upper() == "LARGO"
 
         if "viuda" in marca.lower():
-            canal_info = "Canal de terror psicológico, narrativa oscura, suspenso, misterio, casos reales perturbadores."
+            canal_info = "Canal de historias de misterio, suspenso narrativo, relatos inmersivos y enigmas oscuros."
         else:
             canal_info = "Canal de análisis geopolítico táctico, conflictos internacionales, estrategia militar, inteligencia."
 
         if not es_largo:
-            # Shorts: NO incluir prompts de miniatura
             prompt_paquete = f"""
 Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
 Canal: {marca}
@@ -286,7 +276,6 @@ Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
 }}
 """
         else:
-            # Largos: incluir prompts de miniatura A/B/C
             prompt_paquete = f"""
 Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
 Canal: {marca}
