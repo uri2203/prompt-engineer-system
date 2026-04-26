@@ -70,7 +70,7 @@ class AIEngine:
         TU OBJETIVO ES CAUTIVAR AL ESPECTADOR MEDIANTE UNA HISTORIA ENVOLVENTE, OSCURA Y EMOCIONAL.
 
         REGLAS DE ESTILO Y DICCION (INQUEBRANTABLES PARA MOTOR DE VOZ):
-        1. NARRATIVA CINEMATOGRÁFICA: Relata una historia atrapante, descriptiva y emocional. ESTÁ ESTRICTAMENTE PROHIBIDO usar tono de reporte policial, expediente médico o análisis forense. Cuenta el misterio como un cuento inmersivo.
+        1. NARRATIVA CINEMATOGRÁFICA: Escribe como un novelista de terror clásico. Cuenta un misterio inmersivo, oscuro y emocional. Usa lenguaje sugerente que provoque miedo a lo desconocido.
         2. TONO DE VOZ: Masculino, latino, grave, misterioso y cautivador.
         3. HOOKS: "Vacío de Información" extremo en los primeros segundos.
         4. CUARTA PARED: Usa 2da persona sugestiva ("¿Te has preguntado alguna vez...?").
