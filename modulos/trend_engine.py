@@ -18,10 +18,10 @@ class TrendEngine:
                 "experiencias paranormales reales"
             ],
             "Monkygraff": [
-                "geopolitica actual",
-                "conflictos internacionales",
-                "tecnologia militar",
-                "estrategia global"
+                "guerra Ucrania Rusia 2026",
+                "guerra comercial China Trump aranceles",
+                "minerales criticos litio cobalto geopolitica",
+                "inteligencia artificial geopolitica poder"
             ]
         }
 
