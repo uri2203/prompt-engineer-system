@@ -54,38 +54,50 @@ ADN_NEURO = {
 
     "Monkygraff": {
         "gatillos_primarios": [
-            "autoridad_tactica",         # El narrador sabe más que el espectador — genera dependencia
-            "urgencia_informativa",      # "Esto está pasando AHORA" — FOMO extremo
-            "efecto_revelacion",         # Información que el mainstream oculta — activa conspiración sana
-            "prueba_social_inversa",     # "Los que saben, ya lo saben. ¿Tú lo sabías?"
+            "autoridad_tactica",
+            "urgencia_informativa",
+            "efecto_revelacion",
+            "prueba_social_inversa",
         ],
         "estructura_narrativa": "revelacion_progresiva",
         "formula_hook": (
-            "Abre con un dato concreto e impactante que contradice la narrativa oficial. "
-            "Usa números específicos y nombres de lugares reales. "
-            "Ejemplo de estructura: 'En las últimas 72 horas, tres eventos que los medios "
-            "no conectaron acaban de cambiar el mapa de poder mundial.'"
+            "Abre con un dato concreto e impactante ocurrido en las últimas 72 horas que contradice la narrativa oficial. "
+            "Usa números específicos, nombres de países y fechas reales. "
+            "Ejemplo: 'En las últimas 48 horas, tres movimientos que los medios no conectaron acaban de redefinir el mapa de poder global. "
+            "Y ninguno de ellos apareció en los titulares.'"
         ),
         "ritmo_cortes": {"short": 3, "largo": 12},
         "palabras_gatillo": [
-            "nadie lo reportó", "datos clasificados", "acaba de ocurrir",
-            "esto cambia todo", "el mapa real", "lo que no te dicen",
-            "en las últimas horas", "movimiento táctico", "señal clara",
-            "fuentes verificadas", "antes de que lo borren"
+            "nadie lo reportó", "en las últimas horas", "esto cambia todo",
+            "el mapa real", "lo que no te dicen", "movimiento táctico",
+            "fuentes verificadas", "antes de que lo borren", "señal clara",
+            "datos clasificados", "acaba de ocurrir", "conexión que nadie hizo"
+        ],
+        "temas_prioritarios_2026": [
+            "Guerra Rusia-Ucrania y minerales estratégicos",
+            "Guerra comercial Trump vs China aranceles",
+            "China vs Taiwán — escenarios de invasión",
+            "BRICS y desdolarización",
+            "Minerales críticos: litio, cobalto, tierras raras",
+            "IA como arma geopolítica",
+            "Venezuela y operaciones encubiertas de EE.UU.",
+            "Rearmamiento europeo post-OTAN",
+            "Narcoestados y carteles como actores geopolíticos",
+            "Mar Rojo y rutas comerciales globales"
         ],
         "estetica_miniatura": (
-            "Paleta: gris acero, azul oscuro, rojo alerta. "
-            "Sin personas. Infraestructura, mapas, satélites, vehículos militares vacíos. "
-            "Estilo fotoperiodismo Reuters. Texto mínimo si aplica. "
-            "Sensación de urgencia táctica — como si fuera información clasificada."
+            "Paleta: gris acero, azul oscuro, rojo alerta, verde militar. "
+            "Sin personas. Infraestructura, mapas, instalaciones militares vacías, vehículos sin conductor, puertos, refinerías. "
+            "Estilo fotoperiodismo Reuters. Sensación de urgencia táctica. "
+            "Como si fuera información clasificada que acaba de filtrarse."
         ),
         "arco_retencion_largo": [
-            "0-2min: Dato impactante + promesa de análisis exclusivo",
-            "2-8min: Contexto geopolítico — por qué importa",
-            "8-15min: Análisis táctico profundo — el narrador demuestra autoridad",
-            "15-22min: Conexiones no obvias — el espectador siente que aprende",
-            "22-28min: Implicaciones futuras — genera ansiedad productiva",
-            "28-30min: Conclusión táctica + próximo evento a vigilar"
+            "0-2min: Dato impactante ocurrido HOY + promesa de análisis exclusivo que nadie más hará",
+            "2-8min: Contexto geopolítico — por qué este momento es diferente a todo lo anterior",
+            "8-15min: Análisis táctico profundo — conexiones no obvias entre eventos aparentemente separados",
+            "15-22min: El dinero detrás de la guerra — quién financia, quién gana, quién pierde",
+            "22-28min: Implicaciones para América Latina — cómo esto te afecta directamente",
+            "28-30min: El próximo movimiento a vigilar + llamado a acción"
         ],
     },
 
