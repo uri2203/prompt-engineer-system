@@ -156,21 +156,28 @@ class ComplianceEngine:
                 },
                 "Monkygraff": {
                     "restricciones_output": [
-                        "incitación explícita a la violencia",
-                        "propaganda de organizaciones terroristas",
-                        "glorificación de crímenes de guerra específicos"
+                        "incitación explícita a cometer actos de violencia",
+                        "propaganda directa de organizaciones terroristas designadas",
+                        "instrucciones de fabricación de armas reales"
                     ],
                     "permitido": [
-                        "análisis documental de conflictos",
-                        "lenguaje táctico y geopolítico",
-                        "descripción neutral de hechos bélicos"
+                        "análisis documental de conflictos armados",
+                        "terminología militar y táctica formal",
+                        "cifras de bajas en contexto informativo",
+                        "crítica geopolítica a gobiernos y organizaciones",
+                        "descripción de operaciones militares históricas o actuales",
+                        "análisis de estrategia económica y comercial",
+                        "cobertura de guerras como hecho informativo",
+                        "uso de palabras: guerra, conflicto, ataque, operación, bajas, misil, aranceles",
+                        "análisis de crímenes de guerra como hecho histórico documentado",
+                        "descripción de tácticas militares desde perspectiva analítica"
                     ],
                     "estrategia_evasion": (
-                        "TONO DOCUMENTAL NEUTRAL: Narrar como observador externo. "
-                        "Usar terminología táctica y geopolítica formal. No tomar partido. "
+                        "TONO DOCUMENTAL NEUTRAL: Narrar como observador externo sin tomar partido. "
+                        "Usar terminología táctica y geopolítica formal. "
                         "Ejemplos: 'ataque' → 'operación militar'; 'masacre' → 'incidente con bajas civiles'."
                     ),
-                    "umbral_bloqueo": 2
+                    "umbral_bloqueo": 15
                 }
             }
         }
