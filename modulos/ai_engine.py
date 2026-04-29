@@ -99,20 +99,21 @@ class AIEngine:
         2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia. NO uses lugares genéricos. Si la historia habla de una casa en el bosque, el prompt debe decir "old wooden house surrounded by dark forest, broken windows, night". Si habla de una escalera, di "dark staircase with peeling walls, single light bulb flickering, night". 
         3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE. PROHIBIDO repetir el mismo ambiente. Alterna entre: interiores (habitaciones, sótanos, áticos, escaleras, cocinas, baños), exteriores (bosques, calles, carreteras, patios) y detalles (puertas, ventanas, sombras, objetos).
         4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens". Solo describe el lugar.
-        5. TERMINA SIEMPRE CON: ", found footage aesthetic, grainy, vhs glitch, underexposed, no people"
+        5. TERMINA SIEMPRE CON: ", RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art"
+        6. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles. Solo lugares físicos reales con textura y peso visual.
 
         EJEMPLOS DE prompts_visual CORRECTOS:
-        - "old wooden bedroom with broken mirror, moonlight through cracked window, dusty floor, night"
-        - "dark forest path with twisted trees, thick fog, no visibility ahead, night"
-        - "abandoned kitchen with overturned chairs, rusted sink, single flickering light, night"
-        - "narrow basement stairs going down into complete darkness, water stains on walls"
-        - "empty living room with old furniture covered in sheets, broken clock on wall, dusk"
+        - "old wooden bedroom with broken mirror, peeling wallpaper, dusty floor, single lamp casting harsh shadows, night, RAW photo, photorealistic, film grain, no people"
+        - "dense forest path, twisted bare trees, thick ground fog, dead leaves, overcast sky, RAW photo, photorealistic, shot on location, no people"
+        - "abandoned kitchen, overturned chairs, rusted sink, water stains on walls, single flickering bulb, RAW photo, film grain, no people"
+        - "narrow basement stairs descending into darkness, cracked concrete walls, damp stains, RAW photo, photorealistic, no people"
+        - "empty living room, old furniture with white dust covers, broken clock on wall, dusk light through dirty windows, RAW photo, film grain, no people"
 
         EJEMPLOS DE prompts_visual PROHIBIDOS:
         - "dark corridor" (demasiado genérico)
         - "dark room" (demasiado genérico)
         - "scary place" (no descriptivo)
-        - cualquier cosa con "camera", "hospital", "forensic"
+        - cualquier cosa con "camera", "hospital", "forensic", "neon", "glow", "digital", "abstract"
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -124,7 +125,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Ambiente oscuro y perturbador en INGLÉS: habitación, pasillo, bosque, casa, ventana nocturna], found footage aesthetic, grainy, vhs glitch, underexposed, raw documentary, no people",
+              "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS: habitación, sótano, bosque, casa abandonada, ventana rota], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
               "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro. Sin forense, sin crímenes, sin alienígenas."
             }
           ]
@@ -190,8 +191,9 @@ class AIEngine:
         1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
         2. ESPECÍFICO AL TEMA: Si hablas de guerra en Ucrania, el prompt visual muestra infraestructura dañada o vehículos militares vacíos. Si hablas de economía, muestra puertos, refinerías, centros de datos. Si hablas de tecnología, muestra servidores, antenas, instalaciones industriales.
         3. VARIEDAD: Cada escena diferente. Alterna entre: infraestructura militar, instalaciones energéticas, puertos y rutas comerciales, centros de datos, mapas y territorios, vehículos sin conductor.
-        4. OVERRIDE ANTI-CGI: Si el sistema pide "Unreal Engine 5" o "hiperrealista", IGNÓRALO. Termina siempre con: ", documentary style, photojournalism, harsh industrial lighting, desaturated, no people, no faces".
-        5. PROHIBIDO: "camera", "photography", "lens", "macro". Solo describe el lugar o infraestructura.
+        4. ESTILO OBLIGATORIO: Termina siempre con: ", RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, physical environment, no people, no faces, no cgi, no digital art".
+        5. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles, blue glow, network visualization, data visualization, cyber. Solo infraestructura y entornos físicos reales.
+        6. PROHIBIDO: "camera", "photography", "lens", "macro". Solo describe el lugar o infraestructura.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -203,7 +205,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Infraestructura táctica específica en INGLÉS: instalación, vehículo, mapa, puerto, planta energética, sin personas], documentary style, photojournalism, harsh industrial lighting, desaturated, no people",
+              "prompt_visual": "[Infraestructura física real en INGLÉS: instalación, vehículo vacío, puerto, refinería, planta energética, sin personas], RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
               "texto_locucion": "Texto en ESPAÑOL impecable. Análisis táctico directo, datos concretos, conexiones no obvias."
             }
           ]
