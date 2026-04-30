@@ -126,6 +126,7 @@ class AIEngine:
             {
               "id_escena": 1,
               "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS: habitación, sótano, bosque, casa abandonada, ventana rota], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS del lugar EXACTO de esta escena para buscar en Pexels. Ejemplos: 'dark forest night', 'abandoned basement', 'old house window', 'empty hallway dark'. NUNCA genérico, SIEMPRE específico al momento de la historia]",
               "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro. Sin forense, sin crímenes, sin alienígenas."
             }
           ]
@@ -206,6 +207,7 @@ class AIEngine:
             {
               "id_escena": 1,
               "prompt_visual": "[Infraestructura física real en INGLÉS: instalación, vehículo vacío, puerto, refinería, planta energética, sin personas], RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS que describan la infraestructura exacta para buscar en Pexels. Ejemplos: 'oil refinery night', 'cargo ship port', 'military base aerial', 'power plant industrial', 'pipeline aerial'. NUNCA uses palabras genéricas. Describe la infraestructura específica que aparece en la escena.]",
               "texto_locucion": "Texto en ESPAÑOL impecable. Análisis táctico directo, datos concretos, conexiones no obvias."
             }
           ]
