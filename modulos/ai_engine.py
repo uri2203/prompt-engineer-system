@@ -349,38 +349,52 @@ Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
   "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
   "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
   "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
-  "prompt_hook": "Prompt cinematográfico para imagen del HOOK. Alta retención, impactante, visible. dramatic lighting, high contrast, detailed. Sin personas. En inglés."
+  "prompt_hook": "Prompt para imagen de hook. Un solo elemento visual dominante específico del tema del video, ultra detallado, high contrast, dramatic lighting, no people, en inglés."
 }}
 """
         else:
+            # Definir paleta y estilo por canal
+            if "viuda" in marca.lower():
+                paleta = "deep black background, blood red accent light, dark teal shadows, single beam of light illuminating one object"
+                estilo_miniatura = "psychological horror, dread atmosphere, something wrong but hard to identify, unsettling stillness"
+                ejemplo_focal = "a single chair facing a dark corner, an open door to pitch black hallway, a cracked mirror reflecting something different"
+            else:
+                paleta = "steel gray background, urgent orange accent, deep navy shadows, harsh industrial spotlight"
+                estilo_miniatura = "tactical urgency, geopolitical tension, documentary realism, classified information aesthetic"
+                ejemplo_focal = "aerial view of military installation, industrial port at night, satellite dish array in desert"
+
             prompt_paquete = f"""
-Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
+Eres un experto en diseño de miniaturas de YouTube con historial comprobado de CTR superior al 12%.
 Canal: {marca}
 Nicho: {canal_info}
-Título sugerido del video: {titulo}
-Guión/locución: {texto_locucion[:1500]}
-Formato: VIDEO LARGO 16:9 YouTube
+Título del video: {titulo}
+Tema del video: {texto_locucion[:800]}
 
-Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
+REGLAS DE ORO PARA MINIATURAS DE ALTO CTR (basadas en análisis de 10M+ thumbnails virales):
+1. UN SOLO ELEMENTO FOCAL DOMINANTE — la miniatura debe tener UN objeto/lugar que ocupe 60-70% del frame
+2. CONTRASTE EXTREMO — el elemento focal debe destacar brutalmente del fondo
+3. PALETA RESTRINGIDA — máximo 3 colores, todos con propósito
+4. ESCALA EMOCIONAL — el elemento debe generar curiosidad, urgencia o miedo solo con verlo
+5. LEGIBILIDAD EN MÓVIL — debe impactar en pantalla de 3cm
+6. CERO PERSONAS — sin rostros, sin cuerpos, sin siluetas
+7. ESPECÍFICO AL TEMA — el elemento focal debe conectar directamente con la historia del video
 
-INSTRUCCIONES CRÍTICAS PARA PROMPTS DE MINIATURAS:
-- NUNCA generes prompts oscuros que resulten en imágenes negras
-- SIEMPRE incluir: dramatic lighting, high contrast, visible details, sharp focus
-- SIEMPRE incluir elementos visuales concretos y descriptivos
-- PROHIBIDO: total darkness, pitch black, all black, completely dark
-- Los prompts deben generar imágenes impactantes y visibles, no oscuras
-- Sin personas, sin rostros, sin cuerpos humanos
+PALETA DEL CANAL: {paleta}
+ESTILO: {estilo_miniatura}
+EJEMPLOS DE ELEMENTOS FOCALES PARA ESTE CANAL: {ejemplo_focal}
+
+Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, con número o pregunta si aplica",
-  "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Incluir timestamps. Terminar con links de redes.",
-  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
-  "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
-  "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
-  "prompt_hook": "Prompt cinematográfico para imagen del HOOK. Alta retención, impactante, visible. dramatic lighting, high contrast, detailed. Sin personas. En inglés.",
-  "prompt_miniatura_A": "Photorealistic dramatic scene, [elemento visual específico del tema], high contrast lighting, sharp focus, visible details, moody atmosphere, cinematic composition, no people, no faces, 8k uhd, [2-3 elementos visuales concretos relacionados al tema del video]",
-  "prompt_miniatura_B": "Hyperrealistic environment, [elemento visual específico diferente], dramatic side lighting, deep shadows with visible details, atmospheric fog or mist, cinematic still, no humans, no faces, ultra detailed, [2-3 elementos visuales del tema]",
-  "prompt_miniatura_C": "Photojournalism style, [elemento visual impactante del tema], harsh directional lighting, gritty realistic texture, visible and detailed composition, no people, raw documentary feel, [2-3 elementos visuales del tema]"
+  "titulo_final": "Título SEO optimizado, máximo 70 caracteres, genera curiosidad extrema o urgencia, con número si aplica",
+  "descripcion": "Descripción 300+ palabras. Línea 1-2: gancho visible sin expandir. Párrafos 2-4: keywords naturales + valor. Párrafo 5: CTA. Timestamps si aplica. Links al final.",
+  "hashtags": "máximo 15 hashtags ultra relevantes al tema específico del video separados por espacio",
+  "keywords": "máximo 500 caracteres, palabras clave exactas que busca la audiencia de este tema específico, separadas por coma",
+  "primer_comentario": "Comentario que genera debate o revela algo que el video no dijo. Termina con pregunta que obligue a responder.",
+  "prompt_hook": "Un objeto o lugar específico del tema del video, ultra detallado, solo elemento en frame, {paleta.split(',')[0]}, dramatic single light source, no people, photorealistic, 8k",
+  "prompt_miniatura_A": "ELEMENTO FOCAL: [objeto o lugar MÁS IMPACTANTE del tema de ESTE video específico], isolated on {paleta.split(',')[0]}, single dramatic spotlight from above, extreme detail on texture, {estilo_miniatura}, photorealistic render, no humans, no text, wide lens distortion for drama, 1920x1080",
+  "prompt_miniatura_B": "COMPOSICIÓN ANGULAR: [mismo tema pero desde ángulo diferente — perspectiva extrema o picado/contrapicado], {paleta}, harsh rim lighting creating silhouette effect, visible material texture, {estilo_miniatura}, gritty photorealistic, no people, 1920x1080",
+  "prompt_miniatura_C": "DETALLE MACRO: extreme close-up of [detalle específico del elemento clave del tema — superficie, textura, mecanismo], {paleta.split(',')[0]} color grade, ultra sharp focus with bokeh background, cinematic grain, {estilo_miniatura}, no humans, macro photography aesthetic, 1920x1080"
 }}
 """
 
