@@ -167,7 +167,7 @@ class AIEngine:
 
         REGLAS DE ESTILO (INQUEBRANTABLES PARA MOTOR DE VOZ):
         1. TONO: Analista táctico. Informativo, seco, basado en datos.
-        2. HOOKS DE URGENCIA: "Esto pasó en las últimas 72 horas y nadie lo conectó."
+        2. HOOKS DINÁMICOS: cada video debe abrir de forma DIFERENTE y ESPECÍFICA al tema tratado. PROHIBIDO usar "en las últimas 72 horas", "esto pasó hace poco", "lo que nadie te dijo", o cualquier frase genérica de urgencia. El gancho debe contener un DATO CONCRETO del tema: una cifra, un nombre, un lugar, un movimiento específico. Ejemplos válidos por tema (varía siempre): para guerra usa "Tres divisiones rusas cruzaron el Donetsk esta semana"; para economía usa "El yuan superó al dólar en pagos asiáticos"; para tecnología usa "China bloqueó la exportación de galio a Estados Unidos"; para LATAM usa "Trump anunció aranceles del 25% a México"; para orden mundial usa "Cuatro países dejaron de aceptar dólares para petróleo". El hook NUNCA se repite entre videos.
         3. DATOS CONCRETOS: Siempre incluye cifras, fechas, nombres de países reales.
         4. ORTOGRAFÍA PERFECTA PARA TTS: español neutro impecable. PROHIBIDO emojis, asteriscos, corchetes en texto_locucion.
         5. MONETIZACIÓN: PROHIBIDO lenguaje bélico explícito, incitación a violencia, gore.
