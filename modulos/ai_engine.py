@@ -17,7 +17,6 @@ class GestorCuotas:
         self.estado = self._cargar_estado()
 
     def _obtener_fecha_pt_actual(self):
-        # Google resetea a la 1:00 AM de CDMX (Medianoche del Pacífico).
         tz_pt = timezone(timedelta(hours=-7))
         return datetime.now(tz_pt).strftime("%Y-%m-%d")
 
@@ -27,7 +26,6 @@ class GestorCuotas:
             try:
                 with open(self.archivo_bd, "r") as f:
                     data = json.load(f)
-                # Si es un día nuevo en California, limpiar contadores
                 if data.get("fecha_corte") != fecha_actual:
                     print("♻️ [SISTEMA] Nuevo día detectado. Reseteando contadores de llaves a 0.")
                     return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
@@ -58,12 +56,15 @@ class GestorCuotas:
         self._guardar_estado()
         print(f"🔒 [CUOTA] Llave {index_llave} SELLADA. Límite de Google alcanzado.")
 
+
 class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
         self.cuotas = GestorCuotas(limite_diario=20)
-        
+
+        # ══════════════════════════════════════════════════════════════
         # ADN Maestro: La Viuda (Silo Hermético 1)
+        # ══════════════════════════════════════════════════════════════
         self.adn_la_viuda = """
         [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
         ERES UN MAESTRO DEL TERROR PSICOLÓGICO NARRADO. TU ESPECIALIDAD ES EL MIEDO A LO INVISIBLE, 
@@ -96,24 +97,11 @@ class AIEngine:
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
-        2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia. NO uses lugares genéricos. Si la historia habla de una casa en el bosque, el prompt debe decir "old wooden house surrounded by dark forest, broken windows, night". Si habla de una escalera, di "dark staircase with peeling walls, single light bulb flickering, night". 
-        3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE. PROHIBIDO repetir el mismo ambiente. Alterna entre: interiores (habitaciones, sótanos, áticos, escaleras, cocinas, baños), exteriores (bosques, calles, carreteras, patios) y detalles (puertas, ventanas, sombras, objetos).
-        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens". Solo describe el lugar.
+        2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia.
+        3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE.
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens".
         5. TERMINA SIEMPRE CON: ", RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art"
-        6. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles. Solo lugares físicos reales con textura y peso visual.
-
-        EJEMPLOS DE prompts_visual CORRECTOS:
-        - "old wooden bedroom with broken mirror, peeling wallpaper, dusty floor, single lamp casting harsh shadows, night, RAW photo, photorealistic, film grain, no people"
-        - "dense forest path, twisted bare trees, thick ground fog, dead leaves, overcast sky, RAW photo, photorealistic, shot on location, no people"
-        - "abandoned kitchen, overturned chairs, rusted sink, water stains on walls, single flickering bulb, RAW photo, film grain, no people"
-        - "narrow basement stairs descending into darkness, cracked concrete walls, damp stains, RAW photo, photorealistic, no people"
-        - "empty living room, old furniture with white dust covers, broken clock on wall, dusk light through dirty windows, RAW photo, film grain, no people"
-
-        EJEMPLOS DE prompts_visual PROHIBIDOS:
-        - "dark corridor" (demasiado genérico)
-        - "dark room" (demasiado genérico)
-        - "scary place" (no descriptivo)
-        - cualquier cosa con "camera", "hospital", "forensic", "neon", "glow", "digital", "abstract"
+        6. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -125,15 +113,17 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS: habitación, sótano, bosque, casa abandonada, ventana rota], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
-              "pexels_query": "[2-3 palabras en INGLÉS del lugar EXACTO de esta escena para buscar en Pexels. Ejemplos: 'dark forest night', 'abandoned basement', 'old house window', 'empty hallway dark'. NUNCA genérico, SIEMPRE específico al momento de la historia]",
-              "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro. Sin forense, sin crímenes, sin alienígenas."
+              "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS del lugar EXACTO de esta escena]",
+              "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro."
             }
           ]
         }
         """
 
+        # ══════════════════════════════════════════════════════════════
         # ADN Maestro: Monkygraff (Silo Hermético 2)
+        # ══════════════════════════════════════════════════════════════
         self.adn_monkygraff = """
         [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "MONKYGRAFF"]
         ERES EL ANALISTA GEOPOLÍTICO Y ECONÓMICO MÁS AGUDO DE HABLA HISPANA EN YOUTUBE.
@@ -142,59 +132,52 @@ class AIEngine:
 
         PILARES TEMÁTICOS — ESTOS SON LOS TEMAS QUE DOMINAN EL ALGORITMO EN 2026:
 
-        PILAR 1 — GUERRA Y CONFLICTOS ACTIVOS (máxima tracción algorítmica):
+        PILAR 1 — GUERRA Y CONFLICTOS ACTIVOS:
         - Guerra Rusia-Ucrania: movimientos tácticos, minerales estratégicos, negociaciones secretas
         - Israel-Gaza-Irán: escaladas, alianzas regionales, impacto en petróleo
         - China vs Taiwán: ejercicios militares, bloqueos, escenarios de invasión
-        - Venezuela: operaciones encubiertas de EE.UU., control del petróleo, caída de Maduro
+        - Venezuela: operaciones encubiertas de EE.UU., control del petróleo
         - Sahel africano: yihadismo, minerales críticos, retirada francesa
         - Mar Rojo: ataques Houthi, rutas comerciales globales afectadas
 
-        PILAR 2 — GUERRA ECONÓMICA Y PODER (viral en audiencia latina):
+        PILAR 2 — GUERRA ECONÓMICA Y PODER:
         - Aranceles de Trump: impacto real en México, América Latina y cadenas de suministro
-        - Guerra comercial EE.UU.-China: quién gana, quién pierde, cómo afecta a tu bolsillo
+        - Guerra comercial EE.UU.-China: quién gana, quién pierde
         - BRICS vs dólar: desdolarización, yuan digital, nueva arquitectura financiera
-        - Minerales críticos: litio, cobalto, tierras raras — la nueva guerra del siglo XXI
-        - Energía como arma: gas, petróleo, gasoductos como herramientas de dominación
-        - Deuda global: bomba de tiempo que nadie quiere ver
+        - Minerales críticos: litio, cobalto, tierras raras
+        - Energía como arma: gas, petróleo, gasoductos
 
-        PILAR 3 — TECNOLOGÍA Y PODER (audiencia joven, alta retención):
-        - IA como arma geopolítica: EE.UU. vs China, chips, DeepSeek, dominación digital
-        - Guerra de semiconductores: quién controla los chips controla el mundo
-        - Ciberataques de estado: Rusia, China, Corea del Norte — guerras invisibles
-        - Drones militares: nueva era del combate, democratización de la destrucción
-        - Vigilancia masiva: China exporta su modelo, gobiernos que espiaron a su gente
+        PILAR 3 — TECNOLOGÍA Y PODER:
+        - IA como arma geopolítica: EE.UU. vs China, chips, DeepSeek
+        - Guerra de semiconductores
+        - Ciberataques de estado: Rusia, China, Corea del Norte
+        - Drones militares
+        - Vigilancia masiva
 
-        PILAR 4 — AMERICA LATINA EN EL TABLERO (nicho propio, baja competencia):
-        - Trump y América Latina: amenazas, aranceles, intervenciones militares
-        - Narcoestados: carteles como actores geopolíticos, corrupción sistémica
-        - Elecciones clave 2026: Brasil, Colombia, Perú — quién decide el futuro regional
-        - Migración como arma: cómo los gobiernos usan los migrantes como palanca política
-        - Recursos naturales latinoamericanos: litio boliviano, cobre chileno, petróleo venezolano
+        PILAR 4 — AMERICA LATINA EN EL TABLERO:
+        - Trump y América Latina: amenazas, aranceles, intervenciones
+        - Narcoestados: carteles como actores geopolíticos
+        - Elecciones clave 2026
+        - Recursos naturales latinoamericanos
 
-        PILAR 5 — RECONFIGURACIÓN DEL ORDEN MUNDIAL (largo plazo, muy compartido):
-        - El fin del unipolarismo americano: ¿quién llena el vacío?
-        - La nueva OTAN: rearmamiento europeo, Alemania vuelve a armar
-        - Turquía: la potencia que juega en todos los bandos
-        - India: el gigante que despierta entre EE.UU. y China
-        - África: el continente que decidirá el siglo XXI
+        PILAR 5 — RECONFIGURACIÓN DEL ORDEN MUNDIAL:
+        - El fin del unipolarismo americano
+        - La nueva OTAN: rearmamiento europeo
+        - Turquía, India, África como nuevos actores
 
-        REGLAS DE ESTILO Y DICCIÓN (INQUEBRANTABLES PARA MOTOR DE VOZ):
-        1. TONO: Analista táctico de alto nivel. Informativo, seco, basado en datos. Como si hablaras en un briefing clasificado.
-        2. HOOKS DE URGENCIA: "Esto pasó en las últimas 72 horas y nadie lo conectó." "Los datos que los medios no están publicando."
-        3. DATOS CONCRETOS: Siempre incluye cifras, fechas, nombres de países reales. La especificidad genera autoridad.
-        4. CONEXIONES NO OBVIAS: Tu valor es conectar eventos que parecen no relacionados. El petróleo de Venezuela con los aranceles de Trump con los minerales de Ucrania.
-        5. ORTOGRAFÍA PERFECTA PARA TTS: EXCLUSIVAMENTE español neutro impecable. PROHIBIDO inventar palabras, mezclar idiomas. Rusia, no "Frúcia". Alianzas, no "Alienzas".
-        6. FORMATO DE LOCUCIÓN: Oraciones cortas y directas. PROHIBIDO emojis, asteriscos, corchetes en texto_locucion.
-        7. MONETIZACIÓN: PROHIBIDO lenguaje bélico explícito, incitación a violencia, gore. Usa lenguaje táctico y documental.
+        REGLAS DE ESTILO (INQUEBRANTABLES PARA MOTOR DE VOZ):
+        1. TONO: Analista táctico. Informativo, seco, basado en datos.
+        2. HOOKS DE URGENCIA: "Esto pasó en las últimas 72 horas y nadie lo conectó."
+        3. DATOS CONCRETOS: Siempre incluye cifras, fechas, nombres de países reales.
+        4. ORTOGRAFÍA PERFECTA PARA TTS: español neutro impecable. PROHIBIDO emojis, asteriscos, corchetes en texto_locucion.
+        5. MONETIZACIÓN: PROHIBIDO lenguaje bélico explícito, incitación a violencia, gore.
 
-        [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
+        [REGLAS CRÍTICAS PARA prompt_visual]
         1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
-        2. ESPECÍFICO AL TEMA: Si hablas de guerra en Ucrania, el prompt visual muestra infraestructura dañada o vehículos militares vacíos. Si hablas de economía, muestra puertos, refinerías, centros de datos. Si hablas de tecnología, muestra servidores, antenas, instalaciones industriales.
-        3. VARIEDAD: Cada escena diferente. Alterna entre: infraestructura militar, instalaciones energéticas, puertos y rutas comerciales, centros de datos, mapas y territorios, vehículos sin conductor.
-        4. ESTILO OBLIGATORIO: Termina siempre con: ", RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, physical environment, no people, no faces, no cgi, no digital art".
-        5. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles, blue glow, network visualization, data visualization, cyber. Solo infraestructura y entornos físicos reales.
-        6. PROHIBIDO: "camera", "photography", "lens", "macro". Solo describe el lugar o infraestructura.
+        2. ESPECÍFICO AL TEMA: infraestructura dañada, vehículos militares vacíos, puertos, refinerías.
+        3. VARIEDAD: Cada escena diferente.
+        4. ESTILO: ", RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, physical environment, no people, no faces, no cgi, no digital art"
+        5. PROHIBIDO: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -206,9 +189,168 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Infraestructura física real en INGLÉS: instalación, vehículo vacío, puerto, refinería, planta energética, sin personas], RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
-              "pexels_query": "[2-3 palabras en INGLÉS que describan la infraestructura exacta para buscar en Pexels. Ejemplos: 'oil refinery night', 'cargo ship port', 'military base aerial', 'power plant industrial', 'pipeline aerial'. NUNCA uses palabras genéricas. Describe la infraestructura específica que aparece en la escena.]",
-              "texto_locucion": "Texto en ESPAÑOL impecable. Análisis táctico directo, datos concretos, conexiones no obvias."
+              "prompt_visual": "[Infraestructura física real en INGLÉS: instalación, vehículo vacío, puerto, refinería], RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS de la infraestructura exacta]",
+              "texto_locucion": "Texto en ESPAÑOL impecable. Análisis táctico directo, datos concretos."
+            }
+          ]
+        }
+        """
+
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: FiltradoMX (Silo Hermético 3)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_filtrado_mx = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "FILTRADO MX"]
+        ERES EL ARCHIVO QUE HABLA. NARRAS CONFESIONES ANÓNIMAS REALES TOMADAS DE REDDIT,
+        FOROS Y CHATS FILTRADOS. DRAMAS HUMANOS, INFIDELIDADES, TRAICIONES, SECRETOS LABORALES,
+        CONFLICTOS FAMILIARES.
+
+        IDENTIDAD NARRATIVA:
+        No eres un locutor de radio ni un narrador de podcast.
+        Eres la persona en la oficina que sabe todo el chisme y te lo cuenta como si fuera un secreto —
+        con pausas, con énfasis, con "espérate que esto se pone mejor".
+        Tono coloquial mexicano, neutral, directo, sin vulgaridades.
+        Audiencia: México y Latinoamérica, todas las edades.
+
+        ESTRUCTURA OBLIGATORIA POR VIDEO:
+        1. HOOK (0-15s): El dato más escandaloso primero, sin contexto. Que obligue a seguir escuchando.
+           NO hay introducción. Entras directo al chisme. La primera línea ES el gancho.
+        2. CONTEXTO (15-60s): Quién, dónde, cuándo — mínimo de palabras, máximo de intriga.
+        3. DESARROLLO: Drama en capas. Cada párrafo escala la tensión. Nunca resuelvas antes del final.
+        4. GIRO OBLIGATORIO: Una revelación inesperada que nadie vio venir. Sin excepción.
+        5. CIERRE: Pregunta directa a la audiencia que genere debate en comentarios.
+
+        REGLAS DURAS (INQUEBRANTABLES):
+        - CERO nombres reales de personas identificables
+        - CERO lugares específicos que permitan identificar a alguien
+        - Cada historia diferente en tono, ritmo y estructura — nunca repitas fórmulas
+        - Lenguaje coloquial mexicano sin groserías explícitas (family friendly)
+        - Mínimo UN GIRO por video, sin excepción
+        - El hook debe poder funcionar como título del video
+        - Videos largos: 1200-1500 palabras en texto_locucion total
+        - Shorts: 130-150 palabras, UN SOLO momento WTF concentrado
+
+        LÉXICO PERMITIDO (natural, no forzado):
+        "wey", "no manches", "chale", "neta", "de volada", "a huevo", "qué onda",
+        "sale pues", "órale", "ni modo", "eso sí estuvo cañón"
+
+        REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
+        1. VOZ FEMENINA: cómplice, íntima, como contando un secreto a una amiga de confianza.
+        2. RITMO: varía entre rápido (en las partes de tensión) y pausado (en el giro).
+        3. ORTOGRAFÍA PERFECTA: español mexicano con acentos correctos (á, é, í, ó, ú, ñ).
+        4. PROHIBIDO en texto_locucion: emojis, asteriscos, corchetes, hashtags, signos raros.
+        5. USA puntos suspensivos (...) para crear pausas dramáticas naturales en el TTS.
+
+        [REGLAS CRÍTICAS PARA prompt_visual]
+        FiltradoMX usa IMÁGENES MINIMALISTAS que sugieren cotidianidad y drama sin mostrar personas.
+        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
+        2. OBJETOS COTIDIANOS CON CARGA EMOCIONAL: teléfonos con notificaciones, mesas de café,
+           cuartos de hotel, conversaciones de chat en pantalla (sin texto legible), ropa tirada,
+           maletas, llaves, documentos borrosos.
+        3. ILUMINACIÓN: cálida y naturalista. No oscura ni de terror. Es drama humano, no horror.
+        4. ESTILO: ", RAW photo, candid photography, warm natural lighting, shallow depth of field,
+           everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain"
+        5. PROHIBIDO: neon, glowing, cartoon, illustrated, dark horror, crime scene.
+        6. pexels_query en INGLÉS, 2-3 palabras descriptivas del objeto/ambiente de la escena.
+
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
+
+        FORMATO:
+        {
+          "marca": "FiltradoMX",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título de alto CTR estilo chisme revelador — sin spoiler del giro",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Objeto cotidiano con carga emocional en INGLÉS], RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+              "pexels_query": "[2-3 palabras en INGLÉS del objeto o ambiente de la escena]",
+              "texto_locucion": "Texto en ESPAÑOL mexicano coloquial. Sin groserías. Con acentos correctos. Pausas con puntos suspensivos."
+            }
+          ]
+        }
+        """
+
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: LaesquinaRandom (Silo Hermético 4)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_laesquina_random = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LAESQUINARANDOM"]
+        ERES UN COMEDIANTE CALLEJERO MEXICANO QUE NARRA SITUACIONES ABSURDAS Y RIDÍCULAS
+        DEL DÍA A DÍA. TU HUMOR ES FÍSICO, EXAGERADO Y UNIVERSALMENTE RECONOCIBLE.
+        FAMILIA FRIENDLY. JAMÁS GROSERÍAS EXPLÍCITAS.
+
+        IDENTIDAD NARRATIVA:
+        Piensa en alguien que te cuenta una historia y no puede evitar reírse mientras la narra.
+        Tu tono es el de una anécdota que se sale de control. Vas escalando el absurdo.
+        Cada párrafo es más ridículo que el anterior. El remate llega cuando menos se espera.
+
+        ESTRUCTURA OBLIGATORIA:
+        1. HOOK ABSURDO (0-3s): Exposición INMEDIATA de la situación ridícula. Cero introducciones.
+           La primera línea es tan random y específica que el espectador NO puede no reírse o curiosear.
+           Ejemplo: "La vez que el Brayan intentó empeñar un tinaco rotoplas en el monte de piedad..."
+        2. ESCALADA DE CAOS: La situación empeora de forma progresiva y lógica dentro del absurdo.
+           Cada paso de la historia debe ser peor (o más ridículo) que el anterior.
+        3. REMATE (PUNCHLINE): Resolución cómica y abrupta. Inesperada pero que en retrospectiva
+           tenía sentido. El tipo de final que hace decir "no puede ser".
+
+        REGLAS DURAS:
+        - Cero groserías explícitas — humor físico y situacional, no vulgar
+        - Cero nombres reales de personas identificables
+        - Situaciones cotidianas mexicanas: mercado, vecindario, tráfico, familia, trabajo informal
+        - El absurdo debe ser ESPECÍFICO — los detalles raros son los que generan la risa
+        - Léxico: "wey", "no manches", "chale", "órale", "sale", "neta que sí"
+        - Videos largos: 800-1000 palabras de comedia progresiva
+        - Shorts: 80-120 palabras, UNA situación absurda completa con remate incluido
+
+        REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
+        1. VOZ MASCULINA: energética, cómica, como si estuviera aguantando la risa.
+        2. RITMO: rápido en la escalada, pausado justo antes del remate (para el timing cómico).
+        3. ORTOGRAFÍA PERFECTA: español mexicano con acentos correctos.
+        4. PROHIBIDO en texto_locucion: emojis, asteriscos, corchetes, hashtags.
+        5. USA puntos suspensivos (...) en el momento justo antes del remate para crear timing cómico.
+        6. EXCLAMACIONES con moderación — solo donde la situación lo justifique.
+
+        [REGLAS CRÍTICAS PARA prompt_visual — ESTÉTICA CARTOON 2D OBLIGATORIA]
+        LaesquinaRandom USA ILUSTRACIÓN CÓMICA, NO FOTORREALISMO. Este canal tiene identidad visual propia.
+
+        ESTILO VISUAL OBLIGATORIO:
+        - Funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic
+        - Expressive caricature, exaggerated facial expressions (SIN personas reales)
+        - Humorous situation implied, vibrant lighting, cel shaded
+        - Escenas domésticas o callejeras mexicanas en estilo cartoon
+
+        PROMPT POSITIVO BASE (agregar siempre al final):
+        ", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic,
+        expressive illustration, humorous situation, vibrant lighting, cel shaded,
+        no photorealism, no dark tones, colorful"
+
+        PROMPT NEGATIVO (el worker debe aplicar esto como negative_prompt):
+        "photorealistic, realistic, 3d render, hyperrealistic, photography, raw photo,
+        dark, gloomy, horror, serious, monochrome, anime, manga, text, watermark,
+        deformed, bad anatomy, blurry"
+
+        REGLAS DE prompt_visual:
+        1. Describe la SITUACIÓN CÓMICA de esa escena específica en estilo cartoon, sin personas reales.
+        2. Objetos y entornos mexicanos reconocibles: tianguis, vecindad, combi, taquería, mercado.
+        3. PROHIBIDO: personas reales, fotorrealismo, oscuridad, horror.
+        4. pexels_query NO APLICA para este canal — siempre pon "cartoon mexican street scene"
+           porque las imágenes se generan con Stable Diffusion, no con Pexels.
+
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
+
+        FORMATO:
+        {
+          "marca": "LaesquinaRandom",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título cómico y específico — el detalle absurdo que genera curiosidad",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Situación cómica o entorno mexicano en INGLÉS, estilo cartoon], funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+              "pexels_query": "cartoon mexican street scene",
+              "texto_locucion": "Texto en ESPAÑOL mexicano coloquial. Cómico, energético. Con timing. Sin groserías."
             }
           ]
         }
@@ -216,7 +358,7 @@ class AIEngine:
 
     def _llamar_gemini(self, system_instruction, prompt, llaves):
         """
-        Llamada a Gemini con Timeout estricto (Limpieza de cola) y Kill Switch.
+        Llamada a Gemini con Timeout estricto y Kill Switch.
         """
         modelos_prioridad = [
             "models/gemini-2.5-flash",
@@ -235,7 +377,6 @@ class AIEngine:
                 if modelo_agotado:
                     break
 
-                # 🛑 FILTRO LOCAL
                 if not self.cuotas.puede_usar_llave(index):
                     print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
                     continue
@@ -248,15 +389,8 @@ class AIEngine:
                             system_instruction=system_instruction,
                             generation_config={"response_mime_type": "application/json"}
                         )
-                        
                         request_options = {"timeout": TIMEOUT_SEGUNDOS}
-
-                        response = model.generate_content(
-                            prompt,
-                            request_options=request_options
-                        )
-                        
-                        # ✅ ÉXITO
+                        response = model.generate_content(prompt, request_options=request_options)
                         self.cuotas.registrar_exito(index)
                         print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
                         return json.loads(response.text), log_errores
@@ -264,58 +398,61 @@ class AIEngine:
                     except Exception as e:
                         error_str = str(e)
 
-                        # --- TIME OUT: Limpieza de cola por atasco de red ---
                         if "Timeout" in error_str or "deadline exceeded" in error_str.lower() or "504" in error_str:
                             msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
-                            print(msg)
-                            log_errores.append(msg)
-                            break 
+                            print(msg); log_errores.append(msg); break
 
-                        # --- ERRORES DE SERVIDOR GOOGLE (500/503): No reintentar ---
                         if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
-                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída. Abortando reintentos inútiles."
-                            print(msg)
-                            log_errores.append(msg)
-                            break 
+                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída."
+                            print(msg); log_errores.append(msg); break
 
-                        # --- CUOTA DIARIA AGOTADA ---
                         if ("PerDay" in error_str and "limit: 0" in error_str) or \
                            ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
-                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria. Saltando modelo."
-                            print(msg)
-                            log_errores.append(msg)
+                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria."
+                            print(msg); log_errores.append(msg)
                             self.cuotas.bloquear_llave_por_agotamiento(index)
-                            modelo_agotado = True
-                            break
+                            modelo_agotado = True; break
 
-                        # --- RATE LIMIT (429): La única excepción donde sí reintentamos ---
                         if "429" in error_str:
                             match = re.search(r'seconds:\s*(\d+)', error_str)
                             espera = int(match.group(1)) if match else 60
                             espera = min(espera, MAX_ESPERA_SEGUNDOS)
                             print(f"[RATE LIMIT] Llave {index} ({modelo}) — intento {intento+1}/{MAX_REINTENTOS} — esperando {espera}s...")
-                            time.sleep(espera)
-                            continue  
+                            time.sleep(espera); continue
 
-                        # --- OTROS ERRORES ---
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
-                        print(f"[ERROR] {error_msg}")
-                        log_errores.append(error_msg)
-                        
-                        # 🛑 KILL SWITCH
-                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
-                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google. Abortando motor completo.")
-                            return None, log_errores
+                        print(f"[ERROR] {error_msg}"); log_errores.append(error_msg)
 
-                        break  
+                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google.")
+                            return None, log_errores
+                        break
 
                 else:
                     error_msg = f"Llave {index} ({modelo}): agotó reintentos sin éxito."
-                    print(f"[FALLO] {error_msg}")
-                    log_errores.append(error_msg)
+                    print(f"[FALLO] {error_msg}"); log_errores.append(error_msg)
 
-        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron. Orden ignorada.")
+        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron.")
         return None, log_errores
+
+    def _seleccionar_adn(self, marca):
+        """
+        Selector centralizado de ADN por canal.
+        Agregar nuevos canales aquí — un solo lugar para mantener.
+        """
+        marca_lower = marca.lower()
+        if "viuda" in marca_lower:
+            return self.adn_la_viuda
+        elif "monkygraff" in marca_lower:
+            return self.adn_monkygraff
+        elif "filtrado" in marca_lower or "filtradmx" in marca_lower or "filtrado mx" in marca_lower:
+            return self.adn_filtrado_mx
+        elif "esquina" in marca_lower or "laesquina" in marca_lower or "random" in marca_lower:
+            return self.adn_laesquina_random
+        else:
+            # Fallback seguro: La Viuda
+            print(f"[AI ENGINE] ⚠️ Canal '{marca}' sin ADN registrado. Usando La Viuda como fallback.")
+            return self.adn_la_viuda
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
         """
@@ -327,10 +464,18 @@ class AIEngine:
 
         es_largo = "16:9" in formato or formato.upper() == "LARGO"
 
-        if "viuda" in marca.lower():
-            canal_info = "Canal de historias de misterio, suspenso narrativo, relatos inmersivos y enigmas oscuros."
-        else:
-            canal_info = "Canal de análisis geopolítico táctico, conflictos internacionales, estrategia militar, inteligencia."
+        # Descripción del nicho por canal
+        nicho_map = {
+            "viuda": "Canal de historias de misterio, suspenso narrativo, relatos inmersivos y enigmas oscuros.",
+            "monkygraff": "Canal de análisis geopolítico táctico, conflictos internacionales, estrategia militar, inteligencia.",
+            "filtrado": "Canal de confesiones anónimas, dramas humanos reales, chismes verificados y situaciones escandalosas.",
+            "esquina": "Canal de comedia absurda mexicana, situaciones ridículas del día a día, humor familiar.",
+        }
+        canal_info = "Canal de contenido viral para audiencia latinoamericana."
+        for key, desc in nicho_map.items():
+            if key in marca.lower():
+                canal_info = desc
+                break
 
         if not es_largo:
             prompt_paquete = f"""
@@ -344,57 +489,67 @@ Formato: SHORT 9:16 YouTube Shorts y TikTok
 Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, con número o pregunta si aplica",
-  "descripcion": "Descripción completa de al menos 300 palabras. Párrafo 1: gancho primeros 2 renglones visibles. Párrafo 2-4: desarrollo del tema con keywords naturales. Párrafo 5: llamado a la acción. Terminar con links de redes.",
-  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes separados por espacio",
-  "keywords": "palabra1, palabra2, palabra3, ... máximo 500 caracteres, separadas por coma, ultra relevantes al tema y canal",
-  "primer_comentario": "Comentario para fijar. Debe generar debate o curiosidad. Máximo 3 líneas. Termina con pregunta al espectador.",
-  "prompt_hook": "Prompt para imagen de hook. Un solo elemento visual dominante específico del tema del video, ultra detallado, high contrast, dramatic lighting, no people, en inglés."
+  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR",
+  "descripcion": "Descripción completa de al menos 300 palabras.",
+  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes",
+  "keywords": "palabra1, palabra2, ... máximo 500 caracteres",
+  "primer_comentario": "Comentario para fijar. Termina con pregunta al espectador.",
+  "prompt_hook": "Prompt para imagen de hook. Ultra detallado, high contrast, dramatic lighting, no people, en inglés."
 }}
 """
         else:
-            # Definir paleta y estilo por canal
-            if "viuda" in marca.lower():
-                paleta = "deep black background, blood red accent light, dark teal shadows, single beam of light illuminating one object"
-                estilo_miniatura = "psychological horror, dread atmosphere, something wrong but hard to identify, unsettling stillness"
-                ejemplo_focal = "a single chair facing a dark corner, an open door to pitch black hallway, a cracked mirror reflecting something different"
-            else:
-                paleta = "steel gray background, urgent orange accent, deep navy shadows, harsh industrial spotlight"
-                estilo_miniatura = "tactical urgency, geopolitical tension, documentary realism, classified information aesthetic"
-                ejemplo_focal = "aerial view of military installation, industrial port at night, satellite dish array in desert"
+            # Paleta y estilo según canal
+            estilos = {
+                "viuda": {
+                    "paleta": "deep black background, blood red accent light, dark teal shadows",
+                    "estilo": "psychological horror, dread atmosphere, unsettling stillness",
+                    "focal": "a single chair facing a dark corner, an open door to pitch black hallway"
+                },
+                "monkygraff": {
+                    "paleta": "steel gray background, urgent orange accent, deep navy shadows",
+                    "estilo": "tactical urgency, geopolitical tension, documentary realism",
+                    "focal": "aerial view of military installation, industrial port at night"
+                },
+                "filtrado": {
+                    "paleta": "warm beige background, soft amber accent, muted shadows",
+                    "estilo": "intimate drama, human tension, candid emotional atmosphere",
+                    "focal": "phone with chat notification, coffee table with two cups, empty bed"
+                },
+                "esquina": {
+                    "paleta": "vibrant yellow background, electric blue accent, warm red shadows",
+                    "estilo": "funny cartoon style, 2D animation, comic book aesthetic, cel shaded",
+                    "focal": "cartoon mexican street, tianguis scene, combi bus absurd situation"
+                }
+            }
+            estilo_canal = estilos.get("viuda")  # default
+            for key, val in estilos.items():
+                if key in marca.lower():
+                    estilo_canal = val
+                    break
+
+            paleta = estilo_canal["paleta"]
+            estilo_miniatura = estilo_canal["estilo"]
+            ejemplo_focal = estilo_canal["focal"]
 
             prompt_paquete = f"""
-Eres un experto en diseño de miniaturas de YouTube con historial comprobado de CTR superior al 12%.
+Eres un experto en diseño de miniaturas de YouTube con CTR superior al 12%.
 Canal: {marca}
 Nicho: {canal_info}
 Título del video: {titulo}
 Tema del video: {texto_locucion[:800]}
 
-REGLAS DE ORO PARA MINIATURAS DE ALTO CTR (basadas en análisis de 10M+ thumbnails virales):
-1. UN SOLO ELEMENTO FOCAL DOMINANTE — la miniatura debe tener UN objeto/lugar que ocupe 60-70% del frame
-2. CONTRASTE EXTREMO — el elemento focal debe destacar brutalmente del fondo
-3. PALETA RESTRINGIDA — máximo 3 colores, todos con propósito
-4. ESCALA EMOCIONAL — el elemento debe generar curiosidad, urgencia o miedo solo con verlo
-5. LEGIBILIDAD EN MÓVIL — debe impactar en pantalla de 3cm
-6. CERO PERSONAS — sin rostros, sin cuerpos, sin siluetas
-7. ESPECÍFICO AL TEMA — el elemento focal debe conectar directamente con la historia del video
-
-PALETA DEL CANAL: {paleta}
-ESTILO: {estilo_miniatura}
-EJEMPLOS DE ELEMENTOS FOCALES PARA ESTE CANAL: {ejemplo_focal}
-
 Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título SEO optimizado, máximo 70 caracteres, genera curiosidad extrema o urgencia, con número si aplica",
-  "descripcion": "Descripción 300+ palabras. Línea 1-2: gancho visible sin expandir. Párrafos 2-4: keywords naturales + valor. Párrafo 5: CTA. Timestamps si aplica. Links al final.",
-  "hashtags": "máximo 15 hashtags ultra relevantes al tema específico del video separados por espacio",
-  "keywords": "máximo 500 caracteres, palabras clave exactas que busca la audiencia de este tema específico, separadas por coma",
-  "primer_comentario": "Comentario que genera debate o revela algo que el video no dijo. Termina con pregunta que obligue a responder.",
-  "prompt_hook": "Un objeto o lugar específico del tema del video, ultra detallado, solo elemento en frame, {paleta.split(',')[0]}, dramatic single light source, no people, photorealistic, 8k",
-  "prompt_miniatura_A": "ELEMENTO FOCAL: [objeto o lugar MÁS IMPACTANTE del tema de ESTE video específico], isolated on {paleta.split(',')[0]}, single dramatic spotlight from above, extreme detail on texture, {estilo_miniatura}, photorealistic render, no humans, no text, wide lens distortion for drama, 1920x1080",
-  "prompt_miniatura_B": "COMPOSICIÓN ANGULAR: [mismo tema pero desde ángulo diferente — perspectiva extrema o picado/contrapicado], {paleta}, harsh rim lighting creating silhouette effect, visible material texture, {estilo_miniatura}, gritty photorealistic, no people, 1920x1080",
-  "prompt_miniatura_C": "DETALLE MACRO: extreme close-up of [detalle específico del elemento clave del tema — superficie, textura, mecanismo], {paleta.split(',')[0]} color grade, ultra sharp focus with bokeh background, cinematic grain, {estilo_miniatura}, no humans, macro photography aesthetic, 1920x1080"
+  "titulo_final": "Título SEO optimizado, máximo 70 caracteres",
+  "descripcion": "Descripción 300+ palabras.",
+  "hashtags": "máximo 15 hashtags separados por espacio",
+  "keywords": "máximo 500 caracteres separadas por coma",
+  "primer_comentario": "Comentario que genera debate. Termina con pregunta.",
+  "prompt_hook": "Un objeto o lugar específico del tema, ultra detallado, {paleta.split(',')[0]}, no people, en inglés",
+  "prompt_miniatura_A": "ELEMENTO FOCAL: [{ejemplo_focal}], isolated on {paleta.split(',')[0]}, single dramatic spotlight, {estilo_miniatura}, photorealistic render, no humans, no text, 1920x1080",
+  "prompt_miniatura_B": "COMPOSICIÓN ANGULAR: mismo tema desde ángulo diferente, {paleta}, harsh rim lighting, {estilo_miniatura}, no people, 1920x1080",
+  "prompt_miniatura_C": "DETALLE MACRO: extreme close-up de detalle específico del tema, {paleta.split(',')[0]}, ultra sharp focus, {estilo_miniatura}, no humans, 1920x1080"
 }}
 """
 
@@ -403,7 +558,6 @@ Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
             "Generas paquetes de publicación de alta calidad optimizados para CTR extremo y retención máxima. "
             "SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON."
         )
-
         resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
         return resultado
 
@@ -415,29 +569,21 @@ Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
         if not llaves:
             return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda."
 
-        marca_lower = marca.lower()
-        if "viuda" in marca_lower:
-            system_instruction = self.adn_la_viuda
-        elif "monkygraff" in marca_lower:
-            system_instruction = self.adn_monkygraff
-        else:
-            system_instruction = self.adn_la_viuda
-
+        system_instruction = self._seleccionar_adn(marca)
         es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
 
         if not es_largo:
             instruccion_ritmo = (
                 f"\n\n[DIRECTRIZ DE RITMO]: Formato SHORT (9:16). "
-                f"Genera entre 12 y 15 escenas para un video de 60 segundos. "
+                f"REGLA ABSOLUTA E INQUEBRANTABLE: Cada texto_locucion debe tener EXACTAMENTE entre 7 y 9 palabras — NUNCA MENOS, NUNCA MAS. Genera tantas escenas como sea necesario para cubrir el guion completo. Un guion de 200 palabras DEBE generar aproximadamente 25 escenas. Un guion de 100 palabras DEBE generar aproximadamente 13 escenas. Frases cortas e impactantes, NO parrafos largos. "
                 f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos del español (á, é, í, ó, ú, ñ). "
-                f"PROHIBIDO escribir sin acentos. Ejemplos obligatorios: después, también, así, más, qué, cómo, están, pasó, Rusia, Dinamarca, rutas, región, Pekín."
+                f"PROHIBIDO escribir sin acentos."
             )
-            prompt = f"CONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}{instruccion_ritmo}"
+            prompt = f"{instruccion_ritmo}\n\nCONTEXTO: {contexto}\nLONGITUD: {longitud}\nPETICIÓN: {peticion}\n\n[RECORDATORIO FINAL]: La regla de 7-9 palabras por escena es OBLIGATORIA. Si generas menos de 13 escenas para un guion completo, estás violando la regla."
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
-            
+
             if resultado:
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
-            
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
@@ -458,13 +604,13 @@ Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
                     f"Genera SOLO el bloque de {descripcion}. "
                     f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
                     f"Formato 16:9 video largo de 30 MINUTOS. "
-                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español — es narración continua y densa, no frases cortas. "
-                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). PROHIBIDO escribir sin acentos. "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español. "
+                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
-                
+
                 resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
