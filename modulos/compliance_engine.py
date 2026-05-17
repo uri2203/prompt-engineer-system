@@ -277,27 +277,41 @@ class ComplianceEngine:
             )
 
         # ── NIVEL 3: Restricciones específicas de marca ─────────────────
+        # FIX: Detecta solo cuando las palabras de la restricción aparecen JUNTAS
+        # (en una ventana de 80 caracteres). Antes contaba palabras sueltas en todo
+        # el guion y bloqueaba narrativas legítimas que usaban "detalle", "describir",
+        # etc. en contextos completamente normales.
         if marca in self.leyes.get("marcas", {}):
             config_marca = self.leyes["marcas"][marca]
             restricciones = config_marca.get("restricciones_output", [])
             umbral = config_marca.get("umbral_bloqueo", 2)
+            VENTANA_PROXIMIDAD = 80  # caracteres
 
             for restriccion in restricciones:
-                # Extraer palabras clave significativas (>5 chars para evitar stop words)
-                palabras_clave = [p for p in restriccion.split() if len(p) > 5]
-                if not palabras_clave:
+                palabras_clave = [p.lower() for p in restriccion.split() if len(p) > 5]
+                if len(palabras_clave) < 2:
                     continue
 
-                coincidencias = sum(
-                    len(re.findall(r'\b' + re.escape(p.lower()) + r'\b', texto_limpio))
-                    for p in palabras_clave
-                )
+                # Contar SOLO las co-ocurrencias en ventana de proximidad
+                co_ocurrencias = 0
+                for match in re.finditer(r'\b' + re.escape(palabras_clave[0]) + r'\b', texto_limpio):
+                    ini = max(0, match.start() - VENTANA_PROXIMIDAD)
+                    fin = min(len(texto_limpio), match.end() + VENTANA_PROXIMIDAD)
+                    ventana = texto_limpio[ini:fin]
+                    # Cuantas otras palabras clave aparecen en esta ventana?
+                    otras_presentes = sum(
+                        1 for p in palabras_clave[1:]
+                        if re.search(r'\b' + re.escape(p) + r'\b', ventana)
+                    )
+                    # Solo cuenta si MAYORIA de palabras clave estan juntas
+                    if otras_presentes >= max(1, len(palabras_clave) // 2):
+                        co_ocurrencias += 1
 
-                if coincidencias >= umbral:
+                if co_ocurrencias >= umbral:
                     estrategia = config_marca.get("estrategia_evasion", "Aplicar eufemismos neutros.")
                     return False, (
-                        f"BLOQUEO NIVEL 3 (marca '{marca}'): '{restriccion}' detectado "
-                        f"({coincidencias} coincidencias, umbral={umbral}). "
+                        f"BLOQUEO NIVEL 3 (marca '{marca}'): '{restriccion}' detectado en proximidad "
+                        f"({co_ocurrencias} co-ocurrencias, umbral={umbral}). "
                         f"ESTRATEGIA: {estrategia}"
                     )
 
