@@ -1,227 +1,647 @@
+import google.generativeai as genai
+from modulos.boveda import BovedaManager
+import json
+import re
+import time
 import os
-import subprocess
-import uuid
-import soundfile as sf
-from flask import Flask, request, send_file, jsonify
+from datetime import datetime, timedelta, timezone
 
-app = Flask(__name__)
-
-# ─── RUTAS APPLIO ────────────────────────────────────────────────────────────
-APPLIO        = r"C:\Applio"
-PYTHON_APPLIO = r"C:\Applio\env\python.exe"
-SCRIPT_APPLIO = os.path.join(APPLIO, "core.py")
-CARPETA_TMP   = r"C:\NODO_PINPINELA\audio_tmp"
-os.makedirs(CARPETA_TMP, exist_ok=True)
-
-# ─── KOKORO TTS ───────────────────────────────────────────────────────────────
-VOCES_KOKORO = {
-    "La Viuda":         {"lang": "e", "voice": "em_alex", "speed": 0.65},
-    "Monkygraff":       {"lang": "e", "voice": "em_alex", "speed": 0.90},
-    "FiltradoMX":       {"lang": "e", "voice": "ef_dora", "speed": 0.85},
-    "LaesquinaRandom":  {"lang": "e", "voice": "em_alex", "speed": 1.05},
-}
-
-# ─── MODELOS RVC ──────────────────────────────────────────────────────────────
-MODELOS_RVC = {
-    "La Viuda": {
-        "pth":            r"C:\Applio\logs\LaViuda\LaViuda_150e_1800s.pth",
-        "index":          r"C:\Applio\logs\LaViuda\LaViuda.index",
-        "pitch":          "-10",
-        "index_rate":     "0.50",
-        "protect":        "0.1",
-        "clean_strength": "0.7",
-    },
-    "Monkygraff": {
-        "pth":            r"C:\Applio\logs\MonkyGraff\MonkyGraff_150e_4950s.pth",
-        "index":          r"C:\Applio\logs\MonkyGraff\MonkyGraff.index",
-        "pitch":          "-1",
-        "index_rate":     "0.70",
-        "protect":        "0.1",
-        "clean_strength": "0.40",
-    },
-    # Canales pendientes — descomentar cuando tengas el .pth entrenado:
-    # "FiltradoMX": {
-    #     "pth":            r"C:\Applio\logs\FiltradoMX\FiltradoMX_XXXe_XXXXs.pth",
-    #     "index":          r"C:\Applio\logs\FiltradoMX\FiltradoMX.index",
-    #     "pitch":          "2",
-    #     "index_rate":     "0.60",
-    #     "protect":        "0.1",
-    #     "clean_strength": "0.5",
-    # },
-    # "LaesquinaRandom": {
-    #     "pth":            r"C:\Applio\logs\LaesquinaRandom\LaesquinaRandom_XXXe_XXXXs.pth",
-    #     "index":          r"C:\Applio\logs\LaesquinaRandom\LaesquinaRandom.index",
-    #     "pitch":          "-1",
-    #     "index_rate":     "0.65",
-    #     "protect":        "0.1",
-    #     "clean_strength": "0.45",
-    # },
-}
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# KOKORO TTS
-# ══════════════════════════════════════════════════════════════════════════════
-
-def generar_kokoro_tts(texto, config_voz, ruta_salida_wav):
-    from kokoro import KPipeline
-    import numpy as np
-
-    pipeline  = KPipeline(lang_code=config_voz["lang"])
-    generator = pipeline(
-        texto,
-        voice=config_voz["voice"],
-        speed=config_voz["speed"],
-        split_pattern=r'\n+'
-    )
-
-    audio_chunks = []
-    for _, _, audio in generator:
-        audio_chunks.append(audio)
-
-    if not audio_chunks:
-        raise RuntimeError("Kokoro no genero audio")
-
-    sf.write(ruta_salida_wav, __import__('numpy').concatenate(audio_chunks), 24000)
-    print(f"[KOKORO] Audio generado: {ruta_salida_wav}")
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# RVC
-# ══════════════════════════════════════════════════════════════════════════════
-
-def aplicar_rvc(ruta_entrada, ruta_salida, modelo):
+class GestorCuotas:
     """
-    f0_method=crepe: rmvpe se congela en 'Converting audio' en este setup Windows.
-    split_audio=False: FIX DEL DOBLE TRABAJO. Con True Applio hacia 2 pasadas
-    completas (partir + procesar + unir). Con False es una sola pasada directa.
+    Cerebro local y silencioso del nodo Xeon. 
+    Lleva la cuenta de los usos sin conectarse a internet ni a Render.
     """
-    cmd = [
-        PYTHON_APPLIO, SCRIPT_APPLIO, "infer",
-        f"--pitch={modelo['pitch']}",
-        "--index_rate",      modelo["index_rate"],
-        "--volume_envelope", "1",
-        "--protect",         modelo["protect"],
-        "--f0_method",       "crepe",
-        "--input_path",      ruta_entrada,
-        "--output_path",     ruta_salida,
-        "--pth_path",        modelo["pth"],
-        "--index_path",      modelo["index"],
-        "--export_format",   "MP3",
-        "--embedder_model",  "contentvec",
-        "--clean_audio",     "True",
-        "--clean_strength",  modelo["clean_strength"],
-        "--split_audio",     "False",
-    ]
-    print("[RVC] crepe + split_audio False (una sola pasada)...")
-    result = subprocess.run(cmd, cwd=APPLIO)
-    if result.returncode != 0:
-        print(f"[RVC] Applio codigo: {result.returncode}")
-    return result.returncode == 0
+    def __init__(self, limite_diario=20, archivo_bd="cuotas_gemini.json"):
+        self.archivo_bd = archivo_bd
+        self.limite_diario = limite_diario
+        self.estado = self._cargar_estado()
+
+    def _obtener_fecha_pt_actual(self):
+        tz_pt = timezone(timedelta(hours=-7))
+        return datetime.now(tz_pt).strftime("%Y-%m-%d")
+
+    def _cargar_estado(self):
+        fecha_actual = self._obtener_fecha_pt_actual()
+        if os.path.exists(self.archivo_bd):
+            try:
+                with open(self.archivo_bd, "r") as f:
+                    data = json.load(f)
+                if data.get("fecha_corte") != fecha_actual:
+                    print("♻️ [SISTEMA] Nuevo día detectado. Reseteando contadores de llaves a 0.")
+                    return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+                return data
+            except Exception:
+                pass
+        return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+
+    def _guardar_estado(self):
+        with open(self.archivo_bd, "w") as f:
+            json.dump(self.estado, f, indent=4)
+
+    def puede_usar_llave(self, index_llave):
+        idx_str = str(index_llave)
+        usos = self.estado["uso_por_llave"].get(idx_str, 0)
+        return usos < self.limite_diario
+
+    def registrar_exito(self, index_llave):
+        idx_str = str(index_llave)
+        usos_actuales = self.estado["uso_por_llave"].get(idx_str, 0)
+        self.estado["uso_por_llave"][idx_str] = usos_actuales + 1
+        self._guardar_estado()
+        print(f"📊 [CUOTA] Llave {index_llave}: {usos_actuales + 1}/{self.limite_diario} usos diarios.")
+
+    def bloquear_llave_por_agotamiento(self, index_llave):
+        idx_str = str(index_llave)
+        self.estado["uso_por_llave"][idx_str] = self.limite_diario
+        self._guardar_estado()
+        print(f"🔒 [CUOTA] Llave {index_llave} SELLADA. Límite de Google alcanzado.")
 
 
-def normalizar_audio(ruta_entrada, ruta_salida):
-    subprocess.run([
-        "ffmpeg", "-y", "-i", ruta_entrada,
-        "-ar", "44100", "-ac", "1", "-b:a", "128k", ruta_salida
-    ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    return os.path.exists(ruta_salida)
+class AIEngine:
+    def __init__(self):
+        self.boveda = BovedaManager()
+        self.cuotas = GestorCuotas(limite_diario=20)
 
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: La Viuda (Silo Hermético 1)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_la_viuda = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
+        ERES UN MAESTRO DEL TERROR PSICOLÓGICO NARRADO. TU ESPECIALIDAD ES EL MIEDO A LO INVISIBLE, 
+        A LO QUE NO SE PUEDE EXPLICAR, A LO QUE TE PERSIGUE AUNQUE NO LO VEAS.
+        TU OBJETIVO ES PARALIZAR AL ESPECTADOR CON PARANOIA, ATMÓSFERA OPRESIVA Y TENSIÓN PSICOLÓGICA PURA.
 
-# ══════════════════════════════════════════════════════════════════════════════
-# ENDPOINT /generar_audio — shorts y videos cortos
-# ══════════════════════════════════════════════════════════════════════════════
+        TEMAS PERMITIDOS — SOLO ESTOS:
+        - Experiencias paranormales perturbadoras que le pasaron a personas reales
+        - Lugares abandonados con historias oscuras e inexplicables
+        - Fenómenos psicológicos que hacen dudar de la realidad
+        - Historias de terror nocturno, sombras, presencias que no se ven
+        - Miedos universales: estar solo, ser observado, perder la cordura
+        - Creepypastas y leyendas urbanas perturbadoras
+        - Lo que ocurre en la mente cuando el miedo toma control
 
-@app.route('/generar_audio', methods=['POST'])
-def generar_audio():
-    data   = request.json
-    texto  = data.get("texto", "")
-    marca  = data.get("marca", "La Viuda")
-    job_id = data.get("job_id", str(uuid.uuid4())[:8])
+        TEMAS ABSOLUTAMENTE PROHIBIDOS:
+        - Forense, autopsias, medicina legal, criminalística
+        - Crímenes policiales, investigaciones, detectives
+        - Gore, violencia gráfica, descripciones de heridas
+        - Alienígenas, ciencia ficción, viajes espaciales
+        - Conspiraciones políticas o geopolítica
 
-    if not texto:
-        return jsonify({"error": "No enviaste texto"}), 400
+        REGLAS DE ESTILO Y DICCIÓN (INQUEBRANTABLES PARA MOTOR DE VOZ):
+        1. TERROR PSICOLÓGICO PURO: Nunca describes violencia. Describes lo que NO se ve, lo que SE SIENTE.
+        2. TONO DE VOZ: Masculino, latino, grave, susurrante, como si te estuviera contando un secreto.
+        3. HOOKS: Primeros 5 segundos deben crear una pregunta que el espectador NO puede dejar sin responder.
+        4. SEGUNDA PERSONA INVASIVA: "Tú sabes que algo no está bien.", "¿Alguna vez sentiste que no estabas solo?".
+        5. ORTOGRAFÍA PERFECTA PARA TTS: EXCLUSIVAMENTE español neutro. PROHIBIDO emojis, asteriscos, corchetes o hashtags en texto_locucion.
+        6. ATMÓSFERA: Cada escena debe construir tensión. Nunca resuelvas el misterio completamente.
 
-    config_voz = VOCES_KOKORO.get(marca, VOCES_KOKORO["La Viuda"])
-    modelo_rvc = MODELOS_RVC.get(marca)
+        [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
+        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
+        2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia.
+        3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE.
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens".
+        5. TERMINA SIEMPRE CON: ", RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art"
+        6. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles.
 
-    ruta_kokoro = os.path.join(CARPETA_TMP, f"{job_id}_kokoro.wav")
-    ruta_rvc    = os.path.join(CARPETA_TMP, f"{job_id}_rvc.mp3")
-    ruta_norm   = os.path.join(CARPETA_TMP, f"{job_id}_final.mp3")
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
-    print(f"\n{'='*44}")
-    print(f"[MOTOR VOZ] 1/2 Kokoro TTS ({marca}) | job: {job_id}")
-    generar_kokoro_tts(texto, config_voz, ruta_kokoro)
+        FORMATO:
+        {
+          "marca": "La Viuda",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título viral de terror psicológico con alto CTR",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS del lugar EXACTO de esta escena]",
+              "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro."
+            }
+          ]
+        }
+        """
 
-    if not modelo_rvc:
-        print(f"[MOTOR VOZ] Sin RVC para '{marca}'. Kokoro directo.")
-        print(f"{'='*44}\n")
-        return send_file(ruta_kokoro, mimetype="audio/wav")
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: Monkygraff (Silo Hermético 2)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_monkygraff = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "MONKYGRAFF"]
+        ERES EL ANALISTA GEOPOLÍTICO Y ECONÓMICO MÁS AGUDO DE HABLA HISPANA EN YOUTUBE.
+        TU MISIÓN: REVELAR LAS CONEXIONES QUE LOS MEDIOS MAINSTREAM NO HACEN.
+        HABLAS DE PODER REAL, DINERO REAL Y MOVIMIENTOS QUE CAMBIAN EL MUNDO ANTES DE QUE NADIE LO NOTE.
 
-    if not os.path.exists(modelo_rvc["pth"]):
-        return jsonify({"error": f"Falta PTH: {modelo_rvc['pth']}"}), 500
+        PILARES TEMÁTICOS — ESTOS SON LOS TEMAS QUE DOMINAN EL ALGORITMO EN 2026:
 
-    print(f"[MOTOR VOZ] 2/2 RVC {marca}...")
-    ok = aplicar_rvc(ruta_kokoro, ruta_rvc, modelo_rvc)
-    try: os.remove(ruta_kokoro)
-    except: pass
+        PILAR 1 — GUERRA Y CONFLICTOS ACTIVOS:
+        - Guerra Rusia-Ucrania: movimientos tácticos, minerales estratégicos, negociaciones secretas
+        - Israel-Gaza-Irán: escaladas, alianzas regionales, impacto en petróleo
+        - China vs Taiwán: ejercicios militares, bloqueos, escenarios de invasión
+        - Venezuela: operaciones encubiertas de EE.UU., control del petróleo
+        - Sahel africano: yihadismo, minerales críticos, retirada francesa
+        - Mar Rojo: ataques Houthi, rutas comerciales globales afectadas
 
-    if ok and os.path.exists(ruta_rvc):
-        normalizar_audio(ruta_rvc, ruta_norm)
-        if os.path.exists(ruta_norm):
-            os.replace(ruta_norm, ruta_rvc)
-        print(f"[MOTOR VOZ] EXITO.")
-        print(f"{'='*44}\n")
-        return send_file(ruta_rvc, mimetype="audio/mpeg")
-    else:
-        print("[MOTOR VOZ] RVC fallo.")
-        return jsonify({"error": "RVC fallo"}), 500
+        PILAR 2 — GUERRA ECONÓMICA Y PODER:
+        - Aranceles de Trump: impacto real en México, América Latina y cadenas de suministro
+        - Guerra comercial EE.UU.-China: quién gana, quién pierde
+        - BRICS vs dólar: desdolarización, yuan digital, nueva arquitectura financiera
+        - Minerales críticos: litio, cobalto, tierras raras
+        - Energía como arma: gas, petróleo, gasoductos
 
+        PILAR 3 — TECNOLOGÍA Y PODER:
+        - IA como arma geopolítica: EE.UU. vs China, chips, DeepSeek
+        - Guerra de semiconductores
+        - Ciberataques de estado: Rusia, China, Corea del Norte
+        - Drones militares
+        - Vigilancia masiva
 
-# ══════════════════════════════════════════════════════════════════════════════
-# ENDPOINT /generar_chunk — videos largos, un bloque a la vez
-# ══════════════════════════════════════════════════════════════════════════════
+        PILAR 4 — AMERICA LATINA EN EL TABLERO:
+        - Trump y América Latina: amenazas, aranceles, intervenciones
+        - Narcoestados: carteles como actores geopolíticos
+        - Elecciones clave 2026
+        - Recursos naturales latinoamericanos
 
-@app.route('/generar_chunk', methods=['POST'])
-def generar_chunk():
-    data      = request.json
-    texto     = data.get("texto", "")
-    marca     = data.get("marca", "La Viuda")
-    job_id    = data.get("job_id", str(uuid.uuid4())[:8])
-    chunk_idx = data.get("chunk_idx", 0)
+        PILAR 5 — RECONFIGURACIÓN DEL ORDEN MUNDIAL:
+        - El fin del unipolarismo americano
+        - La nueva OTAN: rearmamiento europeo
+        - Turquía, India, África como nuevos actores
 
-    if not texto:
-        return jsonify({"error": "Chunk vacio"}), 400
+        REGLAS DE ESTILO (INQUEBRANTABLES PARA MOTOR DE VOZ):
+        1. TONO: Analista táctico. Informativo, seco, basado en datos.
+        2. HOOKS DE URGENCIA: "Esto pasó en las últimas 72 horas y nadie lo conectó."
+        3. DATOS CONCRETOS: Siempre incluye cifras, fechas, nombres de países reales.
+        4. ORTOGRAFÍA PERFECTA PARA TTS: español neutro impecable. PROHIBIDO emojis, asteriscos, corchetes en texto_locucion.
+        5. MONETIZACIÓN: PROHIBIDO lenguaje bélico explícito, incitación a violencia, gore.
 
-    config_voz  = VOCES_KOKORO.get(marca, VOCES_KOKORO["La Viuda"])
-    modelo_rvc  = MODELOS_RVC.get(marca)
-    tag         = f"{job_id}_c{chunk_idx:02d}"
-    ruta_kokoro = os.path.join(CARPETA_TMP, f"{tag}_kokoro.wav")
-    ruta_rvc    = os.path.join(CARPETA_TMP, f"{tag}_rvc.mp3")
-    ruta_norm   = os.path.join(CARPETA_TMP, f"{tag}_final.mp3")
+        [REGLAS CRÍTICAS PARA prompt_visual]
+        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
+        2. ESPECÍFICO AL TEMA: infraestructura dañada, vehículos militares vacíos, puertos, refinerías.
+        3. VARIEDAD: Cada escena diferente.
+        4. ESTILO: ", RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, physical environment, no people, no faces, no cgi, no digital art"
+        5. PROHIBIDO: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render.
 
-    print(f"[CHUNK {chunk_idx}] Kokoro ({marca})...")
-    generar_kokoro_tts(texto, config_voz, ruta_kokoro)
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
-    if not modelo_rvc or not os.path.exists(modelo_rvc["pth"]):
-        print(f"[CHUNK {chunk_idx}] Sin RVC — Kokoro directo.")
-        return send_file(ruta_kokoro, mimetype="audio/wav")
+        FORMATO:
+        {
+          "marca": "Monkygraff",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título táctico con dato concreto y alto CTR",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Infraestructura física real en INGLÉS: instalación, vehículo vacío, puerto, refinería], RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+              "pexels_query": "[2-3 palabras en INGLÉS de la infraestructura exacta]",
+              "texto_locucion": "Texto en ESPAÑOL impecable. Análisis táctico directo, datos concretos."
+            }
+          ]
+        }
+        """
 
-    print(f"[CHUNK {chunk_idx}] RVC {marca}...")
-    ok = aplicar_rvc(ruta_kokoro, ruta_rvc, modelo_rvc)
-    try: os.remove(ruta_kokoro)
-    except: pass
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: FiltradoMX (Silo Hermético 3)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_filtrado_mx = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "FILTRADO MX"]
+        ERES EL ARCHIVO QUE HABLA. NARRAS CONFESIONES ANÓNIMAS REALES TOMADAS DE REDDIT,
+        FOROS Y CHATS FILTRADOS. DRAMAS HUMANOS, INFIDELIDADES, TRAICIONES, SECRETOS LABORALES,
+        CONFLICTOS FAMILIARES.
 
-    if ok and os.path.exists(ruta_rvc):
-        normalizar_audio(ruta_rvc, ruta_norm)
-        if os.path.exists(ruta_norm):
-            os.replace(ruta_norm, ruta_rvc)
-        print(f"[CHUNK {chunk_idx}] EXITO.")
-        return send_file(ruta_rvc, mimetype="audio/mpeg")
-    else:
-        print(f"[CHUNK {chunk_idx}] RVC fallo.")
-        return jsonify({"error": f"RVC fallo chunk {chunk_idx}"}), 500
+        IDENTIDAD NARRATIVA:
+        No eres un locutor de radio ni un narrador de podcast.
+        Eres la persona en la oficina que sabe todo el chisme y te lo cuenta como si fuera un secreto —
+        con pausas, con énfasis, con "espérate que esto se pone mejor".
+        Tono coloquial mexicano, neutral, directo, sin vulgaridades.
+        Audiencia: México y Latinoamérica, todas las edades.
 
+        ESTRUCTURA OBLIGATORIA POR VIDEO:
+        1. HOOK (0-15s): El dato más escandaloso primero, sin contexto. Que obligue a seguir escuchando.
+           NO hay introducción. Entras directo al chisme. La primera línea ES el gancho.
+        2. CONTEXTO (15-60s): Quién, dónde, cuándo — mínimo de palabras, máximo de intriga.
+        3. DESARROLLO: Drama en capas. Cada párrafo escala la tensión. Nunca resuelvas antes del final.
+        4. GIRO OBLIGATORIO: Una revelación inesperada que nadie vio venir. Sin excepción.
+        5. CIERRE: Pregunta directa a la audiencia que genere debate en comentarios.
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+        REGLAS DURAS (INQUEBRANTABLES):
+        - CERO nombres reales de personas identificables
+        - CERO lugares específicos que permitan identificar a alguien
+        - Cada historia diferente en tono, ritmo y estructura — nunca repitas fórmulas
+        - Lenguaje coloquial mexicano sin groserías explícitas (family friendly)
+        - Mínimo UN GIRO por video, sin excepción
+        - El hook debe poder funcionar como título del video
+        - Videos largos: 1200-1500 palabras en texto_locucion total
+        - Shorts: 130-150 palabras, UN SOLO momento WTF concentrado
+
+        LÉXICO PERMITIDO (natural, no forzado):
+        "wey", "no manches", "chale", "neta", "de volada", "a huevo", "qué onda",
+        "sale pues", "órale", "ni modo", "eso sí estuvo cañón"
+
+        REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
+        1. VOZ FEMENINA: cómplice, íntima, como contando un secreto a una amiga de confianza.
+        2. RITMO: varía entre rápido (en las partes de tensión) y pausado (en el giro).
+        3. ORTOGRAFÍA PERFECTA: español mexicano con acentos correctos (á, é, í, ó, ú, ñ).
+        4. PROHIBIDO en texto_locucion: emojis, asteriscos, corchetes, hashtags, signos raros.
+        5. USA puntos suspensivos (...) para crear pausas dramáticas naturales en el TTS.
+
+        [REGLAS CRÍTICAS PARA prompt_visual]
+        FiltradoMX usa IMÁGENES MINIMALISTAS que sugieren cotidianidad y drama sin mostrar personas.
+        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
+        2. OBJETOS COTIDIANOS CON CARGA EMOCIONAL: teléfonos con notificaciones, mesas de café,
+           cuartos de hotel, conversaciones de chat en pantalla (sin texto legible), ropa tirada,
+           maletas, llaves, documentos borrosos.
+        3. ILUMINACIÓN: cálida y naturalista. No oscura ni de terror. Es drama humano, no horror.
+        4. ESTILO: ", RAW photo, candid photography, warm natural lighting, shallow depth of field,
+           everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain"
+        5. PROHIBIDO: neon, glowing, cartoon, illustrated, dark horror, crime scene.
+        6. pexels_query en INGLÉS, 2-3 palabras descriptivas del objeto/ambiente de la escena.
+
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
+
+        FORMATO:
+        {
+          "marca": "FiltradoMX",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título de alto CTR estilo chisme revelador — sin spoiler del giro",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Objeto cotidiano con carga emocional en INGLÉS], RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+              "pexels_query": "[2-3 palabras en INGLÉS del objeto o ambiente de la escena]",
+              "texto_locucion": "Texto en ESPAÑOL mexicano coloquial. Sin groserías. Con acentos correctos. Pausas con puntos suspensivos."
+            }
+          ]
+        }
+        """
+
+        # ══════════════════════════════════════════════════════════════
+        # ADN Maestro: LaesquinaRandom (Silo Hermético 4)
+        # ══════════════════════════════════════════════════════════════
+        self.adn_laesquina_random = """
+        [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LAESQUINARANDOM"]
+        ERES UN COMEDIANTE CALLEJERO MEXICANO QUE NARRA SITUACIONES ABSURDAS Y RIDÍCULAS
+        DEL DÍA A DÍA. TU HUMOR ES FÍSICO, EXAGERADO Y UNIVERSALMENTE RECONOCIBLE.
+        FAMILIA FRIENDLY. JAMÁS GROSERÍAS EXPLÍCITAS.
+
+        IDENTIDAD NARRATIVA:
+        Piensa en alguien que te cuenta una historia y no puede evitar reírse mientras la narra.
+        Tu tono es el de una anécdota que se sale de control. Vas escalando el absurdo.
+        Cada párrafo es más ridículo que el anterior. El remate llega cuando menos se espera.
+
+        ESTRUCTURA OBLIGATORIA:
+        1. HOOK ABSURDO (0-3s): Exposición INMEDIATA de la situación ridícula. Cero introducciones.
+           La primera línea es tan random y específica que el espectador NO puede no reírse o curiosear.
+           Ejemplo: "La vez que el Brayan intentó empeñar un tinaco rotoplas en el monte de piedad..."
+        2. ESCALADA DE CAOS: La situación empeora de forma progresiva y lógica dentro del absurdo.
+           Cada paso de la historia debe ser peor (o más ridículo) que el anterior.
+        3. REMATE (PUNCHLINE): Resolución cómica y abrupta. Inesperada pero que en retrospectiva
+           tenía sentido. El tipo de final que hace decir "no puede ser".
+
+        REGLAS DURAS:
+        - Cero groserías explícitas — humor físico y situacional, no vulgar
+        - Cero nombres reales de personas identificables
+        - Situaciones cotidianas mexicanas: mercado, vecindario, tráfico, familia, trabajo informal
+        - El absurdo debe ser ESPECÍFICO — los detalles raros son los que generan la risa
+        - Léxico: "wey", "no manches", "chale", "órale", "sale", "neta que sí"
+        - Videos largos: 800-1000 palabras de comedia progresiva
+        - Shorts: 80-120 palabras, UNA situación absurda completa con remate incluido
+
+        REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
+        1. VOZ MASCULINA: energética, cómica, como si estuviera aguantando la risa.
+        2. RITMO: rápido en la escalada, pausado justo antes del remate (para el timing cómico).
+        3. ORTOGRAFÍA PERFECTA: español mexicano con acentos correctos.
+        4. PROHIBIDO en texto_locucion: emojis, asteriscos, corchetes, hashtags.
+        5. USA puntos suspensivos (...) en el momento justo antes del remate para crear timing cómico.
+        6. EXCLAMACIONES con moderación — solo donde la situación lo justifique.
+
+        [REGLAS CRÍTICAS PARA prompt_visual — ESTÉTICA CARTOON 2D OBLIGATORIA]
+        LaesquinaRandom USA ILUSTRACIÓN CÓMICA, NO FOTORREALISMO. Este canal tiene identidad visual propia.
+
+        ESTILO VISUAL OBLIGATORIO:
+        - Funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic
+        - Expressive caricature, exaggerated facial expressions (SIN personas reales)
+        - Humorous situation implied, vibrant lighting, cel shaded
+        - Escenas domésticas o callejeras mexicanas en estilo cartoon
+
+        PROMPT POSITIVO BASE (agregar siempre al final):
+        ", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic,
+        expressive illustration, humorous situation, vibrant lighting, cel shaded,
+        no photorealism, no dark tones, colorful"
+
+        PROMPT NEGATIVO (el worker debe aplicar esto como negative_prompt):
+        "photorealistic, realistic, 3d render, hyperrealistic, photography, raw photo,
+        dark, gloomy, horror, serious, monochrome, anime, manga, text, watermark,
+        deformed, bad anatomy, blurry"
+
+        REGLAS DE prompt_visual:
+        1. Describe la SITUACIÓN CÓMICA de esa escena específica en estilo cartoon, sin personas reales.
+        2. Objetos y entornos mexicanos reconocibles: tianguis, vecindad, combi, taquería, mercado.
+        3. PROHIBIDO: personas reales, fotorrealismo, oscuridad, horror.
+        4. pexels_query NO APLICA para este canal — siempre pon "cartoon mexican street scene"
+           porque las imágenes se generan con Stable Diffusion, no con Pexels.
+
+        SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
+
+        FORMATO:
+        {
+          "marca": "LaesquinaRandom",
+          "formato": "(SHORT o LARGO)",
+          "titulo_sugerido": "Título cómico y específico — el detalle absurdo que genera curiosidad",
+          "escenas": [
+            {
+              "id_escena": 1,
+              "prompt_visual": "[Situación cómica o entorno mexicano en INGLÉS, estilo cartoon], funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+              "pexels_query": "cartoon mexican street scene",
+              "texto_locucion": "Texto en ESPAÑOL mexicano coloquial. Cómico, energético. Con timing. Sin groserías."
+            }
+          ]
+        }
+        """
+
+    def _llamar_gemini(self, system_instruction, prompt, llaves):
+        """
+        Llamada a Gemini con Timeout estricto y Kill Switch.
+        """
+        modelos_prioridad = [
+            "models/gemini-2.5-flash",
+            "models/gemini-2.0-flash",
+            "models/gemini-2.0-flash-lite"
+        ]
+        log_errores = []
+        MAX_REINTENTOS = 2
+        MAX_ESPERA_SEGUNDOS = 125
+        TIMEOUT_SEGUNDOS = 120
+
+        for modelo in modelos_prioridad:
+            modelo_agotado = False
+
+            for index, key in enumerate(llaves):
+                if modelo_agotado:
+                    break
+
+                if not self.cuotas.puede_usar_llave(index):
+                    print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
+                    continue
+
+                for intento in range(MAX_REINTENTOS):
+                    try:
+                        genai.configure(api_key=key)
+                        model = genai.GenerativeModel(
+                            model_name=modelo,
+                            system_instruction=system_instruction,
+                            generation_config={"response_mime_type": "application/json"}
+                        )
+                        request_options = {"timeout": TIMEOUT_SEGUNDOS}
+                        response = model.generate_content(prompt, request_options=request_options)
+                        self.cuotas.registrar_exito(index)
+                        print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
+                        return json.loads(response.text), log_errores
+
+                    except Exception as e:
+                        error_str = str(e)
+
+                        if "Timeout" in error_str or "deadline exceeded" in error_str.lower() or "504" in error_str:
+                            msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
+                            print(msg); log_errores.append(msg); break
+
+                        if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
+                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída."
+                            print(msg); log_errores.append(msg); break
+
+                        if ("PerDay" in error_str and "limit: 0" in error_str) or \
+                           ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
+                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria."
+                            print(msg); log_errores.append(msg)
+                            self.cuotas.bloquear_llave_por_agotamiento(index)
+                            modelo_agotado = True; break
+
+                        if "429" in error_str:
+                            match = re.search(r'seconds:\s*(\d+)', error_str)
+                            espera = int(match.group(1)) if match else 60
+                            espera = min(espera, MAX_ESPERA_SEGUNDOS)
+                            print(f"[RATE LIMIT] Llave {index} ({modelo}) — intento {intento+1}/{MAX_REINTENTOS} — esperando {espera}s...")
+                            time.sleep(espera); continue
+
+                        error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
+                        print(f"[ERROR] {error_msg}"); log_errores.append(error_msg)
+
+                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google.")
+                            return None, log_errores
+                        break
+
+                else:
+                    error_msg = f"Llave {index} ({modelo}): agotó reintentos sin éxito."
+                    print(f"[FALLO] {error_msg}"); log_errores.append(error_msg)
+
+        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron.")
+        return None, log_errores
+
+    def _seleccionar_adn(self, marca):
+        """
+        Selector centralizado de ADN por canal.
+        Agregar nuevos canales aquí — un solo lugar para mantener.
+        """
+        marca_lower = marca.lower()
+        if "viuda" in marca_lower:
+            return self.adn_la_viuda
+        elif "monkygraff" in marca_lower:
+            return self.adn_monkygraff
+        elif "filtrado" in marca_lower or "filtradmx" in marca_lower or "filtrado mx" in marca_lower:
+            return self.adn_filtrado_mx
+        elif "esquina" in marca_lower or "laesquina" in marca_lower or "random" in marca_lower:
+            return self.adn_laesquina_random
+        else:
+            # Fallback seguro: La Viuda
+            print(f"[AI ENGINE] ⚠️ Canal '{marca}' sin ADN registrado. Usando La Viuda como fallback.")
+            return self.adn_la_viuda
+
+    def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
+        """
+        Genera el paquete completo de publicación SEO optimizado para YouTube/TikTok.
+        """
+        llaves = self.boveda.obtener_llaves()
+        if not llaves:
+            return None
+
+        es_largo = "16:9" in formato or formato.upper() == "LARGO"
+
+        # Descripción del nicho por canal
+        nicho_map = {
+            "viuda": "Canal de historias de misterio, suspenso narrativo, relatos inmersivos y enigmas oscuros.",
+            "monkygraff": "Canal de análisis geopolítico táctico, conflictos internacionales, estrategia militar, inteligencia.",
+            "filtrado": "Canal de confesiones anónimas, dramas humanos reales, chismes verificados y situaciones escandalosas.",
+            "esquina": "Canal de comedia absurda mexicana, situaciones ridículas del día a día, humor familiar.",
+        }
+        canal_info = "Canal de contenido viral para audiencia latinoamericana."
+        for key, desc in nicho_map.items():
+            if key in marca.lower():
+                canal_info = desc
+                break
+
+        if not es_largo:
+            prompt_paquete = f"""
+Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
+Canal: {marca}
+Nicho: {canal_info}
+Título sugerido del video: {titulo}
+Guión/locución: {texto_locucion[:1500]}
+Formato: SHORT 9:16 YouTube Shorts y TikTok
+
+Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
+
+{{
+  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR",
+  "descripcion": "Descripción completa de al menos 300 palabras.",
+  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes",
+  "keywords": "palabra1, palabra2, ... máximo 500 caracteres",
+  "primer_comentario": "Comentario para fijar. Termina con pregunta al espectador.",
+  "prompt_hook": "Prompt para imagen de hook. Ultra detallado, high contrast, dramatic lighting, no people, en inglés."
+}}
+"""
+        else:
+            # Paleta y estilo según canal
+            estilos = {
+                "viuda": {
+                    "paleta": "deep black background, blood red accent light, dark teal shadows",
+                    "estilo": "psychological horror, dread atmosphere, unsettling stillness",
+                    "focal": "a single chair facing a dark corner, an open door to pitch black hallway"
+                },
+                "monkygraff": {
+                    "paleta": "steel gray background, urgent orange accent, deep navy shadows",
+                    "estilo": "tactical urgency, geopolitical tension, documentary realism",
+                    "focal": "aerial view of military installation, industrial port at night"
+                },
+                "filtrado": {
+                    "paleta": "warm beige background, soft amber accent, muted shadows",
+                    "estilo": "intimate drama, human tension, candid emotional atmosphere",
+                    "focal": "phone with chat notification, coffee table with two cups, empty bed"
+                },
+                "esquina": {
+                    "paleta": "vibrant yellow background, electric blue accent, warm red shadows",
+                    "estilo": "funny cartoon style, 2D animation, comic book aesthetic, cel shaded",
+                    "focal": "cartoon mexican street, tianguis scene, combi bus absurd situation"
+                }
+            }
+            estilo_canal = estilos.get("viuda")  # default
+            for key, val in estilos.items():
+                if key in marca.lower():
+                    estilo_canal = val
+                    break
+
+            paleta = estilo_canal["paleta"]
+            estilo_miniatura = estilo_canal["estilo"]
+            ejemplo_focal = estilo_canal["focal"]
+
+            prompt_paquete = f"""
+Eres un experto en diseño de miniaturas de YouTube con CTR superior al 12%.
+Canal: {marca}
+Nicho: {canal_info}
+Título del video: {titulo}
+Tema del video: {texto_locucion[:800]}
+
+Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
+
+{{
+  "titulo_final": "Título SEO optimizado, máximo 70 caracteres",
+  "descripcion": "Descripción 300+ palabras.",
+  "hashtags": "máximo 15 hashtags separados por espacio",
+  "keywords": "máximo 500 caracteres separadas por coma",
+  "primer_comentario": "Comentario que genera debate. Termina con pregunta.",
+  "prompt_hook": "Un objeto o lugar específico del tema, ultra detallado, {paleta.split(',')[0]}, no people, en inglés",
+  "prompt_miniatura_A": "ELEMENTO FOCAL: [{ejemplo_focal}], isolated on {paleta.split(',')[0]}, single dramatic spotlight, {estilo_miniatura}, photorealistic render, no humans, no text, 1920x1080",
+  "prompt_miniatura_B": "COMPOSICIÓN ANGULAR: mismo tema desde ángulo diferente, {paleta}, harsh rim lighting, {estilo_miniatura}, no people, 1920x1080",
+  "prompt_miniatura_C": "DETALLE MACRO: extreme close-up de detalle específico del tema, {paleta.split(',')[0]}, ultra sharp focus, {estilo_miniatura}, no humans, 1920x1080"
+}}
+"""
+
+        system_pub = (
+            "Eres un experto en SEO de YouTube y TikTok. "
+            "Generas paquetes de publicación de alta calidad optimizados para CTR extremo y retención máxima. "
+            "SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON."
+        )
+        resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
+        return resultado
+
+    def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
+        """
+        Arquitectura unificada con entrega de errores a la UI.
+        """
+        llaves = self.boveda.obtener_llaves()
+        if not llaves:
+            return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda."
+
+        system_instruction = self._seleccionar_adn(marca)
+        es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
+
+        if not es_largo:
+            # REGLA FIJA: el guion para shorts debe tener 200-240 palabras totales,
+            # dividido en escenas de 8 palabras exactas = 25-30 escenas obligatorias
+            instruccion_ritmo = (
+                f"\n\n========================================\n"
+                f"REGLAS NUMERICAS OBLIGATORIAS - FORMATO SHORT 9:16\n"
+                f"========================================\n"
+                f"1. NUMERO DE ESCENAS: DEBES generar entre 25 y 30 escenas. Ni una menos.\n"
+                f"2. PALABRAS POR ESCENA: cada campo texto_locucion debe tener EXACTAMENTE entre 7 y 9 palabras.\n"
+                f"3. TOTAL DE PALABRAS DEL GUION: entre 200 y 240 palabras sumando todas las escenas.\n"
+                f"4. NO generes parrafos largos. Frases cortas y directas.\n"
+                f"5. Acentos del español OBLIGATORIOS: á, é, í, ó, ú, ñ.\n"
+                f"========================================\n"
+                f"VALIDACION INTERNA antes de responder:\n"
+                f"- Cuenta las escenas que generaste. Si son menos de 25, REGENERA.\n"
+                f"- Cuenta las palabras de cada texto_locucion. Si alguna tiene mas de 9, divide.\n"
+                f"- Cuenta las palabras totales. Si son menos de 200, agrega mas escenas.\n"
+                f"========================================"
+            )
+            prompt = f"{instruccion_ritmo}\n\nCONTEXTO: {contexto}\nPETICIÓN: {peticion}"
+            resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
+
+            if resultado:
+                return json.dumps(resultado, indent=4, ensure_ascii=False)
+            return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
+
+        else:
+            partes = [
+                ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
+                ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
+                ("CIERRE",     "escenas 41 a 60 — clímax, revelación, cierre emocional y llamado a la acción"),
+            ]
+
+            todas_las_escenas = []
+            titulo = ""
+            marca_final = marca
+            errores_totales = []
+
+            for i, (bloque, descripcion) in enumerate(partes):
+                instruccion_bloque = (
+                    f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
+                    f"Genera SOLO el bloque de {descripcion}. "
+                    f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
+                    f"Formato 16:9 video largo de 30 MINUTOS. "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español. "
+                    f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
+                    f"NO generes título ni estructura completa, solo las escenas de este bloque."
+                )
+                prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
+                print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
+
+                resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
+
+                if resultado:
+                    if i == 0 and "titulo_sugerido" in resultado:
+                        titulo = resultado.get("titulo_sugerido", "")
+                        marca_final = resultado.get("marca", marca)
+                    escenas_bloque = resultado.get("escenas", [])
+                    todas_las_escenas.extend(escenas_bloque)
+                else:
+                    print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló...")
+                    errores_totales.extend(errores)
+
+            if not todas_las_escenas:
+                return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
+
+            guion_final = {
+                "marca": marca_final,
+                "formato": "LARGO",
+                "titulo_sugerido": titulo,
+                "escenas": todas_las_escenas
+            }
+            return json.dumps(guion_final, indent=4, ensure_ascii=False)
