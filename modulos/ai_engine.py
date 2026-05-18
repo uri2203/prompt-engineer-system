@@ -96,16 +96,12 @@ class AIEngine:
         6. ATMÓSFERA: Cada escena debe construir tensión. Nunca resuelvas el misterio completamente.
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
-        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta. NUNCA. Aunque sea de espaldas o en sombra: PROHIBIDO.
-        2. CERO SANGRE Y CERO GORE: ninguna mancha roja, líquido oscuro, herida, vendaje. Atmósfera psicológica, no física.
-        3. CERO TEXTO EN PAREDES O SUPERFICIES: prohibido garabatos, letras, palabras pintadas, símbolos legibles.
-        4. ESPECÍFICO A LA HISTORIA — REGLA INQUEBRANTABLE: El prompt_visual SE CONSTRUYE A PARTIR DEL TEXTO DE LA ESCENA. Lee el texto_locucion de ESTA escena específica, identifica el LUGAR, OBJETO, MOMENTO o ELEMENTO concreto que describe, y eso es lo que va en el prompt. Si el texto habla de una carretera, prompt de carretera. Si habla de un bosque, prompt de bosque. Si habla de un tren, prompt de tren. Si habla de una iglesia, prompt de iglesia. Si habla de una mina, prompt de mina. NO TIENES UNA LISTA DE LUGARES PREFERIDOS — el universo de lugares es infinito y debe responder al texto. PROHIBIDO ABSOLUTAMENTE repetir el mismo tipo de lugar entre escenas (no todo casa, no todo cuarto, no todo pasillo). Cada prompt es ÚNICO y refleja lo que ocurre en ESA escena.
-        5. EL UNIVERSO DE LUGARES POSIBLES ES INFINITO: el lugar se decide por el texto de cada escena. Algunos ejemplos del rango — pero NO una lista cerrada: interiores como casas, hospitales, hoteles, escuelas, iglesias, manicomios, conventos, oficinas, sótanos, áticos, baños, cocinas, salones; exteriores como carreteras solitarias, bosques, cementerios, túneles, gasolineras vacías, paradas de autobús, muelles, faros, granjas, minas, criptas, capillas, vagones de tren, barcos varados, lagos, cabañas, autos abandonados, callejones. EL LUGAR LO DICTA EL TEXTO, no esta lista. NUNCA repitas el mismo tipo de lugar entre escenas consecutivas.
-        6. OBJETOS NARRATIVOS PERMITIDOS (úsalos para crear ambiente): reloj despertador con números rojos brillantes, espejo roto con grietas, cortinas raídas, ventana sucia con poca luz, papeles tirados en el piso, fotografías antiguas borrosas, muñecos viejos en una esquina, juguetes deteriorados, cama deshecha vacía, silla de madera vieja, lámpara apagada, pintura descascarada en paredes, tablones del piso podridos, polvo flotando en haz de luz.
-        7. ILUMINACIÓN CINEMATOGRÁFICA OBLIGATORIA: claroscuro EXTREMO. Sombras profundas casi negras dominan la imagen. Solo una zona limitada tiene luz visible. La fuente de luz la DECIDES TÚ según lo que tenga sentido en el lugar de esa escena: puede ser luz de luna, faroles distantes, lámparas parpadeantes, fogatas, linternas, faros de auto, neón roto, velas, luz de pantalla, luz por puerta entreabierta, rayo de sol filtrado, niebla iluminada, etc. La fuente DEBE tener sentido con el lugar — un cementerio puede tener luz de luna, una carretera tiene faros, una mina tiene linterna, un tren tiene luz interior tenue. Estilo cinematográfico: Insidious, Sinister, The Conjuring, Hereditary, The Witch. Rayos volumétricos con polvo o niebla flotando. Colores posibles: ámbar cálido, azulado lunar frío, rojo opresivo, verde enfermizo, naranja sodio de farol. NUNCA luz plana ni difusa. NUNCA luz de día normal.
-        8. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "lens".
-        9. TERMINA SIEMPRE CON: ", abandoned interior, dramatic chiaroscuro lighting, harsh directional side light, deep rich blacks, warm amber highlights, volumetric god rays through window, heavy dust particles in light beam, atmospheric haze, moody darkness, high contrast cinematic color grading, horror movie aesthetic, hyperrealistic textures, ultra detailed decay, peeling paint, weathered surfaces, shallow depth of field, photorealistic, film grain, no people, no humans, no blood, no text on walls, no cgi, no flat lighting, no soft diffused light"
-        10. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles, blood, gore, wounds, text, writing, letters, words, graffiti, person, people, human, body, silhouette.
+        1. CERO PERSONAS: ningún ser humano, rostro, cuerpo, silueta.
+        2. ESPECÍFICO A LA HISTORIA: El prompt_visual DEBE describir el lugar EXACTO donde ocurre ESA escena específica de la historia.
+        3. VARIEDAD OBLIGATORIA: Cada escena debe tener un prompt_visual DIFERENTE.
+        4. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens".
+        5. TERMINA SIEMPRE CON: ", RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art"
+        6. PROHIBIDO ABSOLUTAMENTE EN EL PROMPT: neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, 3d render, concept art, particles.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
@@ -117,7 +113,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Lugar abandonado específico en INGLÉS con objeto narrativo central: ej. abandoned hospital corridor with broken red digital clock on floor, dramatic harsh light beam cutting through broken window], abandoned interior, dramatic chiaroscuro lighting, harsh directional side light, deep rich blacks, warm amber highlights, volumetric god rays through window, heavy dust particles in light beam, atmospheric haze, moody darkness, high contrast cinematic color grading, horror movie aesthetic, hyperrealistic textures, ultra detailed decay, peeling paint, weathered surfaces, shallow depth of field, photorealistic, film grain, no people, no humans, no blood, no text on walls, no cgi, no flat lighting, no soft diffused light",
+              "prompt_visual": "[Lugar físico real oscuro y perturbador en INGLÉS], RAW photo, real photography, photorealistic, film grain, grainy texture, shot on location, physical environment, no people, no cgi, no digital art",
               "pexels_query": "[2-3 palabras en INGLÉS del lugar EXACTO de esta escena]",
               "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro."
             }
@@ -505,9 +501,9 @@ Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
             # Paleta y estilo según canal
             estilos = {
                 "viuda": {
-                    "paleta": "deep shadows with single warm light beam through window, muted earth tones, faded sepia accents, weathered grays",
-                    "estilo": "abandoned space psychological horror, decayed atmosphere, cinematic dread, no people, no blood, no text",
-                    "focal": "red digital alarm clock glowing 03:47 on dusty nightstand, cracked mirror reflecting empty room, old doll on weathered floor, faded photograph on broken dresser"
+                    "paleta": "deep black background, blood red accent light, dark teal shadows",
+                    "estilo": "psychological horror, dread atmosphere, unsettling stillness",
+                    "focal": "a single chair facing a dark corner, an open door to pitch black hallway"
                 },
                 "monkygraff": {
                     "paleta": "steel gray background, urgent orange accent, deep navy shadows",
