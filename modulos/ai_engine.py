@@ -63,7 +63,7 @@ class AIEngine:
         self.cuotas = GestorCuotas(limite_diario=20)
 
         # ══════════════════════════════════════════════════════════════
-        # ADN Maestro: La Viuda (Silo Hermético 1) - ACTUALIZACIÓN ANTI-OJOS V8.4.9
+        # ADN Maestro: La Viuda (Silo Hermético 1) - ACTUALIZACIÓN TERROR
         # ══════════════════════════════════════════════════════════════
         self.adn_la_viuda = """
         [INSTRUCCIONES DE SISTEMA - SILO HERMÉTICO: "LA VIUDA"]
@@ -96,11 +96,11 @@ class AIEngine:
         6. ATMÓSFERA: Cada escena debe construir tensión. Nunca resuelvas el misterio completamente.
 
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
-        1. CERO OJOS O ROSTROS: PROHIBIDO mostrar cualquier tipo de ojo (human eyes, doll eyes, glass eyes, spectral eyes, glowing eyes) o rostros. El terror debe derivar de la forma, la textura, la sombra o la anomalía, NUNCA de una mirada.
-        2. AUTORIZACIÓN DE PRESENCIAS TERRORÍFICAS SIN OJOS: SE PERMITEN Y FOMENTAN siluetas humanoides distorsionadas hechas de sombra, entidades espectrales indistinctas y manos sombrías, SIEMPRE Y CUANDO NO TENGAN OJOS O MIRADAS VISIBLES.
-        3. ANCLAJE NARRATIVO ESTRICTO Y OBJETUAL: El prompt_visual DEBE ilustrar el tema de la locución enfocándose en el DETALLE MÁS INQUIETANTE u OBJETO anómalo mencionado.
+        1. CERO HUMANOS IDENTIFICABLES O ROSTROS: PROHIBIDO mostrar personas normales, caras claras o cuerpos humanos estándar.
+        2. AUTORIZACIÓN DE PRESENCIAS TERRORÍFICAS: SE PERMITEN Y FOMENTAN siluetas inhumanas, formas humanoides distorsionadas hechas de sombra, entidades espectrales indistinctas, manos sombrías que se asoman, ojos acechando en la oscuridad absoluta y cualquier figura que evoque pareidolia perturbadora (ver formas amenazantes en objetos inanimados). Deben parecer "algo más", no personas.
+        3. ANCLAJE NARRATIVO ESTRICTO Y OBJETUAL: El prompt_visual DEBE ilustrar el tema de la locución enfocándose en el DETALLE MÁS INQUIETANTE u OBJETO anómalo mencionado. Si el guion habla de "presencias", dibuja la silueta distorsionada. Si habla de "ruidos", dibuja el objeto que lo causa de forma amenazante.
         4. ATMÓSFERA OPRESIVA: Enfatiza la oscuridad absoluta, el contraste extremo (claroscuro), texturas granulosas de film antiguo, y la paleta Noir (negros profundos, rojos saturados).
-        5. VARIEDAD OBLIGATORIA: Cada escena debe ser visualmente distinta a la anterior. Prohibido repetir pasillos genéricos si el guion no lo exige.
+        5. VARIEDAD OBLIGATORIA: Cada escena debe ser visualmente distinta a la anterior. Prohibido repetir pasillos o cuartos vacíos genéricos si el guion no lo exige.
         6. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens".
         7. SINTAXIS BASE: Escribe la descripción en INGLÉS puro, separando conceptos por comas. El worker añadirá el estilo Noir automáticamente.
 
@@ -114,7 +114,7 @@ class AIEngine:
           "escenas": [
             {
               "id_escena": 1,
-              "prompt_visual": "[Detalle perturbador, silueta inhumana sin ojos u objeto amenazante en INGLÉS, separando conceptos por comas]",
+              "prompt_visual": "[Detalle perturbador, silueta inhumana u objeto amenazante en INGLÉS, separando conceptos por comas]",
               "pexels_query": "[2-3 palabras en INGLÉS del objeto EXACTO de esta escena]",
               "texto_locucion": "Texto en ESPAÑOL impecable. Terror psicológico puro."
             }
