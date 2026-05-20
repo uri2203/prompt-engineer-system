@@ -222,7 +222,7 @@ def api_generate_image():
     
     tarea_id = str(uuid.uuid4())
     formato = data.get('formato', '16:9')
-    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt, "formato": formato})
+    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt, "formato": formato, "marca": data.get('marca', 'La Viuda')})
     return jsonify({"status": "EN_COLA", "tarea_id": tarea_id, "message": "Orden enviada a la Dark Factory."})
 
 @app.route('/api/check_image/<tarea_id>')
@@ -271,3 +271,4 @@ def upload_result():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
