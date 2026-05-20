@@ -451,9 +451,8 @@ class AIEngine:
         elif "esquina" in marca_lower or "laesquina" in marca_lower or "random" in marca_lower:
             return self.adn_laesquina_random
         else:
-            # Fallback seguro: La Viuda
-            print(f"[AI ENGINE] ⚠️ Canal '{marca}' sin ADN registrado. Usando La Viuda como fallback.")
-            return self.adn_la_viuda
+            print(f"[AI ENGINE] ⚠️ ERROR: Canal '{marca}' sin ADN registrado. Verifica el nombre del canal.")
+            return None
 
     def generar_paquete_publicacion(self, marca, titulo, texto_locucion, formato):
         """
@@ -596,6 +595,7 @@ Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
             if resultado:
+                resultado["marca"] = marca  # forzar marca original, no confiar en Gemini
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
@@ -629,7 +629,7 @@ Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
                 if resultado:
                     if i == 0 and "titulo_sugerido" in resultado:
                         titulo = resultado.get("titulo_sugerido", "")
-                        marca_final = resultado.get("marca", marca)
+                        marca_final = marca  # siempre usar la marca original, no la que devuelve Gemini
                     escenas_bloque = resultado.get("escenas", [])
                     todas_las_escenas.extend(escenas_bloque)
                 else:
