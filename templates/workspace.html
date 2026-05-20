@@ -269,6 +269,7 @@ async function ejecutarCCTV() {
             // formato 9:16 para shorts, 16:9 para largos
             body: JSON.stringify({
                 prompt: promptData,
+                marca: document.getElementById('input_marca').value,
                 formato: document.getElementById('input_longitud').value === '4900 palabras' ? '16:9' : '9:16'
             })
         });
@@ -391,3 +392,4 @@ async function ejecutarEnsamblaje() {
 }
 </script>
 {% endblock %}
+
