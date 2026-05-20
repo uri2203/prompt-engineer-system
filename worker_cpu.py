@@ -895,7 +895,21 @@ def procesar():
                                 "anime, cartoon, 3d render, cgi, clean, modern architecture, office, hospital, "
                                 "subway, safe, bright, mundane, well lit, symmetrical, empty liminal space"
                             )
-                            
+
+                        elif marca_limpia in ["monkygraff"]:
+                            # MATRIZ VISUAL FOTOPERIODISMO GEOPOLÍTICO
+                            prompt_limpio = (
+                                f"{prompt_esc}, RAW photo, photojournalism, real photography, "
+                                f"shot on location, harsh natural lighting, gritty texture, "
+                                f"physical environment, no people, no faces, no cgi, no digital art"
+                            )
+                            neg_prompt = (
+                                "person, people, human, face, body, horror, dark, terror, ghost, shadow figure, "
+                                "neon, glowing, hologram, digital, abstract, wireframe, sci-fi, futuristic, "
+                                "3d render, cartoon, anime, text, watermark, blurry, low quality, "
+                                "psychological horror, paranormal, supernatural, creepy"
+                            )
+
                         else:
                             prompt_limpio = (
                                 f"{prompt_esc}, RAW photo, photorealistic, real photography, "
