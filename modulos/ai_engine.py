@@ -498,58 +498,69 @@ Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
 }}
 """
         else:
-            # Paleta y estilo según canal
-            estilos = {
+            # Identidad visual por canal — solo referencia de ADN, Gemini genera libremente
+            adn_canales = {
                 "viuda": {
-                    "paleta": "deep black background, blood red accent light, dark teal shadows",
-                    "estilo": "psychological horror, dread atmosphere, unsettling stillness",
-                    "focal": "a single chair facing a dark corner, an open door to pitch black hallway"
+                    "paleta": "deep black, blood red accent, dark teal shadows",
+                    "estilo": "psychological horror, dread, unsettling stillness, analog film grain",
+                    "reglas": "sin personas reales, sin texto, siluetas permitidas, máximo contraste rojo-negro"
                 },
                 "monkygraff": {
-                    "paleta": "steel gray background, urgent orange accent, deep navy shadows",
-                    "estilo": "tactical urgency, geopolitical tension, documentary realism",
-                    "focal": "aerial view of military installation, industrial port at night"
+                    "paleta": "steel gray, urgent orange, deep navy",
+                    "estilo": "tactical urgency, geopolitical tension, documentary realism, gritty RAW photo",
+                    "reglas": "sin personas, objetos físicos reales del tema, mapas, infraestructura"
                 },
                 "filtrado": {
-                    "paleta": "warm beige background, soft amber accent, muted shadows",
-                    "estilo": "intimate drama, human tension, candid emotional atmosphere",
-                    "focal": "phone with chat notification, coffee table with two cups, empty bed"
+                    "paleta": "warm beige, soft amber, muted shadows",
+                    "estilo": "intimate drama, human tension, candid emotional",
+                    "reglas": "sin personas reconocibles, objetos cotidianos con carga emocional"
                 },
                 "esquina": {
-                    "paleta": "vibrant yellow background, electric blue accent, warm red shadows",
-                    "estilo": "funny cartoon style, 2D animation, comic book aesthetic, cel shaded",
-                    "focal": "cartoon mexican street, tianguis scene, combi bus absurd situation"
+                    "paleta": "vibrant yellow, electric blue, warm red",
+                    "estilo": "funny cartoon 2D, comic book, cel shaded, mexican street culture",
+                    "reglas": "ilustración caricaturesca, sin realismo fotográfico"
                 }
             }
-            estilo_canal = estilos.get("viuda")  # default
-            for key, val in estilos.items():
+            adn = adn_canales.get("viuda")  # default
+            for key, val in adn_canales.items():
                 if key in marca.lower():
-                    estilo_canal = val
+                    adn = val
                     break
 
-            paleta = estilo_canal["paleta"]
-            estilo_miniatura = estilo_canal["estilo"]
-            ejemplo_focal = estilo_canal["focal"]
-
             prompt_paquete = f"""
-Eres un experto en diseño de miniaturas de YouTube con CTR superior al 12%.
-Canal: {marca}
-Nicho: {canal_info}
-Título del video: {titulo}
-Tema del video: {texto_locucion[:800]}
+Eres un director creativo especialista en miniaturas de YouTube con CTR demostrado superior al 15%.
+Analizas el tema real del video y generas prompts de imagen ÚNICOS, ESPECÍFICOS y de alto impacto visual.
 
-Genera el paquete completo. SALIDA: ÚNICAMENTE JSON válido.
+CANAL: {marca}
+NICHO: {canal_info}
+TÍTULO: {titulo}
+GUION COMPLETO: {texto_locucion}
+
+ADN VISUAL DEL CANAL:
+- Paleta: {adn['paleta']}
+- Estilo: {adn['estilo']}
+- Reglas: {adn['reglas']}
+
+INSTRUCCIONES PARA LOS PROMPTS DE MINIATURA:
+1. Extrae el ELEMENTO MÁS IMPACTANTE Y ESPECÍFICO del tema real del video (no genérico)
+2. Cada prompt debe evocar curiosidad, urgencia o impacto emocional inmediato
+3. Composiciones diferentes entre A, B y C — no repetir estructura
+4. Todos los prompts en INGLÉS, optimizados para Stable Diffusion
+5. Incluir: iluminación dramática, profundidad de campo, calidad cinemática
+6. NO incluir texto, personas identificables ni logos
+
+SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título SEO optimizado, máximo 70 caracteres",
-  "descripcion": "Descripción 300+ palabras.",
+  "titulo_final": "Título SEO optimizado, máximo 70 caracteres, con gancho emocional",
+  "descripcion": "Descripción 300+ palabras optimizada para SEO y retención.",
   "hashtags": "máximo 15 hashtags separados por espacio",
   "keywords": "máximo 500 caracteres separadas por coma",
-  "primer_comentario": "Comentario que genera debate. Termina con pregunta.",
-  "prompt_hook": "Un objeto o lugar específico del tema, ultra detallado, {paleta.split(',')[0]}, no people, en inglés",
-  "prompt_miniatura_A": "ELEMENTO FOCAL: [{ejemplo_focal}], isolated on {paleta.split(',')[0]}, single dramatic spotlight, {estilo_miniatura}, photorealistic render, no humans, no text, 1920x1080",
-  "prompt_miniatura_B": "COMPOSICIÓN ANGULAR: mismo tema desde ángulo diferente, {paleta}, harsh rim lighting, {estilo_miniatura}, no people, 1920x1080",
-  "prompt_miniatura_C": "DETALLE MACRO: extreme close-up de detalle específico del tema, {paleta.split(',')[0]}, ultra sharp focus, {estilo_miniatura}, no humans, 1920x1080"
+  "primer_comentario": "Comentario que genera debate inmediato. Termina con pregunta provocadora.",
+  "prompt_hook": "Prompt SD para imagen de hook — objeto o lugar MÁS icónico del tema real, ultra detallado, {adn['paleta'].split(',')[0]}, dramatic lighting, no people, photorealistic, en inglés",
+  "prompt_miniatura_A": "Prompt SD completo para miniatura A — COMPOSICIÓN IMPACTO: elemento focal del tema real del video con máximo dramatismo, {adn['paleta']}, {adn['estilo']}, extreme contrast, cinematic depth of field, no humans, no text, 1920x1080, ultra detailed",
+  "prompt_miniatura_B": "Prompt SD completo para miniatura B — COMPOSICIÓN TENSIÓN: ángulo diferente a A, mismo tema desde perspectiva que genere urgencia o intriga, {adn['paleta']}, {adn['estilo']}, harsh rim lighting, no people, 1920x1080, photorealistic",
+  "prompt_miniatura_C": "Prompt SD completo para miniatura C — COMPOSICIÓN DETALLE: macro extremo del elemento más simbólico del tema, {adn['paleta'].split(',')[0]}, ultra sharp focus, {adn['estilo']}, no humans, no text, 1920x1080"
 }}
 """
 
