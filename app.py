@@ -125,9 +125,6 @@ def api_generate_script():
     peticion = data.get('peticion', '')
     longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
 
-    # INYECCIÓN CONSOLIDADA: FRAGMENTACIÓN EXTREMA (Respaldo) + FOTORREALISMO (Fase 1)
-    # Protege la matriz de 12-15 escenas y aplica los modificadores visuales para el renderizado
-    peticion_enriquecida = f"{peticion}\n\n[FRAGMENTACIÓN REQUERIDA]: Divide el guion en bloques de máximo 4-5 segundos. Genera una matriz de entre 12 y 15 escenas visuales independientes. Cada escena debe representar un cambio de plano o ángulo.\n\n[INSTRUCCIÓN VISUAL OBLIGATORIA]: Al generar la descripción de cada escena, asegúrate de incorporar al final de ella los siguientes parámetros para el renderizado: 'Cinematografía hiperrealista, 8k, Unreal Engine 5, iluminación volumétrica'."
 
     formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
     formato_crudo = formato_crudo.lower()
@@ -140,7 +137,7 @@ def api_generate_script():
     resultado = compliance_engine.blindar_guion(
         ai_engine_instancia=ai_engine,
         marca=marca, contexto=contexto_absoluto,
-        peticion=peticion_enriquecida, longitud=longitud, formato=formato_calculado
+        peticion=peticion, longitud=longitud, formato=formato_calculado
     )
     return jsonify({"status": "success", "data": resultado})
 
