@@ -581,11 +581,22 @@ SALIDA: ÚNICAMENTE JSON válido.
             return "ERROR CRÍTICO: No hay API Keys cargadas en la Bóveda."
 
         system_instruction = self._seleccionar_adn(marca)
-        es_largo = "16:9" in formato or "largo" in longitud.lower() or "4900" in longitud
+
+        # ══════════════════════════════════════════════════════
+        # TABLA DE DURACIONES — cada longitud define su propio
+        # número de escenas, palabras/escena y bloques Gemini
+        # ══════════════════════════════════════════════════════
+        num_palabras_pedidas = 0
+        try:
+            num_palabras_pedidas = int(''.join(filter(str.isdigit, longitud.split()[0])))
+        except Exception:
+            pass
+
+        # Short (9:16) — siempre 1 bloque
+        es_largo = "16:9" in formato or num_palabras_pedidas >= 1500
 
         if not es_largo:
-            # REGLA FIJA: el guion para shorts debe tener 200-240 palabras totales,
-            # dividido en escenas de 8 palabras exactas = 25-30 escenas obligatorias
+            # SHORT: 25-30 escenas, 7-9 palabras c/u, 200-240 total
             instruccion_ritmo = (
                 f"\n\n========================================\n"
                 f"REGLAS NUMERICAS OBLIGATORIAS - FORMATO SHORT 9:16\n"
@@ -604,45 +615,72 @@ SALIDA: ÚNICAMENTE JSON válido.
             )
             prompt = f"{instruccion_ritmo}\n\nCONTEXTO: {contexto}\nPETICIÓN: {peticion}"
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
-
             if resultado:
-                resultado["marca"] = marca  # forzar marca original, no confiar en Gemini
+                resultado["marca"] = marca
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
-            partes = [
-                ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
-                ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
-                ("CIERRE",     "escenas 41 a 60 — clímax, revelación, cierre emocional y llamado a la acción"),
-            ]
+            # ── Configuración por duración solicitada ────────
+            if num_palabras_pedidas <= 1500:
+                # ~15 min: 2 bloques × 10 escenas, 50 palabras/escena
+                config_bloques = [
+                    ("APERTURA Y DESARROLLO", "escenas 1 a 10  — gancho, contexto y desarrollo del tema"),
+                    ("CIERRE",                "escenas 11 a 20 — clímax, datos clave y llamado a la acción"),
+                ]
+                escenas_por_bloque = 10
+                palabras_por_escena = 50
+                min_aprox = 15
+            elif num_palabras_pedidas <= 2800:
+                # ~28 min: 2 bloques × 18 escenas, 70 palabras/escena
+                config_bloques = [
+                    ("APERTURA Y DESARROLLO", "escenas 1 a 18  — gancho, contexto, conflicto y desarrollo"),
+                    ("CIERRE",                "escenas 19 a 36 — escalada, revelación y llamado a la acción"),
+                ]
+                escenas_por_bloque = 18
+                palabras_por_escena = 70
+                min_aprox = 28
+            else:
+                # ~45 min: 3 bloques × 20 escenas, 75 palabras/escena (original)
+                config_bloques = [
+                    ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
+                    ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
+                    ("CIERRE",     "escenas 41 a 60 — clímax, revelación, cierre emocional y llamado a la acción"),
+                ]
+                escenas_por_bloque = 20
+                palabras_por_escena = 75
+                min_aprox = 45
 
             todas_las_escenas = []
             titulo = ""
             marca_final = marca
             errores_totales = []
+            offset = 0
 
-            for i, (bloque, descripcion) in enumerate(partes):
+            for i, (bloque, descripcion) in enumerate(config_bloques):
+                inicio = offset + 1
+                fin    = offset + escenas_por_bloque
                 instruccion_bloque = (
-                    f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/3]: "
+                    f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/{len(config_bloques)}]: "
                     f"Genera SOLO el bloque de {descripcion}. "
-                    f"Exactamente 20 escenas numeradas desde {i*20+1} hasta {(i+1)*20}. "
-                    f"Formato 16:9 video largo de 30 MINUTOS. "
-                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO 75 palabras en español. "
+                    f"Exactamente {escenas_por_bloque} escenas numeradas desde {inicio} hasta {fin}. "
+                    f"Formato 16:9 video largo de {min_aprox} MINUTOS. "
+                    f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO {palabras_por_escena} palabras en español. "
                     f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
-                print(f"[AI ENGINE] Generando bloque {i+1}/3: {bloque}...")
+                print(f"[AI ENGINE] Generando bloque {i+1}/{len(config_bloques)}: {bloque} ({min_aprox} min)...")
 
                 resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
                     if i == 0 and "titulo_sugerido" in resultado:
                         titulo = resultado.get("titulo_sugerido", "")
-                        marca_final = marca  # siempre usar la marca original, no la que devuelve Gemini
+                        marca_final = marca
                     escenas_bloque = resultado.get("escenas", [])
                     todas_las_escenas.extend(escenas_bloque)
+                    offset += escenas_por_bloque
                 else:
                     print(f"[AI ENGINE] ⚠️ Bloque {i+1} falló...")
                     errores_totales.extend(errores)
