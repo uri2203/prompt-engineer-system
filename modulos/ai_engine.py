@@ -623,32 +623,33 @@ SALIDA: ÚNICAMENTE JSON válido.
         else:
             # ── Configuración por duración solicitada ────────
             if num_palabras_pedidas <= 1500:
-                # ~15 min: 2 bloques × 10 escenas, 50 palabras/escena
+                # ~15 min: 3 bloques × 10 escenas, 30 palabras/escena
                 config_bloques = [
-                    ("APERTURA Y DESARROLLO", "escenas 1 a 10  — gancho, contexto y desarrollo del tema"),
-                    ("CIERRE",                "escenas 11 a 20 — clímax, datos clave y llamado a la acción"),
+                    ("APERTURA",    "escenas 1 a 10  — gancho inicial y contexto"),
+                    ("DESARROLLO",  "escenas 11 a 20 — desarrollo del tema y datos clave"),
+                    ("CIERRE",      "escenas 21 a 30 — clímax y llamado a la acción"),
                 ]
                 escenas_por_bloque = 10
-                palabras_por_escena = 50
+                palabras_por_escena = 30
                 min_aprox = 15
             elif num_palabras_pedidas <= 2800:
-                # ~28 min: 2 bloques × 18 escenas, 70 palabras/escena
+                # ~28 min: 2 bloques × 25 escenas, 40 palabras/escena
                 config_bloques = [
-                    ("APERTURA Y DESARROLLO", "escenas 1 a 18  — gancho, contexto, conflicto y desarrollo"),
-                    ("CIERRE",                "escenas 19 a 36 — escalada, revelación y llamado a la acción"),
+                    ("APERTURA Y DESARROLLO", "escenas 1 a 25  — gancho, contexto, conflicto y desarrollo"),
+                    ("CIERRE",                "escenas 26 a 50 — escalada, revelación y llamado a la acción"),
                 ]
-                escenas_por_bloque = 18
-                palabras_por_escena = 70
+                escenas_por_bloque = 25
+                palabras_por_escena = 40
                 min_aprox = 28
             else:
-                # ~45 min: 3 bloques × 20 escenas, 75 palabras/escena (original)
+                # ~45 min: 3 bloques × 27 escenas, 50 palabras/escena
                 config_bloques = [
-                    ("APERTURA",   "escenas 1 a 20  — introducción, contexto, gancho inicial"),
-                    ("DESARROLLO", "escenas 21 a 40 — desarrollo del conflicto, datos, tensión creciente"),
-                    ("CIERRE",     "escenas 41 a 60 — clímax, revelación, cierre emocional y llamado a la acción"),
+                    ("APERTURA",   "escenas 1 a 27  — introducción, contexto, gancho inicial"),
+                    ("DESARROLLO", "escenas 28 a 54 — desarrollo del conflicto, datos, tensión creciente"),
+                    ("CIERRE",     "escenas 55 a 81 — clímax, revelación, cierre emocional y llamado a la acción"),
                 ]
-                escenas_por_bloque = 20
-                palabras_por_escena = 75
+                escenas_por_bloque = 27
+                palabras_por_escena = 50
                 min_aprox = 45
 
             todas_las_escenas = []
