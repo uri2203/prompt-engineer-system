@@ -22,7 +22,9 @@
                 <select id="input_longitud" class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none">
                     <option value="130 palabras">YouTube Short Viral (60 seg / 130 palabras)</option>
                     <option value="260 palabras">Video Corto Retención (2 min / 260 palabras)</option>
-                    <option value="4900 palabras">Documental Largo (30 min / 4900 palabras)</option>
+                    <option value="1500 palabras">Video Medio Impacto (15 min / 1500 palabras)</option>
+                    <option value="2800 palabras">Video Largo Dinámico (28 min / 2800 palabras)</option>
+                    <option value="4900 palabras">Documental Épico (45 min / 4900 palabras)</option>
                 </select>
             </div>
 
@@ -149,7 +151,7 @@ async function ejecutarMotor() {
     const payload = {
         marca: document.getElementById('input_marca').value,
         longitud: document.getElementById('input_longitud').value,
-        formato: document.getElementById('input_longitud').value === '4900 palabras' ? '16:9' : '9:16',
+        formato: ['4900 palabras','2800 palabras','1500 palabras'].includes(document.getElementById('input_longitud').value) ? '16:9' : '9:16',
         contexto: document.getElementById('input_contexto').value,
         peticion: document.getElementById('input_peticion').value
     };
@@ -270,7 +272,7 @@ async function ejecutarCCTV() {
             body: JSON.stringify({
                 prompt: promptData,
                 marca: document.getElementById('input_marca').value,
-                formato: document.getElementById('input_longitud').value === '4900 palabras' ? '16:9' : '9:16'
+                formato: ['4900 palabras','2800 palabras','1500 palabras'].includes(document.getElementById('input_longitud').value) ? '16:9' : '9:16'
             })
         });
         const data = await response.json();
