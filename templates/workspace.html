@@ -11,10 +11,33 @@
         <form id="form_generacion" class="space-y-5">
             <div>
                 <label class="label-blue block mb-2">Silo de Marca (ADN)</label>
-                <select id="input_marca" class="w-full p-3 text-sm bg-[#0F1523] border border-slate-700 rounded text-white focus:border-blue-500 outline-none">
-                    <option value="La Viuda">La Viuda (Terror Psicológico)</option>
-                    <option value="Monkygraff">Monkygraff (Documental Geopolítico)</option>
+                <select id="input_marca" onchange="actualizarColorCanal(this)" class="w-full p-3 text-sm border border-slate-700 rounded text-white focus:border-blue-500 outline-none font-bold" style="background-color:#1a0a0a;">
+                    <option value="La Viuda"        style="background-color:#1a0a0a; color:#ff4444;">🩸 La Viuda — Terror Psicológico</option>
+                    <option value="Monkygraff"      style="background-color:#0a0f1a; color:#4499ff;">🌐 Monkygraff — Documental Geopolítico</option>
+                    <option value="FiltradoMX"      style="background-color:#1a120a; color:#ffaa33;">🔥 FiltradoMX — Confesiones y Drama</option>
+                    <option value="LaesquinaRandom" style="background-color:#0a1a0a; color:#44ff88;">🎪 La Esquina Random — Comedia Mexicana</option>
                 </select>
+                <script>
+                const COLORES_CANAL = {
+                    "La Viuda":         { bg: "#1a0a0a", border: "#ff4444", label: "#ff4444" },
+                    "Monkygraff":       { bg: "#0a0f1a", border: "#4499ff", label: "#4499ff" },
+                    "FiltradoMX":       { bg: "#1a120a", border: "#ffaa33", label: "#ffaa33" },
+                    "LaesquinaRandom":  { bg: "#0a1a0a", border: "#44ff88", label: "#44ff88" },
+                };
+                function actualizarColorCanal(sel) {
+                    const c = COLORES_CANAL[sel.value] || { bg: "#0F1523", border: "#334155", label: "#ffffff" };
+                    sel.style.backgroundColor = c.bg;
+                    sel.style.borderColor = c.border;
+                    sel.style.color = c.label;
+                    // Colorear también el panel principal
+                    const panel = document.getElementById('panel_principal');
+                    if (panel) panel.style.borderColor = c.border;
+                }
+                document.addEventListener('DOMContentLoaded', () => {
+                    const sel = document.getElementById('input_marca');
+                    if (sel) actualizarColorCanal(sel);
+                });
+                </script>
             </div>
 
             <div>
