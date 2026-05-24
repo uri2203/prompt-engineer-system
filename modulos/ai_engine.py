@@ -621,36 +621,54 @@ SALIDA: ÚNICAMENTE JSON válido.
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
         else:
+            # ── PPM por canal para calcular palabras exactas ──
+            PPM_CANALES = {
+                "viuda":      85,
+                "monkygraff": 140,
+                "filtrad":    130,
+                "esquina":    155,
+                "default":    120,
+            }
+            ppm_canal = PPM_CANALES["default"]
+            marca_lower_temp = marca.lower().replace(" ", "")
+            for key, val in PPM_CANALES.items():
+                if key in marca_lower_temp:
+                    ppm_canal = val
+                    break
+
             # ── Configuración por duración solicitada ────────
             if num_palabras_pedidas <= 1500:
-                # ~15 min: 3 bloques × 10 escenas, 30 palabras/escena
-                config_bloques = [
-                    ("APERTURA",    "escenas 1 a 10  — gancho inicial y contexto"),
-                    ("DESARROLLO",  "escenas 11 a 20 — desarrollo del tema y datos clave"),
-                    ("CIERRE",      "escenas 21 a 30 — clímax y llamado a la acción"),
-                ]
-                escenas_por_bloque = 10
-                palabras_por_escena = 30
                 min_aprox = 15
+                total_escenas = 30
+                escenas_por_bloque = 10
+                palabras_totales = int(ppm_canal * min_aprox)
+                palabras_por_escena = max(20, palabras_totales // total_escenas)
+                config_bloques = [
+                    ("APERTURA",   f"escenas 1 a 10  — gancho inicial y contexto"),
+                    ("DESARROLLO", f"escenas 11 a 20 — desarrollo del tema y datos clave"),
+                    ("CIERRE",     f"escenas 21 a 30 — clímax y llamado a la acción"),
+                ]
             elif num_palabras_pedidas <= 2800:
-                # ~28 min: 2 bloques × 25 escenas, 40 palabras/escena
-                config_bloques = [
-                    ("APERTURA Y DESARROLLO", "escenas 1 a 25  — gancho, contexto, conflicto y desarrollo"),
-                    ("CIERRE",                "escenas 26 a 50 — escalada, revelación y llamado a la acción"),
-                ]
-                escenas_por_bloque = 25
-                palabras_por_escena = 40
                 min_aprox = 28
-            else:
-                # ~45 min: 3 bloques × 27 escenas, 50 palabras/escena
+                total_escenas = 50
+                escenas_por_bloque = 25
+                palabras_totales = int(ppm_canal * min_aprox)
+                palabras_por_escena = max(30, palabras_totales // total_escenas)
                 config_bloques = [
-                    ("APERTURA",   "escenas 1 a 27  — introducción, contexto, gancho inicial"),
-                    ("DESARROLLO", "escenas 28 a 54 — desarrollo del conflicto, datos, tensión creciente"),
-                    ("CIERRE",     "escenas 55 a 81 — clímax, revelación, cierre emocional y llamado a la acción"),
+                    ("APERTURA Y DESARROLLO", f"escenas 1 a 25  — gancho, contexto, conflicto y desarrollo"),
+                    ("CIERRE",                f"escenas 26 a 50 — escalada, revelación y llamado a la acción"),
                 ]
-                escenas_por_bloque = 27
-                palabras_por_escena = 50
+            else:
                 min_aprox = 45
+                total_escenas = 81
+                escenas_por_bloque = 27
+                palabras_totales = int(ppm_canal * min_aprox)
+                palabras_por_escena = max(40, palabras_totales // total_escenas)
+                config_bloques = [
+                    ("APERTURA",   f"escenas 1 a 27  — introducción, contexto, gancho inicial"),
+                    ("DESARROLLO", f"escenas 28 a 54 — desarrollo del conflicto, datos, tensión creciente"),
+                    ("CIERRE",     f"escenas 55 a 81 — clímax, revelación, cierre emocional y llamado a la acción"),
+                ]
 
             todas_las_escenas = []
             titulo = ""
