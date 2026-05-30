@@ -111,6 +111,11 @@ class AIEngine:
           "marca": "La Viuda",
           "formato": "(SHORT o LARGO)",
           "titulo_sugerido": "Título viral de terror psicológico con alto CTR",
+          "hooks": [
+            "Frase impactante 1 específica al tema — máximo 6 palabras",
+            "Frase impactante 2 específica al tema — máximo 6 palabras",
+            "Frase impactante 3 específica al tema — máximo 6 palabras"
+          ],
           "escenas": [
             {
               "id_escena": 1,
@@ -226,6 +231,11 @@ class AIEngine:
           "marca": "Monkygraff",
           "formato": "(SHORT o LARGO)",
           "titulo_sugerido": "Título táctico con dato concreto y CTR extremo",
+          "hooks": [
+            "Dato impactante 1 específico al tema — máximo 6 palabras",
+            "Dato impactante 2 específico al tema — máximo 6 palabras",
+            "Dato impactante 3 específico al tema — máximo 6 palabras"
+          ],
           "escenas": [
             {
               "id_escena": 1,
