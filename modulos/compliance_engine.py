@@ -186,26 +186,33 @@ class ComplianceEngine:
                     "restricciones_output": [
                         "incitación explícita a cometer actos de violencia",
                         "propaganda directa de organizaciones terroristas designadas",
-                        "instrucciones de fabricación de armas reales"
+                        "instrucciones de fabricación de armas reales",
+                        "contenido sobre narcotráfico, carteles o crimen organizado",
+                        "glorificación de grupos armados ilegales",
+                        "narración de operaciones criminales con detalle operativo",
+                        "mencionar líderes de cárteles o grupos criminales como protagonistas",
+                        "contenido que humanice o justifique organizaciones del crimen organizado"
                     ],
                     "permitido": [
-                        "análisis documental de conflictos armados",
-                        "terminología militar y táctica formal",
-                        "cifras de bajas en contexto informativo",
-                        "crítica geopolítica a gobiernos y organizaciones",
-                        "descripción de operaciones militares históricas o actuales",
-                        "análisis de estrategia económica y comercial",
-                        "cobertura de guerras como hecho informativo",
-                        "uso de palabras: guerra, conflicto, ataque, operación, bajas, misil, aranceles",
-                        "análisis de crímenes de guerra como hecho histórico documentado",
-                        "descripción de tácticas militares desde perspectiva analítica"
+                        "análisis documental de conflictos armados entre estados",
+                        "terminología militar y táctica formal en contexto geopolítico",
+                        "cifras de bajas en contexto informativo y periodístico",
+                        "crítica geopolítica a gobiernos y organizaciones internacionales",
+                        "análisis de estrategia económica, comercial y financiera global",
+                        "cobertura de guerras y conflictos como hecho informativo",
+                        "análisis de crímenes de guerra desde perspectiva histórica documentada",
+                        "descripción de tácticas militares estatales desde perspectiva analítica",
+                        "impacto económico del crimen organizado en contexto macroeconómico sin glorificarlo"
                     ],
                     "estrategia_evasion": (
-                        "TONO DOCUMENTAL NEUTRAL: Narrar como observador externo sin tomar partido. "
-                        "Usar terminología táctica y geopolítica formal. "
-                        "Ejemplos: 'ataque' → 'operación militar'; 'masacre' → 'incidente con bajas civiles'."
+                        "TONO ANALISTA GEOPOLÍTICO: Narrar como observador externo sin tomar partido. "
+                        "Si el tema roza el crimen organizado, enfocar en impacto económico o político "
+                        "sin mencionar grupos o líderes específicos. "
+                        "Usar terminología formal: 'economía ilícita', 'mercados informales', "
+                        "'desestabilización regional' en lugar de nombres de carteles o grupos. "
+                        "Nunca romantizar, glorificar ni humanizar actores criminales."
                     ),
-                    "umbral_bloqueo": 15
+                    "umbral_bloqueo": 1
                 }
             }
         }
