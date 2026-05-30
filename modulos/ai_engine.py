@@ -233,7 +233,7 @@ class AIEngine:
         - Shorts: 130-150 palabras, UN SOLO momento WTF concentrado
 
         LÉXICO PERMITIDO (natural, no forzado):
-        "espérate", "te cuento", "resulta que", "y lo peor", "imagínate", "fíjate", "de repente"
+        Usa conectores narrativos variados y naturales — evita repetir los mismos en cada video. Varía según el ritmo de la historia.
 
         REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
         1. VOZ FEMENINA: cómplice, íntima, como contando un secreto a una amiga de confianza.
@@ -300,7 +300,7 @@ class AIEngine:
         - Cero nombres reales de personas identificables
         - Situaciones cotidianas mexicanas: mercado, vecindario, tráfico, familia, trabajo informal
         - El absurdo debe ser ESPECÍFICO — los detalles raros son los que generan la risa
-        - Léxico: "espérate", "resulta que", "imagínate", "fíjate bien", "y lo peor de todo", "te lo juro"
+        - Léxico: coloquial mexicano neutro, sin groserías. Varía los conectores narrativos en cada historia para que no suenen repetitivos entre videos.
         - Videos largos: 800-1000 palabras de comedia progresiva
         - Shorts: 80-120 palabras, UNA situación absurda completa con remate incluido
 
