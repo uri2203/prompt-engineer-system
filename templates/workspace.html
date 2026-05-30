@@ -222,6 +222,9 @@ async function ejecutarMotor() {
                 
                 // Guardar textos por escena para subtítulos sincronizados
                 window.currentEscenasTexto = jsonParseado.escenas.map(e => e.texto_locucion);
+                window.currentEscenas       = jsonParseado.escenas || [];
+                window.currentHooks         = jsonParseado.hooks || [];
+                window.currentTitulo        = jsonParseado.titulo_sugerido || "";
 
                 // 2. Extraer los prompts visuales y guardarlos como Data Array para el Xeon
                 let arrayPrompts = jsonParseado.escenas.map(e => {
@@ -393,8 +396,11 @@ async function ejecutarEnsamblaje() {
                 marca: marca, 
                 image_b64: currentImageB64, 
                 audio_b64: currentAudioB64,
-                texto_locucion: document.getElementById('input_texto_locucion').value,
-                escenas_texto: window.currentEscenasTexto || []
+                texto_locucion:  document.getElementById('input_texto_locucion').value,
+                escenas_texto:   window.currentEscenasTexto || [],
+                escenas:         window.currentEscenas || [],
+                hooks:           window.currentHooks || [],
+                titulo_sugerido: window.currentTitulo || ""
             })
         });
         const data = await response.json();
