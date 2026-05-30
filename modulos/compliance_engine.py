@@ -154,6 +154,34 @@ class ComplianceEngine:
                     ),
                     "umbral_bloqueo": 2  # BUG FIX: Umbral razonable (era 6, imposible de alcanzar)
                 },
+                "FiltradoMX": {
+                    "restricciones_output": [
+                        "mencionar nombres reales identificables de personas",
+                        "incluir números de teléfono, direcciones o datos personales reales",
+                        "nombrar empresas o instituciones reales en contexto negativo sin pruebas",
+                        "afirmar como hecho real algo que podría ser difamatorio",
+                        "incluir información que permita identificar a personas reales",
+                        "contenido sexual explícito o descripción de actos sexuales con detalle"
+                    ],
+                    "permitido": [
+                        "confesiones anónimas de situaciones cotidianas",
+                        "infidelidad narrada sin identificar personas reales",
+                        "conflictos laborales sin nombrar empresas reales",
+                        "drama familiar sin datos identificables",
+                        "traición entre amigos/pareja en tono narrativo",
+                        "situaciones embarazosas o escandalosas ficcionalizadas",
+                        "lenguaje coloquial mexicano sin groserías explícitas"
+                    ],
+                    "estrategia_evasion": (
+                        "ANONIMIZACIÓN OBLIGATORIA: Toda historia debe presentarse como anónima. "
+                        "Sustituir nombres por referencias genéricas: 'mi amiga', 'mi jefe', 'él/ella'. "
+                        "Nunca mencionar empresas, colonias específicas, escuelas o cualquier dato "
+                        "que permita identificar a personas reales. "
+                        "DISCLAIMER: Incluir siempre al inicio o final que los hechos son anónimos "
+                        "y no identifican a personas reales."
+                    ),
+                    "umbral_bloqueo": 1
+                },
                 "Monkygraff": {
                     "restricciones_output": [
                         "incitación explícita a cometer actos de violencia",
