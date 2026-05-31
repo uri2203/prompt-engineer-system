@@ -104,6 +104,11 @@ class AIEngine:
         6. PROHIBIDO DIBUJAR CÁMARAS: NUNCA uses "camera", "CCTV", "dashcam", "photography" o "lens".
         7. SINTAXIS BASE: Escribe la descripción en INGLÉS puro, separando conceptos por comas. El worker añadirá el estilo Noir automáticamente.
 
+        CAMPO "hooks" OBLIGATORIO: Debes incluir SIEMPRE el campo "hooks" con exactamente 3 frases
+        cortas (máximo 6 palabras cada una) específicas al tema de ESTE video.
+        Estas frases se usarán como pausas dramáticas dentro del video.
+        NO uses frases genéricas — deben referirse al contenido específico del guion.
+
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
         FORMATO:
@@ -112,9 +117,9 @@ class AIEngine:
           "formato": "(SHORT o LARGO)",
           "titulo_sugerido": "Título viral de terror psicológico con alto CTR",
           "hooks": [
-            "Frase impactante 1 específica al tema — máximo 6 palabras",
-            "Frase impactante 2 específica al tema — máximo 6 palabras",
-            "Frase impactante 3 específica al tema — máximo 6 palabras"
+            "OBLIGATORIO: frase de pausa dramática específica al tema de ESTE video, máximo 6 palabras, sin signos de puntuación extraños",
+            "OBLIGATORIO: segunda frase de gancho específica al tema de ESTE video, máximo 6 palabras",
+            "OBLIGATORIO: tercera frase de tensión específica al tema de ESTE video, máximo 6 palabras"
           ],
           "escenas": [
             {
@@ -224,6 +229,11 @@ class AIEngine:
         sci-fi, futuristic, render 3D, cartoon, anime.
         VARIEDAD: cada escena visualmente diferente a la anterior.
 
+        CAMPO "hooks" OBLIGATORIO: Debes incluir SIEMPRE el campo "hooks" con exactamente 3 frases
+        cortas (máximo 6 palabras cada una) específicas al tema de ESTE video.
+        Estas frases se usarán como pausas dramáticas dentro del video.
+        NO uses frases genéricas — deben referirse al contenido específico del guion.
+
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
         FORMATO:
@@ -232,9 +242,9 @@ class AIEngine:
           "formato": "(SHORT o LARGO)",
           "titulo_sugerido": "Título táctico con dato concreto y CTR extremo",
           "hooks": [
-            "Dato impactante 1 específico al tema — máximo 6 palabras",
-            "Dato impactante 2 específico al tema — máximo 6 palabras",
-            "Dato impactante 3 específico al tema — máximo 6 palabras"
+            "OBLIGATORIO: dato táctico impactante específico al tema de ESTE video, máximo 6 palabras",
+            "OBLIGATORIO: segundo dato geopolítico específico al tema de ESTE video, máximo 6 palabras",
+            "OBLIGATORIO: tercera revelación específica al tema de ESTE video, máximo 6 palabras"
           ],
           "escenas": [
             {
@@ -305,6 +315,11 @@ class AIEngine:
         5. PROHIBIDO: neon, glowing, cartoon, illustrated, dark horror, crime scene.
         6. pexels_query en INGLÉS, 2-3 palabras descriptivas del objeto/ambiente de la escena.
 
+        CAMPO "hooks" OBLIGATORIO: Debes incluir SIEMPRE el campo "hooks" con exactamente 3 frases
+        cortas (máximo 6 palabras cada una) específicas al tema de ESTE video.
+        Estas frases se usarán como pausas dramáticas dentro del video.
+        NO uses frases genéricas — deben referirse al contenido específico del guion.
+
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
         FORMATO:
@@ -319,6 +334,11 @@ class AIEngine:
               "pexels_query": "[2-3 palabras en INGLÉS del objeto o ambiente de la escena]",
               "texto_locucion": "Texto en ESPAÑOL mexicano coloquial. Sin groserías. Con acentos correctos. Pausas con puntos suspensivos."
             }
+          ],
+          "hooks": [
+            "OBLIGATORIO: frase dramática íntima específica al tema de ESTE video, máximo 6 palabras",
+            "OBLIGATORIO: segunda frase de giro específica al tema de ESTE video, máximo 6 palabras",
+            "OBLIGATORIO: tercera pregunta impactante específica al tema, máximo 6 palabras"
           ]
         }
         """
@@ -388,6 +408,11 @@ class AIEngine:
         3. PROHIBIDO: personas reales, fotorrealismo, oscuridad, horror.
         4. pexels_query NO APLICA para este canal — siempre pon "cartoon mexican street scene"
            porque las imágenes se generan con Stable Diffusion, no con Pexels.
+
+        CAMPO "hooks" OBLIGATORIO: Debes incluir SIEMPRE el campo "hooks" con exactamente 3 frases
+        cortas (máximo 6 palabras cada una) específicas al tema de ESTE video.
+        Estas frases se usarán como pausas dramáticas dentro del video.
+        NO uses frases genéricas — deben referirse al contenido específico del guion.
 
         SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON.
 
