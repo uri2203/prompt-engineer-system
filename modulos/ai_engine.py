@@ -747,6 +747,7 @@ SALIDA: ÚNICAMENTE JSON válido.
 
             todas_las_escenas = []
             titulo = ""
+            hooks_finales = []
             marca_final = marca
             errores_totales = []
             offset = 0
@@ -754,6 +755,11 @@ SALIDA: ÚNICAMENTE JSON válido.
             for i, (bloque, descripcion) in enumerate(config_bloques):
                 inicio = offset + 1
                 fin    = offset + escenas_por_bloque
+                es_primer_bloque = (i == 0)
+                instruccion_hooks = (
+                    f" CAMPO hooks OBLIGATORIO en este bloque: incluye exactamente 3 frases "
+                    f"de máximo 6 palabras cada una, específicas al tema del video."
+                ) if es_primer_bloque else ""
                 instruccion_bloque = (
                     f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/{len(config_bloques)}]: "
                     f"Genera SOLO el bloque de {descripcion}. "
@@ -762,6 +768,7 @@ SALIDA: ÚNICAMENTE JSON válido.
                     f"OBLIGATORIO: cada texto_locucion debe tener MÍNIMO {palabras_por_escena} palabras en español. "
                     f"CRÍTICO PARA MOTOR DE VOZ: Escribe SIEMPRE con acentos correctos (á, é, í, ó, ú, ñ). "
                     f"NO generes título ni estructura completa, solo las escenas de este bloque."
+                    f"{instruccion_hooks}"
                 )
                 prompt = f"CONTEXTO: {contexto}\nPETICIÓN: {peticion}{instruccion_bloque}"
                 print(f"[AI ENGINE] Generando bloque {i+1}/{len(config_bloques)}: {bloque} ({min_aprox} min)...")
@@ -769,9 +776,10 @@ SALIDA: ÚNICAMENTE JSON válido.
                 resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
 
                 if resultado:
-                    if i == 0 and "titulo_sugerido" in resultado:
+                    if i == 0:
                         titulo = resultado.get("titulo_sugerido", "")
                         marca_final = marca
+                        hooks_finales = resultado.get("hooks", [])
                     escenas_bloque = resultado.get("escenas", [])
                     todas_las_escenas.extend(escenas_bloque)
                     offset += escenas_por_bloque
@@ -782,10 +790,12 @@ SALIDA: ÚNICAMENTE JSON válido.
             if not todas_las_escenas:
                 return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
+            print(f"[AI ENGINE] Hooks capturados: {hooks_finales}")
             guion_final = {
                 "marca": marca_final,
                 "formato": "LARGO",
                 "titulo_sugerido": titulo,
+                "hooks": hooks_finales,
                 "escenas": todas_las_escenas
             }
             return json.dumps(guion_final, indent=4, ensure_ascii=False)
