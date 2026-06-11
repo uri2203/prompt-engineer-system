@@ -688,22 +688,32 @@ class AIEngine:
 
         if not es_largo:
             prompt_paquete = f"""
-Eres un experto en SEO de YouTube y TikTok con track record de videos virales.
+Eres un estratega de crecimiento de YouTube Shorts y TikTok de élite. Sacas canales del territorio GENÉRICO.
+Genera un paquete de publicación que maximice CTR y retención, basado en el TEMA REAL y específico de este video.
+
 Canal: {marca}
 Nicho: {canal_info}
-Título sugerido del video: {titulo}
+Título sugerido: {titulo}
 Guión/locución: {texto_locucion[:1500]}
 Formato: SHORT 9:16 YouTube Shorts y TikTok
 
-Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
+INSTRUCCIONES ESTRICTAS:
+- TÍTULO: máx 70 caracteres, estrategia "vacío de información" (crea curiosidad sin revelar), keyword principal al inicio, específico NO genérico.
+- DESCRIPCIÓN: 150+ palabras, primeras 2 líneas enganchan, integra keywords del tema, 1 pregunta al espectador, cierra con CTA.
+- HASHTAGS: 10-15, los 3 primeros los más relevantes, mezcla amplios + específicos.
+- KEYWORDS: específicas al tema, hasta 500 caracteres, no relleno repetido.
+- PRIMER COMENTARIO: pregunta provocadora del tema, invita a comentar.
+- HOOK: prompt de imagen impactante del elemento más icónico del tema real. SIN personas, SIN texto, SIN violencia gráfica (normas de monetización).
+
+SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR",
-  "descripcion": "Descripción completa de al menos 300 palabras.",
-  "hashtags": "#hashtag1 #hashtag2 ... máximo 15 hashtags relevantes",
-  "keywords": "palabra1, palabra2, ... máximo 500 caracteres",
-  "primer_comentario": "Comentario para fijar. Termina con pregunta al espectador.",
-  "prompt_hook": "Prompt para imagen de hook. Ultra detallado, high contrast, dramatic lighting, no people, en inglés."
+  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, específico al tema",
+  "descripcion": "Descripción completa de al menos 150 palabras, primeras 2 líneas enganchan.",
+  "hashtags": "#hashtag1 #hashtag2 ... 10-15 hashtags, los 3 primeros los más relevantes",
+  "keywords": "palabra1, palabra2, ... específicas al tema, máximo 500 caracteres",
+  "primer_comentario": "Comentario para fijar, pregunta provocadora del tema. Termina invitando a comentar.",
+  "prompt_hook": "Prompt para imagen de hook del elemento más icónico del tema real. Ultra detallado, high contrast, dramatic lighting, no people, no text, no graphic violence, en inglés."
 }}
 """
         else:
@@ -737,12 +747,12 @@ Genera el paquete de publicación completo. SALIDA: ÚNICAMENTE JSON válido.
                     break
 
             prompt_paquete = f"""
-Eres un director creativo especialista en miniaturas de YouTube con CTR demostrado superior al 15%.
-Analizas el tema real del video y generas prompts de imagen ÚNICOS, ESPECÍFICOS y de alto impacto visual.
+Eres un estratega de crecimiento de YouTube de élite, especializado en sacar canales del territorio GENÉRICO.
+Tu trabajo: crear un paquete de publicación que MAXIMICE CTR, retención y posicionamiento SEO, basado en el TEMA REAL y específico de este video.
 
 CANAL: {marca}
 NICHO: {canal_info}
-TÍTULO: {titulo}
+TÍTULO SUGERIDO: {titulo}
 GUION COMPLETO: {texto_locucion}
 
 ADN VISUAL DEL CANAL:
@@ -750,26 +760,48 @@ ADN VISUAL DEL CANAL:
 - Estilo: {adn['estilo']}
 - Reglas: {adn['reglas']}
 
-INSTRUCCIONES PARA LOS PROMPTS DE MINIATURA:
-1. Extrae el ELEMENTO MÁS IMPACTANTE Y ESPECÍFICO del tema real del video (no genérico)
-2. Cada prompt debe evocar curiosidad, urgencia o impacto emocional inmediato
-3. Composiciones diferentes entre A, B y C — no repetir estructura
-4. Todos los prompts en INGLÉS, optimizados para Stable Diffusion
-5. Incluir: iluminación dramática, profundidad de campo, calidad cinemática
-6. NO incluir texto, personas identificables ni logos
+═══════════ INSTRUCCIONES ESTRICTAS DE METADATOS ═══════════
+
+**TÍTULO** (lo más importante para el CTR):
+- Máximo 70 caracteres, pero que llene al menos 55.
+- Estrategia "Vacío de Información": crea una brecha de curiosidad SIN revelar la conclusión.
+- Incluye la palabra clave principal del tema en los primeros 40 caracteres (para SEO).
+- Prohibido resumir el video. Prohibido clickbait vacío que no cumpla.
+- Debe ser ESPECÍFICO al tema real, NO genérico. Mal: "La historia más aterradora". Bien: algo anclado al detalle concreto del guion.
+
+**DESCRIPCIÓN** (SEO + retención):
+- Las PRIMERAS 2 líneas (150 caracteres) son críticas: aparecen antes del "ver más" y refuerzan el clic. Deben enganchar y contener la keyword principal.
+- Mínimo 350 palabras, estructurada en 3-4 párrafos.
+- Integra naturalmente 8-12 keywords del tema (sin amontonar).
+- Incluye 1 pregunta directa al espectador que invite a comentar.
+- Cierra con llamada a la acción (suscribirse, campana) y 3-5 hashtags clave al final.
+- Tono 100% alineado al ADN del canal, NO plantilla genérica.
+
+**HASHTAGS**: 12-15, mezcla de amplios (#terror) y específicos del tema. Los 3 primeros son los más importantes (YouTube los muestra).
+
+**KEYWORDS/TAGS**: hasta 500 caracteres. Mezcla: keyword principal, variantes long-tail, sinónimos, nombres propios del tema, y términos de búsqueda reales. Específicas al video, no relleno repetido.
+
+**PRIMER COMENTARIO**: genera debate. Pregunta provocadora anclada al tema específico. Termina invitando a compartir experiencias.
+
+═══════════ HOOK VISUAL DE INICIO (CRÍTICO PARA RETENCIÓN) ═══════════
+El hook es el clip de los primeros segundos: decide si el espectador se queda.
+Genera un prompt de VIDEO (no imagen fija) para una IA de video, que muestre el momento/objeto/lugar MÁS impactante y específico del tema real de ESTE video.
+- Debe describir MOVIMIENTO de cámara y de la escena (ej: "slow dolly push toward...", "dust slowly drifting...", "shadow gradually creeping...").
+- Máximo impacto emocional en los primeros 2 segundos (curiosidad, tensión o asombro).
+- Estilo y paleta del ADN del canal: {adn['paleta']}, {adn['estilo']}.
+- SIN personas reconocibles, SIN texto, SIN gore explícito, SIN nada que viole normas de monetización de YouTube. Sugerir tensión, no mostrar violencia gráfica.
+- En INGLÉS, optimizado para IA de video (Wan/SVD), ultra detallado.
 
 SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título SEO optimizado, máximo 70 caracteres, con gancho emocional",
-  "descripcion": "Descripción 300+ palabras optimizada para SEO y retención.",
-  "hashtags": "máximo 15 hashtags separados por espacio",
-  "keywords": "máximo 500 caracteres separadas por coma",
-  "primer_comentario": "Comentario que genera debate inmediato. Termina con pregunta provocadora.",
-  "prompt_hook": "Prompt SD para imagen de hook — objeto o lugar MÁS icónico del tema real, ultra detallado, {adn['paleta'].split(',')[0]}, dramatic lighting, no people, photorealistic, en inglés",
-  "prompt_miniatura_A": "Prompt SD completo para miniatura A — COMPOSICIÓN IMPACTO: elemento focal del tema real del video con máximo dramatismo, {adn['paleta']}, {adn['estilo']}, extreme contrast, cinematic depth of field, no humans, no text, 1920x1080, ultra detailed",
-  "prompt_miniatura_B": "Prompt SD completo para miniatura B — COMPOSICIÓN TENSIÓN: ángulo diferente a A, mismo tema desde perspectiva que genere urgencia o intriga, {adn['paleta']}, {adn['estilo']}, harsh rim lighting, no people, 1920x1080, photorealistic",
-  "prompt_miniatura_C": "Prompt SD completo para miniatura C — COMPOSICIÓN DETALLE: macro extremo del elemento más simbólico del tema, {adn['paleta'].split(',')[0]}, ultra sharp focus, {adn['estilo']}, no humans, no text, 1920x1080"
+  "titulo_final": "Título SEO optimizado siguiendo TODAS las reglas de arriba",
+  "descripcion": "Descripción 350+ palabras siguiendo la estructura de arriba",
+  "hashtags": "12-15 hashtags separados por espacio, los 3 más relevantes primero",
+  "keywords": "keywords específicas al tema, hasta 500 caracteres, separadas por coma",
+  "primer_comentario": "Comentario que genera debate, pregunta provocadora del tema específico",
+  "prompt_hook": "Prompt de VIDEO con movimiento de cámara para el hook de inicio — objeto/momento más icónico del tema real, {adn['paleta'].split(',')[0]}, {adn['estilo']}, cinematic camera motion, dramatic lighting, no people, no text, no graphic violence, ultra detailed, en inglés",
+  "prompt_hook_imagen": "Versión imagen estática del mismo hook para fallback con Stable Diffusion — mismo contenido sin descripción de movimiento, {adn['paleta'].split(',')[0]}, dramatic lighting, no people, photorealistic, en inglés"
 }}
 """
 
