@@ -136,7 +136,7 @@
                 <div class="bg-[#0B1120] border border-slate-700 p-4 rounded-lg flex justify-between items-center">
                     <div class="flex-1">
                         <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1">Modo de Ejecución</label>
-                        <select id="orden_reloj" class="bg-[#0F1523] text-white font-bold text-sm outline-none cursor-pointer border border-slate-700 rounded px-3 py-2 w-full" style="color-scheme: dark;">
+                        <select id="orden_reloj" onchange="onCambioReloj()" class="bg-[#0F1523] text-white font-bold text-sm outline-none cursor-pointer border border-slate-700 rounded px-3 py-2 w-full" style="color-scheme: dark;">
                             <option value="inmediato">⚡ Ejecutar Inmediatamente</option>
                             <option value="cron_noche">📅 Programar fecha y hora...</option>
                         </select>
@@ -423,6 +423,25 @@
     // Controladores del Modal
     function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); }
     function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
+
+    // Al cambiar el modo de ejecución: si elige "programar", abre el calendario de una vez
+    function onCambioReloj() {
+        const reloj = document.getElementById('orden_reloj').value;
+        if (reloj === 'cron_noche') {
+            // Pre-cargar el canal/formato que ya eligió en el calendario
+            const marca = document.getElementById('orden_marca').value;
+            const formato = document.getElementById('orden_formato') ? document.getElementById('orden_formato').value : '9:16';
+            cerrarModalOrden();
+            abrirModalAgenda();
+            // Pre-seleccionar el canal en el calendario
+            setTimeout(() => {
+                const agMarca = document.getElementById('ag_marca');
+                if (agMarca) agMarca.value = marca;
+                // Volver el selector a inmediato para la próxima vez
+                document.getElementById('orden_reloj').value = 'inmediato';
+            }, 100);
+        }
+    }
 
     // Sugerir tema en tendencia (TrendEngine)
     async function sugerirTema() {
