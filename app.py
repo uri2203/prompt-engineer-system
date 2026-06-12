@@ -105,6 +105,26 @@ def api_telemetria():
 # Render no puede hacer ping a IPs locales (192.168.x.x son privadas).
 # Por eso el Xeon reporta el estado aquí, y el dashboard lo lee.
 _estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts": 0}
+# Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
+_worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
+
+@app.route('/api/nodo/worker_estado', methods=['POST'])
+def api_worker_estado():
+    """El worker reporta si está ocupado generando un video. Evita solapamientos."""
+    data = request.json or {}
+    _worker_estado["ocupado"] = bool(data.get("ocupado", False))
+    _worker_estado["tarea_actual"] = data.get("tarea_actual", "")
+    _worker_estado["ts"] = time.time()
+    return jsonify({"status": "ok"})
+
+def _worker_esta_ocupado():
+    """True si el worker reportó estar ocupado hace menos de 5 minutos."""
+    if not _worker_estado.get("ocupado"):
+        return False
+    # Si el último reporte de "ocupado" es viejo (>5 min), asumimos que se liberó
+    if time.time() - _worker_estado.get("ts", 0) > 300:
+        return False
+    return True
 
 @app.route('/api/nodos')
 @login_required
@@ -192,6 +212,11 @@ def api_bot_cron_tick():
     agenda = cfg.get("agenda", [])
     if not agenda:
         return jsonify({"status": "sin_agenda"})
+
+    # Si el worker está ocupado generando un video, NO disparar nada nuevo.
+    # La orden se quedará pendiente y se disparará en el siguiente tick libre.
+    if _worker_esta_ocupado():
+        return jsonify({"status": "worker_ocupado", "tarea": _worker_estado.get("tarea_actual", "")})
 
     # Render corre en UTC. Convertir a hora de México (UTC-6) para que coincida
     # con lo que el usuario programó en el calendario.
