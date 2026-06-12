@@ -225,26 +225,58 @@
 
     function abrirModalAgenda() {
         document.getElementById('modal_agenda').classList.remove('hidden');
-        // Fecha mínima = hoy
-        const hoy = new Date().toISOString().split('T')[0];
+        const ahora = new Date();
+        const hoy = ahora.toISOString().split('T')[0];
         const fechaInput = document.getElementById('ag_fecha');
         fechaInput.min = hoy;
-        if (!fechaInput.value) fechaInput.value = hoy;
+        if (!fechaInput.value || fechaInput.value < hoy) fechaInput.value = hoy;
+        // Al cambiar la fecha, recalcular la hora mínima
+        fechaInput.onchange = ajustarHoraMinima;
+        ajustarHoraMinima();
         cargarAgenda();
     }
     function cerrarModalAgenda() { document.getElementById('modal_agenda').classList.add('hidden'); }
 
+    // Si la fecha elegida es hoy, bloquear las horas que ya pasaron
+    function ajustarHoraMinima() {
+        const ahora = new Date();
+        const hoy = ahora.toISOString().split('T')[0];
+        const fecha = document.getElementById('ag_fecha').value;
+        const horaInput = document.getElementById('ag_hora');
+        if (fecha === hoy) {
+            // hora mínima = hora actual + 2 minutos (margen)
+            const min = new Date(ahora.getTime() + 2*60000);
+            const hh = String(min.getHours()).padStart(2,'0');
+            const mm = String(min.getMinutes()).padStart(2,'0');
+            const minStr = `${hh}:${mm}`;
+            horaInput.min = minStr;
+            if (horaInput.value && horaInput.value < minStr) horaInput.value = minStr;
+        } else {
+            horaInput.min = '00:00';
+        }
+    }
+
     async function agregarAgenda() {
         const fecha = document.getElementById('ag_fecha').value;
         const hora = document.getElementById('ag_hora').value;
+        const repetir = document.getElementById('ag_repetir').value;
         if (!fecha || !hora) { alert('Selecciona fecha y hora'); return; }
+
+        // Validar que no sea en el pasado (solo aplica a "una vez")
+        if (repetir === 'una_vez') {
+            const objetivo = new Date(`${fecha}T${hora}`);
+            if (objetivo.getTime() <= Date.now()) {
+                alert('Esa fecha y hora ya pasó. Elige un momento futuro.');
+                return;
+            }
+        }
         const payload = {
             accion: 'agregar',
             marca: document.getElementById('ag_marca').value,
             formato: document.getElementById('ag_formato').value,
             fecha: fecha,
             hora: hora,
-            repetir: document.getElementById('ag_repetir').value,
+            repetir: repetir,
         };
         await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
         cargarAgenda();
