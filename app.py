@@ -187,12 +187,47 @@ def api_bot_lanzar_orden():
             longitud=longitud, formato=formato_calculado
         )
 
+        # 3. Parsear el guion (viene como JSON string) y armar la tarea del worker
+        import json as _json
+        if isinstance(resultado, str):
+            if resultado.startswith("ERROR"):
+                return jsonify({"status": "error", "message": resultado}), 500
+            try:
+                guion = _json.loads(resultado)
+            except Exception:
+                return jsonify({"status": "error", "message": "Guion no es JSON válido"}), 500
+        else:
+            guion = resultado
+
         tarea_id = str(uuid.uuid4())
-        titulo = ""
+        escenas = guion.get("escenas", [])
+        titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
+        # Reconstruir el texto de locución completo desde las escenas
+        texto_locucion = " ".join(
+            e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion")
+        )
+
+        if not escenas:
+            return jsonify({"status": "error", "message": "El guion no trae escenas"}), 500
+
+        # 4. Encolar la ORDEN VISUAL (el worker genera imágenes → voz → video → MP4)
+        tarea_worker = {
+            "id": tarea_id,
+            "tipo": "IMAGEN",
+            "prompt": _json.dumps(escenas, ensure_ascii=False),
+            "formato": formato_calculado,
+            "marca": marca,
+            "texto_locucion": texto_locucion,
+            "titulo_sugerido": titulo,
+            "origen": "bot_pinpinela",
+        }
+        # Guardar en disco (sobrevive reinicios de Render) y encolar
         try:
-            titulo = resultado.get('titulo', '') if isinstance(resultado, dict) else ''
+            with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
+                _json.dump(tarea_worker, f)
         except Exception:
             pass
+        cola_de_renderizado.append(tarea_worker)
 
         return jsonify({
             "status": "PENDING_REVIEW",
@@ -200,7 +235,8 @@ def api_bot_lanzar_orden():
             "marca": marca,
             "formato": formato_calculado,
             "titulo": titulo,
-            "data": resultado
+            "num_escenas": len(escenas),
+            "encolado": True,
         })
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
@@ -348,18 +384,21 @@ def nodo_encolar_tarea():
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     import json as _json, glob
-    # Si la cola está vacía, recuperar tareas de ensamblaje guardadas en disco
+    # Si la cola está vacía, recuperar tareas guardadas en disco (ensamblajes y órdenes del bot)
     if len(cola_de_renderizado) == 0:
-        archivos = glob.glob("/tmp/ensamblaje_*.json")
-        for archivo in archivos:
-            try:
-                with open(archivo, "r") as f:
-                    tarea = _json.load(f)
-                cola_de_renderizado.append(tarea)
-                os.remove(archivo)
-                break  # procesar una a la vez
-            except:
-                pass
+        for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json"):
+            archivos = glob.glob(patron)
+            for archivo in archivos:
+                try:
+                    with open(archivo, "r") as f:
+                        tarea = _json.load(f)
+                    cola_de_renderizado.append(tarea)
+                    os.remove(archivo)
+                    break  # procesar una a la vez
+                except:
+                    pass
+            if len(cola_de_renderizado) > 0:
+                break
     if len(cola_de_renderizado) > 0:
         return jsonify({"status": "success", "hay_trabajo": True, "tarea": cola_de_renderizado.pop(0)}), 200
     return jsonify({"status": "success", "hay_trabajo": False}), 200
