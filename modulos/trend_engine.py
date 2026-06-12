@@ -45,16 +45,66 @@ class TrendEngine:
 
     def _conectar_extraccion_nube(self, api_key, query):
         """
-        Puerta de enlace para la API de YouTube / Google Trends.
+        Puerta de enlace para la API de YouTube Data v3.
         Extrae la data cruda de los competidores.
+        PREPARADO: en cuanto se agregue la API key en la Bóveda, funciona en vivo.
+        Sin key (o si falla la cuota), cae a simulación para no romper la fábrica.
         """
         if not api_key:
-            logging.warning(f"[TREND ENGINE] Llave de API no detectada en la Bóveda. Simulación estructurada activada para: {query}")
+            logging.warning(f"[TREND ENGINE] Llave de API no detectada en la Bóveda. Simulación activada para: {query}")
             return self._simular_respuesta_api(query)
-        
-        # Estructura lista para inyección de librería googleapiclient.discovery
-        logging.info(f"[TREND ENGINE] Ejecutando escaneo en vivo para el nodo: {query}")
-        return self._simular_respuesta_api(query)
+
+        # ── ESCANEO EN VIVO (YouTube Data v3) ──
+        try:
+            import requests as _rq
+            from datetime import datetime, timedelta, timezone as _tz
+            # Solo videos publicados en los últimos 7 días (tendencia fresca)
+            hace_semana = (datetime.now(_tz.utc) - timedelta(days=7)).isoformat()
+            # 1. Buscar videos recientes del término
+            r = _rq.get(
+                "https://www.googleapis.com/youtube/v3/search",
+                params={
+                    "key": api_key, "q": query, "part": "snippet",
+                    "type": "video", "order": "viewCount",
+                    "publishedAfter": hace_semana, "maxResults": 10,
+                    "relevanceLanguage": "es", "regionCode": "MX",
+                },
+                timeout=15
+            )
+            if r.status_code != 200:
+                logging.warning(f"[TREND ENGINE] YouTube API HTTP {r.status_code} — fallback a simulación.")
+                return self._simular_respuesta_api(query)
+
+            items = r.json().get("items", [])
+            if not items:
+                return self._simular_respuesta_api(query)
+
+            # 2. Obtener estadísticas (vistas) de esos videos
+            video_ids = [it["id"]["videoId"] for it in items if it.get("id", {}).get("videoId")]
+            rs = _rq.get(
+                "https://www.googleapis.com/youtube/v3/videos",
+                params={"key": api_key, "id": ",".join(video_ids), "part": "statistics,snippet"},
+                timeout=15
+            )
+            if rs.status_code != 200:
+                return self._simular_respuesta_api(query)
+
+            resultados = []
+            for v in rs.json().get("items", []):
+                stats = v.get("statistics", {})
+                snip = v.get("snippet", {})
+                resultados.append({
+                    "titulo": snip.get("title", query),
+                    "vistas": int(stats.get("viewCount", 0)),
+                    "fecha_publicacion": snip.get("publishedAt", datetime.now(_tz.utc).isoformat()),
+                    "canal": snip.get("channelTitle", "Competidor"),
+                })
+            logging.info(f"[TREND ENGINE] Escaneo EN VIVO ok: {len(resultados)} videos para '{query}'.")
+            return resultados if resultados else self._simular_respuesta_api(query)
+
+        except Exception as e:
+            logging.warning(f"[TREND ENGINE] Error en escaneo en vivo ({e}) — fallback a simulación.")
+            return self._simular_respuesta_api(query)
 
     def _simular_respuesta_api(self, query):
         """
