@@ -133,7 +133,7 @@ def api_nodos_reportar():
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
-# Config del cronjob (persiste en disco para sobrevivir reinicios)
+# Agenda semanal: cada entrada = {marca, dias:[0-6], hora:"HH:MM", formato, activo}
 import json as _json_cron
 CRON_FILE = "/tmp/cron_pinpinela.json"
 
@@ -142,7 +142,7 @@ def _leer_cron():
         with open(CRON_FILE) as f:
             return _json_cron.load(f)
     except Exception:
-        return {"activo": False, "hora": "08:00", "canales": [], "formato": "9:16", "ultima_ejecucion": ""}
+        return {"agenda": [], "ejecuciones": {}}
 
 def _guardar_cron(cfg):
     try:
@@ -157,41 +157,67 @@ def api_bot_cron_config():
     if request.method == 'POST':
         data = request.json or {}
         cfg = _leer_cron()
-        cfg["activo"]  = data.get("activo", cfg.get("activo", False))
-        cfg["hora"]    = data.get("hora", cfg.get("hora", "08:00"))
-        cfg["canales"] = data.get("canales", cfg.get("canales", []))
-        cfg["formato"] = data.get("formato", cfg.get("formato", "9:16"))
+        # Acción: agregar, eliminar, toggle, o reemplazar agenda completa
+        accion = data.get("accion", "reemplazar")
+        if accion == "agregar":
+            entrada = {
+                "id": str(uuid.uuid4())[:8],
+                "marca": data.get("marca", "La Viuda"),
+                "dias": data.get("dias", []),          # [0=Lun ... 6=Dom]
+                "hora": data.get("hora", "08:00"),
+                "formato": data.get("formato", "9:16"),
+                "activo": True,
+            }
+            cfg.setdefault("agenda", []).append(entrada)
+        elif accion == "eliminar":
+            cfg["agenda"] = [e for e in cfg.get("agenda", []) if e.get("id") != data.get("id")]
+        elif accion == "toggle":
+            for e in cfg.get("agenda", []):
+                if e.get("id") == data.get("id"):
+                    e["activo"] = not e.get("activo", True)
+        else:
+            cfg["agenda"] = data.get("agenda", cfg.get("agenda", []))
         _guardar_cron(cfg)
         return jsonify({"status": "ok", "config": cfg})
     return jsonify(_leer_cron())
 
 @app.route('/api/bot/cron/tick', methods=['POST'])
 def api_bot_cron_tick():
-    """El Xeon llama aquí cada minuto. Si es la hora del cronjob y no se ha
-    ejecutado hoy, dispara las órdenes de los canales configurados."""
+    """El Xeon llama aquí cada minuto. Revisa la agenda semanal y dispara las
+    entradas cuyo día+hora coincidan con ahora (y no se hayan ejecutado hoy)."""
     from datetime import datetime
     cfg = _leer_cron()
-    if not cfg.get("activo"):
-        return jsonify({"status": "inactivo"})
+    agenda = cfg.get("agenda", [])
+    if not agenda:
+        return jsonify({"status": "sin_agenda"})
 
     ahora = datetime.now()
+    dia_semana = ahora.weekday()  # 0=Lun ... 6=Dom
     hora_actual = ahora.strftime("%H:%M")
     hoy = ahora.strftime("%Y-%m-%d")
+    ejecuciones = cfg.setdefault("ejecuciones", {})
 
-    # ¿Ya es la hora y no se ejecutó hoy?
-    if hora_actual == cfg.get("hora") and cfg.get("ultima_ejecucion") != hoy:
-        cfg["ultima_ejecucion"] = hoy
-        _guardar_cron(cfg)
-        canales = cfg.get("canales", [])
-        disparadas = []
-        for marca in canales:
+    disparadas = []
+    for e in agenda:
+        if not e.get("activo"):
+            continue
+        if dia_semana in e.get("dias", []) and e.get("hora") == hora_actual:
+            clave_exec = f"{e.get('id')}_{hoy}"
+            if ejecuciones.get(clave_exec):
+                continue  # ya se ejecutó hoy esta entrada
+            ejecuciones[clave_exec] = True
             try:
-                tid = _disparar_orden_interna(marca, cfg.get("formato", "9:16"), "")
-                disparadas.append({"marca": marca, "tarea_id": tid})
-            except Exception as e:
-                disparadas.append({"marca": marca, "error": str(e)})
+                tid = _disparar_orden_interna(e.get("marca"), e.get("formato", "9:16"), "")
+                disparadas.append({"marca": e.get("marca"), "tarea_id": tid})
+            except Exception as ex:
+                disparadas.append({"marca": e.get("marca"), "error": str(ex)})
+
+    if disparadas:
+        # Limpiar ejecuciones viejas (de otros días)
+        cfg["ejecuciones"] = {k: v for k, v in ejecuciones.items() if k.endswith(hoy)}
+        _guardar_cron(cfg)
         return jsonify({"status": "disparado", "ordenes": disparadas})
-    return jsonify({"status": "esperando", "hora_actual": hora_actual, "hora_cron": cfg.get("hora")})
+    return jsonify({"status": "esperando", "hora": hora_actual, "dia": dia_semana})
 
 def _disparar_orden_interna(marca, formato, premisa):
     """Lógica compartida: genera guion + encola. Devuelve tarea_id."""
@@ -238,6 +264,42 @@ def _disparar_orden_interna(marca, formato, premisa):
         pass
     cola_de_renderizado.append(tarea_worker)
     return tarea_id
+
+@app.route('/api/bot/cola')
+@login_required
+def api_bot_cola():
+    """Devuelve el contenido real de la cola de renderizado + órdenes en disco."""
+    import glob, json as _json
+    items = []
+    # Tareas en memoria
+    for t in cola_de_renderizado:
+        items.append({
+            "id": t.get("id", "?")[:8],
+            "marca": t.get("marca", "?"),
+            "tipo": t.get("tipo", "?"),
+            "formato": t.get("formato", "?"),
+            "titulo": t.get("titulo_sugerido", ""),
+            "origen": t.get("origen", "manual"),
+            "estado": "en_cola",
+        })
+    # Tareas guardadas en disco (esperando que el worker las tome)
+    for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json"):
+        for archivo in glob.glob(patron):
+            try:
+                with open(archivo) as f:
+                    t = _json.load(f)
+                items.append({
+                    "id": t.get("id", "?")[:8],
+                    "marca": t.get("marca", "?"),
+                    "tipo": t.get("tipo", "?"),
+                    "formato": t.get("formato", "?"),
+                    "titulo": t.get("titulo_sugerido", ""),
+                    "origen": t.get("origen", "manual"),
+                    "estado": "en_disco",
+                })
+            except Exception:
+                pass
+    return jsonify({"total": len(items), "items": items})
 
 @app.route('/api/bot/estado')
 @login_required
