@@ -88,8 +88,30 @@
             <div class="flex items-center text-slate-400"><span class="status-indicator bg-purple-500"></span> Uptime: <span id="tel_uptime" class="ml-1">0m 0s</span></div>
         </div>
 
+        <div class="mt-3 pt-3 border-t border-slate-700">
+            <h3 class="text-[#f8fafc] font-bold text-[9px] uppercase tracking-widest mb-2">Nodos del Sistema</h3>
+            <div class="space-y-2 text-[10px]">
+                <div class="flex items-center justify-between">
+                    <span class="flex items-center text-slate-300"><span class="status-indicator bg-slate-600" id="nodo_sd"></span> Imágenes</span>
+                    <span class="text-slate-500 font-mono text-[8px]">.215:7861</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="flex items-center text-slate-300"><span class="status-indicator bg-slate-600" id="nodo_voz"></span> Voz</span>
+                    <span class="text-slate-500 font-mono text-[8px]">.251:8000</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="flex items-center text-slate-300"><span class="status-indicator bg-slate-600" id="nodo_parallax"></span> Parallax</span>
+                    <span class="text-slate-500 font-mono text-[8px]">.215:8500</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="flex items-center text-slate-300"><span class="status-indicator bg-slate-600" id="nodo_nube"></span> Nube</span>
+                    <span class="text-slate-500 font-mono text-[8px]">render</span>
+                </div>
+            </div>
+        </div>
+
         <div class="mt-auto border-t border-slate-700 pt-3">
-            <button onclick="actualizarTelemetria()" class="w-full bg-slate-800 hover:bg-slate-700 py-2 rounded text-[9px] text-slate-300 font-bold border border-slate-600 transition-colors">+ Refresh</button>
+            <button onclick="actualizarTelemetria(); actualizarNodos();" class="w-full bg-slate-800 hover:bg-slate-700 py-2 rounded text-[9px] text-slate-300 font-bold border border-slate-600 transition-colors">+ Refresh</button>
         </div>
     </div>
 
@@ -132,8 +154,34 @@
                 }
             } catch(e) { console.error("Falla al conectar con telemetría."); }
         }
+
+        async function actualizarNodos() {
+            const mapa = {
+                'sd': 'nodo_sd', 'voz': 'nodo_voz',
+                'parallax': 'nodo_parallax', 'nube': 'nodo_nube'
+            };
+            try {
+                const res = await fetch('/api/nodos');
+                const data = await res.json();
+                for (const [clave, id] of Object.entries(mapa)) {
+                    const el = document.getElementById(id);
+                    if (!el) continue;
+                    const estado = data[clave];  // 'on', 'off', 'warn'
+                    el.classList.remove('bg-slate-600', 'bg-[#10b981]', 'bg-red-500', 'bg-amber-500');
+                    if (estado === 'on')        el.classList.add('bg-[#10b981]');
+                    else if (estado === 'warn') el.classList.add('bg-amber-500');
+                    else                        el.classList.add('bg-red-500');
+                }
+            } catch(e) {
+                // Si falla, marcar todos en rojo
+                for (const id of Object.values(mapa)) {
+                    const el = document.getElementById(id);
+                    if (el) { el.classList.remove('bg-slate-600','bg-[#10b981]','bg-amber-500'); el.classList.add('bg-red-500'); }
+                }
+            }
+        }
         
-        window.addEventListener('load', () => { initCharts(); actualizarTelemetria(); setInterval(actualizarTelemetria, 10000); });
+        window.addEventListener('load', () => { initCharts(); actualizarTelemetria(); actualizarNodos(); setInterval(actualizarTelemetria, 10000); setInterval(actualizarNodos, 15000); });
     </script>
 </body>
 </html>
