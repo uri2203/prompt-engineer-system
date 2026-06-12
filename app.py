@@ -132,6 +132,136 @@ def api_nodos_reportar():
 
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# Config del cronjob (persiste en disco para sobrevivir reinicios)
+import json as _json_cron
+CRON_FILE = "/tmp/cron_pinpinela.json"
+
+def _leer_cron():
+    try:
+        with open(CRON_FILE) as f:
+            return _json_cron.load(f)
+    except Exception:
+        return {"activo": False, "hora": "08:00", "canales": [], "formato": "9:16", "ultima_ejecucion": ""}
+
+def _guardar_cron(cfg):
+    try:
+        with open(CRON_FILE, "w") as f:
+            _json_cron.dump(cfg, f)
+    except Exception:
+        pass
+
+@app.route('/api/bot/cron/config', methods=['GET', 'POST'])
+@login_required
+def api_bot_cron_config():
+    if request.method == 'POST':
+        data = request.json or {}
+        cfg = _leer_cron()
+        cfg["activo"]  = data.get("activo", cfg.get("activo", False))
+        cfg["hora"]    = data.get("hora", cfg.get("hora", "08:00"))
+        cfg["canales"] = data.get("canales", cfg.get("canales", []))
+        cfg["formato"] = data.get("formato", cfg.get("formato", "9:16"))
+        _guardar_cron(cfg)
+        return jsonify({"status": "ok", "config": cfg})
+    return jsonify(_leer_cron())
+
+@app.route('/api/bot/cron/tick', methods=['POST'])
+def api_bot_cron_tick():
+    """El Xeon llama aquí cada minuto. Si es la hora del cronjob y no se ha
+    ejecutado hoy, dispara las órdenes de los canales configurados."""
+    from datetime import datetime
+    cfg = _leer_cron()
+    if not cfg.get("activo"):
+        return jsonify({"status": "inactivo"})
+
+    ahora = datetime.now()
+    hora_actual = ahora.strftime("%H:%M")
+    hoy = ahora.strftime("%Y-%m-%d")
+
+    # ¿Ya es la hora y no se ejecutó hoy?
+    if hora_actual == cfg.get("hora") and cfg.get("ultima_ejecucion") != hoy:
+        cfg["ultima_ejecucion"] = hoy
+        _guardar_cron(cfg)
+        canales = cfg.get("canales", [])
+        disparadas = []
+        for marca in canales:
+            try:
+                tid = _disparar_orden_interna(marca, cfg.get("formato", "9:16"), "")
+                disparadas.append({"marca": marca, "tarea_id": tid})
+            except Exception as e:
+                disparadas.append({"marca": marca, "error": str(e)})
+        return jsonify({"status": "disparado", "ordenes": disparadas})
+    return jsonify({"status": "esperando", "hora_actual": hora_actual, "hora_cron": cfg.get("hora")})
+
+def _disparar_orden_interna(marca, formato, premisa):
+    """Lógica compartida: genera guion + encola. Devuelve tarea_id."""
+    import json as _json
+    es_largo = formato == "16:9"
+    longitud = "2800 palabras" if es_largo else "130 palabras"
+    formato_calculado = "16:9" if formato == "16:9" else "9:16"
+
+    yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+    contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
+    contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+
+    resultado = compliance_engine.blindar_guion(
+        ai_engine_instancia=ai_engine, marca=marca, contexto=contexto_absoluto,
+        peticion=premisa or "Tema en tendencia del canal",
+        longitud=longitud, formato=formato_calculado
+    )
+    if isinstance(resultado, str):
+        if resultado.startswith("ERROR"):
+            raise Exception(resultado[:120])
+        guion = _json.loads(resultado)
+    else:
+        guion = resultado
+
+    tarea_id = str(uuid.uuid4())
+    escenas = guion.get("escenas", [])
+    if not escenas:
+        raise Exception("Guion sin escenas")
+    titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
+    texto_locucion = " ".join(e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion"))
+
+    tarea_worker = {
+        "id": tarea_id, "tipo": "IMAGEN",
+        "prompt": _json.dumps(escenas, ensure_ascii=False),
+        "formato": formato_calculado, "marca": marca,
+        "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+        "origen": "bot_pinpinela_cron",
+    }
+    try:
+        with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
+            _json.dump(tarea_worker, f)
+    except Exception:
+        pass
+    cola_de_renderizado.append(tarea_worker)
+    return tarea_id
+
+@app.route('/api/bot/estado')
+@login_required
+def api_bot_estado():
+    """Estado en vivo de los 4 bloques del Bot Pinpinela para el dashboard."""
+    cron = _leer_cron()
+    # Estado de nodos (reportado por el Xeon)
+    antiguedad = time.time() - _estado_nodos.get("ts", 0)
+    nodos_vivos = antiguedad <= 60
+    sd_on   = nodos_vivos and _estado_nodos.get("sd") == "on"
+    voz_on  = nodos_vivos and _estado_nodos.get("voz") == "on"
+    return jsonify({
+        "scripting": {
+            "estado": "activo" if cron.get("activo") else "en_espera",
+            "cron_hora": cron.get("hora", "—"),
+            "cron_activo": cron.get("activo", False),
+            "canales": cron.get("canales", []),
+        },
+        "voz": {"estado": "online" if voz_on else "offline"},
+        "video": {"estado": "online" if sd_on else "ocioso",
+                  "en_cola": len(cola_de_renderizado)},
+        "cola": {"pendientes": len(resultados_itinerantes)},
+    })
+
 @app.route('/api/bot/sugerir_tema', methods=['POST'])
 @login_required
 def api_bot_sugerir_tema():
