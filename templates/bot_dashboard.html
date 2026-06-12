@@ -223,10 +223,18 @@
     const DIAS_NOMBRE = ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM'];
     const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
+    // Fecha local en formato YYYY-MM-DD (NO usar toISOString que da UTC y desfasa el día)
+    function fechaLocalHoy() {
+        const a = new Date();
+        const y = a.getFullYear();
+        const m = String(a.getMonth()+1).padStart(2,'0');
+        const d = String(a.getDate()).padStart(2,'0');
+        return `${y}-${m}-${d}`;
+    }
+
     function abrirModalAgenda() {
         document.getElementById('modal_agenda').classList.remove('hidden');
-        const ahora = new Date();
-        const hoy = ahora.toISOString().split('T')[0];
+        const hoy = fechaLocalHoy();
         const fechaInput = document.getElementById('ag_fecha');
         fechaInput.min = hoy;
         if (!fechaInput.value || fechaInput.value < hoy) fechaInput.value = hoy;
@@ -240,7 +248,7 @@
     // Si la fecha elegida es hoy, bloquear las horas que ya pasaron
     function ajustarHoraMinima() {
         const ahora = new Date();
-        const hoy = ahora.toISOString().split('T')[0];
+        const hoy = fechaLocalHoy();
         const fecha = document.getElementById('ag_fecha').value;
         const horaInput = document.getElementById('ag_hora');
         if (fecha === hoy) {
