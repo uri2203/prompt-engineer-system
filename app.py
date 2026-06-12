@@ -101,6 +101,35 @@ def api_telemetria():
         "historial_tokens": [0, 0, 0, 0, 0]
     })
 
+# ── MONITOREO DE NODOS (patrón heartbeat) ────────────────────────────────────
+# Render no puede hacer ping a IPs locales (192.168.x.x son privadas).
+# Por eso el Xeon reporta el estado aquí, y el dashboard lo lee.
+_estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts": 0}
+
+@app.route('/api/nodos')
+@login_required
+def api_nodos():
+    # Si el último reporte del Xeon es viejo (>60s), marcar locales como desconocidos
+    antiguedad = time.time() - _estado_nodos.get("ts", 0)
+    if antiguedad > 60:
+        return jsonify({"sd": "off", "voz": "off", "parallax": "off", "nube": "on"})
+    return jsonify({
+        "sd": _estado_nodos.get("sd", "off"),
+        "voz": _estado_nodos.get("voz", "off"),
+        "parallax": _estado_nodos.get("parallax", "off"),
+        "nube": "on",  # si responde este endpoint, la nube está viva
+    })
+
+@app.route('/api/nodos/reportar', methods=['POST'])
+def api_nodos_reportar():
+    # El Xeon reporta aquí el estado de los nodos locales (hace ping y envía).
+    data = request.json or {}
+    _estado_nodos["sd"]       = data.get("sd", "off")
+    _estado_nodos["voz"]      = data.get("voz", "off")
+    _estado_nodos["parallax"] = data.get("parallax", "off")
+    _estado_nodos["ts"]       = time.time()
+    return jsonify({"status": "ok"})
+
 @app.route('/api/get_boveda')
 @login_required
 def api_get_boveda(): 
