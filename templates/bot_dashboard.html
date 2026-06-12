@@ -104,12 +104,11 @@
                     <div>
                         <label class="label-blue block mb-2 text-[10px] text-[#60a5fa] font-bold uppercase tracking-widest">Canal / Marca</label>
                         <select id="orden_marca" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-blue-500 outline-none transition-colors">
-                            <option value="La Viuda">La Viuda (Suspenso)</option>
+                            <option value="La Viuda">La Viuda (Terror)</option>
                             <option value="Monkygraff">Monkygraff (Geopolítica)</option>
+                            <option value="FiltradoMX">FiltradoMX (Drama)</option>
+                            <option value="LaesquinaRandom">LaesquinaRandom (Curiosidades)</option>
                             <option value="TuIALista">TuIALista (IA / Tech)</option>
-                            <option value="Ezzenshop">Ezzenshop (Jóvenes)</option>
-                            <option value="Yayika Digital">Yayika Digital (Mujer)</option>
-                            <option value="Yayika Apparel">Yayika Apparel (Sátira/TikTok)</option>
                         </select>
                     </div>
                     
@@ -135,14 +134,15 @@
                 </div>
 
                 <div class="bg-[#0B1120] border border-slate-700 p-4 rounded-lg flex justify-between items-center">
-                    <div>
-                        <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1">Reloj de Ejecución (Cronjob)</label>
-                        <select id="orden_reloj" class="bg-transparent text-white font-bold text-sm outline-none cursor-pointer">
-                            <option value="inmediato">Ejecutar Inmediatamente (Prioridad Alta)</option>
-                            <option value="cron_noche">Programar para Madrugada (03:00 AM)</option>
+                    <div class="flex-1">
+                        <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1">Modo de Ejecución</label>
+                        <select id="orden_reloj" class="bg-[#0F1523] text-white font-bold text-sm outline-none cursor-pointer border border-slate-700 rounded px-3 py-2 w-full" style="color-scheme: dark;">
+                            <option value="inmediato">⚡ Ejecutar Inmediatamente</option>
+                            <option value="cron_noche">📅 Programar fecha y hora...</option>
                         </select>
+                        <p class="text-[9px] text-slate-500 mt-2 font-mono">Para agendar con fecha/hora exacta usa "Ver Calendario" arriba.</p>
                     </div>
-                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600">
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 ml-3">
                         <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                 </div>
@@ -468,27 +468,10 @@
         const premisa = document.getElementById('orden_premisa').value || "Premisa automática generada por sistema.";
         const reloj = document.getElementById('orden_reloj').value;
 
-        // Si es programado, guardar config del cronjob REAL en el backend
+        // Si eligió "Programar fecha y hora", cerrar este modal y abrir el calendario
         if (reloj === 'cron_noche') {
-            try {
-                await fetch('/api/bot/cron/config', {
-                    method: 'POST', headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ activo: true, hora: '03:00', canales: [marca], formato: formato })
-                });
-            } catch(e) {}
-            document.getElementById('scripting_queue').innerHTML += `
-                <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative opacity-90 mt-3">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="text-slate-300 text-sm font-bold">${marca} (${formato})</span>
-                        <span class="text-[9px] bg-emerald-900 text-emerald-300 px-2 py-1 rounded font-mono">CRON: 03:00 AM</span>
-                    </div>
-                    <p class="text-xs text-slate-500 font-mono truncate">${premisa}</p>
-                    <p class="text-[9px] text-emerald-400 mt-1 font-mono">▸ Cronjob activado. El Xeon disparará a las 03:00.</p>
-                </div>
-            `;
             cerrarModalOrden();
-            actualizarEstadoBot();
+            abrirModalAgenda();
             return;
         }
 
