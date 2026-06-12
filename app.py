@@ -163,10 +163,12 @@ def api_bot_cron_config():
             entrada = {
                 "id": str(uuid.uuid4())[:8],
                 "marca": data.get("marca", "La Viuda"),
-                "dias": data.get("dias", []),          # [0=Lun ... 6=Dom]
-                "hora": data.get("hora", "08:00"),
+                "fecha": data.get("fecha", ""),         # "YYYY-MM-DD"
+                "hora": data.get("hora", "08:00"),       # "HH:MM"
                 "formato": data.get("formato", "9:16"),
+                "repetir": data.get("repetir", "una_vez"),  # una_vez | diario | semanal
                 "activo": True,
+                "ejecutado": False,
             }
             cfg.setdefault("agenda", []).append(entrada)
         elif accion == "eliminar":
@@ -183,8 +185,8 @@ def api_bot_cron_config():
 
 @app.route('/api/bot/cron/tick', methods=['POST'])
 def api_bot_cron_tick():
-    """El Xeon llama aquí cada minuto. Revisa la agenda semanal y dispara las
-    entradas cuyo día+hora coincidan con ahora (y no se hayan ejecutado hoy)."""
+    """El Xeon llama aquí cada minuto. Dispara las entradas de la agenda cuya
+    fecha+hora coincidan con ahora. Soporta repetición (una vez, diario, semanal)."""
     from datetime import datetime
     cfg = _leer_cron()
     agenda = cfg.get("agenda", [])
@@ -192,32 +194,55 @@ def api_bot_cron_tick():
         return jsonify({"status": "sin_agenda"})
 
     ahora = datetime.now()
-    dia_semana = ahora.weekday()  # 0=Lun ... 6=Dom
     hora_actual = ahora.strftime("%H:%M")
-    hoy = ahora.strftime("%Y-%m-%d")
-    ejecuciones = cfg.setdefault("ejecuciones", {})
+    fecha_actual = ahora.strftime("%Y-%m-%d")
+    dia_semana = ahora.weekday()
 
     disparadas = []
+    hubo_cambios = False
     for e in agenda:
         if not e.get("activo"):
             continue
-        if dia_semana in e.get("dias", []) and e.get("hora") == hora_actual:
-            clave_exec = f"{e.get('id')}_{hoy}"
-            if ejecuciones.get(clave_exec):
-                continue  # ya se ejecutó hoy esta entrada
-            ejecuciones[clave_exec] = True
+        if e.get("hora") != hora_actual:
+            continue
+
+        repetir = e.get("repetir", "una_vez")
+        debe_disparar = False
+
+        if repetir == "una_vez":
+            # Dispara solo si es exactamente esa fecha y no se ha ejecutado
+            if e.get("fecha") == fecha_actual and not e.get("ejecutado"):
+                debe_disparar = True
+        elif repetir == "diario":
+            # Cada día a esa hora (controlado por última ejecución)
+            if e.get("ultima_ejec") != fecha_actual:
+                debe_disparar = True
+        elif repetir == "semanal":
+            # Mismo día de semana que la fecha base, cada semana
+            try:
+                fecha_base = datetime.strptime(e.get("fecha"), "%Y-%m-%d")
+                if fecha_base.weekday() == dia_semana and e.get("ultima_ejec") != fecha_actual:
+                    debe_disparar = True
+            except Exception:
+                pass
+
+        if debe_disparar:
             try:
                 tid = _disparar_orden_interna(e.get("marca"), e.get("formato", "9:16"), "")
                 disparadas.append({"marca": e.get("marca"), "tarea_id": tid})
+                e["ultima_ejec"] = fecha_actual
+                if repetir == "una_vez":
+                    e["ejecutado"] = True
+                    e["activo"] = False  # se desactiva tras ejecutar
+                hubo_cambios = True
             except Exception as ex:
                 disparadas.append({"marca": e.get("marca"), "error": str(ex)})
 
-    if disparadas:
-        # Limpiar ejecuciones viejas (de otros días)
-        cfg["ejecuciones"] = {k: v for k, v in ejecuciones.items() if k.endswith(hoy)}
+    if hubo_cambios:
         _guardar_cron(cfg)
+    if disparadas:
         return jsonify({"status": "disparado", "ordenes": disparadas})
-    return jsonify({"status": "esperando", "hora": hora_actual, "dia": dia_semana})
+    return jsonify({"status": "esperando", "hora": hora_actual, "fecha": fecha_actual})
 
 def _disparar_orden_interna(marca, formato, premisa):
     """Lógica compartida: genera guion + encola. Devuelve tarea_id."""
