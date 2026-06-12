@@ -413,6 +413,7 @@ _PAUSA_EMERGENCIA   = 300
 _ultimo_error_429   = 0
 
 _tareas_completadas = set()  # <-- FIX: Memoria para no repetir tareas
+_worker_tomo_tarea = [False]  # control para reportar libre/ocupado (lista = mutable global)
 
 def _registrar_error_render():
     global _errores_render
@@ -831,6 +832,14 @@ def procesar():
             _tareas_completadas.add(tarea_id)  # Registramos que ya empezamos a trabajarla
             
             tipo_tarea = tarea.get("tipo", "IMAGEN")
+
+            # Avisar a Render que el worker está OCUPADO (evita solapamiento de órdenes)
+            _worker_tomo_tarea[0] = True
+            try:
+                requests.post(f"{RENDER_URL}/api/nodo/worker_estado",
+                              json={"ocupado": True, "tarea_actual": f"{tipo_tarea} {tarea_id[:8]}"}, timeout=10)
+            except:
+                pass
 
             # ══════════════════════════════════════════════════
             # RUTA 1: ENSAMBLAJE DE ALTA FIDELIDAD
@@ -1928,6 +1937,15 @@ def procesar():
 
     except Exception as e:
         print(f"⚠️ Error en ciclo de ejecución: {e}")
+    finally:
+        # Avisar a Render que el worker quedó LIBRE (solo si tomó una tarea en este ciclo)
+        try:
+            if _worker_tomo_tarea[0]:
+                requests.post(f"{RENDER_URL}/api/nodo/worker_estado",
+                              json={"ocupado": False, "tarea_actual": ""}, timeout=10)
+                _worker_tomo_tarea[0] = False
+        except:
+            pass
 
 
 print("⚡ NODO XEON ONLINE - FIX ANTI-BUCLE APLICADO")
