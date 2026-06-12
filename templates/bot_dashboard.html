@@ -251,29 +251,28 @@
             const data = await res.json();
             
             if(data.status === "PENDING_REVIEW") {
-                taskBadge.innerText = "COMPLETADO";
+                taskBadge.innerText = "ENCOLADO EN DARK FACTORY";
                 taskBadge.classList.replace('bg-blue-900', 'bg-emerald-900');
                 taskBadge.classList.replace('text-blue-300', 'text-emerald-300');
-                taskDesc.innerText = `Fases 1, 2 y 3 ejecutadas. Audio .mp3 listo. Geometría ${formato} fijada.`;
-                
+                taskDesc.innerText = `Guion generado (${data.num_escenas || '?'} escenas). Orden enviada al nodo: imágenes → voz → video.`;
+
                 // Inyectar en la Cola de Revisión
-                document.getElementById('queue_count').innerText = "1 REQUIERE APROBACIÓN";
+                document.getElementById('queue_count').innerText = "1 EN PRODUCCIÓN";
                 document.getElementById('review_queue').innerHTML = `
                     <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative mt-2 shadow-lg">
                         <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <span class="text-white text-sm font-bold block">${data.marca} - ${formato}</span>
+                                <span class="text-white text-sm font-bold block">${data.titulo || data.marca + ' - ' + formato}</span>
                                 <span class="text-[10px] text-slate-400 block mt-0.5">ORDEN: ${data.tarea_id}</span>
                             </div>
+                            <span class="text-[9px] bg-amber-900/50 text-amber-300 px-2 py-1 rounded font-mono">EN NODO</span>
                         </div>
                         <div class="bg-black/30 p-2 rounded mt-2 border border-slate-800">
-                            <span class="text-[9px] text-slate-500 uppercase tracking-widest font-bold block mb-1">Archivo de Audio (Fase 3):</span>
-                            <span class="text-[10px] text-purple-400 font-mono break-all">${data.ruta_audio || 'audio_generado.mp3'}</span>
+                            <span class="text-[9px] text-slate-500 uppercase tracking-widest font-bold block mb-1">Pipeline:</span>
+                            <span class="text-[10px] text-emerald-400 font-mono">${data.num_escenas || '?'} escenas · ${formato} · ${data.marca}</span>
                         </div>
-                        <div class="flex space-x-2 mt-4">
-                            <button class="flex-1 bg-amber-600 hover:bg-amber-500 text-white py-2 rounded text-[10px] font-bold tracking-widest transition-colors shadow-lg">ENVIAR A FFMPEG (FASE 4)</button>
-                        </div>
+                        <p class="text-[9px] text-slate-500 mt-2 font-mono">El worker procesará esta orden hasta el MP4 final.</p>
                     </div>
                 `;
             } else {
