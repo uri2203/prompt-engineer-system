@@ -35,10 +35,13 @@ class TrendEngine:
             # Asegurar formato compatible con ISO 8601 de APIs estándar
             fecha_pub = datetime.fromisoformat(fecha_publicacion.replace('Z', '+00:00'))
             horas_transcurridas = (ahora - fecha_pub).total_seconds() / 3600
-            
-            if horas_transcurridas <= 0:
-                return 0
-            return vistas / horas_transcurridas
+
+            # Piso mínimo de 1 hora: un video publicado hace minutos no debe
+            # dar un VPH astronómico (evita dividir entre casi cero).
+            if horas_transcurridas < 1:
+                horas_transcurridas = 1
+
+            return round(vistas / horas_transcurridas, 1)
         except Exception as e:
             logging.error(f"[TREND ENGINE] Error matemático al calcular VPH: {e}")
             return 0
