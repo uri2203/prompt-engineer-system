@@ -36,7 +36,16 @@ while True:
     except Exception as e:
         print(f"⚠️ No se pudo reportar nodos: {e}")
 
-    # 3. Keep-alive de Render (cada 10 min para no gastar las 750h)
+    # 3. Tick del cronjob del Bot Pinpinela (dispara órdenes programadas)
+    try:
+        rc = requests.post(f"{RENDER_URL}/api/bot/cron/tick", timeout=30)
+        estado_cron = rc.json().get("status", "?")
+        if estado_cron == "disparado":
+            print(f"🤖 CRONJOB DISPARADO: {rc.json().get('ordenes', [])}")
+    except Exception as e:
+        pass
+
+    # 4. Keep-alive de Render (cada 10 min para no gastar las 750h)
     contador_keepalive += 1
     if contador_keepalive >= 10:  # 10 ciclos de 60s = 10 min
         try:
