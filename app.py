@@ -304,6 +304,15 @@ def _disparar_orden_interna(marca, formato, premisa):
     try:
         with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
             _json.dump(tarea_worker, f)
+        # Guardar el ENSAMBLAJE pendiente: se encola cuando las imágenes terminen
+        ensamblaje = {
+            "id": tarea_id, "tipo": "ENSAMBLAJE",
+            "formato": formato_calculado, "marca": marca,
+            "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+            "origen": "bot_pinpinela_cron",
+        }
+        with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
+            _json.dump(ensamblaje, f)
     except Exception:
         pass
     cola_de_renderizado.append(tarea_worker)
@@ -474,6 +483,15 @@ def api_bot_lanzar_orden():
         try:
             with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
                 _json.dump(tarea_worker, f)
+            # Guardar el ENSAMBLAJE pendiente (se encola al terminar las imágenes)
+            ensamblaje = {
+                "id": tarea_id, "tipo": "ENSAMBLAJE",
+                "formato": formato_calculado, "marca": marca,
+                "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+                "origen": "bot_pinpinela",
+            }
+            with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
+                _json.dump(ensamblaje, f)
         except Exception:
             pass
         cola_de_renderizado.append(tarea_worker)
@@ -629,6 +647,29 @@ def nodo_encolar_tarea():
         cola_de_renderizado.append(tarea)
         return jsonify({"status": "success"}), 200
     return jsonify({"status": "error"}), 400
+
+@app.route('/api/nodo/tarea_completada', methods=['POST'])
+def nodo_tarea_completada():
+    """El worker avisa que terminó una tarea. Si era la fase IMAGEN de una orden
+    del bot, encolar automáticamente el ENSAMBLAJE pendiente para continuar el pipeline."""
+    import json as _json, os as _os
+    data = request.json or {}
+    tarea_id = data.get("tarea_id", "")
+    ruta_pendiente = f"/tmp/pendiente_ensamblaje_{tarea_id}.json"
+    try:
+        if _os.path.exists(ruta_pendiente):
+            with open(ruta_pendiente) as f:
+                ensamblaje = _json.load(f)
+            _os.remove(ruta_pendiente)
+            # ID distinto (sufijo _asm) para que el anti-bucle del worker no lo bloquee
+            ensamblaje["id"] = f"{tarea_id}_asm"
+            # Encolar el ensamblaje (guardar en disco para que el polling lo tome)
+            with open(f"/tmp/ensamblaje_{tarea_id}.json", "w") as f:
+                _json.dump(ensamblaje, f)
+            return jsonify({"status": "ensamblaje_encolado", "tarea_id": tarea_id})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)})
+    return jsonify({"status": "ok"})
 
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
