@@ -63,13 +63,12 @@ def _elegir_preset(marca, escena_idx, seed_extra=""):
 
 
 def generar_parallax(ruta_img, ruta_salida, marca, escena_idx, duracion, fps, w, h):
-    """Llama a DepthFlow para convertir una imagen en un clip parallax."""
+    """Llama a DepthFlow para convertir una imagen en un clip parallax.
+    Reintenta automáticamente si falla (DepthFlow a veces falla de forma intermitente)."""
     marca_l = marca.lower().strip()
     intensidad = INTENSIDAD_CANAL.get(marca_l, INTENSIDAD_DEFAULT)
     preset = _elegir_preset(marca, escena_idx)
 
-    # Construir el comando de DepthFlow (sintaxis confirmada en v0.8.0):
-    # depthflow input -i IMG dav2 PRESET main -t DUR -o OUT --width W --height H --fps FPS
     cmd = [
         DEPTHFLOW_EXE,
         "input", "-i", ruta_img,
@@ -83,15 +82,42 @@ def generar_parallax(ruta_img, ruta_salida, marca, escena_idx, duracion, fps, w,
         "--fps", str(fps),
     ]
 
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-        if os.path.exists(ruta_salida) and os.path.getsize(ruta_salida) > 1000:
-            return True, preset
-        return False, f"DepthFlow no generó salida. stderr: {r.stderr[:300]}"
-    except subprocess.TimeoutExpired:
-        return False, "Timeout (>180s)"
-    except Exception as e:
-        return False, str(e)
+    ultimo_error = ""
+    # Hasta 3 intentos: DepthFlow a veces falla por VRAM ocupada momentáneamente
+    for intento in range(1, 4):
+        try:
+            # Limpiar salida previa fallida
+            if os.path.exists(ruta_salida):
+                try: os.remove(ruta_salida)
+                except: pass
+
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+
+            if os.path.exists(ruta_salida) and os.path.getsize(ruta_salida) > 1000:
+                if intento > 1:
+                    print(f"   [DEPTHFLOW] escena {escena_idx} OK en intento {intento}")
+                return True, preset
+
+            # Falló: capturar el error real de DepthFlow
+            ultimo_error = (r.stderr or r.stdout or "sin salida")[-400:]
+            print(f"   [DEPTHFLOW] escena {escena_idx} intento {intento}/3 FALLÓ: {ultimo_error[:200]}")
+
+            # Pausa para que la GPU libere VRAM antes de reintentar
+            import time as _t
+            _t.sleep(3)
+
+        except subprocess.TimeoutExpired:
+            ultimo_error = "Timeout (>180s)"
+            print(f"   [DEPTHFLOW] escena {escena_idx} intento {intento}/3: TIMEOUT")
+            import time as _t
+            _t.sleep(3)
+        except Exception as e:
+            ultimo_error = str(e)
+            print(f"   [DEPTHFLOW] escena {escena_idx} intento {intento}/3 EXCEPCIÓN: {e}")
+            import time as _t
+            _t.sleep(3)
+
+    return False, f"Falló tras 3 intentos. Último error: {ultimo_error}"
 
 
 @app.route("/parallax", methods=["POST"])
