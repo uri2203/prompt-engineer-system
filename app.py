@@ -304,11 +304,19 @@ def _disparar_orden_interna(marca, formato, premisa):
     try:
         with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
             _json.dump(tarea_worker, f)
-        # Guardar el ENSAMBLAJE pendiente: se encola cuando las imágenes terminen
+        # Guardar el ENSAMBLAJE pendiente con TODOS los campos del flujo manual
+        voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+        escenas_texto = [e.get("texto_locucion", "") for e in escenas]
         ensamblaje = {
             "id": tarea_id, "tipo": "ENSAMBLAJE",
             "formato": formato_calculado, "marca": marca,
-            "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+            "texto_locucion": texto_locucion,
+            "escenas_texto": escenas_texto,
+            "escenas": escenas,
+            "hooks": guion.get("hooks", []),
+            "titulo_sugerido": titulo,
+            "voice_id": voice_id,
+            "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
             "origen": "bot_pinpinela_cron",
         }
         with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
@@ -483,11 +491,19 @@ def api_bot_lanzar_orden():
         try:
             with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
                 _json.dump(tarea_worker, f)
-            # Guardar el ENSAMBLAJE pendiente (se encola al terminar las imágenes)
+            # Guardar el ENSAMBLAJE pendiente con TODOS los campos del flujo manual
+            voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+            escenas_texto = [e.get("texto_locucion", "") for e in escenas]
             ensamblaje = {
                 "id": tarea_id, "tipo": "ENSAMBLAJE",
                 "formato": formato_calculado, "marca": marca,
-                "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+                "texto_locucion": texto_locucion,
+                "escenas_texto": escenas_texto,
+                "escenas": escenas,
+                "hooks": guion.get("hooks", []),
+                "titulo_sugerido": titulo,
+                "voice_id": voice_id,
+                "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
                 "origen": "bot_pinpinela",
             }
             with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
