@@ -168,11 +168,11 @@
             <div class="p-6 overflow-y-auto">
                 <!-- Formulario nueva programación -->
                 <div class="bg-[#0B1120] border border-slate-700 rounded-lg p-4 mb-5">
-                    <h4 class="text-[10px] text-emerald-400 font-bold uppercase tracking-widest mb-3">Programar Canal</h4>
-                    <div class="grid grid-cols-3 gap-3 mb-3">
+                    <h4 class="text-[10px] text-emerald-400 font-bold uppercase tracking-widest mb-3">Programar Producción</h4>
+                    <div class="grid grid-cols-2 gap-3 mb-3">
                         <div>
                             <label class="block mb-1 text-[9px] text-blue-400 font-bold uppercase tracking-widest">Canal</label>
-                            <select id="ag_marca" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2 text-xs text-slate-200 outline-none focus:border-blue-500">
+                            <select id="ag_marca" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-blue-500">
                                 <option value="La Viuda">La Viuda</option>
                                 <option value="Monkygraff">Monkygraff</option>
                                 <option value="FiltradoMX">FiltradoMX</option>
@@ -182,33 +182,35 @@
                         </div>
                         <div>
                             <label class="block mb-1 text-[9px] text-amber-500 font-bold uppercase tracking-widest">Formato</label>
-                            <select id="ag_formato" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2 text-xs text-slate-200 outline-none focus:border-amber-500">
+                            <select id="ag_formato" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-amber-500">
                                 <option value="9:16">Short 9:16</option>
                                 <option value="16:9">Largo 16:9</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mb-3">
+                        <div>
+                            <label class="block mb-1 text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Fecha</label>
+                            <input type="date" id="ag_fecha" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-emerald-500" style="color-scheme: dark;">
+                        </div>
                         <div>
                             <label class="block mb-1 text-[9px] text-purple-400 font-bold uppercase tracking-widest">Hora</label>
-                            <input type="time" id="ag_hora" value="08:00" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2 text-xs text-slate-200 outline-none focus:border-purple-500">
+                            <input type="time" id="ag_hora" value="08:00" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-purple-500" style="color-scheme: dark;">
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Repetir</label>
+                            <select id="ag_repetir" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-slate-500">
+                                <option value="una_vez">Una sola vez</option>
+                                <option value="diario">Cada día</option>
+                                <option value="semanal">Cada semana</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="block mb-2 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Días de la semana</label>
-                        <div class="flex gap-2" id="ag_dias">
-                            <button data-dia="0" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">LUN</button>
-                            <button data-dia="1" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">MAR</button>
-                            <button data-dia="2" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">MIÉ</button>
-                            <button data-dia="3" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">JUE</button>
-                            <button data-dia="4" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">VIE</button>
-                            <button data-dia="5" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">SÁB</button>
-                            <button data-dia="6" onclick="toggleDia(this)" class="dia-btn flex-1 py-2 rounded text-[10px] font-bold border border-slate-700 bg-[#0F1523] text-slate-400 transition-colors">DOM</button>
-                        </div>
-                    </div>
-                    <button onclick="agregarAgenda()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded text-[10px] font-bold uppercase tracking-widest transition-colors">+ Agregar a la agenda</button>
+                    <button onclick="agregarAgenda()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded text-[10px] font-bold uppercase tracking-widest transition-colors">+ Agendar producción</button>
                 </div>
 
                 <!-- Agenda actual -->
-                <h4 class="text-[10px] text-slate-300 font-bold uppercase tracking-widest mb-3">Agenda Programada</h4>
+                <h4 class="text-[10px] text-slate-300 font-bold uppercase tracking-widest mb-3">Producciones Programadas</h4>
                 <div id="lista_agenda" class="space-y-2">
                     <p class="text-slate-500 text-xs text-center py-4">Cargando agenda...</p>
                 </div>
@@ -219,39 +221,43 @@
 
 <script>
     const DIAS_NOMBRE = ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM'];
-    let diasSeleccionados = [];
+    const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
-    function abrirModalAgenda() { document.getElementById('modal_agenda').classList.remove('hidden'); cargarAgenda(); }
+    function abrirModalAgenda() {
+        document.getElementById('modal_agenda').classList.remove('hidden');
+        // Fecha mínima = hoy
+        const hoy = new Date().toISOString().split('T')[0];
+        const fechaInput = document.getElementById('ag_fecha');
+        fechaInput.min = hoy;
+        if (!fechaInput.value) fechaInput.value = hoy;
+        cargarAgenda();
+    }
     function cerrarModalAgenda() { document.getElementById('modal_agenda').classList.add('hidden'); }
 
-    function toggleDia(btn) {
-        const dia = parseInt(btn.dataset.dia);
-        if (diasSeleccionados.includes(dia)) {
-            diasSeleccionados = diasSeleccionados.filter(d => d !== dia);
-            btn.classList.remove('bg-emerald-600','text-white','border-emerald-500');
-            btn.classList.add('bg-[#0F1523]','text-slate-400','border-slate-700');
-        } else {
-            diasSeleccionados.push(dia);
-            btn.classList.add('bg-emerald-600','text-white','border-emerald-500');
-            btn.classList.remove('bg-[#0F1523]','text-slate-400','border-slate-700');
-        }
-    }
-
     async function agregarAgenda() {
-        if (diasSeleccionados.length === 0) { alert('Selecciona al menos un día'); return; }
+        const fecha = document.getElementById('ag_fecha').value;
+        const hora = document.getElementById('ag_hora').value;
+        if (!fecha || !hora) { alert('Selecciona fecha y hora'); return; }
         const payload = {
             accion: 'agregar',
             marca: document.getElementById('ag_marca').value,
             formato: document.getElementById('ag_formato').value,
-            hora: document.getElementById('ag_hora').value,
-            dias: diasSeleccionados,
+            fecha: fecha,
+            hora: hora,
+            repetir: document.getElementById('ag_repetir').value,
         };
         await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-        diasSeleccionados = [];
-        document.querySelectorAll('.dia-btn').forEach(b => { b.classList.remove('bg-emerald-600','text-white','border-emerald-500'); b.classList.add('bg-[#0F1523]','text-slate-400','border-slate-700'); });
         cargarAgenda();
         actualizarEstadoBot();
     }
+
+    function formatFecha(f) {
+        try {
+            const [y,m,d] = f.split('-');
+            return `${parseInt(d)} ${MESES[parseInt(m)-1]} ${y}`;
+        } catch(e) { return f; }
+    }
+    const REPETIR_LABEL = {una_vez:'Una vez', diario:'Diario', semanal:'Semanal'};
 
     async function cargarAgenda() {
         try {
@@ -260,24 +266,27 @@
             const agenda = cfg.agenda || [];
             const cont = document.getElementById('lista_agenda');
             if (agenda.length === 0) {
-                cont.innerHTML = '<p class="text-slate-500 text-xs text-center py-4">Sin programaciones. Agrega una arriba.</p>';
+                cont.innerHTML = '<p class="text-slate-500 text-xs text-center py-4">Sin producciones programadas. Agenda una arriba.</p>';
                 return;
             }
+            // Ordenar por fecha+hora
+            agenda.sort((a,b) => (a.fecha+a.hora).localeCompare(b.fecha+b.hora));
             cont.innerHTML = agenda.map(e => `
                 <div class="bg-[#0B1120] border ${e.activo ? 'border-emerald-900/50' : 'border-slate-800'} rounded-lg p-3 flex items-center justify-between">
                     <div class="flex items-center gap-3">
-                        <span class="w-2 h-2 rounded-full ${e.activo ? 'bg-emerald-500' : 'bg-slate-600'}"></span>
+                        <span class="w-2 h-2 rounded-full ${e.activo ? 'bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.7)]' : 'bg-slate-600'}"></span>
                         <div>
-                            <span class="text-white text-sm font-bold">${e.marca}</span>
-                            <span class="text-[10px] text-slate-400 ml-2 font-mono">${e.formato} · ${e.hora}</span>
-                            <div class="flex gap-1 mt-1">
-                                ${e.dias.map(d => `<span class="text-[8px] bg-blue-900/40 text-blue-300 px-1.5 py-0.5 rounded font-mono">${DIAS_NOMBRE[d]}</span>`).join('')}
+                            <div class="flex items-center gap-2">
+                                <span class="text-white text-sm font-bold">${e.marca}</span>
+                                <span class="text-[9px] bg-amber-900/40 text-amber-300 px-1.5 py-0.5 rounded font-mono">${e.formato}</span>
+                                <span class="text-[9px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded font-mono">${REPETIR_LABEL[e.repetir]||e.repetir}</span>
                             </div>
+                            <p class="text-[11px] text-emerald-400 font-mono mt-1">📅 ${formatFecha(e.fecha)} · ⏰ ${e.hora}${e.ejecutado ? ' · <span class="text-slate-500">EJECUTADO</span>' : ''}</p>
                         </div>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="toggleAgenda('${e.id}')" class="text-[9px] px-3 py-1 rounded font-bold border ${e.activo ? 'border-amber-700/50 text-amber-400' : 'border-emerald-700/50 text-emerald-400'} hover:bg-slate-800 transition-colors">${e.activo ? 'PAUSAR' : 'ACTIVAR'}</button>
-                        <button onclick="eliminarAgenda('${e.id}')" class="text-[9px] px-3 py-1 rounded font-bold border border-red-900/50 text-red-400 hover:bg-red-900/20 transition-colors">ELIMINAR</button>
+                        <button onclick="toggleAgenda('${e.id}')" class="text-[9px] px-3 py-1.5 rounded font-bold border ${e.activo ? 'border-amber-700/50 text-amber-400' : 'border-emerald-700/50 text-emerald-400'} hover:bg-slate-800 transition-colors">${e.activo ? 'PAUSAR' : 'ACTIVAR'}</button>
+                        <button onclick="eliminarAgenda('${e.id}')" class="text-[9px] px-3 py-1.5 rounded font-bold border border-red-900/50 text-red-400 hover:bg-red-900/20 transition-colors">ELIMINAR</button>
                     </div>
                 </div>
             `).join('');
@@ -338,7 +347,7 @@
                                 <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Agenda Activa</span>
                                 <span class="text-[9px] text-slate-500">${activas.length} programada(s)</span>
                             </div>
-                            ${activas.slice(0,3).map(e => `<p class="text-[10px] text-slate-400 font-mono">▸ ${e.marca} · ${e.hora} · ${e.dias.length}d/sem</p>`).join('')}
+                            ${activas.slice(0,3).map(e => `<p class="text-[10px] text-slate-400 font-mono">▸ ${e.marca} · ${formatFecha(e.fecha)} ${e.hora}</p>`).join('')}
                         </div>`;
                 } else { agResumen.innerHTML = ''; }
             }
