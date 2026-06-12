@@ -119,8 +119,15 @@
                 </div>
 
                 <div>
-                    <label class="label-blue block mb-2 text-[10px] text-purple-400 font-bold uppercase tracking-widest">Premisa / Instrucción de Guion</label>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="label-blue block text-[10px] text-purple-400 font-bold uppercase tracking-widest">Premisa / Instrucción de Guion</label>
+                        <button onclick="sugerirTema()" id="btn_sugerir" type="button" class="text-[9px] bg-blue-900/40 hover:bg-blue-800/60 text-blue-300 px-3 py-1 rounded font-bold uppercase tracking-widest border border-blue-700/50 transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Sugerir tema en tendencia
+                        </button>
+                    </div>
                     <textarea id="orden_premisa" rows="3" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-purple-500 outline-none transition-colors placeholder-slate-600 font-mono" placeholder="Ej: Episodio sobre un búnker militar bajo una ciudad moderna. Aplicar vacío de información extremo..."></textarea>
+                    <p id="tema_hint" class="text-[9px] text-slate-500 mt-1 font-mono hidden"></p>
                 </div>
 
                 <div class="bg-[#0B1120] border border-slate-700 p-4 rounded-lg flex justify-between items-center">
@@ -149,6 +156,42 @@
     // Controladores del Modal
     function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); }
     function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
+
+    // Sugerir tema en tendencia (TrendEngine)
+    async function sugerirTema() {
+        const btn = document.getElementById('btn_sugerir');
+        const marca = document.getElementById('orden_marca').value;
+        const hint = document.getElementById('tema_hint');
+        const original = btn.innerHTML;
+        btn.innerHTML = "Escaneando...";
+        btn.disabled = true;
+        try {
+            const res = await fetch('/api/bot/sugerir_tema', {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ marca: marca })
+            });
+            const data = await res.json();
+            if (data.status === 'ok') {
+                const premisaEl = document.getElementById('orden_premisa');
+                premisaEl.value = `Tema en tendencia: ${data.tema}. Referencia de la competencia: "${data.referencia}". Desarrollar con ángulo propio y vacío de información.`;
+                hint.classList.remove('hidden');
+                const fuente = data.en_vivo ? 'EN VIVO (YouTube)' : 'SIMULADO (sin API key)';
+                hint.innerText = `▸ ${fuente} · VPH: ${data.vph} · tema: ${data.tema}`;
+                hint.className = "text-[9px] mt-1 font-mono " + (data.en_vivo ? "text-emerald-400" : "text-amber-500");
+            } else {
+                hint.classList.remove('hidden');
+                hint.className = "text-[9px] text-red-400 mt-1 font-mono";
+                hint.innerText = "▸ " + (data.message || "No se pudo obtener tendencia");
+            }
+        } catch (e) {
+            hint.classList.remove('hidden');
+            hint.className = "text-[9px] text-red-400 mt-1 font-mono";
+            hint.innerText = "▸ Error de conexión con el radar de tendencias";
+        } finally {
+            btn.innerHTML = original;
+            btn.disabled = false;
+        }
+    }
 
     // Función principal de inyección
     async function ejecutarOrden() {
