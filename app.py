@@ -130,6 +130,58 @@ def api_nodos_reportar():
     _estado_nodos["ts"]       = time.time()
     return jsonify({"status": "ok"})
 
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+@app.route('/api/bot/lanzar_orden', methods=['POST'])
+@login_required
+def api_bot_lanzar_orden():
+    """El Bot Pinpinela dispara una orden: genera el guion (con tendencias del
+    TrendEngine) y lo deja listo para encolar. Es el cerebro de la automatización."""
+    data = request.json or {}
+    marca   = data.get('marca', 'La Viuda')
+    formato = data.get('formato', '9:16')
+    premisa = data.get('premisa', '').strip()
+
+    # Formato → longitud (largo vs short)
+    es_largo = formato in ("16:9",) and data.get('tipo', 'largo') != 'short'
+    longitud = "2800 palabras" if es_largo else "130 palabras"
+    formato_calculado = "16:9" if formato == "16:9" else "9:16"
+
+    try:
+        # 1. TrendEngine: inyecta contexto viral del canal
+        yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+        contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+
+        # Si no hay premisa manual, el tema lo guía la tendencia
+        contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
+        contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+
+        # 2. Generar el guion blindado (compliance + NeuroEngine vía ai_engine)
+        resultado = compliance_engine.blindar_guion(
+            ai_engine_instancia=ai_engine,
+            marca=marca, contexto=contexto_absoluto,
+            peticion=premisa or "Tema en tendencia del canal",
+            longitud=longitud, formato=formato_calculado
+        )
+
+        tarea_id = str(uuid.uuid4())
+        titulo = ""
+        try:
+            titulo = resultado.get('titulo', '') if isinstance(resultado, dict) else ''
+        except Exception:
+            pass
+
+        return jsonify({
+            "status": "PENDING_REVIEW",
+            "tarea_id": tarea_id,
+            "marca": marca,
+            "formato": formato_calculado,
+            "titulo": titulo,
+            "data": resultado
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
 @app.route('/api/get_boveda')
 @login_required
 def api_get_boveda(): 
