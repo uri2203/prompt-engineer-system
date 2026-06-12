@@ -22,7 +22,7 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-[#3b82f6] font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>1. Scripting Engine</h3>
-                <span class="text-slate-500 text-xs">Sistema Operativo</span>
+                <span id="bot_scripting_estado" class="text-slate-500 text-xs">Sistema Operativo</span>
             </div>
             
             <div class="space-y-3 flex-1 overflow-y-auto pr-2" id="scripting_queue">
@@ -50,7 +50,7 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-purple-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-purple-400 mr-2 animate-pulse"></span>2. Voice & Audio Synth</h3>
-                <span class="text-slate-500 text-xs">Conectado (Mockup TTS)</span>
+                <span id="bot_voz_estado" class="text-slate-500 text-xs">Conectado</span>
             </div>
             <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
                 <p class="text-slate-400 text-sm font-bold">Motor Neuronal Edge-TTS Activo</p>
@@ -61,7 +61,7 @@
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
                 <h3 class="text-amber-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>3. Video Compiler (FFmpeg)</h3>
-                <span class="text-slate-500 text-xs">Ocioso</span>
+                <span id="bot_video_estado" class="text-slate-500 text-xs">Ocioso</span>
             </div>
             <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
                 <svg class="w-12 h-12 text-slate-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
@@ -153,6 +153,40 @@
 </div>
 
 <script>
+    // Estado en vivo de los 4 bloques del bot
+    async function actualizarEstadoBot() {
+        try {
+            const res = await fetch('/api/bot/estado');
+            const d = await res.json();
+            // Bloque 1: Scripting / cronjob
+            const scr = document.getElementById('bot_scripting_estado');
+            if (scr) {
+                if (d.scripting.cron_activo) {
+                    scr.innerText = `Cronjob ACTIVO · ${d.scripting.cron_hora}`;
+                    scr.className = "text-emerald-400 text-xs font-bold";
+                } else {
+                    scr.innerText = "Sistema Operativo (manual)";
+                    scr.className = "text-slate-500 text-xs";
+                }
+            }
+            // Bloque 2: Voz
+            const voz = document.getElementById('bot_voz_estado');
+            if (voz) {
+                const on = d.voz.estado === 'online';
+                voz.innerText = on ? 'Conectado' : 'Offline';
+                voz.className = on ? "text-emerald-400 text-xs font-bold" : "text-red-400 text-xs";
+            }
+            // Bloque 3: Video
+            const vid = document.getElementById('bot_video_estado');
+            if (vid) {
+                const on = d.video.estado === 'online';
+                vid.innerText = d.video.en_cola > 0 ? `Procesando (${d.video.en_cola})` : (on ? 'Listo' : 'Ocioso');
+                vid.className = on ? "text-emerald-400 text-xs font-bold" : "text-slate-500 text-xs";
+            }
+        } catch(e) {}
+    }
+    window.addEventListener('load', () => { actualizarEstadoBot(); setInterval(actualizarEstadoBot, 12000); });
+
     // Controladores del Modal
     function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); }
     function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
@@ -201,19 +235,27 @@
         const premisa = document.getElementById('orden_premisa').value || "Premisa automática generada por sistema.";
         const reloj = document.getElementById('orden_reloj').value;
 
-        // Si es programado, solo simulamos agregarlo a la cola y cerramos
+        // Si es programado, guardar config del cronjob REAL en el backend
         if (reloj === 'cron_noche') {
+            try {
+                await fetch('/api/bot/cron/config', {
+                    method: 'POST', headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ activo: true, hora: '03:00', canales: [marca], formato: formato })
+                });
+            } catch(e) {}
             document.getElementById('scripting_queue').innerHTML += `
-                <div class="bg-[#0B1120] p-4 rounded border border-slate-800 relative opacity-60 mt-3">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
+                <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative opacity-90 mt-3">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                     <div class="flex justify-between items-start mb-2">
                         <span class="text-slate-300 text-sm font-bold">${marca} (${formato})</span>
-                        <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">CRON: 03:00 AM</span>
+                        <span class="text-[9px] bg-emerald-900 text-emerald-300 px-2 py-1 rounded font-mono">CRON: 03:00 AM</span>
                     </div>
                     <p class="text-xs text-slate-500 font-mono truncate">${premisa}</p>
+                    <p class="text-[9px] text-emerald-400 mt-1 font-mono">▸ Cronjob activado. El Xeon disparará a las 03:00.</p>
                 </div>
             `;
             cerrarModalOrden();
+            actualizarEstadoBot();
             return;
         }
 
