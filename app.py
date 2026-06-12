@@ -276,6 +276,21 @@ def _disparar_orden_interna(marca, formato, premisa):
     escenas = guion.get("escenas", [])
     if not escenas:
         raise Exception("Guion sin escenas")
+
+    # El worker busca el campo "prompt" en cada escena, pero Gemini genera
+    # "prompt_visual". Mapear para que el worker reconozca cada escena.
+    escenas_norm = []
+    for idx, e in enumerate(escenas):
+        prompt_img = e.get("prompt") or e.get("prompt_visual") or e.get("prompt_imagen", "")
+        escenas_norm.append({
+            "id": e.get("id", idx + 1),
+            "prompt": prompt_img,
+            "prompt_visual": prompt_img,
+            "texto_locucion": e.get("texto_locucion", ""),
+            "pexels_query": e.get("pexels_query"),
+        })
+    escenas = escenas_norm
+
     titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
     texto_locucion = " ".join(e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion"))
 
@@ -422,14 +437,27 @@ def api_bot_lanzar_orden():
 
         tarea_id = str(uuid.uuid4())
         escenas = guion.get("escenas", [])
+        if not escenas:
+            return jsonify({"status": "error", "message": "El guion no trae escenas"}), 500
+
+        # El worker busca el campo "prompt"; Gemini genera "prompt_visual". Mapear.
+        escenas_norm = []
+        for idx, e in enumerate(escenas):
+            prompt_img = e.get("prompt") or e.get("prompt_visual") or e.get("prompt_imagen", "")
+            escenas_norm.append({
+                "id": e.get("id", idx + 1),
+                "prompt": prompt_img,
+                "prompt_visual": prompt_img,
+                "texto_locucion": e.get("texto_locucion", ""),
+                "pexels_query": e.get("pexels_query"),
+            })
+        escenas = escenas_norm
+
         titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
         # Reconstruir el texto de locución completo desde las escenas
         texto_locucion = " ".join(
             e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion")
         )
-
-        if not escenas:
-            return jsonify({"status": "error", "message": "El guion no trae escenas"}), 500
 
         # 4. Encolar la ORDEN VISUAL (el worker genera imágenes → voz → video → MP4)
         tarea_worker = {
