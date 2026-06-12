@@ -131,6 +131,30 @@ def api_nodos_reportar():
     return jsonify({"status": "ok"})
 
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+@app.route('/api/bot/sugerir_tema', methods=['POST'])
+@login_required
+def api_bot_sugerir_tema():
+    """Devuelve el tema en tendencia del canal (TrendEngine) para rellenar la premisa.
+    Con API key de YouTube = tendencia real. Sin key = simulación estructurada."""
+    data = request.json or {}
+    marca = data.get('marca', 'La Viuda')
+    try:
+        yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+        tendencia = trend_engine.escanear_traccion_competitiva(marca, yt_api_key)
+        if not tendencia:
+            return jsonify({"status": "error", "message": "Sin tendencias para este canal"}), 404
+        en_vivo = bool(yt_api_key)
+        return jsonify({
+            "status": "ok",
+            "tema": tendencia.get("tema_base", ""),
+            "referencia": tendencia.get("titulo_competidor", ""),
+            "vph": round(tendencia.get("vph", 0), 1),
+            "en_vivo": en_vivo,
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 @app.route('/api/bot/lanzar_orden', methods=['POST'])
 @login_required
 def api_bot_lanzar_orden():
