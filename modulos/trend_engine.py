@@ -12,17 +12,35 @@ class TrendEngine:
         # Aislamiento por Silos Herméticos
         self.nicho_marcas = {
             "La Viuda": [
-                "terror psicologico narrado",
-                "historias de miedo extremo",
-                "paranoia perturbadora",
-                "experiencias paranormales reales"
+                "historias de terror reales",
+                "relatos de miedo narrados",
+                "experiencias paranormales",
+                "casos de terror psicologico"
             ],
             "Monkygraff": [
-                "guerra Ucrania Rusia 2026",
-                "guerra comercial China Trump aranceles",
-                "minerales criticos litio cobalto geopolitica",
-                "inteligencia artificial geopolitica poder"
-            ]
+                "geopolitica mundial analisis",
+                "guerra comercial China Estados Unidos",
+                "conflictos geopoliticos actuales",
+                "tension militar mundial"
+            ],
+            "FiltradoMX": [
+                "historias de infidelidad reales",
+                "casos de traicion familiar",
+                "dramas de la vida real",
+                "confesiones reales impactantes"
+            ],
+            "LaesquinaRandom": [
+                "datos curiosos increibles",
+                "curiosidades que no sabias",
+                "hechos sorprendentes",
+                "cosas raras del mundo"
+            ],
+            "TuIALista": [
+                "inteligencia artificial noticias",
+                "herramientas IA nuevas",
+                "avances inteligencia artificial",
+                "IA tecnologia futuro"
+            ],
         }
 
     def _calcular_vph(self, vistas, fecha_publicacion):
@@ -61,16 +79,16 @@ class TrendEngine:
         try:
             import requests as _rq
             from datetime import datetime, timedelta, timezone as _tz
-            # Solo videos publicados en los últimos 7 días (tendencia fresca)
-            hace_semana = (datetime.now(_tz.utc) - timedelta(days=7)).isoformat()
+            # Videos publicados en los últimos 30 días (ventana amplia = más resultados)
+            hace_mes = (datetime.now(_tz.utc) - timedelta(days=30)).isoformat()
             # 1. Buscar videos recientes del término
             r = _rq.get(
                 "https://www.googleapis.com/youtube/v3/search",
                 params={
                     "key": api_key, "q": query, "part": "snippet",
                     "type": "video", "order": "viewCount",
-                    "publishedAfter": hace_semana, "maxResults": 10,
-                    "relevanceLanguage": "es", "regionCode": "MX",
+                    "publishedAfter": hace_mes, "maxResults": 10,
+                    "regionCode": "MX",
                 },
                 timeout=15
             )
