@@ -187,13 +187,16 @@ def api_bot_cron_config():
 def api_bot_cron_tick():
     """El Xeon llama aquí cada minuto. Dispara las entradas de la agenda cuya
     fecha+hora coincidan con ahora. Soporta repetición (una vez, diario, semanal)."""
-    from datetime import datetime
+    from datetime import datetime, timezone, timedelta
     cfg = _leer_cron()
     agenda = cfg.get("agenda", [])
     if not agenda:
         return jsonify({"status": "sin_agenda"})
 
-    ahora = datetime.now()
+    # Render corre en UTC. Convertir a hora de México (UTC-6) para que coincida
+    # con lo que el usuario programó en el calendario.
+    tz_mexico = timezone(timedelta(hours=-6))
+    ahora = datetime.now(tz_mexico)
     hora_actual = ahora.strftime("%H:%M")
     fecha_actual = ahora.strftime("%Y-%m-%d")
     dia_semana = ahora.weekday()
@@ -203,25 +206,26 @@ def api_bot_cron_tick():
     for e in agenda:
         if not e.get("activo"):
             continue
-        if e.get("hora") != hora_actual:
-            continue
 
         repetir = e.get("repetir", "una_vez")
         debe_disparar = False
 
         if repetir == "una_vez":
-            # Dispara solo si es exactamente esa fecha y no se ha ejecutado
+            # Dispara si la fecha es hoy, la hora ya llegó (o pasó hace poco), y no se ejecutó.
+            # Esto evita perder el disparo si el tick se salta el minuto exacto.
             if e.get("fecha") == fecha_actual and not e.get("ejecutado"):
+                if hora_actual >= e.get("hora", "00:00"):
+                    debe_disparar = True
+            # Si la fecha ya pasó completamente y nunca se ejecutó, dispararlo igual (recuperación)
+            elif e.get("fecha", "") < fecha_actual and not e.get("ejecutado"):
                 debe_disparar = True
         elif repetir == "diario":
-            # Cada día a esa hora (controlado por última ejecución)
-            if e.get("ultima_ejec") != fecha_actual:
+            if e.get("hora") == hora_actual and e.get("ultima_ejec") != fecha_actual:
                 debe_disparar = True
         elif repetir == "semanal":
-            # Mismo día de semana que la fecha base, cada semana
             try:
                 fecha_base = datetime.strptime(e.get("fecha"), "%Y-%m-%d")
-                if fecha_base.weekday() == dia_semana and e.get("ultima_ejec") != fecha_actual:
+                if fecha_base.weekday() == dia_semana and e.get("hora") == hora_actual and e.get("ultima_ejec") != fecha_actual:
                     debe_disparar = True
             except Exception:
                 pass
