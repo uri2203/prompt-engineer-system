@@ -108,9 +108,14 @@ _estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts
 # Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
 _worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
 
-@app.route('/api/nodo/worker_estado', methods=['POST'])
+@app.route('/api/nodo/worker_estado', methods=['GET', 'POST'])
 def api_worker_estado():
-    """El worker reporta si está ocupado generando un video. Evita solapamientos."""
+    """POST: el worker reporta si está ocupado. GET: el keep_alive consulta el estado."""
+    if request.method == 'GET':
+        return jsonify({
+            "ocupado": _worker_esta_ocupado(),
+            "tarea_actual": _worker_estado.get("tarea_actual", ""),
+        })
     data = request.json or {}
     _worker_estado["ocupado"] = bool(data.get("ocupado", False))
     _worker_estado["tarea_actual"] = data.get("tarea_actual", "")
