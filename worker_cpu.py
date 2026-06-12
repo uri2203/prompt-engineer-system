@@ -83,6 +83,29 @@ def verificar_nodos_criticos(necesita_sd=True, necesita_voz=True):
 
 _depthflow_vivo = None  # cache del estado del servidor (None=sin verificar)
 
+def _liberar_vram_sd():
+    """Libera la VRAM de Stable Diffusion antes del parallax.
+    En el ensamblaje las imágenes ya están generadas, así que SD no se necesita,
+    y DepthFlow necesita esa VRAM para no fallar (causa raíz del error 500)."""
+    try:
+        # Automatic1111: descargar el modelo de la GPU libera la mayor parte de la VRAM
+        requests.post(f"{URL_NODO_SD}/sdapi/v1/unload-checkpoint", timeout=30)
+        print("   [VRAM] Stable Diffusion descargado de la GPU (libera memoria para DepthFlow)")
+        import time as _t
+        _t.sleep(3)  # dar tiempo a que la VRAM se libere
+        return True
+    except Exception as e:
+        print(f"   [VRAM] No se pudo descargar SD ({str(e)[:60]}) — DepthFlow puede fallar por VRAM")
+        return False
+
+def _recargar_sd():
+    """Recarga el modelo de SD después del parallax (para el siguiente video)."""
+    try:
+        requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=60)
+        print("   [VRAM] Stable Diffusion recargado para el siguiente trabajo")
+    except Exception:
+        pass
+
 def _depthflow_disponible():
     """Verifica una sola vez si el servidor DepthFlow del PC GPU está vivo."""
     global _depthflow_vivo
@@ -1095,6 +1118,12 @@ def procesar():
 
                 # ¿Está vivo el servidor DepthFlow del PC GPU? (verifica una vez)
                 usar_parallax_global = _depthflow_disponible()
+
+                # Si vamos a usar parallax, liberar la VRAM de SD primero.
+                # Esto resuelve el error 500: DepthFlow necesita la VRAM que SD ocupa.
+                if usar_parallax_global:
+                    _liberar_vram_sd()
+
                 _rnd_para = random.Random(str(tarea.get("id", "")) + "parallax")
 
                 for i, archivo in enumerate(archivos_escenas):
@@ -1422,6 +1451,10 @@ def procesar():
                     os.rename(ruta_actual, ruta_final)
 
                 print(f"🏆 [OPERACIÓN EXITOSA V8.4.8] Video finalizado: {ruta_final}\n")
+
+                # Recargar SD a la GPU para que el siguiente video pueda generar imágenes
+                if usar_parallax_global:
+                    _recargar_sd()
 
                 print("📦 Generando paquete de publicación SEO...")
                 paquete = {}
