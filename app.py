@@ -314,6 +314,7 @@ def api_bot_cron_config():
                 "fecha": data.get("fecha", ""),         # "YYYY-MM-DD"
                 "hora": data.get("hora", "08:00"),       # "HH:MM"
                 "formato": data.get("formato", "9:16"),
+                "duracion_min": data.get("duracion_min"),  # 15/28/45 para largos, None para shorts
                 "repetir": data.get("repetir", "una_vez"),  # una_vez | diario | semanal
                 "activo": True,
                 "ejecutado": False,
@@ -385,7 +386,7 @@ def api_bot_cron_tick():
 
         if debe_disparar:
             try:
-                tid = _disparar_orden_interna(e.get("marca"), e.get("formato", "9:16"), "")
+                tid = _disparar_orden_interna(e.get("marca"), e.get("formato", "9:16"), "", e.get("duracion_min"))
                 disparadas.append({"marca": e.get("marca"), "tarea_id": tid})
                 e["ultima_ejec"] = fecha_actual
                 if repetir == "una_vez":
@@ -393,6 +394,8 @@ def api_bot_cron_tick():
                     e["activo"] = False  # se desactiva tras ejecutar
                 hubo_cambios = True
             except Exception as ex:
+                import traceback
+                _log_error_bot("cron_disparar", traceback.format_exc())
                 disparadas.append({"marca": e.get("marca"), "error": str(ex)})
 
     if hubo_cambios:
@@ -401,11 +404,17 @@ def api_bot_cron_tick():
         return jsonify({"status": "disparado", "ordenes": disparadas})
     return jsonify({"status": "esperando", "hora": hora_actual, "fecha": fecha_actual})
 
-def _disparar_orden_interna(marca, formato, premisa):
-    """Lógica compartida: genera guion + encola. Devuelve tarea_id."""
+def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
+    """Lógica compartida: genera guion + encola. Devuelve tarea_id.
+    duracion_min: para videos largos, minutos objetivo (15, 28, 45). None = short."""
     import json as _json
     es_largo = formato == "16:9"
-    longitud = "2800 palabras" if es_largo else "130 palabras"
+    # Conversión tiempo→palabras (~140 palabras/minuto de narración)
+    if es_largo:
+        mapa_duracion = {15: "2100 palabras", 28: "3900 palabras", 45: "6300 palabras"}
+        longitud = mapa_duracion.get(int(duracion_min) if duracion_min else 28, "3900 palabras")
+    else:
+        longitud = "130 palabras"
     formato_calculado = "16:9" if formato == "16:9" else "9:16"
 
     yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
