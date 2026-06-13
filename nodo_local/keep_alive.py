@@ -78,13 +78,14 @@ def reportar_diagnostico():
     except Exception:
         datos["nodos"] = {}
 
-    # Escribir a GitHub (sobreescribe el archivo)
+    # Escribir a GitHub (sobreescribe el archivo) — en la rama 'diagnostico'
+    # para NO disparar re-deploys de Render (que solo despliega 'main').
     try:
         contenido_b64 = _b64.b64encode(_json.dumps(datos, ensure_ascii=False, indent=2).encode()).decode()
         url = f"https://api.github.com/repos/{GH_REPO}/contents/{GH_PATH}"
-        # Obtener SHA actual para sobreescribir
-        rget = requests.get(url, headers={"Authorization": f"token {GH_TOKEN}"}, timeout=20)
-        payload = {"message": "diag update", "content": contenido_b64}
+        # Obtener SHA actual para sobreescribir (de la rama diagnostico)
+        rget = requests.get(url, headers={"Authorization": f"token {GH_TOKEN}"}, params={"ref": "diagnostico"}, timeout=20)
+        payload = {"message": "diag update", "content": contenido_b64, "branch": "diagnostico"}
         if rget.status_code == 200:
             payload["sha"] = rget.json()["sha"]
         requests.put(url, headers={"Authorization": f"token {GH_TOKEN}"}, json=payload, timeout=20)
