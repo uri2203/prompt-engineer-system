@@ -286,6 +286,19 @@ import json as _json_cron
 CRON_FILE = "/tmp/cron_pinpinela.json"
 
 def _leer_cron():
+    """Lee la agenda desde GitHub (persistente). Fallback a archivo local."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if gh:
+        try:
+            import base64 as _b64
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
+            r = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+            if r.status_code == 200:
+                contenido = _b64.b64decode(r.json()["content"]).decode()
+                return _json_cron.loads(contenido)
+        except Exception:
+            pass
+    # Fallback local
     try:
         with open(CRON_FILE) as f:
             return _json_cron.load(f)
@@ -293,6 +306,21 @@ def _leer_cron():
         return {"agenda": [], "ejecuciones": {}}
 
 def _guardar_cron(cfg):
+    """Guarda la agenda en GitHub (persistente, sobrevive el sleep de Render)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if gh:
+        try:
+            import base64 as _b64
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+            contenido = _b64.b64encode(_json_cron.dumps(cfg, ensure_ascii=False, indent=2).encode()).decode()
+            payload = {"message": "agenda update", "content": contenido}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+        except Exception:
+            pass
+    # También guardar local como respaldo
     try:
         with open(CRON_FILE, "w") as f:
             _json_cron.dump(cfg, f)
