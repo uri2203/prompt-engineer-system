@@ -108,6 +108,71 @@ _estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts
 # Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
 _worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
 
+# ── DIAGNÓSTICO REMOTO ───────────────────────────────────────────────────────
+# Permite validar el estado del sistema sin login, con una clave secreta.
+# El Xeon reporta aquí sus logs/versión; el diagnóstico los expone para revisión.
+DIAG_CLAVE = "pinpinela_diag_2026"
+_diagnostico = {
+    "worker_version": "",      # nº de líneas o hash del worker
+    "worker_logs": [],         # últimas líneas del log del worker
+    "ultimo_error": "",
+    "orquestador_estado": {},  # estado del lote
+    "ts_reporte": 0,
+}
+
+@app.route('/api/diagnostico', methods=['GET'])
+def api_diagnostico():
+    """Lo consulto remotamente con la clave. Devuelve TODO el estado del sistema."""
+    if request.args.get("clave") != DIAG_CLAVE:
+        return jsonify({"error": "clave invalida"}), 403
+    import glob as _glob
+    antiguedad_nodos = time.time() - _estado_nodos.get("ts", 0)
+    antiguedad_diag = time.time() - _diagnostico.get("ts_reporte", 0)
+    # Listar tareas pendientes en disco
+    pendientes_disco = []
+    try:
+        for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json", "/tmp/pendiente_ensamblaje_*.json"):
+            pendientes_disco.extend([os.path.basename(x) for x in _glob.glob(patron)])
+    except Exception:
+        pass
+    return jsonify({
+        "render": {
+            "vivo": True,
+            "cola_memoria": len(cola_de_renderizado),
+            "tareas_en_disco": pendientes_disco,
+        },
+        "nodos": {
+            "estado": {k: _estado_nodos.get(k) for k in ("sd","voz","parallax","nube")},
+            "ultimo_reporte_hace_seg": round(antiguedad_nodos),
+            "xeon_reportando": antiguedad_nodos < 90,
+        },
+        "worker": {
+            "ocupado": _worker_estado.get("ocupado"),
+            "tarea_actual": _worker_estado.get("tarea_actual"),
+            "version_lineas": _diagnostico.get("worker_version"),
+            "ultimas_lineas_log": _diagnostico.get("worker_logs", [])[-30:],
+            "ultimo_error": _diagnostico.get("ultimo_error"),
+        },
+        "orquestador": _diagnostico.get("orquestador_estado", {}),
+        "diag_reporte_hace_seg": round(antiguedad_diag),
+    })
+
+@app.route('/api/diagnostico/reportar', methods=['POST'])
+def api_diagnostico_reportar():
+    """El Xeon reporta aquí su estado (logs, versión, errores) para que yo lo vea."""
+    data = request.json or {}
+    if "worker_version" in data:
+        _diagnostico["worker_version"] = data["worker_version"]
+    if "worker_logs" in data:
+        _diagnostico["worker_logs"] = data["worker_logs"][-50:]
+    if "ultimo_error" in data:
+        _diagnostico["ultimo_error"] = data["ultimo_error"]
+    if "orquestador_estado" in data:
+        _diagnostico["orquestador_estado"] = data["orquestador_estado"]
+    _diagnostico["ts_reporte"] = time.time()
+    return jsonify({"status": "ok"})
+
+
 @app.route('/api/nodo/worker_estado', methods=['GET', 'POST'])
 def api_worker_estado():
     """POST: el worker reporta si está ocupado. GET: el keep_alive consulta el estado."""
