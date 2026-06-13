@@ -138,6 +138,18 @@ cola = len(app_mod.cola_de_renderizado)
 print(f"    Tareas en cola_de_renderizado: {cola}")
 print(f"    {'✅ La orden llegó a la cola' if cola > 0 else '❌ La cola está vacía (la orden no llegó)'}")
 
+# ── TEST 4: Worker hace polling tras 'sueño' de Render ──
+print("\n[TEST 4] Worker hace polling (simula que Render durmió y perdió memoria)...")
+app_mod.cola_de_renderizado.clear()  # simular pérdida de memoria por sleep
+resp4 = client.post("/api/nodo/polling", json={"nodo_id": "XEON_ASSEMBLER"})
+data4 = resp4.get_json()
+if data4.get("hay_trabajo"):
+    t = data4["tarea"]
+    print(f"    ✅ Worker RECIBIÓ la orden: {t.get('marca')} {str(t.get('id',''))[:8]}")
+    print(f"    (Sobrevivió al sueño de Render gracias a la persistencia en GitHub)")
+else:
+    print(f"    ❌ El polling NO entregó la orden (se perdió con el sueño de Render)")
+
 print("\n" + "=" * 60)
 print("FIN DEL TEST DE LA NUBE")
 print("=" * 60)
