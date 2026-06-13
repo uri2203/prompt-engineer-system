@@ -150,6 +150,18 @@ if data4.get("hay_trabajo"):
 else:
     print(f"    ❌ El polling NO entregó la orden (se perdió con el sueño de Render)")
 
+# ── TEST 5: Orden manual con duración (15/28/45 min) ──
+print("\n[TEST 5] Orden manual de video largo con duración 45 min...")
+resp5 = client.post("/api/bot/lanzar_orden", json={
+    "marca": "Monkygraff", "formato": "16:9", "duracion_min": 45,
+    "premisa": "Test de duración"
+})
+data5 = resp5.get_json()
+if resp5.status_code == 200 and data5.get("status") in ("PENDING_REVIEW", "ok"):
+    print(f"    ✅ Orden de 45 min aceptada: {data5.get('num_escenas', '?')} escenas, formato {data5.get('formato')}")
+else:
+    print(f"    Respuesta: HTTP {resp5.status_code} {data5}")
+
 print("\n" + "=" * 60)
 print("FIN DEL TEST DE LA NUBE")
 print("=" * 60)
