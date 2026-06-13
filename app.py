@@ -653,10 +653,15 @@ def api_bot_lanzar_orden():
     marca   = data.get('marca', 'La Viuda')
     formato = data.get('formato', '9:16')
     premisa = data.get('premisa', '').strip()
+    duracion_min = data.get('duracion_min')
 
-    # Formato → longitud (largo vs short)
+    # Formato → longitud (largo vs short), con duración configurable para largos
     es_largo = formato in ("16:9",) and data.get('tipo', 'largo') != 'short'
-    longitud = "2800 palabras" if es_largo else "130 palabras"
+    if es_largo:
+        mapa_duracion = {15: "2100 palabras", 28: "3900 palabras", 45: "6300 palabras"}
+        longitud = mapa_duracion.get(int(duracion_min) if duracion_min else 28, "3900 palabras")
+    else:
+        longitud = "130 palabras"
     formato_calculado = "16:9" if formato == "16:9" else "9:16"
 
     try:
