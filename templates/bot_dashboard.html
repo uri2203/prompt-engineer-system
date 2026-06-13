@@ -182,11 +182,19 @@
                         </div>
                         <div>
                             <label class="block mb-1 text-[9px] text-amber-500 font-bold uppercase tracking-widest">Formato</label>
-                            <select id="ag_formato" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-amber-500">
+                            <select id="ag_formato" onchange="onCambioFormatoAgenda()" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-amber-500">
                                 <option value="9:16">Short 9:16</option>
                                 <option value="16:9">Largo 16:9</option>
                             </select>
                         </div>
+                    </div>
+                    <div id="ag_duracion_wrap" class="mb-3 hidden">
+                        <label class="block mb-1 text-[9px] text-cyan-400 font-bold uppercase tracking-widest">Duración del video largo</label>
+                        <select id="ag_duracion" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                            <option value="15">15 minutos</option>
+                            <option value="28" selected>28 minutos</option>
+                            <option value="45">45 minutos</option>
+                        </select>
                     </div>
                     <div class="grid grid-cols-3 gap-3 mb-3">
                         <div>
@@ -278,10 +286,12 @@
                 return;
             }
         }
+        const formato = document.getElementById('ag_formato').value;
         const payload = {
             accion: 'agregar',
             marca: document.getElementById('ag_marca').value,
-            formato: document.getElementById('ag_formato').value,
+            formato: formato,
+            duracion_min: formato === '16:9' ? parseInt(document.getElementById('ag_duracion').value) : null,
             fecha: fecha,
             hora: hora,
             repetir: repetir,
@@ -289,6 +299,13 @@
         await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
         cargarAgenda();
         actualizarEstadoBot();
+    }
+
+    // Mostrar/ocultar el selector de duración según el formato (solo largos)
+    function onCambioFormatoAgenda() {
+        const formato = document.getElementById('ag_formato').value;
+        const wrap = document.getElementById('ag_duracion_wrap');
+        if (wrap) wrap.classList.toggle('hidden', formato !== '16:9');
     }
 
     function formatFecha(f) {
