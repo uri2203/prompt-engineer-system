@@ -108,6 +108,35 @@ _estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts
 # Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
 _worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
 
+# Registro de últimos errores del bot (para diagnóstico remoto vía GitHub)
+_ultimos_errores_bot = []
+def _log_error_bot(donde, error):
+    import traceback
+    entrada = {
+        "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "donde": donde,
+        "error": str(error)[:800],
+    }
+    _ultimos_errores_bot.append(entrada)
+    if len(_ultimos_errores_bot) > 20:
+        _ultimos_errores_bot.pop(0)
+    # Escribir a GitHub para diagnóstico remoto (token en variable de entorno de Render)
+    try:
+        import base64 as _b64, json as _json
+        gh_token = os.environ.get("GH_DIAG_TOKEN", "")
+        if gh_token:
+            repo = "uri2203/prompt-engineer-system"
+            path = "_diagnostico/errores_render.json"
+            url = f"https://api.github.com/repos/{repo}/contents/{path}"
+            rget = requests.get(url, headers={"Authorization": f"token {gh_token}"}, timeout=15)
+            contenido = _b64.b64encode(_json.dumps(_ultimos_errores_bot, ensure_ascii=False, indent=2).encode()).decode()
+            payload = {"message": "error bot", "content": contenido}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh_token}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
 # ── DIAGNÓSTICO REMOTO ───────────────────────────────────────────────────────
 # Permite validar el estado del sistema sin login, con una clave secreta.
 # El Xeon reporta aquí sus logs/versión; el diagnóstico los expone para revisión.
@@ -646,6 +675,8 @@ def api_bot_lanzar_orden():
             "encolado": True,
         })
     except Exception as e:
+        import traceback
+        _log_error_bot("lanzar_orden", traceback.format_exc())
         return jsonify({"status": "error", "message": str(e)}), 500
 
 
