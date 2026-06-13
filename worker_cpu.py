@@ -1,3 +1,12 @@
+import sys
+# FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
+# en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 import requests
 import time
 import os
