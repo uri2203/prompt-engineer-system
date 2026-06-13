@@ -855,20 +855,41 @@ def procesar():
     global _tareas_completadas  # FIX: Llamamos al registro local
     
     try:
-        res = requests.post(
-            f"{RENDER_URL}/api/nodo/polling",
-            json={"nodo_id": "XEON_ASSEMBLER"},
-            timeout=400
-        )
-        if res.status_code == 429:
-            print("[CIRCUIT BREAKER] 429 en polling — pausando 60s...")
-            time.sleep(60)
-            return
-        if res.status_code != 200:
-            _registrar_error_render()
-            return
-        _resetear_errores_render()
-        data = res.json()
+        # PRIORIDAD: revisar la cola local (ensamblajes encolados por el propio worker).
+        # Esto NO depende de Render ni de su /tmp efímero.
+        import glob as _glob
+        tarea = None
+        cola_local_dir = r"C:\NODO_PINPINELA\cola_local"
+        if os.path.isdir(cola_local_dir):
+            locales = sorted(_glob.glob(os.path.join(cola_local_dir, "*.json")))
+            if locales:
+                archivo_local = locales[0]
+                try:
+                    with open(archivo_local, encoding="utf-8") as f:
+                        tarea = json.load(f)
+                    os.remove(archivo_local)
+                    print(f"\n📦 [COLA LOCAL] Tomando ensamblaje encolado: {tarea.get('id')}")
+                except Exception as e:
+                    print(f"⚠️ Error leyendo cola local: {e}")
+                    tarea = None
+
+        if tarea is not None:
+            data = {"hay_trabajo": True, "tarea": tarea}
+        else:
+            res = requests.post(
+                f"{RENDER_URL}/api/nodo/polling",
+                json={"nodo_id": "XEON_ASSEMBLER"},
+                timeout=400
+            )
+            if res.status_code == 429:
+                print("[CIRCUIT BREAKER] 429 en polling — pausando 60s...")
+                time.sleep(60)
+                return
+            if res.status_code != 200:
+                _registrar_error_render()
+                return
+            _resetear_errores_render()
+            data = res.json()
 
         if data.get("hay_trabajo"):
             tarea    = data["tarea"]
@@ -1999,7 +2020,32 @@ def procesar():
                         json={"tarea_id": tarea_id, "estado": "finalizado"},
                         timeout=30
                     )
-                    
+
+                    # ENCOLAR EL ENSAMBLAJE LOCALMENTE (no depende de /tmp de Render, que es efímero).
+                    # El worker tiene todos los datos, así que arma el ensamblaje y lo guarda en disco local.
+                    if tarea.get("texto_locucion") or tarea.get("origen", "").startswith("bot"):
+                        try:
+                            voice_id = "PHKlYg202ODwQRa3Fxuo" if tarea.get("marca") == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+                            ensamblaje_local = {
+                                "id": f"{tarea_id}_asm",
+                                "tipo": "ENSAMBLAJE",
+                                "formato": tarea.get("formato", "9:16"),
+                                "marca": tarea.get("marca", "La Viuda"),
+                                "texto_locucion": tarea.get("texto_locucion", ""),
+                                "escenas_texto": tarea.get("escenas_texto", []),
+                                "escenas": tarea.get("escenas", []),
+                                "hooks": tarea.get("hooks", []),
+                                "titulo_sugerido": tarea.get("titulo_sugerido", ""),
+                                "voice_id": voice_id,
+                                "origen": tarea.get("origen", "bot"),
+                            }
+                            os.makedirs(r"C:\NODO_PINPINELA\cola_local", exist_ok=True)
+                            with open(rf"C:\NODO_PINPINELA\cola_local\ensamblaje_{tarea_id}.json", "w", encoding="utf-8") as f:
+                                json.dump(ensamblaje_local, f, ensure_ascii=False)
+                            print(f"   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente")
+                        except Exception as e:
+                            print(f"   ⚠️ No se pudo encolar ensamblaje local: {e}")
+
                     print(f"✅ [LOTE COMPLETADO] Nodo local sincronizado y tarea cerrada.\n")
                 except Exception as e:
                     print(f"⚠️ Error al sincronizar cierre de lote: {e}")
