@@ -1931,6 +1931,16 @@ def procesar():
                 requests.post(f"{RENDER_URL}/api/nodo/worker_estado",
                               json={"ocupado": False, "tarea_actual": ""}, timeout=10)
                 _worker_tomo_tarea[0] = False
+                print("   [LIBRE] Worker disponible para la siguiente orden.")
+        except:
+            pass
+        # Evitar que _tareas_completadas crezca sin límite (mantener solo las últimas 50)
+        try:
+            if len(_tareas_completadas) > 50:
+                # conservar las más recientes no es trivial en un set; lo vaciamos
+                # cuando crece demasiado (las tareas viejas ya no se reenvían)
+                _tareas_completadas.clear()
+                print("   [LIMPIEZA] Registro de tareas completadas reiniciado.")
         except:
             pass
 
