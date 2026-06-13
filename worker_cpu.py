@@ -93,46 +93,22 @@ def verificar_nodos_criticos(necesita_sd=True, necesita_voz=True):
 _depthflow_vivo = None  # cache del estado del servidor (None=sin verificar)
 
 def _liberar_vram_sd():
-    """Descarga el modelo de SD de la VRAM. Se llama UNA SOLA VEZ después de
-    generar todas las imágenes y antes de TODO el parallax, para que DepthFlow
-    tenga toda la VRAM disponible (resuelve el error 500). SD se recarga al final."""
-    try:
-        requests.post(f"{URL_NODO_SD}/sdapi/v1/unload-checkpoint", timeout=30)
-        print("   [VRAM] SD descargado de la GPU → DepthFlow usará toda la VRAM")
-        import time as _t
-        _t.sleep(4)  # dar tiempo a que la VRAM se libere
-        return True
-    except Exception as e:
-        print(f"   [VRAM] No se pudo descargar SD ({str(e)[:50]})")
-        return False
+    """NEUTRALIZADA: descargar el modelo de SD de la VRAM movía el modelo (varios GB)
+    entre VRAM y RAM del sistema, saturando la RAM (subía a 20 GB) y colgando el equipo.
+    Ahora el modelo se queda SIEMPRE cargado y quieto. SD estable, RAM ~1 GB."""
+    return False
 
 def _recargar_sd():
-    """Recarga el modelo de SD después del parallax (para el siguiente video)."""
-    try:
-        requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=60)
-        print("   [VRAM] Stable Diffusion recargado para el siguiente trabajo")
-    except Exception:
-        pass
+    """NEUTRALIZADA: ya no se descarga el modelo, así que no hay que recargarlo."""
+    return True
 
 def _asegurar_sd_cargado():
-    """Verifica que SD tenga modelo cargado. Solo recarga si detecta que está
-    descargado (ej. un video anterior lo dejó así). No recarga si ya está listo."""
+    """Solo verifica que SD responda (ping ligero). NO toca el modelo ni la VRAM."""
     try:
-        r = requests.get(f"{URL_NODO_SD}/sdapi/v1/options", timeout=15)
-        if r.status_code == 200:
-            modelo = r.json().get("sd_model_checkpoint", "")
-            # Si hay un modelo cargado, está listo (no recargar)
-            if modelo and "None" not in str(modelo):
-                return True
-            # Modelo vacío/None → está descargado, recargar
-            print("   [VRAM] SD sin modelo cargado — recargando para generar...")
-            requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=120)
-            import time as _t
-            _t.sleep(4)
-            return True
+        requests.get(f"{URL_NODO_SD}/sdapi/v1/options", timeout=15)
     except Exception:
         pass
-    return True  # si el check falla, igual intentamos generar
+    return True
 
 def _depthflow_disponible():
     """Verifica una sola vez si el servidor DepthFlow del PC GPU está vivo."""
@@ -1511,8 +1487,7 @@ def procesar():
                 else:
                     print(f"📱 9:16 SHORT → 3060 [{IP_GRAFICA_1}]")
 
-                # Asegurar que SD tenga el modelo CARGADO antes de generar.
-                # (Un parallax anterior pudo descargarlo de la VRAM con unload-checkpoint.)
+                # Verificar que SD responda antes de generar (ping ligero, no toca VRAM)
                 _asegurar_sd_cargado()
 
                 img_prev = ""
