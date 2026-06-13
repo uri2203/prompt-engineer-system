@@ -558,6 +558,8 @@ def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
     except Exception:
         pass
     cola_de_renderizado.append(tarea_worker)
+    # Persistir en GitHub para que no se pierda si Render duerme
+    _encolar_orden_persistente(tarea_worker)
     return tarea_id
 
 @app.route('/api/bot/cola')
@@ -745,6 +747,8 @@ def api_bot_lanzar_orden():
         except Exception:
             pass
         cola_de_renderizado.append(tarea_worker)
+        # Persistir en GitHub para que no se pierda si Render duerme
+        _encolar_orden_persistente(tarea_worker)
 
         return jsonify({
             "status": "PENDING_REVIEW",
@@ -926,7 +930,16 @@ def nodo_tarea_completada():
 @app.route('/api/nodo/polling', methods=['POST'])
 def nodo_polling():
     import json as _json, glob
-    # Si la cola está vacía, recuperar tareas guardadas en disco (ensamblajes y órdenes del bot)
+    # Si la cola en memoria está vacía, recuperar órdenes PERSISTENTES de GitHub.
+    # (Render borra /tmp y la memoria al dormir; GitHub no.)
+    if len(cola_de_renderizado) == 0:
+        pendientes = _leer_ordenes_persistentes()
+        if pendientes:
+            # Tomar la primera, quitarla de GitHub, y entregarla
+            tarea = pendientes.pop(0)
+            _guardar_ordenes_persistentes(pendientes)
+            return jsonify({"status": "success", "hay_trabajo": True, "tarea": tarea}), 200
+    # Fallback: /tmp local (por si acaso)
     if len(cola_de_renderizado) == 0:
         for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json"):
             archivos = glob.glob(patron)
@@ -936,7 +949,7 @@ def nodo_polling():
                         tarea = _json.load(f)
                     cola_de_renderizado.append(tarea)
                     os.remove(archivo)
-                    break  # procesar una a la vez
+                    break
                 except:
                     pass
             if len(cola_de_renderizado) > 0:
@@ -944,6 +957,46 @@ def nodo_polling():
     if len(cola_de_renderizado) > 0:
         return jsonify({"status": "success", "hay_trabajo": True, "tarea": cola_de_renderizado.pop(0)}), 200
     return jsonify({"status": "success", "hay_trabajo": False}), 200
+
+
+def _leer_ordenes_persistentes():
+    """Lee la cola de órdenes pendientes desde GitHub (persistente)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return []
+    try:
+        import base64 as _b64, json as _json
+        url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
+        r = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+        if r.status_code == 200:
+            return _json.loads(_b64.b64decode(r.json()["content"]).decode())
+    except Exception:
+        pass
+    return []
+
+def _guardar_ordenes_persistentes(lista):
+    """Guarda la cola de órdenes pendientes en GitHub."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return
+    try:
+        import base64 as _b64, json as _json
+        url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
+        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+        contenido = _b64.b64encode(_json.dumps(lista, ensure_ascii=False, indent=2).encode()).decode()
+        payload = {"message": "cola ordenes", "content": contenido}
+        if rget.status_code == 200:
+            payload["sha"] = rget.json()["sha"]
+        requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
+def _encolar_orden_persistente(tarea):
+    """Agrega una orden a la cola persistente de GitHub."""
+    lista = _leer_ordenes_persistentes()
+    lista.append(tarea)
+    _guardar_ordenes_persistentes(lista)
+
 
 @app.route('/api/nodo/upload_result', methods=['POST'])
 def upload_result():
