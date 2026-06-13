@@ -129,9 +129,9 @@ def _log_error_bot(donde, error):
             repo = "uri2203/prompt-engineer-system"
             path = "_diagnostico/errores_render.json"
             url = f"https://api.github.com/repos/{repo}/contents/{path}"
-            rget = requests.get(url, headers={"Authorization": f"token {gh_token}"}, timeout=15)
+            rget = requests.get(url, headers={"Authorization": f"token {gh_token}"}, params={"ref": "diagnostico"}, timeout=15)
             contenido = _b64.b64encode(_json.dumps(_ultimos_errores_bot, ensure_ascii=False, indent=2).encode()).decode()
-            payload = {"message": "error bot", "content": contenido}
+            payload = {"message": "error bot", "content": contenido, "branch": "diagnostico"}
             if rget.status_code == 200:
                 payload["sha"] = rget.json()["sha"]
             requests.put(url, headers={"Authorization": f"token {gh_token}"}, json=payload, timeout=15)
@@ -293,7 +293,7 @@ def _leer_cron():
         try:
             import base64 as _b64
             url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
-            r = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+            r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
             if r.status_code == 200:
                 contenido = _b64.b64decode(r.json()["content"]).decode()
                 return _json_cron.loads(contenido)
@@ -313,9 +313,9 @@ def _guardar_cron(cfg):
         try:
             import base64 as _b64
             url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
-            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
             contenido = _b64.b64encode(_json_cron.dumps(cfg, ensure_ascii=False, indent=2).encode()).decode()
-            payload = {"message": "agenda update", "content": contenido}
+            payload = {"message": "agenda update", "content": contenido, "branch": "diagnostico"}
             if rget.status_code == 200:
                 payload["sha"] = rget.json()["sha"]
             requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
@@ -382,8 +382,8 @@ def api_bot_cron_tick():
                 "worker_ocupado": _worker_esta_ocupado(),
             }
             url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cron_log.json"
-            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
-            payload = {"message": "cron log", "content": _b64.b64encode(_json.dumps(info, ensure_ascii=False, indent=2).encode()).decode()}
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+            payload = {"message": "cron log", "content": _b64.b64encode(_json.dumps(info, ensure_ascii=False, indent=2).encode()).decode(), "branch": "diagnostico"}
             if rget.status_code == 200:
                 payload["sha"] = rget.json()["sha"]
             requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
@@ -972,7 +972,7 @@ def _leer_ordenes_persistentes():
     try:
         import base64 as _b64, json as _json
         url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
-        r = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+        r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
         if r.status_code == 200:
             return _json.loads(_b64.b64decode(r.json()["content"]).decode())
     except Exception:
@@ -987,9 +987,9 @@ def _guardar_ordenes_persistentes(lista):
     try:
         import base64 as _b64, json as _json
         url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
-        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
         contenido = _b64.b64encode(_json.dumps(lista, ensure_ascii=False, indent=2).encode()).decode()
-        payload = {"message": "cola ordenes", "content": contenido}
+        payload = {"message": "cola ordenes", "content": contenido, "branch": "diagnostico"}
         if rget.status_code == 200:
             payload["sha"] = rget.json()["sha"]
         requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
