@@ -8,6 +8,12 @@ import time
 RENDER_URL = "https://prompt-engineer-system-l2r6.onrender.com"
 INTERVALO  = 60  # cada 60 segundos (ping a nodos + keep-alive)
 
+# Archivos de log/estado del Xeon (para reportar diagnóstico a Render)
+import os
+LOG_WORKER = r"C:\NODO_PINPINELA\worker_log.txt"
+WORKER_PY  = r"C:\NODO_PINPINELA\worker_cpu.py"
+ESTADO_LOTE = r"C:\NODO_PINPINELA\estado_lote\lote_actual.json"
+
 # Nodos locales a vigilar
 NODOS = {
     "sd":       "http://192.168.0.215:7861/sdapi/v1/options",  # Stable Diffusion
@@ -21,6 +27,37 @@ def ping(url, timeout=6):
         return "on"   # cualquier respuesta HTTP = vivo
     except Exception:
         return "off"
+
+def reportar_diagnostico():
+    """Lee el log del worker y el estado del lote, los reporta a Render para diagnóstico remoto."""
+    import json as _json
+    datos = {}
+    # Versión del worker (nº de líneas)
+    try:
+        with open(WORKER_PY, encoding="utf-8") as f:
+            datos["worker_version"] = f"{len(f.readlines())} lineas"
+    except Exception:
+        datos["worker_version"] = "no encontrado"
+    # Últimas líneas del log del worker
+    try:
+        with open(LOG_WORKER, encoding="utf-8", errors="ignore") as f:
+            lineas = f.readlines()
+            datos["worker_logs"] = [l.rstrip() for l in lineas[-50:]]
+            # buscar último error
+            errores = [l.rstrip() for l in lineas if "error" in l.lower() or "⚠️" in l or "❌" in l]
+            datos["ultimo_error"] = errores[-1] if errores else ""
+    except Exception:
+        datos["worker_logs"] = ["(sin log; el worker debe redirigir su salida a worker_log.txt)"]
+    # Estado del lote del orquestador
+    try:
+        with open(ESTADO_LOTE, encoding="utf-8") as f:
+            datos["orquestador_estado"] = _json.load(f)
+    except Exception:
+        datos["orquestador_estado"] = {}
+    try:
+        requests.post(f"{RENDER_URL}/api/diagnostico/reportar", json=datos, timeout=20)
+    except Exception:
+        pass
 
 print("💓 KEEP-ALIVE + MONITOR DE NODOS ACTIVO")
 contador_keepalive = 0
@@ -51,6 +88,9 @@ while True:
         print(f"📡 Nodos: SD={estado['sd']} VOZ={estado['voz']} PARALLAX={estado['parallax']}{ocup}")
     except Exception as e:
         print(f"⚠️ No se pudo reportar nodos: {e}")
+
+    # 2b. Reportar diagnóstico (logs del worker, estado del lote) para revisión remota
+    reportar_diagnostico()
 
     # 3. Tick del cronjob del Bot Pinpinela (dispara órdenes programadas)
     try:
