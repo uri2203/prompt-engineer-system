@@ -337,18 +337,42 @@ def api_bot_cron_tick():
     """El Xeon llama aquí cada minuto. Dispara las entradas de la agenda cuya
     fecha+hora coincidan con ahora. Soporta repetición (una vez, diario, semanal)."""
     from datetime import datetime, timezone, timedelta
+
+    def _log_cron(estado, detalle=""):
+        """Escribe la actividad del cron a GitHub para diagnóstico remoto."""
+        try:
+            import base64 as _b64, json as _json
+            gh = os.environ.get("GH_DIAG_TOKEN", "")
+            if not gh:
+                return
+            tz = timezone(timedelta(hours=-6))
+            info = {
+                "ts": datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S"),
+                "estado": estado,
+                "detalle": str(detalle)[:400],
+                "worker_ocupado": _worker_esta_ocupado(),
+            }
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cron_log.json"
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, timeout=15)
+            payload = {"message": "cron log", "content": _b64.b64encode(_json.dumps(info, ensure_ascii=False, indent=2).encode()).decode()}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+        except Exception:
+            pass
+
     cfg = _leer_cron()
     agenda = cfg.get("agenda", [])
     if not agenda:
+        _log_cron("sin_agenda", "La agenda está vacía")
         return jsonify({"status": "sin_agenda"})
 
     # Si el worker está ocupado generando un video, NO disparar nada nuevo.
-    # La orden se quedará pendiente y se disparará en el siguiente tick libre.
     if _worker_esta_ocupado():
+        _log_cron("worker_ocupado", _worker_estado.get("tarea_actual", ""))
         return jsonify({"status": "worker_ocupado", "tarea": _worker_estado.get("tarea_actual", "")})
 
-    # Render corre en UTC. Convertir a hora de México (UTC-6) para que coincida
-    # con lo que el usuario programó en el calendario.
+    # Render corre en UTC. Convertir a hora de México (UTC-6).
     tz_mexico = timezone(timedelta(hours=-6))
     ahora = datetime.now(tz_mexico)
     hora_actual = ahora.strftime("%H:%M")
@@ -413,8 +437,14 @@ def api_bot_cron_tick():
 
     if hubo_cambios:
         _guardar_cron(cfg)
+    # Registrar el estado del tick a GitHub para diagnóstico
+    resumen_agenda = [{"marca": x.get("marca"), "fecha": x.get("fecha"), "hora": x.get("hora"),
+                       "formato": x.get("formato"), "activo": x.get("activo"),
+                       "ejecutado": x.get("ejecutado")} for x in agenda]
     if disparadas:
+        _log_cron("disparado", f"hora={hora_actual} fecha={fecha_actual} | {disparadas}")
         return jsonify({"status": "disparado", "ordenes": disparadas})
+    _log_cron("esperando", f"hora_mexico={hora_actual} fecha={fecha_actual} | agenda={resumen_agenda}")
     return jsonify({"status": "esperando", "hora": hora_actual, "fecha": fecha_actual})
 
 def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
