@@ -114,10 +114,18 @@
                     
                     <div>
                         <label class="label-blue block mb-2 text-[10px] text-amber-500 font-bold uppercase tracking-widest">Formato de Render (FFmpeg)</label>
-                        <select id="orden_formato" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-amber-500 outline-none transition-colors">
+                        <select id="orden_formato" onchange="onCambioFormatoOrden()" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-amber-500 outline-none transition-colors">
                             <option value="16:9">YouTube Clásico (16:9 - 1280x720)</option>
                             <option value="9:16">TikTok / Shorts (9:16 - 720x1280)</option>
                         </select>
+                        <div id="orden_duracion_wrap" class="mt-2">
+                            <label class="block mb-1 text-[9px] text-cyan-400 font-bold uppercase tracking-widest">Duración del video largo</label>
+                            <select id="orden_duracion" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-cyan-500 outline-none transition-colors">
+                                <option value="15">15 minutos</option>
+                                <option value="28" selected>28 minutos</option>
+                                <option value="45">45 minutos</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -438,7 +446,7 @@
     window.addEventListener('load', () => { actualizarEstadoBot(); setInterval(actualizarEstadoBot, 12000); });
 
     // Controladores del Modal
-    function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); }
+    function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); onCambioFormatoOrden(); }
     function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
 
     // Al cambiar el modo de ejecución: si elige "programar", abre el calendario de una vez
@@ -496,7 +504,14 @@
         }
     }
 
-    // Función principal de inyección
+    // Mostrar/ocultar el selector de duracion en Nueva Orden segun el formato
+    function onCambioFormatoOrden() {
+        const formato = document.getElementById('orden_formato').value;
+        const wrap = document.getElementById('orden_duracion_wrap');
+        if (wrap) wrap.classList.toggle('hidden', formato !== '16:9');
+    }
+
+    // Funcion principal de inyeccion
     async function ejecutarOrden() {
         const btn = document.getElementById('btn_modal_ejecutar');
         const marca = document.getElementById('orden_marca').value;
@@ -533,7 +548,8 @@
             const payload = {
                 marca: marca, 
                 formato: formato, // <-- Ahora el backend sabe si es 16:9 o 9:16
-                premisa: premisa
+                premisa: premisa,
+                duracion_min: formato === '16:9' ? parseInt(document.getElementById('orden_duracion').value) : null
             };
 
             const res = await fetch('/api/bot/lanzar_orden', { 
