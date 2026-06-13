@@ -120,6 +120,35 @@ _diagnostico = {
     "ts_reporte": 0,
 }
 
+@app.route('/api/bot/limpiar_cola', methods=['GET', 'POST'])
+@login_required
+def api_bot_limpiar_cola():
+    """Limpia TODO lo atorado: cola en memoria + archivos de tareas en disco.
+    Útil cuando algo se queda trabado y hay que empezar fresco."""
+    import glob as _glob
+    eliminados = {"memoria": 0, "disco": 0}
+    # 1. Vaciar la cola en memoria
+    eliminados["memoria"] = len(cola_de_renderizado)
+    cola_de_renderizado.clear()
+    # 2. Borrar archivos de tareas en disco
+    for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json",
+                   "/tmp/pendiente_ensamblaje_*.json"):
+        for archivo in _glob.glob(patron):
+            try:
+                os.remove(archivo)
+                eliminados["disco"] += 1
+            except Exception:
+                pass
+    # 3. Resetear estado del worker
+    _worker_estado["ocupado"] = False
+    _worker_estado["tarea_actual"] = ""
+    return jsonify({
+        "status": "limpiado",
+        "cola_memoria_eliminada": eliminados["memoria"],
+        "archivos_disco_eliminados": eliminados["disco"],
+        "mensaje": "Cola limpia. El sistema está listo para empezar fresco."
+    })
+
 @app.route('/api/diagnostico', methods=['GET'])
 def api_diagnostico():
     """Lo consulto remotamente con la clave. Devuelve TODO el estado del sistema."""
