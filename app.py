@@ -386,8 +386,21 @@ def api_bot_cron_tick():
 
         if debe_disparar:
             try:
-                tid = _disparar_orden_interna(e.get("marca"), e.get("formato", "9:16"), "", e.get("duracion_min"))
-                disparadas.append({"marca": e.get("marca"), "tarea_id": tid})
+                # Generar el guion en SEGUNDO PLANO (thread). Generar un guion largo
+                # tarda >30s y el tick se cortaría por timeout. El thread lo genera
+                # tranquilo y el tick responde de inmediato.
+                import threading
+                marca_e = e.get("marca")
+                formato_e = e.get("formato", "9:16")
+                duracion_e = e.get("duracion_min")
+                def _generar_en_fondo(m, f, d):
+                    try:
+                        _disparar_orden_interna(m, f, "", d)
+                    except Exception:
+                        import traceback as _tb
+                        _log_error_bot("cron_disparar_fondo", _tb.format_exc())
+                threading.Thread(target=_generar_en_fondo, args=(marca_e, formato_e, duracion_e), daemon=True).start()
+                disparadas.append({"marca": marca_e, "estado": "generando_en_fondo"})
                 e["ultima_ejec"] = fecha_actual
                 if repetir == "una_vez":
                     e["ejecutado"] = True
