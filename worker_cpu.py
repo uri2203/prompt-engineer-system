@@ -327,101 +327,6 @@ def _mezclar_musica_dinamica(ruta_video, carpeta_marca, marca, duracion_total):
     print("   [MUSICA] Error mezclando — video sin musica de fondo")
     return ruta_video
 
-# ══════════════════════════════════════════════════════════════
-# SISTEMA DE HOOKS — PAUSA DRAMÁTICA CADA N ESCENAS
-# ══════════════════════════════════════════════════════════════
-HOOK_CADA_N_ESCENAS = 9
-HOOK_DURACION       = 2.5
-
-def _elegir_stinger(carpeta_marca, contador_hook):
-    idx = (contador_hook % 2) + 1
-    ruta = os.path.join(carpeta_marca, f"stinger{idx}.mp3")
-    if os.path.exists(ruta):
-        return ruta
-    ruta_alt = os.path.join(carpeta_marca, f"stinger{3-idx}.mp3")
-    return ruta_alt if os.path.exists(ruta_alt) else None
-
-def _generar_clip_hook(frase, ruta_imagen_base, ruta_stinger, ruta_salida, w, h, fps=30):
-    try:
-        total_frames = int(HOOK_DURACION * fps)
-        ruta_vtmp = ruta_salida.replace('.mp4', '_vtmp.mp4')
-        vf = (
-            f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-            f"zoompan=z='1.0+0.6*(on/{total_frames})':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-            f":d={total_frames}:fps={fps}:s={w}x{h},"
-            f"fade=t=in:st=0:d=0.1,fade=t=out:st={HOOK_DURACION-0.3:.1f}:d=0.3"
-        )
-        subprocess.run([
-            'ffmpeg', '-y', '-i', ruta_imagen_base,
-            '-vf', vf, '-t', str(HOOK_DURACION),
-            '-c:v', 'libx264', '-preset', 'ultrafast',
-            '-pix_fmt', 'yuv420p', '-r', str(fps), ruta_vtmp
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-        if not os.path.exists(ruta_vtmp):
-            return False
-
-        # Quemar texto con Pillow
-        if PIL_DISPONIBLE and frase:
-            try:
-                from PIL import Image, ImageDraw, ImageFont
-                ruta_frame = ruta_salida.replace('.mp4', '_hframe.png')
-                subprocess.run([
-                    'ffmpeg', '-y', '-i', ruta_vtmp,
-                    '-vf', 'select=eq(n,{})'.format(total_frames//2), '-vframes', '1', ruta_frame
-                ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                if os.path.exists(ruta_frame):
-                    img = Image.open(ruta_frame).convert('RGBA')
-                    iw, ih = img.size
-                    font = None
-                    for rf in FUENTES_WINDOWS:
-                        if os.path.exists(rf):
-                            try: font = ImageFont.truetype(rf, int(ih * 0.07)); break
-                            except: continue
-                    if not font: font = ImageFont.load_default()
-                    ov = Image.new('RGBA', img.size, (0,0,0,0))
-                    dr = ImageDraw.Draw(ov)
-                    bb = dr.textbbox((0,0), frase.upper(), font=font)
-                    tx = (iw-(bb[2]-bb[0]))//2
-                    ty = ih//2-(bb[3]-bb[1])//2
-                    dr.text((tx+3,ty+3), frase.upper(), font=font, fill=(0,0,0,200))
-                    dr.text((tx,ty), frase.upper(), font=font, fill=(255,255,255,255))
-                    Image.alpha_composite(img, ov).convert('RGB').save(ruta_frame)
-                    ruta_vtxt = ruta_salida.replace('.mp4', '_vtxt.mp4')
-                    subprocess.run([
-                        'ffmpeg', '-y', '-i', ruta_vtmp, '-i', ruta_frame,
-                        '-filter_complex',
-                        f"[0:v][1:v]overlay=0:0:enable='between(t,0.2,{HOOK_DURACION-0.3:.1f})'[v]",
-                        '-map', '[v]', '-c:v', 'libx264', '-preset', 'ultrafast',
-                        '-pix_fmt', 'yuv420p', ruta_vtxt
-                    ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    if os.path.exists(ruta_vtxt):
-                        os.replace(ruta_vtxt, ruta_vtmp)
-                    try: os.remove(ruta_frame)
-                    except: pass
-            except Exception as e:
-                print(f"   [HOOK] Error texto: {e}")
-
-        # Mezclar stinger
-        if ruta_stinger and os.path.exists(ruta_stinger):
-            subprocess.run([
-                'ffmpeg', '-y', '-i', ruta_vtmp, '-i', ruta_stinger,
-                '-filter_complex',
-                f"[1:a]volume=0.8,atrim=0:{HOOK_DURACION},asetpts=PTS-STARTPTS[s];"
-                f"[0:a][s]amix=inputs=2:duration=first[aout]",
-                '-map', '0:v', '-map', '[aout]',
-                '-c:v', 'copy', '-c:a', 'aac', ruta_salida
-            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        else:
-            subprocess.run(['ffmpeg', '-y', '-i', ruta_vtmp, '-c', 'copy', ruta_salida],
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        try: os.remove(ruta_vtmp)
-        except: pass
-        return os.path.exists(ruta_salida)
-    except Exception as e:
-        print(f"   [HOOK] Error: {e}")
-        return False
-
 # ── ALTERNANCIA INTELIGENTE PEXELS/SD ────────────────────────
 PALABRAS_FISICAS    = {"military","industrial","port","harbor","ship","factory","pipeline","city","aerial","drone","facility","base","station","tower","bridge","highway","infrastructure","satellite","refinery","mine","tunnel","warehouse","building","road","forest","ocean","field","mountain","dark","room","hallway","door","window","street","alley","house","basement","staircase","corridor","cemetery","church","fog","night"}
 PALABRAS_ABSTRACTAS = {"control","power","domination","strategy","concept","symbol","idea","system","network","digital","virtual","data","map","global","world","shadow","silhouette","force","energy","influence","geopolitical","monopoly","secret","hidden","classified","operation","plan","fear"}
@@ -1154,10 +1059,7 @@ def procesar():
 
                 escenas_data   = tarea.get("escenas", [])
                 textos_escenas = [e.get("texto_locucion", "") for e in escenas_data] if escenas_data else []
-                hooks_video    = tarea.get("hooks", [])
                 clips_temp     = []
-                contador_hook  = 0
-                print(f"   [HOOKS] Recibidos: {len(hooks_video)} hooks: {hooks_video}")
                 
                 es_cartoon_fx = (marca_audio.lower() in ["la esquina random", "laesquinarandom"])
 
@@ -2030,7 +1932,6 @@ def procesar():
                                 "texto_locucion": tarea.get("texto_locucion", ""),
                                 "escenas_texto": tarea.get("escenas_texto", []),
                                 "escenas": tarea.get("escenas", []),
-                                "hooks": tarea.get("hooks", []),
                                 "titulo_sugerido": tarea.get("titulo_sugerido", ""),
                                 "voice_id": voice_id,
                                 "origen": tarea.get("origen", "bot"),
