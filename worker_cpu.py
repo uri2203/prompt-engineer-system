@@ -93,9 +93,18 @@ def verificar_nodos_criticos(necesita_sd=True, necesita_voz=True):
 _depthflow_vivo = None  # cache del estado del servidor (None=sin verificar)
 
 def _liberar_vram_sd():
-    """DESACTIVADA: descargar el modelo de SD causaba lentitud y timeouts al regenerar.
-    Mejor dejar SD con su modelo cargado siempre. DepthFlow convive con la VRAM disponible."""
-    return False
+    """Descarga el modelo de SD de la VRAM. Se llama UNA SOLA VEZ después de
+    generar todas las imágenes y antes de TODO el parallax, para que DepthFlow
+    tenga toda la VRAM disponible (resuelve el error 500). SD se recarga al final."""
+    try:
+        requests.post(f"{URL_NODO_SD}/sdapi/v1/unload-checkpoint", timeout=30)
+        print("   [VRAM] SD descargado de la GPU → DepthFlow usará toda la VRAM")
+        import time as _t
+        _t.sleep(4)  # dar tiempo a que la VRAM se libere
+        return True
+    except Exception as e:
+        print(f"   [VRAM] No se pudo descargar SD ({str(e)[:50]})")
+        return False
 
 def _recargar_sd():
     """Recarga el modelo de SD después del parallax (para el siguiente video)."""
@@ -106,12 +115,24 @@ def _recargar_sd():
         pass
 
 def _asegurar_sd_cargado():
-    """Verifica que SD responda. Ya NO fuerza recarga del modelo (causaba lentitud)."""
+    """Verifica que SD tenga modelo cargado. Solo recarga si detecta que está
+    descargado (ej. un video anterior lo dejó así). No recarga si ya está listo."""
     try:
         r = requests.get(f"{URL_NODO_SD}/sdapi/v1/options", timeout=15)
-        return r.status_code == 200
+        if r.status_code == 200:
+            modelo = r.json().get("sd_model_checkpoint", "")
+            # Si hay un modelo cargado, está listo (no recargar)
+            if modelo and "None" not in str(modelo):
+                return True
+            # Modelo vacío/None → está descargado, recargar
+            print("   [VRAM] SD sin modelo cargado — recargando para generar...")
+            requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=120)
+            import time as _t
+            _t.sleep(4)
+            return True
     except Exception:
-        return True  # si no responde el check, igual intentamos generar
+        pass
+    return True  # si el check falla, igual intentamos generar
 
 def _depthflow_disponible():
     """Verifica una sola vez si el servidor DepthFlow del PC GPU está vivo."""
