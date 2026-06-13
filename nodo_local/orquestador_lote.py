@@ -19,6 +19,14 @@ QUÉ HACE:
 ARRANQUE: se ejecuta solo desde la carpeta Startup de Windows (iniciar_pinpinela.bat)
 ═══════════════════════════════════════════════════════════════════════════
 """
+import sys
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
+
 import os
 import json
 import time
