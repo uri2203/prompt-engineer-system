@@ -1,7 +1,9 @@
 {
-  "ts": "2026-06-12 19:19:50",
+  "ts": "2026-06-12 19:25:43",
   "worker_version": "1996 lineas",
-  "worker_logs": [],
+  "worker_logs": [
+    "^C"
+  ],
   "ultimo_error": "",
   "orquestador_estado": {},
   "nodos": {
