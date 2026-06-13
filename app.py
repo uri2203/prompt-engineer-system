@@ -369,6 +369,7 @@ def api_bot_cron_tick():
 
     def _log_cron(estado, detalle=""):
         """Escribe la actividad del cron a GitHub para diagnóstico remoto."""
+        return  # DESACTIVADO temporalmente: cortaba el bucle de auto-deploys de Render
         try:
             import base64 as _b64, json as _json
             gh = os.environ.get("GH_DIAG_TOKEN", "")
