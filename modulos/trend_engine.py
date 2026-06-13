@@ -163,12 +163,16 @@ class TrendEngine:
                     "vistas_totales": video["vistas"]
                 })
 
-        # Ordenar el arreglo colocando el VPH más alto en la posición [0]
+        # Ordenar por VPH (mayor tracción primero)
         tendencias_detectadas.sort(key=lambda x: x["vph"], reverse=True)
-        
+
         if tendencias_detectadas:
-            tendencia_ganadora = tendencias_detectadas[0]
-            logging.info(f"[TREND ENGINE] Blanco fijado: '{tendencia_ganadora['tema_base']}' corriendo a {tendencia_ganadora['vph']:.2f} VPH.")
+            # Elegir aleatoriamente entre el TOP 5 (no siempre el #1) para que
+            # "sugerir tema" dé temas variados cada vez, no siempre el mismo.
+            import random as _random
+            top = tendencias_detectadas[:5]
+            tendencia_ganadora = _random.choice(top)
+            logging.info(f"[TREND ENGINE] Tema elegido: '{tendencia_ganadora['tema_base']}' ({tendencia_ganadora['vph']:.2f} VPH) de top {len(top)}.")
             return tendencia_ganadora
         else:
             return None
