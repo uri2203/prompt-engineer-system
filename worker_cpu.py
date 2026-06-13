@@ -115,6 +115,29 @@ def _recargar_sd():
     except Exception:
         pass
 
+def _asegurar_sd_cargado():
+    """Antes de generar imágenes: garantiza que SD tenga el modelo en VRAM.
+    Si un parallax anterior lo descargó (unload-checkpoint), lo recarga.
+    Evita timeouts cuando SD intenta generar sin modelo cargado."""
+    try:
+        # Consultar el modelo actual; si responde rápido, SD está listo
+        r = requests.get(f"{URL_NODO_SD}/sdapi/v1/options", timeout=15)
+        if r.status_code == 200:
+            return True
+    except Exception:
+        pass
+    # No respondió bien → forzar recarga del modelo
+    print("   [VRAM] SD parece sin modelo cargado — recargando antes de generar...")
+    try:
+        requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=120)
+        import time as _t
+        _t.sleep(5)
+        print("   [VRAM] SD recargado y listo para generar")
+        return True
+    except Exception as e:
+        print(f"   [VRAM] No se pudo recargar SD: {str(e)[:60]}")
+        return False
+
 def _depthflow_disponible():
     """Verifica una sola vez si el servidor DepthFlow del PC GPU está vivo."""
     global _depthflow_vivo
@@ -1568,6 +1591,10 @@ def procesar():
                     print(f"🎬 16:9 LARGO → 3060 [{IP_GRAFICA_1}]")
                 else:
                     print(f"📱 9:16 SHORT → 3060 [{IP_GRAFICA_1}]")
+
+                # Asegurar que SD tenga el modelo CARGADO antes de generar.
+                # (Un parallax anterior pudo descargarlo de la VRAM con unload-checkpoint.)
+                _asegurar_sd_cargado()
 
                 img_prev = ""
                 historial_fuentes = []
