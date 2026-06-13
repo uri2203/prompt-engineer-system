@@ -93,19 +93,9 @@ def verificar_nodos_criticos(necesita_sd=True, necesita_voz=True):
 _depthflow_vivo = None  # cache del estado del servidor (None=sin verificar)
 
 def _liberar_vram_sd():
-    """Libera la VRAM de Stable Diffusion antes del parallax.
-    En el ensamblaje las imágenes ya están generadas, así que SD no se necesita,
-    y DepthFlow necesita esa VRAM para no fallar (causa raíz del error 500)."""
-    try:
-        # Automatic1111: descargar el modelo de la GPU libera la mayor parte de la VRAM
-        requests.post(f"{URL_NODO_SD}/sdapi/v1/unload-checkpoint", timeout=30)
-        print("   [VRAM] Stable Diffusion descargado de la GPU (libera memoria para DepthFlow)")
-        import time as _t
-        _t.sleep(3)  # dar tiempo a que la VRAM se libere
-        return True
-    except Exception as e:
-        print(f"   [VRAM] No se pudo descargar SD ({str(e)[:60]}) — DepthFlow puede fallar por VRAM")
-        return False
+    """DESACTIVADA: descargar el modelo de SD causaba lentitud y timeouts al regenerar.
+    Mejor dejar SD con su modelo cargado siempre. DepthFlow convive con la VRAM disponible."""
+    return False
 
 def _recargar_sd():
     """Recarga el modelo de SD después del parallax (para el siguiente video)."""
@@ -116,27 +106,12 @@ def _recargar_sd():
         pass
 
 def _asegurar_sd_cargado():
-    """Antes de generar imágenes: garantiza que SD tenga el modelo en VRAM.
-    Si un parallax anterior lo descargó (unload-checkpoint), lo recarga.
-    Evita timeouts cuando SD intenta generar sin modelo cargado."""
+    """Verifica que SD responda. Ya NO fuerza recarga del modelo (causaba lentitud)."""
     try:
-        # Consultar el modelo actual; si responde rápido, SD está listo
         r = requests.get(f"{URL_NODO_SD}/sdapi/v1/options", timeout=15)
-        if r.status_code == 200:
-            return True
+        return r.status_code == 200
     except Exception:
-        pass
-    # No respondió bien → forzar recarga del modelo
-    print("   [VRAM] SD parece sin modelo cargado — recargando antes de generar...")
-    try:
-        requests.post(f"{URL_NODO_SD}/sdapi/v1/reload-checkpoint", timeout=120)
-        import time as _t
-        _t.sleep(5)
-        print("   [VRAM] SD recargado y listo para generar")
-        return True
-    except Exception as e:
-        print(f"   [VRAM] No se pudo recargar SD: {str(e)[:60]}")
-        return False
+        return True  # si no responde el check, igual intentamos generar
 
 def _depthflow_disponible():
     """Verifica una sola vez si el servidor DepthFlow del PC GPU está vivo."""
@@ -163,7 +138,7 @@ def _pedir_parallax(path_img, path_salida, marca, escena_idx, duracion, fps, w, 
                 "width": str(w), "height": str(h),
             }
             r = requests.post(f"{DEPTHFLOW_URL}/parallax",
-                              files=archivos, data=datos, timeout=300)
+                              files=archivos, data=datos, timeout=600)
         if r.status_code == 200 and len(r.content) > 1000:
             with open(path_salida, "wb") as fo:
                 fo.write(r.content)
@@ -1983,7 +1958,7 @@ def procesar():
                             print(f"   [SD] Intento {intento_sd+1}/3 escena {i+1}...")
                             res_sd = requests.post(
                                 f"http://{ip_render}:7861/sdapi/v1/txt2img",
-                                json=payload, timeout=300
+                                json=payload, timeout=600
                             )
                             if res_sd.status_code == 200:
                                 b64 = res_sd.json()['images'][0]
