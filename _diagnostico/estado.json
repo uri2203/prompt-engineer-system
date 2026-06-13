@@ -1,4 +1,14 @@
 {
-  "estado": "token_nuevo_validado",
-  "mensaje": "Token nuevo funcionando. Esperando reporte del Xeon."
+  "ts": "2026-06-12 18:45:49",
+  "worker_version": "1987 lineas",
+  "worker_logs": [
+    "(sin worker_log.txt; usa el .bat de arranque para generarlo)"
+  ],
+  "ultimo_error": "",
+  "orquestador_estado": {},
+  "nodos": {
+    "sd": "on",
+    "voz": "on",
+    "parallax": "on"
+  }
 }
