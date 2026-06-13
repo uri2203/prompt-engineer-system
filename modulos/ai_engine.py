@@ -6,6 +6,43 @@ import time
 import os
 from datetime import datetime, timedelta, timezone
 
+def _generar_hooks_respaldo(titulo, escenas, marca=""):
+    """Red de seguridad: si Gemini no devuelve hooks, genera 3 a partir del
+    título y la primera escena. Así los hooks NUNCA quedan vacíos."""
+    hooks = []
+    t = (titulo or "").strip()
+    # Hook 1: pregunta directa basada en el título
+    if t:
+        hooks.append(f"¿Sabías esto sobre {t.split(':')[0][:35]}?")
+    # Hook 2: del texto de la primera escena (la frase de apertura)
+    try:
+        primer_texto = ""
+        for e in (escenas or []):
+            primer_texto = e.get("texto_locucion") or e.get("texto") or ""
+            if primer_texto:
+                break
+        if primer_texto:
+            frase = primer_texto.strip().split(".")[0][:45]
+            if frase:
+                hooks.append(frase if frase.endswith(("?", "!")) else frase + "...")
+    except Exception:
+        pass
+    # Hook 3: genérico de tensión según marca
+    genericos = {
+        "La Viuda": "Lo que viene te va a perturbar.",
+        "Monkygraff": "Esto cambia todo lo que creías.",
+        "FiltradoMX": "Nadie esperaba este final.",
+        "LaesquinaRandom": "No vas a creer lo que sigue.",
+        "TuIALista": "Esto apenas está comenzando.",
+    }
+    hooks.append(genericos.get(marca, "Quédate hasta el final."))
+    # Limpiar y asegurar 3
+    hooks = [h.strip() for h in hooks if h and h.strip()][:3]
+    while len(hooks) < 3:
+        hooks.append("No te lo puedes perder.")
+    return hooks
+
+
 class GestorCuotas:
     """
     Cerebro local y silencioso del nodo Xeon. 
@@ -858,6 +895,15 @@ SALIDA: ÚNICAMENTE JSON válido.
             resultado, errores = self._llamar_gemini(system_instruction, prompt, llaves)
             if resultado:
                 resultado["marca"] = marca
+                # Red de seguridad: si no hay hooks, generarlos automáticamente
+                hooks_actuales = resultado.get("hooks", [])
+                if not hooks_actuales or len([h for h in hooks_actuales if h and str(h).strip()]) == 0:
+                    resultado["hooks"] = _generar_hooks_respaldo(
+                        resultado.get("titulo_sugerido", ""),
+                        resultado.get("escenas", []),
+                        marca
+                    )
+                    print(f"[AI ENGINE] ⚠️ Short sin hooks — generados de respaldo: {resultado['hooks']}")
                 return json.dumps(resultado, indent=4, ensure_ascii=False)
             return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores)
 
@@ -956,7 +1002,12 @@ SALIDA: ÚNICAMENTE JSON válido.
             if not todas_las_escenas:
                 return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
-            print(f"[AI ENGINE] Hooks capturados: {hooks_finales}")
+            # Red de seguridad: si Gemini no devolvió hooks, generarlos automáticamente
+            if not hooks_finales or len([h for h in hooks_finales if h and str(h).strip()]) == 0:
+                hooks_finales = _generar_hooks_respaldo(titulo, todas_las_escenas, marca_final)
+                print(f"[AI ENGINE] ⚠️ Gemini no dio hooks — generados de respaldo: {hooks_finales}")
+            else:
+                print(f"[AI ENGINE] Hooks capturados: {hooks_finales}")
             guion_final = {
                 "marca": marca_final,
                 "formato": "LARGO",
