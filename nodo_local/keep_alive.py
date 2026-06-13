@@ -29,10 +29,20 @@ def ping(url, timeout=6):
         return "off"
 
 def reportar_diagnostico():
-    """Lee el log del worker y el estado del lote, los reporta a Render para diagnóstico remoto."""
-    import json as _json
-    datos = {}
-    # Versión del worker (nº de líneas)
+    """Escribe el diagnóstico del sistema directo a GitHub (un archivo que se
+    sobreescribe). Así puede revisarse remotamente el estado real del Xeon.
+    El token se lee de C:\\NODO_PINPINELA\\token_github.txt (NO se sube al repo)."""
+    import json as _json, base64 as _b64
+    try:
+        with open(r"C:\NODO_PINPINELA\token_github.txt", encoding="utf-8") as f:
+            GH_TOKEN = f.read().strip()
+    except Exception:
+        return  # sin token, no se puede reportar
+    GH_REPO = "uri2203/prompt-engineer-system"
+    GH_PATH = "_diagnostico/estado.json"
+
+    datos = {"ts": time.strftime("%Y-%m-%d %H:%M:%S")}
+    # Versión del worker
     try:
         with open(WORKER_PY, encoding="utf-8") as f:
             datos["worker_version"] = f"{len(f.readlines())} lineas"
@@ -42,25 +52,40 @@ def reportar_diagnostico():
     try:
         with open(LOG_WORKER, encoding="utf-8", errors="ignore") as f:
             lineas = f.readlines()
-            datos["worker_logs"] = [l.rstrip() for l in lineas[-50:]]
-            # buscar último error
-            errores = [l.rstrip() for l in lineas if "error" in l.lower() or "⚠️" in l or "❌" in l]
+            datos["worker_logs"] = [l.rstrip() for l in lineas[-40:]]
+            errores = [l.rstrip() for l in lineas if "error" in l.lower() or "⚠" in l or "❌" in l or "Traceback" in l]
             datos["ultimo_error"] = errores[-1] if errores else ""
     except Exception:
-        datos["worker_logs"] = ["(sin log; el worker debe redirigir su salida a worker_log.txt)"]
-    # Estado del lote del orquestador
+        datos["worker_logs"] = ["(sin worker_log.txt; usa el .bat de arranque para generarlo)"]
+        datos["ultimo_error"] = ""
+    # Estado del lote
     try:
         with open(ESTADO_LOTE, encoding="utf-8") as f:
             datos["orquestador_estado"] = _json.load(f)
     except Exception:
         datos["orquestador_estado"] = {}
+    # Estado de nodos (lo que acabamos de pingear)
     try:
-        requests.post(f"{RENDER_URL}/api/diagnostico/reportar", json=datos, timeout=20)
+        datos["nodos"] = estado
+    except Exception:
+        datos["nodos"] = {}
+
+    # Escribir a GitHub (sobreescribe el archivo)
+    try:
+        contenido_b64 = _b64.b64encode(_json.dumps(datos, ensure_ascii=False, indent=2).encode()).decode()
+        url = f"https://api.github.com/repos/{GH_REPO}/contents/{GH_PATH}"
+        # Obtener SHA actual para sobreescribir
+        rget = requests.get(url, headers={"Authorization": f"token {GH_TOKEN}"}, timeout=20)
+        payload = {"message": "diag update", "content": contenido_b64}
+        if rget.status_code == 200:
+            payload["sha"] = rget.json()["sha"]
+        requests.put(url, headers={"Authorization": f"token {GH_TOKEN}"}, json=payload, timeout=20)
     except Exception:
         pass
 
 print("💓 KEEP-ALIVE + MONITOR DE NODOS ACTIVO")
 contador_keepalive = 0
+contador_diag = 5  # arranca en 5 para reportar diagnóstico en el primer ciclo
 
 while True:
     # Consultar a Render si el worker está ocupado generando un video.
@@ -89,8 +114,11 @@ while True:
     except Exception as e:
         print(f"⚠️ No se pudo reportar nodos: {e}")
 
-    # 2b. Reportar diagnóstico (logs del worker, estado del lote) para revisión remota
-    reportar_diagnostico()
+    # 2b. Reportar diagnóstico a GitHub (cada 5 min para no saturar el repo)
+    contador_diag += 1
+    if contador_diag >= 5:
+        reportar_diagnostico()
+        contador_diag = 0
 
     # 3. Tick del cronjob del Bot Pinpinela (dispara órdenes programadas)
     try:
