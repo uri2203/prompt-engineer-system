@@ -2,14 +2,26 @@
   "marcas": [
     {
       "marca": "La Viuda",
-      "shorts": 0,
+      "shorts": 1,
       "largos": 1,
       "duracion_min": 15
     },
     {
       "marca": "Monkygraff",
+      "shorts": 0,
+      "largos": 1,
+      "duracion_min": 15
+    },
+    {
+      "marca": "FiltradoMX",
       "shorts": 1,
-      "largos": 0,
+      "largos": 1,
+      "duracion_min": 28
+    },
+    {
+      "marca": "LaesquinaRandom",
+      "shorts": 1,
+      "largos": 1,
       "duracion_min": 28
     }
   ],
