@@ -13,6 +13,7 @@
         </div>
         <div class="flex space-x-3">
             <button onclick="abrirModalAgenda()" class="bg-[#1e293b] text-slate-300 px-4 py-2 rounded text-xs font-bold border border-slate-700 hover:bg-slate-700 transition-colors">VER CALENDARIO</button>
+            <button onclick="abrirModalOrquestador()" class="bg-[#1e293b] text-cyan-300 px-4 py-2 rounded text-xs font-bold border border-cyan-700/50 hover:bg-cyan-900/30 transition-colors">⚙ ORQUESTADOR DE LOTES</button>
             <button onclick="abrirModalOrden()" class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
         </div>
     </header>
@@ -233,10 +234,205 @@
             </div>
         </div>
     </div>
+
+    <!-- ══════════ MODAL ORQUESTADOR DE LOTES ══════════ -->
+    <div id="modal_orquestador" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-[#0F1523] border border-cyan-800/50 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-5 border-b border-slate-800 sticky top-0 bg-[#0F1523] z-10">
+                <h2 class="text-cyan-400 font-bold text-sm uppercase tracking-widest flex items-center">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 mr-2 animate-pulse"></span>
+                    Orquestador de Lotes — Producción Masiva
+                </h2>
+                <button onclick="cerrarModalOrquestador()" class="text-slate-400 hover:text-white transition-colors text-xl">&times;</button>
+            </div>
+
+            <div class="p-5 space-y-5">
+                <!-- Progreso en vivo -->
+                <div id="orq_progreso" class="bg-[#0B1120] border border-slate-800 rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">Estado del Lote</span>
+                        <span id="orq_estado_badge" class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">INACTIVO</span>
+                    </div>
+                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                        <div id="orq_barra" class="bg-cyan-500 h-2 rounded-full transition-all" style="width: 0%"></div>
+                    </div>
+                    <p id="orq_progreso_texto" class="text-xs text-slate-400 font-mono">0 de 0 videos completados</p>
+                    <p id="orq_trabajo_actual" class="text-xs text-slate-500 font-mono mt-1"></p>
+                    <p id="orq_mensaje" class="text-[11px] text-cyan-300/70 font-mono mt-1"></p>
+                </div>
+
+                <!-- Configuración del plan -->
+                <div>
+                    <label class="block mb-2 text-[10px] text-amber-500 font-bold uppercase tracking-widest">Plan de Producción (por canal)</label>
+                    <div id="orq_marcas" class="space-y-2"></div>
+                </div>
+
+                <!-- Opciones globales -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Enfriamiento entre videos (seg)</label>
+                        <input type="number" id="orq_enfriamiento" value="180" min="0" class="w-full bg-[#0B1120] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Orden de producción</label>
+                        <select id="orq_orden" class="w-full bg-[#0B1120] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                            <option value="shorts_primero">Shorts primero (resultados rápidos)</option>
+                            <option value="largos_primero">Largos primero</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="flex gap-2 pt-2 border-t border-slate-800">
+                    <button onclick="guardarPlanOrq()" class="bg-[#1e293b] text-slate-300 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-slate-700 hover:bg-slate-700 transition-colors">Guardar Plan</button>
+                    <button onclick="controlLote('iniciar')" class="bg-cyan-600 text-white px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-cyan-500 transition-colors shadow-lg shadow-cyan-900/50">▶ Iniciar Lote</button>
+                    <button onclick="controlLote('pausar')" class="bg-amber-700/60 text-amber-200 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-amber-700/50 hover:bg-amber-700 transition-colors">⏸ Pausar</button>
+                    <button onclick="controlLote('reanudar')" class="bg-emerald-700/60 text-emerald-200 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-emerald-700/50 hover:bg-emerald-700 transition-colors">▶ Reanudar</button>
+                    <button onclick="controlLote('cancelar')" class="bg-red-900/40 text-red-300 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-red-800/50 hover:bg-red-900/60 transition-colors">🛑 Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
     const DIAS_NOMBRE = ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM'];
+
+    // ══════════ ORQUESTADOR DE LOTES ══════════
+    const ORQ_CANALES = ["La Viuda", "Monkygraff", "FiltradoMX", "LaesquinaRandom", "TuIALista"];
+    let _orqInterval = null;
+
+    function abrirModalOrquestador() {
+        document.getElementById('modal_orquestador').classList.remove('hidden');
+        renderMarcasOrq();
+        cargarPlanOrq();
+        actualizarProgresoOrq();
+        // Refrescar el progreso cada 8 segundos mientras el modal está abierto
+        if (_orqInterval) clearInterval(_orqInterval);
+        _orqInterval = setInterval(actualizarProgresoOrq, 8000);
+    }
+    function cerrarModalOrquestador() {
+        document.getElementById('modal_orquestador').classList.add('hidden');
+        if (_orqInterval) { clearInterval(_orqInterval); _orqInterval = null; }
+    }
+
+    // Pinta una fila por canal: # shorts, # largos, duración de largos
+    function renderMarcasOrq() {
+        const cont = document.getElementById('orq_marcas');
+        cont.innerHTML = ORQ_CANALES.map(canal => `
+            <div class="bg-[#0B1120] border border-slate-800 rounded p-3 flex items-center gap-3" data-canal="${canal}">
+                <span class="text-xs text-slate-200 font-bold flex-1">${canal}</span>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-slate-500 uppercase">Shorts</label>
+                    <input type="number" min="0" value="0" class="orq-shorts w-14 bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 text-center outline-none focus:border-emerald-500">
+                </div>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-slate-500 uppercase">Largos</label>
+                    <input type="number" min="0" value="0" class="orq-largos w-14 bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 text-center outline-none focus:border-amber-500">
+                </div>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-cyan-500 uppercase">Duración</label>
+                    <select class="orq-duracion bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                        <option value="15">15 min</option>
+                        <option value="28" selected>28 min</option>
+                        <option value="45">45 min</option>
+                    </select>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Lee la configuración de la UI y arma el plan
+    function leerPlanDeUI() {
+        const marcas = [];
+        document.querySelectorAll('#orq_marcas [data-canal]').forEach(fila => {
+            const canal = fila.getAttribute('data-canal');
+            const shorts = parseInt(fila.querySelector('.orq-shorts').value) || 0;
+            const largos = parseInt(fila.querySelector('.orq-largos').value) || 0;
+            const duracion = parseInt(fila.querySelector('.orq-duracion').value) || 28;
+            if (shorts > 0 || largos > 0) {
+                marcas.push({ marca: canal, shorts, largos, duracion_min: duracion });
+            }
+        });
+        return {
+            marcas,
+            enfriamiento_seg: parseInt(document.getElementById('orq_enfriamiento').value) || 180,
+            orden: document.getElementById('orq_orden').value,
+        };
+    }
+
+    async function guardarPlanOrq() {
+        const plan = leerPlanDeUI();
+        if (plan.marcas.length === 0) {
+            alert("Configura al menos un canal con shorts o largos antes de guardar.");
+            return;
+        }
+        await fetch('/api/bot/plan_semanal', {
+            method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(plan)
+        });
+        alert("Plan guardado. Pulsa 'Iniciar Lote' para empezar la producción.");
+    }
+
+    async function cargarPlanOrq() {
+        try {
+            const r = await fetch('/api/bot/plan_semanal');
+            const plan = await r.json();
+            if (plan.enfriamiento_seg) document.getElementById('orq_enfriamiento').value = plan.enfriamiento_seg;
+            if (plan.orden) document.getElementById('orq_orden').value = plan.orden;
+            (plan.marcas || []).forEach(m => {
+                const fila = document.querySelector(`#orq_marcas [data-canal="${m.marca}"]`);
+                if (fila) {
+                    fila.querySelector('.orq-shorts').value = m.shorts || 0;
+                    fila.querySelector('.orq-largos').value = m.largos || 0;
+                    if (m.duracion_min) fila.querySelector('.orq-duracion').value = m.duracion_min;
+                }
+            });
+        } catch (e) {}
+    }
+
+    async function controlLote(accion) {
+        if (accion === 'iniciar') {
+            // Guardar el plan actual antes de iniciar
+            const plan = leerPlanDeUI();
+            if (plan.marcas.length === 0) {
+                alert("Configura al menos un canal antes de iniciar el lote.");
+                return;
+            }
+            await fetch('/api/bot/plan_semanal', {
+                method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(plan)
+            });
+        }
+        if (accion === 'cancelar' && !confirm("¿Seguro que quieres cancelar el lote en curso?")) return;
+        await fetch('/api/bot/lote_control', {
+            method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ accion })
+        });
+        setTimeout(actualizarProgresoOrq, 1000);
+    }
+
+    async function actualizarProgresoOrq() {
+        try {
+            const r = await fetch('/api/bot/lote_progreso');
+            const p = await r.json();
+            const total = p.total || 0, comp = p.completados || 0;
+            const pct = total > 0 ? Math.round((comp / total) * 100) : 0;
+            document.getElementById('orq_barra').style.width = pct + '%';
+            document.getElementById('orq_progreso_texto').textContent = `${comp} de ${total} videos completados (${pct}%)`;
+            document.getElementById('orq_trabajo_actual').textContent = p.trabajo_actual || '';
+            document.getElementById('orq_mensaje').textContent = p.mensaje || '';
+            const badge = document.getElementById('orq_estado_badge');
+            const estados = {
+                produciendo: ['PRODUCIENDO', 'bg-cyan-900 text-cyan-300'],
+                pausado: ['PAUSADO', 'bg-amber-900 text-amber-300'],
+                esperando_nodo: ['ESPERANDO NODO', 'bg-red-900 text-red-300'],
+                completado: ['COMPLETADO', 'bg-emerald-900 text-emerald-300'],
+                cancelado: ['CANCELADO', 'bg-slate-800 text-slate-400'],
+                inactivo: ['INACTIVO', 'bg-slate-800 text-slate-400'],
+            };
+            const [txt, cls] = estados[p.estado_lote] || estados.inactivo;
+            badge.textContent = txt;
+            badge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`;
+        } catch (e) {}
+    }
     const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
     // Fecha local en formato YYYY-MM-DD (NO usar toISOString que da UTC y desfasa el día)
@@ -602,4 +798,5 @@
         }
     }
 </script>
+</div>
 {% endblock %}
