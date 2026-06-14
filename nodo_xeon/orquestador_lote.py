@@ -30,6 +30,9 @@ ARCHIVO_LOTE = os.path.join(CARPETA_ESTADO, "lote_actual.json")
 INTERVALO_CICLO = 20
 ENFRIAMIENTO_DEFAULT = 180
 ESPERA_NODO_CAIDO = 60
+MAX_INTENTOS_ENCOLADO = 3      # reintentos de encolado antes de marcar fallido
+ESPERA_REINTENTO = 45         # segundos entre reintentos de encolado
+ESPERA_CUOTA = 1800           # 30 min de espera cuando Gemini se queda sin cuota
 IP_GRAFICA = "192.168.0.215"
 IP_VOZ = "192.168.0.251"
 NODOS = {"sd": f"http://{IP_GRAFICA}:7861/sdapi/v1/options", "voz": f"http://{IP_VOZ}:8000"}
@@ -77,10 +80,12 @@ def consumir_control():
 def reportar_progreso(lote):
     try:
         completados = sum(1 for t in lote["trabajos"] if t["estado"] == "completado")
+        fallidos = sum(1 for t in lote["trabajos"] if t["estado"] == "fallido")
         requests.post(f"{RENDER_URL}/api/bot/lote_progreso", json={
             "estado_lote": lote.get("estado_lote"),
             "total": len(lote["trabajos"]),
             "completados": completados,
+            "fallidos": fallidos,
             "trabajo_actual": lote.get("trabajo_actual_desc", ""),
             "mensaje": lote.get("mensaje", ""),
             "resumen": lote.get("resumen", ""),
@@ -89,14 +94,23 @@ def reportar_progreso(lote):
         pass
 
 def encolar_video(marca, formato, duracion_min=None):
+    """Devuelve (tarea_id, motivo_error). tarea_id=None si falló.
+    motivo_error indica si es un fallo de cuota de Gemini (para no martillar)."""
     try:
         r = requests.post(f"{RENDER_URL}/api/bot/lanzar_orden_motor",
                           json={"marca": marca, "formato": formato, "duracion_min": duracion_min}, timeout=120)
         if r.status_code == 200:
-            return r.json().get("tarea_id")
+            return r.json().get("tarea_id"), None
+        # Error: extraer el motivo para decidir si es cuota agotada
+        try:
+            msg = r.json().get("message", "")
+        except Exception:
+            msg = r.text[:200] if hasattr(r, "text") else ""
+        motivo = "cuota" if ("GEMINI" in msg.upper() or "cuota" in msg.lower() or "quota" in msg.lower() or "limit" in msg.lower()) else "otro"
+        return None, motivo
     except Exception as e:
         print(f"Error encolando video: {e}")
-    return None
+        return None, "red"
 
 def video_esta_listo(tarea_id):
     try:
@@ -177,6 +191,7 @@ def procesar_lote(lote):
             en_proceso["estado"] = "completado"
             lote["mensaje"] = f"Video {en_proceso['n']} completado"
             lote["enfriando_hasta"] = time.time() + lote.get("enfriamiento", ENFRIAMIENTO_DEFAULT)
+            lote["reintentar_hasta"] = 0
             print(f"OK Video {en_proceso['n']} ({en_proceso['marca']}) completado")
             guardar_lote(lote)
         else:
@@ -189,12 +204,26 @@ def procesar_lote(lote):
         lote["trabajo_actual_desc"] = f"Enfriando nodos... {restante}s"
         lote["mensaje"] = f"Enfriamiento entre videos: {restante}s"
         reportar_progreso(lote); return lote
-    # Siguiente pendiente
+    # Espera entre reintentos de encolado (no martillar a Render)
+    if time.time() < lote.get("reintentar_hasta", 0):
+        restante = int(lote["reintentar_hasta"] - time.time())
+        lote["trabajo_actual_desc"] = f"Reintentando encolado en {restante}s"
+        reportar_progreso(lote); return lote
+    # Siguiente pendiente (los 'fallido' se saltan automáticamente)
     siguiente = next((t for t in lote["trabajos"] if t["estado"] == "pendiente"), None)
     if not siguiente:
-        if all(t["estado"] == "completado" for t in lote["trabajos"]):
-            lote["estado_lote"] = "completado"; lote["mensaje"] = "Lote completado."
-            print("LOTE COMPLETADO"); guardar_lote(lote); reportar_progreso(lote)
+        # El lote termina cuando ya no quedan pendientes ni en proceso
+        terminados = all(t["estado"] in ("completado", "fallido") for t in lote["trabajos"])
+        if terminados:
+            n_ok = sum(1 for t in lote["trabajos"] if t["estado"] == "completado")
+            n_fail = sum(1 for t in lote["trabajos"] if t["estado"] == "fallido")
+            lote["estado_lote"] = "completado"
+            if n_fail:
+                lote["mensaje"] = f"Lote terminado: {n_ok} completados, {n_fail} fallidos (omitidos)."
+            else:
+                lote["mensaje"] = "Lote completado."
+            print(f"LOTE COMPLETADO: {n_ok} OK, {n_fail} fallidos")
+            guardar_lote(lote); reportar_progreso(lote)
         return lote
     # Nodos vivos? Esperar las horas que sean
     ok, caidos = nodos_criticos_vivos()
@@ -207,13 +236,35 @@ def procesar_lote(lote):
     # Lanzar siguiente
     lote["estado_lote"] = "produciendo"
     print(f"Lanzando video {siguiente['n']}/{len(lote['trabajos'])}: {siguiente['marca']} {siguiente['formato']}")
-    tarea_id = encolar_video(siguiente["marca"], siguiente["formato"], siguiente.get("duracion_min"))
+    tarea_id, motivo = encolar_video(siguiente["marca"], siguiente["formato"], siguiente.get("duracion_min"))
     if tarea_id:
         siguiente["estado"] = "en_proceso"; siguiente["tarea_id"] = tarea_id; siguiente["inicio_ts"] = time.time()
+        siguiente["intentos"] = 0  # reset
         lote["trabajo_actual_desc"] = f"Generando video {siguiente['n']} ({siguiente['marca']})"
         lote["mensaje"] = f"Produccion del video {siguiente['n']} iniciada."
+    elif motivo == "cuota":
+        # La API de Gemini se quedó sin cuota. TODOS los videos fallarían igual.
+        # Pausar el lote con mensaje claro en vez de quemar reintentos en cada uno.
+        lote["estado_lote"] = "esperando_cuota"
+        lote["mensaje"] = ("La API de Gemini se quedó sin cuota (límite diario). "
+                           "El lote se reanudará solo cuando la cuota se restablezca.")
+        lote["trabajo_actual_desc"] = "Esperando cuota de Gemini (se reintenta periódicamente)"
+        print("Gemini sin cuota — lote en espera (se reintenta cada ciclo largo)")
+        lote["reintentar_hasta"] = time.time() + ESPERA_CUOTA
     else:
-        lote["mensaje"] = f"No se pudo encolar el video {siguiente['n']}, reintentando..."
+        # FALLO puntual al encolar: reintentar con límite. Si se agota, marcar
+        # fallido y CONTINUAR con el siguiente (no bloquear todo el lote).
+        siguiente["intentos"] = siguiente.get("intentos", 0) + 1
+        if siguiente["intentos"] >= MAX_INTENTOS_ENCOLADO:
+            siguiente["estado"] = "fallido"
+            siguiente["error"] = f"No se pudo encolar tras {siguiente['intentos']} intentos ({motivo})"
+            lote["mensaje"] = (f"Video {siguiente['n']} ({siguiente['marca']} {siguiente['formato']}) "
+                               f"falló al encolar {siguiente['intentos']} veces — se omite y se continúa.")
+            print(f"FALLIDO Video {siguiente['n']} tras {siguiente['intentos']} intentos — se omite")
+        else:
+            lote["reintentar_hasta"] = time.time() + ESPERA_REINTENTO
+            lote["mensaje"] = (f"No se pudo encolar el video {siguiente['n']} "
+                               f"(intento {siguiente['intentos']}/{MAX_INTENTOS_ENCOLADO}), reintentando...")
     guardar_lote(lote); reportar_progreso(lote); return lote
 
 def main():
