@@ -472,33 +472,157 @@ def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
         return []
 
 
+def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
+    """SINCRONÍA FUERTE: detecta los BLOQUES DE HABLA reales (inicio, fin) del audio,
+    usando los silencios como fronteras (VAD por energía). Devuelve [(ini, fin), ...].
+    Esto permite anclar los subtítulos al ritmo REAL de la voz (no a una estimación)."""
+    try:
+        import re
+        r = subprocess.run(
+            ['ffmpeg', '-i', ruta_audio, '-af',
+             f'silencedetect=noise={umbral_db}dB:d={dur_min_silencio}',
+             '-f', 'null', '-'],
+            capture_output=True, text=True
+        )
+        dur_total = _obtener_duracion_audio_simple(ruta_audio)
+        starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]  # fin de habla
+        ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]      # inicio de habla
+        bloques = []
+        inicio_habla = 0.0
+        si = 0
+        for ss in starts:
+            if ss > inicio_habla + 0.05:
+                bloques.append((inicio_habla, ss))
+            if si < len(ends):
+                inicio_habla = ends[si]; si += 1
+            else:
+                inicio_habla = ss
+        if dur_total > 0 and inicio_habla < dur_total - 0.05:
+            bloques.append((inicio_habla, dur_total))
+        return bloques, dur_total
+    except Exception as e:
+        print(f"   [SUBS] No se pudieron detectar bloques de habla: {e}")
+        return [], 0.0
+
+
+def _obtener_duracion_audio_simple(ruta_audio):
+    try:
+        r = subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0', ruta_audio],
+                          capture_output=True, text=True)
+        return float(r.stdout.strip())
+    except Exception:
+        return 0.0
+
+
 def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca, carpeta_reciente, dur_total):
-    """Subtítulos lineales anclados a los silencios reales del audio (mejor sincronía)."""
+    """Subtítulos anclados a los BLOQUES DE HABLA reales del audio (sincronía fuerte)."""
     ruta_srt = os.path.join(carpeta_reciente, "subtitulos.srt").replace("\\", "/")
 
     print(f"📝 Generando subtítulos — Canal: {marca} | Duración: {dur_total:.1f}s")
 
     texto_completo = " ".join(escenas_texto) if escenas_texto else texto_locucion
-
     if not texto_completo.strip():
         print("   [ERROR] Texto vacío.")
         return None
 
-    # Detectar pausas reales del locutor para anclar los subtítulos
-    silencios = _detectar_silencios(ruta_audio) if ruta_audio and os.path.exists(ruta_audio) else []
-    if silencios:
-        print(f"   [SUBS] {len(silencios)} pausas reales detectadas — anclando subtítulos")
-        _generar_srt_anclado(texto_completo, dur_total, marca, ruta_srt, silencios)
+    # SINCRONÍA FUERTE: detectar bloques de habla reales y repartir el texto en ellos
+    bloques, dur_detectada = _detectar_bloques_habla(ruta_audio) if ruta_audio and os.path.exists(ruta_audio) else ([], 0.0)
+    if bloques and len(bloques) >= 1:
+        print(f"   [SUBS] {len(bloques)} bloques de habla reales detectados — sincronía fuerte")
+        _generar_srt_por_bloques(texto_completo, bloques, dur_total or dur_detectada, marca, ruta_srt)
     else:
-        print(f"   [SUBS] Sin pausas detectadas — distribución lineal")
+        print(f"   [SUBS] Sin bloques detectados — distribución lineal de respaldo")
         _generar_srt_calibrado(texto_completo, dur_total, marca, ruta_srt)
     print(f"   [OK] SRT generado.")
     return ruta_srt
 
 
+def _generar_srt_por_bloques(texto_completo, bloques, dur_total, marca, ruta_srt):
+    """SINCRONÍA FUERTE: reparte el texto en los bloques de habla reales, proporcional
+    a la duración de cada bloque, y distribuye las palabras dentro del tiempo real de
+    cada bloque. Así los subtítulos siguen el ritmo REAL de la voz (rápido/lento/pausas)."""
+    import re
+    ppm = _obtener_velocidad_canal(marca)
+    max_pal = 4 if ppm <= 90 else (5 if ppm <= 130 else 6)
+
+    palabras = texto_completo.split()
+    total_pal = len(palabras)
+    if total_pal == 0 or not bloques:
+        return
+    dur_habla = sum(f - i for i, f in bloques) or dur_total
+
+    # Intentar alinear FRASES con bloques: si el texto tiene tantas frases como
+    # bloques (±1), cada bloque toma una frase entera (corte semántico limpio).
+    frases = [f.strip() for f in re.split(r'(?<=[.!?…])\s+', texto_completo.strip()) if f.strip()]
+    usar_frases = frases and abs(len(frases) - len(bloques)) <= max(1, len(bloques)//3)
+
+    chunks = []  # (texto, ini, fin)
+    if usar_frases and len(frases) >= len(bloques):
+        # Asignar frases a bloques: repartir las frases entre los bloques en orden
+        fr_por_bloque = _repartir(len(frases), len(bloques))
+        fr_idx = 0
+        for bi, (b_ini, b_fin) in enumerate(bloques):
+            n_fr = fr_por_bloque[bi]
+            texto_bloque = " ".join(frases[fr_idx:fr_idx + n_fr])
+            fr_idx += n_fr
+            chunks += _trocear_en_tiempo(texto_bloque, b_ini, b_fin, max_pal)
+    else:
+        # Reparto proporcional por palabras según duración del bloque
+        pal_idx = 0
+        for bi, (b_ini, b_fin) in enumerate(bloques):
+            if bi == len(bloques) - 1:
+                n_pal = total_pal - pal_idx
+            else:
+                frac = (b_fin - b_ini) / dur_habla
+                n_pal = max(1, round(total_pal * frac))
+            n_pal = min(n_pal, total_pal - pal_idx)
+            if n_pal <= 0:
+                continue
+            texto_bloque = " ".join(palabras[pal_idx:pal_idx + n_pal])
+            pal_idx += n_pal
+            chunks += _trocear_en_tiempo(texto_bloque, b_ini, b_fin, max_pal)
+        if pal_idx < total_pal and chunks:
+            txt, ini, fin = chunks[-1]
+            chunks[-1] = (txt + " " + " ".join(palabras[pal_idx:]), ini, fin)
+
+    def fmt(t):
+        h = int(t // 3600); m = int((t % 3600) // 60); s = int(t % 60); ms = int((t % 1) * 1000)
+        return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+    with open(ruta_srt, "w", encoding="utf-8") as srt:
+        for idx, (txt, ini, fin) in enumerate(chunks):
+            if fin <= ini:
+                fin = ini + 0.4
+            srt.write(f"{idx+1}\n{fmt(ini)} --> {fmt(fin)}\n{txt.upper()}\n\n")
+
+
+def _repartir(n_items, n_grupos):
+    """Reparte n_items entre n_grupos lo más parejo posible. Devuelve lista de tamaños."""
+    base = n_items // n_grupos
+    extra = n_items % n_grupos
+    return [base + (1 if k < extra else 0) for k in range(n_grupos)]
+
+
+def _trocear_en_tiempo(texto, t_ini, t_fin, max_pal):
+    """Divide 'texto' en chunks de max_pal palabras, repartiendo [t_ini, t_fin]."""
+    pal = texto.split()
+    if not pal:
+        return []
+    seg_pal = (t_fin - t_ini) / len(pal)
+    out = []
+    j = 0
+    while j < len(pal):
+        grupo = pal[j:j + max_pal]
+        ini = t_ini + j * seg_pal
+        fin = t_ini + min(len(pal), j + max_pal) * seg_pal
+        out.append((" ".join(grupo), ini, fin))
+        j += max_pal
+    return out
+
+
 def _generar_srt_anclado(texto_completo, dur_total, marca, ruta_srt, silencios):
-    """Distribuye chunks anclándolos a las pausas reales del audio.
-    Cada chunk se alinea al silencio más cercano para que coincida con el habla real."""
+    """[LEGADO] Distribuye chunks anclándolos a las pausas reales del audio.
+    Mantenido por compatibilidad; el flujo nuevo usa _generar_srt_por_bloques."""
     import re
     ppm = _obtener_velocidad_canal(marca)
     palabras_por_chunk = 4 if ppm <= 90 else (5 if ppm <= 130 else 6)
@@ -521,18 +645,15 @@ def _generar_srt_anclado(texto_completo, dur_total, marca, ruta_srt, silencios):
     total_palabras = sum(len(c.split()) for c in chunks)
     seg_por_palabra = dur_total / total_palabras
 
-    # Tiempos estimados de inicio de cada chunk (lineal)
     inicios_est = []
     t = 0.0
     for c in chunks:
         inicios_est.append(t)
         t += len(c.split()) * seg_por_palabra
 
-    # Anclar cada inicio estimado al silencio real más cercano (si está cerca)
     silencios_sorted = sorted(silencios)
     inicios_finales = []
     for ini_est in inicios_est:
-        # Buscar el silencio más cercano dentro de una ventana de 1.5s
         candidatos = [s for s in silencios_sorted if abs(s - ini_est) <= 1.5]
         if candidatos:
             mejor = min(candidatos, key=lambda s: abs(s - ini_est))
@@ -540,7 +661,6 @@ def _generar_srt_anclado(texto_completo, dur_total, marca, ruta_srt, silencios):
         else:
             inicios_finales.append(ini_est)
 
-    # Asegurar que sean monótonos crecientes
     for i in range(1, len(inicios_finales)):
         if inicios_finales[i] <= inicios_finales[i-1]:
             inicios_finales[i] = inicios_finales[i-1] + 0.3
@@ -1599,14 +1719,11 @@ def procesar():
                 filtro_sub = ""
                 if not es_largo_video:
                     escenas_texto = tarea.get("escenas_texto", [])
+                    # La sincronía detecta bloques de habla sobre ruta_audio, que YA incluye
+                    # los hooks (silencios). Por eso el SRT sale sincronizado sin recálculos.
                     ruta_srt = _generar_subtitulos_shorts(
                         ruta_audio, texto_locucion, escenas_texto, marca_audio, carpeta_reciente, duracion_audio
                     )
-                    # Si hay hooks, recalcular los tiempos del SRT para compensar
-                    if _hooks_activos and ruta_srt and os.path.exists(ruta_srt):
-                        _srt_hk = os.path.join(carpeta_reciente, "subtitulos_hooks.srt")
-                        if recalcular_srt(ruta_srt, _srt_hk, _hook_inserciones, duraciones_escenas, _hook_inicial_dur):
-                            ruta_srt = _srt_hk
                     if ruta_srt and os.path.exists(ruta_srt):
                         sub_path = ruta_srt.replace('\\', '/').replace(':', '\\:')
                         filtro_sub = (
