@@ -1990,9 +1990,17 @@ def procesar():
                     
                 # 🛑 FIX MAESTRO ANTI-BUCLE: Notificamos al servidor explícitamente para que la borre de su base de datos.
                 try:
+                    # Duración real del MP4 final (para el historial del panel)
+                    _dur_real = 0.0
+                    try:
+                        _dur_real = _obtener_duracion_audio_simple(ruta_final)
+                    except Exception:
+                        _dur_real = 0.0
                     requests.post(
                         f"{RENDER_URL}/api/nodo/tarea_completada",
-                        json={"tarea_id": tarea_id, "estado": "finalizado"},
+                        json={"tarea_id": tarea_id, "estado": "finalizado",
+                              "duracion_real_seg": round(_dur_real, 1),
+                              "marca": marca_audio, "formato": formato_ensamblaje},
                         timeout=30
                     )
                     print(f"✅ [TAREA {tarea_id}] Cerrada y purgada del servidor en la nube.")
