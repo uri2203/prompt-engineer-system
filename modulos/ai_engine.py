@@ -6,9 +6,9 @@ import time
 import os
 from datetime import datetime, timedelta, timezone
 
-def _generar_hooks_respaldo(titulo, escenas, marca=""):
-    """Red de seguridad: si Gemini no devuelve hooks, genera 3 a partir del
-    título y la primera escena. Así los hooks NUNCA quedan vacíos."""
+def _generar_hooks_respaldo(titulo, escenas, marca="", objetivo=3):
+    """Red de seguridad: si Gemini no devuelve hooks, los genera a partir del
+    título y las escenas. Así los hooks NUNCA quedan vacíos. 'objetivo' = cuántos."""
     hooks = []
     t = (titulo or "").strip()
     # Hook 1: pregunta directa basada en el título
@@ -36,9 +36,35 @@ def _generar_hooks_respaldo(titulo, escenas, marca=""):
         "TuIALista": "Esto apenas está comenzando.",
     }
     hooks.append(genericos.get(marca, "Quédate hasta el final."))
-    # Limpiar y asegurar 3
-    hooks = [h.strip() for h in hooks if h and h.strip()][:3]
-    while len(hooks) < 3:
+    # Si se necesitan más (videos largos), generar re-hooks desde las escenas
+    if objetivo > 3:
+        try:
+            rotativos = [
+                "Pero esto fue solo el comienzo.",
+                "Lo que pasó después nadie lo vio venir.",
+                "Y entonces todo cambió.",
+                "Aquí es donde se pone interesante.",
+                "Presta atención a este detalle.",
+                "Esto es lo que nadie te cuenta.",
+                "El giro que no esperabas.",
+                "Quédate, porque ahora viene lo fuerte.",
+            ]
+            for e in (escenas or []):
+                if len(hooks) >= objetivo:
+                    break
+                txt = (e.get("texto_locucion") or e.get("texto") or "").strip()
+                if txt and len(txt.split()) >= 4:
+                    frase = txt.split(".")[0][:45].strip()
+                    if frase and frase + "..." not in hooks:
+                        hooks.append(frase + "...")
+            ri = 0
+            while len(hooks) < objetivo:
+                hooks.append(rotativos[ri % len(rotativos)])
+                ri += 1
+        except Exception:
+            pass
+    hooks = [h.strip() for h in hooks if h and h.strip()][:max(3, objetivo)]
+    while len(hooks) < min(3, objetivo):
         hooks.append("No te lo puedes perder.")
     return hooks
 
@@ -968,9 +994,16 @@ SALIDA: ÚNICAMENTE JSON válido.
                 inicio = offset + 1
                 fin    = offset + escenas_por_bloque
                 es_primer_bloque = (i == 0)
+                # Nº de frases-gancho según duración: 1 inicial + ~1 cada 75s.
+                # Así cada re-hook del video largo usa una frase ÚNICA (no repetida).
+                _n_hooks_largo = max(4, int(min_aprox * 0.8) + 1)
                 instruccion_hooks = (
-                    f" CAMPO hooks OBLIGATORIO en este bloque: incluye exactamente 3 frases "
-                    f"de máximo 6 palabras cada una, específicas al tema del video."
+                    f" CAMPO hooks OBLIGATORIO en este bloque: incluye exactamente {_n_hooks_largo} frases "
+                    f"de máximo 7 palabras cada una, específicas al tema del video. "
+                    f"La PRIMERA frase es el gancho inicial más fuerte (lo más impactante). "
+                    f"Las demás son re-enganches para mantener la retención a lo largo del video: "
+                    f"teasers de lo que viene, preguntas, datos sorprendentes, giros. "
+                    f"Todas distintas entre sí, ninguna repetida."
                 ) if es_primer_bloque else ""
                 instruccion_bloque = (
                     f"\n\n[DIRECTRIZ DE BLOQUE {i+1}/{len(config_bloques)}]: "
@@ -1003,11 +1036,20 @@ SALIDA: ÚNICAMENTE JSON válido.
                 return "ERROR CRÍTICO API GEMINI:\n" + "\n".join(errores_totales)
 
             # Red de seguridad: si Gemini no devolvió hooks, generarlos automáticamente
+            _obj_hooks = max(4, int(min_aprox * 0.8) + 1)
             if not hooks_finales or len([h for h in hooks_finales if h and str(h).strip()]) == 0:
-                hooks_finales = _generar_hooks_respaldo(titulo, todas_las_escenas, marca_final)
-                print(f"[AI ENGINE] ⚠️ Gemini no dio hooks — generados de respaldo: {hooks_finales}")
+                hooks_finales = _generar_hooks_respaldo(titulo, todas_las_escenas, marca_final, objetivo=_obj_hooks)
+                print(f"[AI ENGINE] ⚠️ Gemini no dio hooks — generados de respaldo: {len(hooks_finales)}")
             else:
-                print(f"[AI ENGINE] Hooks capturados: {hooks_finales}")
+                # Si Gemini dio menos de los necesarios, completar con respaldo
+                if len(hooks_finales) < _obj_hooks:
+                    extra = _generar_hooks_respaldo(titulo, todas_las_escenas, marca_final, objetivo=_obj_hooks)
+                    for h in extra:
+                        if len(hooks_finales) >= _obj_hooks:
+                            break
+                        if h not in hooks_finales:
+                            hooks_finales.append(h)
+                print(f"[AI ENGINE] Hooks capturados: {len(hooks_finales)}")
             guion_final = {
                 "marca": marca_final,
                 "formato": "LARGO",
