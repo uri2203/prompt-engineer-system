@@ -730,9 +730,8 @@ def _generar_clip_simple(path_origen, path_clip, dur, w, h, fps):
 
 
 
-# ═══════════ MÓDULO DE HOOKS DE RETENCIÓN (integrado) ═══════════
+# ═══════════ MÓDULO DE HOOKS V2 (integrado al pipeline) ═══════════
 def _dur(ruta):
-    """Duración de un archivo de video/audio en segundos."""
     try:
         r = subprocess.run(['ffprobe','-v','error','-show_entries','format=duration',
                             '-of','csv=p=0', ruta], capture_output=True, text=True)
@@ -743,45 +742,170 @@ def _dur(ruta):
 def _clip_valido(ruta, min_dur=0.2):
     return os.path.exists(ruta) and os.path.getsize(ruta) > 1000 and _dur(ruta) >= min_dur
 
+
+def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=1.8):
+    """
+    Decide DÓNDE caen los re-hooks (en qué límites de escena) y con qué frase/formato.
+    Devuelve:
+      - hook_inicial: frase del hook inicial (o None)
+      - inserciones: lista de dicts {despues_de_escena, frase, formato, dur}
+        'despues_de_escena' = índice de escena tras la cual se inserta el re-hook
+    NO toca archivos; solo planifica. Determinista por semilla (reproducible).
+    """
+    frase_inicial = hooks_frases[0] if hooks_frases else None
+    frases_inter = [f for f in hooks_frases[1:] if f and str(f).strip()]
+
+    dur_total = sum(duraciones_escenas) if duraciones_escenas else 0
+    if dur_total < 5 or num_escenas < 2:
+        return frase_inicial, []  # solo hook inicial, sin re-hooks
+
+    # Cuántos re-hooks
+    if es_short:
+        n = min(1, len(frases_inter))
+    else:
+        n = min(len(frases_inter), max(1, int(dur_total // 75)))
+    if n <= 0:
+        return frase_inicial, []
+
+    # Tiempos objetivo (repartidos), evitando el inicio (primeras escenas) y el final
+    inicio_t = max(8.0, duraciones_escenas[0])
+    fin_t = dur_total - 8.0
+    if fin_t <= inicio_t:
+        return frase_inicial, []
+    paso = (fin_t - inicio_t) / (n + 1)
+    tiempos_objetivo = [inicio_t + paso * k for k in range(1, n + 1)]
+
+    # Para cada tiempo objetivo, encontrar el LÍMITE DE ESCENA más cercano
+    # (acumulado de duraciones). Así el hook cae entre escenas, no a media frase.
+    acum = []
+    s = 0.0
+    for d in duraciones_escenas:
+        s += d
+        acum.append(s)  # acum[i] = tiempo donde TERMINA la escena i
+
+    inserciones = []
+    escenas_usadas = set()
+    rnd = random.Random("hooksplan")
+    for idx, t_obj in enumerate(tiempos_objetivo):
+        # buscar la escena cuyo final esté más cerca del tiempo objetivo
+        mejor_i, mejor_dist = None, 1e9
+        for i, t_fin in enumerate(acum[:-1]):  # no tras la última escena
+            if i in escenas_usadas:
+                continue
+            dist = abs(t_fin - t_obj)
+            if dist < mejor_dist:
+                mejor_dist, mejor_i = dist, i
+        if mejor_i is None:
+            continue
+        escenas_usadas.add(mejor_i)
+        frase = frases_inter[idx] if idx < len(frases_inter) else frases_inter[-1]
+        # Alternar formato A (pattern interrupt) y B (flash-forward)
+        formato = "A" if rnd.random() < 0.5 else "B"
+        inserciones.append({
+            "despues_de_escena": mejor_i,
+            "frase": frase,
+            "formato": formato,
+            "dur": dur_hook,
+        })
+
+    # Ordenar por escena
+    inserciones.sort(key=lambda x: x["despues_de_escena"])
+    return frase_inicial, inserciones
+
+
+def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, dur_hook_inicial):
+    """
+    Desplaza los tiempos del SRT para compensar los hooks insertados.
+    - El hook inicial desplaza TODO el SRT hacia adelante (dur_hook_inicial).
+    - Cada re-hook tras la escena i desplaza los subtítulos posteriores a ese punto.
+    """
+    if not os.path.exists(ruta_srt_in):
+        return False
+    try:
+        # Calcular tiempo de fin de cada escena (para saber a partir de qué segundo desplazar)
+        acum = []
+        s = 0.0
+        for d in duraciones_escenas:
+            s += d
+            acum.append(s)
+
+        # Lista de (tiempo_original, desplazamiento_a_aplicar_desde_ahi)
+        desfases = []
+        for ins in inserciones:
+            i = ins["despues_de_escena"]
+            if i < len(acum):
+                desfases.append((acum[i], ins["dur"]))
+        desfases.sort()
+
+        def nuevo_t(t):
+            # Desplazamiento del hook inicial + los re-hooks anteriores a t
+            extra = dur_hook_inicial
+            for t_ins, d in desfases:
+                if t > t_ins:
+                    extra += d
+            return t + extra
+
+        def parse_t(s):
+            h, m, resto = s.split(":")
+            seg, ms = resto.split(",")
+            return int(h)*3600 + int(m)*60 + int(seg) + int(ms)/1000.0
+
+        def fmt_t(t):
+            h = int(t // 3600); t -= h*3600
+            m = int(t // 60); t -= m*60
+            seg = int(t); ms = int(round((t - seg)*1000))
+            if ms >= 1000: seg += 1; ms = 0
+            return f"{h:02d}:{m:02d}:{seg:02d},{ms:03d}"
+
+        with open(ruta_srt_in, encoding="utf-8") as f:
+            lineas = f.read().split("\n")
+        out = []
+        for ln in lineas:
+            if "-->" in ln:
+                a, b = ln.split("-->")
+                ta = nuevo_t(parse_t(a.strip()))
+                tb = nuevo_t(parse_t(b.strip()))
+                out.append(f"{fmt_t(ta)} --> {fmt_t(tb)}")
+            else:
+                out.append(ln)
+        with open(ruta_srt_out, "w", encoding="utf-8") as f:
+            f.write("\n".join(out))
+        return True
+    except Exception as e:
+        print(f"   [HOOKS] Error recalculando SRT: {e}")
+        return False
+
+
+# ═══════════ GENERACIÓN DE CLIPS DE HOOK ═══════════
 def _generar_stinger(ruta_salida, dur=1.2, tipo="whoosh"):
-    """Genera un sonido de impacto sintético con FFmpeg (sin archivos externos)."""
     try:
         if tipo == "whoosh":
-            # Barrido de ruido filtrado (whoosh) + golpe grave
             filtro = (f"anoisesrc=d={dur}:c=pink:a=0.3,"
                       f"afade=t=in:d=0.3,afade=t=out:st={dur*0.5:.2f}:d={dur*0.5:.2f},"
                       f"highpass=f=200,lowpass=f=3000")
-        else:  # "impact" golpe grave
-            filtro = (f"sine=frequency=80:duration={dur},"
-                      f"afade=t=out:st=0.1:d={dur-0.1:.2f}")
-        cmd = ['ffmpeg','-y','-f','lavfi','-i', filtro,
-               '-ar','44100','-ac','1','-q:a','5', ruta_salida]
+        else:
+            filtro = f"sine=frequency=80:duration={dur},afade=t=out:st=0.1:d={dur-0.1:.2f}"
+        cmd = ['ffmpeg','-y','-f','lavfi','-i', filtro, '-ar','44100','-ac','2','-q:a','5', ruta_salida]
         subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return os.path.exists(ruta_salida)
     except Exception:
         return False
 
-def _texto_en_frame(ruta_img_origen, frase, ruta_salida, w, h, pil_disponible, fuentes):
-    """Quema texto grande tipo TikTok sobre una imagen."""
-    if not pil_disponible or not frase:
+def _texto_en_frame(ruta_img, frase, ruta_salida, w, h, pil, fuentes):
+    if not pil or not frase:
         return False
     try:
         from PIL import Image, ImageDraw, ImageFont
-        img = Image.open(ruta_img_origen).convert('RGBA')
-        img = img.resize((w, h))
-        # Oscurecer un poco el fondo para que el texto resalte
-        overlay_dark = Image.new('RGBA', img.size, (0,0,0,110))
-        img = Image.alpha_composite(img, overlay_dark)
+        img = Image.open(ruta_img).convert('RGBA').resize((w, h))
+        img = Image.alpha_composite(img, Image.new('RGBA', img.size, (0,0,0,120)))
         draw = ImageDraw.Draw(img)
-        # Fuente grande (impact)
-        fsize = int(h * 0.075)
+        fsize = int(h * 0.072)
         font = None
         for rf in fuentes:
             if os.path.exists(rf):
                 try: font = ImageFont.truetype(rf, fsize); break
                 except: continue
         if not font: font = ImageFont.load_default()
-        # Envolver el texto en líneas
         palabras = frase.upper().split()
         lineas, actual = [], ""
         for p in palabras:
@@ -792,214 +916,157 @@ def _texto_en_frame(ruta_img_origen, frase, ruta_salida, w, h, pil_disponible, f
             else:
                 actual = prueba
         if actual: lineas.append(actual)
-        # Dibujar centrado verticalmente
-        alto_linea = int(fsize * 1.25)
-        total_alto = alto_linea * len(lineas)
-        y0 = (h - total_alto) // 2
-        for idx, linea in enumerate(lineas):
-            bb = draw.textbbox((0,0), linea, font=font)
-            tw = bb[2]-bb[0]
-            x = (w - tw) // 2
-            y = y0 + idx*alto_linea
-            # Contorno negro grueso + relleno amarillo (estilo viral)
+        alto_l = int(fsize*1.25)
+        y0 = (h - alto_l*len(lineas))//2
+        for idx, l in enumerate(lineas):
+            bb = draw.textbbox((0,0), l, font=font); tw = bb[2]-bb[0]
+            x = (w-tw)//2; y = y0 + idx*alto_l
             for dx in range(-3,4):
                 for dy in range(-3,4):
-                    draw.text((x+dx, y+dy), linea, font=font, fill=(0,0,0,255))
-            draw.text((x, y), linea, font=font, fill=(255,220,40,255))
+                    draw.text((x+dx,y+dy), l, font=font, fill=(0,0,0,255))
+            draw.text((x,y), l, font=font, fill=(255,220,40,255))
         img.convert('RGB').save(ruta_salida)
         return os.path.exists(ruta_salida)
     except Exception as e:
-        print(f"   [HOOK] Error texto: {e}")
+        print(f"   [HOOK] texto: {e}")
         return False
 
-def _clip_pattern_interrupt(frase, img_congelada, ruta_salida, w, h, fps, carpeta, pil, fuentes, dur=1.6):
-    """Formato A: golpe visual (flash + zoom punch) + texto + stinger."""
+def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes, formato="A", dur=1.8):
+    """Genera UN clip de hook SOLO VIDEO (el concat es mudo; el stinger va en el audio).
+    Formato A: zoom punch + flash blanco. Formato B: zoom out + fades (teaser)."""
     try:
-        # Frame con texto
-        frame_txt = os.path.join(carpeta, f"_hook_txt_{random.randint(1000,9999)}.png")
-        if not _texto_en_frame(img_congelada, frase, frame_txt, w, h, pil, fuentes):
-            # Sin texto: usar la imagen congelada con flash
-            frame_txt = img_congelada
-        # Video: zoom punch (zoom rápido) + flash blanco al inicio
-        total_frames = int(dur * fps)
-        vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-              f"zoompan=z='1.0+0.4*on/{total_frames}':d={total_frames}:s={w}x{h}:fps={fps},"
-              f"fade=t=in:st=0:d=0.08:color=white")
-        vtmp = os.path.join(carpeta, f"_hook_v_{random.randint(1000,9999)}.mp4")
-        cmd = ['ffmpeg','-y','-loop','1','-i', frame_txt,
-               '-vf', vf, '-t', str(dur), '-r', str(fps),
-               '-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p', vtmp]
-        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        if not _clip_valido(vtmp): return None
-        # Stinger
-        stinger = os.path.join(carpeta, f"_hook_s_{random.randint(1000,9999)}.mp3")
-        _generar_stinger(stinger, dur, "whoosh")
-        # Mux audio — forzar que el audio dure EXACTAMENTE lo que el video (evita desajustes)
-        if os.path.exists(stinger):
-            cmd2 = ['ffmpeg','-y','-i', vtmp,'-i', stinger,
-                    '-map','0:v','-map','1:a','-c:v','copy','-c:a','aac',
-                    '-af','apad','-t', str(dur), ruta_salida]
-            subprocess.run(cmd2, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        else:
-            cmd2 = ['ffmpeg','-y','-i', vtmp,'-f','lavfi','-i','anullsrc=r=44100:cl=stereo',
-                    '-map','0:v','-map','1:a','-c:v','copy','-c:a','aac','-t', str(dur), ruta_salida]
-            subprocess.run(cmd2, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        frame = os.path.join(carpeta, f"_hkf_{random.randint(1000,99999)}.png")
+        if not _texto_en_frame(img, frase, frame, w, h, pil, fuentes):
+            frame = img
+        tf = int(dur*fps)
+        if formato == "A":  # pattern interrupt: zoom punch + flash blanco
+            vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+                  f"zoompan=z='1.0+0.4*on/{tf}':d={tf}:s={w}x{h}:fps={fps},"
+                  f"fade=t=in:st=0:d=0.08:color=white")
+        else:  # flash-forward: zoom out + fades (teaser)
+            vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+                  f"zoompan=z='1.15-0.1*on/{tf}':d={tf}:s={w}x{h}:fps={fps},"
+                  f"fade=t=in:st=0:d=0.15,fade=t=out:st={dur-0.2:.2f}:d=0.2")
+        subprocess.run(['ffmpeg','-y','-loop','1','-i', frame,'-vf', vf,'-t', str(dur),
+                        '-r', str(fps),'-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p',
+                        '-an', ruta_salida],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if frame != img:
+            try: os.remove(frame)
+            except: pass
         return ruta_salida if _clip_valido(ruta_salida) else None
     except Exception as e:
-        print(f"   [HOOK] Error pattern interrupt: {e}")
-        return None
-
-def _clip_flash_forward(frase, img_teaser, ruta_salida, w, h, fps, carpeta, pil, fuentes, dur=1.8):
-    """Formato B: corte a imagen teaser + frase gancho + stinger grave."""
-    try:
-        frame_txt = os.path.join(carpeta, f"_ff_txt_{random.randint(1000,9999)}.png")
-        if not _texto_en_frame(img_teaser, frase, frame_txt, w, h, pil, fuentes):
-            frame_txt = img_teaser
-        total_frames = int(dur * fps)
-        # Efecto distinto: leve sacudida + desaturación (teaser inquietante)
-        vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-              f"zoompan=z='1.15-0.1*on/{total_frames}':d={total_frames}:s={w}x{h}:fps={fps},"
-              f"fade=t=in:st=0:d=0.15,fade=t=out:st={dur-0.2:.2f}:d=0.2")
-        vtmp = os.path.join(carpeta, f"_ff_v_{random.randint(1000,9999)}.mp4")
-        cmd = ['ffmpeg','-y','-loop','1','-i', frame_txt,
-               '-vf', vf, '-t', str(dur), '-r', str(fps),
-               '-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p', vtmp]
-        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        if not _clip_valido(vtmp): return None
-        stinger = os.path.join(carpeta, f"_ff_s_{random.randint(1000,9999)}.mp3")
-        _generar_stinger(stinger, dur, "impact")
-        if os.path.exists(stinger):
-            cmd2 = ['ffmpeg','-y','-i', vtmp,'-i', stinger,
-                    '-map','0:v','-map','1:a','-c:v','copy','-c:a','aac',
-                    '-af','apad','-t', str(dur), ruta_salida]
-        else:
-            cmd2 = ['ffmpeg','-y','-i', vtmp,'-f','lavfi','-i','anullsrc=r=44100:cl=stereo',
-                    '-map','0:v','-map','1:a','-c:v','copy','-c:a','aac','-t', str(dur), ruta_salida]
-        subprocess.run(cmd2, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        return ruta_salida if _clip_valido(ruta_salida) else None
-    except Exception as e:
-        print(f"   [HOOK] Error flash forward: {e}")
+        print(f"   [HOOK] clip {formato}: {e}")
         return None
 
 
-def insertar_hooks_retencion(ruta_video_entrada, ruta_video_salida, hooks_frases,
-                              imagenes_escenas, carpeta, w, h, fps,
-                              pil_disponible, fuentes, es_short=False):
+def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraciones_escenas,
+                               dur_hook_inicial, carpeta, hook_inicial_presente):
     """
-    Inserta hooks de retención en el video.
-    - hooks_frases: lista de frases gancho generadas por Gemini (1ra = hook inicial fuerte)
-    - imagenes_escenas: rutas de las imágenes de las escenas (para teasers del flash-forward)
-    Devuelve True si insertó hooks; si algo falla, copia el original y devuelve False.
-    NUNCA rompe el video.
+    Reconstruye el audio de narración insertando, en cada punto de hook, un tramo
+    de silencio de duración = dur del hook (para que el audio NO pise el hook visual,
+    y narración + video queden sincronizados).
+    El hook visual trae su propio stinger en SU pista, así que aquí solo insertamos
+    silencio en la narración (el stinger del clip suena durante ese silencio).
     """
-    import shutil
     try:
-        dur_video = _dur(ruta_video_entrada)
-        if dur_video < 5 or not hooks_frases:
-            shutil.copy(ruta_video_entrada, ruta_video_salida)
-            return False
+        # Puntos (en segundos del audio original) donde cortar e insertar silencio
+        acum = []
+        s = 0.0
+        for d in duraciones_escenas:
+            s += d
+            acum.append(s)
+        _acum_map = {i: acum[i] for i in range(len(acum))}  # escena -> tiempo de fin
+        cortes = []  # (tiempo_corte, duracion_silencio)
+        if hook_inicial_presente:
+            cortes.append((0.0, dur_hook_inicial))  # silencio al inicio
+        for ins in inserciones:
+            i = ins["despues_de_escena"]
+            if i < len(acum):
+                cortes.append((acum[i], ins["dur"]))
+        cortes.sort()
+        if not cortes:
+            import shutil; shutil.copy(ruta_audio_in, ruta_audio_out); return True
 
-        # ── Decidir cuántos re-hooks según duración ──
-        # Hook inicial siempre. Re-hooks intermedios: ~1 cada 75s (largos), 1 max (shorts)
-        frase_inicial = hooks_frases[0] if hooks_frases else None
-        frases_intermedias = hooks_frases[1:] if len(hooks_frases) > 1 else []
+        dur_audio = _dur(ruta_audio_in)
+        # Construir segmentos de narración entre cortes + silencios
+        partes = []
+        t_prev = 0.0
+        idx = 0
+        for (t_corte, dur_sil) in cortes:
+            # Segmento de narración de t_prev a t_corte
+            if t_corte > t_prev + 0.05:
+                seg = os.path.join(carpeta, f"_au_seg_{idx}.wav")
+                subprocess.run(['ffmpeg','-y','-i', ruta_audio_in,'-ss', str(t_prev),'-to', str(t_corte),
+                                '-c:a','pcm_s16le','-ar','44100','-ac','2', seg],
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                if _clip_valido(seg, 0.05): partes.append(seg)
+                idx += 1
+            # Silencio del hook CON STINGER (el concat de video es mudo, así que
+            # el sonido del hook debe ir aquí, en la pista de narración)
+            sil = os.path.join(carpeta, f"_au_sil_{idx}.wav")
+            # Generar stinger del tipo correspondiente y usarlo como "relleno" del hueco
+            tipo_st = "whoosh"
+            for _ins in inserciones:
+                if abs((_acum_map.get(_ins["despues_de_escena"], -99)) - t_corte) < 0.01:
+                    tipo_st = "whoosh" if _ins.get("formato") == "A" else "impact"
+                    break
+            _st_tmp = os.path.join(carpeta, f"_st_{idx}.wav")
+            _ok_st = False
+            try:
+                if tipo_st == "whoosh":
+                    _filt = (f"anoisesrc=d={dur_sil}:c=pink:a=0.25,"
+                             f"afade=t=in:d=0.3,afade=t=out:st={dur_sil*0.5:.2f}:d={dur_sil*0.5:.2f},"
+                             f"highpass=f=200,lowpass=f=3000")
+                else:
+                    _filt = f"sine=frequency=80:duration={dur_sil},afade=t=out:st=0.1:d={dur_sil-0.1:.2f}"
+                subprocess.run(['ffmpeg','-y','-f','lavfi','-i', _filt,
+                                '-c:a','pcm_s16le','-ar','44100','-ac','2', _st_tmp],
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                _ok_st = _clip_valido(_st_tmp, 0.05)
+            except Exception:
+                _ok_st = False
+            if _ok_st:
+                sil = _st_tmp
+            else:
+                subprocess.run(['ffmpeg','-y','-f','lavfi','-i','anullsrc=r=44100:cl=stereo',
+                                '-t', str(dur_sil),'-c:a','pcm_s16le','-ar','44100','-ac','2', sil],
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if _clip_valido(sil, 0.05): partes.append(sil)
+            idx += 1
+            t_prev = t_corte
+        # Resto de narración
+        if dur_audio > t_prev + 0.05:
+            seg = os.path.join(carpeta, f"_au_seg_{idx}.wav")
+            subprocess.run(['ffmpeg','-y','-i', ruta_audio_in,'-ss', str(t_prev),
+                            '-c:a','pcm_s16le','-ar','44100','-ac','2', seg],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if _clip_valido(seg, 0.05): partes.append(seg)
 
-        if es_short:
-            n_rehooks = min(1, len(frases_intermedias))
-        else:
-            n_rehooks = min(len(frases_intermedias), max(1, int(dur_video // 75)))
+        if len(partes) < 2:
+            import shutil; shutil.copy(ruta_audio_in, ruta_audio_out); return True
 
-        # ── Calcular puntos de inserción (evitar los primeros 5s y los últimos 8s) ──
-        puntos = []
-        if n_rehooks > 0:
-            inicio_zona = 8.0
-            fin_zona = dur_video - 8.0
-            if fin_zona > inicio_zona:
-                paso = (fin_zona - inicio_zona) / (n_rehooks + 1)
-                for k in range(1, n_rehooks + 1):
-                    puntos.append(round(inicio_zona + paso * k, 2))
-
-        # ── Cortar el video en segmentos por los puntos, e intercalar hooks ──
-        segmentos = []  # lista ordenada de rutas (segmentos de video + clips hook)
-        rnd = random.Random(os.path.basename(carpeta) + "hooks")
-
-        # 1. Hook inicial (se antepone al video completo)
-        partes_finales = []
-        if frase_inicial:
-            img0 = imagenes_escenas[0] if imagenes_escenas else None
-            if img0 and os.path.exists(img0):
-                hook_ini = os.path.join(carpeta, "_hook_inicial.mp4")
-                # El hook inicial siempre es pattern interrupt fuerte
-                r = _clip_pattern_interrupt(frase_inicial, img0, hook_ini, w, h, fps,
-                                            carpeta, pil_disponible, fuentes, dur=2.0)
-                if r:
-                    partes_finales.append(r)
-
-        # 2. Cortar el video en los puntos y meter re-hooks entre segmentos
-        cortes = [0.0] + puntos + [dur_video]
-        for i in range(len(cortes) - 1):
-            ini, fin = cortes[i], cortes[i+1]
-            seg = os.path.join(carpeta, f"_seg_{i:02d}.mp4")
-            cmd = ['ffmpeg','-y','-ss', str(ini), '-to', str(fin), '-i', ruta_video_entrada,
-                   '-c:v','libx264','-preset','veryfast','-crf','22',
-                   '-c:a','aac','-b:a','192k','-r',str(fps),
-                   '-avoid_negative_ts','make_zero','-async','1', seg]
-            subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            if _clip_valido(seg):
-                partes_finales.append(seg)
-            # Insertar re-hook después de este segmento (excepto el último)
-            if i < len(puntos) and i < len(frases_intermedias):
-                frase = frases_intermedias[i]
-                img_teaser = rnd.choice(imagenes_escenas) if imagenes_escenas else None
-                if img_teaser and os.path.exists(img_teaser):
-                    hook_path = os.path.join(carpeta, f"_rehook_{i:02d}.mp4")
-                    # Alternar aleatoriamente formato A y B
-                    if rnd.random() < 0.5:
-                        r = _clip_pattern_interrupt(frase, img_teaser, hook_path, w, h, fps,
-                                                    carpeta, pil_disponible, fuentes)
-                    else:
-                        r = _clip_flash_forward(frase, img_teaser, hook_path, w, h, fps,
-                                                carpeta, pil_disponible, fuentes)
-                    if r:
-                        partes_finales.append(r)
-
-        if len(partes_finales) < 2:
-            shutil.copy(ruta_video_entrada, ruta_video_salida)
-            return False
-
-        # 3. Concatenar todo (segmentos + hooks) en orden
-        lista = os.path.join(carpeta, "_hooks_concat.txt")
-        with open(lista, "w") as f:
-            for p in partes_finales:
-                f.write(f"file '{p}'\n")
-        cmd_concat = ['ffmpeg','-y','-f','concat','-safe','0','-i', lista,
-                      '-c:v','libx264','-preset','veryfast','-crf','22',
-                      '-c:a','aac','-b:a','192k','-r',str(fps), ruta_video_salida]
-        subprocess.run(cmd_concat, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-        # Limpiar temporales
-        for p in partes_finales:
+        # Concatenar con el filtro concat de audio (más robusto que el demuxer para AAC)
+        inputs = []
+        for p in partes:
+            inputs.extend(['-i', p])
+        n = len(partes)
+        filtro = "".join(f"[{k}:a]" for k in range(n)) + f"concat=n={n}:v=0:a=1[out]"
+        cmd = ['ffmpeg','-y'] + inputs + ['-filter_complex', filtro, '-map','[out]',
+               '-c:a','aac','-b:a','192k', ruta_audio_out]
+        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        for p in partes:
             try: os.remove(p)
             except: pass
-        try: os.remove(lista)
-        except: pass
-
-        if _clip_valido(ruta_video_salida, min_dur=dur_video*0.8):
-            n_total = len([x for x in partes_finales]) 
-            print(f"   [HOOKS] Insertados: 1 inicial + {len(puntos)} re-hooks (formatos alternados)")
-            return True
-        else:
-            shutil.copy(ruta_video_entrada, ruta_video_salida)
-            return False
+        return _clip_valido(ruta_audio_out, 1.0)
     except Exception as e:
-        print(f"   [HOOKS] Error general, video sin hooks: {e}")
+        print(f"   [HOOKS] Error audio: {e}")
         try:
-            import shutil
-            shutil.copy(ruta_video_entrada, ruta_video_salida)
+            import shutil; shutil.copy(ruta_audio_in, ruta_audio_out)
         except: pass
         return False
 
-# ═══════════ FIN MÓDULO DE HOOKS ═══════════
+# ═══════════ FIN MÓDULO DE HOOKS V2 ═══════════
 
 def procesar():
     global _tareas_completadas  # FIX: Llamamos al registro local
@@ -1461,12 +1528,85 @@ def procesar():
                     clips_temp.append(path_clip)
                     print(f"   [OK] Escena {i+1} ({'SD' if archivo.endswith('.png') else 'Pexels'}) — tipo:{tipo} efecto:{efecto}")
 
+                # ══════════ HOOKS DE RETENCIÓN (integrados al pipeline) ══════════
+                # Se insertan ENTRE escenas (límites naturales). Reconstruyen audio
+                # y recalculan subtítulos para mantener sincronía total.
+                _hook_inicial_dur = 0.0
+                _hook_inserciones = []
+                _hooks_activos = False
+                try:
+                    _hooks_frases = tarea.get("hooks", []) or []
+                    _hooks_frases = [str(x).strip() for x in _hooks_frases if x and str(x).strip()]
+                    if _hooks_frases and len(clips_temp) >= 2:
+                        _es_short_hk = not es_largo_video
+                        _frase_ini, _hook_inserciones = planificar_hooks(
+                            len(clips_temp), duraciones_escenas, _hooks_frases,
+                            es_short=_es_short_hk, dur_hook=1.8
+                        )
+                        # Imágenes de escena disponibles (para teasers)
+                        _imgs_hk = [
+                            os.path.join(carpeta_reciente, f).replace("\\", "/")
+                            for f in sorted(os.listdir(carpeta_reciente))
+                            if f.startswith("escena_") and f.endswith(".png")
+                        ]
+                        _img_def = _imgs_hk[0] if _imgs_hk else (
+                            os.path.join(carpeta_reciente, archivos_escenas[0]) if archivos_escenas else None)
+
+                        # 1. Hook inicial (clip al frente)
+                        nuevos_clips = []
+                        if _frase_ini and _img_def and os.path.exists(_img_def):
+                            _hk_ini = os.path.join(carpeta_reciente, "_hook_inicial.mp4")
+                            _r = generar_clip_hook(_frase_ini, _img_def, _hk_ini, w, h, fps,
+                                                   carpeta_reciente, PIL_DISPONIBLE, FUENTES_WINDOWS,
+                                                   formato="A", dur=2.0)
+                            if _r:
+                                nuevos_clips.append(_r)
+                                _hook_inicial_dur = 2.0
+
+                        # 2. Reconstruir clips_temp intercalando re-hooks tras las escenas indicadas
+                        _ins_por_escena = {ins["despues_de_escena"]: ins for ins in _hook_inserciones}
+                        _rnd_img = random.Random("hkimg")
+                        for _idx_c, _clip in enumerate(clips_temp):
+                            nuevos_clips.append(_clip)
+                            if _idx_c in _ins_por_escena:
+                                _ins = _ins_por_escena[_idx_c]
+                                _img_teaser = _rnd_img.choice(_imgs_hk) if _imgs_hk else _img_def
+                                if _img_teaser and os.path.exists(_img_teaser):
+                                    _hk = os.path.join(carpeta_reciente, f"_rehook_{_idx_c:02d}.mp4")
+                                    _r = generar_clip_hook(_ins["frase"], _img_teaser, _hk, w, h, fps,
+                                                           carpeta_reciente, PIL_DISPONIBLE, FUENTES_WINDOWS,
+                                                           formato=_ins["formato"], dur=_ins["dur"])
+                                    if _r:
+                                        nuevos_clips.append(_r)
+
+                        if len(nuevos_clips) > len(clips_temp):
+                            clips_temp = nuevos_clips
+                            _hooks_activos = True
+                            # 3. Reconstruir el audio con los silencios de los hooks
+                            _audio_hk = os.path.join(carpeta_reciente, "locucion_hooks.m4a")
+                            if construir_audio_con_hooks(
+                                ruta_audio, _audio_hk, _hook_inserciones, duraciones_escenas,
+                                _hook_inicial_dur, carpeta_reciente,
+                                hook_inicial_presente=(_hook_inicial_dur > 0)
+                            ):
+                                ruta_audio = _audio_hk
+                                duracion_audio = _dur(_audio_hk)
+                            print(f"🪝 HOOKS: 1 inicial + {len(_hook_inserciones)} re-hooks integrados (entre escenas, audio resincronizado)")
+                except Exception as _e_hk:
+                    print(f"   [HOOKS] Omitidos por error (video intacto): {_e_hk}")
+                    _hooks_activos = False
+
                 filtro_sub = ""
                 if not es_largo_video:
                     escenas_texto = tarea.get("escenas_texto", [])
                     ruta_srt = _generar_subtitulos_shorts(
                         ruta_audio, texto_locucion, escenas_texto, marca_audio, carpeta_reciente, duracion_audio
                     )
+                    # Si hay hooks, recalcular los tiempos del SRT para compensar
+                    if _hooks_activos and ruta_srt and os.path.exists(ruta_srt):
+                        _srt_hk = os.path.join(carpeta_reciente, "subtitulos_hooks.srt")
+                        if recalcular_srt(ruta_srt, _srt_hk, _hook_inserciones, duraciones_escenas, _hook_inicial_dur):
+                            ruta_srt = _srt_hk
                     if ruta_srt and os.path.exists(ruta_srt):
                         sub_path = ruta_srt.replace('\\', '/').replace(':', '\\:')
                         filtro_sub = (
@@ -1484,14 +1624,21 @@ def procesar():
                 # antes de armar la lista de concat (evita que el concat muera)
                 _suma_clips = 0.0
                 for _ci, _clip in enumerate(clips_temp):
-                    _dur_esp = duraciones_escenas[_ci] if _ci < len(duraciones_escenas) else None
+                    _es_hook_clip = ("_hook" in os.path.basename(_clip) or "_rehook" in os.path.basename(_clip))
                     if not _clip_es_valido(_clip):
+                        if _es_hook_clip:
+                            # Un clip de hook corrupto se descarta (no rompe el video)
+                            print(f"   [FIX] clip de hook ilegible — se omite")
+                            continue
                         print(f"   [FIX] clip_{_ci:02d} ilegible en validación final — regenerando...")
+                        # Mapear el índice real de escena (descontando los hooks previos)
+                        _idx_escena = len([c for c in clips_temp[:_ci]
+                                           if "_hook" not in os.path.basename(c) and "_rehook" not in os.path.basename(c)])
+                        _dur_esp = duraciones_escenas[_idx_escena] if _idx_escena < len(duraciones_escenas) else None
                         _dur_regen = _dur_esp if _dur_esp else 5.0
-                        _generar_clip_simple(
-                            os.path.join(carpeta_reciente, archivos_escenas[_ci]) if _ci < len(archivos_escenas) else _clip,
-                            _clip, _dur_regen, w, h, fps
-                        )
+                        _origen_regen = (os.path.join(carpeta_reciente, archivos_escenas[_idx_escena])
+                                         if _idx_escena < len(archivos_escenas) else _clip)
+                        _generar_clip_simple(_origen_regen, _clip, _dur_regen, w, h, fps)
                     try:
                         _rr = subprocess.run(
                             ['ffprobe', '-v', 'error', '-show_entries', 'format=duration',
@@ -1569,6 +1716,21 @@ def procesar():
                         except Exception: pass
                         ruta_video_mudo = ruta_video_ext
                         print(f"   [FIX] Video extendido +{_falta:.1f}s para cubrir narración completa")
+                elif _dur_video_mudo > duracion_audio + 0.3 and duracion_audio > 0:
+                    # El video es más largo (p.ej. por los clips de hook): extender el
+                    # audio con silencio para que audio y video queden EXACTAMENTE parejos
+                    _falta_a = _dur_video_mudo - duracion_audio
+                    ruta_audio_ext = os.path.join(carpeta_reciente, "audio_ext.m4a")
+                    cmd_pad_a = [
+                        'ffmpeg', '-y', '-i', ruta_audio.replace("\\", "/"),
+                        '-af', f"apad=pad_dur={_falta_a:.2f}",
+                        '-c:a', 'aac', '-b:a', '192k', ruta_audio_ext
+                    ]
+                    subprocess.run(cmd_pad_a, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                    if _clip_valido(ruta_audio_ext, 1.0):
+                        ruta_audio = ruta_audio_ext
+                        duracion_audio = _dur(ruta_audio_ext)
+                        print(f"   [FIX] Audio extendido +{_falta_a:.1f}s para igualar video (hooks)")
 
                 cmd_merge = [
                     'ffmpeg', '-y',
@@ -1592,33 +1754,6 @@ def procesar():
                     os.remove(list_file)
                 except Exception:
                     pass
-
-                # ── INSERCIÓN DE HOOKS DE RETENCIÓN ──
-                # Hook inicial fuerte + re-hooks intermedios (formatos alternados).
-                # Frases generadas por Gemini (campo "hooks" de la tarea).
-                try:
-                    hooks_frases = tarea.get("hooks", []) or []
-                    hooks_frases = [str(h).strip() for h in hooks_frases if h and str(h).strip()]
-                    if hooks_frases:
-                        # Imágenes de escena (para los teasers del flash-forward)
-                        imgs_escena = [
-                            os.path.join(carpeta_reciente, f).replace("\\", "/")
-                            for f in sorted(os.listdir(carpeta_reciente))
-                            if f.startswith("escena_") and f.endswith(".png")
-                        ]
-                        es_short_fmt = "9:16" in formato_ensamblaje
-                        ruta_con_hooks = os.path.join(carpeta_reciente, "con_hooks.mp4")
-                        print(f"🪝 FASE HOOKS: insertando {len(hooks_frases)} ganchos de retención...")
-                        if insertar_hooks_retencion(
-                            ruta_base, ruta_con_hooks, hooks_frases, imgs_escena,
-                            carpeta_reciente, w, h, fps, PIL_DISPONIBLE, FUENTES_WINDOWS,
-                            es_short=es_short_fmt
-                        ):
-                            try: os.remove(ruta_base)
-                            except Exception: pass
-                            os.replace(ruta_con_hooks, ruta_base)
-                except Exception as _eh:
-                    print(f"   [HOOKS] Omitidos por error (video intacto): {_eh}")
 
                 print("🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...")
                 ruta_actual = ruta_base
