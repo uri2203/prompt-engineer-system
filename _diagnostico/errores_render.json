@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-14 09:31:19",
-    "donde": "lanzar_orden_motor",
-    "error": "Traceback (most recent call last):\n  File \"/opt/render/project/src/app.py\", line 1084, in api_lanzar_orden_motor\n    tid = _disparar_orden_interna(marca, formato, \"\", duracion_min)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/render/project/src/app.py\", line 506, in _disparar_orden_interna\n    raise Exception(resultado[:120])\nException: ERROR CRÍTICO API GEMINI:\n\n"
-  },
-  {
     "ts": "2026-06-14 09:31:52",
     "donde": "lanzar_orden_motor",
     "error": "Traceback (most recent call last):\n  File \"/opt/render/project/src/app.py\", line 1084, in api_lanzar_orden_motor\n    tid = _disparar_orden_interna(marca, formato, \"\", duracion_min)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/render/project/src/app.py\", line 506, in _disparar_orden_interna\n    raise Exception(resultado[:120])\nException: ERROR CRÍTICO API GEMINI:\n\n"
@@ -96,6 +91,11 @@
   },
   {
     "ts": "2026-06-14 09:41:48",
+    "donde": "lanzar_orden_motor",
+    "error": "Traceback (most recent call last):\n  File \"/opt/render/project/src/app.py\", line 1084, in api_lanzar_orden_motor\n    tid = _disparar_orden_interna(marca, formato, \"\", duracion_min)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/render/project/src/app.py\", line 506, in _disparar_orden_interna\n    raise Exception(resultado[:120])\nException: ERROR CRÍTICO API GEMINI:\n\n"
+  },
+  {
+    "ts": "2026-06-14 09:42:21",
     "donde": "lanzar_orden_motor",
     "error": "Traceback (most recent call last):\n  File \"/opt/render/project/src/app.py\", line 1084, in api_lanzar_orden_motor\n    tid = _disparar_orden_interna(marca, formato, \"\", duracion_min)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/render/project/src/app.py\", line 506, in _disparar_orden_interna\n    raise Exception(resultado[:120])\nException: ERROR CRÍTICO API GEMINI:\n\n"
   }
