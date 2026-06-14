@@ -604,7 +604,9 @@ def _repartir(n_items, n_grupos):
 
 
 def _trocear_en_tiempo(texto, t_ini, t_fin, max_pal):
-    """Divide 'texto' en chunks de max_pal palabras, repartiendo [t_ini, t_fin]."""
+    """Divide 'texto' en chunks de max_pal palabras, repartiendo [t_ini, t_fin].
+    Tope: ningún chunk dura más de 3s (legibilidad); si la voz deja tiempo de sobra,
+    el chunk se muestra su tiempo natural y el resto queda como pausa visual."""
     pal = texto.split()
     if not pal:
         return []
@@ -615,6 +617,9 @@ def _trocear_en_tiempo(texto, t_ini, t_fin, max_pal):
         grupo = pal[j:j + max_pal]
         ini = t_ini + j * seg_pal
         fin = t_ini + min(len(pal), j + max_pal) * seg_pal
+        # Tope de 3.0s por chunk para que el subtítulo no se quede pegado demasiado
+        if fin - ini > 3.0:
+            fin = ini + 3.0
         out.append((" ".join(grupo), ini, fin))
         j += max_pal
     return out
@@ -872,8 +877,10 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
         'despues_de_escena' = índice de escena tras la cual se inserta el re-hook
     NO toca archivos; solo planifica. Determinista por semilla (reproducible).
     """
-    frase_inicial = hooks_frases[0] if hooks_frases else None
-    frases_inter = [f for f in hooks_frases[1:] if f and str(f).strip()]
+    # Filtrar frases vacías/None; la primera válida es el hook inicial
+    _frases_limpias = [str(f).strip() for f in (hooks_frases or []) if f and str(f).strip()]
+    frase_inicial = _frases_limpias[0] if _frases_limpias else None
+    frases_inter = _frases_limpias[1:] if len(_frases_limpias) > 1 else []
 
     dur_total = sum(duraciones_escenas) if duraciones_escenas else 0
     if dur_total < 5 or num_escenas < 2:
@@ -1090,6 +1097,9 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
     silencio en la narración (el stinger del clip suena durante ese silencio).
     """
     try:
+        # Guarda: si el audio de entrada no existe o es inválido, no se puede reconstruir
+        if not os.path.exists(ruta_audio_in) or _dur(ruta_audio_in) < 0.5:
+            return False
         # Puntos (en segundos del audio original) donde cortar e insertar silencio
         acum = []
         s = 0.0
@@ -1871,6 +1881,11 @@ def procesar():
                     os.remove(list_file)
                 except Exception:
                     pass
+
+                # Limpiar temporales de audio de los hooks (no llenar el disco del Xeon)
+                for _tmp_audio in ["locucion_hooks.m4a", "audio_ext.m4a"]:
+                    try: os.remove(os.path.join(carpeta_reciente, _tmp_audio))
+                    except Exception: pass
 
                 print("🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...")
                 ruta_actual = ruta_base
