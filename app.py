@@ -548,6 +548,9 @@ def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
         "prompt": _json.dumps(escenas, ensure_ascii=False),
         "formato": formato_calculado, "marca": marca,
         "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+        "escenas_texto": [e.get("texto_locucion", "") for e in escenas],
+        "escenas": escenas,
+        "hooks": guion.get("hooks", []),
         "origen": "bot_pinpinela_cron",
     }
     try:
@@ -741,6 +744,9 @@ def api_bot_lanzar_orden():
             "marca": marca,
             "texto_locucion": texto_locucion,
             "titulo_sugerido": titulo,
+            "escenas_texto": [e.get("texto_locucion", "") for e in escenas],
+            "escenas": escenas,
+            "hooks": guion.get("hooks", []),
             "origen": "bot_pinpinela",
         }
         # Guardar en disco (sobrevive reinicios de Render) y encolar
