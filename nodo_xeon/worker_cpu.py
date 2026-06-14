@@ -1664,6 +1664,7 @@ def procesar():
                 _hook_inicial_dur = 0.0
                 _hook_inserciones = []
                 _hooks_activos = False
+                _ruta_audio_original = ruta_audio  # audio SIN hooks (para subtítulos limpios)
                 try:
                     _hooks_frases = tarea.get("hooks", []) or []
                     _hooks_frases = [str(x).strip() for x in _hooks_frases if x and str(x).strip()]
@@ -1729,11 +1730,21 @@ def procesar():
                 filtro_sub = ""
                 if not es_largo_video:
                     escenas_texto = tarea.get("escenas_texto", [])
-                    # La sincronía detecta bloques de habla sobre ruta_audio, que YA incluye
-                    # los hooks (silencios). Por eso el SRT sale sincronizado sin recálculos.
+                    # SINCRONÍA CORRECTA: generar el SRT sobre el audio ORIGINAL (solo
+                    # locución real, sin los stingers de los hooks que confunden al
+                    # detector de bloques de habla). Luego, si hubo hooks, desplazar los
+                    # tiempos del SRT para compensar los silencios insertados.
+                    _dur_original = _obtener_duracion_audio_simple(_ruta_audio_original)
                     ruta_srt = _generar_subtitulos_shorts(
-                        ruta_audio, texto_locucion, escenas_texto, marca_audio, carpeta_reciente, duracion_audio
+                        _ruta_audio_original, texto_locucion, escenas_texto, marca_audio,
+                        carpeta_reciente, _dur_original
                     )
+                    if ruta_srt and os.path.exists(ruta_srt) and _hooks_activos and (_hook_inserciones or _hook_inicial_dur > 0):
+                        _srt_shift = ruta_srt.replace(".srt", "_sync.srt")
+                        if recalcular_srt(ruta_srt, _srt_shift, _hook_inserciones,
+                                          duraciones_escenas, _hook_inicial_dur):
+                            ruta_srt = _srt_shift
+                            print(f"   [SUBS] Tiempos desplazados para los hooks (sincronía mantenida).")
                     if ruta_srt and os.path.exists(ruta_srt):
                         sub_path = ruta_srt.replace('\\', '/').replace(':', '\\:')
                         filtro_sub = (
