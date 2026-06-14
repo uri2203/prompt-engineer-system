@@ -47,6 +47,47 @@ IP_VOZ_LOCAL = "192.168.0.251"   # motor_voz.py / XTTS
 URL_NODO_SD   = f"http://{IP_GRAFICA}:7861"      # Stable Diffusion
 URL_NODO_VOZ  = f"http://{IP_VOZ_LOCAL}:8000"    # Motor de voz
 
+# ── DIAGNÓSTICO: el worker sube un reporte por video a la rama diagnostico ────
+# Así se puede revisar de forma remota qué pasó con cada video (hooks, subtítulos,
+# paquete, errores) sin tener que copiar el log de la terminal.
+_GH_REPO = "uri2203/prompt-engineer-system"
+_GH_TOKEN_PATH = r"C:\NODO_PINPINELA\token_github.txt"
+
+def _leer_token_github():
+    try:
+        with open(_GH_TOKEN_PATH, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return ""
+
+def subir_diagnostico_video(diag):
+    """Sube un JSON de diagnóstico de UN video a _diagnostico/videos/ en la rama
+    diagnostico. No interrumpe la producción si falla (best-effort)."""
+    try:
+        token = _leer_token_github()
+        if not token:
+            return False
+        vid_id = str(diag.get("id", "sin_id"))[:20].replace("/", "_")
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        ruta = f"_diagnostico/videos/{ts}_{diag.get('marca','?')}_{vid_id}.json"
+        contenido = base64.b64encode(json.dumps(diag, ensure_ascii=False, indent=2).encode()).decode()
+        H = {"Authorization": f"token {token}"}
+        # No hace falta SHA: cada archivo es nuevo (timestamp único)
+        r = requests.put(
+            f"https://api.github.com/repos/{_GH_REPO}/contents/{ruta}",
+            headers=H,
+            json={"message": f"diag video {diag.get('marca','?')} {vid_id}",
+                  "content": contenido, "branch": "diagnostico"},
+            timeout=30,
+        )
+        if r.status_code in (200, 201):
+            print(f"   [DIAG] Reporte del video subido a diagnostico/videos/")
+            return True
+        return False
+    except Exception as e:
+        print(f"   [DIAG] No se pudo subir el diagnóstico (no crítico): {e}")
+        return False
+
 def _ping_nodo(url, nombre, timeout=8):
     """Verifica si un nodo HTTP responde. Devuelve True/False."""
     try:
@@ -1270,11 +1311,26 @@ def procesar():
             if tipo_tarea == "ENSAMBLAJE":
                 print(f"\n🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...")
 
+                # Diagnóstico del video (se sube a la rama diagnostico al terminar)
+                _diag = {
+                    "id": tarea_id,
+                    "marca": tarea.get("marca", "?"),
+                    "formato": tarea.get("formato", "?"),
+                    "tipo": "Largo" if ("16:9" in tarea.get("formato", "")) else "Short",
+                    "inicio": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "hooks": {"frases_recibidas": len(tarea.get("hooks", []) or []), "insertados": 0, "activos": False},
+                    "subtitulos": {"aplica": False, "bloques_habla": 0, "desplazado_por_hooks": False},
+                    "paquete": {"generado": False, "respaldo": False},
+                    "errores": [],
+                }
+
                 # PRE-FLIGHT: el ensamblaje necesita SD (imágenes) y VOZ. Si falta
                 # alguno, abortar AHORA y no perder el trabajo largo.
                 nodos_ok, motivo = verificar_nodos_criticos(necesita_sd=True, necesita_voz=True)
                 if not nodos_ok:
                     print(f"🛑 [ENSAMBLAJE CANCELADO] {motivo}")
+                    _diag["errores"].append(f"Pre-flight abortado: {motivo}")
+                    subir_diagnostico_video(_diag)
                     _tareas_completadas.discard(tarea_id)  # permitir reintento cuando se reactiven los nodos
                     return
 
@@ -1723,12 +1779,16 @@ def procesar():
                                 ruta_audio = _audio_hk
                                 duracion_audio = _dur(_audio_hk)
                             print(f"🪝 HOOKS: 1 inicial + {len(_hook_inserciones)} re-hooks integrados (entre escenas, audio resincronizado)")
+                            _diag["hooks"]["insertados"] = len(_hook_inserciones) + (1 if _hook_inicial_dur > 0 else 0)
+                            _diag["hooks"]["activos"] = True
                 except Exception as _e_hk:
                     print(f"   [HOOKS] Omitidos por error (video intacto): {_e_hk}")
                     _hooks_activos = False
+                    _diag["errores"].append(f"Hooks omitidos: {str(_e_hk)[:100]}")
 
                 filtro_sub = ""
                 if not es_largo_video:
+                    _diag["subtitulos"]["aplica"] = True
                     escenas_texto = tarea.get("escenas_texto", [])
                     # SINCRONÍA CORRECTA: generar el SRT sobre el audio ORIGINAL (solo
                     # locución real, sin los stingers de los hooks que confunden al
@@ -1744,6 +1804,7 @@ def procesar():
                         if recalcular_srt(ruta_srt, _srt_shift, _hook_inserciones,
                                           duraciones_escenas, _hook_inicial_dur):
                             ruta_srt = _srt_shift
+                            _diag["subtitulos"]["desplazado_por_hooks"] = True
                             print(f"   [SUBS] Tiempos desplazados para los hooks (sincronía mantenida).")
                     if ruta_srt and os.path.exists(ruta_srt):
                         sub_path = ruta_srt.replace('\\', '/').replace(':', '\\:')
@@ -1982,10 +2043,17 @@ def procesar():
                             json.dump(paquete, f, indent=4, ensure_ascii=False)
                         print(f"✅ [PAQUETE] Guardado en: {ruta_paquete}")
                         print("🖼️ [PAQUETE] Miniaturas desactivadas — usa los prompts del paquete_publicacion.docx en Canva.")
+                        _diag["paquete"]["generado"] = True
+                        # Si Gemini falló y se usó respaldo, el paquete trae la marca _respaldo
+                        if isinstance(paquete, dict) and paquete.get("_respaldo"):
+                            _diag["paquete"]["respaldo"] = True
+                            print("⚠️ [PAQUETE] Metadatos de RESPALDO (Gemini no disponible) — revisar/mejorar antes de publicar.")
                     else:
                         print(f"⚠️ [PAQUETE] Error del servidor: {res_paquete.status_code}")
+                        _diag["errores"].append(f"Paquete error servidor: {res_paquete.status_code}")
                 except Exception as e:
                     print(f"⚠️ [PAQUETE] Error: {e}")
+                    _diag["errores"].append(f"Paquete excepción: {str(e)[:100]}")
 
                 try:
                     if paquete:
@@ -2015,6 +2083,11 @@ def procesar():
                         timeout=30
                     )
                     print(f"✅ [TAREA {tarea_id}] Cerrada y purgada del servidor en la nube.")
+                    # Completar y subir el diagnóstico del video a la rama diagnostico
+                    _diag["fin"] = time.strftime("%Y-%m-%d %H:%M:%S")
+                    _diag["duracion_real_seg"] = round(_dur_real, 1)
+                    _diag["video_final"] = os.path.basename(ruta_final)
+                    subir_diagnostico_video(_diag)
                 except Exception as e:
                     print(f"⚠️ Error reportando cierre de ensamblaje al servidor: {e}")
 
