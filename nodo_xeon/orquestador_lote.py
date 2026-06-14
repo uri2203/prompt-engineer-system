@@ -32,7 +32,7 @@ ENFRIAMIENTO_DEFAULT = 180
 ESPERA_NODO_CAIDO = 60
 MAX_INTENTOS_ENCOLADO = 3      # reintentos de encolado antes de marcar fallido
 ESPERA_REINTENTO = 45         # segundos entre reintentos de encolado
-ESPERA_CUOTA = 1800           # 30 min de espera cuando Gemini se queda sin cuota
+ESPERA_CUOTA = 900            # 15 min: alineado con el enfriamiento de llaves en ai_engine
 IP_GRAFICA = "192.168.0.215"
 IP_VOZ = "192.168.0.251"
 NODOS = {"sd": f"http://{IP_GRAFICA}:7861/sdapi/v1/options", "voz": f"http://{IP_VOZ}:8000"}
@@ -89,6 +89,7 @@ def reportar_progreso(lote):
             "trabajo_actual": lote.get("trabajo_actual_desc", ""),
             "mensaje": lote.get("mensaje", ""),
             "resumen": lote.get("resumen", ""),
+            "historial": lote.get("historial", []),  # videos terminados (para la consola)
         }, timeout=20)
     except Exception:
         pass
@@ -113,13 +114,15 @@ def encolar_video(marca, formato, duracion_min=None):
         return None, "red"
 
 def video_esta_listo(tarea_id):
+    """Devuelve (completado, detalles). detalles = {duracion_real_seg, marca, formato}."""
     try:
         r = requests.get(f"{RENDER_URL}/api/bot/video_estado", params={"tarea_id": tarea_id}, timeout=20)
         if r.status_code == 200:
-            return r.json().get("completado", False)
+            j = r.json()
+            return j.get("completado", False), j.get("detalles", {})
     except Exception:
         pass
-    return False
+    return False, {}
 
 def ping_nodo(url, timeout=6):
     try:
@@ -187,11 +190,24 @@ def procesar_lote(lote):
     # Video en proceso: esperar INDEFINIDAMENTE
     en_proceso = next((t for t in lote["trabajos"] if t["estado"] == "en_proceso"), None)
     if en_proceso:
-        if en_proceso.get("tarea_id") and video_esta_listo(en_proceso["tarea_id"]):
+        listo, detalles = (video_esta_listo(en_proceso["tarea_id"]) if en_proceso.get("tarea_id") else (False, {}))
+        if listo:
             en_proceso["estado"] = "completado"
             lote["mensaje"] = f"Video {en_proceso['n']} completado"
             lote["enfriando_hasta"] = time.time() + lote.get("enfriamiento", ENFRIAMIENTO_DEFAULT)
             lote["reintentar_hasta"] = 0
+            # Registrar en el historial del lote (para la consola del panel)
+            dur_real = detalles.get("duracion_real_seg", 0)
+            es_largo = en_proceso.get("formato") == "16:9"
+            lote.setdefault("historial", []).append({
+                "n": en_proceso["n"],
+                "marca": en_proceso.get("marca", ""),
+                "formato": en_proceso.get("formato", ""),
+                "tipo": "Largo" if es_largo else "Short",
+                "duracion_sel": en_proceso.get("duracion_min") if es_largo else None,
+                "duracion_real_seg": dur_real,
+                "hora": datetime.now(TZ_MEXICO).strftime("%H:%M"),
+            })
             print(f"OK Video {en_proceso['n']} ({en_proceso['marca']}) completado")
             guardar_lote(lote)
         else:
