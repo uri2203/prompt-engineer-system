@@ -299,17 +299,31 @@ def main():
         guardar_lote(lote)
     else:
         lote = None
+    ultimo_ts_iniciar = 0  # ts del último 'iniciar' procesado (idempotencia ante latencia)
     while True:
         try:
-            accion = obtener_control().get("accion", "")
+            control = obtener_control()
+            accion = control.get("accion", "")
+            ts_control = control.get("ts", 0)
+            hay_lote_activo = bool(lote and lote.get("estado_lote") not in ("completado", "cancelado"))
             if accion == "iniciar":
-                consumir_control()
-                nuevo = crear_lote(obtener_plan())
-                if nuevo:
-                    lote = nuevo; guardar_lote(lote)
-                    print(f"LOTE CREADO: {lote['resumen']}"); reportar_progreso(lote)
+                # Idempotencia: ignorar si ya procesamos este mismo 'iniciar' (mismo ts)
+                # o si ya hay un lote en curso. Evita recrear el lote por latencia del control.
+                if ts_control and ts_control == ultimo_ts_iniciar:
+                    pass  # ya lo procesamos; señal repetida por propagación lenta
+                elif hay_lote_activo:
+                    print("[CONTROL] 'iniciar' ignorado: ya hay un lote en curso.")
+                    ultimo_ts_iniciar = ts_control
+                    consumir_control()
                 else:
-                    print("Plan vacio - nada que producir")
+                    ultimo_ts_iniciar = ts_control
+                    consumir_control()
+                    nuevo = crear_lote(obtener_plan())
+                    if nuevo:
+                        lote = nuevo; guardar_lote(lote)
+                        print(f"LOTE CREADO: {lote['resumen']}"); reportar_progreso(lote)
+                    else:
+                        print("Plan vacio - nada que producir")
             if lote and lote.get("estado_lote") not in ("completado", "cancelado"):
                 lote = procesar_lote(lote)
         except Exception as e:
