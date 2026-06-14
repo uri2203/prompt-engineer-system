@@ -29,6 +29,7 @@ compliance_engine = ComplianceEngine()
 # COLA DE TAREAS PARA LA DARK FACTORY
 cola_de_renderizado = []
 resultados_itinerantes = {}
+_videos_completados = set()  # IDs de videos cuyo ensamblaje terminó (para el orquestador)
 audios_temporales = {}  # Almacén temporal de audios grandes
 
 def login_required(f):
@@ -931,6 +932,12 @@ def nodo_tarea_completada():
             return jsonify({"status": "ensamblaje_encolado", "tarea_id": tarea_id})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
+    # Si el ID termina en _asm, es un ENSAMBLAJE terminado = video COMPLETO.
+    # Registrarlo para que el orquestador (video_estado) sepa que terminó.
+    if tarea_id.endswith("_asm"):
+        base_id = tarea_id[:-4]  # quitar el sufijo _asm
+        _videos_completados.add(base_id)
+        _videos_completados.add(tarea_id)
     return jsonify({"status": "ok"})
 
 @app.route('/api/nodo/polling', methods=['POST'])
@@ -1012,6 +1019,108 @@ def upload_result():
         resultados_itinerantes[tid] = img
         return jsonify({"status": "success"}), 200
     return jsonify({"status": "error"}), 400
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ORQUESTADOR DE LOTES — endpoints que usa orquestador_lote.py (en el Xeon)
+# ═══════════════════════════════════════════════════════════════════════════
+def _gh_leer_json(path, default):
+    """Lee un JSON de la rama 'diagnostico' de GitHub."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return default
+    try:
+        import base64 as _b64, json as _json
+        url = f"https://api.github.com/repos/uri2203/prompt-engineer-system/contents/{path}"
+        r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        if r.status_code == 200:
+            return _json.loads(_b64.b64decode(r.json()["content"]).decode())
+    except Exception:
+        pass
+    return default
+
+def _gh_guardar_json(path, datos, mensaje="update"):
+    """Guarda un JSON en la rama 'diagnostico' de GitHub (no dispara deploys)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return
+    try:
+        import base64 as _b64, json as _json
+        url = f"https://api.github.com/repos/uri2203/prompt-engineer-system/contents/{path}"
+        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        contenido = _b64.b64encode(_json.dumps(datos, ensure_ascii=False, indent=2).encode()).decode()
+        payload = {"message": mensaje, "content": contenido, "branch": "diagnostico"}
+        if rget.status_code == 200:
+            payload["sha"] = rget.json()["sha"]
+        requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
+@app.route('/api/bot/plan_semanal', methods=['GET', 'POST'])
+def api_plan_semanal():
+    """Plan de producción del lote: por marca, # shorts, # largos, duración largos.
+    GET = leer (lo usa el orquestador). POST = guardar (desde el panel)."""
+    PLAN_PATH = "_diagnostico/plan_lote.json"
+    if request.method == 'POST':
+        if 'user' not in session:
+            return jsonify({"status": "error", "message": "No autorizado"}), 401
+        data = request.json or {}
+        plan = {
+            "marcas": data.get("marcas", []),  # [{marca, shorts, largos, duracion_min}]
+            "enfriamiento_seg": int(data.get("enfriamiento_seg", 180)),
+            "orden": data.get("orden", "shorts_primero"),  # shorts_primero | largos_primero
+        }
+        _gh_guardar_json(PLAN_PATH, plan, "plan lote actualizado")
+        return jsonify({"status": "ok", "plan": plan})
+    return jsonify(_gh_leer_json(PLAN_PATH, {"marcas": [], "enfriamiento_seg": 180, "orden": "shorts_primero"}))
+
+@app.route('/api/bot/lanzar_orden_motor', methods=['POST'])
+def api_lanzar_orden_motor():
+    """El orquestador pide generar UN video del lote. Reusa la lógica de orden interna."""
+    data = request.json or {}
+    marca = data.get("marca", "La Viuda")
+    formato = data.get("formato", "9:16")
+    duracion_min = data.get("duracion_min")
+    try:
+        tid = _disparar_orden_interna(marca, formato, "", duracion_min)
+        if tid:
+            return jsonify({"status": "PENDING_REVIEW", "tarea_id": tid})
+        return jsonify({"status": "error", "message": "No se pudo generar la orden"}), 500
+    except Exception as e:
+        import traceback
+        _log_error_bot("lanzar_orden_motor", traceback.format_exc())
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/api/bot/video_estado', methods=['GET'])
+def api_video_estado():
+    """El orquestador pregunta si un video terminó. Completo = su ensamblaje terminó."""
+    tarea_id = request.args.get("tarea_id", "")
+    completado = tarea_id in _videos_completados or f"{tarea_id}_asm" in _videos_completados
+    return jsonify({"completado": completado, "tarea_id": tarea_id})
+
+@app.route('/api/bot/lote_control', methods=['GET', 'POST'])
+def api_lote_control():
+    """Controles del lote: pausar / reanudar / cancelar. GET = el orquestador lee
+    la orden actual. POST = el panel manda la orden."""
+    CTRL_PATH = "_diagnostico/lote_control.json"
+    if request.method == 'POST':
+        if 'user' not in session:
+            return jsonify({"status": "error", "message": "No autorizado"}), 401
+        data = request.json or {}
+        accion = data.get("accion", "")  # "", pausar, reanudar, cancelar
+        _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion}")
+        return jsonify({"status": "ok", "accion": accion})
+    return jsonify(_gh_leer_json(CTRL_PATH, {"accion": ""}))
+
+@app.route('/api/bot/lote_progreso', methods=['GET', 'POST'])
+def api_lote_progreso():
+    """Progreso del lote en vivo. POST = el orquestador reporta. GET = el panel lee."""
+    PROG_PATH = "_diagnostico/lote_progreso.json"
+    if request.method == 'POST':
+        data = request.json or {}
+        _gh_guardar_json(PROG_PATH, data, "progreso lote")
+        return jsonify({"status": "ok"})
+    return jsonify(_gh_leer_json(PROG_PATH, {"estado_lote": "inactivo", "total": 0, "completados": 0}))
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
