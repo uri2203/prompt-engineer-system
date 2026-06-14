@@ -1560,7 +1560,12 @@ def procesar():
                                 "person, people, human, face, body, blurry, dark, underexposed, "
                                 "low contrast, generic, boring, text, watermark, logo, multiple objects, "
                                 "busy composition, dull, flat lighting, overexposed, washed out, "
-                                "cartoon, anime, illustration, 3d render, cgi"
+                                "cartoon, anime, illustration, 3d render, cgi, "
+                                "deformed, malformed, mutated, distorted, misshapen objects, "
+                                "warped objects, melting objects, impossible geometry, broken perspective, "
+                                "warped architecture, garbled details, gibberish text, scrambled text, "
+                                "duplicated objects, floating objects, jpeg artifacts, glitches, "
+                                "poorly drawn, sloppy details, incoherent details"
                             ),
                             "steps": 45, "cfg_scale": 10,
                             "width": w, "height": h,
@@ -1776,7 +1781,23 @@ def procesar():
                             "genitalia, genitals, crotch, pubic, intimate body parts, "
                             "porn, pornographic, fetish, nude body, undressed, stripping, "
                         )
-                        neg_prompt = NSFW_BLOCK + neg_prompt
+                        # ── BLOQUE ANTI-DEFORMACIÓN GLOBAL (todos los canales) ──
+                        # Refuerza contra detalles deformes que se cuelan: objetos retorcidos,
+                        # manos/dedos malos, texto inventado, arquitectura imposible, artefactos.
+                        ANTI_DEFORM = (
+                            "deformed, malformed, mutated, disfigured, distorted, misshapen, "
+                            "extra fingers, missing fingers, fused fingers, too many fingers, "
+                            "extra hands, malformed hands, bad hands, mangled hands, extra limbs, "
+                            "extra arms, extra legs, fused limbs, twisted limbs, broken anatomy, "
+                            "deformed objects, melting objects, warped objects, distorted objects, "
+                            "impossible geometry, broken perspective, warped architecture, "
+                            "distorted background, garbled details, incoherent details, "
+                            "gibberish text, fake text, scrambled text, nonsensical symbols, "
+                            "duplicated objects, cloned details, floating objects, "
+                            "jpeg artifacts, compression artifacts, glitches, smudged details, "
+                            "low quality details, poorly drawn, sloppy details, "
+                        )
+                        neg_prompt = NSFW_BLOCK + ANTI_DEFORM + neg_prompt
 
                         payload = {
                             "prompt": prompt_limpio,
