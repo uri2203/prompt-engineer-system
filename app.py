@@ -30,6 +30,7 @@ compliance_engine = ComplianceEngine()
 cola_de_renderizado = []
 resultados_itinerantes = {}
 _videos_completados = set()  # IDs de videos cuyo ensamblaje terminó (para el orquestador)
+_videos_detalles = {}        # tarea_id base -> {duracion_real_seg, marca, formato} (para el historial)
 audios_temporales = {}  # Almacén temporal de audios grandes
 
 def login_required(f):
@@ -154,8 +155,9 @@ _diagnostico = {
 @app.route('/api/bot/limpiar_cola', methods=['GET', 'POST'])
 @login_required
 def api_bot_limpiar_cola():
-    """Limpia TODO lo atorado: cola en memoria + archivos de tareas en disco.
-    Útil cuando algo se queda trabado y hay que empezar fresco."""
+    """Limpia TODO lo atorado: cola en memoria + archivos de tareas en disco +
+    archivos de control del lote (cola de órdenes, control, progreso).
+    Útil cuando algo se queda trabado y hay que resetear el encolado."""
     import glob as _glob
     eliminados = {"memoria": 0, "disco": 0}
     # 1. Vaciar la cola en memoria
@@ -173,11 +175,22 @@ def api_bot_limpiar_cola():
     # 3. Resetear estado del worker
     _worker_estado["ocupado"] = False
     _worker_estado["tarea_actual"] = ""
+    # 4. Resetear los archivos de control del lote (rama diagnostico) para que el
+    #    orquestador no siga procesando una cola fantasma tras el reset.
+    try:
+        _gh_guardar_json("_diagnostico/cola_ordenes.json", [], "reset: vaciar cola de ordenes")
+        _gh_guardar_json("_diagnostico/lote_control.json", {"accion": "cancelar", "ts": time.time()}, "reset: cancelar lote")
+        _gh_guardar_json("_diagnostico/lote_progreso.json",
+                         {"estado_lote": "inactivo", "total": 0, "completados": 0,
+                          "mensaje": "Cola reseteada desde el panel.", "resumen": ""},
+                         "reset: progreso inactivo")
+    except Exception:
+        pass
     return jsonify({
         "status": "limpiado",
         "cola_memoria_eliminada": eliminados["memoria"],
         "archivos_disco_eliminados": eliminados["disco"],
-        "mensaje": "Cola limpia. El sistema está listo para empezar fresco."
+        "mensaje": "Cola y lote reseteados. El sistema está listo para empezar fresco."
     })
 
 @app.route('/api/diagnostico', methods=['GET'])
@@ -932,6 +945,16 @@ def nodo_tarea_completada():
             return jsonify({"status": "ensamblaje_encolado", "tarea_id": tarea_id})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
+    # Guardar detalles del video (duración real, marca, formato) para el historial del panel.
+    # El worker reporta con el tarea_id base; el ensamblaje cierra con sufijo _asm.
+    _dur_real = data.get("duracion_real_seg")
+    if _dur_real is not None:
+        base = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+        _videos_detalles[base] = {
+            "duracion_real_seg": _dur_real,
+            "marca": data.get("marca", ""),
+            "formato": data.get("formato", ""),
+        }
     # Si el ID termina en _asm, es un ENSAMBLAJE terminado = video COMPLETO.
     # Registrarlo para que el orquestador (video_estado) sepa que terminó.
     if tarea_id.endswith("_asm"):
@@ -1092,10 +1115,12 @@ def api_lanzar_orden_motor():
 
 @app.route('/api/bot/video_estado', methods=['GET'])
 def api_video_estado():
-    """El orquestador pregunta si un video terminó. Completo = su ensamblaje terminó."""
+    """El orquestador pregunta si un video terminó. Completo = su ensamblaje terminó.
+    Devuelve también los detalles (duración real, marca, formato) para el historial."""
     tarea_id = request.args.get("tarea_id", "")
     completado = tarea_id in _videos_completados or f"{tarea_id}_asm" in _videos_completados
-    return jsonify({"completado": completado, "tarea_id": tarea_id})
+    detalles = _videos_detalles.get(tarea_id, {})
+    return jsonify({"completado": completado, "tarea_id": tarea_id, "detalles": detalles})
 
 @app.route('/api/bot/lote_control', methods=['GET', 'POST'])
 def api_lote_control():
@@ -1120,6 +1145,28 @@ def api_lote_progreso():
         _gh_guardar_json(PROG_PATH, data, "progreso lote")
         return jsonify({"status": "ok"})
     return jsonify(_gh_leer_json(PROG_PATH, {"estado_lote": "inactivo", "total": 0, "completados": 0}))
+
+@app.route('/api/bot/salud_llaves', methods=['GET'])
+def api_salud_llaves():
+    """Estado de salud de las llaves de Gemini para el panel:
+    cuántas hay, cuántas en enfriamiento, y cuáles necesitan cambiarse (posible baneo)."""
+    try:
+        num_llaves = len(ai_engine.boveda.obtener_llaves())
+        problematicas = ai_engine.cuotas.llaves_problematicas()
+        ahora = time.time()
+        en_pausa = []
+        for i in range(num_llaves):
+            bloqueada_hasta = ai_engine.cuotas.estado.get("bloqueada_hasta", {}).get(str(i), 0)
+            if bloqueada_hasta > ahora:
+                en_pausa.append({"indice": i, "segundos": int(bloqueada_hasta - ahora)})
+        return jsonify({
+            "total_llaves": num_llaves,
+            "en_pausa": en_pausa,
+            "problematicas": problematicas,  # cambiar estas
+            "disponibles": num_llaves - len(en_pausa),
+        })
+    except Exception as e:
+        return jsonify({"total_llaves": 0, "en_pausa": [], "problematicas": [], "disponibles": 0, "error": str(e)[:100]})
 
 
 if __name__ == '__main__':

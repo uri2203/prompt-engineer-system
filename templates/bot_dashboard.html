@@ -54,25 +54,40 @@
 
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
-                <h3 class="text-purple-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-purple-400 mr-2 animate-pulse"></span>2. Voice & Audio Synth</h3>
-                <span id="bot_voz_estado" class="text-slate-500 text-xs">Conectado</span>
+                <h3 class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-cyan-400 mr-2 animate-pulse"></span>2. Consola del Orquestador</h3>
+                <span id="orq_panel_badge" class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">INACTIVO</span>
             </div>
-            <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
-                <p class="text-slate-400 text-sm font-bold">Motor Neuronal Edge-TTS Activo</p>
-                <p class="text-slate-500 text-xs mt-1">A la espera de texto purgado para renderizado .mp3.</p>
+
+            <!-- Banner de llaves problemáticas (posible baneo) -->
+            <div id="orq_alerta_llaves" class="hidden bg-red-950/40 border border-red-700 rounded-lg p-3 mb-3">
+                <span class="text-red-400 font-bold text-[10px] uppercase tracking-widest">⚠️ API Keys que necesitan cambio</span>
+                <div id="orq_lista_llaves_mal" class="space-y-1 mt-2"></div>
+                <p class="text-[9px] text-red-300/60 font-mono mt-2">Cámbialas en Configuración → Bóveda. El sistema sigue usando las demás.</p>
+            </div>
+
+            <!-- Salud de las llaves -->
+            <div id="orq_salud_llaves" class="bg-[#0B1120] border border-slate-800 rounded p-2.5 mb-3 hidden">
+                <span class="text-[9px] text-purple-400 font-bold uppercase tracking-widest">Llaves Gemini</span>
+                <p id="orq_salud_texto" class="text-[11px] text-slate-400 font-mono mt-0.5">—</p>
+            </div>
+
+            <!-- Consola de logs (estilo terminal manual) -->
+            <div id="orq_consola" class="bg-black rounded-lg border border-slate-800 p-4 flex-1 min-h-[220px] max-h-[340px] overflow-y-auto font-mono text-[11px] text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">&gt; Consola del orquestador lista. Esperando actividad del lote...</div>
+
+            <!-- Botones de control de cola -->
+            <div class="flex gap-2 mt-3 pt-3 border-t border-slate-800">
+                <button onclick="detenerLoteOrq()" class="flex-1 bg-amber-700/50 text-amber-200 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-amber-700/50 hover:bg-amber-700 transition-colors">⏹ Detener Lote</button>
+                <button onclick="limpiarColaOrq()" class="flex-1 bg-red-800/50 text-red-200 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-red-800/50 hover:bg-red-800 transition-colors">🗑 Limpiar Cola</button>
+                <button onclick="document.getElementById('orq_consola').innerHTML='&gt; Consola limpiada.'" class="bg-slate-800 text-slate-400 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-slate-700 hover:bg-slate-700 transition-colors">Limpiar Log</button>
             </div>
         </div>
 
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
             <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
-                <h3 class="text-amber-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>3. Video Compiler (FFmpeg)</h3>
-                <span id="bot_video_estado" class="text-slate-500 text-xs">Ocioso</span>
+                <h3 class="text-amber-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>3. Videos Terminados (lote actual)</h3>
+                <span id="orq_terminados_badge" class="text-slate-500 text-xs font-mono">0 listos</span>
             </div>
-            <div class="bg-[#0B1120] rounded border border-slate-800 flex-1 flex flex-col items-center justify-center p-6 text-center opacity-70">
-                <svg class="w-12 h-12 text-slate-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
-                <p class="text-slate-400 text-sm font-bold">Sin renderizados activos</p>
-                <p class="text-slate-500 text-xs mt-1">Motor preparado para formatos 16:9 y 9:16.</p>
-            </div>
+            <div id="orq_terminados" class="bg-black rounded-lg border border-slate-800 p-4 flex-1 min-h-[220px] max-h-[340px] overflow-y-auto font-mono text-[11px] text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">&gt; Aún no hay videos terminados en este lote.</div>
         </div>
 
         <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
@@ -307,13 +322,33 @@
         renderMarcasOrq();
         cargarPlanOrq();
         actualizarProgresoOrq();
-        // Refrescar el progreso cada 8 segundos mientras el modal está abierto
-        if (_orqInterval) clearInterval(_orqInterval);
-        _orqInterval = setInterval(actualizarProgresoOrq, 8000);
     }
     function cerrarModalOrquestador() {
         document.getElementById('modal_orquestador').classList.add('hidden');
-        if (_orqInterval) { clearInterval(_orqInterval); _orqInterval = null; }
+    }
+
+    // Detener el lote (manda cancelar). La consola del panel lo reflejará.
+    async function detenerLoteOrq() {
+        if (!confirm('¿Detener el lote en curso? Se cancelará la producción actual.')) return;
+        try {
+            await fetch('/api/bot/lote_control', {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({accion: 'cancelar'})
+            });
+            _orqLog('⏹ Lote detenido por el operador.', 'text-amber-400');
+            actualizarProgresoOrq();
+        } catch (e) { _orqLog('Error al detener el lote.', 'text-red-400'); }
+    }
+
+    // Limpiar/resetear la cola completa (memoria + disco + control del lote)
+    async function limpiarColaOrq() {
+        if (!confirm('¿Limpiar y resetear TODA la cola de encolado? Esto borra las órdenes pendientes para empezar fresco.')) return;
+        try {
+            const r = await fetch('/api/bot/limpiar_cola', {method: 'POST'});
+            const d = await r.json();
+            _orqLog(`🗑 Cola reseteada: ${d.cola_memoria_eliminada||0} en memoria, ${d.archivos_disco_eliminados||0} archivos.`, 'text-red-400');
+            actualizarProgresoOrq();
+        } catch (e) { _orqLog('Error al limpiar la cola.', 'text-red-400'); }
     }
 
     // Pinta una fila por canal: # shorts, # largos, duración de largos
@@ -409,28 +444,143 @@
         setTimeout(actualizarProgresoOrq, 1000);
     }
 
+    let _orqUltimoMensaje = "";
+    let _orqUltimoTrabajo = "";
+    function _orqLog(texto, color) {
+        const c = document.getElementById('orq_consola');
+        if (!c) return;
+        const hora = new Date().toLocaleTimeString('es-MX', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+        const colorCls = color || 'text-green-500';
+        c.innerHTML += `\n<span class="${colorCls}">[${hora}] ${texto}</span>`;
+        c.scrollTop = c.scrollHeight;
+    }
+
     async function actualizarProgresoOrq() {
         try {
             const r = await fetch('/api/bot/lote_progreso');
             const p = await r.json();
-            const total = p.total || 0, comp = p.completados || 0;
-            const pct = total > 0 ? Math.round((comp / total) * 100) : 0;
-            document.getElementById('orq_barra').style.width = pct + '%';
-            document.getElementById('orq_progreso_texto').textContent = `${comp} de ${total} videos completados (${pct}%)`;
-            document.getElementById('orq_trabajo_actual').textContent = p.trabajo_actual || '';
-            document.getElementById('orq_mensaje').textContent = p.mensaje || '';
-            const badge = document.getElementById('orq_estado_badge');
+            const total = p.total || 0, comp = p.completados || 0, fall = p.fallidos || 0;
+            const pct = total > 0 ? Math.round(((comp + fall) / total) * 100) : 0;
             const estados = {
                 produciendo: ['PRODUCIENDO', 'bg-cyan-900 text-cyan-300'],
                 pausado: ['PAUSADO', 'bg-amber-900 text-amber-300'],
                 esperando_nodo: ['ESPERANDO NODO', 'bg-red-900 text-red-300'],
+                esperando_cuota: ['ESPERANDO CUOTA', 'bg-purple-900 text-purple-300'],
                 completado: ['COMPLETADO', 'bg-emerald-900 text-emerald-300'],
                 cancelado: ['CANCELADO', 'bg-slate-800 text-slate-400'],
                 inactivo: ['INACTIVO', 'bg-slate-800 text-slate-400'],
             };
             const [txt, cls] = estados[p.estado_lote] || estados.inactivo;
-            badge.textContent = txt;
-            badge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`;
+            // Badge del panel fijo (sección 2)
+            const panelBadge = document.getElementById('orq_panel_badge');
+            if (panelBadge) { panelBadge.textContent = txt; panelBadge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`; }
+            // Elementos del modal (solo si está montado)
+            const barra = document.getElementById('orq_barra');
+            if (barra) {
+                barra.style.width = pct + '%';
+                const txtFall = fall > 0 ? ` · ${fall} fallidos` : '';
+                document.getElementById('orq_progreso_texto').textContent = `${comp} de ${total} videos completados (${pct}%)${txtFall}`;
+                document.getElementById('orq_trabajo_actual').textContent = p.trabajo_actual || '';
+                document.getElementById('orq_mensaje').textContent = p.mensaje || '';
+                const badge = document.getElementById('orq_estado_badge');
+                if (badge) { badge.textContent = txt; badge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`; }
+            }
+
+            // Consola: registrar cambios de trabajo y de mensaje (sin duplicar)
+            if (p.trabajo_actual && p.trabajo_actual !== _orqUltimoTrabajo) {
+                _orqLog('› ' + p.trabajo_actual, 'text-cyan-400');
+                _orqUltimoTrabajo = p.trabajo_actual;
+            }
+            if (p.mensaje && p.mensaje !== _orqUltimoMensaje) {
+                let color = 'text-green-500';
+                const m = p.mensaje.toLowerCase();
+                if (m.includes('falló') || m.includes('fallo') || m.includes('error') || m.includes('omite')) color = 'text-red-400';
+                else if (m.includes('cuota') || m.includes('enfriamiento') || m.includes('esperando')) color = 'text-yellow-400';
+                else if (m.includes('completado') || m.includes('completa')) color = 'text-blue-400';
+                _orqLog(p.mensaje, color);
+                _orqUltimoMensaje = p.mensaje;
+            }
+            // Sección 3: videos terminados del lote
+            pintarVideosTerminados(p.historial);
+        } catch (e) {}
+        // Salud de las llaves (independiente del progreso)
+        actualizarSaludLlaves();
+    }
+
+    let _orqHistFirma = "";
+    function pintarVideosTerminados(historial) {
+        const cont = document.getElementById('orq_terminados');
+        const badge = document.getElementById('orq_terminados_badge');
+        if (!cont) return;
+        if (!historial || historial.length === 0) {
+            if (_orqHistFirma !== "") {  // se reinició el lote
+                cont.innerHTML = '&gt; Aún no hay videos terminados en este lote.';
+                _orqHistFirma = "";
+            }
+            if (badge) badge.textContent = '0 listos';
+            return;
+        }
+        // Firma para repintar solo si cambió
+        const firma = historial.map(h => h.n).join(',');
+        if (firma === _orqHistFirma) return;
+        _orqHistFirma = firma;
+        const fmtDur = (seg) => {
+            if (!seg || seg <= 0) return '';
+            const m = Math.floor(seg / 60), s = Math.round(seg % 60);
+            return `${m}:${String(s).padStart(2,'0')}`;
+        };
+        const lineas = historial.map(h => {
+            let linea = `<span class="text-blue-400">[${h.hora}] ✓ ${h.marca} · ${h.tipo}`;
+            if (h.tipo === 'Largo') {
+                linea += ` ${h.formato}`;
+                if (h.duracion_sel) linea += ` · ${h.duracion_sel} min`;
+                const real = fmtDur(h.duracion_real_seg);
+                if (real) linea += ` <span class="text-slate-500">(real ${real})</span>`;
+            } else {
+                linea += ` ${h.formato}`;
+                const real = fmtDur(h.duracion_real_seg);
+                if (real) linea += ` <span class="text-slate-500">(${real})</span>`;
+            }
+            return linea + '</span>';
+        });
+        cont.innerHTML = lineas.join('\n');
+        cont.scrollTop = cont.scrollHeight;
+        if (badge) badge.textContent = `${historial.length} listos`;
+    }
+
+    let _orqLlavesAvisadas = "";
+    async function actualizarSaludLlaves() {
+        try {
+            const r = await fetch('/api/bot/salud_llaves');
+            const s = await r.json();
+            // Resumen de llaves
+            const cont = document.getElementById('orq_salud_llaves');
+            const texto = document.getElementById('orq_salud_texto');
+            if (s.total_llaves > 0) {
+                cont.classList.remove('hidden');
+                texto.textContent = `${s.disponibles}/${s.total_llaves} disponibles` +
+                    (s.en_pausa.length ? ` · ${s.en_pausa.length} en enfriamiento` : '') +
+                    (s.problematicas.length ? ` · ${s.problematicas.length} con problema` : '');
+            }
+            // Banner de llaves problemáticas (posible baneo)
+            const alerta = document.getElementById('orq_alerta_llaves');
+            const lista = document.getElementById('orq_lista_llaves_mal');
+            if (s.problematicas && s.problematicas.length > 0) {
+                alerta.classList.remove('hidden');
+                lista.innerHTML = s.problematicas.map(k =>
+                    `<div class="text-[11px] font-mono text-red-300">› API #${k.indice} — ${k.fallos} fallos, ${k.horas}h fallando${k.ultimo_error ? ' ('+k.ultimo_error+')' : ''}</div>`
+                ).join('');
+                // Avisar en consola una sola vez por combinación de llaves
+                const firma = s.problematicas.map(k => k.indice).join(',');
+                if (firma !== _orqLlavesAvisadas) {
+                    s.problematicas.forEach(k =>
+                        _orqLog(`⚠️ API #${k.indice} lleva ${k.horas}h fallando (${k.fallos} fallos) — POSIBLE BANEO, cámbiala.`, 'text-red-400')
+                    );
+                    _orqLlavesAvisadas = firma;
+                }
+            } else {
+                alerta.classList.add('hidden');
+            }
         } catch (e) {}
     }
     const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -639,7 +789,11 @@
             }
         } catch(e) {}
     }
-    window.addEventListener('load', () => { actualizarEstadoBot(); setInterval(actualizarEstadoBot, 12000); });
+    window.addEventListener('load', () => {
+        actualizarEstadoBot(); setInterval(actualizarEstadoBot, 12000);
+        // Consola del orquestador SIEMPRE activa (sección fija del panel)
+        actualizarProgresoOrq(); setInterval(actualizarProgresoOrq, 8000);
+    });
 
     // Controladores del Modal
     function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); onCambioFormatoOrden(); }

@@ -71,59 +71,125 @@ def _generar_hooks_respaldo(titulo, escenas, marca="", objetivo=3):
 
 class GestorCuotas:
     """
-    Cerebro local y silencioso del nodo Xeon. 
-    Lleva la cuenta de los usos sin conectarse a internet ni a Render.
+    Gestor de cuotas con CASCADEO y RE-VALIDACIÓN TEMPORAL.
+    - No usa un límite local inventado: deja que el error REAL de Gemini decida
+      si una llave está agotada (cascadea por las que sí responden).
+    - Cuando una llave da error de cuota, la bloquea TEMPORALMENTE (con timestamp),
+      no todo el día. Pasado el tiempo de enfriamiento, se vuelve a probar desde
+      el inicio (por si Google ya recargó la cuota de esa llave).
     """
-    def __init__(self, limite_diario=20, archivo_bd="cuotas_gemini.json"):
+    def __init__(self, archivo_bd="cuotas_gemini.json", enfriamiento_seg=900):
         self.archivo_bd = archivo_bd
-        self.limite_diario = limite_diario
+        self.enfriamiento_seg = enfriamiento_seg  # 15 min: re-validar llave agotada
+        # Umbrales para marcar una llave como "posible baneo / cámbiala"
+        self.umbral_fallos = 5            # fallos consecutivos
+        self.umbral_horas = 2.0           # horas fallando sin un solo éxito
         self.estado = self._cargar_estado()
 
-    def _obtener_fecha_pt_actual(self):
-        tz_pt = timezone(timedelta(hours=-7))
-        return datetime.now(tz_pt).strftime("%Y-%m-%d")
-
     def _cargar_estado(self):
-        fecha_actual = self._obtener_fecha_pt_actual()
         if os.path.exists(self.archivo_bd):
             try:
                 with open(self.archivo_bd, "r") as f:
                     data = json.load(f)
-                if data.get("fecha_corte") != fecha_actual:
-                    print("♻️ [SISTEMA] Nuevo día detectado. Reseteando contadores de llaves a 0.")
-                    return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
-                return data
+                    data.setdefault("bloqueada_hasta", {})
+                    data.setdefault("usos", {})
+                    data.setdefault("salud", {})  # salud[idx] = {fallos, desde_ts, ultimo_error}
+                    return data
             except Exception:
                 pass
-        return {"fecha_corte": fecha_actual, "uso_por_llave": {}}
+        # bloqueada_hasta[idx] = timestamp hasta el cual la llave está en pausa
+        # salud[idx] = {fallos_consecutivos, fallando_desde_ts, ultimo_error}
+        return {"bloqueada_hasta": {}, "usos": {}, "salud": {}}
 
     def _guardar_estado(self):
-        with open(self.archivo_bd, "w") as f:
-            json.dump(self.estado, f, indent=4)
+        try:
+            with open(self.archivo_bd, "w") as f:
+                json.dump(self.estado, f, indent=4)
+        except Exception:
+            pass
 
     def puede_usar_llave(self, index_llave):
-        idx_str = str(index_llave)
-        usos = self.estado["uso_por_llave"].get(idx_str, 0)
-        return usos < self.limite_diario
+        """True si la llave NO está en enfriamiento (o ya expiró)."""
+        idx = str(index_llave)
+        bloqueada_hasta = self.estado.get("bloqueada_hasta", {}).get(idx, 0)
+        ahora = time.time()
+        if ahora >= bloqueada_hasta:
+            # Si estaba bloqueada y ya expiró, liberarla (re-validación)
+            if bloqueada_hasta and idx in self.estado.get("bloqueada_hasta", {}):
+                del self.estado["bloqueada_hasta"][idx]
+                self._guardar_estado()
+                print(f"♻️ [CUOTA] Llave {index_llave} re-habilitada (enfriamiento cumplido). Se vuelve a probar.")
+            return True
+        return False
 
     def registrar_exito(self, index_llave):
-        idx_str = str(index_llave)
-        usos_actuales = self.estado["uso_por_llave"].get(idx_str, 0)
-        self.estado["uso_por_llave"][idx_str] = usos_actuales + 1
+        idx = str(index_llave)
+        # Éxito: limpiar bloqueo, resetear salud (deja de estar "fallando") y contar uso
+        if idx in self.estado.get("bloqueada_hasta", {}):
+            del self.estado["bloqueada_hasta"][idx]
+        if idx in self.estado.get("salud", {}):
+            del self.estado["salud"][idx]   # la llave volvió a funcionar
+        self.estado.setdefault("usos", {})[idx] = self.estado.get("usos", {}).get(idx, 0) + 1
         self._guardar_estado()
-        print(f"📊 [CUOTA] Llave {index_llave}: {usos_actuales + 1}/{self.limite_diario} usos diarios.")
+        print(f"📊 [CUOTA] Llave {index_llave}: éxito (uso #{self.estado['usos'][idx]}).")
+
+    def registrar_fallo(self, index_llave, tipo_error):
+        """Registra un fallo de la llave para detectar 'posible baneo'.
+        Cuenta fallos consecutivos y desde cuándo lleva fallando sin un éxito."""
+        idx = str(index_llave)
+        salud = self.estado.setdefault("salud", {})
+        s = salud.get(idx, {"fallos": 0, "desde_ts": time.time(), "ultimo_error": ""})
+        s["fallos"] = s.get("fallos", 0) + 1
+        if not s.get("desde_ts"):
+            s["desde_ts"] = time.time()
+        s["ultimo_error"] = str(tipo_error)[:80]
+        salud[idx] = s
+        self._guardar_estado()
 
     def bloquear_llave_por_agotamiento(self, index_llave):
-        idx_str = str(index_llave)
-        self.estado["uso_por_llave"][idx_str] = self.limite_diario
+        """Bloquea la llave TEMPORALMENTE (no todo el día). Se re-valida tras el enfriamiento."""
+        idx = str(index_llave)
+        self.estado.setdefault("bloqueada_hasta", {})[idx] = time.time() + self.enfriamiento_seg
         self._guardar_estado()
-        print(f"🔒 [CUOTA] Llave {index_llave} SELLADA. Límite de Google alcanzado.")
+        mins = int(self.enfriamiento_seg / 60)
+        print(f"⏸️ [CUOTA] Llave {index_llave} en pausa {mins} min (cuota agotada). Se reintentará luego.")
+
+    def hay_alguna_disponible(self, num_llaves):
+        """True si al menos una de las llaves no está en enfriamiento."""
+        return any(self.puede_usar_llave(i) for i in range(num_llaves))
+
+    def segundos_para_proxima(self, num_llaves):
+        """Cuántos segundos faltan para que se libere la próxima llave (0 si ya hay)."""
+        if self.hay_alguna_disponible(num_llaves):
+            return 0
+        ahora = time.time()
+        tiempos = [self.estado.get("bloqueada_hasta", {}).get(str(i), 0) for i in range(num_llaves)]
+        futuros = [t - ahora for t in tiempos if t > ahora]
+        return int(min(futuros)) if futuros else 0
+
+    def llaves_problematicas(self):
+        """Devuelve las llaves que cumplen AMBAS condiciones de 'posible baneo':
+        >= umbral_fallos fallos consecutivos Y >= umbral_horas fallando sin éxito.
+        Devuelve lista de dicts {indice, fallos, horas, ultimo_error}."""
+        problematicas = []
+        ahora = time.time()
+        for idx, s in self.estado.get("salud", {}).items():
+            fallos = s.get("fallos", 0)
+            horas = (ahora - s.get("desde_ts", ahora)) / 3600.0
+            if fallos >= self.umbral_fallos and horas >= self.umbral_horas:
+                problematicas.append({
+                    "indice": int(idx),
+                    "fallos": fallos,
+                    "horas": round(horas, 1),
+                    "ultimo_error": s.get("ultimo_error", ""),
+                })
+        return sorted(problematicas, key=lambda x: x["indice"])
 
 
 class AIEngine:
     def __init__(self):
         self.boveda = BovedaManager()
-        self.cuotas = GestorCuotas(limite_diario=20)
+        self.cuotas = GestorCuotas(enfriamiento_seg=900)
 
         # ══════════════════════════════════════════════════════════════
         # ADN Maestro: La Viuda (Silo Hermético 1) - ACTUALIZACIÓN TERROR
@@ -638,20 +704,20 @@ class AIEngine:
         ]
         log_errores = []
         MAX_REINTENTOS = 2
-        MAX_ESPERA_SEGUNDOS = 125
+        MAX_ESPERA_SEGUNDOS = 30   # rate-limit pasajero: espera corta, no bloquea el lote
         TIMEOUT_SEGUNDOS = 120
+        num_llaves = len(llaves)
+        hubo_agotamiento_cuota = False  # alguna llave reportó cuota diaria agotada
 
         for modelo in modelos_prioridad:
-            modelo_agotado = False
-
             for index, key in enumerate(llaves):
-                if modelo_agotado:
-                    break
-
+                # CASCADEO: saltar solo las llaves en enfriamiento temporal (cuota agotada).
+                # Las demás SIEMPRE se prueban — el error real de Gemini decide.
                 if not self.cuotas.puede_usar_llave(index):
-                    print(f"⏩ [SKIP LOCAL] Llave {index} ya consumió su cuota de hoy. Saltando.")
+                    print(f"⏩ [PAUSA] Llave {index} en enfriamiento por cuota. Probando siguiente...")
                     continue
 
+                exito_o_fatal = False
                 for intento in range(MAX_REINTENTOS):
                     try:
                         genai.configure(api_key=key)
@@ -660,8 +726,7 @@ class AIEngine:
                             system_instruction=system_instruction,
                             generation_config={"response_mime_type": "application/json"}
                         )
-                        request_options = {"timeout": TIMEOUT_SEGUNDOS}
-                        response = model.generate_content(prompt, request_options=request_options)
+                        response = model.generate_content(prompt, request_options={"timeout": TIMEOUT_SEGUNDOS})
                         self.cuotas.registrar_exito(index)
                         print(f"[OK] Llave {index} ({modelo}) respondió correctamente.")
                         return json.loads(response.text), log_errores
@@ -669,41 +734,69 @@ class AIEngine:
                     except Exception as e:
                         error_str = str(e)
 
+                        # Auth / key inválida / permiso → problema REAL de la llave (posible baneo)
+                        es_problema_llave = (
+                            ("API_KEY_INVALID" in error_str) or
+                            ("API key not valid" in error_str) or
+                            ("PERMISSION_DENIED" in error_str) or
+                            ("403" in error_str) or
+                            ("401" in error_str) or
+                            ("invalid" in error_str.lower() and "key" in error_str.lower())
+                        )
+                        if es_problema_llave:
+                            self.cuotas.registrar_fallo(index, error_str[:80])
+                            self.cuotas.bloquear_llave_por_agotamiento(index)
+                            msg = f"[LLAVE INVÁLIDA] Llave {index} ({modelo}): {error_str[:60]} — cascadeando."
+                            print(msg); log_errores.append(msg)
+                            break
+
+                        # Cuota diaria agotada para esta llave → bloqueo TEMPORAL y CASCADEAR a la siguiente
+                        # (NO cuenta como problema de salud: es temporal y esperado)
+                        es_cuota_agotada = (
+                            ("limit: 0" in error_str) or
+                            ("PerDay" in error_str) or
+                            ("quota" in error_str.lower() and "exceeded" in error_str.lower()) or
+                            ("RESOURCE_EXHAUSTED" in error_str)
+                        )
+                        if es_cuota_agotada:
+                            msg = f"[CUOTA AGOTADA] Llave {index} ({modelo}) sin cuota — cascadeando a la siguiente."
+                            print(msg); log_errores.append(msg)
+                            self.cuotas.bloquear_llave_por_agotamiento(index)
+                            hubo_agotamiento_cuota = True
+                            exito_o_fatal = True  # no reintentar esta llave; pasar a la siguiente
+                            break
+
+                        # 429 sin "limit: 0" = rate-limit pasajero → espera corta y reintenta la MISMA llave
+                        if "429" in error_str:
+                            match = re.search(r'seconds:\s*(\d+)', error_str)
+                            espera = min(int(match.group(1)) if match else 15, MAX_ESPERA_SEGUNDOS)
+                            print(f"[RATE LIMIT] Llave {index} ({modelo}) intento {intento+1}/{MAX_REINTENTOS} — espera {espera}s")
+                            time.sleep(espera); continue
+
                         if "Timeout" in error_str or "deadline exceeded" in error_str.lower() or "504" in error_str:
-                            msg = f"[TIMEOUT] La Llave {index} se atascó más de {TIMEOUT_SEGUNDOS}s. Abortando reintento."
+                            msg = f"[TIMEOUT] Llave {index} ({modelo}) se atascó. Cascadeando."
                             print(msg); log_errores.append(msg); break
 
                         if "500" in error_str or "503" in error_str or "Service Unavailable" in error_str:
-                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) reporta caída."
+                            msg = f"[ERROR SERVIDOR] Google (Llave {index}) caída temporal. Cascadeando."
                             print(msg); log_errores.append(msg); break
 
-                        if ("PerDay" in error_str and "limit: 0" in error_str) or \
-                           ("generate_content_free_tier_requests" in error_str and "limit: 0" in error_str):
-                            msg = f"[SKIP MODELO] {modelo} sin cuota diaria."
-                            print(msg); log_errores.append(msg)
-                            self.cuotas.bloquear_llave_por_agotamiento(index)
-                            modelo_agotado = True; break
-
-                        if "429" in error_str:
-                            match = re.search(r'seconds:\s*(\d+)', error_str)
-                            espera = int(match.group(1)) if match else 60
-                            espera = min(espera, MAX_ESPERA_SEGUNDOS)
-                            print(f"[RATE LIMIT] Llave {index} ({modelo}) — intento {intento+1}/{MAX_REINTENTOS} — esperando {espera}s...")
-                            time.sleep(espera); continue
+                        # Filtro de contenido: el prompt en sí es el problema, no la llave → abortar todo
+                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
+                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google.")
+                            return None, log_errores + [f"Prompt rechazado: {error_str[:150]}"]
 
                         error_msg = f"Llave {index} ({modelo}): {error_str[:200]}"
                         print(f"[ERROR] {error_msg}"); log_errores.append(error_msg)
-
-                        if "safety" in error_str.lower() or "finish_reason" in error_str.lower() or "400" in error_str:
-                            print("🛑 [CRÍTICO] Prompt rechazado por filtros de contenido de Google.")
-                            return None, log_errores
                         break
+                # fin reintentos de esta llave → cascadea a la siguiente
 
-                else:
-                    error_msg = f"Llave {index} ({modelo}): agotó reintentos sin éxito."
-                    print(f"[FALLO] {error_msg}"); log_errores.append(error_msg)
-
-        print("🚫 [SISTEMA BLOQUEADO] Todas las llaves están agotadas o fallaron.")
+        # Recorridas TODAS las llaves y modelos sin éxito
+        if hubo_agotamiento_cuota and not self.cuotas.hay_alguna_disponible(num_llaves):
+            espera = self.cuotas.segundos_para_proxima(num_llaves)
+            print(f"🚫 [CUOTA GLOBAL] Las {num_llaves} llaves agotadas. Próxima en ~{espera}s.")
+            return None, log_errores + [f"CUOTA_GLOBAL_AGOTADA: todas las {num_llaves} llaves en enfriamiento (próxima en {espera}s)"]
+        print("🚫 [SISTEMA] Ninguna llave logró generar (errores no de cuota).")
         return None, log_errores
 
     def _seleccionar_adn(self, marca):
