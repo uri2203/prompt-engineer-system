@@ -1,8 +1,7 @@
 {
-  "estado_lote": "cancelado",
-  "total": 7,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "trabajo_actual": "",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "La Viuda: 1s+1L | Monkygraff: 0s+1L | FiltradoMX: 1s+1L | LaesquinaRandom: 1s+1L"
+  "mensaje": "Cola reseteada desde el panel.",
+  "resumen": ""
 }
