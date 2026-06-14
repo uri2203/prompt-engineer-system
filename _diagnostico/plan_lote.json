@@ -14,17 +14,17 @@
     },
     {
       "marca": "FiltradoMX",
-      "shorts": 1,
+      "shorts": 0,
       "largos": 1,
       "duracion_min": 15
     },
     {
       "marca": "LaesquinaRandom",
-      "shorts": 1,
+      "shorts": 0,
       "largos": 1,
       "duracion_min": 15
     }
   ],
   "enfriamiento_seg": 180,
-  "orden": "shorts_primero"
+  "orden": "largos_primero"
 }
