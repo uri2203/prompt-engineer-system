@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "produciendo",
+  "total": 4,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "La Viuda: 0s+1L | Monkygraff: 0s+1L | FiltradoMX: 0s+1L | LaesquinaRandom: 0s+1L",
+  "historial": []
 }
