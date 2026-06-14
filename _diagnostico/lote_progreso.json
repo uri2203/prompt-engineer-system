@@ -1,8 +1,8 @@
 {
-  "estado_lote": "cancelado",
-  "total": 2,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "trabajo_actual": "Generando video 1/2 (Monkygraff 9:16)",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "La Viuda: 0s+1L | Monkygraff: 1s+0L"
+  "trabajo_actual": "",
+  "mensaje": "Cola limpiada por el operador.",
+  "resumen": ""
 }
