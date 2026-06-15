@@ -1017,6 +1017,21 @@ def nodo_tarea_completada():
         base_id = tarea_id[:-4]  # quitar el sufijo _asm
         _videos_completados.add(base_id)
         _videos_completados.add(tarea_id)
+        # PERSISTIR en GitHub: la memoria de Render se borra en cada reinicio/deploy.
+        # Si solo viviera en memoria, el orquestador no se enteraría de que el video
+        # terminó (tras un reinicio) y lo reintentaría — generando otro del mismo canal.
+        try:
+            comp = _gh_leer_json("_diagnostico/videos_completados.json", {"ids": []})
+            ids = comp.get("ids", [])
+            for _id in (base_id, tarea_id):
+                if _id not in ids:
+                    ids.append(_id)
+            comp["ids"] = ids[-200:]  # tope para no crecer infinito
+            # Guardar también los detalles para el historial
+            comp.setdefault("detalles", {})[base_id] = _videos_detalles.get(base_id, {})
+            _gh_guardar_json("_diagnostico/videos_completados.json", comp, f"video completado: {base_id}")
+        except Exception:
+            pass
     return jsonify({"status": "ok"})
 
 @app.route('/api/nodo/polling', methods=['POST'])
@@ -1192,8 +1207,19 @@ def api_video_estado():
     """El orquestador pregunta si un video terminó. Completo = su ensamblaje terminó.
     Devuelve también los detalles (duración real, marca, formato) para el historial."""
     tarea_id = request.args.get("tarea_id", "")
+    # Primero la memoria (rápido). Si no está, leer de GitHub (sobrevive a reinicios
+    # de Render — clave para que el orquestador no reintente videos ya terminados).
     completado = tarea_id in _videos_completados or f"{tarea_id}_asm" in _videos_completados
     detalles = _videos_detalles.get(tarea_id, {})
+    if not completado:
+        try:
+            comp = _gh_leer_json("_diagnostico/videos_completados.json", {"ids": []})
+            ids = comp.get("ids", [])
+            completado = tarea_id in ids or f"{tarea_id}_asm" in ids
+            if completado and not detalles:
+                detalles = comp.get("detalles", {}).get(tarea_id, {})
+        except Exception:
+            pass
     return jsonify({"completado": completado, "tarea_id": tarea_id, "detalles": detalles})
 
 @app.route('/api/bot/lote_control', methods=['GET', 'POST'])
