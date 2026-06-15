@@ -1541,9 +1541,9 @@ def procesar():
                     # Solo efectos DINÁMICOS/AGRESIVOS — se eliminaron los lentos
                     # (push_in_slow, pan_*_slow, drift_diagonal) que dejaban la imagen
                     # casi congelada y mataban el dinamismo del video.
-                    'tension':    ['ken_burns_agresivo', 'punch_in', 'slide_l', 'slide_r', 'zoom_punch', 'snap_zoom'],
-                    'impacto':    ['zoom_punch', 'flash_cut', 'snap_zoom', 'punch_in'],
-                    'transicion': ['slide_l', 'slide_r', 'slide_up', 'ken_burns_diagonal', 'zoom_punch', 'snap_zoom'],
+                    'tension':    ['ken_burns_agresivo', 'punch_in', 'slide_l', 'slide_r', 'zoom_punch', 'snap_zoom', 'shake_zoom', 'whip_pan', 'rush_diagonal'],
+                    'impacto':    ['zoom_punch', 'flash_cut', 'snap_zoom', 'punch_in', 'shake_zoom', 'fast_push', 'pulse_punch'],
+                    'transicion': ['slide_l', 'slide_r', 'slide_up', 'ken_burns_diagonal', 'zoom_punch', 'snap_zoom', 'whip_pan', 'rush_diagonal', 'fast_push'],
                 }
 
                 def detectar_tipo_escena(texto):
@@ -1584,6 +1584,46 @@ def procesar():
                         return (
                             f"zoompan=z='if(lte(on,{punch_frames}),1.0+0.7*(on/{punch_frames}),1.70)'"
                             f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                            f":d={total_frames}:fps={fps}:s={w}x{h}"
+                        )
+                    elif efecto == 'shake_zoom':
+                        # Zoom con SACUDIDA rápida (tipo cámara nerviosa) — muy agresivo
+                        dist = 0.06 if es_largo else 0.05
+                        return (
+                            f"zoompan=z='1.55+0.10*sin(on/12)'"
+                            f":x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/7)'"
+                            f":y='ih/2-(ih/zoom/2)+(ih*{dist})*cos(on/5)'"
+                            f":d={total_frames}:fps={fps}:s={w}x{h}"
+                        )
+                    elif efecto == 'fast_push':
+                        # Empuje RÁPIDO y constante hacia el centro — energía creciente
+                        return (
+                            f"zoompan=z='1.10+1.0*(on/{total_frames})'"
+                            f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                            f":d={total_frames}:fps={fps}:s={w}x{h}"
+                        )
+                    elif efecto == 'whip_pan':
+                        # Barrido lateral RÁPIDO (whip) — recorre la imagen con fuerza
+                        dist = 0.28 if es_largo else 0.24
+                        return (
+                            f"zoompan=z='1.50+0.10*sin(on/40)'"
+                            f":x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/35)'"
+                            f":y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
+                        )
+                    elif efecto == 'pulse_punch':
+                        # Latido rápido de zoom (in-out marcado) — ritmo agresivo
+                        return (
+                            f"zoompan=z='1.45+0.18*sin(on/18)'"
+                            f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                            f":d={total_frames}:fps={fps}:s={w}x{h}"
+                        )
+                    elif efecto == 'rush_diagonal':
+                        # Recorrido diagonal RÁPIDO con zoom firme — mucho dinamismo
+                        dist = 0.24 if es_largo else 0.20
+                        return (
+                            f"zoompan=z='1.55+0.10*sin(on/45)'"
+                            f":x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/38)'"
+                            f":y='ih/2-(ih/zoom/2)+(ih*{dist*0.8:.2f})*cos(on/42)'"
                             f":d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'flash_cut':
