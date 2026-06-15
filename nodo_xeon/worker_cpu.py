@@ -555,6 +555,25 @@ def _obtener_duracion_audio_simple(ruta_audio):
         return 0.0
 
 
+def _imagen_es_negra(ruta_png, umbral_pblack=92):
+    """Detecta si una imagen es (casi) completamente negra usando el filtro
+    blackframe de FFmpeg. Devuelve el % de píxeles negros; si supera el umbral,
+    la imagen se considera negra/vacía. SD a veces devuelve negro (censura NSFW,
+    fallo del modelo) con HTTP 200, lo que corta la retención del video."""
+    try:
+        if not os.path.exists(ruta_png) or os.path.getsize(ruta_png) < 1000:
+            return True  # archivo vacío o minúsculo = inválido
+        # blackframe: umbral de luma 32 (oscuro). pblack = % de píxeles bajo ese umbral.
+        cmd = ['ffmpeg', '-i', ruta_png, '-vf', 'blackframe=99:32', '-f', 'null', '-']
+        r = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+        m = re.search(r'pblack:(\d+)', r.stderr)
+        if m:
+            return int(m.group(1)) >= umbral_pblack
+        return False  # blackframe no reportó nada = la imagen tiene contenido
+    except Exception:
+        return False  # ante la duda, no descartar (evita falsos positivos)
+
+
 def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca, carpeta_reciente, dur_total):
     """Subtítulos anclados a los BLOQUES DE HABLA reales del audio (sincronía fuerte)."""
     ruta_srt = os.path.join(carpeta_reciente, "subtitulos.srt").replace("\\", "/")
@@ -1128,6 +1147,45 @@ def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes,
         return None
 
 
+def _detectar_silencios(ruta_audio, umbral_db=-32, dur_min=0.28):
+    """Devuelve una lista de tiempos (segundos) donde hay silencios reales en el
+    audio (centro de cada pausa). Sirve para cortar en pausas naturales de la
+    narración, no a media palabra."""
+    try:
+        cmd = ['ffmpeg','-i', ruta_audio,'-af',
+               f'silencedetect=noise={umbral_db}dB:d={dur_min}','-f','null','-']
+        r = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+        salida = r.stderr
+        inicios, finales = [], []
+        for linea in salida.splitlines():
+            if 'silence_start' in linea:
+                try: inicios.append(float(linea.split('silence_start:')[1].strip()))
+                except: pass
+            elif 'silence_end' in linea:
+                try:
+                    parte = linea.split('silence_end:')[1].strip()
+                    finales.append(float(parte.split('|')[0].strip()))
+                except: pass
+        # Centro de cada pausa = punto ideal de corte (en mitad del silencio)
+        centros = []
+        for i in range(min(len(inicios), len(finales))):
+            centros.append((inicios[i] + finales[i]) / 2.0)
+        return sorted(centros)
+    except Exception:
+        return []
+
+
+def _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0):
+    """Mueve un punto de corte al silencio real más cercano dentro de una ventana.
+    Si no hay silencio cerca, devuelve el tiempo objetivo original (mejor no forzar)."""
+    if not silencios:
+        return t_objetivo
+    candidatos = [s for s in silencios if abs(s - t_objetivo) <= ventana]
+    if not candidatos:
+        return t_objetivo
+    return min(candidatos, key=lambda s: abs(s - t_objetivo))
+
+
 def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraciones_escenas,
                                dur_hook_inicial, carpeta, hook_inicial_presente):
     """
@@ -1136,6 +1194,10 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
     y narración + video queden sincronizados).
     El hook visual trae su propio stinger en SU pista, así que aquí solo insertamos
     silencio en la narración (el stinger del clip suena durante ese silencio).
+
+    IMPORTANTE: los puntos de corte se AJUSTAN al silencio real más cercano de la
+    narración, para que el re-hook entre en una pausa natural (entre frases) y NO
+    corte una palabra a la mitad.
     """
     try:
         # Guarda: si el audio de entrada no existe o es inválido, no se puede reconstruir
@@ -1147,6 +1209,10 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
         for d in duraciones_escenas:
             s += d
             acum.append(s)
+        # Detectar los silencios REALES del audio para cortar en pausas naturales
+        silencios = _detectar_silencios(ruta_audio_in)
+        if silencios:
+            print(f"   [HOOKS] {len(silencios)} pausas naturales detectadas para alinear re-hooks.")
         _acum_map = {i: acum[i] for i in range(len(acum))}  # escena -> tiempo de fin
         cortes = []  # (tiempo_corte, duracion_silencio)
         if hook_inicial_presente:
@@ -1154,7 +1220,10 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
         for ins in inserciones:
             i = ins["despues_de_escena"]
             if i < len(acum):
-                cortes.append((acum[i], ins["dur"]))
+                t_objetivo = acum[i]
+                # Ajustar el corte al silencio real más cercano (pausa entre frases)
+                t_ajustado = _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0)
+                cortes.append((t_ajustado, ins["dur"]))
         cortes.sort()
         if not cortes:
             import shutil; shutil.copy(ruta_audio_in, ruta_audio_out); return True
@@ -1423,12 +1492,58 @@ def procesar():
 
                     return duraciones_finales
 
+                def alinear_duraciones_a_silencios(duraciones, ruta_audio, target_fps=30):
+                    """Ajusta los límites de cada escena al silencio (pausa) real más
+                    cercano del audio, para que cada escena termine donde termina su
+                    frase — así los re-hooks entran en pausas naturales, no a media
+                    palabra. Si no hay silencios detectables, deja las duraciones tal cual."""
+                    silencios = _detectar_silencios(ruta_audio)
+                    if not silencios or len(duraciones) < 2:
+                        return duraciones
+                    # Límites acumulados originales (fin de cada escena)
+                    limites = []
+                    s = 0.0
+                    for d in duraciones:
+                        s += d
+                        limites.append(s)
+                    dur_total = limites[-1]
+                    # Ajustar cada límite interno (no el último) al silencio más cercano
+                    nuevos_limites = []
+                    usados = set()
+                    for i, lim in enumerate(limites[:-1]):
+                        cand = _ajustar_corte_a_silencio(lim, silencios, ventana=3.5)
+                        # Evitar que dos escenas caigan en el mismo silencio o se crucen
+                        prev = nuevos_limites[-1] if nuevos_limites else 0.0
+                        if cand <= prev + 0.5 or cand in usados:
+                            cand = lim  # mantener el original si el ajuste colapsa
+                        usados.add(cand)
+                        nuevos_limites.append(cand)
+                    nuevos_limites.append(dur_total)  # el último siempre = fin del audio
+                    # Reconvertir límites a duraciones
+                    nuevas_dur = []
+                    prev = 0.0
+                    for lim in nuevos_limites:
+                        nuevas_dur.append(max(0.1, lim - prev))
+                        prev = lim
+                    return nuevas_dur
+
                 duraciones_escenas = calcular_duraciones(num_escenas, duracion_audio, fps)
+                # Alinear a las pausas reales del audio (clave para que los re-hooks
+                # entren entre frases y no corten palabras)
+                try:
+                    duraciones_escenas = alinear_duraciones_a_silencios(
+                        duraciones_escenas, ruta_audio, fps)
+                    print(f"   [SYNC] Duraciones de escena alineadas a las pausas naturales del audio.")
+                except Exception as _e_align:
+                    print(f"   [SYNC] No se pudieron alinear (se usan duraciones base): {_e_align}")
 
                 efectos_por_tipo = {
-                    'tension':    ['ken_burns_agresivo', 'pan_l_slow', 'pan_r_slow', 'vignette_pulse', 'push_in_slow', 'drift_diagonal'],
+                    # Solo efectos DINÁMICOS/AGRESIVOS — se eliminaron los lentos
+                    # (push_in_slow, pan_*_slow, drift_diagonal) que dejaban la imagen
+                    # casi congelada y mataban el dinamismo del video.
+                    'tension':    ['ken_burns_agresivo', 'punch_in', 'slide_l', 'slide_r', 'zoom_punch', 'snap_zoom'],
                     'impacto':    ['zoom_punch', 'flash_cut', 'snap_zoom', 'punch_in'],
-                    'transicion': ['slide_l', 'slide_r', 'slide_up', 'ken_burns_diagonal', 'fade_pan', 'push_in_slow', 'drift_diagonal'],
+                    'transicion': ['slide_l', 'slide_r', 'slide_up', 'ken_burns_diagonal', 'zoom_punch', 'snap_zoom'],
                 }
 
                 def detectar_tipo_escena(texto):
@@ -1498,10 +1613,10 @@ def procesar():
                             f":d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'vignette_pulse':
-                        # Pan suave + vignette pulsante — sensación de urgencia subconsciente
-                        dist = 0.10 if es_largo else 0.08
+                        # (Acelerado) Pan más marcado + vignette pulsante de urgencia
+                        dist = 0.16 if es_largo else 0.13
                         return (
-                            f"zoompan=z=1.50:x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/120)'"
+                            f"zoompan=z='1.55+0.06*sin(on/50)':x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/60)'"
                             f":y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'rgb_glitch':
@@ -1526,27 +1641,29 @@ def procesar():
                             f":d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'push_in_slow':
-                        # Empuje lento hacia el centro — cinematográfico, profesional
+                        # (Acelerado) Empuje firme hacia el centro — más dinámico que antes
                         return (
-                            f"zoompan=z='1.10+0.35*(on/{total_frames})'"
+                            f"zoompan=z='1.15+0.65*(on/{total_frames})'"
                             f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
                             f":d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'drift_diagonal':
-                        # Deriva diagonal suave con zoom leve — movimiento orgánico
-                        dist = 0.10 if es_largo else 0.08
+                        # (Acelerado) Deriva diagonal con más recorrido y zoom marcado
+                        dist = 0.20 if es_largo else 0.17
                         return (
-                            f"zoompan=z='1.35+0.05*sin(on/100)'"
+                            f"zoompan=z='1.45+0.12*sin(on/55)'"
                             f":x='iw/2-(iw/zoom/2)+(iw*{dist})*(on/{total_frames})'"
                             f":y='ih/2-(ih/zoom/2)+(ih*{dist*0.7:.2f})*(on/{total_frames})'"
                             f":d={total_frames}:fps={fps}:s={w}x{h}"
                         )
                     elif efecto == 'pan_l_slow':
-                        dist = 0.12 if es_largo else 0.10
-                        return f"zoompan=z=1.45:x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/120)':y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
+                        # (Acelerado) Paneo izquierda más rápido y amplio
+                        dist = 0.20 if es_largo else 0.17
+                        return f"zoompan=z='1.55+0.08*sin(on/60)':x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/65)':y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
                     elif efecto == 'pan_r_slow':
-                        dist = 0.12 if es_largo else 0.10
-                        return f"zoompan=z=1.45:x='iw/2-(iw/zoom/2)+(iw*{dist})*cos(on/120)':y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
+                        # (Acelerado) Paneo derecha más rápido y amplio
+                        dist = 0.20 if es_largo else 0.17
+                        return f"zoompan=z='1.55+0.08*cos(on/60)':x='iw/2-(iw/zoom/2)+(iw*{dist})*cos(on/65)':y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
                     elif efecto == 'slide_l':
                         dist = 0.16 if es_largo else 0.14
                         return f"zoompan=z=1.55:x='iw/2-(iw/zoom/2)+(iw*{dist})*sin(on/90)':y='ih/2-(ih/zoom/2)':d={total_frames}:fps={fps}:s={w}x{h}"
@@ -2540,10 +2657,21 @@ def procesar():
                             )
                             if res_sd.status_code == 200:
                                 b64 = res_sd.json()['images'][0]
-                                if not img_prev:
-                                    img_prev = b64
                                 with open(path_out_png, "wb") as f:
                                     f.write(base64.b64decode(b64))
+                                # RED DE SEGURIDAD: ¿la imagen salió negra? (censura NSFW
+                                # o fallo del modelo devuelven negro con HTTP 200).
+                                if _imagen_es_negra(path_out_png):
+                                    print(f"   ⚠️ Escena {i+1}: imagen NEGRA detectada — regenerando (intento {intento_sd+1})...")
+                                    # variar la semilla para no repetir el mismo negro
+                                    try:
+                                        payload["seed"] = random.randint(1, 2_000_000_000)
+                                    except Exception:
+                                        pass
+                                    time.sleep(2)
+                                    continue  # reintentar
+                                if not img_prev:
+                                    img_prev = b64
                                 print(f"   [OK] Nodo {nodo_num} — Escena {i+1} SD ✅")
                                 if es_miniatura and titulo_tarea:
                                     _quemar_titulo_miniatura(path_out_png, titulo_tarea, marca_tarea)
@@ -2556,7 +2684,33 @@ def procesar():
                             print(f"   ⚠️ SD error intento {intento_sd+1}: {e}")
                             time.sleep(5)
                     if not sd_ok:
-                        print(f"   ❌ Escena {i+1} falló en SD después de 3 intentos.")
+                        # Agotados los 3 intentos (o todas salieron negras): SUSTITUIR
+                        # por la escena anterior válida, para no dejar un hueco negro
+                        # que corte la retención.
+                        print(f"   ❌ Escena {i+1} sin imagen válida tras 3 intentos.")
+                        _sustituida = False
+                        # Buscar la escena previa válida (no negra) ya generada
+                        for _prev_i in range(i, 0, -1):
+                            _prev_png = os.path.join(carpeta_p, f"escena_{_prev_i:02d}.png")
+                            if os.path.exists(_prev_png) and not _imagen_es_negra(_prev_png):
+                                try:
+                                    import shutil as _sh
+                                    _sh.copy(_prev_png, path_out_png)
+                                    print(f"   [FIX] Escena {i+1} sustituida por la escena {_prev_i} (evita pantalla negra).")
+                                    _sustituida = True
+                                    sd_ok = True
+                                    break
+                                except Exception:
+                                    pass
+                        if not _sustituida and img_prev:
+                            # Último recurso: usar la primera imagen válida de la tarea
+                            try:
+                                with open(path_out_png, "wb") as f:
+                                    f.write(base64.b64decode(img_prev))
+                                print(f"   [FIX] Escena {i+1} sustituida por la primera imagen válida.")
+                                sd_ok = True
+                            except Exception:
+                                pass
 
                 try:
                     payload_upload = {"tarea_id": tarea_id}
