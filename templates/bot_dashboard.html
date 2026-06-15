@@ -327,6 +327,26 @@
         document.getElementById('modal_orquestador').classList.add('hidden');
     }
 
+    // Limpia la vista del panel de inmediato (sin esperar a GitHub), para que tras
+    // cancelar/limpiar no quede el estado viejo "trabado". El ciclo normal luego
+    // confirma con el estado real leído del servidor.
+    function liberarPanelLote() {
+        const inactivoCls = 'bg-slate-800 text-slate-400';
+        const panelBadge = document.getElementById('orq_panel_badge');
+        if (panelBadge) { panelBadge.textContent = 'INACTIVO'; panelBadge.className = `text-[9px] px-2 py-1 rounded font-mono ${inactivoCls}`; }
+        const barra = document.getElementById('orq_barra');
+        if (barra) barra.style.width = '0%';
+        const pt = document.getElementById('orq_progreso_texto');
+        if (pt) pt.textContent = '0 de 0 videos completados (0%)';
+        const ta = document.getElementById('orq_trabajo_actual');
+        if (ta) ta.textContent = '';
+        const om = document.getElementById('orq_mensaje');
+        if (om) om.textContent = '';
+        const badge = document.getElementById('orq_estado_badge');
+        if (badge) { badge.textContent = 'INACTIVO'; badge.className = `text-[9px] px-2 py-1 rounded font-mono ${inactivoCls}`; }
+        _orqUltimoTrabajo = ''; _orqUltimoMensaje = '';
+    }
+
     // Detener el lote (manda cancelar). La consola del panel lo reflejará.
     async function detenerLoteOrq() {
         if (!confirm('¿Detener el lote en curso? Se cancelará la producción actual.')) return;
@@ -336,7 +356,8 @@
                 body: JSON.stringify({accion: 'cancelar'})
             });
             _orqLog('⏹ Lote detenido por el operador.', 'text-amber-400');
-            actualizarProgresoOrq();
+            liberarPanelLote();
+            setTimeout(actualizarProgresoOrq, 2500);
         } catch (e) { _orqLog('Error al detener el lote.', 'text-red-400'); }
     }
 
@@ -347,7 +368,8 @@
             const r = await fetch('/api/bot/limpiar_cola', {method: 'POST'});
             const d = await r.json();
             _orqLog(`🗑 Cola reseteada: ${d.cola_memoria_eliminada||0} en memoria, ${d.archivos_disco_eliminados||0} archivos.`, 'text-red-400');
-            actualizarProgresoOrq();
+            liberarPanelLote();
+            setTimeout(actualizarProgresoOrq, 2500);
         } catch (e) { _orqLog('Error al limpiar la cola.', 'text-red-400'); }
     }
 
@@ -441,7 +463,8 @@
         await fetch('/api/bot/lote_control', {
             method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ accion })
         });
-        setTimeout(actualizarProgresoOrq, 1000);
+        if (accion === 'cancelar' && typeof liberarPanelLote === 'function') liberarPanelLote();
+        setTimeout(actualizarProgresoOrq, 2500);
     }
 
     let _orqUltimoMensaje = "";

@@ -1207,6 +1207,19 @@ def api_lote_control():
         data = request.json or {}
         accion = data.get("accion", "")  # "", pausar, reanudar, cancelar
         _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion}")
+        # Al CANCELAR: liberar el panel de inmediato reseteando el progreso a inactivo,
+        # sin esperar a que el orquestador reporte (puede haberse detenido ya). Así el
+        # panel no se queda trabado mostrando el estado viejo tras la cancelación.
+        if accion == "cancelar":
+            _worker_estado["ocupado"] = False
+            _worker_estado["tarea_actual"] = ""
+            try:
+                _gh_guardar_json("_diagnostico/lote_progreso.json",
+                                 {"estado_lote": "inactivo", "total": 0, "completados": 0,
+                                  "mensaje": "Lote cancelado por el operador.", "resumen": ""},
+                                 "cancelar: progreso liberado")
+            except Exception:
+                pass
         return jsonify({"status": "ok", "accion": accion})
     return jsonify(_gh_leer_json(CTRL_PATH, {"accion": ""}))
 
