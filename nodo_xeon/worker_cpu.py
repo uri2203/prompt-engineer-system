@@ -928,7 +928,7 @@ def _clip_valido(ruta, min_dur=0.2):
     return os.path.exists(ruta) and os.path.getsize(ruta) > 1000 and _dur(ruta) >= min_dur
 
 
-def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=1.8):
+def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=2.6):
     """
     Decide DÓNDE caen los re-hooks (en qué límites de escena) y con qué frase/formato.
     Devuelve:
@@ -936,6 +936,8 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
       - inserciones: lista de dicts {despues_de_escena, frase, formato, dur}
         'despues_de_escena' = índice de escena tras la cual se inserta el re-hook
     NO toca archivos; solo planifica. Determinista por semilla (reproducible).
+    dur_hook subido a 2.6s (antes 1.8s): 1.8s era muy corto para leer la frase del
+    hook, se sentía atropellado. 2.6s da tiempo a leerla sin frenar el ritmo.
     """
     # Filtrar frases vacías/None; la primera válida es el hook inicial
     _frases_limpias = [str(f).strip() for f in (hooks_frases or []) if f and str(f).strip()]
@@ -1923,7 +1925,7 @@ def procesar():
                         _es_short_hk = not es_largo_video
                         _frase_ini, _hook_inserciones = planificar_hooks(
                             len(clips_temp), duraciones_escenas, _hooks_frases,
-                            es_short=_es_short_hk, dur_hook=1.8
+                            es_short=_es_short_hk, dur_hook=2.6
                         )
                         # Imágenes de escena disponibles (para teasers)
                         _imgs_hk = [
@@ -1940,10 +1942,10 @@ def procesar():
                             _hk_ini = os.path.join(carpeta_reciente, "_hook_inicial.mp4")
                             _r = generar_clip_hook(_frase_ini, _img_def, _hk_ini, w, h, fps,
                                                    carpeta_reciente, PIL_DISPONIBLE, FUENTES_WINDOWS,
-                                                   formato="A", dur=2.0)
+                                                   formato="A", dur=2.8)
                             if _r:
                                 nuevos_clips.append(_r)
-                                _hook_inicial_dur = 2.0
+                                _hook_inicial_dur = 2.8
 
                         # 2. Reconstruir clips_temp intercalando re-hooks tras las escenas indicadas
                         _ins_por_escena = {ins["despues_de_escena"]: ins for ins in _hook_inserciones}
