@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "completado",
   "total": 2,
   "completados": 1,
   "fallidos": 1,
   "trabajo_actual": "Reintentando encolado en 19s",
-  "mensaje": "Video 2 (LaesquinaRandom 16:9) falló al encolar 3 veces — se omite y se continúa.",
+  "mensaje": "Lote terminado: 1 completados, 1 fallidos (omitidos).",
   "resumen": "FiltradoMX: 0s+1L | LaesquinaRandom: 0s+1L",
   "historial": [
     {
