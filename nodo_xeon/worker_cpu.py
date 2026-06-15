@@ -928,7 +928,36 @@ def _clip_valido(ruta, min_dur=0.2):
     return os.path.exists(ruta) and os.path.getsize(ruta) > 1000 and _dur(ruta) >= min_dur
 
 
-def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=2.6):
+# ── CONFIGURACIÓN DE RE-HOOKS POR CANAL ──────────────────────────────────────
+# Cada canal tiene su ritmo. Aquí se define, por canal:
+#   dur_hook        = cuántos segundos dura cada re-hook en pantalla (tiempo de lectura)
+#   dur_inicial     = duración del hook inicial (el primer gancho del video)
+#   seg_por_rehook  = cada cuántos segundos de video aparece un re-hook (densidad)
+#   max_rehooks     = tope de re-hooks por video
+#   intensidad_texto= "fuerte" (texto grande/contrastado) o "suave"
+# Para AJUSTAR un canal: cambia sus números aquí. No afecta a los demás.
+HOOKS_POR_CANAL = {
+    # La Viuda (terror): hooks pausados, lectura lenta, pocos (no romper la tensión)
+    "la viuda":          {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave"},
+    "laviuda":           {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave"},
+    # Monkygraff (geopolítica, denso): hooks más largos para leer, ritmo medio
+    "monkygraff":        {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 80, "max_rehooks": 8, "intensidad_texto": "fuerte"},
+    # FiltradoMX (drama): hooks ágiles, más frecuentes (mantener el morbo)
+    "filtradomx":        {"dur_hook": 2.4, "dur_inicial": 2.6, "seg_por_rehook": 60, "max_rehooks": 10, "intensidad_texto": "fuerte"},
+    # LaesquinaRandom (curiosidades, ágil): hooks rápidos y frecuentes
+    "laesquinarandom":   {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte"},
+    "la esquina random": {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte"},
+    # TuIALista (tech): hooks medios, informativos
+    "tuialista":         {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 70, "max_rehooks": 9, "intensidad_texto": "fuerte"},
+}
+HOOKS_DEFAULT = {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 75, "max_rehooks": 8, "intensidad_texto": "fuerte"}
+
+def _config_hooks(marca):
+    """Devuelve la config de re-hooks del canal (o el default)."""
+    return HOOKS_POR_CANAL.get((marca or "").lower().strip(), HOOKS_DEFAULT)
+
+
+def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=2.6, marca=""):
     """
     Decide DÓNDE caen los re-hooks (en qué límites de escena) y con qué frase/formato.
     Devuelve:
@@ -948,11 +977,17 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
     if dur_total < 5 or num_escenas < 2:
         return frase_inicial, []  # solo hook inicial, sin re-hooks
 
-    # Cuántos re-hooks
+    # Config del canal (densidad y duración del re-hook)
+    cfg = _config_hooks(marca)
+    dur_hook_canal = cfg["dur_hook"]
+    seg_por_rehook = cfg["seg_por_rehook"]
+    max_rehooks = cfg["max_rehooks"]
+
+    # Cuántos re-hooks: según la densidad del canal (cada 'seg_por_rehook' segundos)
     if es_short:
         n = min(1, len(frases_inter))
     else:
-        n = min(len(frases_inter), max(1, int(dur_total // 75)))
+        n = min(len(frases_inter), max_rehooks, max(1, int(dur_total // seg_por_rehook)))
     if n <= 0:
         return frase_inicial, []
 
@@ -994,7 +1029,7 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
             "despues_de_escena": mejor_i,
             "frase": frase,
             "formato": formato,
-            "dur": dur_hook,
+            "dur": dur_hook_canal,
         })
 
     # Ordenar por escena
@@ -1911,6 +1946,21 @@ def procesar():
                     clips_temp.append(path_clip)
                     print(f"   [OK] Escena {i+1} ({'SD' if archivo.endswith('.png') else 'Pexels'}) — tipo:{tipo} efecto:{efecto}")
 
+                # ══════════ SINCRONÍA REAL ══════════
+                # Medir la duración REAL de cada clip ya construido. Los clips de Pexels
+                # y los de SD pueden no durar exactamente lo calculado (redondeos de
+                # frames, +1s del último, stream_loop). Si los hooks y el audio se
+                # cortaran según las duraciones CALCULADAS, el error se acumula y el
+                # hook visual se desfasa de la pausa de la voz (el bug de Monkygraff).
+                # Usando las duraciones REALES, hook visual y audio quedan sincronizados.
+                _dur_reales = []
+                for _ic in range(len(clips_temp)):
+                    _d = _dur(clips_temp[_ic])
+                    _dur_reales.append(_d if _d and _d > 0 else duraciones_escenas[_ic] if _ic < len(duraciones_escenas) else 3.0)
+                if _dur_reales and len(_dur_reales) == len(clips_temp):
+                    duraciones_escenas = _dur_reales
+                    print(f"   [SYNC] Duraciones reales de {len(_dur_reales)} clips medidas (hooks y audio se alinean a ellas).")
+
                 # ══════════ HOOKS DE RETENCIÓN (integrados al pipeline) ══════════
                 # Se insertan ENTRE escenas (límites naturales). Reconstruyen audio
                 # y recalculan subtítulos para mantener sincronía total.
@@ -1925,7 +1975,7 @@ def procesar():
                         _es_short_hk = not es_largo_video
                         _frase_ini, _hook_inserciones = planificar_hooks(
                             len(clips_temp), duraciones_escenas, _hooks_frases,
-                            es_short=_es_short_hk, dur_hook=2.6
+                            es_short=_es_short_hk, dur_hook=2.6, marca=marca_audio
                         )
                         # Imágenes de escena disponibles (para teasers)
                         _imgs_hk = [
@@ -1936,16 +1986,18 @@ def procesar():
                         _img_def = _imgs_hk[0] if _imgs_hk else (
                             os.path.join(carpeta_reciente, archivos_escenas[0]) if archivos_escenas else None)
 
-                        # 1. Hook inicial (clip al frente)
+                        # 1. Hook inicial (clip al frente) — duración según el canal
+                        _cfg_hk = _config_hooks(marca_audio)
+                        _dur_ini_canal = _cfg_hk["dur_inicial"]
                         nuevos_clips = []
                         if _frase_ini and _img_def and os.path.exists(_img_def):
                             _hk_ini = os.path.join(carpeta_reciente, "_hook_inicial.mp4")
                             _r = generar_clip_hook(_frase_ini, _img_def, _hk_ini, w, h, fps,
                                                    carpeta_reciente, PIL_DISPONIBLE, FUENTES_WINDOWS,
-                                                   formato="A", dur=2.8)
+                                                   formato="A", dur=_dur_ini_canal)
                             if _r:
                                 nuevos_clips.append(_r)
-                                _hook_inicial_dur = 2.8
+                                _hook_inicial_dur = _dur_ini_canal
 
                         # 2. Reconstruir clips_temp intercalando re-hooks tras las escenas indicadas
                         _ins_por_escena = {ins["despues_de_escena"]: ins for ins in _hook_inserciones}
