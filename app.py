@@ -1202,11 +1202,14 @@ def api_lote_control():
     la orden actual. POST = el panel manda la orden."""
     CTRL_PATH = "_diagnostico/lote_control.json"
     if request.method == 'POST':
-        if 'user' not in session:
-            return jsonify({"status": "error", "message": "No autorizado"}), 401
         data = request.json or {}
-        accion = data.get("accion", "")  # "", pausar, reanudar, cancelar
-        _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion}")
+        accion = data.get("accion", "")  # "", pausar, reanudar, cancelar, iniciar
+        # El orquestador (script sin sesión) necesita CONSUMIR el control poniéndolo
+        # en vacío tras procesarlo. Eso se permite sin login. Las acciones REALES
+        # (iniciar/pausar/reanudar/cancelar) sí requieren sesión del panel.
+        if accion != "" and 'user' not in session:
+            return jsonify({"status": "error", "message": "No autorizado"}), 401
+        _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion or 'consumido'}")
         # Al CANCELAR: liberar el panel de inmediato reseteando el progreso a inactivo,
         # sin esperar a que el orquestador reporte (puede haberse detenido ya). Así el
         # panel no se queda trabado mostrando el estado viejo tras la cancelación.
