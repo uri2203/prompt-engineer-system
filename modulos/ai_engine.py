@@ -854,20 +854,20 @@ Guión/locución: {texto_locucion[:1500]}
 Formato: SHORT 9:16 YouTube Shorts y TikTok
 
 INSTRUCCIONES ESTRICTAS:
-- TÍTULO: máx 70 caracteres, estrategia "vacío de información" (crea curiosidad sin revelar), keyword principal al inicio, específico NO genérico.
-- DESCRIPCIÓN: 150+ palabras, primeras 2 líneas enganchan, integra keywords del tema, 1 pregunta al espectador, cierra con CTA.
-- HASHTAGS: 10-15, los 3 primeros los más relevantes, mezcla amplios + específicos.
-- KEYWORDS: específicas al tema, hasta 500 caracteres, no relleno repetido.
+- TÍTULO: máx 70 caracteres, llena al menos 55. Estrategia "vacío de información" (crea curiosidad sin revelar), keyword principal en los primeros 40 caracteres (ahí el algoritmo le da más peso), específico NO genérico.
+- DESCRIPCIÓN: 150+ palabras, primeras 2 líneas enganchan (aparecen antes del "ver más"), integra keywords del tema de forma NATURAL (YouTube 2026 penaliza amontonar keywords; premia lenguaje natural y contextual), 1 pregunta al espectador, cierra con CTA.
+- HASHTAGS: exactamente 5-7 (NUNCA más de 8). Los 3 primeros son los más relevantes y aparecen sobre el título. IMPORTANTE: pasar de 15 hashtags hace que YouTube ignore TODOS — por eso pocos y buenos. Incluye #Shorts.
+- KEYWORDS/TAGS: específicas al tema, hasta 500 caracteres. Keyword principal primero, luego variantes long-tail y sinónimos. NO repetir relleno (cuenta como keyword stuffing).
 - PRIMER COMENTARIO: pregunta provocadora del tema, invita a comentar.
 - HOOK: prompt de imagen impactante del elemento más icónico del tema real. SIN personas, SIN texto, SIN violencia gráfica (normas de monetización).
 
 SALIDA: ÚNICAMENTE JSON válido.
 
 {{
-  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, específico al tema",
-  "descripcion": "Descripción completa de al menos 150 palabras, primeras 2 líneas enganchan.",
-  "hashtags": "#hashtag1 #hashtag2 ... 10-15 hashtags, los 3 primeros los más relevantes",
-  "keywords": "palabra1, palabra2, ... específicas al tema, máximo 500 caracteres",
+  "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, keyword principal en los primeros 40 caracteres",
+  "descripcion": "Descripción completa de al menos 150 palabras, primeras 2 líneas enganchan, keywords integradas con naturalidad.",
+  "hashtags": "#hashtag1 #hashtag2 ... exactamente 5-7 hashtags, los 3 primeros los más relevantes, incluye #Shorts",
+  "keywords": "palabra1, palabra2, ... específicas al tema, máximo 500 caracteres, sin relleno repetido",
   "primer_comentario": "Comentario para fijar, pregunta provocadora del tema. Termina invitando a comentar.",
   "prompt_hook": "Prompt para imagen de hook del elemento más icónico del tema real. Ultra detallado, high contrast, dramatic lighting, no people, no text, no graphic violence, en inglés."
 }}
@@ -933,9 +933,9 @@ ADN VISUAL DEL CANAL:
 - Cierra con llamada a la acción (suscribirse, campana) y 3-5 hashtags clave al final.
 - Tono 100% alineado al ADN del canal, NO plantilla genérica.
 
-**HASHTAGS**: 12-15, mezcla de amplios (#terror) y específicos del tema. Los 3 primeros son los más importantes (YouTube los muestra).
+**HASHTAGS**: exactamente 5-8 (NUNCA más). Mezcla de amplios (#terror) y específicos del tema. Los 3 primeros son los más importantes (YouTube los muestra sobre el título). CRÍTICO: pasar de 15 hashtags hace que YouTube ignore TODOS los del video — por eso pocos y bien elegidos.
 
-**KEYWORDS/TAGS**: hasta 500 caracteres. Mezcla: keyword principal, variantes long-tail, sinónimos, nombres propios del tema, y términos de búsqueda reales. Específicas al video, no relleno repetido.
+**KEYWORDS/TAGS**: hasta 500 caracteres. Mezcla: keyword principal, variantes long-tail, sinónimos, nombres propios del tema, y términos de búsqueda reales. Específicas al video, sin relleno repetido (YouTube 2026 penaliza el keyword stuffing).
 
 **PRIMER COMENTARIO**: genera debate. Pregunta provocadora anclada al tema específico. Termina invitando a compartir experiencias.
 
@@ -967,7 +967,58 @@ SALIDA: ÚNICAMENTE JSON válido.
             "SALIDA: ÚNICAMENTE JSON válido. Sin texto fuera del JSON."
         )
         resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
-        return resultado
+        if resultado:
+            return resultado
+        # RED DE SEGURIDAD: si Gemini falló (p.ej. las 8 keys agotadas), generar
+        # metadatos básicos para que el video NUNCA quede sin paquete de publicación.
+        print(f"[PAQUETE] ⚠️ Gemini no generó el paquete — usando metadatos de respaldo. ({'; '.join(errores[:2]) if errores else 'sin detalle'})")
+        return self._paquete_respaldo(marca, titulo, texto_locucion, formato, canal_info)
+
+    def _paquete_respaldo(self, marca, titulo, texto_locucion, formato, canal_info=""):
+        """Metadatos mínimos viables cuando Gemini no está disponible. No son óptimos
+        para SEO, pero garantizan que el video se pueda publicar con título, descripción,
+        hashtags y tags. El operador puede mejorarlos luego si quiere."""
+        import re as _re
+        es_largo = "16:9" in formato or formato.upper() == "LARGO"
+        # Palabras clave del título y la locución (las más frecuentes, sin stopwords)
+        stop = {"que","de","la","el","los","las","un","una","y","o","a","en","con","por",
+                "para","del","se","su","sus","es","al","lo","como","más","pero","este","esta"}
+        texto = f"{titulo} {texto_locucion}".lower()
+        palabras = [w for w in _re.findall(r'[a-záéíóúñ]{4,}', texto) if w not in stop]
+        frecuentes = []
+        for w in palabras:
+            if w not in frecuentes:
+                frecuentes.append(w)
+            if len(frecuentes) >= 12:
+                break
+        titulo_final = (titulo or f"{marca} — Historia").strip()[:70]
+        hashtags_base = {
+            "viuda": "#terror #historiasdeterror #miedo #suspenso #relatos",
+            "monkygraff": "#geopolitica #noticias #analisis #mundo #internacional",
+            "filtrad": "#confesiones #drama #historiasreales #chisme #viral",
+            "esquina": "#humor #comedia #risas #mexico #viral",
+        }
+        marca_l = marca.lower().replace(" ", "")
+        htags = next((v for k, v in hashtags_base.items() if k in marca_l), "#viral #historias #fyp")
+        htags += " #shorts" if not es_largo else " #video"
+        descripcion = (
+            f"{titulo_final}. {texto_locucion[:200].strip()}... "
+            f"\n\nSuscríbete para más contenido de {marca}. "
+            f"Activa la campana para no perderte ningún video. "
+            f"\n\n¿Qué opinas? Déjanoslo en los comentarios. "
+            f"\n\n{htags}"
+        )
+        paquete = {
+            "titulo_final": titulo_final,
+            "descripcion": descripcion,
+            "hashtags": htags,
+            "keywords": ", ".join(frecuentes)[:500],
+            "primer_comentario": "¿Qué te pareció? Cuéntanos tu opinión en los comentarios 👇",
+            "prompt_hook": "dramatic cinematic establishing shot, high contrast, dramatic lighting, no people, no text",
+            "marca": marca,
+            "_respaldo": True,  # marca que son metadatos de respaldo (no de Gemini)
+        }
+        return json.dumps(paquete, indent=4, ensure_ascii=False)
 
     def generar_guion(self, marca, contexto, peticion, longitud="4900 palabras", formato="16:9"):
         """

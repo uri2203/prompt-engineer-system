@@ -36,8 +36,8 @@ class ComplianceEngine:
                 with open(self.leyes_path, 'r', encoding='utf-8') as f:
                     datos = json.load(f)
                     # Forzar regeneración si la versión es antigua
-                    if datos.get("version", "1.0") != "2.1":
-                        logging.info("[COMPLIANCE] Versión obsoleta detectada. Regenerando leyes base v2.1...")
+                    if datos.get("version", "1.0") != "2.2":
+                        logging.info("[COMPLIANCE] Versión obsoleta detectada. Regenerando leyes base v2.2...")
                         return self._generar_leyes_base()
                     return datos
             except Exception as e:
@@ -66,9 +66,32 @@ class ComplianceEngine:
         - Desinformación médica dañina verificable
         """
         leyes_base = {
-            "version": "2.1",
+            "version": "2.2",
             "ultima_actualizacion": datetime.datetime.now().strftime("%Y-%m-%d"),
             "fuente": "YouTube Advertiser-Friendly Guidelines 2026 + Community Guidelines",
+
+            # ── CERO TOLERANCIA (aplica a TODOS los canales, sin excepción) ──────
+            # Términos que NUNCA deben aparecer, ni en broma ni en contexto narrativo.
+            # Encienden clasificadores automáticos de las plataformas y arriesgan el
+            # canal entero (no solo el video). Se detectan por palabra/raíz suelta.
+            # Si alguno aparece → bloqueo inmediato y regeneración del guion.
+            "cero_tolerancia": [
+                # — Explotación / abuso de menores (riesgo máximo, suspensión de canal) —
+                "pornografía infantil", "pornografia infantil", "abuso infantil", "abuso de menores",
+                "explotación infantil", "explotacion infantil", "pederastia", "pedófilo", "pedofilo",
+                "pedofilia", "menores sexual", "sexo con menores", "trata de menores",
+                "trata de niños", "trata de ninos", "grooming", "sextorsión", "sextorsion",
+                # — Narcotráfico / drogas (desmonetización dura) —
+                "narcotráfico", "narcotrafico", "narco", "narcos", "narcomenudeo",
+                "cártel de droga", "cartel de droga", "cártel de la droga", "cartel de la droga",
+                "cártel de sinaloa", "cartel de sinaloa", "cártel del golfo", "cartel del golfo",
+                "cártel de las drogas", "cartel de las drogas", "cárteles de droga", "carteles de droga",
+                "cocaína", "cocaina", "heroína", "heroina", "metanfetamina", "cristal meth",
+                "fentanilo", "marihuana", "mariguana", "cannabis", "vender droga", "vender drogas",
+                "tráfico de drogas", "trafico de drogas", "sicario", "sicarios",
+                # — Instrucciones de daño real —
+                "fabricar bomba", "hacer explosivos", "fabricar explosivos", "fabricar arma",
+            ],
 
             "plataformas": {
                 "youtube": {
@@ -284,6 +307,29 @@ class ComplianceEngine:
             return True, "Texto de error del sistema — auditoría omitida."
 
         yt_config = self.leyes["plataformas"]["youtube"]
+
+        # ── NIVEL 0: CERO TOLERANCIA (aplica a TODOS los canales) ───────────
+        # Términos de explotación infantil, narcotráfico/drogas e instrucciones
+        # de daño real. NUNCA permitidos, ni en broma ni en contexto narrativo.
+        # Detección por raíz de palabra (no frase completa) para atrapar variantes.
+        for termino in self.leyes.get("cero_tolerancia", []):
+            t = termino.lower().strip()
+            if not t:
+                continue
+            # Para términos de una sola palabra, exigir límite de palabra (\b) para
+            # no atrapar substrings inocentes; para frases, búsqueda directa.
+            if " " in t:
+                encontrado = t in texto_limpio
+            else:
+                encontrado = re.search(r'\b' + re.escape(t) + r'\b', texto_limpio) is not None
+            if encontrado:
+                return False, (
+                    f"BLOQUEO NIVEL 0 (CERO TOLERANCIA): término prohibido para TODAS las "
+                    f"plataformas detectado: '{termino}'. Este contenido enciende clasificadores "
+                    f"automáticos y arriesga el canal completo. REGENERA el guion SIN ninguna "
+                    f"referencia a narcotráfico, drogas ilegales, explotación de menores ni "
+                    f"instrucciones de daño — ni siquiera en broma o de forma indirecta."
+                )
 
         # ── NIVEL 1: Términos absolutamente prohibidos ──────────────────
         # Solo los que YT 2026 prohíbe sin excepción (gore, abuso infantil, instrucciones daño)

@@ -111,6 +111,111 @@ ADN_NEURO = {
     #     "estetica_miniatura": "",
     #     "arco_retencion_largo": [],
     # },
+
+    "FiltradoMX": {
+        "gatillos_primarios": [
+            "morbo_social",
+            "indignacion_moral",
+            "identificacion_personal",
+            "loop_tension_alivio",
+        ],
+        "estructura_narrativa": "revelacion_escandalosa_progresiva",
+        "formula_hook": (
+            "Abre con la confesión o el momento más fuerte de la historia, en primera persona. "
+            "Nunca reveles el final en el hook — planta la traición o el secreto y deja la pregunta abierta. "
+            "Ejemplo: 'Descubrí que mi esposo me engañaba. Lo que no sabía es que la otra persona estaba dentro de mi propia casa.'"
+        ),
+        "ritmo_cortes": {"short": 3, "largo": 8},
+        "palabras_gatillo": [
+            "nunca lo imaginé", "lo descubrí por accidente", "todo era mentira",
+            "delante de mis ojos", "jamás lo perdoné", "la verdad salió",
+            "me enteré demasiado tarde", "no fui la única", "lo tenía planeado",
+            "en mi propia cara", "confié en la persona equivocada", "nadie me creyó"
+        ],
+        "estetica_miniatura": (
+            "Paleta: tonos cálidos con contraste dramático, rojo emocional, sombras. "
+            "Sin rostros identificables. Objetos cargados de historia: anillo en el suelo, "
+            "mensaje en un teléfono, maleta hecha, foto rota. Sensación de drama íntimo expuesto."
+        ),
+        "arco_retencion_largo": [
+            "0-2min: El momento de la revelación + promesa de cómo se descubrió todo",
+            "2-8min: El contexto — cómo era todo 'antes', construyendo la confianza que será traicionada",
+            "8-15min: Las primeras señales que se ignoraron — el espectador ve venir lo que la víctima no vio",
+            "15-22min: La confrontación / el descubrimiento completo — el clímax emocional",
+            "22-28min: Las consecuencias y lo que nadie esperaba — el giro final",
+            "28-30min: La lección o la pregunta abierta — invita a juzgar y comentar"
+        ],
+    },
+
+    "LaesquinaRandom": {
+        "gatillos_primarios": [
+            "curiosidad_compulsiva",
+            "efecto_revelacion",
+            "sorpresa_cognitiva",
+            "valor_compartible",
+        ],
+        "estructura_narrativa": "lista_escalada_de_impacto",
+        "formula_hook": (
+            "Abre con el dato más increíble e improbable, planteado como pregunta o afirmación que rompe el esquema. "
+            "Promete que lo que sigue es aún más sorprendente. "
+            "Ejemplo: 'Hay un lugar en la Tierra donde llueve diamantes. Y no es el dato más raro de este video.'"
+        ),
+        "ritmo_cortes": {"short": 3, "largo": 7},
+        "palabras_gatillo": [
+            "no vas a creerlo", "la ciencia no lo explica", "esto te va a sorprender",
+            "casi nadie lo sabe", "el dato que cambia todo", "suena imposible pero",
+            "nunca lo habías pensado", "y eso no es todo", "espera a ver el siguiente",
+            "rompió todos los récords", "desafía la lógica", "más raro de lo que crees"
+        ],
+        "estetica_miniatura": (
+            "Paleta: colores vivos y saturados, alto contraste, llamativo. "
+            "El objeto/fenómeno curioso como protagonista, aislado y ampliado. "
+            "Estilo brillante tipo infografía visual. Genera el '¿qué es eso?' al instante."
+        ),
+        "arco_retencion_largo": [
+            "0-2min: El dato más fuerte de entrada + promesa de varios igual de increíbles",
+            "2-8min: Datos en escala ascendente de rareza, cada uno con su mini-revelación",
+            "8-15min: El bloque central — los datos más sorprendentes y menos conocidos",
+            "15-22min: Conexiones inesperadas entre los datos — el '¿cómo se relacionan?'",
+            "22-28min: El dato cumbre, el más impactante reservado para el final",
+            "28-30min: Cierre con pregunta que invita a buscar más / comentar el favorito"
+        ],
+    },
+
+    "TuIALista": {
+        "gatillos_primarios": [
+            "urgencia_informativa",
+            "autoridad_tecnica",
+            "fomo_tecnologico",
+            "efecto_revelacion",
+        ],
+        "estructura_narrativa": "novedad_con_implicacion_practica",
+        "formula_hook": (
+            "Abre con la herramienta o avance de IA más reciente y su implicación concreta para el espectador. "
+            "Sin hype vacío: dato real + por qué importa AHORA. NUNCA uses imágenes de robots, cerebros o Matrix. "
+            "Ejemplo: 'Esta IA que salió esta semana hace en 10 segundos lo que a un humano le toma 8 horas. Y ya puedes usarla gratis.'"
+        ),
+        "ritmo_cortes": {"short": 3, "largo": 8},
+        "palabras_gatillo": [
+            "acaba de salir", "esto lo cambia todo", "ya puedes usarlo",
+            "antes que nadie", "la herramienta que necesitas", "en segundos",
+            "gratis y sin código", "lo que viene ahora", "el futuro ya llegó",
+            "nadie está hablando de esto", "esto reemplaza", "pruébalo hoy"
+        ],
+        "estetica_miniatura": (
+            "Paleta: cian eléctrico, azul tecnológico, fondo oscuro limpio, acentos neón. "
+            "NUNCA robots humanoides, cerebros ni Matrix. Interfaces, pantallas, flujos de datos abstractos, "
+            "dispositivos reales. Estilo limpio y moderno tipo producto tech. Sensación de novedad útil."
+        ),
+        "arco_retencion_largo": [
+            "0-2min: El avance/herramienta más reciente + qué problema real resuelve",
+            "2-8min: Cómo funciona en términos prácticos, sin jerga innecesaria",
+            "8-15min: Casos de uso concretos — qué puedes hacer TÚ con esto hoy",
+            "15-22min: Comparación con lo anterior y por qué este momento es distinto",
+            "22-28min: Implicaciones a futuro — hacia dónde va esto sin caer en hype",
+            "28-30min: Recomendación accionable + qué vigilar después"
+        ],
+    },
 }
 
 # ── ESTRATEGIAS DE RETENCIÓN UNIVERSAL ────────────────────────────────────────
@@ -176,7 +281,10 @@ class NeuroEngine:
             # Términos de búsqueda basados en el nicho
             terminos = {
                 "La Viuda": ["terror psicologico", "misterio sin resolver", "caso real perturbador"],
-                "Monkygraff": ["geopolitica 2025", "conflicto internacional", "analisis tactico"]
+                "Monkygraff": ["geopolitica 2026", "conflicto internacional", "analisis tactico"],
+                "FiltradoMX": ["historias de infidelidad", "confesiones reales", "drama traicion"],
+                "LaesquinaRandom": ["datos curiosos", "cosas que no sabias", "hechos sorprendentes"],
+                "TuIALista": ["nuevas herramientas IA", "inteligencia artificial novedades", "IA tutorial"],
             }
             busquedas = terminos.get(marca, ["videos virales"])
 
@@ -231,9 +339,24 @@ class NeuroEngine:
             ],
             "Monkygraff": [
                 {"titulo": "El movimiento que cambió el mapa en 48 horas", "canal": "Geopolitica Táctica", "termino": "conflicto internacional"},
-                {"titulo": "Lo que los medios no conectaron esta semana", "canal": "Análisis Global", "termino": "geopolitica 2025"},
+                {"titulo": "Lo que los medios no conectaron esta semana", "canal": "Análisis Global", "termino": "geopolitica 2026"},
                 {"titulo": "La base que nadie debía encontrar", "canal": "Intel Táctica", "termino": "tecnología militar"},
-            ]
+            ],
+            "FiltradoMX": [
+                {"titulo": "Descubrí la verdad el día de mi boda", "canal": "Confesiones Reales", "termino": "infidelidad"},
+                {"titulo": "Mi mejor amiga me traicionó con él", "canal": "Drama MX", "termino": "traicion"},
+                {"titulo": "El mensaje que destruyó a mi familia", "canal": "Historias Filtradas", "termino": "confesiones"},
+            ],
+            "LaesquinaRandom": [
+                {"titulo": "El lugar donde llueven diamantes", "canal": "Datos Locos", "termino": "datos curiosos"},
+                {"titulo": "Por qué este animal no debería existir", "canal": "Curiosidades", "termino": "hechos sorprendentes"},
+                {"titulo": "El experimento que rompió la ciencia", "canal": "Random Facts", "termino": "cosas que no sabias"},
+            ],
+            "TuIALista": [
+                {"titulo": "Esta IA gratis reemplaza a 5 herramientas", "canal": "IA Práctica", "termino": "herramientas IA"},
+                {"titulo": "Lo que esta IA hace en 10 segundos", "canal": "Tech Hoy", "termino": "inteligencia artificial"},
+                {"titulo": "La herramienta que nadie está usando aún", "canal": "Futuro IA", "termino": "IA novedades"},
+            ],
         }
         return respaldo.get(marca, respaldo["La Viuda"])
 
@@ -316,8 +439,16 @@ def _describir_gatillo(gatillo):
         "loop_tension_alivio": "Crea tensión sostenida con micro-alivios cada 30-45 segundos que enganchan.",
         "efecto_testigo": "Ancla la historia a personas reales con nombres y fechas específicas.",
         "autoridad_tactica": "El narrador demuestra saber más. Usa datos precisos y jerga especializada.",
+        "autoridad_tecnica": "Demuestra dominio técnico real con datos concretos, nombres y cifras verificables.",
         "urgencia_informativa": "Todo sucede AHORA. Usa tiempos presentes y marcadores temporales recientes.",
         "efecto_revelacion": "Presenta información como si fuera exclusiva y temporalmente disponible.",
         "prueba_social_inversa": "Los que saben ya lo saben. ¿Tú eres de los que saben?",
+        "morbo_social": "El espectador no puede dejar de mirar el drama ajeno. Expón el conflicto sin juzgar.",
+        "indignacion_moral": "Activa el sentido de justicia: presenta la traición/injusticia para que el espectador reaccione.",
+        "identificacion_personal": "Haz que el espectador piense 'esto me pasó a mí' o 'le pasó a alguien que conozco'.",
+        "curiosidad_compulsiva": "Abre un bucle de información que el cerebro NECESITA cerrar para sentirse satisfecho.",
+        "sorpresa_cognitiva": "Rompe el esquema mental: el dato debe contradecir lo que se da por sentado.",
+        "valor_compartible": "El contenido debe dar ganas de compartirlo ('tienes que ver esto').",
+        "fomo_tecnologico": "Miedo a quedarse atrás: si no conoces esta herramienta, otros ya te llevan ventaja.",
     }
     return descripciones.get(gatillo, "Aplica con naturalidad según el contexto.")

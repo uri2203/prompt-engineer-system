@@ -160,23 +160,33 @@
                 'sd': 'nodo_sd', 'voz': 'nodo_voz',
                 'parallax': 'nodo_parallax', 'nube': 'nodo_nube'
             };
+            // Texto explicativo de cada estado (tooltip al pasar el mouse)
+            const explica = {
+                'online': 'Programa activo y respondiendo',
+                'ip_sin_programa': 'Equipo prendido pero el programa está CERRADO',
+                'offline': 'Equipo apagado o inalcanzable',
+                'desconocido': 'Sin reporte del monitor (¿monitor caído?)',
+                'on': 'Activo', 'off': 'Inactivo',
+            };
             try {
                 const res = await fetch('/api/nodos');
                 const data = await res.json();
                 for (const [clave, id] of Object.entries(mapa)) {
                     const el = document.getElementById(id);
                     if (!el) continue;
-                    const estado = data[clave];  // 'on', 'off', 'warn'
-                    el.classList.remove('bg-slate-600', 'bg-[#10b981]', 'bg-red-500', 'bg-amber-500');
-                    if (estado === 'on')        el.classList.add('bg-[#10b981]');
-                    else if (estado === 'warn') el.classList.add('bg-amber-500');
-                    else                        el.classList.add('bg-red-500');
+                    const estado = data[clave];
+                    el.classList.remove('bg-slate-600', 'bg-[#10b981]', 'bg-red-500', 'bg-amber-500', 'bg-slate-500');
+                    if (estado === 'online' || estado === 'on')        el.classList.add('bg-[#10b981]');   // verde
+                    else if (estado === 'ip_sin_programa')             el.classList.add('bg-amber-500');    // amarillo: programa cerrado
+                    else if (estado === 'desconocido')                 el.classList.add('bg-slate-500');    // gris: sin reporte
+                    else                                               el.classList.add('bg-red-500');      // rojo: offline
+                    // Tooltip explicativo
+                    if (el.parentElement) el.parentElement.title = explica[estado] || '';
                 }
             } catch(e) {
-                // Si falla, marcar todos en rojo
                 for (const id of Object.values(mapa)) {
                     const el = document.getElementById(id);
-                    if (el) { el.classList.remove('bg-slate-600','bg-[#10b981]','bg-amber-500'); el.classList.add('bg-red-500'); }
+                    if (el) { el.classList.remove('bg-slate-600','bg-[#10b981]','bg-amber-500','bg-slate-500'); el.classList.add('bg-red-500'); }
                 }
             }
         }

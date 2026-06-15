@@ -13,6 +13,7 @@ from modulos.voice_engine import VoiceEngine
 from modulos.video_engine import VideoEngine  
 from modulos.trend_engine import TrendEngine
 from modulos.compliance_engine import ComplianceEngine
+from modulos.neuro_engine import NeuroEngine
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
@@ -25,6 +26,7 @@ voice_engine = VoiceEngine()
 video_engine = VideoEngine()
 trend_engine = TrendEngine()
 compliance_engine = ComplianceEngine()
+neuro_engine = NeuroEngine()
 
 # COLA DE TAREAS PARA LA DARK FACTORY
 cola_de_renderizado = []
@@ -108,6 +110,9 @@ def api_telemetria():
 # Render no puede hacer ping a IPs locales (192.168.x.x son privadas).
 # Por eso el Xeon reporta el estado aquí, y el dashboard lo lee.
 _estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts": 0}
+# Detalle del monitor de nodos (equipo prendido vs programa abierto). Cada nodo:
+# "online" = programa responde | "ip_sin_programa" = equipo prendido pero programa cerrado | "offline" = ni la IP responde
+_estado_nodos_detalle = {"sd": "offline", "voz": "offline", "parallax": "offline", "ts": 0}
 # Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
 _worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
 
@@ -272,25 +277,43 @@ def _worker_esta_ocupado():
 @app.route('/api/nodos')
 @login_required
 def api_nodos():
-    # Si el último reporte del Xeon es viejo (>60s), marcar locales como desconocidos
-    antiguedad = time.time() - _estado_nodos.get("ts", 0)
-    if antiguedad > 60:
-        return jsonify({"sd": "off", "voz": "off", "parallax": "off", "nube": "on"})
+    # Si el último reporte del monitor del Xeon es viejo (>90s), no sabemos el estado real
+    antiguedad = time.time() - _estado_nodos_detalle.get("ts", 0)
+    if antiguedad > 90:
+        return jsonify({
+            "sd": "desconocido", "voz": "desconocido", "parallax": "desconocido",
+            "nube": "on", "monitor": "sin_reporte",
+        })
     return jsonify({
-        "sd": _estado_nodos.get("sd", "off"),
-        "voz": _estado_nodos.get("voz", "off"),
-        "parallax": _estado_nodos.get("parallax", "off"),
+        "sd": _estado_nodos_detalle.get("sd", "offline"),
+        "voz": _estado_nodos_detalle.get("voz", "offline"),
+        "parallax": _estado_nodos_detalle.get("parallax", "offline"),
         "nube": "on",  # si responde este endpoint, la nube está viva
+        "monitor": "activo",
     })
 
 @app.route('/api/nodos/reportar', methods=['POST'])
 def api_nodos_reportar():
-    # El Xeon reporta aquí el estado de los nodos locales (hace ping y envía).
+    """El Xeon reporta aquí el estado de los nodos locales (hace ping y envía).
+    Acepta dos formatos:
+      - Simple: {"sd":"on/off", "voz":"on/off", "parallax":"on/off"}
+      - Detallado (monitor de 2 niveles): {"sd":"online/ip_sin_programa/offline", ...}
+        donde 'online'=programa responde, 'ip_sin_programa'=equipo prendido pero
+        programa cerrado, 'offline'=ni la IP responde."""
     data = request.json or {}
-    _estado_nodos["sd"]       = data.get("sd", "off")
-    _estado_nodos["voz"]      = data.get("voz", "off")
-    _estado_nodos["parallax"] = data.get("parallax", "off")
-    _estado_nodos["ts"]       = time.time()
+    ahora = time.time()
+    for nodo in ("sd", "voz", "parallax"):
+        val = data.get(nodo, "off")
+        # Normalizar: detectar si viene en formato detallado
+        if val in ("online", "ip_sin_programa", "offline"):
+            _estado_nodos_detalle[nodo] = val
+            _estado_nodos[nodo] = "on" if val == "online" else "off"
+        else:
+            # Formato simple (on/off): mapear a detalle básico
+            _estado_nodos[nodo] = val
+            _estado_nodos_detalle[nodo] = "online" if val == "on" else "offline"
+    _estado_nodos["ts"] = ahora
+    _estado_nodos_detalle["ts"] = ahora
     return jsonify({"status": "ok"})
 
 # ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
@@ -505,9 +528,17 @@ def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
     formato_calculado = "16:9" if formato == "16:9" else "9:16"
 
     yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
-    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+    usados = _temas_usados(marca)
+    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key, temas_usados=usados)
     contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
     contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+    # NeuroEngine: capa de neuromarketing
+    try:
+        contexto_absoluto = neuro_engine.enriquecer_contexto(
+            contexto_absoluto, marca, formato_calculado, yt_api_key
+        )
+    except Exception:
+        pass
 
     resultado = compliance_engine.blindar_guion(
         ai_engine_instancia=ai_engine, marca=marca, contexto=contexto_absoluto,
@@ -525,6 +556,11 @@ def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
     escenas = guion.get("escenas", [])
     if not escenas:
         raise Exception("Guion sin escenas")
+    # Registrar el tema para no repetir
+    try:
+        _registrar_tema_usado(marca, guion.get("titulo", guion.get("titulo_sugerido", "")))
+    except Exception:
+        pass
 
     # El worker busca el campo "prompt" en cada escena, pero Gemini genera
     # "prompt_visual". Mapear para que el worker reconozca cada escena.
@@ -683,15 +719,24 @@ def api_bot_lanzar_orden():
     formato_calculado = "16:9" if formato == "16:9" else "9:16"
 
     try:
-        # 1. TrendEngine: inyecta contexto viral del canal
+        # 1. TrendEngine: inyecta contexto viral del canal (con memoria anti-repetición)
         yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
-        contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+        usados = _temas_usados(marca)
+        contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key, temas_usados=usados)
 
         # Si no hay premisa manual, el tema lo guía la tendencia
         contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
         contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
 
-        # 2. Generar el guion blindado (compliance + NeuroEngine vía ai_engine)
+        # 1b. NeuroEngine: inyecta la capa de neuromarketing (gatillos, hook, arco de retención)
+        try:
+            contexto_absoluto = neuro_engine.enriquecer_contexto(
+                contexto_absoluto, marca, formato_calculado, yt_api_key
+            )
+        except Exception as _e_neuro:
+            print(f"[NEURO] No se pudo enriquecer (sigue sin él): {_e_neuro}")
+
+        # 2. Generar el guion blindado (compliance + neuromarketing inyectado)
         resultado = compliance_engine.blindar_guion(
             ai_engine_instancia=ai_engine,
             marca=marca, contexto=contexto_absoluto,
@@ -730,6 +775,11 @@ def api_bot_lanzar_orden():
         escenas = escenas_norm
 
         titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
+        # Registrar el tema generado para que NO se repita en próximas órdenes
+        try:
+            _registrar_tema_usado(marca, titulo)
+        except Exception:
+            pass
         # Reconstruir el texto de locución completo desde las escenas
         texto_locucion = " ".join(
             e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion")
@@ -1083,6 +1133,24 @@ def _gh_guardar_json(path, datos, mensaje="update"):
         requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
     except Exception:
         pass
+
+def _temas_usados(marca):
+    """Lee del historial (rama diagnostico) los títulos ya generados para esta marca,
+    para que el TrendEngine no repita temas. Devuelve lista de títulos (str)."""
+    hist = _gh_leer_json("_diagnostico/temas_usados.json", {})
+    return hist.get(marca, [])[-50:]  # solo los últimos 50 por marca
+
+def _registrar_tema_usado(marca, titulo):
+    """Guarda un título recién generado en el historial anti-repetición."""
+    if not titulo:
+        return
+    hist = _gh_leer_json("_diagnostico/temas_usados.json", {})
+    lista = hist.get(marca, [])
+    t = str(titulo).strip()
+    if t and t not in lista:
+        lista.append(t)
+        hist[marca] = lista[-80:]  # tope por marca
+        _gh_guardar_json("_diagnostico/temas_usados.json", hist, f"tema usado: {marca}")
 
 @app.route('/api/bot/plan_semanal', methods=['GET', 'POST'])
 def api_plan_semanal():
