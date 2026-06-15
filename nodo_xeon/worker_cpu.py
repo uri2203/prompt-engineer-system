@@ -1308,6 +1308,37 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
 
 # ═══════════ FIN MÓDULO DE HOOKS V2 ═══════════
 
+def _lote_fue_cancelado():
+    """Consulta a Render si el lote fue cancelado. Si es así, el worker debe
+    limpiar su cola local en vez de seguir produciendo videos de un lote muerto."""
+    try:
+        r = requests.get(f"{RENDER_URL}/api/bot/lote_progreso", timeout=15)
+        if r.status_code == 200:
+            estado = r.json().get("estado_lote", "")
+            return estado in ("cancelado", "inactivo")
+    except Exception:
+        pass
+    return False
+
+def _limpiar_cola_local(motivo=""):
+    """Borra todos los ensamblajes pendientes de la cola local del worker."""
+    import glob as _glob
+    cola_local_dir = r"C:\NODO_PINPINELA\cola_local"
+    borrados = 0
+    try:
+        if os.path.isdir(cola_local_dir):
+            for archivo in _glob.glob(os.path.join(cola_local_dir, "*.json")):
+                try:
+                    os.remove(archivo)
+                    borrados += 1
+                except Exception:
+                    pass
+        if borrados:
+            print(f"🧹 [LIMPIEZA] {borrados} ensamblaje(s) pendiente(s) borrados de la cola local. {motivo}")
+    except Exception as e:
+        print(f"⚠️ Error limpiando cola local: {e}")
+    return borrados
+
 def procesar():
     global _tareas_completadas  # FIX: Llamamos al registro local
     
@@ -1317,6 +1348,13 @@ def procesar():
         import glob as _glob
         tarea = None
         cola_local_dir = r"C:\NODO_PINPINELA\cola_local"
+        # Antes de tomar trabajo de la cola local: si el lote fue cancelado, NO
+        # procesar ensamblajes viejos — limpiarlos para no producir videos de un
+        # lote que el operador ya canceló.
+        if os.path.isdir(cola_local_dir):
+            _hay_pendientes = bool(_glob.glob(os.path.join(cola_local_dir, "*.json")))
+            if _hay_pendientes and _lote_fue_cancelado():
+                _limpiar_cola_local("Lote cancelado por el operador — no se producen videos viejos.")
         if os.path.isdir(cola_local_dir):
             locales = sorted(_glob.glob(os.path.join(cola_local_dir, "*.json")))
             if locales:
