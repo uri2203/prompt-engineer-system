@@ -2,9 +2,9 @@
   "estado_lote": "produciendo",
   "total": 2,
   "completados": 1,
-  "fallidos": 0,
+  "fallidos": 1,
   "trabajo_actual": "Reintentando encolado en 19s",
-  "mensaje": "No se pudo encolar el video 2 (intento 2/3), reintentando...",
+  "mensaje": "Video 2 (LaesquinaRandom 16:9) falló al encolar 3 veces — se omite y se continúa.",
   "resumen": "FiltradoMX: 0s+1L | LaesquinaRandom: 0s+1L",
   "historial": [
     {
