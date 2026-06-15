@@ -1,20 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 4,
-  "completados": 1,
-  "fallidos": 0,
-  "trabajo_actual": "Generando video 2/4 (Monkygraff 16:9 15min)",
-  "mensaje": "Produccion del video 2 iniciada.",
-  "resumen": "La Viuda: 0s+1L | Monkygraff: 0s+1L | FiltradoMX: 0s+1L | LaesquinaRandom: 0s+1L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "La Viuda",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 15,
-      "duracion_real_seg": 2281.2,
-      "hora": "03:49"
-    }
-  ]
+  "estado_lote": "inactivo",
+  "total": 0,
+  "completados": 0,
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
