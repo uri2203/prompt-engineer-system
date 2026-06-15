@@ -67,8 +67,10 @@ def obtener_control():
         r = requests.get(f"{RENDER_URL}/api/bot/lote_control", timeout=20)
         if r.status_code == 200:
             return r.json()
-    except Exception:
-        pass
+        else:
+            print(f"[RED] Render respondió {r.status_code} al leer el control (¿deploy en curso?)")
+    except Exception as e:
+        print(f"[RED] No se pudo conectar a Render: {str(e)[:80]}")
     return {"accion": ""}
 
 def consumir_control():
@@ -300,30 +302,40 @@ def main():
     else:
         lote = None
     ultimo_ts_iniciar = 0  # ts del último 'iniciar' procesado (idempotencia ante latencia)
+    _ciclo = 0
+    _ultimo_estado_log = None
     while True:
         try:
+            _ciclo += 1
             control = obtener_control()
             accion = control.get("accion", "")
             ts_control = control.get("ts", 0)
             hay_lote_activo = bool(lote and lote.get("estado_lote") not in ("completado", "cancelado"))
+            # Diagnóstico cada ciclo: deja claro qué ve el orquestador (sin spamear)
+            _estado_actual = f"accion='{accion}' | lote_activo={hay_lote_activo} | estado={lote.get('estado_lote') if lote else 'None'}"
+            if _estado_actual != _ultimo_estado_log:
+                print(f"[CICLO {_ciclo}] {_estado_actual}")
+                _ultimo_estado_log = _estado_actual
             if accion == "iniciar":
                 # Idempotencia: ignorar si ya procesamos este mismo 'iniciar' (mismo ts)
                 # o si ya hay un lote en curso. Evita recrear el lote por latencia del control.
                 if ts_control and ts_control == ultimo_ts_iniciar:
-                    pass  # ya lo procesamos; señal repetida por propagación lenta
+                    print(f"[CONTROL] 'iniciar' (ts={ts_control}) ya procesado — esperando que el control se limpie...")
+                    consumir_control()  # reintentar consumir por si quedó pegado
                 elif hay_lote_activo:
                     print("[CONTROL] 'iniciar' ignorado: ya hay un lote en curso.")
                     ultimo_ts_iniciar = ts_control
                     consumir_control()
                 else:
+                    print(f"[CONTROL] 'iniciar' RECIBIDO (ts={ts_control}) — creando lote...")
                     ultimo_ts_iniciar = ts_control
                     consumir_control()
                     nuevo = crear_lote(obtener_plan())
                     if nuevo:
                         lote = nuevo; guardar_lote(lote)
-                        print(f"LOTE CREADO: {lote['resumen']}"); reportar_progreso(lote)
+                        print(f"✅ LOTE CREADO: {lote['resumen']} ({len(lote['trabajos'])} videos)"); reportar_progreso(lote)
                     else:
-                        print("Plan vacio - nada que producir")
+                        print("⚠️ Plan vacio - nada que producir. Revisa que el plan tenga canales con shorts/largos > 0.")
             if lote and lote.get("estado_lote") not in ("completado", "cancelado"):
                 lote = procesar_lote(lote)
         except Exception as e:
