@@ -53,6 +53,18 @@ def guardar_lote(lote):
     except Exception as e:
         print(f"Error guardando lote: {e}")
 
+def borrar_lote_local():
+    """Elimina el archivo del lote local del Xeon. Se llama al cancelar para que
+    el orquestador NO reviva el lote viejo en el próximo arranque y quede listo
+    para una orden nueva."""
+    for ruta in (ARCHIVO_LOTE, ARCHIVO_LOTE + ".tmp"):
+        try:
+            if os.path.exists(ruta):
+                os.remove(ruta)
+                print(f"   [LIMPIEZA] Lote local borrado: {ruta}")
+        except Exception as e:
+            print(f"   [LIMPIEZA] No se pudo borrar {ruta}: {e}")
+
 def obtener_plan():
     try:
         r = requests.get(f"{RENDER_URL}/api/bot/plan_semanal", timeout=20)
@@ -176,9 +188,20 @@ def crear_lote(plan):
 def procesar_lote(lote):
     accion = obtener_control().get("accion", "")
     if accion == "cancelar":
-        print("[CONTROL] Lote cancelado")
+        print("[CONTROL] Lote cancelado — depurando todo para la siguiente orden.")
         lote["estado_lote"] = "cancelado"; lote["mensaje"] = "Lote cancelado por el operador."
-        consumir_control(); guardar_lote(lote); reportar_progreso(lote); return lote
+        reportar_progreso(lote)       # avisar al panel que se canceló
+        consumir_control()            # limpiar la orden de cancelar
+        borrar_lote_local()           # borrar el lote local para no revivirlo
+        # Dejar el progreso en inactivo (panel limpio, listo para nueva orden)
+        try:
+            requests.post(f"{RENDER_URL}/api/bot/lote_progreso", json={
+                "estado_lote": "inactivo", "total": 0, "completados": 0, "fallidos": 0,
+                "trabajo_actual": "", "mensaje": "Listo para iniciar.", "resumen": "", "historial": []
+            }, timeout=20)
+        except Exception:
+            pass
+        return None                   # ← sin lote: el orquestador queda LIMPIO
     elif accion == "pausar":
         print("[CONTROL] Lote pausado")
         lote["estado_lote"] = "pausado"; lote["mensaje"] = "Pausado por el operador."
@@ -241,7 +264,8 @@ def procesar_lote(lote):
             else:
                 lote["mensaje"] = "Lote completado."
             print(f"LOTE COMPLETADO: {n_ok} OK, {n_fail} fallidos")
-            guardar_lote(lote); reportar_progreso(lote)
+            reportar_progreso(lote)
+            borrar_lote_local()  # lote terminado: borrar local para no revivirlo al reiniciar
         return lote
     # Nodos vivos? Esperar las horas que sean
     ok, caidos = nodos_criticos_vivos()
@@ -300,6 +324,10 @@ def main():
                 print(f"   Video {t['n']} estaba a medias - se reintentara")
         guardar_lote(lote)
     else:
+        # Lote viejo cancelado/completado (o ninguno): borrarlo para arrancar LIMPIO
+        if lote:
+            print(f"Lote viejo en estado '{lote.get('estado_lote')}' — borrando para empezar limpio.")
+            borrar_lote_local()
         lote = None
     ultimo_ts_iniciar = 0  # ts del último 'iniciar' procesado (idempotencia ante latencia)
     _ciclo = 0
