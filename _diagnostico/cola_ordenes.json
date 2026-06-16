@@ -1,1 +1,261 @@
-[]
+[
+  {
+    "id": "3933ff7d-1979-4097-a733-a91505f339bb",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Astronaut's helmet reflecting distorted spaceship interior, subtle shadow on visor, low light\", \"prompt_visual\": \"Astronaut's helmet reflecting distorted spaceship interior, subtle shadow on visor, low light\", \"texto_locucion\": \"Has mirado las estrellas tanto tiempo...\", \"pexels_query\": \"astronaut helmet reflection\"}, {\"id\": 2, \"prompt\": \"Dark control panel, one flickering button, eerie glow, spaceship interior\", \"prompt_visual\": \"Dark control panel, one flickering button, eerie glow, spaceship interior\", \"texto_locucion\": \"...que sientes que ellas también te miran.\", \"pexels_query\": \"spaceship control panel\"}, {\"id\": 3, \"prompt\": \"Vast empty space, distant nebula, a tiny, isolated spacecraft in silhouette\", \"prompt_visual\": \"Vast empty space, distant nebula, a tiny, isolated spacecraft in silhouette\", \"texto_locucion\": \"La oscuridad del espacio no es un vacío.\", \"pexels_query\": \"isolated spaceship cosmos\"}, {\"id\": 4, \"prompt\": \"Abstract dark background, subtle shifting patterns, like unseen energy\", \"prompt_visual\": \"Abstract dark background, subtle shifting patterns, like unseen energy\", \"texto_locucion\": \"Es un lienzo para tu propia mente.\", \"pexels_query\": \"abstract dark shifting\"}, {\"id\": 5, \"prompt\": \"Empty corridor inside spaceship, long shadows, a single distant light source\", \"prompt_visual\": \"Empty corridor inside spaceship, long shadows, a single distant light source\", \"texto_locucion\": \"Allí arriba, la soledad te envuelve lento.\", \"pexels_query\": \"spaceship corridor empty\"}, {\"id\": 6, \"prompt\": \"Close-up on a glove touching a cold, metallic surface, textures, desaturated colors\", \"prompt_visual\": \"Close-up on a glove touching a cold, metallic surface, textures, desaturated colors\", \"texto_locucion\": \"Tus sentidos se agudizan, o se engañan.\", \"pexels_query\": \"gloved hand spaceship\"}, {\"id\": 7, \"prompt\": \"Sound-dampening foam wall, a tiny, almost imperceptible crack or indentation\", \"prompt_visual\": \"Sound-dampening foam wall, a tiny, almost imperceptible crack or indentation\", \"texto_locucion\": \"Has escuchado ruidos extraños en el silencio.\", \"pexels_query\": \"soundproof wall texture\"}, {\"id\": 8, \"prompt\": \"Metal exterior of a spacecraft, small impact mark, extreme close-up, dark void background\", \"prompt_visual\": \"Metal exterior of a spacecraft, small impact mark, extreme close-up, dark void background\", \"texto_locucion\": \"Un golpe leve en el casco de la nave.\", \"pexels_query\": \"spaceship hull impact\"}, {\"id\": 9, \"prompt\": \"Empty command chair in a dark cockpit, slightly tilted, deep shadows\", \"prompt_visual\": \"Empty command chair in a dark cockpit, slightly tilted, deep shadows\", \"texto_locucion\": \"Sabes que no deberías escuchar nada.\", \"pexels_query\": \"empty cockpit chair\"}, {\"id\": 10, \"prompt\": \"Screen displaying 'ALL SYSTEMS NOMINAL', static interference, unsettling green glow\", \"prompt_visual\": \"Screen displaying 'ALL SYSTEMS NOMINAL', static interference, unsettling green glow\", \"texto_locucion\": \"Las alarmas no indican nada anormal.\", \"pexels_query\": \"system nominal screen glitch\"}, {\"id\": 11, \"prompt\": \"Dark corner of a cabin, a barely visible, distorted shadow figure merging with wall\", \"prompt_visual\": \"Dark corner of a cabin, a barely visible, distorted shadow figure merging with wall\", \"texto_locucion\": \"Pero sientes algo, algo no está bien.\", \"pexels_query\": \"cabin dark shadow\"}, {\"id\": 12, \"prompt\": \"Window to space, reflection of unseen presence in the glass, subtly distorted\", \"prompt_visual\": \"Window to space, reflection of unseen presence in the glass, subtly distorted\", \"texto_locucion\": \"¿Un reflejo? ¿Una sombra donde no hay luz?\", \"pexels_query\": \"spaceship window reflection\"}, {\"id\": 13, \"prompt\": \"Hand reaching for a flashlight in the dark, uncertain, grainy texture\", \"prompt_visual\": \"Hand reaching for a flashlight in the dark, uncertain, grainy texture\", \"texto_locucion\": \"Tu vista busca una explicación lógica.\", \"pexels_query\": \"hand flashlight dark\"}, {\"id\": 14, \"prompt\": \"Long, winding corridor, perspective showing no end, only darkness ahead\", \"prompt_visual\": \"Long, winding corridor, perspective showing no end, only darkness ahead\", \"texto_locucion\": \"No la encuentras. Nunca la encuentras.\", \"pexels_query\": \"long dark corridor\"}, {\"id\": 15, \"prompt\": \"A single, undefined handprint appearing on a fogged window from inside\", \"prompt_visual\": \"A single, undefined handprint appearing on a fogged window from inside\", \"texto_locucion\": \"Una presión inexplicable roza tu brazo.\", \"pexels_query\": \"fogged window handprint\"}, {\"id\": 16, \"prompt\": \"Empty sleeping pod in a spaceship, slightly ajar, deep blue lighting\", \"prompt_visual\": \"Empty sleeping pod in a spaceship, slightly ajar, deep blue lighting\", \"texto_locucion\": \"En el vacío, lo sentiste antes, ¿verdad?\", \"pexels_query\": \"spaceship sleeping pod\"}, {\"id\": 17, \"prompt\": \"Small personal item (photo, book) placed on a console, slightly out of place\", \"prompt_visual\": \"Small personal item (photo, book) placed on a console, slightly out of place\", \"texto_locucion\": \"La cabina, tu refugio, se siente ajena.\", \"pexels_query\": \"personal item console\"}, {\"id\": 18, \"prompt\": \"Shadow of an unknown, non-human form cast across a metal wall\", \"prompt_visual\": \"Shadow of an unknown, non-human form cast across a metal wall\", \"texto_locucion\": \"Parece que no estabas solo en absoluto.\", \"pexels_query\": \"shadow form wall\"}, {\"id\": 19, \"prompt\": \"Corridor junction, a dark, indistinct entity standing at the far end\", \"prompt_visual\": \"Corridor junction, a dark, indistinct entity standing at the far end\", \"texto_locucion\": \"Cada rincón parece albergar una presencia.\", \"pexels_query\": \"corridor entity dark\"}, {\"id\": 20, \"prompt\": \"Starfield through a window, one star seems unusually bright and focused, almost like an eye\", \"prompt_visual\": \"Starfield through a window, one star seems unusually bright and focused, almost like an eye\", \"texto_locucion\": \"Miras a la nada, ella te devuelve la mirada.\", \"pexels_query\": \"starfield bright star\"}, {\"id\": 21, \"prompt\": \"Dashboard display, subtle distortion on the screen, static, like a glitch\", \"prompt_visual\": \"Dashboard display, subtle distortion on the screen, static, like a glitch\", \"texto_locucion\": \"Nadie lo vio. Solo tú lo percibiste.\", \"pexels_query\": \"dashboard static glitch\"}, {\"id\": 22, \"prompt\": \"Room in complete darkness, only the faintest outline of furniture visible, profound quiet\", \"prompt_visual\": \"Room in complete darkness, only the faintest outline of furniture visible, profound quiet\", \"texto_locucion\": \"El silencio absoluto es ahora tu enemigo.\", \"pexels_query\": \"dark room quiet\"}, {\"id\": 23, \"prompt\": \"Panoramic view of Earth from space, but a vast, dark, unidentifiable shape looms nearby\", \"prompt_visual\": \"Panoramic view of Earth from space, but a vast, dark, unidentifiable shape looms nearby\", \"texto_locucion\": \"¿Y si la vastedad del cosmos te observa?\", \"pexels_query\": \"earth space ominous shape\"}, {\"id\": 24, \"prompt\": \"Close-up on a face visor, reflection showing distorted, unidentifiable features of a shadow\", \"prompt_visual\": \"Close-up on a face visor, reflection showing distorted, unidentifiable features of a shadow\", \"texto_locucion\": \"No puedes ignorarlo, se metió en ti.\", \"pexels_query\": \"visor reflection shadow\"}, {\"id\": 25, \"prompt\": \"Empty headset, lying on a console, faint static on the earpieces, suggestive of sound\", \"prompt_visual\": \"Empty headset, lying on a console, faint static on the earpieces, suggestive of sound\", \"texto_locucion\": \"Las voces, los susurros, son muy reales.\", \"pexels_query\": \"empty headset static\"}, {\"id\": 26, \"prompt\": \"A hand reaching out into empty space, questioning, desperate gesture, dark void\", \"prompt_visual\": \"A hand reaching out into empty space, questioning, desperate gesture, dark void\", \"texto_locucion\": \"Ahora, ¿cómo puedes diferenciar la realidad?\", \"pexels_query\": \"hand reaching void\"}, {\"id\": 27, \"prompt\": \"View of Earth from a great distance, appearing small and isolated in the vastness\", \"prompt_visual\": \"View of Earth from a great distance, appearing small and isolated in the vastness\", \"texto_locucion\": \"La Tierra se ve pequeña, insignificante ahora.\", \"pexels_query\": \"earth small distance\"}, {\"id\": 28, \"prompt\": \"An object, a pen or tool, floating unnaturally in zero gravity, casting a long shadow\", \"prompt_visual\": \"An object, a pen or tool, floating unnaturally in zero gravity, casting a long shadow\", \"texto_locucion\": \"¿Y si te trajiste algo de allá arriba?\", \"pexels_query\": \"floating object shadow\"}, {\"id\": 29, \"prompt\": \"Distorted, blurry outline in a corner of a dark room, almost pareidolia, but unnerving\", \"prompt_visual\": \"Distorted, blurry outline in a corner of a dark room, almost pareidolia, but unnerving\", \"texto_locucion\": \"Algo que no tiene forma definida, pero existe.\", \"pexels_query\": \"distorted outline corner\"}, {\"id\": 30, \"prompt\": \"Periphery of vision, blurry, indistinct, something always just out of focus, oppressive dark\", \"prompt_visual\": \"Periphery of vision, blurry, indistinct, something always just out of focus, oppressive dark\", \"texto_locucion\": \"Sigue estando en tu periferia visual constante.\", \"pexels_query\": \"peripheral blur dark\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Has mirado las estrellas tanto tiempo... ...que sientes que ellas también te miran. La oscuridad del espacio no es un vacío. Es un lienzo para tu propia mente. Allí arriba, la soledad te envuelve lento. Tus sentidos se agudizan, o se engañan. Has escuchado ruidos extraños en el silencio. Un golpe leve en el casco de la nave. Sabes que no deberías escuchar nada. Las alarmas no indican nada anormal. Pero sientes algo, algo no está bien. ¿Un reflejo? ¿Una sombra donde no hay luz? Tu vista busca una explicación lógica. No la encuentras. Nunca la encuentras. Una presión inexplicable roza tu brazo. En el vacío, lo sentiste antes, ¿verdad? La cabina, tu refugio, se siente ajena. Parece que no estabas solo en absoluto. Cada rincón parece albergar una presencia. Miras a la nada, ella te devuelve la mirada. Nadie lo vio. Solo tú lo percibiste. El silencio absoluto es ahora tu enemigo. ¿Y si la vastedad del cosmos te observa? No puedes ignorarlo, se metió en ti. Las voces, los susurros, son muy reales. Ahora, ¿cómo puedes diferenciar la realidad? La Tierra se ve pequeña, insignificante ahora. ¿Y si te trajiste algo de allá arriba? Algo que no tiene forma definida, pero existe. Sigue estando en tu periferia visual constante.",
+    "titulo_sugerido": "¿Qué se TRAE la SOLEDAD del ESPACIO contigo?",
+    "escenas_texto": [
+      "Has mirado las estrellas tanto tiempo...",
+      "...que sientes que ellas también te miran.",
+      "La oscuridad del espacio no es un vacío.",
+      "Es un lienzo para tu propia mente.",
+      "Allí arriba, la soledad te envuelve lento.",
+      "Tus sentidos se agudizan, o se engañan.",
+      "Has escuchado ruidos extraños en el silencio.",
+      "Un golpe leve en el casco de la nave.",
+      "Sabes que no deberías escuchar nada.",
+      "Las alarmas no indican nada anormal.",
+      "Pero sientes algo, algo no está bien.",
+      "¿Un reflejo? ¿Una sombra donde no hay luz?",
+      "Tu vista busca una explicación lógica.",
+      "No la encuentras. Nunca la encuentras.",
+      "Una presión inexplicable roza tu brazo.",
+      "En el vacío, lo sentiste antes, ¿verdad?",
+      "La cabina, tu refugio, se siente ajena.",
+      "Parece que no estabas solo en absoluto.",
+      "Cada rincón parece albergar una presencia.",
+      "Miras a la nada, ella te devuelve la mirada.",
+      "Nadie lo vio. Solo tú lo percibiste.",
+      "El silencio absoluto es ahora tu enemigo.",
+      "¿Y si la vastedad del cosmos te observa?",
+      "No puedes ignorarlo, se metió en ti.",
+      "Las voces, los susurros, son muy reales.",
+      "Ahora, ¿cómo puedes diferenciar la realidad?",
+      "La Tierra se ve pequeña, insignificante ahora.",
+      "¿Y si te trajiste algo de allá arriba?",
+      "Algo que no tiene forma definida, pero existe.",
+      "Sigue estando en tu periferia visual constante."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Astronaut's helmet reflecting distorted spaceship interior, subtle shadow on visor, low light",
+        "prompt_visual": "Astronaut's helmet reflecting distorted spaceship interior, subtle shadow on visor, low light",
+        "texto_locucion": "Has mirado las estrellas tanto tiempo...",
+        "pexels_query": "astronaut helmet reflection"
+      },
+      {
+        "id": 2,
+        "prompt": "Dark control panel, one flickering button, eerie glow, spaceship interior",
+        "prompt_visual": "Dark control panel, one flickering button, eerie glow, spaceship interior",
+        "texto_locucion": "...que sientes que ellas también te miran.",
+        "pexels_query": "spaceship control panel"
+      },
+      {
+        "id": 3,
+        "prompt": "Vast empty space, distant nebula, a tiny, isolated spacecraft in silhouette",
+        "prompt_visual": "Vast empty space, distant nebula, a tiny, isolated spacecraft in silhouette",
+        "texto_locucion": "La oscuridad del espacio no es un vacío.",
+        "pexels_query": "isolated spaceship cosmos"
+      },
+      {
+        "id": 4,
+        "prompt": "Abstract dark background, subtle shifting patterns, like unseen energy",
+        "prompt_visual": "Abstract dark background, subtle shifting patterns, like unseen energy",
+        "texto_locucion": "Es un lienzo para tu propia mente.",
+        "pexels_query": "abstract dark shifting"
+      },
+      {
+        "id": 5,
+        "prompt": "Empty corridor inside spaceship, long shadows, a single distant light source",
+        "prompt_visual": "Empty corridor inside spaceship, long shadows, a single distant light source",
+        "texto_locucion": "Allí arriba, la soledad te envuelve lento.",
+        "pexels_query": "spaceship corridor empty"
+      },
+      {
+        "id": 6,
+        "prompt": "Close-up on a glove touching a cold, metallic surface, textures, desaturated colors",
+        "prompt_visual": "Close-up on a glove touching a cold, metallic surface, textures, desaturated colors",
+        "texto_locucion": "Tus sentidos se agudizan, o se engañan.",
+        "pexels_query": "gloved hand spaceship"
+      },
+      {
+        "id": 7,
+        "prompt": "Sound-dampening foam wall, a tiny, almost imperceptible crack or indentation",
+        "prompt_visual": "Sound-dampening foam wall, a tiny, almost imperceptible crack or indentation",
+        "texto_locucion": "Has escuchado ruidos extraños en el silencio.",
+        "pexels_query": "soundproof wall texture"
+      },
+      {
+        "id": 8,
+        "prompt": "Metal exterior of a spacecraft, small impact mark, extreme close-up, dark void background",
+        "prompt_visual": "Metal exterior of a spacecraft, small impact mark, extreme close-up, dark void background",
+        "texto_locucion": "Un golpe leve en el casco de la nave.",
+        "pexels_query": "spaceship hull impact"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty command chair in a dark cockpit, slightly tilted, deep shadows",
+        "prompt_visual": "Empty command chair in a dark cockpit, slightly tilted, deep shadows",
+        "texto_locucion": "Sabes que no deberías escuchar nada.",
+        "pexels_query": "empty cockpit chair"
+      },
+      {
+        "id": 10,
+        "prompt": "Screen displaying 'ALL SYSTEMS NOMINAL', static interference, unsettling green glow",
+        "prompt_visual": "Screen displaying 'ALL SYSTEMS NOMINAL', static interference, unsettling green glow",
+        "texto_locucion": "Las alarmas no indican nada anormal.",
+        "pexels_query": "system nominal screen glitch"
+      },
+      {
+        "id": 11,
+        "prompt": "Dark corner of a cabin, a barely visible, distorted shadow figure merging with wall",
+        "prompt_visual": "Dark corner of a cabin, a barely visible, distorted shadow figure merging with wall",
+        "texto_locucion": "Pero sientes algo, algo no está bien.",
+        "pexels_query": "cabin dark shadow"
+      },
+      {
+        "id": 12,
+        "prompt": "Window to space, reflection of unseen presence in the glass, subtly distorted",
+        "prompt_visual": "Window to space, reflection of unseen presence in the glass, subtly distorted",
+        "texto_locucion": "¿Un reflejo? ¿Una sombra donde no hay luz?",
+        "pexels_query": "spaceship window reflection"
+      },
+      {
+        "id": 13,
+        "prompt": "Hand reaching for a flashlight in the dark, uncertain, grainy texture",
+        "prompt_visual": "Hand reaching for a flashlight in the dark, uncertain, grainy texture",
+        "texto_locucion": "Tu vista busca una explicación lógica.",
+        "pexels_query": "hand flashlight dark"
+      },
+      {
+        "id": 14,
+        "prompt": "Long, winding corridor, perspective showing no end, only darkness ahead",
+        "prompt_visual": "Long, winding corridor, perspective showing no end, only darkness ahead",
+        "texto_locucion": "No la encuentras. Nunca la encuentras.",
+        "pexels_query": "long dark corridor"
+      },
+      {
+        "id": 15,
+        "prompt": "A single, undefined handprint appearing on a fogged window from inside",
+        "prompt_visual": "A single, undefined handprint appearing on a fogged window from inside",
+        "texto_locucion": "Una presión inexplicable roza tu brazo.",
+        "pexels_query": "fogged window handprint"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty sleeping pod in a spaceship, slightly ajar, deep blue lighting",
+        "prompt_visual": "Empty sleeping pod in a spaceship, slightly ajar, deep blue lighting",
+        "texto_locucion": "En el vacío, lo sentiste antes, ¿verdad?",
+        "pexels_query": "spaceship sleeping pod"
+      },
+      {
+        "id": 17,
+        "prompt": "Small personal item (photo, book) placed on a console, slightly out of place",
+        "prompt_visual": "Small personal item (photo, book) placed on a console, slightly out of place",
+        "texto_locucion": "La cabina, tu refugio, se siente ajena.",
+        "pexels_query": "personal item console"
+      },
+      {
+        "id": 18,
+        "prompt": "Shadow of an unknown, non-human form cast across a metal wall",
+        "prompt_visual": "Shadow of an unknown, non-human form cast across a metal wall",
+        "texto_locucion": "Parece que no estabas solo en absoluto.",
+        "pexels_query": "shadow form wall"
+      },
+      {
+        "id": 19,
+        "prompt": "Corridor junction, a dark, indistinct entity standing at the far end",
+        "prompt_visual": "Corridor junction, a dark, indistinct entity standing at the far end",
+        "texto_locucion": "Cada rincón parece albergar una presencia.",
+        "pexels_query": "corridor entity dark"
+      },
+      {
+        "id": 20,
+        "prompt": "Starfield through a window, one star seems unusually bright and focused, almost like an eye",
+        "prompt_visual": "Starfield through a window, one star seems unusually bright and focused, almost like an eye",
+        "texto_locucion": "Miras a la nada, ella te devuelve la mirada.",
+        "pexels_query": "starfield bright star"
+      },
+      {
+        "id": 21,
+        "prompt": "Dashboard display, subtle distortion on the screen, static, like a glitch",
+        "prompt_visual": "Dashboard display, subtle distortion on the screen, static, like a glitch",
+        "texto_locucion": "Nadie lo vio. Solo tú lo percibiste.",
+        "pexels_query": "dashboard static glitch"
+      },
+      {
+        "id": 22,
+        "prompt": "Room in complete darkness, only the faintest outline of furniture visible, profound quiet",
+        "prompt_visual": "Room in complete darkness, only the faintest outline of furniture visible, profound quiet",
+        "texto_locucion": "El silencio absoluto es ahora tu enemigo.",
+        "pexels_query": "dark room quiet"
+      },
+      {
+        "id": 23,
+        "prompt": "Panoramic view of Earth from space, but a vast, dark, unidentifiable shape looms nearby",
+        "prompt_visual": "Panoramic view of Earth from space, but a vast, dark, unidentifiable shape looms nearby",
+        "texto_locucion": "¿Y si la vastedad del cosmos te observa?",
+        "pexels_query": "earth space ominous shape"
+      },
+      {
+        "id": 24,
+        "prompt": "Close-up on a face visor, reflection showing distorted, unidentifiable features of a shadow",
+        "prompt_visual": "Close-up on a face visor, reflection showing distorted, unidentifiable features of a shadow",
+        "texto_locucion": "No puedes ignorarlo, se metió en ti.",
+        "pexels_query": "visor reflection shadow"
+      },
+      {
+        "id": 25,
+        "prompt": "Empty headset, lying on a console, faint static on the earpieces, suggestive of sound",
+        "prompt_visual": "Empty headset, lying on a console, faint static on the earpieces, suggestive of sound",
+        "texto_locucion": "Las voces, los susurros, son muy reales.",
+        "pexels_query": "empty headset static"
+      },
+      {
+        "id": 26,
+        "prompt": "A hand reaching out into empty space, questioning, desperate gesture, dark void",
+        "prompt_visual": "A hand reaching out into empty space, questioning, desperate gesture, dark void",
+        "texto_locucion": "Ahora, ¿cómo puedes diferenciar la realidad?",
+        "pexels_query": "hand reaching void"
+      },
+      {
+        "id": 27,
+        "prompt": "View of Earth from a great distance, appearing small and isolated in the vastness",
+        "prompt_visual": "View of Earth from a great distance, appearing small and isolated in the vastness",
+        "texto_locucion": "La Tierra se ve pequeña, insignificante ahora.",
+        "pexels_query": "earth small distance"
+      },
+      {
+        "id": 28,
+        "prompt": "An object, a pen or tool, floating unnaturally in zero gravity, casting a long shadow",
+        "prompt_visual": "An object, a pen or tool, floating unnaturally in zero gravity, casting a long shadow",
+        "texto_locucion": "¿Y si te trajiste algo de allá arriba?",
+        "pexels_query": "floating object shadow"
+      },
+      {
+        "id": 29,
+        "prompt": "Distorted, blurry outline in a corner of a dark room, almost pareidolia, but unnerving",
+        "prompt_visual": "Distorted, blurry outline in a corner of a dark room, almost pareidolia, but unnerving",
+        "texto_locucion": "Algo que no tiene forma definida, pero existe.",
+        "pexels_query": "distorted outline corner"
+      },
+      {
+        "id": 30,
+        "prompt": "Periphery of vision, blurry, indistinct, something always just out of focus, oppressive dark",
+        "prompt_visual": "Periphery of vision, blurry, indistinct, something always just out of focus, oppressive dark",
+        "texto_locucion": "Sigue estando en tu periferia visual constante.",
+        "pexels_query": "peripheral blur dark"
+      }
+    ],
+    "hooks": [
+      "La cabina te observa.",
+      "El vacío te persigue.",
+      "¿Estás tú solo?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
