@@ -931,6 +931,18 @@ class AIEngine:
         FORMATO 4 — ESCENARIO LÍMITE: "¿Y si una ley física o un fenómeno natural extremo
           ocurriera?" (la Luna se acerca, el Sol cambia, la gravedad falla). Tono científico-
           narrativo. Escalada: primer segundo → hora → día → mes.
+        FORMATO 5 — LA LÍNEA DE TIEMPO: narra un escenario como CRONOLOGÍA precisa, marcando
+          cada salto temporal ("Segundo 1...", "Hora 1...", "Día 30...", "Año 5..."). Cada
+          marca temporal revela una consecuencia nueva. La estructura de cuenta regresiva/
+          progresiva engancha porque el espectador SIEMPRE quiere saber qué pasa "después".
+        FORMATO 6 — LA CADENA DE DOMINÓ: parte de un evento MÍNIMO (una especie desaparece, un
+          cable submarino se corta, un banco quiebra) y muestra el efecto en CASCADA hasta algo
+          global. Cada eslabón desencadena el siguiente con lógica. Enseña pensamiento sistémico:
+          "todo está conectado". El espectador no ve venir hasta dónde escala.
+        FORMATO 7 — EL PUNTO DE NO RETORNO: explora el UMBRAL crítico antes de que un sistema
+          colapse ("¿cuántos grados más?", "¿cuánta deuda más?", "¿cuántas personas más?").
+          Construye tensión alrededor del "¿cuánto falta para el límite?" con datos reales.
+          Cierra mostrando qué tan cerca (o lejos) estamos realmente de ese umbral.
 
         IMPORTANTE — VARIEDAD: rota el formato entre videos. Dos seguidos NO usan el mismo.
 
