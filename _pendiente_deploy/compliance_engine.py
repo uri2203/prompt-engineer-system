@@ -236,6 +236,32 @@ class ComplianceEngine:
                         "Nunca romantizar, glorificar ni humanizar actores criminales."
                     ),
                     "umbral_bloqueo": 1
+                },
+                "Umbral Alterno": {
+                    "restricciones_output": [
+                        "presentar el escenario hipotético como predicción o hecho real confirmado",
+                        "lenguaje catastrofista o alarmista sin base en datos",
+                        "emitir juicios políticos o morales sobre países, gobiernos o personas reales",
+                        "mencionar marcas, países o personas reales de forma negativa sin sustento",
+                        "incitación al pánico, miedo masivo o teorías conspirativas",
+                        "instrucciones de daño real o aprovechamiento de tragedias recientes"
+                    ],
+                    "permitido": [
+                        "escenarios hipotéticos narrados como documental ('imagina que...')",
+                        "proyecciones de futuro basadas en tendencias y datos reales",
+                        "historia alternativa y especulación con base verificable",
+                        "fenómenos físicos o naturales extremos en tono científico-narrativo",
+                        "colapsos de sistemas narrados con rigor y sin sensacionalismo",
+                        "datos reales y estadísticas verificables como base del escenario"
+                    ],
+                    "estrategia_evasion": (
+                        "ENCUADRE DE SIMULACIÓN: todo escenario se presenta explícitamente como "
+                        "hipotético ('imagina que...', 'en este escenario...'), nunca como predicción. "
+                        "Cerrar siempre recordando que es una simulación. Partir de datos reales para "
+                        "dar plausibilidad, pero sin afirmar que ocurrirá. Tono documental sobrio, "
+                        "nunca catastrofista. Sin juicios políticos ni morales."
+                    ),
+                    "umbral_bloqueo": 2
                 }
             }
         }
