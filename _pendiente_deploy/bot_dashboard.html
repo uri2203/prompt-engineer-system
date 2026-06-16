@@ -1,0 +1,981 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="flex-1 flex flex-col p-8 overflow-y-auto bg-[#0B1120] scrollbar-hide relative">
+    
+    <header class="mb-8 border-b border-slate-800 pb-4 flex justify-between items-end">
+        <div>
+            <h2 class="text-3xl font-black text-emerald-500 mb-1 tracking-tighter flex items-center">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                BOT PINPINELA 24/7
+            </h2>
+            <p class="text-slate-400 text-xs font-mono uppercase tracking-widest">Centro de Mando Asíncrono - Producción End-to-End</p>
+        </div>
+        <div class="flex space-x-3">
+            <button onclick="abrirModalAgenda()" class="bg-[#1e293b] text-slate-300 px-4 py-2 rounded text-xs font-bold border border-slate-700 hover:bg-slate-700 transition-colors">VER CALENDARIO</button>
+            <button onclick="abrirModalOrquestador()" class="bg-[#1e293b] text-cyan-300 px-4 py-2 rounded text-xs font-bold border border-cyan-700/50 hover:bg-cyan-900/30 transition-colors">⚙ ORQUESTADOR DE LOTES</button>
+            <button onclick="abrirModalOrden()" class="bg-emerald-600 text-white px-6 py-2 rounded text-xs font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/50">+ NUEVA ORDEN DE PRODUCCIÓN</button>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full pb-10">
+        
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
+                <h3 class="text-[#3b82f6] font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>1. Scripting Engine</h3>
+                <span id="bot_scripting_estado" class="text-slate-500 text-xs">Sistema Operativo</span>
+            </div>
+            
+            <div class="space-y-3 flex-1 overflow-y-auto pr-2" id="scripting_queue">
+                <div id="status_scripting" class="bg-[#0B1120] p-4 rounded border border-slate-800 relative overflow-hidden hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-white text-sm font-bold" id="task_title">Generación en Curso</span>
+                        <span class="text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono" id="task_badge">PROCESANDO...</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-2 font-mono" id="task_desc">Extrayendo ADN de JSON y conectando a Gemini API.</p>
+                    <div class="w-full bg-slate-800 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full animate-pulse" style="width: 100%"></div></div>
+                </div>
+
+                <!-- Cola real + agenda (se llena por JS) -->
+                <div id="bot_agenda_resumen"></div>
+                <div id="bot_cola_resumen">
+                    <div class="bg-[#0B1120] p-4 rounded border border-slate-800 relative opacity-60">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-slate-300 text-sm font-bold">Monitor Orquestador</span>
+                            <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">EN ESPERA</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-mono">Esperando disparador manual o Cronjob.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
+                <h3 class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-cyan-400 mr-2 animate-pulse"></span>2. Consola del Orquestador</h3>
+                <span id="orq_panel_badge" class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">INACTIVO</span>
+            </div>
+
+            <!-- Banner de llaves problemáticas (posible baneo) -->
+            <div id="orq_alerta_llaves" class="hidden bg-red-950/40 border border-red-700 rounded-lg p-3 mb-3">
+                <span class="text-red-400 font-bold text-[10px] uppercase tracking-widest">⚠️ API Keys que necesitan cambio</span>
+                <div id="orq_lista_llaves_mal" class="space-y-1 mt-2"></div>
+                <p class="text-[9px] text-red-300/60 font-mono mt-2">Cámbialas en Configuración → Bóveda. El sistema sigue usando las demás.</p>
+            </div>
+
+            <!-- Salud de las llaves -->
+            <div id="orq_salud_llaves" class="bg-[#0B1120] border border-slate-800 rounded p-2.5 mb-3 hidden">
+                <span class="text-[9px] text-purple-400 font-bold uppercase tracking-widest">Llaves Gemini</span>
+                <p id="orq_salud_texto" class="text-[11px] text-slate-400 font-mono mt-0.5">—</p>
+            </div>
+
+            <!-- Consola de logs (estilo terminal manual) -->
+            <div id="orq_consola" class="bg-black rounded-lg border border-slate-800 p-4 flex-1 min-h-[220px] max-h-[340px] overflow-y-auto font-mono text-[11px] text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">&gt; Consola del orquestador lista. Esperando actividad del lote...</div>
+
+            <!-- Botones de control de cola -->
+            <div class="flex gap-2 mt-3 pt-3 border-t border-slate-800">
+                <button onclick="detenerLoteOrq()" class="flex-1 bg-amber-700/50 text-amber-200 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-amber-700/50 hover:bg-amber-700 transition-colors">⏹ Detener Lote</button>
+                <button onclick="limpiarColaOrq()" class="flex-1 bg-red-800/50 text-red-200 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-red-800/50 hover:bg-red-800 transition-colors">🗑 Limpiar Cola</button>
+                <button onclick="document.getElementById('orq_consola').innerHTML='&gt; Consola limpiada.'" class="bg-slate-800 text-slate-400 px-3 py-2 rounded text-[9px] font-bold uppercase tracking-widest border border-slate-700 hover:bg-slate-700 transition-colors">Limpiar Log</button>
+            </div>
+        </div>
+
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
+                <h3 class="text-amber-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>3. Videos Terminados (lote actual)</h3>
+                <span id="orq_terminados_badge" class="text-slate-500 text-xs font-mono">0 listos</span>
+            </div>
+            <div id="orq_terminados" class="bg-black rounded-lg border border-slate-800 p-4 flex-1 min-h-[220px] max-h-[340px] overflow-y-auto font-mono text-[11px] text-green-500 whitespace-pre-wrap shadow-inner custom-scrollbar">&gt; Aún no hay videos terminados en este lote.</div>
+        </div>
+
+        <div class="bg-[#0F1523] border border-slate-800 rounded-xl p-5 shadow-lg flex flex-col">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-800 pb-3">
+                <h3 class="text-emerald-500 font-bold text-[10px] uppercase tracking-widest flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>4. Review & Publishing Queue</h3>
+                <span class="text-emerald-500 text-xs font-bold border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 rounded" id="queue_count">0 PENDIENTES</span>
+            </div>
+            
+            <div class="space-y-3 flex-1 overflow-y-auto pr-2" id="review_queue">
+                <p class="text-slate-500 text-xs text-center mt-10">La cola de revisión humana está limpia.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_orden" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-[#0F1523] border border-slate-700 rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
+            
+            <div class="bg-[#1e293b] px-6 py-4 border-b border-slate-700 flex justify-between items-center">
+                <h3 class="text-white font-bold tracking-tight flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    Parametrización de Orquestador (Nueva Orden)
+                </h3>
+                <button onclick="cerrarModalOrden()" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-5">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="label-blue block mb-2 text-[10px] text-[#60a5fa] font-bold uppercase tracking-widest">Canal / Marca</label>
+                        <select id="orden_marca" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-blue-500 outline-none transition-colors">
+                            <option value="La Viuda">La Viuda (Terror)</option>
+                            <option value="Monkygraff">Monkygraff (Geopolítica)</option>
+                            <option value="FiltradoMX">FiltradoMX (Drama)</option>
+                            <option value="LaesquinaRandom">LaesquinaRandom (Curiosidades)</option>
+                            <option value="TuIALista">TuIALista (IA / Tech)</option>
+                <option value="Umbral Alterno">Umbral Alterno (Escenarios)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="label-blue block mb-2 text-[10px] text-amber-500 font-bold uppercase tracking-widest">Formato de Render (FFmpeg)</label>
+                        <select id="orden_formato" onchange="onCambioFormatoOrden()" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-amber-500 outline-none transition-colors">
+                            <option value="16:9">YouTube Clásico (16:9 - 1280x720)</option>
+                            <option value="9:16">TikTok / Shorts (9:16 - 720x1280)</option>
+                        </select>
+                        <div id="orden_duracion_wrap" class="mt-2">
+                            <label class="block mb-1 text-[9px] text-cyan-400 font-bold uppercase tracking-widest">Duración del video largo</label>
+                            <select id="orden_duracion" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-cyan-500 outline-none transition-colors">
+                                <option value="15">15 minutos</option>
+                                <option value="28" selected>28 minutos</option>
+                                <option value="45">45 minutos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="label-blue block text-[10px] text-purple-400 font-bold uppercase tracking-widest">Premisa / Instrucción de Guion</label>
+                        <button onclick="sugerirTema()" id="btn_sugerir" type="button" class="text-[9px] bg-blue-900/40 hover:bg-blue-800/60 text-blue-300 px-3 py-1 rounded font-bold uppercase tracking-widest border border-blue-700/50 transition-colors flex items-center">
+                            <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Sugerir tema en tendencia
+                        </button>
+                    </div>
+                    <textarea id="orden_premisa" rows="3" class="w-full bg-[#0B1120] border border-slate-700 rounded p-3 text-sm text-slate-200 focus:border-purple-500 outline-none transition-colors placeholder-slate-600 font-mono" placeholder="Ej: Episodio sobre un búnker militar bajo una ciudad moderna. Aplicar vacío de información extremo..."></textarea>
+                    <p id="tema_hint" class="text-[9px] text-slate-500 mt-1 font-mono hidden"></p>
+                </div>
+
+                <div class="bg-[#0B1120] border border-slate-700 p-4 rounded-lg flex justify-between items-center">
+                    <div class="flex-1">
+                        <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1">Modo de Ejecución</label>
+                        <select id="orden_reloj" onchange="onCambioReloj()" class="bg-[#0F1523] text-white font-bold text-sm outline-none cursor-pointer border border-slate-700 rounded px-3 py-2 w-full" style="color-scheme: dark;">
+                            <option value="inmediato">⚡ Ejecutar Inmediatamente</option>
+                            <option value="cron_noche">📅 Programar fecha y hora...</option>
+                        </select>
+                        <p class="text-[9px] text-slate-500 mt-2 font-mono">Para agendar con fecha/hora exacta usa "Ver Calendario" arriba.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 ml-3">
+                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e293b] px-6 py-4 border-t border-slate-700 flex justify-end space-x-3">
+                <button onclick="cerrarModalOrden()" class="px-5 py-2 rounded text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors border border-transparent">CANCELAR</button>
+                <button onclick="ejecutarOrden()" id="btn_modal_ejecutar" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded text-xs font-bold transition-colors shadow-lg shadow-emerald-900/50">INYECTAR A LA LÍNEA DE ENSAMBLAJE</button>
+            </div>
+        </div>
+    <div id="modal_agenda" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-[#0F1523] border border-slate-700 rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden max-h-[90vh] flex flex-col">
+            <div class="bg-[#1e293b] px-6 py-4 border-b border-slate-700 flex justify-between items-center">
+                <h3 class="text-white font-bold tracking-tight flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Calendario de Producción Automática
+                </h3>
+                <button onclick="cerrarModalAgenda()" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto">
+                <!-- Formulario nueva programación -->
+                <div class="bg-[#0B1120] border border-slate-700 rounded-lg p-4 mb-5">
+                    <h4 class="text-[10px] text-emerald-400 font-bold uppercase tracking-widest mb-3">Programar Producción</h4>
+                    <div class="grid grid-cols-2 gap-3 mb-3">
+                        <div>
+                            <label class="block mb-1 text-[9px] text-blue-400 font-bold uppercase tracking-widest">Canal</label>
+                            <select id="ag_marca" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-blue-500">
+                                <option value="La Viuda">La Viuda</option>
+                                <option value="Monkygraff">Monkygraff</option>
+                                <option value="FiltradoMX">FiltradoMX</option>
+                                <option value="LaesquinaRandom">LaesquinaRandom</option>
+                                <option value="TuIALista">TuIALista</option>
+                <option value="Umbral Alterno">Umbral Alterno</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-[9px] text-amber-500 font-bold uppercase tracking-widest">Formato</label>
+                            <select id="ag_formato" onchange="onCambioFormatoAgenda()" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-amber-500">
+                                <option value="9:16">Short 9:16</option>
+                                <option value="16:9">Largo 16:9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="ag_duracion_wrap" class="mb-3 hidden">
+                        <label class="block mb-1 text-[9px] text-cyan-400 font-bold uppercase tracking-widest">Duración del video largo</label>
+                        <select id="ag_duracion" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                            <option value="15">15 minutos</option>
+                            <option value="28" selected>28 minutos</option>
+                            <option value="45">45 minutos</option>
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mb-3">
+                        <div>
+                            <label class="block mb-1 text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Fecha</label>
+                            <input type="date" id="ag_fecha" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-emerald-500" style="color-scheme: dark;">
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-[9px] text-purple-400 font-bold uppercase tracking-widest">Hora</label>
+                            <input type="time" id="ag_hora" value="08:00" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-purple-500" style="color-scheme: dark;">
+                        </div>
+                        <div>
+                            <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Repetir</label>
+                            <select id="ag_repetir" class="w-full bg-[#0F1523] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-slate-500">
+                                <option value="una_vez">Una sola vez</option>
+                                <option value="diario">Cada día</option>
+                                <option value="semanal">Cada semana</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="agregarAgenda()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded text-[10px] font-bold uppercase tracking-widest transition-colors">+ Agendar producción</button>
+                </div>
+
+                <!-- Agenda actual -->
+                <h4 class="text-[10px] text-slate-300 font-bold uppercase tracking-widest mb-3">Producciones Programadas</h4>
+                <div id="lista_agenda" class="space-y-2">
+                    <p class="text-slate-500 text-xs text-center py-4">Cargando agenda...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ MODAL ORQUESTADOR DE LOTES ══════════ -->
+    <div id="modal_orquestador" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-[#0F1523] border border-cyan-800/50 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-5 border-b border-slate-800 sticky top-0 bg-[#0F1523] z-10">
+                <h2 class="text-cyan-400 font-bold text-sm uppercase tracking-widest flex items-center">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 mr-2 animate-pulse"></span>
+                    Orquestador de Lotes — Producción Masiva
+                </h2>
+                <button onclick="cerrarModalOrquestador()" class="text-slate-400 hover:text-white transition-colors text-xl">&times;</button>
+            </div>
+
+            <div class="p-5 space-y-5">
+                <!-- Progreso en vivo -->
+                <div id="orq_progreso" class="bg-[#0B1120] border border-slate-800 rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">Estado del Lote</span>
+                        <span id="orq_estado_badge" class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">INACTIVO</span>
+                    </div>
+                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
+                        <div id="orq_barra" class="bg-cyan-500 h-2 rounded-full transition-all" style="width: 0%"></div>
+                    </div>
+                    <p id="orq_progreso_texto" class="text-xs text-slate-400 font-mono">0 de 0 videos completados</p>
+                    <p id="orq_trabajo_actual" class="text-xs text-slate-500 font-mono mt-1"></p>
+                    <p id="orq_mensaje" class="text-[11px] text-cyan-300/70 font-mono mt-1"></p>
+                </div>
+
+                <!-- Configuración del plan -->
+                <div>
+                    <label class="block mb-2 text-[10px] text-amber-500 font-bold uppercase tracking-widest">Plan de Producción (por canal)</label>
+                    <div id="orq_marcas" class="space-y-2"></div>
+                </div>
+
+                <!-- Opciones globales -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Enfriamiento entre videos (seg)</label>
+                        <input type="number" id="orq_enfriamiento" value="180" min="0" class="w-full bg-[#0B1120] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-[9px] text-slate-400 font-bold uppercase tracking-widest">Orden de producción</label>
+                        <select id="orq_orden" class="w-full bg-[#0B1120] border border-slate-700 rounded p-2.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                            <option value="shorts_primero">Shorts primero (resultados rápidos)</option>
+                            <option value="largos_primero">Largos primero</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="flex gap-2 pt-2 border-t border-slate-800">
+                    <button onclick="guardarPlanOrq()" class="bg-[#1e293b] text-slate-300 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-slate-700 hover:bg-slate-700 transition-colors">Guardar Plan</button>
+                    <button onclick="controlLote('iniciar')" class="bg-cyan-600 text-white px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-cyan-500 transition-colors shadow-lg shadow-cyan-900/50">▶ Iniciar Lote</button>
+                    <button onclick="controlLote('pausar')" class="bg-amber-700/60 text-amber-200 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-amber-700/50 hover:bg-amber-700 transition-colors">⏸ Pausar</button>
+                    <button onclick="controlLote('reanudar')" class="bg-emerald-700/60 text-emerald-200 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-emerald-700/50 hover:bg-emerald-700 transition-colors">▶ Reanudar</button>
+                    <button onclick="controlLote('cancelar')" class="bg-red-900/40 text-red-300 px-4 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest border border-red-800/50 hover:bg-red-900/60 transition-colors">🛑 Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const DIAS_NOMBRE = ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM'];
+
+    // ══════════ ORQUESTADOR DE LOTES ══════════
+    const ORQ_CANALES = ["La Viuda", "Monkygraff", "FiltradoMX", "LaesquinaRandom", "TuIALista", "Umbral Alterno"];
+    let _orqInterval = null;
+
+    function abrirModalOrquestador() {
+        document.getElementById('modal_orquestador').classList.remove('hidden');
+        renderMarcasOrq();
+        cargarPlanOrq();
+        actualizarProgresoOrq();
+    }
+    function cerrarModalOrquestador() {
+        document.getElementById('modal_orquestador').classList.add('hidden');
+    }
+
+    // Limpia la vista del panel de inmediato (sin esperar a GitHub), para que tras
+    // cancelar/limpiar no quede el estado viejo "trabado". El ciclo normal luego
+    // confirma con el estado real leído del servidor.
+    function liberarPanelLote() {
+        const inactivoCls = 'bg-slate-800 text-slate-400';
+        const panelBadge = document.getElementById('orq_panel_badge');
+        if (panelBadge) { panelBadge.textContent = 'INACTIVO'; panelBadge.className = `text-[9px] px-2 py-1 rounded font-mono ${inactivoCls}`; }
+        const barra = document.getElementById('orq_barra');
+        if (barra) barra.style.width = '0%';
+        const pt = document.getElementById('orq_progreso_texto');
+        if (pt) pt.textContent = '0 de 0 videos completados (0%)';
+        const ta = document.getElementById('orq_trabajo_actual');
+        if (ta) ta.textContent = '';
+        const om = document.getElementById('orq_mensaje');
+        if (om) om.textContent = '';
+        const badge = document.getElementById('orq_estado_badge');
+        if (badge) { badge.textContent = 'INACTIVO'; badge.className = `text-[9px] px-2 py-1 rounded font-mono ${inactivoCls}`; }
+        _orqUltimoTrabajo = ''; _orqUltimoMensaje = '';
+    }
+
+    // Detener el lote (manda cancelar). La consola del panel lo reflejará.
+    async function detenerLoteOrq() {
+        if (!confirm('¿Detener el lote en curso? Se cancelará la producción actual.')) return;
+        try {
+            await fetch('/api/bot/lote_control', {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({accion: 'cancelar'})
+            });
+            _orqLog('⏹ Lote detenido por el operador.', 'text-amber-400');
+            liberarPanelLote();
+            setTimeout(actualizarProgresoOrq, 2500);
+        } catch (e) { _orqLog('Error al detener el lote.', 'text-red-400'); }
+    }
+
+    // Limpiar/resetear la cola completa (memoria + disco + control del lote)
+    async function limpiarColaOrq() {
+        if (!confirm('¿Limpiar y resetear TODA la cola de encolado? Esto borra las órdenes pendientes para empezar fresco.')) return;
+        try {
+            const r = await fetch('/api/bot/limpiar_cola', {method: 'POST'});
+            const d = await r.json();
+            _orqLog(`🗑 Cola reseteada: ${d.cola_memoria_eliminada||0} en memoria, ${d.archivos_disco_eliminados||0} archivos.`, 'text-red-400');
+            liberarPanelLote();
+            setTimeout(actualizarProgresoOrq, 2500);
+        } catch (e) { _orqLog('Error al limpiar la cola.', 'text-red-400'); }
+    }
+
+    // Pinta una fila por canal: # shorts, # largos, duración de largos
+    function renderMarcasOrq() {
+        const cont = document.getElementById('orq_marcas');
+        cont.innerHTML = ORQ_CANALES.map(canal => `
+            <div class="bg-[#0B1120] border border-slate-800 rounded p-3 flex items-center gap-3" data-canal="${canal}">
+                <span class="text-xs text-slate-200 font-bold flex-1">${canal}</span>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-slate-500 uppercase">Shorts</label>
+                    <input type="number" min="0" value="0" class="orq-shorts w-14 bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 text-center outline-none focus:border-emerald-500">
+                </div>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-slate-500 uppercase">Largos</label>
+                    <input type="number" min="0" value="0" class="orq-largos w-14 bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 text-center outline-none focus:border-amber-500">
+                </div>
+                <div class="flex items-center gap-1">
+                    <label class="text-[9px] text-cyan-500 uppercase">Duración</label>
+                    <select class="orq-duracion bg-[#0F1523] border border-slate-700 rounded p-1.5 text-xs text-slate-200 outline-none focus:border-cyan-500">
+                        <option value="15">15 min</option>
+                        <option value="28" selected>28 min</option>
+                        <option value="45">45 min</option>
+                    </select>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Lee la configuración de la UI y arma el plan
+    function leerPlanDeUI() {
+        const marcas = [];
+        document.querySelectorAll('#orq_marcas [data-canal]').forEach(fila => {
+            const canal = fila.getAttribute('data-canal');
+            const shorts = parseInt(fila.querySelector('.orq-shorts').value) || 0;
+            const largos = parseInt(fila.querySelector('.orq-largos').value) || 0;
+            const duracion = parseInt(fila.querySelector('.orq-duracion').value) || 28;
+            if (shorts > 0 || largos > 0) {
+                marcas.push({ marca: canal, shorts, largos, duracion_min: duracion });
+            }
+        });
+        return {
+            marcas,
+            enfriamiento_seg: parseInt(document.getElementById('orq_enfriamiento').value) || 180,
+            orden: document.getElementById('orq_orden').value,
+        };
+    }
+
+    async function guardarPlanOrq() {
+        const plan = leerPlanDeUI();
+        if (plan.marcas.length === 0) {
+            alert("Configura al menos un canal con shorts o largos antes de guardar.");
+            return;
+        }
+        await fetch('/api/bot/plan_semanal', {
+            method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(plan)
+        });
+        alert("Plan guardado. Pulsa 'Iniciar Lote' para empezar la producción.");
+    }
+
+    async function cargarPlanOrq() {
+        try {
+            const r = await fetch('/api/bot/plan_semanal');
+            const plan = await r.json();
+            if (plan.enfriamiento_seg) document.getElementById('orq_enfriamiento').value = plan.enfriamiento_seg;
+            if (plan.orden) document.getElementById('orq_orden').value = plan.orden;
+            (plan.marcas || []).forEach(m => {
+                const fila = document.querySelector(`#orq_marcas [data-canal="${m.marca}"]`);
+                if (fila) {
+                    fila.querySelector('.orq-shorts').value = m.shorts || 0;
+                    fila.querySelector('.orq-largos').value = m.largos || 0;
+                    if (m.duracion_min) fila.querySelector('.orq-duracion').value = m.duracion_min;
+                }
+            });
+        } catch (e) {}
+    }
+
+    async function controlLote(accion) {
+        if (accion === 'iniciar') {
+            // Guardar el plan actual antes de iniciar
+            const plan = leerPlanDeUI();
+            if (plan.marcas.length === 0) {
+                alert("Configura al menos un canal antes de iniciar el lote.");
+                return;
+            }
+            await fetch('/api/bot/plan_semanal', {
+                method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(plan)
+            });
+        }
+        if (accion === 'cancelar' && !confirm("¿Seguro que quieres cancelar el lote en curso?")) return;
+        await fetch('/api/bot/lote_control', {
+            method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ accion })
+        });
+        if (accion === 'cancelar' && typeof liberarPanelLote === 'function') liberarPanelLote();
+        setTimeout(actualizarProgresoOrq, 2500);
+    }
+
+    let _orqUltimoMensaje = "";
+    let _orqUltimoTrabajo = "";
+    function _orqLog(texto, color) {
+        const c = document.getElementById('orq_consola');
+        if (!c) return;
+        const hora = new Date().toLocaleTimeString('es-MX', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+        const colorCls = color || 'text-green-500';
+        c.innerHTML += `\n<span class="${colorCls}">[${hora}] ${texto}</span>`;
+        c.scrollTop = c.scrollHeight;
+    }
+
+    async function actualizarProgresoOrq() {
+        try {
+            const r = await fetch('/api/bot/lote_progreso');
+            const p = await r.json();
+            const total = p.total || 0, comp = p.completados || 0, fall = p.fallidos || 0;
+            const pct = total > 0 ? Math.round(((comp + fall) / total) * 100) : 0;
+            const estados = {
+                produciendo: ['PRODUCIENDO', 'bg-cyan-900 text-cyan-300'],
+                pausado: ['PAUSADO', 'bg-amber-900 text-amber-300'],
+                esperando_nodo: ['ESPERANDO NODO', 'bg-red-900 text-red-300'],
+                esperando_cuota: ['ESPERANDO CUOTA', 'bg-purple-900 text-purple-300'],
+                completado: ['COMPLETADO', 'bg-emerald-900 text-emerald-300'],
+                cancelado: ['CANCELADO', 'bg-slate-800 text-slate-400'],
+                inactivo: ['INACTIVO', 'bg-slate-800 text-slate-400'],
+            };
+            const [txt, cls] = estados[p.estado_lote] || estados.inactivo;
+            // Badge del panel fijo (sección 2)
+            const panelBadge = document.getElementById('orq_panel_badge');
+            if (panelBadge) { panelBadge.textContent = txt; panelBadge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`; }
+            // Elementos del modal (solo si está montado)
+            const barra = document.getElementById('orq_barra');
+            if (barra) {
+                barra.style.width = pct + '%';
+                const txtFall = fall > 0 ? ` · ${fall} fallidos` : '';
+                document.getElementById('orq_progreso_texto').textContent = `${comp} de ${total} videos completados (${pct}%)${txtFall}`;
+                document.getElementById('orq_trabajo_actual').textContent = p.trabajo_actual || '';
+                document.getElementById('orq_mensaje').textContent = p.mensaje || '';
+                const badge = document.getElementById('orq_estado_badge');
+                if (badge) { badge.textContent = txt; badge.className = `text-[9px] px-2 py-1 rounded font-mono ${cls}`; }
+            }
+
+            // Consola: registrar cambios de trabajo y de mensaje (sin duplicar)
+            if (p.trabajo_actual && p.trabajo_actual !== _orqUltimoTrabajo) {
+                _orqLog('› ' + p.trabajo_actual, 'text-cyan-400');
+                _orqUltimoTrabajo = p.trabajo_actual;
+            }
+            if (p.mensaje && p.mensaje !== _orqUltimoMensaje) {
+                let color = 'text-green-500';
+                const m = p.mensaje.toLowerCase();
+                if (m.includes('falló') || m.includes('fallo') || m.includes('error') || m.includes('omite')) color = 'text-red-400';
+                else if (m.includes('cuota') || m.includes('enfriamiento') || m.includes('esperando')) color = 'text-yellow-400';
+                else if (m.includes('completado') || m.includes('completa')) color = 'text-blue-400';
+                _orqLog(p.mensaje, color);
+                _orqUltimoMensaje = p.mensaje;
+            }
+            // Sección 3: videos terminados del lote
+            pintarVideosTerminados(p.historial);
+        } catch (e) {}
+        // Salud de las llaves (independiente del progreso)
+        actualizarSaludLlaves();
+    }
+
+    let _orqHistFirma = "";
+    function pintarVideosTerminados(historial) {
+        const cont = document.getElementById('orq_terminados');
+        const badge = document.getElementById('orq_terminados_badge');
+        if (!cont) return;
+        if (!historial || historial.length === 0) {
+            if (_orqHistFirma !== "") {  // se reinició el lote
+                cont.innerHTML = '&gt; Aún no hay videos terminados en este lote.';
+                _orqHistFirma = "";
+            }
+            if (badge) badge.textContent = '0 listos';
+            return;
+        }
+        // Firma para repintar solo si cambió
+        const firma = historial.map(h => h.n).join(',');
+        if (firma === _orqHistFirma) return;
+        _orqHistFirma = firma;
+        const fmtDur = (seg) => {
+            if (!seg || seg <= 0) return '';
+            const m = Math.floor(seg / 60), s = Math.round(seg % 60);
+            return `${m}:${String(s).padStart(2,'0')}`;
+        };
+        const lineas = historial.map(h => {
+            let linea = `<span class="text-blue-400">[${h.hora}] ✓ ${h.marca} · ${h.tipo}`;
+            if (h.tipo === 'Largo') {
+                linea += ` ${h.formato}`;
+                if (h.duracion_sel) linea += ` · ${h.duracion_sel} min`;
+                const real = fmtDur(h.duracion_real_seg);
+                if (real) linea += ` <span class="text-slate-500">(real ${real})</span>`;
+            } else {
+                linea += ` ${h.formato}`;
+                const real = fmtDur(h.duracion_real_seg);
+                if (real) linea += ` <span class="text-slate-500">(${real})</span>`;
+            }
+            return linea + '</span>';
+        });
+        cont.innerHTML = lineas.join('\n');
+        cont.scrollTop = cont.scrollHeight;
+        if (badge) badge.textContent = `${historial.length} listos`;
+    }
+
+    let _orqLlavesAvisadas = "";
+    async function actualizarSaludLlaves() {
+        try {
+            const r = await fetch('/api/bot/salud_llaves');
+            const s = await r.json();
+            // Resumen de llaves
+            const cont = document.getElementById('orq_salud_llaves');
+            const texto = document.getElementById('orq_salud_texto');
+            if (s.total_llaves > 0) {
+                cont.classList.remove('hidden');
+                texto.textContent = `${s.disponibles}/${s.total_llaves} disponibles` +
+                    (s.en_pausa.length ? ` · ${s.en_pausa.length} en enfriamiento` : '') +
+                    (s.problematicas.length ? ` · ${s.problematicas.length} con problema` : '');
+            }
+            // Banner de llaves problemáticas (posible baneo)
+            const alerta = document.getElementById('orq_alerta_llaves');
+            const lista = document.getElementById('orq_lista_llaves_mal');
+            if (s.problematicas && s.problematicas.length > 0) {
+                alerta.classList.remove('hidden');
+                lista.innerHTML = s.problematicas.map(k =>
+                    `<div class="text-[11px] font-mono text-red-300">› API #${k.indice} — ${k.fallos} fallos, ${k.horas}h fallando${k.ultimo_error ? ' ('+k.ultimo_error+')' : ''}</div>`
+                ).join('');
+                // Avisar en consola una sola vez por combinación de llaves
+                const firma = s.problematicas.map(k => k.indice).join(',');
+                if (firma !== _orqLlavesAvisadas) {
+                    s.problematicas.forEach(k =>
+                        _orqLog(`⚠️ API #${k.indice} lleva ${k.horas}h fallando (${k.fallos} fallos) — POSIBLE BANEO, cámbiala.`, 'text-red-400')
+                    );
+                    _orqLlavesAvisadas = firma;
+                }
+            } else {
+                alerta.classList.add('hidden');
+            }
+        } catch (e) {}
+    }
+    const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+    // Fecha local en formato YYYY-MM-DD (NO usar toISOString que da UTC y desfasa el día)
+    function fechaLocalHoy() {
+        const a = new Date();
+        const y = a.getFullYear();
+        const m = String(a.getMonth()+1).padStart(2,'0');
+        const d = String(a.getDate()).padStart(2,'0');
+        return `${y}-${m}-${d}`;
+    }
+
+    function abrirModalAgenda() {
+        document.getElementById('modal_agenda').classList.remove('hidden');
+        const hoy = fechaLocalHoy();
+        const fechaInput = document.getElementById('ag_fecha');
+        fechaInput.min = hoy;
+        if (!fechaInput.value || fechaInput.value < hoy) fechaInput.value = hoy;
+        // Al cambiar la fecha, recalcular la hora mínima
+        fechaInput.onchange = ajustarHoraMinima;
+        ajustarHoraMinima();
+        cargarAgenda();
+    }
+    function cerrarModalAgenda() { document.getElementById('modal_agenda').classList.add('hidden'); }
+
+    // Si la fecha elegida es hoy, bloquear las horas que ya pasaron
+    function ajustarHoraMinima() {
+        const ahora = new Date();
+        const hoy = fechaLocalHoy();
+        const fecha = document.getElementById('ag_fecha').value;
+        const horaInput = document.getElementById('ag_hora');
+        if (fecha === hoy) {
+            // hora mínima = hora actual + 2 minutos (margen)
+            const min = new Date(ahora.getTime() + 2*60000);
+            const hh = String(min.getHours()).padStart(2,'0');
+            const mm = String(min.getMinutes()).padStart(2,'0');
+            const minStr = `${hh}:${mm}`;
+            horaInput.min = minStr;
+            if (horaInput.value && horaInput.value < minStr) horaInput.value = minStr;
+        } else {
+            horaInput.min = '00:00';
+        }
+    }
+
+    async function agregarAgenda() {
+        const fecha = document.getElementById('ag_fecha').value;
+        const hora = document.getElementById('ag_hora').value;
+        const repetir = document.getElementById('ag_repetir').value;
+        if (!fecha || !hora) { alert('Selecciona fecha y hora'); return; }
+
+        // Validar que no sea en el pasado (solo aplica a "una vez")
+        if (repetir === 'una_vez') {
+            const objetivo = new Date(`${fecha}T${hora}`);
+            if (objetivo.getTime() <= Date.now()) {
+                alert('Esa fecha y hora ya pasó. Elige un momento futuro.');
+                return;
+            }
+        }
+        const formato = document.getElementById('ag_formato').value;
+        const payload = {
+            accion: 'agregar',
+            marca: document.getElementById('ag_marca').value,
+            formato: formato,
+            duracion_min: formato === '16:9' ? parseInt(document.getElementById('ag_duracion').value) : null,
+            fecha: fecha,
+            hora: hora,
+            repetir: repetir,
+        };
+        await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        cargarAgenda();
+        actualizarEstadoBot();
+    }
+
+    // Mostrar/ocultar el selector de duración según el formato (solo largos)
+    function onCambioFormatoAgenda() {
+        const formato = document.getElementById('ag_formato').value;
+        const wrap = document.getElementById('ag_duracion_wrap');
+        if (wrap) wrap.classList.toggle('hidden', formato !== '16:9');
+    }
+
+    function formatFecha(f) {
+        try {
+            const [y,m,d] = f.split('-');
+            return `${parseInt(d)} ${MESES[parseInt(m)-1]} ${y}`;
+        } catch(e) { return f; }
+    }
+    const REPETIR_LABEL = {una_vez:'Una vez', diario:'Diario', semanal:'Semanal'};
+
+    async function cargarAgenda() {
+        try {
+            const res = await fetch('/api/bot/cron/config');
+            const cfg = await res.json();
+            const agenda = cfg.agenda || [];
+            const cont = document.getElementById('lista_agenda');
+            if (agenda.length === 0) {
+                cont.innerHTML = '<p class="text-slate-500 text-xs text-center py-4">Sin producciones programadas. Agenda una arriba.</p>';
+                return;
+            }
+            // Ordenar por fecha+hora
+            agenda.sort((a,b) => (a.fecha+a.hora).localeCompare(b.fecha+b.hora));
+            cont.innerHTML = agenda.map(e => `
+                <div class="bg-[#0B1120] border ${e.activo ? 'border-emerald-900/50' : 'border-slate-800'} rounded-lg p-3 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full ${e.activo ? 'bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.7)]' : 'bg-slate-600'}"></span>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-white text-sm font-bold">${e.marca}</span>
+                                <span class="text-[9px] bg-amber-900/40 text-amber-300 px-1.5 py-0.5 rounded font-mono">${e.formato}</span>
+                                <span class="text-[9px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded font-mono">${REPETIR_LABEL[e.repetir]||e.repetir}</span>
+                            </div>
+                            <p class="text-[11px] text-emerald-400 font-mono mt-1">📅 ${formatFecha(e.fecha)} · ⏰ ${e.hora}${e.ejecutado ? ' · <span class="text-slate-500">EJECUTADO</span>' : ''}</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="toggleAgenda('${e.id}')" class="text-[9px] px-3 py-1.5 rounded font-bold border ${e.activo ? 'border-amber-700/50 text-amber-400' : 'border-emerald-700/50 text-emerald-400'} hover:bg-slate-800 transition-colors">${e.activo ? 'PAUSAR' : 'ACTIVAR'}</button>
+                        <button onclick="eliminarAgenda('${e.id}')" class="text-[9px] px-3 py-1.5 rounded font-bold border border-red-900/50 text-red-400 hover:bg-red-900/20 transition-colors">ELIMINAR</button>
+                    </div>
+                </div>
+            `).join('');
+        } catch(e) {
+            document.getElementById('lista_agenda').innerHTML = '<p class="text-red-400 text-xs text-center py-4">Error al cargar agenda</p>';
+        }
+    }
+
+    async function toggleAgenda(id) {
+        await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({accion:'toggle', id:id}) });
+        cargarAgenda();
+    }
+    async function eliminarAgenda(id) {
+        await fetch('/api/bot/cron/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({accion:'eliminar', id:id}) });
+        cargarAgenda();
+    }
+
+    async function actualizarEstadoBot() {
+        try {
+            const res = await fetch('/api/bot/estado');
+            const d = await res.json();
+            // Bloque 1: Scripting / cronjob
+            const scr = document.getElementById('bot_scripting_estado');
+            if (scr) {
+                if (d.scripting.cron_activo) {
+                    scr.innerText = `Cronjob ACTIVO · ${d.scripting.cron_hora}`;
+                    scr.className = "text-emerald-400 text-xs font-bold";
+                } else {
+                    scr.innerText = "Sistema Operativo (manual)";
+                    scr.className = "text-slate-500 text-xs";
+                }
+            }
+            // Bloque 2: Voz
+            const voz = document.getElementById('bot_voz_estado');
+            if (voz) {
+                const on = d.voz.estado === 'online';
+                voz.innerText = on ? 'Conectado' : 'Offline';
+                voz.className = on ? "text-emerald-400 text-xs font-bold" : "text-red-400 text-xs";
+            }
+            // Bloque 3: Video
+            const vid = document.getElementById('bot_video_estado');
+            if (vid) {
+                const on = d.video.estado === 'online';
+                vid.innerText = d.video.en_cola > 0 ? `Procesando (${d.video.en_cola})` : (on ? 'Listo' : 'Ocioso');
+                vid.className = on ? "text-emerald-400 text-xs font-bold" : "text-slate-500 text-xs";
+            }
+
+            // Resumen de agenda activa en el bloque 1
+            const agResumen = document.getElementById('bot_agenda_resumen');
+            if (agResumen && d.scripting.canales !== undefined) {
+                const cfgRes = await fetch('/api/bot/cron/config'); const cfg = await cfgRes.json();
+                const activas = (cfg.agenda || []).filter(e => e.activo);
+                if (activas.length > 0) {
+                    agResumen.innerHTML = `
+                        <div class="bg-[#0B1120] p-3 rounded border border-emerald-900/50 relative mb-2">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Agenda Activa</span>
+                                <span class="text-[9px] text-slate-500">${activas.length} programada(s)</span>
+                            </div>
+                            ${activas.slice(0,3).map(e => `<p class="text-[10px] text-slate-400 font-mono">▸ ${e.marca} · ${formatFecha(e.fecha)} ${e.hora}</p>`).join('')}
+                        </div>`;
+                } else { agResumen.innerHTML = ''; }
+            }
+
+            // Cola real
+            const colaRes = await fetch('/api/bot/cola'); const cola = await colaRes.json();
+            const colaCont = document.getElementById('bot_cola_resumen');
+            if (colaCont && cola.total > 0) {
+                colaCont.innerHTML = cola.items.slice(0,5).map(it => `
+                    <div class="bg-[#0B1120] p-3 rounded border border-blue-900/40 relative mb-2">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                        <div class="flex justify-between items-start">
+                            <span class="text-white text-xs font-bold">${it.marca} · ${it.formato}</span>
+                            <span class="text-[8px] bg-blue-900/50 text-blue-300 px-2 py-0.5 rounded font-mono">${it.estado === 'en_cola' ? 'EN COLA' : 'EN DISCO'}</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 font-mono mt-1 truncate">${it.titulo || it.tipo} · ${it.origen}</p>
+                    </div>`).join('');
+            } else if (colaCont) {
+                colaCont.innerHTML = `
+                    <div class="bg-[#0B1120] p-4 rounded border border-slate-800 relative opacity-60">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-slate-600"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-slate-300 text-sm font-bold">Monitor Orquestador</span>
+                            <span class="text-[9px] bg-slate-800 text-slate-400 px-2 py-1 rounded font-mono">EN ESPERA</span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-mono">Esperando disparador manual o Cronjob.</p>
+                    </div>`;
+            }
+        } catch(e) {}
+    }
+    window.addEventListener('load', () => {
+        actualizarEstadoBot(); setInterval(actualizarEstadoBot, 12000);
+        // Consola del orquestador SIEMPRE activa (sección fija del panel)
+        actualizarProgresoOrq(); setInterval(actualizarProgresoOrq, 8000);
+    });
+
+    // Controladores del Modal
+    function abrirModalOrden() { document.getElementById('modal_orden').classList.remove('hidden'); onCambioFormatoOrden(); }
+    function cerrarModalOrden() { document.getElementById('modal_orden').classList.add('hidden'); }
+
+    // Al cambiar el modo de ejecución: si elige "programar", abre el calendario de una vez
+    function onCambioReloj() {
+        const reloj = document.getElementById('orden_reloj').value;
+        if (reloj === 'cron_noche') {
+            // Pre-cargar el canal/formato que ya eligió en el calendario
+            const marca = document.getElementById('orden_marca').value;
+            const formato = document.getElementById('orden_formato') ? document.getElementById('orden_formato').value : '9:16';
+            cerrarModalOrden();
+            abrirModalAgenda();
+            // Pre-seleccionar el canal en el calendario
+            setTimeout(() => {
+                const agMarca = document.getElementById('ag_marca');
+                if (agMarca) agMarca.value = marca;
+                // Volver el selector a inmediato para la próxima vez
+                document.getElementById('orden_reloj').value = 'inmediato';
+            }, 100);
+        }
+    }
+
+    // Sugerir tema en tendencia (TrendEngine)
+    async function sugerirTema() {
+        const btn = document.getElementById('btn_sugerir');
+        const marca = document.getElementById('orden_marca').value;
+        const hint = document.getElementById('tema_hint');
+        const original = btn.innerHTML;
+        btn.innerHTML = "Escaneando...";
+        btn.disabled = true;
+        try {
+            const res = await fetch('/api/bot/sugerir_tema', {
+                method: 'POST', headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ marca: marca })
+            });
+            const data = await res.json();
+            if (data.status === 'ok') {
+                const premisaEl = document.getElementById('orden_premisa');
+                premisaEl.value = `Tema en tendencia: ${data.tema}. Referencia de la competencia: "${data.referencia}". Desarrollar con ángulo propio y vacío de información.`;
+                hint.classList.remove('hidden');
+                const fuente = data.en_vivo ? 'EN VIVO (YouTube)' : 'SIMULADO (sin API key)';
+                hint.innerText = `▸ ${fuente} · VPH: ${data.vph} · tema: ${data.tema}`;
+                hint.className = "text-[9px] mt-1 font-mono " + (data.en_vivo ? "text-emerald-400" : "text-amber-500");
+            } else {
+                hint.classList.remove('hidden');
+                hint.className = "text-[9px] text-red-400 mt-1 font-mono";
+                hint.innerText = "▸ " + (data.message || "No se pudo obtener tendencia");
+            }
+        } catch (e) {
+            hint.classList.remove('hidden');
+            hint.className = "text-[9px] text-red-400 mt-1 font-mono";
+            hint.innerText = "▸ Error de conexión con el radar de tendencias";
+        } finally {
+            btn.innerHTML = original;
+            btn.disabled = false;
+        }
+    }
+
+    // Mostrar/ocultar el selector de duracion en Nueva Orden segun el formato
+    function onCambioFormatoOrden() {
+        const formato = document.getElementById('orden_formato').value;
+        const wrap = document.getElementById('orden_duracion_wrap');
+        if (wrap) wrap.classList.toggle('hidden', formato !== '16:9');
+    }
+
+    // Funcion principal de inyeccion
+    async function ejecutarOrden() {
+        const btn = document.getElementById('btn_modal_ejecutar');
+        const marca = document.getElementById('orden_marca').value;
+        const formato = document.getElementById('orden_formato').value;
+        const premisa = document.getElementById('orden_premisa').value || "Premisa automática generada por sistema.";
+        const reloj = document.getElementById('orden_reloj').value;
+
+        // Si eligió "Programar fecha y hora", cerrar este modal y abrir el calendario
+        if (reloj === 'cron_noche') {
+            cerrarModalOrden();
+            abrirModalAgenda();
+            return;
+        }
+
+        // Si es Inmediato, disparamos la máquina
+        btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+        
+        cerrarModalOrden(); // Cerramos modal para ver el dashboard trabajar
+        
+        const statusDiv = document.getElementById('status_scripting');
+        const taskTitle = document.getElementById('task_title');
+        const taskDesc = document.getElementById('task_desc');
+        const taskBadge = document.getElementById('task_badge');
+        
+        // Setup Visual
+        statusDiv.classList.remove('hidden');
+        taskTitle.innerText = `${marca} - ${formato}`;
+        taskBadge.innerText = "FASES 1-3 EN CURSO...";
+        taskBadge.className = "text-[9px] bg-blue-900 text-blue-300 px-2 py-1 rounded font-mono";
+        taskDesc.innerText = "Extrayendo ADN, compilando guion y renderizando Audio Neuronal.";
+        
+        try {
+            // Payload enviado al Backend (Orquestador)
+            const payload = {
+                marca: marca, 
+                formato: formato, // <-- Ahora el backend sabe si es 16:9 o 9:16
+                premisa: premisa,
+                duracion_min: formato === '16:9' ? parseInt(document.getElementById('orden_duracion').value) : null
+            };
+
+            const res = await fetch('/api/bot/lanzar_orden', { 
+                method: 'POST', 
+                headers: {'Content-Type': 'application/json'}, 
+                body: JSON.stringify(payload) 
+            });
+            
+            const data = await res.json();
+            
+            if(data.status === "PENDING_REVIEW") {
+                taskBadge.innerText = "ENCOLADO EN DARK FACTORY";
+                taskBadge.classList.replace('bg-blue-900', 'bg-emerald-900');
+                taskBadge.classList.replace('text-blue-300', 'text-emerald-300');
+                taskDesc.innerText = `Guion generado (${data.num_escenas || '?'} escenas). Orden enviada al nodo: imágenes → voz → video.`;
+
+                // Inyectar en la Cola de Revisión
+                document.getElementById('queue_count').innerText = "1 EN PRODUCCIÓN";
+                document.getElementById('review_queue').innerHTML = `
+                    <div class="bg-[#0B1120] p-4 rounded border border-emerald-900/50 relative mt-2 shadow-lg">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="text-white text-sm font-bold block">${data.titulo || data.marca + ' - ' + formato}</span>
+                                <span class="text-[10px] text-slate-400 block mt-0.5">ORDEN: ${data.tarea_id}</span>
+                            </div>
+                            <span class="text-[9px] bg-amber-900/50 text-amber-300 px-2 py-1 rounded font-mono">EN NODO</span>
+                        </div>
+                        <div class="bg-black/30 p-2 rounded mt-2 border border-slate-800">
+                            <span class="text-[9px] text-slate-500 uppercase tracking-widest font-bold block mb-1">Pipeline:</span>
+                            <span class="text-[10px] text-emerald-400 font-mono">${data.num_escenas || '?'} escenas · ${formato} · ${data.marca}</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 mt-2 font-mono">El worker procesará esta orden hasta el MP4 final.</p>
+                    </div>
+                `;
+            } else {
+                throw new Error("Error devuelto por la API de Google o Microsoft.");
+            }
+            
+            if(window.actualizarTelemetria) window.actualizarTelemetria(); 
+            
+        } catch (error) {
+            taskBadge.innerText = "ERROR API";
+            taskBadge.classList.replace('bg-blue-900', 'bg-red-900');
+            taskBadge.classList.replace('text-blue-300', 'text-red-300');
+            taskDesc.innerText = "El motor se detuvo por falta de cuota en Google Gemini o fallo de red.";
+        } finally { 
+            btn.innerHTML = "INYECTAR A LA LÍNEA DE ENSAMBLAJE"; 
+            btn.disabled = false; 
+        }
+    }
+</script>
+</div>
+{% endblock %}
