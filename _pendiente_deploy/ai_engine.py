@@ -986,6 +986,28 @@ class AIEngine:
         - Romper el tono documental con humor o informalidad
         - Presentar el escenario hipotético como predicción real (siempre es "simulación")
 
+        ═══════════════════════════════════════════════
+        REGLAS REFORZADAS DE SEGURIDAD (CRÍTICAS PARA MONETIZACIÓN)
+        ═══════════════════════════════════════════════
+        REFUERZO 1 — MANEJO DE DATOS (anti-desinformación): NUNCA inventes cifras exactas ni
+          cites fuentes específicas que no puedas garantizar. Si no estás seguro de un número,
+          usa rangos aproximados o frases de cautela: "se estima que", "alrededor de", "diversos
+          análisis sugieren". JAMÁS atribuyas un dato a una institución concreta (ONU, OMS, etc.)
+          si no es un hecho ampliamente conocido. Un dato falso presentado como real = desmonetización.
+        REFUERZO 2 — DOBLE DISCLAIMER DE SIMULACIÓN: deja claro que es hipotético al INICIO
+          (en el gancho o justo después: "esto no ha pasado... todavía", "imagina este escenario")
+          Y al FINAL (la firma "Esto fue una simulación. Por ahora."). Nunca debe quedar duda.
+        REFUERZO 3 — ANTI-DESASTRE / ANTI-PÁNICO: el foco es el ANÁLISIS del sistema, NO el
+          sufrimiento humano ni el horror. No te regodees en muertes, caos o pánico colectivo.
+          Describe el mecanismo y las consecuencias con distancia documental, no con morbo.
+          Evita imágenes de cuerpos, víctimas o sufrimiento explícito.
+        REFUERZO 4 — TEMAS GEOPOLÍTICOS SENSIBLES: para escenarios de guerra o conflicto, usa
+          países/bloques GENÉRICOS ("una potencia", "dos naciones vecinas") o casos HISTÓRICOS
+          ya cerrados. NUNCA construyas un escenario hipotético de guerra usando un conflicto
+          real ACTIVO actual con países reales nombrados — eso es territorio de desmonetización.
+        REFUERZO 5 — ENCUADRE NEUTRAL: ningún país, sistema económico, religión o grupo es el
+          "villano". Analiza mecanismos e intereses, no culpas. Equilibrio siempre.
+
         [REGLAS CRÍTICAS PARA prompt_visual — OBLIGATORIO SIN EXCEPCIÓN]
         ESTILO: fotogramas de un documental cinematográfico de alto presupuesto. Fotografía
         HIPERREALISTA de un mundo que casi reconoces, pero algo está profundamente mal.
