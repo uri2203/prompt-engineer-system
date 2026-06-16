@@ -236,6 +236,40 @@ class ComplianceEngine:
                         "Nunca romantizar, glorificar ni humanizar actores criminales."
                     ),
                     "umbral_bloqueo": 1
+                },
+                "Umbral Alterno": {
+                    "restricciones_output": [
+                        "presentar el escenario hipotético como predicción o hecho real confirmado",
+                        "lenguaje catastrofista o alarmista sin base en datos",
+                        "emitir juicios políticos o morales sobre países, gobiernos o personas reales",
+                        "mencionar marcas, países o personas reales de forma negativa sin sustento",
+                        "incitación al pánico, miedo masivo o teorías conspirativas",
+                        "instrucciones de daño real o aprovechamiento de tragedias recientes",
+                        "inventar cifras exactas o atribuir datos falsos a instituciones reales",
+                        "construir escenarios de guerra con conflictos reales activos y países nombrados",
+                        "regodearse en sufrimiento humano, muertes o caos con morbo",
+                        "señalar a un país, religión, sistema o grupo como villano"
+                    ],
+                    "permitido": [
+                        "escenarios hipotéticos narrados como documental ('imagina que...')",
+                        "proyecciones de futuro basadas en tendencias y datos reales",
+                        "historia alternativa y especulación con base verificable",
+                        "fenómenos físicos o naturales extremos en tono científico-narrativo",
+                        "colapsos de sistemas narrados con rigor y sin sensacionalismo",
+                        "datos reales y estadísticas verificables como base del escenario",
+                        "cifras aproximadas con frases de cautela ('se estima que', 'alrededor de')",
+                        "escenarios de conflicto con naciones genéricas o casos históricos cerrados"
+                    ],
+                    "estrategia_evasion": (
+                        "ENCUADRE DE SIMULACIÓN DOBLE: el escenario se presenta como hipotético al "
+                        "INICIO y al FINAL ('imagina que...', 'esto fue una simulación, por ahora'). "
+                        "Nunca como predicción. DATOS CON CAUTELA: usar rangos y 'se estima que' en "
+                        "vez de cifras inventadas; nunca atribuir datos falsos a instituciones reales. "
+                        "ANTI-DESASTRE: foco en el análisis del sistema, no en el sufrimiento ni el "
+                        "pánico. GEOPOLÍTICA: naciones genéricas o casos históricos, nunca conflictos "
+                        "reales activos. Tono documental sobrio, equilibrio, sin villanos ni juicios."
+                    ),
+                    "umbral_bloqueo": 1
                 }
             }
         }

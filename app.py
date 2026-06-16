@@ -519,10 +519,13 @@ def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
     duracion_min: para videos largos, minutos objetivo (15, 28, 45). None = short."""
     import json as _json
     es_largo = formato == "16:9"
-    # Conversión tiempo→palabras (~140 palabras/minuto de narración)
+    # La duración solicitada viaja como "N min" para que ai_engine la use DIRECTO,
+    # sin la doble conversión a palabras que descalibraba (un 15min salía de 28-35min).
     if es_largo:
-        mapa_duracion = {15: "2100 palabras", 28: "3900 palabras", 45: "6300 palabras"}
-        longitud = mapa_duracion.get(int(duracion_min) if duracion_min else 28, "3900 palabras")
+        _min = int(duracion_min) if duracion_min else 28
+        if _min not in (15, 28, 45):
+            _min = 28
+        longitud = f"{_min} min"
     else:
         longitud = "130 palabras"
     formato_calculado = "16:9" if formato == "16:9" else "9:16"
@@ -712,8 +715,10 @@ def api_bot_lanzar_orden():
     # Formato → longitud (largo vs short), con duración configurable para largos
     es_largo = formato in ("16:9",) and data.get('tipo', 'largo') != 'short'
     if es_largo:
-        mapa_duracion = {15: "2100 palabras", 28: "3900 palabras", 45: "6300 palabras"}
-        longitud = mapa_duracion.get(int(duracion_min) if duracion_min else 28, "3900 palabras")
+        _min = int(duracion_min) if duracion_min else 28
+        if _min not in (15, 28, 45):
+            _min = 28
+        longitud = f"{_min} min"
     else:
         longitud = "130 palabras"
     formato_calculado = "16:9" if formato == "16:9" else "9:16"

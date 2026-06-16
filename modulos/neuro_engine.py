@@ -216,6 +216,41 @@ ADN_NEURO = {
             "28-30min: Recomendación accionable + qué vigilar después"
         ],
     },
+    "Umbral Alterno": {
+        "gatillos_primarios": [
+            "curiosidad_existencial",
+            "fascinacion_catastrofica",
+            "plausibilidad_inquietante",
+            "efecto_revelacion",
+        ],
+        "estructura_narrativa": "escenario_hipotetico_documental",
+        "formula_hook": (
+            "Abre en el momento MÁS perturbador del escenario, en presente, como si ya estuviera "
+            "ocurriendo. Sin explicar aún qué pasó. Imagen impactante + consecuencia inesperada + "
+            "pregunta que deja el loop abierto. Tono documental serio, nunca catastrofista barato. "
+            "Ejemplo: 'Las pantallas están apagadas. Los aviones, detenidos. En 47 países, algo se ha roto.'"
+        ),
+        "ritmo_cortes": {"short": 3, "largo": 9},
+        "palabras_gatillo": [
+            "imagina que", "qué pasaría si", "en cuestión de horas", "nadie lo vio venir",
+            "todo cambió", "el primer día", "lo que vino después", "pero eso fue antes",
+            "los datos lo confirman", "esto ya casi ocurre", "el mundo que conocías", "y entonces"
+        ],
+        "estetica_miniatura": (
+            "Paleta: desaturada con UN color de acento dominante (azul frío o ámbar), fondo oscuro. "
+            "Escenario impactante hiperrealista (ciudad a oscuras, megaciudad inundada, cielo anómalo). "
+            "Sin rostros, pocas o ninguna persona. Texto de 4 palabras en mayúscula que NO completan la "
+            "historia. Estilo documental cinematográfico, sensación de quietud inquietante."
+        ),
+        "arco_retencion_largo": [
+            "0-2min: El momento más perturbador del escenario (gancho en presente, loop abierto)",
+            "2-5min: El mundo HOY — cómo funciona el sistema real con datos verificables",
+            "5-12min: El evento — el momento exacto en que empieza la simulación",
+            "12-20min: La cascada — consecuencias en escalada temporal, cada vez más profundas",
+            "20-27min: El giro — la implicación que el espectador no había considerado",
+            "27-30min: Cierre + firma 'Esto fue una simulación. Por ahora.' + pregunta retórica"
+        ],
+    },
 }
 
 # ── ESTRATEGIAS DE RETENCIÓN UNIVERSAL ────────────────────────────────────────
@@ -285,6 +320,7 @@ class NeuroEngine:
                 "FiltradoMX": ["historias de infidelidad", "confesiones reales", "drama traicion"],
                 "LaesquinaRandom": ["datos curiosos", "cosas que no sabias", "hechos sorprendentes"],
                 "TuIALista": ["nuevas herramientas IA", "inteligencia artificial novedades", "IA tutorial"],
+                "Umbral Alterno": ["que pasaria si", "escenario hipotetico", "simulacion futuro"],
             }
             busquedas = terminos.get(marca, ["videos virales"])
 
@@ -356,6 +392,11 @@ class NeuroEngine:
                 {"titulo": "Esta IA gratis reemplaza a 5 herramientas", "canal": "IA Práctica", "termino": "herramientas IA"},
                 {"titulo": "Lo que esta IA hace en 10 segundos", "canal": "Tech Hoy", "termino": "inteligencia artificial"},
                 {"titulo": "La herramienta que nadie está usando aún", "canal": "Futuro IA", "termino": "IA novedades"},
+            ],
+            "Umbral Alterno": [
+                {"titulo": "Qué pasaría si el internet cayera 7 días", "canal": "Simulaciones", "termino": "escenario hipotetico"},
+                {"titulo": "El mundo si esa guerra nunca hubiera pasado", "canal": "Historia Alterna", "termino": "historia alternativa"},
+                {"titulo": "Cómo será tu ciudad en el año 2075", "canal": "Futuro Probable", "termino": "simulacion futuro"},
             ],
         }
         return respaldo.get(marca, respaldo["La Viuda"])
@@ -450,5 +491,8 @@ def _describir_gatillo(gatillo):
         "sorpresa_cognitiva": "Rompe el esquema mental: el dato debe contradecir lo que se da por sentado.",
         "valor_compartible": "El contenido debe dar ganas de compartirlo ('tienes que ver esto').",
         "fomo_tecnologico": "Miedo a quedarse atrás: si no conoces esta herramienta, otros ya te llevan ventaja.",
+        "curiosidad_existencial": "Activa preguntas profundas sobre el mundo, el futuro y lo que podría ser. El cerebro no puede dejar un '¿y si?' sin explorar.",
+        "fascinacion_catastrofica": "El espectador no puede dejar de mirar el escenario que se desmorona — fascinación por la magnitud, no morbo barato.",
+        "plausibilidad_inquietante": "Ancla el escenario hipotético en datos y hechos REALES para que se sienta posible, no fantasía. Lo plausible inquieta más que lo imposible.",
     }
     return descripciones.get(gatillo, "Aplica con naturalidad según el contexto.")

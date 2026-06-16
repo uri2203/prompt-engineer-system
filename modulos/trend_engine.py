@@ -41,6 +41,12 @@ class TrendEngine:
                 "avances inteligencia artificial",
                 "IA tecnologia futuro"
             ],
+            "Umbral Alterno": [
+                "que pasaria si escenario",
+                "simulacion del futuro",
+                "historia alternativa que hubiera pasado",
+                "como seria el mundo si"
+            ],
         }
 
     def _calcular_vph(self, vistas, fecha_publicacion):
