@@ -365,6 +365,9 @@ VELOCIDAD_PPM = {
     "filtrado mx":      130,
     "laesquinarandom":  155,
     "laesquina random": 155,
+    "tuialista":        140,
+    "umbral alterno":   115,
+    "umbralalterno":    115,
     "default":          120,
 }
 
@@ -949,6 +952,9 @@ HOOKS_POR_CANAL = {
     "la esquina random": {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte"},
     # TuIALista (tech): hooks medios, informativos
     "tuialista":         {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 70, "max_rehooks": 9, "intensidad_texto": "fuerte"},
+    # Umbral Alterno (documental): hooks pausados para leer, ritmo medio-serio
+    "umbral alterno":    {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave"},
+    "umbralalterno":     {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave"},
 }
 HOOKS_DEFAULT = {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 75, "max_rehooks": 8, "intensidad_texto": "fuerte"}
 
@@ -1508,6 +1514,8 @@ def procesar():
                     "filtradomx":      "Filtradomx",
                     "laviuda":         "La Viuda",
                     "monkygraff":      "Monkygraff",
+                    "umbralalterno":   "Umbral Alterno",
+                    "tuialista":       "TuIAlista",
                 }
                 _nombre_carpeta = _MAPA_CARPETA_ASSETS.get(marca_audio.lower().replace(" ", ""), marca_audio)
                 carpeta_marca_assets = os.path.join(CARPETA_ASSETS, _nombre_carpeta)
