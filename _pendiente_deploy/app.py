@@ -1,0 +1,1296 @@
+import os
+import time
+import uuid
+import requests
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
+from functools import wraps
+
+from modulos.usuarios import UsuarioManager
+from modulos.boveda import BovedaManager
+from modulos.ai_engine import AIEngine
+from modulos.cctv_engine import CCTVEngine  
+from modulos.voice_engine import VoiceEngine
+from modulos.video_engine import VideoEngine  
+from modulos.trend_engine import TrendEngine
+from modulos.compliance_engine import ComplianceEngine
+from modulos.neuro_engine import NeuroEngine
+
+app = Flask(__name__)
+app.secret_key = os.environ.get("FLASK_KEY", "admin1978_master_key")
+
+user_db = UsuarioManager()
+boveda_db = BovedaManager()
+ai_engine = AIEngine()
+cctv_engine = CCTVEngine()  
+voice_engine = VoiceEngine()
+video_engine = VideoEngine()
+trend_engine = TrendEngine()
+compliance_engine = ComplianceEngine()
+neuro_engine = NeuroEngine()
+
+# COLA DE TAREAS PARA LA DARK FACTORY
+cola_de_renderizado = []
+resultados_itinerantes = {}
+_videos_completados = set()  # IDs de videos cuyo ensamblaje terminó (para el orquestador)
+_videos_detalles = {}        # tarea_id base -> {duracion_real_seg, marca, formato} (para el historial)
+audios_temporales = {}  # Almacén temporal de audios grandes
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user' not in session:
+            if request.path.startswith('/api/'):
+                return jsonify({"status": "error", "message": "No autorizado"}), 401
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if 'user' in session: return redirect(url_for('index'))
+    if request.method == 'POST':
+        user = request.form.get('username', '').strip()
+        pw = request.form.get('password', '').strip()
+        usuarios = user_db.listar_usuarios()
+        if user in usuarios and usuarios[user]['pass'] == pw:
+            session.permanent = True
+            session['user'] = user
+            return redirect(url_for('index'))
+        else:
+            flash('ACCESO DENEGADO', 'error')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+
+@app.route('/')
+@login_required
+def index(): return render_template('workspace.html', active_page='workspace')
+
+@app.route('/usuarios')
+@login_required
+def usuarios(): return render_template('usuarios.html', active_page='usuarios')
+
+@app.route('/configuracion')
+@login_required
+def configuracion(): return render_template('configuracion.html', active_page='configuracion')
+
+@app.route('/mantenimiento')
+@login_required
+def mantenimiento(): return render_template('mantenimiento.html', active_page='logs')
+
+@app.route('/bot')
+@login_required
+def bot(): return render_template('bot_dashboard.html', active_page='bot')
+
+@app.route('/api/get_logs')
+@login_required
+def api_get_logs():
+    return jsonify({"logs": ["[SISTEMA] Motor Pinpinela en Standby.", "[INFO] Enlace con Workspace establecido."] })
+
+@app.route('/api/get_usuarios')
+@login_required
+def api_get_usuarios(): 
+    return jsonify(user_db.listar_usuarios())
+
+@app.route('/api/telemetria')
+@login_required
+def api_telemetria():
+    llaves_activas = len(boveda_db.obtener_llaves())
+    return jsonify({
+        "uptime": "Sincronizado", "latencia": "0.02s", "tokens_totales": 0,
+        "api_status": f"TANQUES API: {llaves_activas}/5", 
+        "historial_latencia": [0.02, 0.02, 0.02, 0.02, 0.02],
+        "historial_tokens": [0, 0, 0, 0, 0]
+    })
+
+# ── MONITOREO DE NODOS (patrón heartbeat) ────────────────────────────────────
+# Render no puede hacer ping a IPs locales (192.168.x.x son privadas).
+# Por eso el Xeon reporta el estado aquí, y el dashboard lo lee.
+_estado_nodos = {"sd": "off", "voz": "off", "parallax": "off", "nube": "on", "ts": 0}
+# Detalle del monitor de nodos (equipo prendido vs programa abierto). Cada nodo:
+# "online" = programa responde | "ip_sin_programa" = equipo prendido pero programa cerrado | "offline" = ni la IP responde
+_estado_nodos_detalle = {"sd": "offline", "voz": "offline", "parallax": "offline", "ts": 0}
+# Semáforo de ocupación del worker: evita disparar órdenes nuevas mientras genera un video
+_worker_estado = {"ocupado": False, "tarea_actual": "", "ts": 0}
+
+# Registro de últimos errores del bot (para diagnóstico remoto vía GitHub)
+_ultimos_errores_bot = []
+def _log_error_bot(donde, error):
+    import traceback
+    entrada = {
+        "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "donde": donde,
+        "error": str(error)[:800],
+    }
+    _ultimos_errores_bot.append(entrada)
+    if len(_ultimos_errores_bot) > 20:
+        _ultimos_errores_bot.pop(0)
+    # Escribir a GitHub para diagnóstico remoto (token en variable de entorno de Render)
+    try:
+        import base64 as _b64, json as _json
+        gh_token = os.environ.get("GH_DIAG_TOKEN", "")
+        if gh_token:
+            repo = "uri2203/prompt-engineer-system"
+            path = "_diagnostico/errores_render.json"
+            url = f"https://api.github.com/repos/{repo}/contents/{path}"
+            rget = requests.get(url, headers={"Authorization": f"token {gh_token}"}, params={"ref": "diagnostico"}, timeout=15)
+            contenido = _b64.b64encode(_json.dumps(_ultimos_errores_bot, ensure_ascii=False, indent=2).encode()).decode()
+            payload = {"message": "error bot", "content": contenido, "branch": "diagnostico"}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh_token}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
+# ── DIAGNÓSTICO REMOTO ───────────────────────────────────────────────────────
+# Permite validar el estado del sistema sin login, con una clave secreta.
+# El Xeon reporta aquí sus logs/versión; el diagnóstico los expone para revisión.
+DIAG_CLAVE = "pinpinela_diag_2026"
+_diagnostico = {
+    "worker_version": "",      # nº de líneas o hash del worker
+    "worker_logs": [],         # últimas líneas del log del worker
+    "ultimo_error": "",
+    "orquestador_estado": {},  # estado del lote
+    "ts_reporte": 0,
+}
+
+@app.route('/api/bot/limpiar_cola', methods=['GET', 'POST'])
+@login_required
+def api_bot_limpiar_cola():
+    """Limpia TODO lo atorado: cola en memoria + archivos de tareas en disco +
+    archivos de control del lote (cola de órdenes, control, progreso).
+    Útil cuando algo se queda trabado y hay que resetear el encolado."""
+    import glob as _glob
+    eliminados = {"memoria": 0, "disco": 0}
+    # 1. Vaciar la cola en memoria
+    eliminados["memoria"] = len(cola_de_renderizado)
+    cola_de_renderizado.clear()
+    # 2. Borrar archivos de tareas en disco
+    for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json",
+                   "/tmp/pendiente_ensamblaje_*.json"):
+        for archivo in _glob.glob(patron):
+            try:
+                os.remove(archivo)
+                eliminados["disco"] += 1
+            except Exception:
+                pass
+    # 3. Resetear estado del worker
+    _worker_estado["ocupado"] = False
+    _worker_estado["tarea_actual"] = ""
+    # 4. Resetear los archivos de control del lote (rama diagnostico) para que el
+    #    orquestador no siga procesando una cola fantasma tras el reset.
+    try:
+        _gh_guardar_json("_diagnostico/cola_ordenes.json", [], "reset: vaciar cola de ordenes")
+        _gh_guardar_json("_diagnostico/lote_control.json", {"accion": "cancelar", "ts": time.time()}, "reset: cancelar lote")
+        _gh_guardar_json("_diagnostico/lote_progreso.json",
+                         {"estado_lote": "inactivo", "total": 0, "completados": 0,
+                          "mensaje": "Cola reseteada desde el panel.", "resumen": ""},
+                         "reset: progreso inactivo")
+    except Exception:
+        pass
+    return jsonify({
+        "status": "limpiado",
+        "cola_memoria_eliminada": eliminados["memoria"],
+        "archivos_disco_eliminados": eliminados["disco"],
+        "mensaje": "Cola y lote reseteados. El sistema está listo para empezar fresco."
+    })
+
+@app.route('/api/diagnostico', methods=['GET'])
+def api_diagnostico():
+    """Lo consulto remotamente con la clave. Devuelve TODO el estado del sistema."""
+    if request.args.get("clave") != DIAG_CLAVE:
+        return jsonify({"error": "clave invalida"}), 403
+    import glob as _glob
+    antiguedad_nodos = time.time() - _estado_nodos.get("ts", 0)
+    antiguedad_diag = time.time() - _diagnostico.get("ts_reporte", 0)
+    # Listar tareas pendientes en disco
+    pendientes_disco = []
+    try:
+        for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json", "/tmp/pendiente_ensamblaje_*.json"):
+            pendientes_disco.extend([os.path.basename(x) for x in _glob.glob(patron)])
+    except Exception:
+        pass
+    return jsonify({
+        "render": {
+            "vivo": True,
+            "cola_memoria": len(cola_de_renderizado),
+            "tareas_en_disco": pendientes_disco,
+        },
+        "nodos": {
+            "estado": {k: _estado_nodos.get(k) for k in ("sd","voz","parallax","nube")},
+            "ultimo_reporte_hace_seg": round(antiguedad_nodos),
+            "xeon_reportando": antiguedad_nodos < 90,
+        },
+        "worker": {
+            "ocupado": _worker_estado.get("ocupado"),
+            "tarea_actual": _worker_estado.get("tarea_actual"),
+            "version_lineas": _diagnostico.get("worker_version"),
+            "ultimas_lineas_log": _diagnostico.get("worker_logs", [])[-30:],
+            "ultimo_error": _diagnostico.get("ultimo_error"),
+        },
+        "orquestador": _diagnostico.get("orquestador_estado", {}),
+        "diag_reporte_hace_seg": round(antiguedad_diag),
+    })
+
+@app.route('/api/diagnostico/reportar', methods=['POST'])
+def api_diagnostico_reportar():
+    """El Xeon reporta aquí su estado (logs, versión, errores) para que yo lo vea."""
+    data = request.json or {}
+    if "worker_version" in data:
+        _diagnostico["worker_version"] = data["worker_version"]
+    if "worker_logs" in data:
+        _diagnostico["worker_logs"] = data["worker_logs"][-50:]
+    if "ultimo_error" in data:
+        _diagnostico["ultimo_error"] = data["ultimo_error"]
+    if "orquestador_estado" in data:
+        _diagnostico["orquestador_estado"] = data["orquestador_estado"]
+    _diagnostico["ts_reporte"] = time.time()
+    return jsonify({"status": "ok"})
+
+
+@app.route('/api/nodo/worker_estado', methods=['GET', 'POST'])
+def api_worker_estado():
+    """POST: el worker reporta si está ocupado. GET: el keep_alive consulta el estado."""
+    if request.method == 'GET':
+        return jsonify({
+            "ocupado": _worker_esta_ocupado(),
+            "tarea_actual": _worker_estado.get("tarea_actual", ""),
+        })
+    data = request.json or {}
+    _worker_estado["ocupado"] = bool(data.get("ocupado", False))
+    _worker_estado["tarea_actual"] = data.get("tarea_actual", "")
+    _worker_estado["ts"] = time.time()
+    return jsonify({"status": "ok"})
+
+def _worker_esta_ocupado():
+    """True si el worker reportó estar ocupado hace menos de 5 minutos."""
+    if not _worker_estado.get("ocupado"):
+        return False
+    # Si el último reporte de "ocupado" es viejo (>5 min), asumimos que se liberó
+    if time.time() - _worker_estado.get("ts", 0) > 300:
+        return False
+    return True
+
+@app.route('/api/nodos')
+@login_required
+def api_nodos():
+    # Si el último reporte del monitor del Xeon es viejo (>90s), no sabemos el estado real
+    antiguedad = time.time() - _estado_nodos_detalle.get("ts", 0)
+    if antiguedad > 90:
+        return jsonify({
+            "sd": "desconocido", "voz": "desconocido", "parallax": "desconocido",
+            "nube": "on", "monitor": "sin_reporte",
+        })
+    return jsonify({
+        "sd": _estado_nodos_detalle.get("sd", "offline"),
+        "voz": _estado_nodos_detalle.get("voz", "offline"),
+        "parallax": _estado_nodos_detalle.get("parallax", "offline"),
+        "nube": "on",  # si responde este endpoint, la nube está viva
+        "monitor": "activo",
+    })
+
+@app.route('/api/nodos/reportar', methods=['POST'])
+def api_nodos_reportar():
+    """El Xeon reporta aquí el estado de los nodos locales (hace ping y envía).
+    Acepta dos formatos:
+      - Simple: {"sd":"on/off", "voz":"on/off", "parallax":"on/off"}
+      - Detallado (monitor de 2 niveles): {"sd":"online/ip_sin_programa/offline", ...}
+        donde 'online'=programa responde, 'ip_sin_programa'=equipo prendido pero
+        programa cerrado, 'offline'=ni la IP responde."""
+    data = request.json or {}
+    ahora = time.time()
+    for nodo in ("sd", "voz", "parallax"):
+        val = data.get(nodo, "off")
+        # Normalizar: detectar si viene en formato detallado
+        if val in ("online", "ip_sin_programa", "offline"):
+            _estado_nodos_detalle[nodo] = val
+            _estado_nodos[nodo] = "on" if val == "online" else "off"
+        else:
+            # Formato simple (on/off): mapear a detalle básico
+            _estado_nodos[nodo] = val
+            _estado_nodos_detalle[nodo] = "online" if val == "on" else "offline"
+    _estado_nodos["ts"] = ahora
+    _estado_nodos_detalle["ts"] = ahora
+    return jsonify({"status": "ok"})
+
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# ── BOT PINPINELA — Orquestador de órdenes ───────────────────────────────────
+# Agenda semanal: cada entrada = {marca, dias:[0-6], hora:"HH:MM", formato, activo}
+import json as _json_cron
+CRON_FILE = "/tmp/cron_pinpinela.json"
+
+def _leer_cron():
+    """Lee la agenda desde GitHub (persistente). Fallback a archivo local."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if gh:
+        try:
+            import base64 as _b64
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
+            r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+            if r.status_code == 200:
+                contenido = _b64.b64decode(r.json()["content"]).decode()
+                return _json_cron.loads(contenido)
+        except Exception:
+            pass
+    # Fallback local
+    try:
+        with open(CRON_FILE) as f:
+            return _json_cron.load(f)
+    except Exception:
+        return {"agenda": [], "ejecuciones": {}}
+
+def _guardar_cron(cfg):
+    """Guarda la agenda en GitHub (persistente, sobrevive el sleep de Render)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if gh:
+        try:
+            import base64 as _b64
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/agenda.json"
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+            contenido = _b64.b64encode(_json_cron.dumps(cfg, ensure_ascii=False, indent=2).encode()).decode()
+            payload = {"message": "agenda update", "content": contenido, "branch": "diagnostico"}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+        except Exception:
+            pass
+    # También guardar local como respaldo
+    try:
+        with open(CRON_FILE, "w") as f:
+            _json_cron.dump(cfg, f)
+    except Exception:
+        pass
+
+@app.route('/api/bot/cron/config', methods=['GET', 'POST'])
+@login_required
+def api_bot_cron_config():
+    if request.method == 'POST':
+        data = request.json or {}
+        cfg = _leer_cron()
+        # Acción: agregar, eliminar, toggle, o reemplazar agenda completa
+        accion = data.get("accion", "reemplazar")
+        if accion == "agregar":
+            entrada = {
+                "id": str(uuid.uuid4())[:8],
+                "marca": data.get("marca", "La Viuda"),
+                "fecha": data.get("fecha", ""),         # "YYYY-MM-DD"
+                "hora": data.get("hora", "08:00"),       # "HH:MM"
+                "formato": data.get("formato", "9:16"),
+                "duracion_min": data.get("duracion_min"),  # 15/28/45 para largos, None para shorts
+                "repetir": data.get("repetir", "una_vez"),  # una_vez | diario | semanal
+                "activo": True,
+                "ejecutado": False,
+            }
+            cfg.setdefault("agenda", []).append(entrada)
+        elif accion == "eliminar":
+            cfg["agenda"] = [e for e in cfg.get("agenda", []) if e.get("id") != data.get("id")]
+        elif accion == "toggle":
+            for e in cfg.get("agenda", []):
+                if e.get("id") == data.get("id"):
+                    e["activo"] = not e.get("activo", True)
+        else:
+            cfg["agenda"] = data.get("agenda", cfg.get("agenda", []))
+        _guardar_cron(cfg)
+        return jsonify({"status": "ok", "config": cfg})
+    return jsonify(_leer_cron())
+
+@app.route('/api/bot/cron/tick', methods=['POST'])
+def api_bot_cron_tick():
+    """El Xeon llama aquí cada minuto. Dispara las entradas de la agenda cuya
+    fecha+hora coincidan con ahora. Soporta repetición (una vez, diario, semanal)."""
+    from datetime import datetime, timezone, timedelta
+
+    def _log_cron(estado, detalle=""):
+        """Escribe la actividad del cron a GitHub para diagnóstico remoto."""
+        return  # DESACTIVADO temporalmente: cortaba el bucle de auto-deploys de Render
+        try:
+            import base64 as _b64, json as _json
+            gh = os.environ.get("GH_DIAG_TOKEN", "")
+            if not gh:
+                return
+            tz = timezone(timedelta(hours=-6))
+            info = {
+                "ts": datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S"),
+                "estado": estado,
+                "detalle": str(detalle)[:400],
+                "worker_ocupado": _worker_esta_ocupado(),
+            }
+            url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cron_log.json"
+            rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+            payload = {"message": "cron log", "content": _b64.b64encode(_json.dumps(info, ensure_ascii=False, indent=2).encode()).decode(), "branch": "diagnostico"}
+            if rget.status_code == 200:
+                payload["sha"] = rget.json()["sha"]
+            requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+        except Exception:
+            pass
+
+    cfg = _leer_cron()
+    agenda = cfg.get("agenda", [])
+    if not agenda:
+        _log_cron("sin_agenda", "La agenda está vacía")
+        return jsonify({"status": "sin_agenda"})
+
+    # Si el worker está ocupado generando un video, NO disparar nada nuevo.
+    if _worker_esta_ocupado():
+        _log_cron("worker_ocupado", _worker_estado.get("tarea_actual", ""))
+        return jsonify({"status": "worker_ocupado", "tarea": _worker_estado.get("tarea_actual", "")})
+
+    # Render corre en UTC. Convertir a hora de México (UTC-6).
+    tz_mexico = timezone(timedelta(hours=-6))
+    ahora = datetime.now(tz_mexico)
+    hora_actual = ahora.strftime("%H:%M")
+    fecha_actual = ahora.strftime("%Y-%m-%d")
+    dia_semana = ahora.weekday()
+
+    disparadas = []
+    hubo_cambios = False
+    for e in agenda:
+        if not e.get("activo"):
+            continue
+
+        repetir = e.get("repetir", "una_vez")
+        debe_disparar = False
+
+        if repetir == "una_vez":
+            # Dispara si la fecha es hoy, la hora ya llegó (o pasó hace poco), y no se ejecutó.
+            # Esto evita perder el disparo si el tick se salta el minuto exacto.
+            if e.get("fecha") == fecha_actual and not e.get("ejecutado"):
+                if hora_actual >= e.get("hora", "00:00"):
+                    debe_disparar = True
+            # Si la fecha ya pasó completamente y nunca se ejecutó, dispararlo igual (recuperación)
+            elif e.get("fecha", "") < fecha_actual and not e.get("ejecutado"):
+                debe_disparar = True
+        elif repetir == "diario":
+            if e.get("hora") == hora_actual and e.get("ultima_ejec") != fecha_actual:
+                debe_disparar = True
+        elif repetir == "semanal":
+            try:
+                fecha_base = datetime.strptime(e.get("fecha"), "%Y-%m-%d")
+                if fecha_base.weekday() == dia_semana and e.get("hora") == hora_actual and e.get("ultima_ejec") != fecha_actual:
+                    debe_disparar = True
+            except Exception:
+                pass
+
+        if debe_disparar:
+            try:
+                # Generar el guion en SEGUNDO PLANO (thread). Generar un guion largo
+                # tarda >30s y el tick se cortaría por timeout. El thread lo genera
+                # tranquilo y el tick responde de inmediato.
+                import threading
+                marca_e = e.get("marca")
+                formato_e = e.get("formato", "9:16")
+                duracion_e = e.get("duracion_min")
+                def _generar_en_fondo(m, f, d):
+                    try:
+                        _disparar_orden_interna(m, f, "", d)
+                    except Exception:
+                        import traceback as _tb
+                        _log_error_bot("cron_disparar_fondo", _tb.format_exc())
+                threading.Thread(target=_generar_en_fondo, args=(marca_e, formato_e, duracion_e), daemon=True).start()
+                disparadas.append({"marca": marca_e, "estado": "generando_en_fondo"})
+                e["ultima_ejec"] = fecha_actual
+                if repetir == "una_vez":
+                    e["ejecutado"] = True
+                    e["activo"] = False  # se desactiva tras ejecutar
+                hubo_cambios = True
+            except Exception as ex:
+                import traceback
+                _log_error_bot("cron_disparar", traceback.format_exc())
+                disparadas.append({"marca": e.get("marca"), "error": str(ex)})
+
+    if hubo_cambios:
+        _guardar_cron(cfg)
+    # Registrar el estado del tick a GitHub para diagnóstico
+    resumen_agenda = [{"marca": x.get("marca"), "fecha": x.get("fecha"), "hora": x.get("hora"),
+                       "formato": x.get("formato"), "activo": x.get("activo"),
+                       "ejecutado": x.get("ejecutado")} for x in agenda]
+    if disparadas:
+        _log_cron("disparado", f"hora={hora_actual} fecha={fecha_actual} | {disparadas}")
+        return jsonify({"status": "disparado", "ordenes": disparadas})
+    _log_cron("esperando", f"hora_mexico={hora_actual} fecha={fecha_actual} | agenda={resumen_agenda}")
+    return jsonify({"status": "esperando", "hora": hora_actual, "fecha": fecha_actual})
+
+def _disparar_orden_interna(marca, formato, premisa, duracion_min=None):
+    """Lógica compartida: genera guion + encola. Devuelve tarea_id.
+    duracion_min: para videos largos, minutos objetivo (15, 28, 45). None = short."""
+    import json as _json
+    es_largo = formato == "16:9"
+    # La duración solicitada viaja como "N min" para que ai_engine la use DIRECTO,
+    # sin la doble conversión a palabras que descalibraba (un 15min salía de 28-35min).
+    if es_largo:
+        _min = int(duracion_min) if duracion_min else 28
+        if _min not in (15, 28, 45):
+            _min = 28
+        longitud = f"{_min} min"
+    else:
+        longitud = "130 palabras"
+    formato_calculado = "16:9" if formato == "16:9" else "9:16"
+
+    yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+    usados = _temas_usados(marca)
+    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key, temas_usados=usados)
+    contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
+    contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+    # NeuroEngine: capa de neuromarketing
+    try:
+        contexto_absoluto = neuro_engine.enriquecer_contexto(
+            contexto_absoluto, marca, formato_calculado, yt_api_key
+        )
+    except Exception:
+        pass
+
+    resultado = compliance_engine.blindar_guion(
+        ai_engine_instancia=ai_engine, marca=marca, contexto=contexto_absoluto,
+        peticion=premisa or "Tema en tendencia del canal",
+        longitud=longitud, formato=formato_calculado
+    )
+    if isinstance(resultado, str):
+        if resultado.startswith("ERROR"):
+            raise Exception(resultado[:120])
+        guion = _json.loads(resultado)
+    else:
+        guion = resultado
+
+    tarea_id = str(uuid.uuid4())
+    escenas = guion.get("escenas", [])
+    if not escenas:
+        raise Exception("Guion sin escenas")
+    # Registrar el tema para no repetir
+    try:
+        _registrar_tema_usado(marca, guion.get("titulo", guion.get("titulo_sugerido", "")))
+    except Exception:
+        pass
+
+    # El worker busca el campo "prompt" en cada escena, pero Gemini genera
+    # "prompt_visual". Mapear para que el worker reconozca cada escena.
+    escenas_norm = []
+    for idx, e in enumerate(escenas):
+        prompt_img = e.get("prompt") or e.get("prompt_visual") or e.get("prompt_imagen", "")
+        escenas_norm.append({
+            "id": e.get("id", idx + 1),
+            "prompt": prompt_img,
+            "prompt_visual": prompt_img,
+            "texto_locucion": e.get("texto_locucion", ""),
+            "pexels_query": e.get("pexels_query"),
+        })
+    escenas = escenas_norm
+
+    titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
+    texto_locucion = " ".join(e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion"))
+
+    tarea_worker = {
+        "id": tarea_id, "tipo": "IMAGEN",
+        "prompt": _json.dumps(escenas, ensure_ascii=False),
+        "formato": formato_calculado, "marca": marca,
+        "texto_locucion": texto_locucion, "titulo_sugerido": titulo,
+        "escenas_texto": [e.get("texto_locucion", "") for e in escenas],
+        "escenas": escenas,
+        "hooks": guion.get("hooks", []),
+        "origen": "bot_pinpinela_cron",
+    }
+    try:
+        with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
+            _json.dump(tarea_worker, f)
+        # Guardar el ENSAMBLAJE pendiente con TODOS los campos del flujo manual
+        voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+        escenas_texto = [e.get("texto_locucion", "") for e in escenas]
+        ensamblaje = {
+            "id": tarea_id, "tipo": "ENSAMBLAJE",
+            "formato": formato_calculado, "marca": marca,
+            "texto_locucion": texto_locucion,
+            "escenas_texto": escenas_texto,
+            "escenas": escenas,
+            "hooks": guion.get("hooks", []),
+            "titulo_sugerido": titulo,
+            "voice_id": voice_id,
+            "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
+            "origen": "bot_pinpinela_cron",
+        }
+        with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
+            _json.dump(ensamblaje, f)
+    except Exception:
+        pass
+    cola_de_renderizado.append(tarea_worker)
+    # Persistir en GitHub para que no se pierda si Render duerme
+    _encolar_orden_persistente(tarea_worker)
+    return tarea_id
+
+@app.route('/api/bot/cola')
+@login_required
+def api_bot_cola():
+    """Devuelve el contenido real de la cola de renderizado + órdenes en disco."""
+    import glob, json as _json
+    items = []
+    # Tareas en memoria
+    for t in cola_de_renderizado:
+        items.append({
+            "id": t.get("id", "?")[:8],
+            "marca": t.get("marca", "?"),
+            "tipo": t.get("tipo", "?"),
+            "formato": t.get("formato", "?"),
+            "titulo": t.get("titulo_sugerido", ""),
+            "origen": t.get("origen", "manual"),
+            "estado": "en_cola",
+        })
+    # Tareas guardadas en disco (esperando que el worker las tome)
+    for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json"):
+        for archivo in glob.glob(patron):
+            try:
+                with open(archivo) as f:
+                    t = _json.load(f)
+                items.append({
+                    "id": t.get("id", "?")[:8],
+                    "marca": t.get("marca", "?"),
+                    "tipo": t.get("tipo", "?"),
+                    "formato": t.get("formato", "?"),
+                    "titulo": t.get("titulo_sugerido", ""),
+                    "origen": t.get("origen", "manual"),
+                    "estado": "en_disco",
+                })
+            except Exception:
+                pass
+    return jsonify({"total": len(items), "items": items})
+
+@app.route('/api/bot/estado')
+@login_required
+def api_bot_estado():
+    """Estado en vivo de los 4 bloques del Bot Pinpinela para el dashboard."""
+    cron = _leer_cron()
+    # Estado de nodos (reportado por el Xeon)
+    antiguedad = time.time() - _estado_nodos.get("ts", 0)
+    nodos_vivos = antiguedad <= 60
+    sd_on   = nodos_vivos and _estado_nodos.get("sd") == "on"
+    voz_on  = nodos_vivos and _estado_nodos.get("voz") == "on"
+    return jsonify({
+        "scripting": {
+            "estado": "activo" if cron.get("activo") else "en_espera",
+            "cron_hora": cron.get("hora", "—"),
+            "cron_activo": cron.get("activo", False),
+            "canales": cron.get("canales", []),
+        },
+        "voz": {"estado": "online" if voz_on else "offline"},
+        "video": {"estado": "online" if sd_on else "ocioso",
+                  "en_cola": len(cola_de_renderizado)},
+        "cola": {"pendientes": len(resultados_itinerantes)},
+    })
+
+@app.route('/api/bot/sugerir_tema', methods=['POST'])
+@login_required
+def api_bot_sugerir_tema():
+    """Devuelve el tema en tendencia del canal (TrendEngine) para rellenar la premisa.
+    Con API key de YouTube = tendencia real. Sin key = simulación estructurada."""
+    data = request.json or {}
+    marca = data.get('marca', 'La Viuda')
+    try:
+        yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+        tendencia = trend_engine.escanear_traccion_competitiva(marca, yt_api_key)
+        if not tendencia:
+            return jsonify({"status": "error", "message": "Sin tendencias para este canal"}), 404
+        en_vivo = bool(yt_api_key)
+        return jsonify({
+            "status": "ok",
+            "tema": tendencia.get("tema_base", ""),
+            "referencia": tendencia.get("titulo_competidor", ""),
+            "vph": round(tendencia.get("vph", 0), 1),
+            "en_vivo": en_vivo,
+        })
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/api/bot/lanzar_orden', methods=['POST'])
+@login_required
+def api_bot_lanzar_orden():
+    """El Bot Pinpinela dispara una orden: genera el guion (con tendencias del
+    TrendEngine) y lo deja listo para encolar. Es el cerebro de la automatización."""
+    data = request.json or {}
+    marca   = data.get('marca', 'La Viuda')
+    formato = data.get('formato', '9:16')
+    premisa = data.get('premisa', '').strip()
+    duracion_min = data.get('duracion_min')
+
+    # Formato → longitud (largo vs short), con duración configurable para largos
+    es_largo = formato in ("16:9",) and data.get('tipo', 'largo') != 'short'
+    if es_largo:
+        _min = int(duracion_min) if duracion_min else 28
+        if _min not in (15, 28, 45):
+            _min = 28
+        longitud = f"{_min} min"
+    else:
+        longitud = "130 palabras"
+    formato_calculado = "16:9" if formato == "16:9" else "9:16"
+
+    try:
+        # 1. TrendEngine: inyecta contexto viral del canal (con memoria anti-repetición)
+        yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+        usados = _temas_usados(marca)
+        contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key, temas_usados=usados)
+
+        # Si no hay premisa manual, el tema lo guía la tendencia
+        contexto_base = premisa if premisa else "Genera el tema desde la tendencia detectada."
+        contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+
+        # 1b. NeuroEngine: inyecta la capa de neuromarketing (gatillos, hook, arco de retención)
+        try:
+            contexto_absoluto = neuro_engine.enriquecer_contexto(
+                contexto_absoluto, marca, formato_calculado, yt_api_key
+            )
+        except Exception as _e_neuro:
+            print(f"[NEURO] No se pudo enriquecer (sigue sin él): {_e_neuro}")
+
+        # 2. Generar el guion blindado (compliance + neuromarketing inyectado)
+        resultado = compliance_engine.blindar_guion(
+            ai_engine_instancia=ai_engine,
+            marca=marca, contexto=contexto_absoluto,
+            peticion=premisa or "Tema en tendencia del canal",
+            longitud=longitud, formato=formato_calculado
+        )
+
+        # 3. Parsear el guion (viene como JSON string) y armar la tarea del worker
+        import json as _json
+        if isinstance(resultado, str):
+            if resultado.startswith("ERROR"):
+                return jsonify({"status": "error", "message": resultado}), 500
+            try:
+                guion = _json.loads(resultado)
+            except Exception:
+                return jsonify({"status": "error", "message": "Guion no es JSON válido"}), 500
+        else:
+            guion = resultado
+
+        tarea_id = str(uuid.uuid4())
+        escenas = guion.get("escenas", [])
+        if not escenas:
+            return jsonify({"status": "error", "message": "El guion no trae escenas"}), 500
+
+        # El worker busca el campo "prompt"; Gemini genera "prompt_visual". Mapear.
+        escenas_norm = []
+        for idx, e in enumerate(escenas):
+            prompt_img = e.get("prompt") or e.get("prompt_visual") or e.get("prompt_imagen", "")
+            escenas_norm.append({
+                "id": e.get("id", idx + 1),
+                "prompt": prompt_img,
+                "prompt_visual": prompt_img,
+                "texto_locucion": e.get("texto_locucion", ""),
+                "pexels_query": e.get("pexels_query"),
+            })
+        escenas = escenas_norm
+
+        titulo = guion.get("titulo", guion.get("titulo_sugerido", ""))
+        # Registrar el tema generado para que NO se repita en próximas órdenes
+        try:
+            _registrar_tema_usado(marca, titulo)
+        except Exception:
+            pass
+        # Reconstruir el texto de locución completo desde las escenas
+        texto_locucion = " ".join(
+            e.get("texto_locucion", "") for e in escenas if e.get("texto_locucion")
+        )
+
+        # 4. Encolar la ORDEN VISUAL (el worker genera imágenes → voz → video → MP4)
+        tarea_worker = {
+            "id": tarea_id,
+            "tipo": "IMAGEN",
+            "prompt": _json.dumps(escenas, ensure_ascii=False),
+            "formato": formato_calculado,
+            "marca": marca,
+            "texto_locucion": texto_locucion,
+            "titulo_sugerido": titulo,
+            "escenas_texto": [e.get("texto_locucion", "") for e in escenas],
+            "escenas": escenas,
+            "hooks": guion.get("hooks", []),
+            "origen": "bot_pinpinela",
+        }
+        # Guardar en disco (sobrevive reinicios de Render) y encolar
+        try:
+            with open(f"/tmp/orden_bot_{tarea_id}.json", "w") as f:
+                _json.dump(tarea_worker, f)
+            # Guardar el ENSAMBLAJE pendiente con TODOS los campos del flujo manual
+            voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+            escenas_texto = [e.get("texto_locucion", "") for e in escenas]
+            ensamblaje = {
+                "id": tarea_id, "tipo": "ENSAMBLAJE",
+                "formato": formato_calculado, "marca": marca,
+                "texto_locucion": texto_locucion,
+                "escenas_texto": escenas_texto,
+                "escenas": escenas,
+                "hooks": guion.get("hooks", []),
+                "titulo_sugerido": titulo,
+                "voice_id": voice_id,
+                "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
+                "origen": "bot_pinpinela",
+            }
+            with open(f"/tmp/pendiente_ensamblaje_{tarea_id}.json", "w") as f:
+                _json.dump(ensamblaje, f)
+        except Exception:
+            pass
+        cola_de_renderizado.append(tarea_worker)
+        # Persistir en GitHub para que no se pierda si Render duerme
+        _encolar_orden_persistente(tarea_worker)
+
+        return jsonify({
+            "status": "PENDING_REVIEW",
+            "tarea_id": tarea_id,
+            "marca": marca,
+            "formato": formato_calculado,
+            "titulo": titulo,
+            "num_escenas": len(escenas),
+            "encolado": True,
+        })
+    except Exception as e:
+        import traceback
+        _log_error_bot("lanzar_orden", traceback.format_exc())
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route('/api/get_boveda')
+@login_required
+def api_get_boveda(): 
+    return jsonify(boveda_db.obtener_datos())
+
+@app.route('/api/save_boveda', methods=['POST'])
+@login_required
+def api_save_boveda():
+    data = request.json
+    boveda_db.guardar_boveda_completa(
+        data.get('gemini_keys', []), data.get('voice_api', ''),
+        data.get('youtube_api', ''), data.get('tiktok_api', '')
+    )
+    return jsonify({"status": "success", "message": "Bóveda actualizada"})
+
+@app.route('/api/generate_script', methods=['POST'])
+@login_required
+def api_generate_script():
+    data = request.json
+    marca = data.get('marca', 'La Viuda')
+    contexto_base = data.get('contexto', '')
+    peticion = data.get('peticion', '')
+    longitud = data.get('longitud', '130 palabras') # Estandarizado para Shorts de alta retención
+
+
+    formato_crudo = str(data.get('formato', '')) + " " + str(longitud)
+    formato_crudo = formato_crudo.lower()
+    formato_calculado = "9:16" if "short" in formato_crudo or "9:16" in formato_crudo else "16:9"
+
+    yt_api_key = boveda_db.obtener_datos().get('youtube_api', '')
+    contexto_viral = trend_engine.inyectar_contexto_viral(marca, yt_api_key)
+    contexto_absoluto = f"{contexto_base}\n\n{contexto_viral}"
+
+    resultado = compliance_engine.blindar_guion(
+        ai_engine_instancia=ai_engine,
+        marca=marca, contexto=contexto_absoluto,
+        peticion=peticion, longitud=longitud, formato=formato_calculado
+    )
+    return jsonify({"status": "success", "data": resultado})
+
+@app.route('/api/generate_audio', methods=['POST'])
+@login_required
+def api_generate_audio():
+    data = request.json
+    resultado = voice_engine.generar_audio(data.get('texto', ''), data.get('marca', 'La Viuda')) 
+    return jsonify({"status": "success", "audio_url": resultado})
+
+# ========================================================
+# RUTA ACTUALIZADA: ENSAMBLAJE CON SOPORTE PARA SUBTÍTULOS
+# ========================================================
+@app.route('/api/assemble_video', methods=['POST'])
+@login_required
+def api_assemble_video():
+    data = request.json
+    tarea_id = str(uuid.uuid4())
+    marca = data.get('marca', 'La Viuda')
+    voice_id = "PHKlYg202ODwQRa3Fxuo" if marca == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+
+    tarea = {
+        "id": tarea_id,
+        "tipo": "ENSAMBLAJE",
+        "texto_locucion": data.get('texto_locucion', ''),
+        "escenas_texto": data.get('escenas_texto', []),
+        "escenas": data.get('escenas', []),
+        "hooks": data.get('hooks', []),
+        "titulo_sugerido": data.get('titulo_sugerido', ''),
+        "voice_id": voice_id,
+        "elevenlabs_key": boveda_db.obtener_datos().get('voice_api', ''),
+        "marca": marca
+    }
+
+    # Guardar en disco — sobrevive reinicios de Render
+    import json as _json
+    with open(f"/tmp/ensamblaje_{tarea_id}.json", "w") as f:
+        _json.dump(tarea, f)
+
+    cola_de_renderizado.append(tarea)
+    return jsonify({"status": "success", "message": "ÓRDEN DE ENSAMBLAJE ENVIADA A LA DARK FACTORY"})
+
+def _procesar_paquete(marca, titulo, texto_locucion, formato):
+    print(f"[PAQUETE] Generando paquete de publicación para {marca}...")
+    paquete = ai_engine.generar_paquete_publicacion(marca, titulo, texto_locucion, formato)
+    if not paquete:
+        return jsonify({"status": "error", "message": "Error generando paquete con Gemini"}), 500
+    # Solo devuelve el JSON — el worker es quien guarda en disco local
+    return jsonify({"status": "success", "paquete": paquete})
+
+# Ruta para el frontend (requiere login)
+@app.route('/api/generar_paquete', methods=['POST'])
+@login_required
+def api_generar_paquete():
+    data = request.json
+    return _procesar_paquete(
+        data.get('marca', 'La Viuda'),
+        data.get('titulo', ''),
+        data.get('texto_locucion', ''),
+        data.get('formato', '9:16')
+    )
+
+# Ruta interna para el worker (sin login, usa clave compartida)
+@app.route('/api/interna/generar_paquete', methods=['POST'])
+def api_generar_paquete_interna():
+    data = request.json
+    if data.get('clave_interna') != app.secret_key:
+        return jsonify({"status": "error", "message": "No autorizado"}), 401
+    return _procesar_paquete(
+        data.get('marca', 'La Viuda'),
+        data.get('titulo', ''),
+        data.get('texto_locucion', ''),
+        data.get('formato', '9:16')
+    )
+
+@app.route('/api/generate_image', methods=['POST'])
+@login_required
+def api_generate_image():
+    data = request.json
+    prompt = data.get('prompt', '')
+    if not prompt: return jsonify({"status": "error", "message": "Prompt vacío"})
+    
+    tarea_id = str(uuid.uuid4())
+    formato = data.get('formato', '16:9')
+    cola_de_renderizado.append({"id": tarea_id, "tipo": "IMAGEN", "prompt": prompt, "formato": formato, "marca": data.get('marca', 'La Viuda')})
+    return jsonify({"status": "EN_COLA", "tarea_id": tarea_id, "message": "Orden enviada a la Dark Factory."})
+
+@app.route('/api/check_image/<tarea_id>')
+@login_required
+def check_image(tarea_id):
+    if tarea_id in resultados_itinerantes:
+        return jsonify({"status": "READY", "image_url": resultados_itinerantes.pop(tarea_id)})
+    return jsonify({"status": "PENDING"})
+
+@app.route('/api/nodo/encolar_tarea', methods=['POST'])
+def nodo_encolar_tarea():
+    tarea = request.json
+    if tarea:
+        cola_de_renderizado.append(tarea)
+        return jsonify({"status": "success"}), 200
+    return jsonify({"status": "error"}), 400
+
+@app.route('/api/nodo/tarea_completada', methods=['POST'])
+def nodo_tarea_completada():
+    """El worker avisa que terminó una tarea. Si era la fase IMAGEN de una orden
+    del bot, encolar automáticamente el ENSAMBLAJE pendiente para continuar el pipeline."""
+    import json as _json, os as _os
+    data = request.json or {}
+    tarea_id = data.get("tarea_id", "")
+    ruta_pendiente = f"/tmp/pendiente_ensamblaje_{tarea_id}.json"
+    try:
+        if _os.path.exists(ruta_pendiente):
+            with open(ruta_pendiente) as f:
+                ensamblaje = _json.load(f)
+            _os.remove(ruta_pendiente)
+            # ID distinto (sufijo _asm) para que el anti-bucle del worker no lo bloquee
+            ensamblaje["id"] = f"{tarea_id}_asm"
+            # Encolar el ensamblaje (guardar en disco para que el polling lo tome)
+            with open(f"/tmp/ensamblaje_{tarea_id}.json", "w") as f:
+                _json.dump(ensamblaje, f)
+            return jsonify({"status": "ensamblaje_encolado", "tarea_id": tarea_id})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)})
+    # Guardar detalles del video (duración real, marca, formato) para el historial del panel.
+    # El worker reporta con el tarea_id base; el ensamblaje cierra con sufijo _asm.
+    _dur_real = data.get("duracion_real_seg")
+    if _dur_real is not None:
+        base = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+        _videos_detalles[base] = {
+            "duracion_real_seg": _dur_real,
+            "marca": data.get("marca", ""),
+            "formato": data.get("formato", ""),
+        }
+    # Si el ID termina en _asm, es un ENSAMBLAJE terminado = video COMPLETO.
+    # Registrarlo para que el orquestador (video_estado) sepa que terminó.
+    if tarea_id.endswith("_asm"):
+        base_id = tarea_id[:-4]  # quitar el sufijo _asm
+        _videos_completados.add(base_id)
+        _videos_completados.add(tarea_id)
+        # PERSISTIR en GitHub: la memoria de Render se borra en cada reinicio/deploy.
+        # Si solo viviera en memoria, el orquestador no se enteraría de que el video
+        # terminó (tras un reinicio) y lo reintentaría — generando otro del mismo canal.
+        try:
+            comp = _gh_leer_json("_diagnostico/videos_completados.json", {"ids": []})
+            ids = comp.get("ids", [])
+            for _id in (base_id, tarea_id):
+                if _id not in ids:
+                    ids.append(_id)
+            comp["ids"] = ids[-200:]  # tope para no crecer infinito
+            # Guardar también los detalles para el historial
+            comp.setdefault("detalles", {})[base_id] = _videos_detalles.get(base_id, {})
+            _gh_guardar_json("_diagnostico/videos_completados.json", comp, f"video completado: {base_id}")
+        except Exception:
+            pass
+    return jsonify({"status": "ok"})
+
+@app.route('/api/nodo/polling', methods=['POST'])
+def nodo_polling():
+    import json as _json, glob
+    # Si la cola en memoria está vacía, recuperar órdenes PERSISTENTES de GitHub.
+    # (Render borra /tmp y la memoria al dormir; GitHub no.)
+    if len(cola_de_renderizado) == 0:
+        pendientes = _leer_ordenes_persistentes()
+        if pendientes:
+            # Tomar la primera, quitarla de GitHub, y entregarla
+            tarea = pendientes.pop(0)
+            _guardar_ordenes_persistentes(pendientes)
+            return jsonify({"status": "success", "hay_trabajo": True, "tarea": tarea}), 200
+    # Fallback: /tmp local (por si acaso)
+    if len(cola_de_renderizado) == 0:
+        for patron in ("/tmp/orden_bot_*.json", "/tmp/ensamblaje_*.json"):
+            archivos = glob.glob(patron)
+            for archivo in archivos:
+                try:
+                    with open(archivo, "r") as f:
+                        tarea = _json.load(f)
+                    cola_de_renderizado.append(tarea)
+                    os.remove(archivo)
+                    break
+                except:
+                    pass
+            if len(cola_de_renderizado) > 0:
+                break
+    if len(cola_de_renderizado) > 0:
+        return jsonify({"status": "success", "hay_trabajo": True, "tarea": cola_de_renderizado.pop(0)}), 200
+    return jsonify({"status": "success", "hay_trabajo": False}), 200
+
+
+def _leer_ordenes_persistentes():
+    """Lee la cola de órdenes pendientes desde GitHub (persistente)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return []
+    try:
+        import base64 as _b64, json as _json
+        url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
+        r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        if r.status_code == 200:
+            return _json.loads(_b64.b64decode(r.json()["content"]).decode())
+    except Exception:
+        pass
+    return []
+
+def _guardar_ordenes_persistentes(lista):
+    """Guarda la cola de órdenes pendientes en GitHub."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return
+    try:
+        import base64 as _b64, json as _json
+        url = "https://api.github.com/repos/uri2203/prompt-engineer-system/contents/_diagnostico/cola_ordenes.json"
+        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        contenido = _b64.b64encode(_json.dumps(lista, ensure_ascii=False, indent=2).encode()).decode()
+        payload = {"message": "cola ordenes", "content": contenido, "branch": "diagnostico"}
+        if rget.status_code == 200:
+            payload["sha"] = rget.json()["sha"]
+        requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
+def _encolar_orden_persistente(tarea):
+    """Agrega una orden a la cola persistente de GitHub."""
+    lista = _leer_ordenes_persistentes()
+    lista.append(tarea)
+    _guardar_ordenes_persistentes(lista)
+
+
+@app.route('/api/nodo/upload_result', methods=['POST'])
+def upload_result():
+    data = request.json
+    tid, img = data.get('tarea_id'), data.get('image_b64')
+    if tid and img:
+        resultados_itinerantes[tid] = img
+        return jsonify({"status": "success"}), 200
+    return jsonify({"status": "error"}), 400
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ORQUESTADOR DE LOTES — endpoints que usa orquestador_lote.py (en el Xeon)
+# ═══════════════════════════════════════════════════════════════════════════
+def _gh_leer_json(path, default):
+    """Lee un JSON de la rama 'diagnostico' de GitHub."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return default
+    try:
+        import base64 as _b64, json as _json
+        url = f"https://api.github.com/repos/uri2203/prompt-engineer-system/contents/{path}"
+        r = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        if r.status_code == 200:
+            return _json.loads(_b64.b64decode(r.json()["content"]).decode())
+    except Exception:
+        pass
+    return default
+
+def _gh_guardar_json(path, datos, mensaje="update"):
+    """Guarda un JSON en la rama 'diagnostico' de GitHub (no dispara deploys)."""
+    gh = os.environ.get("GH_DIAG_TOKEN", "")
+    if not gh:
+        return
+    try:
+        import base64 as _b64, json as _json
+        url = f"https://api.github.com/repos/uri2203/prompt-engineer-system/contents/{path}"
+        rget = requests.get(url, headers={"Authorization": f"token {gh}"}, params={"ref": "diagnostico"}, timeout=15)
+        contenido = _b64.b64encode(_json.dumps(datos, ensure_ascii=False, indent=2).encode()).decode()
+        payload = {"message": mensaje, "content": contenido, "branch": "diagnostico"}
+        if rget.status_code == 200:
+            payload["sha"] = rget.json()["sha"]
+        requests.put(url, headers={"Authorization": f"token {gh}"}, json=payload, timeout=15)
+    except Exception:
+        pass
+
+def _temas_usados(marca):
+    """Lee del historial (rama diagnostico) los títulos ya generados para esta marca,
+    para que el TrendEngine no repita temas. Devuelve lista de títulos (str)."""
+    hist = _gh_leer_json("_diagnostico/temas_usados.json", {})
+    return hist.get(marca, [])[-50:]  # solo los últimos 50 por marca
+
+def _registrar_tema_usado(marca, titulo):
+    """Guarda un título recién generado en el historial anti-repetición."""
+    if not titulo:
+        return
+    hist = _gh_leer_json("_diagnostico/temas_usados.json", {})
+    lista = hist.get(marca, [])
+    t = str(titulo).strip()
+    if t and t not in lista:
+        lista.append(t)
+        hist[marca] = lista[-80:]  # tope por marca
+        _gh_guardar_json("_diagnostico/temas_usados.json", hist, f"tema usado: {marca}")
+
+@app.route('/api/bot/plan_semanal', methods=['GET', 'POST'])
+def api_plan_semanal():
+    """Plan de producción del lote: por marca, # shorts, # largos, duración largos.
+    GET = leer (lo usa el orquestador). POST = guardar (desde el panel)."""
+    PLAN_PATH = "_diagnostico/plan_lote.json"
+    if request.method == 'POST':
+        if 'user' not in session:
+            return jsonify({"status": "error", "message": "No autorizado"}), 401
+        data = request.json or {}
+        plan = {
+            "marcas": data.get("marcas", []),  # [{marca, shorts, largos, duracion_min}]
+            "enfriamiento_seg": int(data.get("enfriamiento_seg", 180)),
+            "orden": data.get("orden", "shorts_primero"),  # shorts_primero | largos_primero
+        }
+        _gh_guardar_json(PLAN_PATH, plan, "plan lote actualizado")
+        return jsonify({"status": "ok", "plan": plan})
+    return jsonify(_gh_leer_json(PLAN_PATH, {"marcas": [], "enfriamiento_seg": 180, "orden": "shorts_primero"}))
+
+@app.route('/api/bot/lanzar_orden_motor', methods=['POST'])
+def api_lanzar_orden_motor():
+    """El orquestador pide generar UN video del lote. Reusa la lógica de orden interna."""
+    data = request.json or {}
+    marca = data.get("marca", "La Viuda")
+    formato = data.get("formato", "9:16")
+    duracion_min = data.get("duracion_min")
+    try:
+        tid = _disparar_orden_interna(marca, formato, "", duracion_min)
+        if tid:
+            return jsonify({"status": "PENDING_REVIEW", "tarea_id": tid})
+        return jsonify({"status": "error", "message": "No se pudo generar la orden"}), 500
+    except Exception as e:
+        import traceback
+        _log_error_bot("lanzar_orden_motor", traceback.format_exc())
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/api/bot/video_estado', methods=['GET'])
+def api_video_estado():
+    """El orquestador pregunta si un video terminó. Completo = su ensamblaje terminó.
+    Devuelve también los detalles (duración real, marca, formato) para el historial."""
+    tarea_id = request.args.get("tarea_id", "")
+    # Primero la memoria (rápido). Si no está, leer de GitHub (sobrevive a reinicios
+    # de Render — clave para que el orquestador no reintente videos ya terminados).
+    completado = tarea_id in _videos_completados or f"{tarea_id}_asm" in _videos_completados
+    detalles = _videos_detalles.get(tarea_id, {})
+    if not completado:
+        try:
+            comp = _gh_leer_json("_diagnostico/videos_completados.json", {"ids": []})
+            ids = comp.get("ids", [])
+            completado = tarea_id in ids or f"{tarea_id}_asm" in ids
+            if completado and not detalles:
+                detalles = comp.get("detalles", {}).get(tarea_id, {})
+        except Exception:
+            pass
+    return jsonify({"completado": completado, "tarea_id": tarea_id, "detalles": detalles})
+
+@app.route('/api/bot/lote_control', methods=['GET', 'POST'])
+def api_lote_control():
+    """Controles del lote: pausar / reanudar / cancelar. GET = el orquestador lee
+    la orden actual. POST = el panel manda la orden."""
+    CTRL_PATH = "_diagnostico/lote_control.json"
+    if request.method == 'POST':
+        data = request.json or {}
+        accion = data.get("accion", "")  # "", pausar, reanudar, cancelar, iniciar
+        # El orquestador (script sin sesión) necesita CONSUMIR el control poniéndolo
+        # en vacío tras procesarlo. Eso se permite sin login. Las acciones REALES
+        # (iniciar/pausar/reanudar/cancelar) sí requieren sesión del panel.
+        if accion != "" and 'user' not in session:
+            return jsonify({"status": "error", "message": "No autorizado"}), 401
+        _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion or 'consumido'}")
+        # Al CANCELAR: liberar el panel de inmediato reseteando el progreso a inactivo,
+        # sin esperar a que el orquestador reporte (puede haberse detenido ya). Así el
+        # panel no se queda trabado mostrando el estado viejo tras la cancelación.
+        if accion == "cancelar":
+            _worker_estado["ocupado"] = False
+            _worker_estado["tarea_actual"] = ""
+            try:
+                _gh_guardar_json("_diagnostico/lote_progreso.json",
+                                 {"estado_lote": "inactivo", "total": 0, "completados": 0,
+                                  "mensaje": "Lote cancelado por el operador.", "resumen": ""},
+                                 "cancelar: progreso liberado")
+            except Exception:
+                pass
+        return jsonify({"status": "ok", "accion": accion})
+    return jsonify(_gh_leer_json(CTRL_PATH, {"accion": ""}))
+
+@app.route('/api/bot/lote_progreso', methods=['GET', 'POST'])
+def api_lote_progreso():
+    """Progreso del lote en vivo. POST = el orquestador reporta. GET = el panel lee."""
+    PROG_PATH = "_diagnostico/lote_progreso.json"
+    if request.method == 'POST':
+        data = request.json or {}
+        _gh_guardar_json(PROG_PATH, data, "progreso lote")
+        return jsonify({"status": "ok"})
+    return jsonify(_gh_leer_json(PROG_PATH, {"estado_lote": "inactivo", "total": 0, "completados": 0}))
+
+@app.route('/api/bot/salud_llaves', methods=['GET'])
+def api_salud_llaves():
+    """Estado de salud de las llaves de Gemini para el panel:
+    cuántas hay, cuántas en enfriamiento, y cuáles necesitan cambiarse (posible baneo)."""
+    try:
+        num_llaves = len(ai_engine.boveda.obtener_llaves())
+        problematicas = ai_engine.cuotas.llaves_problematicas()
+        ahora = time.time()
+        en_pausa = []
+        for i in range(num_llaves):
+            bloqueada_hasta = ai_engine.cuotas.estado.get("bloqueada_hasta", {}).get(str(i), 0)
+            if bloqueada_hasta > ahora:
+                en_pausa.append({"indice": i, "segundos": int(bloqueada_hasta - ahora)})
+        return jsonify({
+            "total_llaves": num_llaves,
+            "en_pausa": en_pausa,
+            "problematicas": problematicas,  # cambiar estas
+            "disponibles": num_llaves - len(en_pausa),
+        })
+    except Exception as e:
+        return jsonify({"total_llaves": 0, "en_pausa": [], "problematicas": [], "disponibles": 0, "error": str(e)[:100]})
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
