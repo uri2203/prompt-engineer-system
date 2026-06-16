@@ -1930,12 +1930,26 @@ def procesar():
                             '-threads', '0', '-pix_fmt', 'yuv420p', '-r', str(fps), path_clip
                         ]
                     else:
-                        vf_string = f"fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u,vignette=PI/4,setpts=PTS-STARTPTS{glitch_fx}"
+                        # Pexels (video): forzar duración EXACTA frame-perfect, igual que
+                        # las imágenes SD. Sin esto, recortar un video con -t deja
+                        # milisegundos de más/menos que se ACUMULAN escena tras escena
+                        # y desfasan los re-hooks de la voz (el bug de Monkygraff/FiltradoMX).
+                        # 'trim' corta exacto al segundo pedido, fps fija el ritmo constante,
+                        # y tpad rellena si el recorte quedó corto. Solo afecta a Pexels.
+                        _frames_exactos = int(round(dur_exacta * fps))
+                        vf_string = (
+                            f"fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u,vignette=PI/4,"
+                            f"setpts=PTS-STARTPTS,fps={fps},"
+                            f"trim=end_frame={_frames_exactos},"
+                            f"tpad=stop_mode=clone:stop=-1,trim=end_frame={_frames_exactos},"
+                            f"setpts=PTS-STARTPTS{glitch_fx}"
+                        )
                         cmd_scene = [
                             'ffmpeg', '-y', '-stream_loop', '-1', '-i', path_origen,
-                            '-vf', vf_string, '-t', str(dur_exacta),
+                            '-vf', vf_string, '-frames:v', str(_frames_exactos),
                             '-c:v', 'libx264', '-preset', 'ultrafast',
-                            '-threads', '0', '-pix_fmt', 'yuv420p', '-r', str(fps), path_clip
+                            '-threads', '0', '-pix_fmt', 'yuv420p',
+                            '-vsync', 'cfr', '-r', str(fps), path_clip
                         ]
 
                     subprocess.run(cmd_scene, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
