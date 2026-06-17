@@ -517,28 +517,35 @@ def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
 
 
 # ── CONFIGURACIÓN DE SUBTÍTULOS POR CANAL ────────────────────────────────────
-# Cada canal tiene distinto ritmo de voz, así que la detección de bloques de habla
-# y el reparto del texto se ajustan por canal:
+# Cada canal tiene distinto ritmo de voz. Para AJUSTAR un canal, cambia SUS números:
+#
 #   dur_min_silencio = cuánto debe durar una pausa para contar como frontera entre
-#                      bloques. Voz RÁPIDA (LaesquinaRandom) necesita pausas más
-#                      largas para no fragmentar en micro-bloques de respiración.
-#                      Voz LENTA (La Viuda) usa pausas cortas (detección fina).
+#                      bloques. Voz RÁPIDA necesita pausas más largas para no
+#                      fragmentar; voz LENTA usa pausas cortas (detección fina).
 #   fusionar_bloques_min = si un bloque dura menos que esto, se fusiona con el
 #                      siguiente (evita micro-bloques que desincronizan).
 #   max_palabras     = palabras máximas por línea de subtítulo (ritmo de lectura).
+#   offset_seg       = DESFASE en segundos. Es el ajuste fino de sincronía:
+#                      • Si los subtítulos van ATRASADOS (el texto llega tarde) →
+#                        usa un valor NEGATIVO (ej. -0.3) para ADELANTARLOS.
+#                      • Si van ADELANTADOS (el texto aparece antes que la voz) →
+#                        usa un valor POSITIVO (ej. 0.3) para ATRASARLOS.
+#                      • Si están bien → déjalo en 0.0.
+#                      Ajusta de a poco: 0.2-0.3s suele bastar. 1.0s es mucho.
 SUBS_POR_CANAL = {
-    "la viuda":          {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4},
-    "laviuda":           {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4},
-    "monkygraff":        {"dur_min_silencio": 0.38, "fusionar_bloques_min": 1.2, "max_palabras": 5},
-    "filtradomx":        {"dur_min_silencio": 0.42, "fusionar_bloques_min": 1.4, "max_palabras": 5},
-    "filtrado mx":       {"dur_min_silencio": 0.42, "fusionar_bloques_min": 1.4, "max_palabras": 5},
-    "laesquinarandom":   {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6},
-    "laesquina random":  {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6},
-    "tuialista":         {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5},
-    "umbral alterno":    {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5},
-    "umbralalterno":     {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5},
+    "la viuda":          {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4, "offset_seg": 0.0},
+    "laviuda":           {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4, "offset_seg": 0.0},
+    "monkygraff":        {"dur_min_silencio": 0.38, "fusionar_bloques_min": 1.2, "max_palabras": 5, "offset_seg": 0.0},
+    # FiltradoMX: subtítulos iban ATRASADOS → offset negativo para adelantarlos
+    "filtradomx":        {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": -0.35},
+    "filtrado mx":       {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": -0.35},
+    "laesquinarandom":   {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": 0.0},
+    "laesquina random":  {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": 0.0},
+    "tuialista":         {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": 0.0},
+    "umbral alterno":    {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5, "offset_seg": 0.0},
+    "umbralalterno":     {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5, "offset_seg": 0.0},
 }
-SUBS_DEFAULT = {"dur_min_silencio": 0.36, "fusionar_bloques_min": 1.1, "max_palabras": 5}
+SUBS_DEFAULT = {"dur_min_silencio": 0.36, "fusionar_bloques_min": 1.1, "max_palabras": 5, "offset_seg": 0.0}
 
 def _config_subs(marca):
     """Devuelve la config de subtítulos del canal (o el default)."""
@@ -825,6 +832,12 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
         if len(bloques) != antes:
             print(f"   [SUBS] {antes} bloques → {len(bloques)} tras fusionar micro-pausas (canal {marca})")
     _num_bloques = len(bloques)
+    # Aplicar el OFFSET de sincronía del canal: desplaza todos los bloques en el tiempo.
+    # Negativo = adelanta los subtítulos (si iban atrasados); positivo = los atrasa.
+    _offset = cfg.get("offset_seg", 0.0)
+    if _offset and bloques:
+        bloques = [(max(0.0, ini + _offset), max(0.05, fin + _offset)) for (ini, fin) in bloques]
+        print(f"   [SUBS] Offset de {_offset:+.2f}s aplicado (sincronía fina canal {marca})")
     if bloques and len(bloques) >= 1:
         print(f"   [SUBS] {len(bloques)} bloques de habla — sincronía por canal ({marca})")
         _generar_srt_por_bloques(texto_completo, bloques, dur_total or dur_detectada, marca, ruta_srt, cfg["max_palabras"])
