@@ -580,6 +580,57 @@ def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
     return ultimo_resultado
 
 
+def _crear_carpeta_identificada(carpeta_origen, marca, es_short, ruta_final):
+    """Crea una carpeta identificadora (ej. SHLV_0617_1423) y agrupa ahí el video
+    terminado y sus archivos (MP4, paquete JSON, Words). El identificador usa:
+    SH/VG (short/largo) + iniciales del canal + fecha_hora (nunca se repite).
+    Devuelve (ruta_carpeta, identificador) o (None, None) si falla."""
+    import shutil
+    INICIALES_CANAL = {
+        "la viuda": "LV", "laviuda": "LV",
+        "monkygraff": "MG",
+        "filtradomx": "FM", "filtrado mx": "FM", "filtrad": "FM",
+        "laesquinarandom": "ER", "laesquina random": "ER", "esquina": "ER",
+        "tuialista": "IA", "tuia": "IA",
+        "umbral alterno": "UA", "umbralalterno": "UA", "umbral": "UA",
+    }
+    try:
+        marca_key = (marca or "").lower().strip()
+        ini = None
+        for k, v in INICIALES_CANAL.items():
+            if k in marca_key:
+                ini = v; break
+        if not ini:
+            ini = (marca_key[:2].upper() or "XX")
+        prefijo = "SH" if es_short else "VG"
+        sello = time.strftime("%m%d_%H%M%S")  # mes-día_hora-min-seg (único)
+        identificador = f"{prefijo}{ini}_{sello}"
+
+        # Carpeta de salida agrupada (dentro de la carpeta de salidas del worker)
+        base_salidas = os.path.join(CARPETA_LOCAL, "VIDEOS_TERMINADOS")
+        os.makedirs(base_salidas, exist_ok=True)
+        carpeta_id = os.path.join(base_salidas, identificador)
+        os.makedirs(carpeta_id, exist_ok=True)
+
+        # Mover/copiar el MP4 final con nombre identificador
+        if ruta_final and os.path.exists(ruta_final):
+            destino_mp4 = os.path.join(carpeta_id, f"{identificador}.mp4")
+            shutil.copy2(ruta_final, destino_mp4)
+
+        # Copiar los archivos acompañantes si existen
+        acompanantes = ["paquete_publicacion.json", "paquete_publicacion.docx", "guion.docx", "subtitulos.srt"]
+        for nombre in acompanantes:
+            origen = os.path.join(carpeta_origen, nombre)
+            if os.path.exists(origen):
+                shutil.copy2(origen, os.path.join(carpeta_id, nombre))
+
+        print(f"📁 [CARPETA] Video agrupado en: {carpeta_id} (ID: {identificador})")
+        return carpeta_id, identificador
+    except Exception as e:
+        print(f"⚠️ [CARPETA] No se pudo crear la carpeta identificada: {e}")
+        return None, None
+
+
 def _corregir_pronunciacion(texto):
     """Corrige palabras que el XTTS español pronuncia mal, reescribiéndolas
     fonéticamente SOLO para la voz (el texto original se conserva para subtítulos).
@@ -2454,6 +2505,15 @@ def procesar():
                     _generar_word_guion(texto_locucion, marca_audio, formato_ensamblaje, tarea, carpeta_reciente)
                 except Exception as e:
                     print(f"⚠️ [WORD] Error guión: {e}")
+
+                # Agrupar el video terminado y sus archivos en una carpeta identificadora
+                # (ej. SHLV_0617_1423 = Short La Viuda, 17 jun 14:23). Facilita ubicar
+                # cada video para subirlo manualmente.
+                _carpeta_id, _identificador = _crear_carpeta_identificada(
+                    carpeta_reciente, marca_audio,
+                    es_short=(formato_ensamblaje == "9:16"),
+                    ruta_final=ruta_final
+                )
                     
                 # 🛑 FIX MAESTRO ANTI-BUCLE: Notificamos al servidor explícitamente para que la borre de su base de datos.
                 try:
@@ -2475,6 +2535,8 @@ def procesar():
                     _diag["fin"] = time.strftime("%Y-%m-%d %H:%M:%S")
                     _diag["duracion_real_seg"] = round(_dur_real, 1)
                     _diag["video_final"] = os.path.basename(ruta_final)
+                    if _identificador:
+                        _diag["identificador"] = _identificador
                     subir_diagnostico_video(_diag)
                 except Exception as e:
                     print(f"⚠️ Error reportando cierre de ensamblaje al servidor: {e}")
