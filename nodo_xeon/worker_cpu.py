@@ -580,6 +580,60 @@ def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
     return ultimo_resultado
 
 
+def _corregir_pronunciacion(texto):
+    """Corrige palabras que el XTTS español pronuncia mal, reescribiéndolas
+    fonéticamente SOLO para la voz (el texto original se conserva para subtítulos).
+    XTTS en español tropieza con anglicismos, nombres propios extranjeros y ciertas
+    combinaciones de letras. Este diccionario se amplía con lo que el usuario detecte.
+    El reemplazo respeta mayúsculas/minúsculas y solo afecta palabras completas."""
+    import re
+    # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
+    REEMPLAZOS = {
+        # ── Reportadas por el usuario ──
+        "explica": "ex plica", "explican": "ex plican", "explicar": "ex plicar",
+        "explicó": "ex plicó", "explico": "ex plico", "explicación": "ex plicación",
+        "explicaciones": "ex plicaciones", "explícame": "ex plícame", "explicando": "ex plicando",
+        "iceberg": "áisberg", "icebergs": "áisbergs",
+        "washington": "guáshington",
+        "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
+        # ── Anglicismos / tecnología frecuentes (todos los canales, sobre todo TuIALista) ──
+        "software": "sóftgüer", "hardware": "járdgüer", "smartphone": "smártfon",
+        "internet": "ínternet", "online": "onláin", "streaming": "estrímin",
+        "podcast": "pódcast", "hashtag": "jáshtag", "influencer": "ínfluenser",
+        "chatgpt": "chat g p t", "deepfake": "dípfeik", "deepfakes": "dípfeiks",
+        "blockchain": "blókchein",
+        "bitcoin": "bítcoin", "startup": "estártap", "startups": "estártaps",
+        "google": "gúgol", "youtube": "yutúb", "whatsapp": "guátsap",
+        "iphone": "áifon", "android": "ándroid", "wifi": "guifi",
+        "gigabyte": "gígabait", "byte": "bait", "bytes": "baits",
+        # ── Nombres propios / geográficos extranjeros ──
+        "hollywood": "jóligud",
+        "trump": "tramp", "biden": "báiden", "putin": "pútin",
+        "beijing": "beishín", "shanghai": "shanghái",
+        # ── Combinaciones que el modelo suele romper ──
+        "algoritmo": "algorítmo", "algoritmos": "algorítmos",
+    }
+    # frases de varias palabras (se reemplazan primero)
+    REEMPLAZOS_FRASE = {
+        "new york": "niu york", "los angeles": "los ángeles",
+        "machine learning": "mashín lérnin",
+    }
+    def _reemplazar(match):
+        palabra = match.group(0)
+        clave = palabra.lower()
+        if clave in REEMPLAZOS:
+            nuevo = REEMPLAZOS[clave]
+            if palabra[0].isupper():
+                nuevo = nuevo[0].upper() + nuevo[1:]
+            return nuevo
+        return palabra
+    resultado = texto
+    for frase, rep in REEMPLAZOS_FRASE.items():
+        resultado = re.sub(r'\b' + re.escape(frase) + r'\b', rep, resultado, flags=re.IGNORECASE)
+    resultado = re.sub(r'\b\w+\b', _reemplazar, resultado, flags=re.UNICODE)
+    return resultado
+
+
 def _detectar_borde_habla(ruta_audio, dur_total):
     """Detecta dónde empieza y termina realmente el habla (recorta silencio inicial/final).
     Usa silencedetect muy sensible solo para los bordes."""
@@ -1587,7 +1641,11 @@ def procesar():
                     import sys
                     sys.path.insert(0, "C:\\NODO_PINPINELA")
                     from voice_local import generar_audio_local
-                    resultado = generar_audio_local(texto_locucion, marca_audio, ruta_audio)
+                    # Corregir pronunciación SOLO para la voz (el texto original se
+                    # conserva intacto para los subtítulos). Arregla palabras que XTTS
+                    # descompone (explica→espica, Washington→vasinton, amiga→amilla, etc.)
+                    texto_para_voz = _corregir_pronunciacion(texto_locucion)
+                    resultado = generar_audio_local(texto_para_voz, marca_audio, ruta_audio)
                     if resultado:
                         ruta_audio = resultado
                         print(f"✅ Audio local generado: {ruta_audio}")
