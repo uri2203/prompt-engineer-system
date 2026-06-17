@@ -1,38 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 3,
-  "completados": 3,
+  "estado_lote": "produciendo",
+  "total": 1,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 1s",
-  "mensaje": "Lote completado.",
-  "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "Monkygraff",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 111.1,
-      "hora": "12:00"
-    },
-    {
-      "n": 2,
-      "marca": "FiltradoMX",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 120.2,
-      "hora": "12:59"
-    },
-    {
-      "n": 3,
-      "marca": "LaesquinaRandom",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 117.9,
-      "hora": "15:01"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "TuIALista: 1s+0L",
+  "historial": []
 }
