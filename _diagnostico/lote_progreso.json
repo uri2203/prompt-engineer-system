@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 4,
-  "completados": 1,
+  "completados": 2,
   "fallidos": 0,
   "trabajo_actual": "Generando video 2/4 (Monkygraff 9:16)",
-  "mensaje": "Produccion del video 2 iniciada.",
+  "mensaje": "Video 2 completado",
   "resumen": "La Viuda: 1s+0L | Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
   "historial": [
     {
@@ -15,6 +15,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 116.0,
       "hora": "23:40"
+    },
+    {
+      "n": 2,
+      "marca": "Monkygraff",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 108.1,
+      "hora": "00:40"
     }
   ]
 }
