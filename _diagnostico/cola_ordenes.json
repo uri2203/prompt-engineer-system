@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "cd6ff340-4722-4bcf-8164-2dc147e3762b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark, empty school hallway, a single, flickering fluorescent light at the far end, deep shadows, desaturated colors, grainy film texture\", \"prompt_visual\": \"Dark, empty school hallway, a single, flickering fluorescent light at the far end, deep shadows, desaturated colors, grainy film texture\", \"texto_locucion\": \"Recuerdas esa escuela tuya de la infancia.\", \"pexels_query\": \"empty school hallway\"}, {\"id\": 2, \"prompt\": \"Close-up on a worn, old wooden desk in an empty classroom, a single chair slightly ajar, dust motes in a shaft of dim light, desaturated, grainy\", \"prompt_visual\": \"Close-up on a worn, old wooden desk in an empty classroom, a single chair slightly ajar, dust motes in a shaft of dim light, desaturated, grainy\", \"texto_locucion\": \"Los pasillos eternos, llenos de eco.\", \"pexels_query\": \"empty classroom desk\"}, {\"id\": 3, \"prompt\": \"A closed classroom door with an old, scratched nameplate, deep shadows obscuring most details, faint light from beneath, grainy\", \"prompt_visual\": \"A closed classroom door with an old, scratched nameplate, deep shadows obscuring most details, faint light from beneath, grainy\", \"texto_locucion\": \"Pero ¿alguna vez la sentiste vacía?\", \"pexels_query\": \"closed classroom door\"}, {\"id\": 4, \"prompt\": \"Wide shot of a deserted school gymnasium, basketball hoop in darkness, a single pool of light in the center, ominous, desaturated\", \"prompt_visual\": \"Wide shot of a deserted school gymnasium, basketball hoop in darkness, a single pool of light in the center, ominous, desaturated\", \"texto_locucion\": \"Con ese silencio absoluto y pesado.\", \"pexels_query\": \"empty school gymnasium\"}, {\"id\": 5, \"prompt\": \"A locker door slightly ajar in a dark hallway, revealing only deep blackness inside, high contrast, grainy texture\", \"prompt_visual\": \"A locker door slightly ajar in a dark hallway, revealing only deep blackness inside, high contrast, grainy texture\", \"texto_locucion\": \"Como si no estabas solo en realidad.\", \"pexels_query\": \"open school locker\"}, {\"id\": 6, \"prompt\": \"Exterior shot of an old school building at dusk, all windows dark, a single, distant street lamp casting long shadows, eerie atmosphere\", \"prompt_visual\": \"Exterior shot of an old school building at dusk, all windows dark, a single, distant street lamp casting long shadows, eerie atmosphere\", \"texto_locucion\": \"Cuando las luces se apagaban por completo.\", \"pexels_query\": \"old school building\"}, {\"id\": 7, \"prompt\": \"A dark, empty stairwell in a school, concrete steps disappearing into shadow, faint light from an unknown source above, grainy\", \"prompt_visual\": \"A dark, empty stairwell in a school, concrete steps disappearing into shadow, faint light from an unknown source above, grainy\", \"texto_locucion\": \"Y algo no estaba bien en el aire.\", \"pexels_query\": \"dark school stairwell\"}, {\"id\": 8, \"prompt\": \"Close-up on a dusty chalkboard in an empty classroom, a blurred, indistinct smudge suggesting erased writing, eerie, desaturated\", \"prompt_visual\": \"Close-up on a dusty chalkboard in an empty classroom, a blurred, indistinct smudge suggesting erased writing, eerie, desaturated\", \"texto_locucion\": \"Esa sensación de estar siendo observado.\", \"pexels_query\": \"dusty chalkboard\"}, {\"id\": 9, \"prompt\": \"A dark classroom with rows of empty desks, one desk slightly out of alignment, creating a disturbing pattern, shadows, grainy\", \"prompt_visual\": \"A dark classroom with rows of empty desks, one desk slightly out of alignment, creating a disturbing pattern, shadows, grainy\", \"texto_locucion\": \"Lo sentiste antes, lo sabes muy bien.\", \"pexels_query\": \"empty classroom desks\"}, {\"id\": 10, \"prompt\": \"A partially open classroom door, dark gap, hinting at a presence within without showing anything specific, high contrast, grainy\", \"prompt_visual\": \"A partially open classroom door, dark gap, hinting at a presence within without showing anything specific, high contrast, grainy\", \"texto_locucion\": \"En un aula que debía estar cerrada.\", \"pexels_query\": \"partially open door\"}, {\"id\": 11, \"prompt\": \"A single piece of white chalk lying broken on a dark, wooden floor, surrounded by dust, ominous, unsettling, desaturated\", \"prompt_visual\": \"A single piece of white chalk lying broken on a dark, wooden floor, surrounded by dust, ominous, unsettling, desaturated\", \"texto_locucion\": \"Una silla movida, una tiza caída.\", \"pexels_query\": \"broken chalk\"}, {\"id\": 12, \"prompt\": \"A bulletin board in a dark hallway, a few faded, curling papers barely visible, suggesting forgotten information, grainy, desaturated\", \"prompt_visual\": \"A bulletin board in a dark hallway, a few faded, curling papers barely visible, suggesting forgotten information, grainy, desaturated\", \"texto_locucion\": \"Pequeños detalles que nadie más notó.\", \"pexels_query\": \"faded bulletin board\"}, {\"id\": 13, \"prompt\": \"A stack of old, generic school binders, one slightly out of place, almost falling, in a dimly lit shelf, deep shadows\", \"prompt_visual\": \"A stack of old, generic school binders, one slightly out of place, almost falling, in a dimly lit shelf, deep shadows\", \"texto_locucion\": \"Un expediente escolar que desapareció un día.\", \"pexels_query\": \"old school binders\"}, {\"id\": 14, \"prompt\": \"A single, old school textbook lying open on a dark, empty table, pages turned to an unsettling, blank section, desaturated\", \"prompt_visual\": \"A single, old school textbook lying open on a dark, empty table, pages turned to an unsettling, blank section, desaturated\", \"texto_locucion\": \"Luego apareció en el sitio equivocado.\", \"pexels_query\": \"old textbook open\"}, {\"id\": 15, \"prompt\": \"A darkened principal's office, an empty chair facing away from the camera, desk barely visible in shadows, ominous, grainy\", \"prompt_visual\": \"A darkened principal's office, an empty chair facing away from the camera, desk barely visible in shadows, ominous, grainy\", \"texto_locucion\": \"Historias de maestros que renunciaron, sin razón.\", \"pexels_query\": \"empty office chair\"}, {\"id\": 16, \"prompt\": \"Close-up on an old intercom speaker on a school wall, crackling with static, hinting at unheard voices, dark, grainy\", \"prompt_visual\": \"Close-up on an old intercom speaker on a school wall, crackling with static, hinting at unheard voices, dark, grainy\", \"texto_locucion\": \"Algunos decían que escuchaban susurros allí.\", \"pexels_query\": \"old intercom speaker\"}, {\"id\": 17, \"prompt\": \"A dark, empty coat rack with a single, forgotten school bag hanging, swaying slightly in an unseen draft, eerie, desaturated\", \"prompt_visual\": \"A dark, empty coat rack with a single, forgotten school bag hanging, swaying slightly in an unseen draft, eerie, desaturated\", \"texto_locucion\": \"Voces de niños que ya no estaban.\", \"pexels_query\": \"empty coat rack\"}, {\"id\": 18, \"prompt\": \"An empty music room, a single piano covered with a dark cloth, vague, shadowy form slightly visible near it, unsettling, grainy\", \"prompt_visual\": \"An empty music room, a single piano covered with a dark cloth, vague, shadowy form slightly visible near it, unsettling, grainy\", \"texto_locucion\": \"O quizá, de algo que los imitaba.\", \"pexels_query\": \"covered piano room\"}, {\"id\": 19, \"prompt\": \"A dark school library, rows of shelves filled with books, a single gap where a book is missing, unsettling emptiness, desaturated\", \"prompt_visual\": \"A dark school library, rows of shelves filled with books, a single gap where a book is missing, unsettling emptiness, desaturated\", \"texto_locucion\": \"¿Y si esa escuela ocultaba un secreto?\", \"pexels_query\": \"empty library shelf\"}, {\"id\": 20, \"prompt\": \"Close-up on an old, scratched wooden floor in a hallway, faint, almost invisible scuff marks leading into darkness, grainy\", \"prompt_visual\": \"Close-up on an old, scratched wooden floor in a hallway, faint, almost invisible scuff marks leading into darkness, grainy\", \"texto_locucion\": \"Un secreto que vivía en sus paredes.\", \"pexels_query\": \"scratched wooden floor\"}, {\"id\": 21, \"prompt\": \"A narrow gap beneath a closed classroom door, casting a thin line of faint, unsettling light onto the dark hallway floor, high contrast\", \"prompt_visual\": \"A narrow gap beneath a closed classroom door, casting a thin line of faint, unsettling light onto the dark hallway floor, high contrast\", \"texto_locucion\": \"Y te observaba desde las sombras siempre.\", \"pexels_query\": \"light under door\"}, {\"id\": 22, \"prompt\": \"A distorted, elongated shadow of an unseen figure stretching down a long, dark school hallway, inhuman proportions, ominous\", \"prompt_visual\": \"A distorted, elongated shadow of an unseen figure stretching down a long, dark school hallway, inhuman proportions, ominous\", \"texto_locucion\": \"No puedes ignorarlo, ese frío en la nuca.\", \"pexels_query\": \"elongated shadow hallway\"}, {\"id\": 23, \"prompt\": \"Reflective surface of a highly polished, dark school floor, showing a distorted, elongated reflection of an empty hallway, unsettling\", \"prompt_visual\": \"Reflective surface of a highly polished, dark school floor, showing a distorted, elongated reflection of an empty hallway, unsettling\", \"texto_locucion\": \"El eco de tus pasos no era el tuyo.\", \"pexels_query\": \"polished dark floor reflection\"}, {\"id\": 24, \"prompt\": \"A dark school cafeteria, empty tables and chairs, a single chair slightly turned, as if someone just left, or is about to sit, desaturated\", \"prompt_visual\": \"A dark school cafeteria, empty tables and chairs, a single chair slightly turned, as if someone just left, or is about to sit, desaturated\", \"texto_locucion\": \"Era como si alguien más caminara contigo.\", \"pexels_query\": \"empty school cafeteria\"}, {\"id\": 25, \"prompt\": \"A half-open window in a dark school room, revealing only blackness outside, a faint, barely perceptible movement in the pane, eerie\", \"prompt_visual\": \"A half-open window in a dark school room, revealing only blackness outside, a faint, barely perceptible movement in the pane, eerie\", \"texto_locucion\": \"Solo que nadie lo vio, nunca jamás.\", \"pexels_query\": \"half open dark window\"}, {\"id\": 26, \"prompt\": \"A wide, empty shot of the school's main entrance from the inside, doors closed, a feeling of being trapped or watched, desaturated, grainy\", \"prompt_visual\": \"A wide, empty shot of the school's main entrance from the inside, doors closed, a feeling of being trapped or watched, desaturated, grainy\", \"texto_locucion\": \"¿Tu vieja escuela realmente te dejó ir?\", \"pexels_query\": \"school entrance inside\"}, {\"id\": 27, \"prompt\": \"A dark, empty classroom, camera focused on a single, isolated school chair, a faint, glowing red ember-like light coming from beneath it, ominous\", \"prompt_visual\": \"A dark, empty classroom, camera focused on a single, isolated school chair, a faint, glowing red ember-like light coming from beneath it, ominous\", \"texto_locucion\": \"O una parte de ti sigue ahí dentro.\", \"pexels_query\": \"empty chair glowing\"}, {\"id\": 28, \"prompt\": \"A hallway clock frozen at an unsettling time (e.g., 3:00 AM), surrounded by deep shadows, its hands slightly blurred as if vibrating, desaturated\", \"prompt_visual\": \"A hallway clock frozen at an unsettling time (e.g., 3:00 AM), surrounded by deep shadows, its hands slightly blurred as if vibrating, desaturated\", \"texto_locucion\": \"Esperando que las luces se apaguen de nuevo.\", \"pexels_query\": \"school hallway clock\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Recuerdas esa escuela tuya de la infancia. Los pasillos eternos, llenos de eco. Pero ¿alguna vez la sentiste vacía? Con ese silencio absoluto y pesado. Como si no estabas solo en realidad. Cuando las luces se apagaban por completo. Y algo no estaba bien en el aire. Esa sensación de estar siendo observado. Lo sentiste antes, lo sabes muy bien. En un aula que debía estar cerrada. Una silla movida, una tiza caída. Pequeños detalles que nadie más notó. Un expediente escolar que desapareció un día. Luego apareció en el sitio equivocado. Historias de maestros que renunciaron, sin razón. Algunos decían que escuchaban susurros allí. Voces de niños que ya no estaban. O quizá, de algo que los imitaba. ¿Y si esa escuela ocultaba un secreto? Un secreto que vivía en sus paredes. Y te observaba desde las sombras siempre. No puedes ignorarlo, ese frío en la nuca. El eco de tus pasos no era el tuyo. Era como si alguien más caminara contigo. Solo que nadie lo vio, nunca jamás. ¿Tu vieja escuela realmente te dejó ir? O una parte de ti sigue ahí dentro. Esperando que las luces se apaguen de nuevo.",
+    "titulo_sugerido": "¿Tu Vieja Escuela Sigue Observándote en la Noche?",
+    "escenas_texto": [
+      "Recuerdas esa escuela tuya de la infancia.",
+      "Los pasillos eternos, llenos de eco.",
+      "Pero ¿alguna vez la sentiste vacía?",
+      "Con ese silencio absoluto y pesado.",
+      "Como si no estabas solo en realidad.",
+      "Cuando las luces se apagaban por completo.",
+      "Y algo no estaba bien en el aire.",
+      "Esa sensación de estar siendo observado.",
+      "Lo sentiste antes, lo sabes muy bien.",
+      "En un aula que debía estar cerrada.",
+      "Una silla movida, una tiza caída.",
+      "Pequeños detalles que nadie más notó.",
+      "Un expediente escolar que desapareció un día.",
+      "Luego apareció en el sitio equivocado.",
+      "Historias de maestros que renunciaron, sin razón.",
+      "Algunos decían que escuchaban susurros allí.",
+      "Voces de niños que ya no estaban.",
+      "O quizá, de algo que los imitaba.",
+      "¿Y si esa escuela ocultaba un secreto?",
+      "Un secreto que vivía en sus paredes.",
+      "Y te observaba desde las sombras siempre.",
+      "No puedes ignorarlo, ese frío en la nuca.",
+      "El eco de tus pasos no era el tuyo.",
+      "Era como si alguien más caminara contigo.",
+      "Solo que nadie lo vio, nunca jamás.",
+      "¿Tu vieja escuela realmente te dejó ir?",
+      "O una parte de ti sigue ahí dentro.",
+      "Esperando que las luces se apaguen de nuevo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark, empty school hallway, a single, flickering fluorescent light at the far end, deep shadows, desaturated colors, grainy film texture",
+        "prompt_visual": "Dark, empty school hallway, a single, flickering fluorescent light at the far end, deep shadows, desaturated colors, grainy film texture",
+        "texto_locucion": "Recuerdas esa escuela tuya de la infancia.",
+        "pexels_query": "empty school hallway"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up on a worn, old wooden desk in an empty classroom, a single chair slightly ajar, dust motes in a shaft of dim light, desaturated, grainy",
+        "prompt_visual": "Close-up on a worn, old wooden desk in an empty classroom, a single chair slightly ajar, dust motes in a shaft of dim light, desaturated, grainy",
+        "texto_locucion": "Los pasillos eternos, llenos de eco.",
+        "pexels_query": "empty classroom desk"
+      },
+      {
+        "id": 3,
+        "prompt": "A closed classroom door with an old, scratched nameplate, deep shadows obscuring most details, faint light from beneath, grainy",
+        "prompt_visual": "A closed classroom door with an old, scratched nameplate, deep shadows obscuring most details, faint light from beneath, grainy",
+        "texto_locucion": "Pero ¿alguna vez la sentiste vacía?",
+        "pexels_query": "closed classroom door"
+      },
+      {
+        "id": 4,
+        "prompt": "Wide shot of a deserted school gymnasium, basketball hoop in darkness, a single pool of light in the center, ominous, desaturated",
+        "prompt_visual": "Wide shot of a deserted school gymnasium, basketball hoop in darkness, a single pool of light in the center, ominous, desaturated",
+        "texto_locucion": "Con ese silencio absoluto y pesado.",
+        "pexels_query": "empty school gymnasium"
+      },
+      {
+        "id": 5,
+        "prompt": "A locker door slightly ajar in a dark hallway, revealing only deep blackness inside, high contrast, grainy texture",
+        "prompt_visual": "A locker door slightly ajar in a dark hallway, revealing only deep blackness inside, high contrast, grainy texture",
+        "texto_locucion": "Como si no estabas solo en realidad.",
+        "pexels_query": "open school locker"
+      },
+      {
+        "id": 6,
+        "prompt": "Exterior shot of an old school building at dusk, all windows dark, a single, distant street lamp casting long shadows, eerie atmosphere",
+        "prompt_visual": "Exterior shot of an old school building at dusk, all windows dark, a single, distant street lamp casting long shadows, eerie atmosphere",
+        "texto_locucion": "Cuando las luces se apagaban por completo.",
+        "pexels_query": "old school building"
+      },
+      {
+        "id": 7,
+        "prompt": "A dark, empty stairwell in a school, concrete steps disappearing into shadow, faint light from an unknown source above, grainy",
+        "prompt_visual": "A dark, empty stairwell in a school, concrete steps disappearing into shadow, faint light from an unknown source above, grainy",
+        "texto_locucion": "Y algo no estaba bien en el aire.",
+        "pexels_query": "dark school stairwell"
+      },
+      {
+        "id": 8,
+        "prompt": "Close-up on a dusty chalkboard in an empty classroom, a blurred, indistinct smudge suggesting erased writing, eerie, desaturated",
+        "prompt_visual": "Close-up on a dusty chalkboard in an empty classroom, a blurred, indistinct smudge suggesting erased writing, eerie, desaturated",
+        "texto_locucion": "Esa sensación de estar siendo observado.",
+        "pexels_query": "dusty chalkboard"
+      },
+      {
+        "id": 9,
+        "prompt": "A dark classroom with rows of empty desks, one desk slightly out of alignment, creating a disturbing pattern, shadows, grainy",
+        "prompt_visual": "A dark classroom with rows of empty desks, one desk slightly out of alignment, creating a disturbing pattern, shadows, grainy",
+        "texto_locucion": "Lo sentiste antes, lo sabes muy bien.",
+        "pexels_query": "empty classroom desks"
+      },
+      {
+        "id": 10,
+        "prompt": "A partially open classroom door, dark gap, hinting at a presence within without showing anything specific, high contrast, grainy",
+        "prompt_visual": "A partially open classroom door, dark gap, hinting at a presence within without showing anything specific, high contrast, grainy",
+        "texto_locucion": "En un aula que debía estar cerrada.",
+        "pexels_query": "partially open door"
+      },
+      {
+        "id": 11,
+        "prompt": "A single piece of white chalk lying broken on a dark, wooden floor, surrounded by dust, ominous, unsettling, desaturated",
+        "prompt_visual": "A single piece of white chalk lying broken on a dark, wooden floor, surrounded by dust, ominous, unsettling, desaturated",
+        "texto_locucion": "Una silla movida, una tiza caída.",
+        "pexels_query": "broken chalk"
+      },
+      {
+        "id": 12,
+        "prompt": "A bulletin board in a dark hallway, a few faded, curling papers barely visible, suggesting forgotten information, grainy, desaturated",
+        "prompt_visual": "A bulletin board in a dark hallway, a few faded, curling papers barely visible, suggesting forgotten information, grainy, desaturated",
+        "texto_locucion": "Pequeños detalles que nadie más notó.",
+        "pexels_query": "faded bulletin board"
+      },
+      {
+        "id": 13,
+        "prompt": "A stack of old, generic school binders, one slightly out of place, almost falling, in a dimly lit shelf, deep shadows",
+        "prompt_visual": "A stack of old, generic school binders, one slightly out of place, almost falling, in a dimly lit shelf, deep shadows",
+        "texto_locucion": "Un expediente escolar que desapareció un día.",
+        "pexels_query": "old school binders"
+      },
+      {
+        "id": 14,
+        "prompt": "A single, old school textbook lying open on a dark, empty table, pages turned to an unsettling, blank section, desaturated",
+        "prompt_visual": "A single, old school textbook lying open on a dark, empty table, pages turned to an unsettling, blank section, desaturated",
+        "texto_locucion": "Luego apareció en el sitio equivocado.",
+        "pexels_query": "old textbook open"
+      },
+      {
+        "id": 15,
+        "prompt": "A darkened principal's office, an empty chair facing away from the camera, desk barely visible in shadows, ominous, grainy",
+        "prompt_visual": "A darkened principal's office, an empty chair facing away from the camera, desk barely visible in shadows, ominous, grainy",
+        "texto_locucion": "Historias de maestros que renunciaron, sin razón.",
+        "pexels_query": "empty office chair"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up on an old intercom speaker on a school wall, crackling with static, hinting at unheard voices, dark, grainy",
+        "prompt_visual": "Close-up on an old intercom speaker on a school wall, crackling with static, hinting at unheard voices, dark, grainy",
+        "texto_locucion": "Algunos decían que escuchaban susurros allí.",
+        "pexels_query": "old intercom speaker"
+      },
+      {
+        "id": 17,
+        "prompt": "A dark, empty coat rack with a single, forgotten school bag hanging, swaying slightly in an unseen draft, eerie, desaturated",
+        "prompt_visual": "A dark, empty coat rack with a single, forgotten school bag hanging, swaying slightly in an unseen draft, eerie, desaturated",
+        "texto_locucion": "Voces de niños que ya no estaban.",
+        "pexels_query": "empty coat rack"
+      },
+      {
+        "id": 18,
+        "prompt": "An empty music room, a single piano covered with a dark cloth, vague, shadowy form slightly visible near it, unsettling, grainy",
+        "prompt_visual": "An empty music room, a single piano covered with a dark cloth, vague, shadowy form slightly visible near it, unsettling, grainy",
+        "texto_locucion": "O quizá, de algo que los imitaba.",
+        "pexels_query": "covered piano room"
+      },
+      {
+        "id": 19,
+        "prompt": "A dark school library, rows of shelves filled with books, a single gap where a book is missing, unsettling emptiness, desaturated",
+        "prompt_visual": "A dark school library, rows of shelves filled with books, a single gap where a book is missing, unsettling emptiness, desaturated",
+        "texto_locucion": "¿Y si esa escuela ocultaba un secreto?",
+        "pexels_query": "empty library shelf"
+      },
+      {
+        "id": 20,
+        "prompt": "Close-up on an old, scratched wooden floor in a hallway, faint, almost invisible scuff marks leading into darkness, grainy",
+        "prompt_visual": "Close-up on an old, scratched wooden floor in a hallway, faint, almost invisible scuff marks leading into darkness, grainy",
+        "texto_locucion": "Un secreto que vivía en sus paredes.",
+        "pexels_query": "scratched wooden floor"
+      },
+      {
+        "id": 21,
+        "prompt": "A narrow gap beneath a closed classroom door, casting a thin line of faint, unsettling light onto the dark hallway floor, high contrast",
+        "prompt_visual": "A narrow gap beneath a closed classroom door, casting a thin line of faint, unsettling light onto the dark hallway floor, high contrast",
+        "texto_locucion": "Y te observaba desde las sombras siempre.",
+        "pexels_query": "light under door"
+      },
+      {
+        "id": 22,
+        "prompt": "A distorted, elongated shadow of an unseen figure stretching down a long, dark school hallway, inhuman proportions, ominous",
+        "prompt_visual": "A distorted, elongated shadow of an unseen figure stretching down a long, dark school hallway, inhuman proportions, ominous",
+        "texto_locucion": "No puedes ignorarlo, ese frío en la nuca.",
+        "pexels_query": "elongated shadow hallway"
+      },
+      {
+        "id": 23,
+        "prompt": "Reflective surface of a highly polished, dark school floor, showing a distorted, elongated reflection of an empty hallway, unsettling",
+        "prompt_visual": "Reflective surface of a highly polished, dark school floor, showing a distorted, elongated reflection of an empty hallway, unsettling",
+        "texto_locucion": "El eco de tus pasos no era el tuyo.",
+        "pexels_query": "polished dark floor reflection"
+      },
+      {
+        "id": 24,
+        "prompt": "A dark school cafeteria, empty tables and chairs, a single chair slightly turned, as if someone just left, or is about to sit, desaturated",
+        "prompt_visual": "A dark school cafeteria, empty tables and chairs, a single chair slightly turned, as if someone just left, or is about to sit, desaturated",
+        "texto_locucion": "Era como si alguien más caminara contigo.",
+        "pexels_query": "empty school cafeteria"
+      },
+      {
+        "id": 25,
+        "prompt": "A half-open window in a dark school room, revealing only blackness outside, a faint, barely perceptible movement in the pane, eerie",
+        "prompt_visual": "A half-open window in a dark school room, revealing only blackness outside, a faint, barely perceptible movement in the pane, eerie",
+        "texto_locucion": "Solo que nadie lo vio, nunca jamás.",
+        "pexels_query": "half open dark window"
+      },
+      {
+        "id": 26,
+        "prompt": "A wide, empty shot of the school's main entrance from the inside, doors closed, a feeling of being trapped or watched, desaturated, grainy",
+        "prompt_visual": "A wide, empty shot of the school's main entrance from the inside, doors closed, a feeling of being trapped or watched, desaturated, grainy",
+        "texto_locucion": "¿Tu vieja escuela realmente te dejó ir?",
+        "pexels_query": "school entrance inside"
+      },
+      {
+        "id": 27,
+        "prompt": "A dark, empty classroom, camera focused on a single, isolated school chair, a faint, glowing red ember-like light coming from beneath it, ominous",
+        "prompt_visual": "A dark, empty classroom, camera focused on a single, isolated school chair, a faint, glowing red ember-like light coming from beneath it, ominous",
+        "texto_locucion": "O una parte de ti sigue ahí dentro.",
+        "pexels_query": "empty chair glowing"
+      },
+      {
+        "id": 28,
+        "prompt": "A hallway clock frozen at an unsettling time (e.g., 3:00 AM), surrounded by deep shadows, its hands slightly blurred as if vibrating, desaturated",
+        "prompt_visual": "A hallway clock frozen at an unsettling time (e.g., 3:00 AM), surrounded by deep shadows, its hands slightly blurred as if vibrating, desaturated",
+        "texto_locucion": "Esperando que las luces se apaguen de nuevo.",
+        "pexels_query": "school hallway clock"
+      }
+    ],
+    "hooks": [
+      "La escuela no está vacía.",
+      "El silencio esconde miradas.",
+      "Nunca te fuiste del todo."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
