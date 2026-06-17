@@ -647,9 +647,9 @@ def _corregir_pronunciacion(texto):
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
     REEMPLAZOS = {
         # ── Reportadas por el usuario (La Viuda) ──
-        "explica": "ex plica", "explican": "ex plican", "explicar": "ex plicar",
-        "explicó": "ex plicó", "explico": "ex plico", "explicación": "ex plicación",
-        "explicaciones": "ex plicaciones", "explícame": "ex plícame", "explicando": "ex plicando",
+        "explica": "eks plica", "explican": "eks plican", "explicar": "eks plicar",
+        "explicó": "eks plicó", "explico": "eks plico", "explicación": "eks plicación",
+        "explicaciones": "eks plicaciones", "explícame": "eks plícame", "explicando": "eks plicando",
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
         "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
@@ -1357,6 +1357,45 @@ def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, d
 
 
 # ═══════════ GENERACIÓN DE CLIPS DE HOOK ═══════════
+def _obtener_stinger_canal(carpeta_marca, tipo, dur_sil, ruta_salida):
+    """Usa los stingers REALES del canal (stinger1.mp3 = whoosh, stinger2.mp3 = impact)
+    si existen en la carpeta de assets. Si no, genera uno sintético como respaldo.
+    Devuelve True si dejó un audio válido en ruta_salida."""
+    import random as _rnd
+    # Mapeo: formato A (whoosh) → stinger1; formato B (impact) → stinger2
+    nombre = "stinger1.mp3" if tipo == "whoosh" else "stinger2.mp3"
+    ruta_real = os.path.join(carpeta_marca, nombre) if carpeta_marca else None
+    # Si no existe el específico, intentar el otro stinger disponible
+    if ruta_real and not os.path.exists(ruta_real):
+        alt = os.path.join(carpeta_marca, "stinger2.mp3" if tipo == "whoosh" else "stinger1.mp3")
+        ruta_real = alt if os.path.exists(alt) else None
+    if ruta_real and os.path.exists(ruta_real):
+        try:
+            # Recortar/ajustar el stinger real a la duración del hueco del hook
+            subprocess.run(['ffmpeg','-y','-i', ruta_real, '-t', str(dur_sil),
+                            '-af', f'afade=t=out:st={max(0.1,dur_sil*0.6):.2f}:d={max(0.2,dur_sil*0.4):.2f}',
+                            '-c:a','pcm_s16le','-ar','44100','-ac','2', ruta_salida],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if _clip_valido(ruta_salida, 0.05):
+                return True
+        except Exception:
+            pass
+    # Respaldo: stinger sintético (el de siempre)
+    try:
+        if tipo == "whoosh":
+            _filt = (f"anoisesrc=d={dur_sil}:c=pink:a=0.25,"
+                     f"afade=t=in:d=0.3,afade=t=out:st={dur_sil*0.5:.2f}:d={dur_sil*0.5:.2f},"
+                     f"highpass=f=200,lowpass=f=3000")
+        else:
+            _filt = f"sine=frequency=80:duration={dur_sil},afade=t=out:st=0.1:d={dur_sil-0.1:.2f}"
+        subprocess.run(['ffmpeg','-y','-f','lavfi','-i', _filt,
+                        '-c:a','pcm_s16le','-ar','44100','-ac','2', ruta_salida],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return _clip_valido(ruta_salida, 0.05)
+    except Exception:
+        return False
+
+
 def _generar_stinger(ruta_salida, dur=1.2, tipo="whoosh"):
     try:
         if tipo == "whoosh":
@@ -1484,7 +1523,7 @@ def _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0):
 
 
 def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraciones_escenas,
-                               dur_hook_inicial, carpeta, hook_inicial_presente):
+                               dur_hook_inicial, carpeta, hook_inicial_presente, carpeta_marca=None):
     """
     Reconstruye el audio de narración insertando, en cada punto de hook, un tramo
     de silencio de duración = dur del hook (para que el audio NO pise el hook visual,
@@ -1549,20 +1588,9 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
                     tipo_st = "whoosh" if _ins.get("formato") == "A" else "impact"
                     break
             _st_tmp = os.path.join(carpeta, f"_st_{idx}.wav")
-            _ok_st = False
-            try:
-                if tipo_st == "whoosh":
-                    _filt = (f"anoisesrc=d={dur_sil}:c=pink:a=0.25,"
-                             f"afade=t=in:d=0.3,afade=t=out:st={dur_sil*0.5:.2f}:d={dur_sil*0.5:.2f},"
-                             f"highpass=f=200,lowpass=f=3000")
-                else:
-                    _filt = f"sine=frequency=80:duration={dur_sil},afade=t=out:st=0.1:d={dur_sil-0.1:.2f}"
-                subprocess.run(['ffmpeg','-y','-f','lavfi','-i', _filt,
-                                '-c:a','pcm_s16le','-ar','44100','-ac','2', _st_tmp],
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                _ok_st = _clip_valido(_st_tmp, 0.05)
-            except Exception:
-                _ok_st = False
+            # Usa el stinger REAL del canal (stinger1/stinger2.mp3) si existe;
+            # si no, genera el sintético como respaldo.
+            _ok_st = _obtener_stinger_canal(carpeta_marca, tipo_st, dur_sil, _st_tmp)
             if _ok_st:
                 sil = _st_tmp
             else:
@@ -2303,7 +2331,8 @@ def procesar():
                             if construir_audio_con_hooks(
                                 ruta_audio, _audio_hk, _hook_inserciones, duraciones_escenas,
                                 _hook_inicial_dur, carpeta_reciente,
-                                hook_inicial_presente=(_hook_inicial_dur > 0)
+                                hook_inicial_presente=(_hook_inicial_dur > 0),
+                                carpeta_marca=carpeta_marca_assets
                             ):
                                 ruta_audio = _audio_hk
                                 duracion_audio = _dur(_audio_hk)
