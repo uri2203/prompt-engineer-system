@@ -1,29 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 2,
-  "completados": 2,
+  "estado_lote": "produciendo",
+  "total": 3,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 0s",
-  "mensaje": "Lote completado.",
-  "resumen": "FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "FiltradoMX",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 144.4,
-      "hora": "09:22"
-    },
-    {
-      "n": 2,
-      "marca": "LaesquinaRandom",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 126.8,
-      "hora": "10:50"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
+  "historial": []
 }
