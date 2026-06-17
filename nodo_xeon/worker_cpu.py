@@ -516,6 +516,55 @@ def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
         return []
 
 
+# ── CONFIGURACIÓN DE SUBTÍTULOS POR CANAL ────────────────────────────────────
+# Cada canal tiene distinto ritmo de voz, así que la detección de bloques de habla
+# y el reparto del texto se ajustan por canal:
+#   dur_min_silencio = cuánto debe durar una pausa para contar como frontera entre
+#                      bloques. Voz RÁPIDA (LaesquinaRandom) necesita pausas más
+#                      largas para no fragmentar en micro-bloques de respiración.
+#                      Voz LENTA (La Viuda) usa pausas cortas (detección fina).
+#   fusionar_bloques_min = si un bloque dura menos que esto, se fusiona con el
+#                      siguiente (evita micro-bloques que desincronizan).
+#   max_palabras     = palabras máximas por línea de subtítulo (ritmo de lectura).
+SUBS_POR_CANAL = {
+    "la viuda":          {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4},
+    "laviuda":           {"dur_min_silencio": 0.28, "fusionar_bloques_min": 0.8, "max_palabras": 4},
+    "monkygraff":        {"dur_min_silencio": 0.38, "fusionar_bloques_min": 1.2, "max_palabras": 5},
+    "filtradomx":        {"dur_min_silencio": 0.42, "fusionar_bloques_min": 1.4, "max_palabras": 5},
+    "filtrado mx":       {"dur_min_silencio": 0.42, "fusionar_bloques_min": 1.4, "max_palabras": 5},
+    "laesquinarandom":   {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6},
+    "laesquina random":  {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6},
+    "tuialista":         {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5},
+    "umbral alterno":    {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5},
+    "umbralalterno":     {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5},
+}
+SUBS_DEFAULT = {"dur_min_silencio": 0.36, "fusionar_bloques_min": 1.1, "max_palabras": 5}
+
+def _config_subs(marca):
+    """Devuelve la config de subtítulos del canal (o el default)."""
+    return SUBS_POR_CANAL.get((marca or "").lower().strip(), SUBS_DEFAULT)
+
+
+def _fusionar_microbloques(bloques, min_dur):
+    """Fusiona bloques demasiado cortos (micro-pausas de respiración) con el
+    siguiente, para que los bloques coincidan con frases reales y no con jadeos.
+    Crucial en voces rápidas que generan muchos micro-bloques."""
+    if not bloques:
+        return bloques
+    fusionados = []
+    ini_actual, fin_actual = bloques[0]
+    for i in range(1, len(bloques)):
+        b_ini, b_fin = bloques[i]
+        # Si el bloque actual es muy corto O el hueco al siguiente es mínimo, fusionar
+        if (fin_actual - ini_actual) < min_dur:
+            fin_actual = b_fin  # extender el bloque actual hasta el siguiente
+        else:
+            fusionados.append((ini_actual, fin_actual))
+            ini_actual, fin_actual = b_ini, b_fin
+    fusionados.append((ini_actual, fin_actual))
+    return fusionados
+
+
 def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
     """SINCRONÍA FUERTE: detecta los BLOQUES DE HABLA reales (inicio, fin) del audio,
     usando los silencios como fronteras (VAD por energía). Devuelve [(ini, fin), ...].
@@ -699,12 +748,24 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
         print("   [ERROR] Texto vacío.")
         return None
 
-    # SINCRONÍA FUERTE: detectar bloques de habla reales y repartir el texto en ellos
-    bloques, dur_detectada = _detectar_bloques_habla(ruta_audio) if ruta_audio and os.path.exists(ruta_audio) else ([], 0.0)
+    # SINCRONÍA FUERTE POR CANAL: cada canal tiene distinto ritmo de voz, así que la
+    # detección y el reparto se ajustan a su config (La Viuda lenta = fina; LaesquinaRandom
+    # rápida = pausas más largas + fusión de micro-bloques para no fragmentar).
+    cfg = _config_subs(marca)
+    bloques, dur_detectada = _detectar_bloques_habla(
+        ruta_audio, dur_min_silencio=cfg["dur_min_silencio"]
+    ) if ruta_audio and os.path.exists(ruta_audio) else ([], 0.0)
+    # Fusionar micro-bloques (respiraciones) según el canal, para que los bloques
+    # coincidan con frases reales y los subtítulos no se desincronicen.
+    if bloques:
+        antes = len(bloques)
+        bloques = _fusionar_microbloques(bloques, cfg["fusionar_bloques_min"])
+        if len(bloques) != antes:
+            print(f"   [SUBS] {antes} bloques → {len(bloques)} tras fusionar micro-pausas (canal {marca})")
     _num_bloques = len(bloques)
     if bloques and len(bloques) >= 1:
-        print(f"   [SUBS] {len(bloques)} bloques de habla reales detectados — sincronía fuerte")
-        _generar_srt_por_bloques(texto_completo, bloques, dur_total or dur_detectada, marca, ruta_srt)
+        print(f"   [SUBS] {len(bloques)} bloques de habla — sincronía por canal ({marca})")
+        _generar_srt_por_bloques(texto_completo, bloques, dur_total or dur_detectada, marca, ruta_srt, cfg["max_palabras"])
     else:
         print(f"   [SUBS] Sin bloques detectados — distribución lineal de respaldo")
         _generar_srt_calibrado(texto_completo, dur_total, marca, ruta_srt)
@@ -712,13 +773,14 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
     return ruta_srt, _num_bloques
 
 
-def _generar_srt_por_bloques(texto_completo, bloques, dur_total, marca, ruta_srt):
+def _generar_srt_por_bloques(texto_completo, bloques, dur_total, marca, ruta_srt, max_pal=None):
     """SINCRONÍA FUERTE: reparte el texto en los bloques de habla reales, proporcional
     a la duración de cada bloque, y distribuye las palabras dentro del tiempo real de
     cada bloque. Así los subtítulos siguen el ritmo REAL de la voz (rápido/lento/pausas)."""
     import re
-    ppm = _obtener_velocidad_canal(marca)
-    max_pal = 4 if ppm <= 90 else (5 if ppm <= 130 else 6)
+    if max_pal is None:
+        ppm = _obtener_velocidad_canal(marca)
+        max_pal = 4 if ppm <= 90 else (5 if ppm <= 130 else 6)
 
     palabras = texto_completo.split()
     total_pal = len(palabras)
