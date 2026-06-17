@@ -561,8 +561,49 @@ def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
         except Exception as e:
             print(f"   [SUBS] Error detectando bloques con umbral {u}dB: {e}")
             ultimo_resultado = ([], 0.0)
-    # Ningún umbral dio 2+ bloques: devolver lo último (puede ser 0-1 bloque)
+    # Ningún umbral dio 2+ bloques: el audio es habla CONTINUA sin pausas largas
+    # (típico en shorts rápidos). En vez de rendirse, subdividir el habla real en
+    # segmentos regulares dentro de la duración detectada. Mucho mejor que el reparto
+    # lineal ciego, porque se ancla a la duración REAL del audio.
+    if dur_total <= 0:
+        dur_total = _obtener_duracion_audio_simple(ruta_audio)
+    if dur_total > 2:
+        # Detectar inicio y fin reales del habla (recortar silencios de borde)
+        ini_real, fin_real = _detectar_borde_habla(ruta_audio, dur_total)
+        dur_habla = max(1.0, fin_real - ini_real)
+        # Segmentos de ~3s (ritmo natural de lectura de subtítulos)
+        n_seg = max(2, int(round(dur_habla / 3.0)))
+        paso = dur_habla / n_seg
+        bloques_sint = [(ini_real + i*paso, ini_real + (i+1)*paso) for i in range(n_seg)]
+        print(f"   [SUBS] Habla continua sin pausas — {n_seg} segmentos sobre habla real ({ini_real:.1f}s-{fin_real:.1f}s)")
+        return bloques_sint, dur_total
     return ultimo_resultado
+
+
+def _detectar_borde_habla(ruta_audio, dur_total):
+    """Detecta dónde empieza y termina realmente el habla (recorta silencio inicial/final).
+    Usa silencedetect muy sensible solo para los bordes."""
+    import re
+    try:
+        r = subprocess.run(
+            ['ffmpeg', '-i', ruta_audio, '-af', 'silencedetect=noise=-45dB:d=0.5',
+             '-f', 'null', '-'], capture_output=True, text=True
+        )
+        starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]
+        ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]
+        # inicio del habla: si hay un silencio que empieza en ~0, el habla empieza en su end
+        ini = 0.0
+        if ends and starts and starts[0] < 0.5:
+            ini = ends[0]
+        # fin del habla: si hay un silencio final, el habla termina en su start
+        fin = dur_total
+        if starts and starts[-1] > dur_total - 2.0 and (not ends or ends[-1] < starts[-1]):
+            fin = starts[-1]
+        if fin <= ini:
+            ini, fin = 0.0, dur_total
+        return ini, fin
+    except Exception:
+        return 0.0, dur_total
 
 
 def _obtener_duracion_audio_simple(ruta_audio):
@@ -606,6 +647,7 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
 
     # SINCRONÍA FUERTE: detectar bloques de habla reales y repartir el texto en ellos
     bloques, dur_detectada = _detectar_bloques_habla(ruta_audio) if ruta_audio and os.path.exists(ruta_audio) else ([], 0.0)
+    _num_bloques = len(bloques)
     if bloques and len(bloques) >= 1:
         print(f"   [SUBS] {len(bloques)} bloques de habla reales detectados — sincronía fuerte")
         _generar_srt_por_bloques(texto_completo, bloques, dur_total or dur_detectada, marca, ruta_srt)
@@ -613,7 +655,7 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
         print(f"   [SUBS] Sin bloques detectados — distribución lineal de respaldo")
         _generar_srt_calibrado(texto_completo, dur_total, marca, ruta_srt)
     print(f"   [OK] SRT generado.")
-    return ruta_srt
+    return ruta_srt, _num_bloques
 
 
 def _generar_srt_por_bloques(texto_completo, bloques, dur_total, marca, ruta_srt):
@@ -2082,10 +2124,11 @@ def procesar():
                     # detector de bloques de habla). Luego, si hubo hooks, desplazar los
                     # tiempos del SRT para compensar los silencios insertados.
                     _dur_original = _obtener_duracion_audio_simple(_ruta_audio_original)
-                    ruta_srt = _generar_subtitulos_shorts(
+                    ruta_srt, _num_bloques = _generar_subtitulos_shorts(
                         _ruta_audio_original, texto_locucion, escenas_texto, marca_audio,
                         carpeta_reciente, _dur_original
                     )
+                    _diag["subtitulos"]["bloques_habla"] = _num_bloques
                     if ruta_srt and os.path.exists(ruta_srt) and _hooks_activos and (_hook_inserciones or _hook_inicial_dur > 0):
                         _srt_shift = ruta_srt.replace(".srt", "_sync.srt")
                         if recalcular_srt(ruta_srt, _srt_shift, _hook_inserciones,
