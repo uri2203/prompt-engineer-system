@@ -519,34 +519,50 @@ def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
 def _detectar_bloques_habla(ruta_audio, umbral_db=-30, dur_min_silencio=0.30):
     """SINCRONÍA FUERTE: detecta los BLOQUES DE HABLA reales (inicio, fin) del audio,
     usando los silencios como fronteras (VAD por energía). Devuelve [(ini, fin), ...].
-    Esto permite anclar los subtítulos al ritmo REAL de la voz (no a una estimación)."""
-    try:
-        import re
-        r = subprocess.run(
-            ['ffmpeg', '-i', ruta_audio, '-af',
-             f'silencedetect=noise={umbral_db}dB:d={dur_min_silencio}',
-             '-f', 'null', '-'],
-            capture_output=True, text=True
-        )
-        dur_total = _obtener_duracion_audio_simple(ruta_audio)
-        starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]  # fin de habla
-        ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]      # inicio de habla
-        bloques = []
-        inicio_habla = 0.0
-        si = 0
-        for ss in starts:
-            if ss > inicio_habla + 0.05:
-                bloques.append((inicio_habla, ss))
-            if si < len(ends):
-                inicio_habla = ends[si]; si += 1
-            else:
-                inicio_habla = ss
-        if dur_total > 0 and inicio_habla < dur_total - 0.05:
-            bloques.append((inicio_habla, dur_total))
-        return bloques, dur_total
-    except Exception as e:
-        print(f"   [SUBS] No se pudieron detectar bloques de habla: {e}")
-        return [], 0.0
+    Esto permite anclar los subtítulos al ritmo REAL de la voz (no a una estimación).
+
+    ADAPTATIVO: si con el umbral normal no detecta bloques (típico en voces SUSURRANTES
+    y bajas como La Viuda), reintenta con umbrales más sensibles (-38, -45 dB) antes de
+    rendirse. Así los subtítulos se anclan al ritmo real incluso con voz muy suave."""
+    import re
+    dur_total = _obtener_duracion_audio_simple(ruta_audio)
+    # Umbrales de menos a más sensibles. Una voz susurrante necesita umbral más bajo
+    # (capta sonidos más suaves como habla, no como silencio).
+    umbrales = [umbral_db, -38, -45]
+    for u in umbrales:
+        try:
+            r = subprocess.run(
+                ['ffmpeg', '-i', ruta_audio, '-af',
+                 f'silencedetect=noise={u}dB:d={dur_min_silencio}',
+                 '-f', 'null', '-'],
+                capture_output=True, text=True
+            )
+            starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]  # fin de habla
+            ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]      # inicio de habla
+            bloques = []
+            inicio_habla = 0.0
+            si = 0
+            for ss in starts:
+                if ss > inicio_habla + 0.05:
+                    bloques.append((inicio_habla, ss))
+                if si < len(ends):
+                    inicio_habla = ends[si]; si += 1
+                else:
+                    inicio_habla = ss
+            if dur_total > 0 and inicio_habla < dur_total - 0.05:
+                bloques.append((inicio_habla, dur_total))
+            # Si detectó al menos 2 bloques, es buena señal: usar estos.
+            # Con 0-1 bloques, reintentar con umbral más sensible.
+            if len(bloques) >= 2:
+                if u != umbral_db:
+                    print(f"   [SUBS] Voz suave detectada — umbral ajustado a {u}dB ({len(bloques)} bloques)")
+                return bloques, dur_total
+            ultimo_resultado = (bloques, dur_total)
+        except Exception as e:
+            print(f"   [SUBS] Error detectando bloques con umbral {u}dB: {e}")
+            ultimo_resultado = ([], 0.0)
+    # Ningún umbral dio 2+ bloques: devolver lo último (puede ser 0-1 bloque)
+    return ultimo_resultado
 
 
 def _obtener_duracion_audio_simple(ruta_audio):
