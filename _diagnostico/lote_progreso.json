@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 3,
-  "completados": 2,
+  "completados": 3,
   "fallidos": 0,
   "trabajo_actual": "Generando video 3/3 (LaesquinaRandom 9:16)",
-  "mensaje": "Produccion del video 3 iniciada.",
+  "mensaje": "Video 3 completado",
   "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
   "historial": [
     {
@@ -24,6 +24,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 120.2,
       "hora": "12:59"
+    },
+    {
+      "n": 3,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 117.9,
+      "hora": "15:01"
     }
   ]
 }
