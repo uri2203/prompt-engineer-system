@@ -1,47 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 4,
-  "completados": 4,
+  "estado_lote": "produciendo",
+  "total": 2,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 2s",
-  "mensaje": "Lote completado.",
-  "resumen": "La Viuda: 1s+0L | Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 116.0,
-      "hora": "23:40"
-    },
-    {
-      "n": 2,
-      "marca": "Monkygraff",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 108.1,
-      "hora": "00:40"
-    },
-    {
-      "n": 3,
-      "marca": "FiltradoMX",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 118.0,
-      "hora": "01:30"
-    },
-    {
-      "n": 4,
-      "marca": "LaesquinaRandom",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 114.2,
-      "hora": "03:23"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
+  "historial": []
 }
