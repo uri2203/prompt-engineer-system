@@ -539,8 +539,9 @@ SUBS_POR_CANAL = {
     # FiltradoMX: subtítulos iban ATRASADOS → offset negativo para adelantarlos
     "filtradomx":        {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": -0.35},
     "filtrado mx":       {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": -0.35},
-    "laesquinarandom":   {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": 0.0},
-    "laesquina random":  {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": 0.0},
+    # LaesquinaRandom: subtítulos iban ATRASADOS → offset negativo para adelantarlos
+    "laesquinarandom":   {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": -0.35},
+    "laesquina random":  {"dur_min_silencio": 0.50, "fusionar_bloques_min": 1.8, "max_palabras": 6, "offset_seg": -0.35},
     "tuialista":         {"dur_min_silencio": 0.40, "fusionar_bloques_min": 1.3, "max_palabras": 5, "offset_seg": 0.0},
     "umbral alterno":    {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5, "offset_seg": 0.0},
     "umbralalterno":     {"dur_min_silencio": 0.34, "fusionar_bloques_min": 1.0, "max_palabras": 5, "offset_seg": 0.0},
