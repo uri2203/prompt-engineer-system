@@ -300,6 +300,20 @@ def _mezclar_musica_dinamica(ruta_video, carpeta_marca, marca, duracion_total):
     if not ruta_fondo:
         print(f"   [MUSICA] Sin pistas para {marca}.")
         return ruta_video
+    # Verificar si el video de entrada tiene pista de audio (la narración).
+    # Si NO la tiene (bug previo), el amix con [0:a] fallaría y quedaría mudo.
+    _video_tiene_audio = False
+    try:
+        _chk = subprocess.run(
+            ['ffprobe', '-v', 'error', '-select_streams', 'a',
+             '-show_entries', 'stream=codec_type', '-of', 'csv=p=0', ruta_video],
+            capture_output=True, text=True)
+        _video_tiene_audio = 'audio' in _chk.stdout
+    except Exception:
+        pass
+    if not _video_tiene_audio:
+        print(f"   [⚠️ MUSICA] El video NO tiene narración — el problema es anterior. Omito mezcla para no romper.")
+        return ruta_video
     carpeta_temp  = os.path.dirname(ruta_video)
     ruta_salida   = os.path.join(carpeta_temp, "paso2_musica.mp4")
     # Shorts (<= 90s): tensión al 40% — activa atención en escalada
@@ -2490,6 +2504,13 @@ def procesar():
                         duracion_audio = _dur(ruta_audio_ext)
                         print(f"   [FIX] Audio extendido +{_falta_a:.1f}s para igualar video (hooks)")
 
+                # VALIDACIÓN: asegurar que el audio de narración existe y es válido
+                # ANTES de pegarlo. Si falta, el video saldría mudo (bug TuIALista).
+                _audio_ok = ruta_audio and os.path.exists(ruta_audio) and _clip_valido(ruta_audio, 0.5)
+                if not _audio_ok:
+                    print(f"   [⚠️ AUDIO] La narración NO existe o es inválida: {ruta_audio}")
+                    _diag.setdefault("errores", []).append(f"Audio de narracion ausente antes del merge: {ruta_audio}")
+
                 cmd_merge = [
                     'ffmpeg', '-y',
                     '-i', ruta_video_mudo,
@@ -2498,7 +2519,24 @@ def procesar():
                     '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
                     ruta_base
                 ]
-                subprocess.run(cmd_merge, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                _r_merge = subprocess.run(cmd_merge, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+                # VALIDACIÓN: confirmar que el video resultante TIENE pista de audio
+                _tiene_audio = False
+                try:
+                    _chk = subprocess.run(
+                        ['ffprobe', '-v', 'error', '-select_streams', 'a',
+                         '-show_entries', 'stream=codec_type', '-of', 'csv=p=0', ruta_base],
+                        capture_output=True, text=True)
+                    _tiene_audio = 'audio' in _chk.stdout
+                except Exception:
+                    pass
+                if not _tiene_audio:
+                    print(f"   [⚠️ AUDIO] El video tras el merge quedó SIN pista de audio.")
+                    if _r_merge.stderr:
+                        print(f"   [⚠️ AUDIO] FFmpeg: {_r_merge.stderr[-300:]}")
+                    _diag.setdefault("errores", []).append("Video sin pista de audio tras merge")
+                else:
+                    print(f"   [OK] Audio de narración integrado al video.")
 
                 try: os.remove(ruta_video_mudo)
                 except Exception: pass
