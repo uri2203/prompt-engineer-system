@@ -710,13 +710,36 @@ def _corregir_pronunciacion(texto):
     #    Se ordenan de más larga a más corta para no romper las compuestas (S&P 500 antes que S&P).
     for sigla in sorted(SIGLAS, key=len, reverse=True):
         resultado = resultado.replace(sigla, " " + SIGLAS[sigla] + " ")
-    # 2. Números decimales: "2.3" → "2 punto 3" (XTTS se come el punto y dice "dos tres")
-    resultado = re.sub(r'(\d+)\.(\d+)', r'\1 punto \2', resultado)
+    # 1b. Símbolos comunes a palabras (antes de procesar números)
+    resultado = re.sub(r'(\d)\s*%', r'\1 por ciento', resultado)
+    resultado = resultado.replace("%", " por ciento ")
+    resultado = re.sub(r'(\d)\s*°', r'\1 grados', resultado)
+    resultado = resultado.replace("$", " ").replace("€", " euros ").replace("&", " y ")
+    # 2. Números → palabras. Usa num2words (robusto: años, decimales, millones) si está
+    #    instalado; si no, cae a una regla casera para decimales. Así el worker nunca falla.
+    try:
+        from num2words import num2words as _n2w
+        def _num_a_palabras(m):
+            try:
+                txt = m.group(0).replace(",", "")  # quitar separador de miles
+                if "." in txt:
+                    return _n2w(float(txt), lang="es")
+                return _n2w(int(txt), lang="es")
+            except Exception:
+                return m.group(0)
+        # Números con posibles separadores de miles y decimales
+        resultado = re.sub(r'\d[\d.,]*\d|\d', _num_a_palabras, resultado)
+    except Exception:
+        # Respaldo si num2words no está instalado: al menos arreglar decimales
+        resultado = re.sub(r'(\d+)\.(\d+)', r'\1 punto \2', resultado)
     # 3. Frases de varias palabras
     for frase, rep in REEMPLAZOS_FRASE.items():
         resultado = re.sub(r'\b' + re.escape(frase) + r'\b', rep, resultado, flags=re.IGNORECASE)
     # 4. Palabras sueltas
     resultado = re.sub(r'\b\w+\b', _reemplazar, resultado, flags=re.UNICODE)
+    # 5. Espacio antes de coma/punto: workaround del bug de XTTS español que debilita
+    #    o corta la última sílaba antes de la puntuación (tu "quince→quice").
+    resultado = re.sub(r'\s*([,.;:!?…])', r' \1', resultado)
     # Limpiar espacios dobles que pudieron quedar
     resultado = re.sub(r'\s{2,}', ' ', resultado).strip()
     return resultado
