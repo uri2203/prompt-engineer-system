@@ -638,34 +638,63 @@ def _corregir_pronunciacion(texto):
     import re
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
     REEMPLAZOS = {
-        # ── Reportadas por el usuario ──
+        # ── Reportadas por el usuario (La Viuda) ──
         "explica": "ex plica", "explican": "ex plican", "explicar": "ex plicar",
         "explicó": "ex plicó", "explico": "ex plico", "explicación": "ex plicación",
         "explicaciones": "ex plicaciones", "explícame": "ex plícame", "explicando": "ex plicando",
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
         "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
+        "illinois": "ilinóis",
+        "quince": "kínse",
+        "bloodgood": "blad gud",
+        # ── Reportadas por el usuario (Monkygraff) ──
+        "enterprise": "énterprayz",
+        "nearshoring": "níar shórin",
+        "timing": "táimin",
+        "offshoring": "ófshórin", "reshoring": "ríshórin",
         # ── Anglicismos / tecnología frecuentes (todos los canales, sobre todo TuIALista) ──
         "software": "sóftgüer", "hardware": "járdgüer", "smartphone": "smártfon",
-        "internet": "ínternet", "online": "onláin", "streaming": "estrímin",
+        "internet": "ínternet", "online": "onláin", "offline": "ofláin",
+        "streaming": "estrímin", "streamer": "estrímer",
         "podcast": "pódcast", "hashtag": "jáshtag", "influencer": "ínfluenser",
         "chatgpt": "chat g p t", "deepfake": "dípfeik", "deepfakes": "dípfeiks",
-        "blockchain": "blókchein",
+        "blockchain": "blókchein", "marketing": "márketin", "branding": "brándin",
         "bitcoin": "bítcoin", "startup": "estártap", "startups": "estártaps",
         "google": "gúgol", "youtube": "yutúb", "whatsapp": "guátsap",
         "iphone": "áifon", "android": "ándroid", "wifi": "guifi",
         "gigabyte": "gígabait", "byte": "bait", "bytes": "baits",
+        "ranking": "ránkin", "rankings": "ránkins",
+        "trading": "tréidin", "trader": "tréider", "traders": "tréiders",
+        "holding": "jóldin", "holdings": "jóldins", "dumping": "dámpin",
+        "boom": "bum", "default": "difólt", "lobby": "lóbi",
         # ── Nombres propios / geográficos extranjeros ──
         "hollywood": "jóligud",
         "trump": "tramp", "biden": "báiden", "putin": "pútin",
-        "beijing": "beishín", "shanghai": "shanghái",
+        "beijing": "beishín", "shanghai": "shanghái", "taiwan": "taiguán",
+        "microsoft": "máicrosoft", "tesla": "tésla", "amazon": "ámazon",
         # ── Combinaciones que el modelo suele romper ──
         "algoritmo": "algorítmo", "algoritmos": "algorítmos",
     }
     # frases de varias palabras (se reemplazan primero)
     REEMPLAZOS_FRASE = {
         "new york": "niu york", "los angeles": "los ángeles",
-        "machine learning": "mashín lérnin",
+        "machine learning": "mashín lérnin", "deep learning": "díp lérnin",
+        "enterprise bank": "énterprayz bánk",
+        "wall street": "guól strít", "silicon valley": "sílicon váli",
+    }
+    # ── Siglas: deletrear en español o expandir ──
+    # Se reemplazan como frase para controlar exactamente cómo se leen.
+    SIGLAS = {
+        "EE.UU.": "Estados Unidos", "EEUU": "Estados Unidos", "EE. UU.": "Estados Unidos",
+        "EE.UU": "Estados Unidos", "E.E.U.U.": "Estados Unidos",
+        "UE": "Unión Europea", "U.E.": "Unión Europea",
+        "OMC": "o eme ce", "O.M.C.": "o eme ce",
+        "S&P 500": "ese and pi quinientos", "S&P500": "ese and pi quinientos",
+        "S&P": "ese and pi",
+        "ONU": "o ene u", "OTAN": "otán", "FMI": "efe eme i", "BCE": "be ce e",
+        "PIB": "pib", "IA": "i a", "EU": "Unión Europea",
+        "OPEP": "opép", "BRICS": "brics", "G7": "ge siete", "G20": "ge veinte",
     }
     def _reemplazar(match):
         palabra = match.group(0)
@@ -677,9 +706,19 @@ def _corregir_pronunciacion(texto):
             return nuevo
         return palabra
     resultado = texto
+    # 1. Siglas primero (incluyen puntos y símbolos, antes de tocar nada)
+    #    Se ordenan de más larga a más corta para no romper las compuestas (S&P 500 antes que S&P).
+    for sigla in sorted(SIGLAS, key=len, reverse=True):
+        resultado = resultado.replace(sigla, " " + SIGLAS[sigla] + " ")
+    # 2. Números decimales: "2.3" → "2 punto 3" (XTTS se come el punto y dice "dos tres")
+    resultado = re.sub(r'(\d+)\.(\d+)', r'\1 punto \2', resultado)
+    # 3. Frases de varias palabras
     for frase, rep in REEMPLAZOS_FRASE.items():
         resultado = re.sub(r'\b' + re.escape(frase) + r'\b', rep, resultado, flags=re.IGNORECASE)
+    # 4. Palabras sueltas
     resultado = re.sub(r'\b\w+\b', _reemplazar, resultado, flags=re.UNICODE)
+    # Limpiar espacios dobles que pudieron quedar
+    resultado = re.sub(r'\s{2,}', ' ', resultado).strip()
     return resultado
 
 
