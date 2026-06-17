@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "completado",
   "total": 3,
   "completados": 3,
   "fallidos": 0,
   "trabajo_actual": "Enfriando nodos... 1s",
-  "mensaje": "Enfriamiento entre videos: 1s",
+  "mensaje": "Lote completado.",
   "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L",
   "historial": [
     {
