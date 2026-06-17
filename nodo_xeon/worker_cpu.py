@@ -1281,13 +1281,17 @@ def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes,
         if not _texto_en_frame(img, frase, frame, w, h, pil, fuentes):
             frame = img
         tf = int(dur*fps)
-        if formato == "A":  # pattern interrupt: zoom punch + flash blanco
+        # ZOOM CENTRADO: anclar el zoompan al centro (x/y centrados respecto al zoom)
+        # para que el texto CREZCA HACIA EL CENTRO y no se desplace a un costado.
+        _cx = "x='iw/2-(iw/zoom/2)'"
+        _cy = "y='ih/2-(ih/zoom/2)'"
+        if formato == "A":  # pattern interrupt: zoom punch CENTRADO + flash blanco
             vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-                  f"zoompan=z='1.0+0.4*on/{tf}':d={tf}:s={w}x{h}:fps={fps},"
+                  f"zoompan=z='1.0+0.4*on/{tf}':{_cx}:{_cy}:d={tf}:s={w}x{h}:fps={fps},"
                   f"fade=t=in:st=0:d=0.08:color=white")
-        else:  # flash-forward: zoom out + fades (teaser)
+        else:  # flash-forward: zoom out CENTRADO + fades (teaser)
             vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-                  f"zoompan=z='1.15-0.1*on/{tf}':d={tf}:s={w}x{h}:fps={fps},"
+                  f"zoompan=z='1.15-0.1*on/{tf}':{_cx}:{_cy}:d={tf}:s={w}x{h}:fps={fps},"
                   f"fade=t=in:st=0:d=0.15,fade=t=out:st={dur-0.2:.2f}:d=0.2")
         subprocess.run(['ffmpeg','-y','-loop','1','-i', frame,'-vf', vf,'-t', str(dur),
                         '-r', str(fps),'-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p',
