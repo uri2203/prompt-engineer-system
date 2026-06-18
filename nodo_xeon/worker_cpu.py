@@ -1811,7 +1811,7 @@ def procesar():
                     "laviuda":         "La Viuda",
                     "monkygraff":      "Monkygraff",
                     "umbralalterno":   "Umbral Alterno",
-                    "tuialista":       "TuIAlista",
+                    "tuialista":       "Tuialista",
                 }
                 _nombre_carpeta = _MAPA_CARPETA_ASSETS.get(marca_audio.lower().replace(" ", ""), marca_audio)
                 carpeta_marca_assets = os.path.join(CARPETA_ASSETS, _nombre_carpeta)
