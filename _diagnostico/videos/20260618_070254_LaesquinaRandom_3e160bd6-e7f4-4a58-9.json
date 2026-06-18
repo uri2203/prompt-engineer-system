@@ -1,0 +1,27 @@
+{
+  "id": "3e160bd6-e7f4-4a58-9728-ec77006d645e_asm",
+  "marca": "LaesquinaRandom",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-18 06:56:40",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true
+  },
+  "subtitulos": {
+    "aplica": true,
+    "bloques_habla": 28,
+    "desplazado_por_hooks": true
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Paquete error servidor: 520"
+  ],
+  "fin": "2026-06-18 07:02:54",
+  "duracion_real_seg": 121.0,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4"
+}
