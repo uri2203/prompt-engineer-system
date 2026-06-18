@@ -41,7 +41,9 @@
     "3e160bd6-e7f4-4a58-9728-ec77006d645e",
     "3e160bd6-e7f4-4a58-9728-ec77006d645e_asm",
     "782eb6bc-8a8d-4d9f-aedd-c2785665a135",
-    "782eb6bc-8a8d-4d9f-aedd-c2785665a135_asm"
+    "782eb6bc-8a8d-4d9f-aedd-c2785665a135_asm",
+    "6d6e8229-770d-4bc5-827b-edc1744e355b",
+    "6d6e8229-770d-4bc5-827b-edc1744e355b_asm"
   ],
   "detalles": {
     "711c706f-7f52-460b-8638-be31a5a90aaf": {
@@ -147,6 +149,11 @@
     "782eb6bc-8a8d-4d9f-aedd-c2785665a135": {
       "duracion_real_seg": 120.4,
       "marca": "LaesquinaRandom",
+      "formato": "9:16"
+    },
+    "6d6e8229-770d-4bc5-827b-edc1744e355b": {
+      "duracion_real_seg": 123.3,
+      "marca": "TuIALista",
       "formato": "9:16"
     }
   }
