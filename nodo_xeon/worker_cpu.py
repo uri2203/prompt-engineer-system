@@ -1309,21 +1309,26 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
 
 def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, dur_hook_inicial):
     """
-    Desplaza los tiempos del SRT para compensar los hooks insertados.
-    - El hook inicial desplaza TODO el SRT hacia adelante (dur_hook_inicial).
-    - Cada re-hook tras la escena i desplaza los subtítulos posteriores a ese punto.
+    Reposiciona los subtítulos para que queden sincronizados con el audio tras
+    insertar los re-hooks. Resuelve 3 problemas de raíz:
+      1. El hook INICIAL desplaza todo el SRT (el audio empieza después del hook).
+      2. Cada re-hook desplaza SOLO los subtítulos posteriores a ese punto, por su
+         duración exacta (sin saltos: usa >= para incluir el borde).
+      3. Durante el tiempo que dura un re-hook (su ventana en pantalla) NO debe haber
+         subtítulos — se eliminan los que caerían encima del texto del re-hook.
     """
     if not os.path.exists(ruta_srt_in):
         return False
     try:
-        # Calcular tiempo de fin de cada escena (para saber a partir de qué segundo desplazar)
+        import re
+        # Tiempo de fin acumulado de cada escena (en el timeline ORIGINAL, sin hooks)
         acum = []
         s = 0.0
         for d in duraciones_escenas:
             s += d
             acum.append(s)
 
-        # Lista de (tiempo_original, desplazamiento_a_aplicar_desde_ahi)
+        # Puntos de inserción de re-hooks: (tiempo_original, duracion_del_rehook)
         desfases = []
         for ins in inserciones:
             i = ins["despues_de_escena"]
@@ -1331,13 +1336,33 @@ def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, d
                 desfases.append((acum[i], ins["dur"]))
         desfases.sort()
 
-        def nuevo_t(t):
-            # Desplazamiento del hook inicial + los re-hooks anteriores a t
+        def desplazamiento_inicio(t):
+            """Desplazamiento para el INICIO de un subtítulo en tiempo t (usa >=)."""
+            extra = dur_hook_inicial
+            for t_ins, d in desfases:
+                if t >= t_ins:
+                    extra += d
+            return extra
+
+        def desplazamiento_fin(t):
+            """Desplazamiento para el FIN de un subtítulo (usa > estricto, para no
+            estirar el subtítulo que termina justo en el borde del re-hook)."""
             extra = dur_hook_inicial
             for t_ins, d in desfases:
                 if t > t_ins:
                     extra += d
-            return t + extra
+            return extra
+
+        def cae_dentro_de_rehook(t_ini_original, t_fin_original):
+            """True si el subtítulo (rango original) se solapa con el punto donde se
+            inserta un re-hook → debe ocultarse para no encimarse con su texto.
+            El re-hook se inserta EN t_ins (instante puntual en el timeline original).
+            Solo se oculta el subtítulo que está ACTIVO en ese instante exacto."""
+            for t_ins, d in desfases:
+                # el subtítulo cubre el instante de inserción del re-hook
+                if t_ini_original <= t_ins < t_fin_original:
+                    return True
+            return False
 
         def parse_t(s):
             h, m, resto = s.split(":")
@@ -1345,6 +1370,7 @@ def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, d
             return int(h)*3600 + int(m)*60 + int(seg) + int(ms)/1000.0
 
         def fmt_t(t):
+            if t < 0: t = 0
             h = int(t // 3600); t -= h*3600
             m = int(t // 60); t -= m*60
             seg = int(t); ms = int(round((t - seg)*1000))
@@ -1352,18 +1378,36 @@ def recalcular_srt(ruta_srt_in, ruta_srt_out, inserciones, duraciones_escenas, d
             return f"{h:02d}:{m:02d}:{seg:02d},{ms:03d}"
 
         with open(ruta_srt_in, encoding="utf-8") as f:
-            lineas = f.read().split("\n")
-        out = []
-        for ln in lineas:
-            if "-->" in ln:
-                a, b = ln.split("-->")
-                ta = nuevo_t(parse_t(a.strip()))
-                tb = nuevo_t(parse_t(b.strip()))
-                out.append(f"{fmt_t(ta)} --> {fmt_t(tb)}")
-            else:
-                out.append(ln)
+            contenido = f.read().strip()
+
+        # Procesar por BLOQUES de subtítulo (número, tiempos, texto) para poder
+        # eliminar completos los que caen dentro de un re-hook.
+        bloques = re.split(r'\n\s*\n', contenido)
+        salida = []
+        num = 1
+        for bloque in bloques:
+            lineas = bloque.strip().split("\n")
+            # localizar la línea de tiempos
+            idx_t = next((k for k, l in enumerate(lineas) if "-->" in l), None)
+            if idx_t is None:
+                continue
+            a, b = lineas[idx_t].split("-->")
+            t_ini_orig = parse_t(a.strip())
+            t_fin_orig = parse_t(b.strip())
+            # Si el subtítulo se solapa con un re-hook, se omite (no se encima)
+            if cae_dentro_de_rehook(t_ini_orig, t_fin_orig):
+                continue
+            # Desplazar inicio y fin según los hooks anteriores
+            t_ini = t_ini_orig + desplazamiento_inicio(t_ini_orig)
+            t_fin = t_fin_orig + desplazamiento_fin(t_fin_orig)
+            texto = "\n".join(lineas[idx_t+1:]).strip()
+            if not texto:
+                continue
+            salida.append(f"{num}\n{fmt_t(t_ini)} --> {fmt_t(t_fin)}\n{texto}")
+            num += 1
+
         with open(ruta_srt_out, "w", encoding="utf-8") as f:
-            f.write("\n".join(out))
+            f.write("\n\n".join(salida) + "\n")
         return True
     except Exception as e:
         print(f"   [HOOKS] Error recalculando SRT: {e}")
