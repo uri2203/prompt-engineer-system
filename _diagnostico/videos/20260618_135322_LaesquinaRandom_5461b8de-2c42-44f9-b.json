@@ -1,0 +1,24 @@
+{
+  "id": "5461b8de-2c42-44f9-bd27-6caa4656c3b6_asm",
+  "marca": "LaesquinaRandom",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-18 13:53:06",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Pre-flight abortado: Nodo de IMÁGENES (SD) no responde en http://192.168.0.215:7861"
+  ]
+}
