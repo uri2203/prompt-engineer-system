@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "6d6e8229-770d-4bc5-827b-edc1744e355b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Financial data interface, graphs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Financial data interface, graphs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Pides consejos financieros a la IA? No lo hagas.\", \"pexels_query\": \"financial data interface\"}, {\"id\": 2, \"prompt\": \"Encrypted data stream, cyber security, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Encrypted data stream, cyber security, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu información personal no está segura allí.\", \"pexels_query\": \"encrypted data stream\"}, {\"id\": 3, \"prompt\": \"Digital data leak visualization, network diagram, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital data leak visualization, network diagram, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Millones de datos ya fueron filtrados y expuestos.\", \"pexels_query\": \"data leak visualization\"}, {\"id\": 4, \"prompt\": \"Secure data center interior, server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Secure data center interior, server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto lo cambia todo para tu privacidad digital.\", \"pexels_query\": \"secure data center\"}, {\"id\": 5, \"prompt\": \"Abstract data flow, secure network, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data flow, secure network, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nunca pidas a la IA datos bancarios o personales.\", \"pexels_query\": \"secure network data\"}, {\"id\": 6, \"prompt\": \"Unsecured data packets, digital vulnerability, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Unsecured data packets, digital vulnerability, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Los modelos actuales no garantizan confidencialidad ahora.\", \"pexels_query\": \"unsecured data packets\"}, {\"id\": 7, \"prompt\": \"Medical diagnostic interface, data screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Medical diagnostic interface, data screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Le preguntas sobre diagnósticos médicos? Evítalo por completo.\", \"pexels_query\": \"medical diagnostic screen\"}, {\"id\": 8, \"prompt\": \"Abstract AI hallucination visualization, distorted data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract AI hallucination visualization, distorted data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA puede alucinar, dando consejos muy peligrosos.\", \"pexels_query\": \"AI hallucination data\"}, {\"id\": 9, \"prompt\": \"Broken medical device screen, data error, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Broken medical device screen, data error, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ya hubo casos documentados de daños reales.\", \"pexels_query\": \"medical data error\"}, {\"id\": 10, \"prompt\": \"Healthcare technology, sterile environment, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Healthcare technology, sterile environment, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Consulta siempre a un médico, no a un algoritmo.\", \"pexels_query\": \"healthcare technology\"}, {\"id\": 11, \"prompt\": \"Legal documents interface, abstract justice scales, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Legal documents interface, abstract justice scales, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Usas la IA para tomar decisiones legales? Detente ya.\", \"pexels_query\": \"legal interface justice\"}, {\"id\": 12, \"prompt\": \"Digital courtroom data, legal code on screen, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital courtroom data, legal code on screen, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La precisión legal de la IA es aún muy limitada.\", \"pexels_query\": \"legal code screen\"}, {\"id\": 13, \"prompt\": \"Data analysis screen, legal case files, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data analysis screen, legal case files, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Abogados reportan errores graves que cuestan mucho.\", \"pexels_query\": \"legal data analysis\"}, {\"id\": 14, \"prompt\": \"Legal research terminal, complex data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Legal research terminal, complex data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Necesitas asesoría humana real, no una predicción algorítmica.\", \"pexels_query\": \"legal research terminal\"}, {\"id\": 15, \"prompt\": \"Deepfake generation interface, abstract manipulation controls, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Deepfake generation interface, abstract manipulation controls, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Pides a la IA que genere deepfakes dañinos? Cuidado extremo.\", \"pexels_query\": \"deepfake interface controls\"}, {\"id\": 16, \"prompt\": \"Cybercrime warning screen, digital lock, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Cybercrime warning screen, digital lock, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Estás entrando en terreno legal muy peligroso y grave.\", \"pexels_query\": \"cybercrime warning screen\"}, {\"id\": 17, \"prompt\": \"Global regulation map, AI policy symbols, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Global regulation map, AI policy symbols, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Las leyes sobre IA ya están endureciéndose en el mundo.\", \"pexels_query\": \"global AI regulation\"}, {\"id\": 18, \"prompt\": \"Legal compliance dashboard, warning signs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Legal compliance dashboard, warning signs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Podrías enfrentar consecuencias legales importantes sin saberlo.\", \"pexels_query\": \"legal compliance dashboard\"}, {\"id\": 19, \"prompt\": \"Cybersecurity threat map, malware code, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Cybersecurity threat map, malware code, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿La usas para desarrollar armas o malwares? Eso es ilegal.\", \"pexels_query\": \"malware code cybermap\"}, {\"id\": 20, \"prompt\": \"Advanced threat detection software, network analysis, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Advanced threat detection software, network analysis, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Los sistemas de detección están mejorando rápidamente ahora mismo.\", \"pexels_query\": \"threat detection software\"}, {\"id\": 21, \"prompt\": \"Digital forensics lab, data recovery screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital forensics lab, data recovery screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Antes que nadie, te decimos: esto no quedará impune.\", \"pexels_query\": \"digital forensics screens\"}, {\"id\": 22, \"prompt\": \"Abstract ethical AI framework, glowing guidelines, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract ethical AI framework, glowing guidelines, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Prioriza siempre la ética y legalidad en tus acciones.\", \"pexels_query\": \"ethical AI framework\"}, {\"id\": 23, \"prompt\": \"Abstract thought process visualization, neural network data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract thought process visualization, neural network data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La herramienta que necesitas es el pensamiento crítico.\", \"pexels_query\": \"thought process neural\"}, {\"id\": 24, \"prompt\": \"Fast data processing unit, abstract logic gates, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Fast data processing unit, abstract logic gates, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"En segundos, evita riesgos graves con esta información.\", \"pexels_query\": \"data processing unit\"}, {\"id\": 25, \"prompt\": \"Educational AI interface, knowledge base, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Educational AI interface, knowledge base, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Entiende la IA para usarla de forma segura.\", \"pexels_query\": \"educational AI interface\"}, {\"id\": 26, \"prompt\": \"Abstract sound wave visualization, digital noise cancellation, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract sound wave visualization, digital noise cancellation, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tuialista te da el antídoto contra el ruido.\", \"pexels_query\": \"digital noise cancellation\"}, {\"id\": 27, \"prompt\": \"Empowering digital interface, positive data flow, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empowering digital interface, positive data flow, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Estar informado te empodera hoy y siempre.\", \"pexels_query\": \"empowering digital interface\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "¿Pides consejos financieros a la IA? No lo hagas. Tu información personal no está segura allí. Millones de datos ya fueron filtrados y expuestos. Esto lo cambia todo para tu privacidad digital. Nunca pidas a la IA datos bancarios o personales. Los modelos actuales no garantizan confidencialidad ahora. ¿Le preguntas sobre diagnósticos médicos? Evítalo por completo. La IA puede alucinar, dando consejos muy peligrosos. Ya hubo casos documentados de daños reales. Consulta siempre a un médico, no a un algoritmo. ¿Usas la IA para tomar decisiones legales? Detente ya. La precisión legal de la IA es aún muy limitada. Abogados reportan errores graves que cuestan mucho. Necesitas asesoría humana real, no una predicción algorítmica. ¿Pides a la IA que genere deepfakes dañinos? Cuidado extremo. Estás entrando en terreno legal muy peligroso y grave. Las leyes sobre IA ya están endureciéndose en el mundo. Podrías enfrentar consecuencias legales importantes sin saberlo. ¿La usas para desarrollar armas o malwares? Eso es ilegal. Los sistemas de detección están mejorando rápidamente ahora mismo. Antes que nadie, te decimos: esto no quedará impune. Prioriza siempre la ética y legalidad en tus acciones. La herramienta que necesitas es el pensamiento crítico. En segundos, evita riesgos graves con esta información. Entiende la IA para usarla de forma segura. Tuialista te da el antídoto contra el ruido. Estar informado te empodera hoy y siempre.",
+    "titulo_sugerido": "NO preguntes ESTO a la IA: Tus datos y dinero en riesgo",
+    "escenas_texto": [
+      "¿Pides consejos financieros a la IA? No lo hagas.",
+      "Tu información personal no está segura allí.",
+      "Millones de datos ya fueron filtrados y expuestos.",
+      "Esto lo cambia todo para tu privacidad digital.",
+      "Nunca pidas a la IA datos bancarios o personales.",
+      "Los modelos actuales no garantizan confidencialidad ahora.",
+      "¿Le preguntas sobre diagnósticos médicos? Evítalo por completo.",
+      "La IA puede alucinar, dando consejos muy peligrosos.",
+      "Ya hubo casos documentados de daños reales.",
+      "Consulta siempre a un médico, no a un algoritmo.",
+      "¿Usas la IA para tomar decisiones legales? Detente ya.",
+      "La precisión legal de la IA es aún muy limitada.",
+      "Abogados reportan errores graves que cuestan mucho.",
+      "Necesitas asesoría humana real, no una predicción algorítmica.",
+      "¿Pides a la IA que genere deepfakes dañinos? Cuidado extremo.",
+      "Estás entrando en terreno legal muy peligroso y grave.",
+      "Las leyes sobre IA ya están endureciéndose en el mundo.",
+      "Podrías enfrentar consecuencias legales importantes sin saberlo.",
+      "¿La usas para desarrollar armas o malwares? Eso es ilegal.",
+      "Los sistemas de detección están mejorando rápidamente ahora mismo.",
+      "Antes que nadie, te decimos: esto no quedará impune.",
+      "Prioriza siempre la ética y legalidad en tus acciones.",
+      "La herramienta que necesitas es el pensamiento crítico.",
+      "En segundos, evita riesgos graves con esta información.",
+      "Entiende la IA para usarla de forma segura.",
+      "Tuialista te da el antídoto contra el ruido.",
+      "Estar informado te empodera hoy y siempre."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Financial data interface, graphs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Financial data interface, graphs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Pides consejos financieros a la IA? No lo hagas.",
+        "pexels_query": "financial data interface"
+      },
+      {
+        "id": 2,
+        "prompt": "Encrypted data stream, cyber security, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Encrypted data stream, cyber security, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu información personal no está segura allí.",
+        "pexels_query": "encrypted data stream"
+      },
+      {
+        "id": 3,
+        "prompt": "Digital data leak visualization, network diagram, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital data leak visualization, network diagram, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Millones de datos ya fueron filtrados y expuestos.",
+        "pexels_query": "data leak visualization"
+      },
+      {
+        "id": 4,
+        "prompt": "Secure data center interior, server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Secure data center interior, server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto lo cambia todo para tu privacidad digital.",
+        "pexels_query": "secure data center"
+      },
+      {
+        "id": 5,
+        "prompt": "Abstract data flow, secure network, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data flow, secure network, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nunca pidas a la IA datos bancarios o personales.",
+        "pexels_query": "secure network data"
+      },
+      {
+        "id": 6,
+        "prompt": "Unsecured data packets, digital vulnerability, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Unsecured data packets, digital vulnerability, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Los modelos actuales no garantizan confidencialidad ahora.",
+        "pexels_query": "unsecured data packets"
+      },
+      {
+        "id": 7,
+        "prompt": "Medical diagnostic interface, data screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Medical diagnostic interface, data screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Le preguntas sobre diagnósticos médicos? Evítalo por completo.",
+        "pexels_query": "medical diagnostic screen"
+      },
+      {
+        "id": 8,
+        "prompt": "Abstract AI hallucination visualization, distorted data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract AI hallucination visualization, distorted data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA puede alucinar, dando consejos muy peligrosos.",
+        "pexels_query": "AI hallucination data"
+      },
+      {
+        "id": 9,
+        "prompt": "Broken medical device screen, data error, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Broken medical device screen, data error, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ya hubo casos documentados de daños reales.",
+        "pexels_query": "medical data error"
+      },
+      {
+        "id": 10,
+        "prompt": "Healthcare technology, sterile environment, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Healthcare technology, sterile environment, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Consulta siempre a un médico, no a un algoritmo.",
+        "pexels_query": "healthcare technology"
+      },
+      {
+        "id": 11,
+        "prompt": "Legal documents interface, abstract justice scales, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Legal documents interface, abstract justice scales, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Usas la IA para tomar decisiones legales? Detente ya.",
+        "pexels_query": "legal interface justice"
+      },
+      {
+        "id": 12,
+        "prompt": "Digital courtroom data, legal code on screen, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital courtroom data, legal code on screen, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La precisión legal de la IA es aún muy limitada.",
+        "pexels_query": "legal code screen"
+      },
+      {
+        "id": 13,
+        "prompt": "Data analysis screen, legal case files, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data analysis screen, legal case files, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Abogados reportan errores graves que cuestan mucho.",
+        "pexels_query": "legal data analysis"
+      },
+      {
+        "id": 14,
+        "prompt": "Legal research terminal, complex data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Legal research terminal, complex data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Necesitas asesoría humana real, no una predicción algorítmica.",
+        "pexels_query": "legal research terminal"
+      },
+      {
+        "id": 15,
+        "prompt": "Deepfake generation interface, abstract manipulation controls, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Deepfake generation interface, abstract manipulation controls, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Pides a la IA que genere deepfakes dañinos? Cuidado extremo.",
+        "pexels_query": "deepfake interface controls"
+      },
+      {
+        "id": 16,
+        "prompt": "Cybercrime warning screen, digital lock, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Cybercrime warning screen, digital lock, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Estás entrando en terreno legal muy peligroso y grave.",
+        "pexels_query": "cybercrime warning screen"
+      },
+      {
+        "id": 17,
+        "prompt": "Global regulation map, AI policy symbols, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Global regulation map, AI policy symbols, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Las leyes sobre IA ya están endureciéndose en el mundo.",
+        "pexels_query": "global AI regulation"
+      },
+      {
+        "id": 18,
+        "prompt": "Legal compliance dashboard, warning signs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Legal compliance dashboard, warning signs, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Podrías enfrentar consecuencias legales importantes sin saberlo.",
+        "pexels_query": "legal compliance dashboard"
+      },
+      {
+        "id": 19,
+        "prompt": "Cybersecurity threat map, malware code, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Cybersecurity threat map, malware code, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿La usas para desarrollar armas o malwares? Eso es ilegal.",
+        "pexels_query": "malware code cybermap"
+      },
+      {
+        "id": 20,
+        "prompt": "Advanced threat detection software, network analysis, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Advanced threat detection software, network analysis, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Los sistemas de detección están mejorando rápidamente ahora mismo.",
+        "pexels_query": "threat detection software"
+      },
+      {
+        "id": 21,
+        "prompt": "Digital forensics lab, data recovery screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital forensics lab, data recovery screens, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Antes que nadie, te decimos: esto no quedará impune.",
+        "pexels_query": "digital forensics screens"
+      },
+      {
+        "id": 22,
+        "prompt": "Abstract ethical AI framework, glowing guidelines, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract ethical AI framework, glowing guidelines, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Prioriza siempre la ética y legalidad en tus acciones.",
+        "pexels_query": "ethical AI framework"
+      },
+      {
+        "id": 23,
+        "prompt": "Abstract thought process visualization, neural network data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract thought process visualization, neural network data, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La herramienta que necesitas es el pensamiento crítico.",
+        "pexels_query": "thought process neural"
+      },
+      {
+        "id": 24,
+        "prompt": "Fast data processing unit, abstract logic gates, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Fast data processing unit, abstract logic gates, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "En segundos, evita riesgos graves con esta información.",
+        "pexels_query": "data processing unit"
+      },
+      {
+        "id": 25,
+        "prompt": "Educational AI interface, knowledge base, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Educational AI interface, knowledge base, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Entiende la IA para usarla de forma segura.",
+        "pexels_query": "educational AI interface"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract sound wave visualization, digital noise cancellation, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract sound wave visualization, digital noise cancellation, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tuialista te da el antídoto contra el ruido.",
+        "pexels_query": "digital noise cancellation"
+      },
+      {
+        "id": 27,
+        "prompt": "Empowering digital interface, positive data flow, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empowering digital interface, positive data flow, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Estar informado te empodera hoy y siempre.",
+        "pexels_query": "empowering digital interface"
+      }
+    ],
+    "hooks": [
+      "¿Pides consejos a la IA? No.",
+      "Tu privacidad digital está en riesgo.",
+      "Consecuencias legales te esperan sin saberlo."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
