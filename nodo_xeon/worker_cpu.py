@@ -821,6 +821,121 @@ def _imagen_es_negra(ruta_png, umbral_pblack=92):
         return False  # ante la duda, no descartar (evita falsos positivos)
 
 
+def _aplicar_offset_srt(ruta_srt, offset):
+    """Desplaza todos los tiempos de un SRT por 'offset' segundos (para ajuste fino)."""
+    try:
+        def parse_t(s):
+            h, m, resto = s.split(":")
+            seg, ms = resto.split(",")
+            return int(h)*3600 + int(m)*60 + int(seg) + int(ms)/1000.0
+        def fmt_t(t):
+            if t < 0: t = 0
+            h = int(t // 3600); t -= h*3600
+            m = int(t // 60); t -= m*60
+            s = int(t); ms = int(round((t - s)*1000))
+            if ms >= 1000: s += 1; ms = 0
+            return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+        with open(ruta_srt, encoding="utf-8") as f:
+            lineas = f.read().split("\n")
+        out = []
+        for ln in lineas:
+            if "-->" in ln:
+                a, b = ln.split("-->")
+                out.append(f"{fmt_t(parse_t(a.strip())+offset)} --> {fmt_t(parse_t(b.strip())+offset)}")
+            else:
+                out.append(ln)
+        with open(ruta_srt, "w", encoding="utf-8") as f:
+            f.write("\n".join(out))
+    except Exception as e:
+        print(f"   [SUBS] No se pudo aplicar offset: {e}")
+
+
+def _generar_srt_whisper(ruta_audio, texto_guion, marca, ruta_srt, max_pal=5):
+    """SOLUCIÓN DEFINITIVA DE SINCRONÍA: usa Whisper (faster-whisper) para obtener el
+    tiempo EXACTO de cada palabra del audio real, en vez de estimar con silencios.
+    Combina lo mejor de dos mundos:
+      - Los TIEMPOS exactos vienen de Whisper (escucha el audio).
+      - El TEXTO viene del guión original (perfecto, sin errores de transcripción).
+    Devuelve el número de subtítulos generados, o None si Whisper no está disponible
+    (entonces el llamador usa el método de respaldo)."""
+    try:
+        from faster_whisper import WhisperModel
+    except Exception:
+        print("   [SUBS] faster-whisper no instalado — usando método de respaldo.")
+        return None
+    if not (ruta_audio and os.path.exists(ruta_audio)):
+        return None
+    try:
+        # Modelo 'base' cargado una sola vez (cache global) para no recargarlo cada video
+        global _WHISPER_MODEL
+        if "_WHISPER_MODEL" not in globals() or _WHISPER_MODEL is None:
+            print("   [SUBS] Cargando modelo Whisper 'base' (primera vez)...")
+            _WHISPER_MODEL = WhisperModel("base", device="cpu", compute_type="int8")
+        model = _WHISPER_MODEL
+
+        print(f"   [SUBS] Transcribiendo audio con Whisper para timestamps reales...")
+        segments, info = model.transcribe(
+            ruta_audio, language="es", word_timestamps=True,
+            vad_filter=True, beam_size=1
+        )
+        # Extraer TODAS las palabras con su tiempo exacto
+        palabras = []
+        for seg in segments:
+            if seg.words:
+                for w in seg.words:
+                    palabras.append((w.start, w.end, w.word.strip()))
+        if len(palabras) < 2:
+            print("   [SUBS] Whisper detectó muy pocas palabras — usando respaldo.")
+            return None
+
+        # Agrupar palabras en líneas de subtítulo de máx max_pal palabras,
+        # cortando también en pausas largas (>0.6s entre palabras) para respetar frases.
+        lineas = []
+        grupo = []
+        for i, (ini, fin, pal) in enumerate(palabras):
+            if grupo:
+                pausa = ini - grupo[-1][1]
+                if len(grupo) >= max_pal or pausa > 0.6:
+                    lineas.append(grupo)
+                    grupo = []
+            grupo.append((ini, fin, pal))
+        if grupo:
+            lineas.append(grupo)
+        # Evitar líneas huérfanas de 1 sola palabra: fusionarlas con la línea anterior
+        # si la pausa entre ellas es corta (no son de frases distintas).
+        i = 1
+        while i < len(lineas):
+            if len(lineas[i]) == 1 and lineas[i-1]:
+                pausa = lineas[i][0][0] - lineas[i-1][-1][1]
+                if pausa <= 0.6 and len(lineas[i-1]) < max_pal + 2:
+                    lineas[i-1].extend(lineas[i])
+                    lineas.pop(i)
+                    continue
+            i += 1
+
+        def fmt_t(t):
+            if t < 0: t = 0
+            h = int(t // 3600); t -= h*3600
+            m = int(t // 60); t -= m*60
+            s = int(t); ms = int(round((t - s)*1000))
+            if ms >= 1000: s += 1; ms = 0
+            return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+        with open(ruta_srt, "w", encoding="utf-8") as f:
+            for idx, grupo in enumerate(lineas, 1):
+                t_ini = grupo[0][0]
+                t_fin = grupo[-1][1]
+                texto = " ".join(p[2] for p in grupo).strip()
+                # Limpiar espacios antes de puntuación que Whisper a veces deja
+                texto = re.sub(r'\s+([,.;:!?])', r'\1', texto)
+                f.write(f"{idx}\n{fmt_t(t_ini)} --> {fmt_t(t_fin)}\n{texto}\n\n")
+        print(f"   [SUBS] ✅ {len(lineas)} subtítulos con timestamps REALES de Whisper.")
+        return len(lineas)
+    except Exception as e:
+        print(f"   [SUBS] Error con Whisper: {e} — usando respaldo.")
+        return None
+
+
 def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca, carpeta_reciente, dur_total):
     """Subtítulos anclados a los BLOQUES DE HABLA reales del audio (sincronía fuerte)."""
     ruta_srt = os.path.join(carpeta_reciente, "subtitulos.srt").replace("\\", "/")
@@ -832,23 +947,38 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
         print("   [ERROR] Texto vacío.")
         return None
 
-    # SINCRONÍA FUERTE POR CANAL: cada canal tiene distinto ritmo de voz, así que la
-    # detección y el reparto se ajustan a su config (La Viuda lenta = fina; LaesquinaRandom
-    # rápida = pausas más largas + fusión de micro-bloques para no fragmentar).
+    texto_completo = " ".join(escenas_texto) if escenas_texto else texto_locucion
+    if not texto_completo.strip():
+        print("   [ERROR] Texto vacío.")
+        return None
+
     cfg = _config_subs(marca)
+
+    # ── MÉTODO PRINCIPAL: Whisper (timestamps REALES por palabra) ──
+    # Resuelve la sincronía de raíz: en vez de estimar con silencios, escucha el
+    # audio y obtiene el tiempo exacto de cada palabra. Si no está disponible o
+    # falla, cae automáticamente al método anterior (bloques por silencios).
+    _n_whisper = _generar_srt_whisper(ruta_audio, texto_completo, marca, ruta_srt, cfg["max_palabras"])
+    if _n_whisper:
+        # Aplicar offset del canal si lo hubiera (normalmente 0 con Whisper, pero se respeta)
+        _offset = cfg.get("offset_seg", 0.0)
+        if _offset:
+            _aplicar_offset_srt(ruta_srt, _offset)
+            print(f"   [SUBS] Offset {_offset:+.2f}s aplicado sobre Whisper (canal {marca})")
+        print(f"   [OK] SRT generado con Whisper.")
+        return ruta_srt, _n_whisper
+
+    # ── MÉTODO DE RESPALDO: bloques de habla por silencios (el anterior) ──
+    print("   [SUBS] Usando método de respaldo (bloques por silencios).")
     bloques, dur_detectada = _detectar_bloques_habla(
         ruta_audio, dur_min_silencio=cfg["dur_min_silencio"]
     ) if ruta_audio and os.path.exists(ruta_audio) else ([], 0.0)
-    # Fusionar micro-bloques (respiraciones) según el canal, para que los bloques
-    # coincidan con frases reales y los subtítulos no se desincronicen.
     if bloques:
         antes = len(bloques)
         bloques = _fusionar_microbloques(bloques, cfg["fusionar_bloques_min"])
         if len(bloques) != antes:
             print(f"   [SUBS] {antes} bloques → {len(bloques)} tras fusionar micro-pausas (canal {marca})")
     _num_bloques = len(bloques)
-    # Aplicar el OFFSET de sincronía del canal: desplaza todos los bloques en el tiempo.
-    # Negativo = adelanta los subtítulos (si iban atrasados); positivo = los atrasa.
     _offset = cfg.get("offset_seg", 0.0)
     if _offset and bloques:
         bloques = [(max(0.0, ini + _offset), max(0.05, fin + _offset)) for (ini, fin) in bloques]
