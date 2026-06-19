@@ -60,6 +60,36 @@ def _leer_token_github():
     except Exception:
         return ""
 
+def subir_srt_revision(ruta_srt, marca, vid_id):
+    """Sube el .srt generado a _diagnostico/subtitulos/ en la rama diagnostico,
+    para poder revisar los tiempos exactos sin pedírselos al usuario. Best-effort."""
+    try:
+        if not (ruta_srt and os.path.exists(ruta_srt)):
+            return False
+        token = _leer_token_github()
+        if not token:
+            return False
+        with open(ruta_srt, encoding="utf-8") as f:
+            srt_txt = f.read()
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        vid = str(vid_id)[:20].replace("/", "_")
+        ruta = f"_diagnostico/subtitulos/{ts}_{marca}_{vid}.srt"
+        contenido = base64.b64encode(srt_txt.encode()).decode()
+        H = {"Authorization": f"token {token}"}
+        r = requests.put(
+            f"https://api.github.com/repos/{_GH_REPO}/contents/{ruta}",
+            headers=H,
+            json={"message": f"srt {marca} {vid}", "content": contenido, "branch": "diagnostico"},
+            timeout=30,
+        )
+        if r.status_code in (200, 201):
+            print(f"   [SUBS] SRT subido a diagnostico/subtitulos/ para revisión.")
+            return True
+        return False
+    except Exception as e:
+        print(f"   [SUBS] No se pudo subir el SRT (no crítico): {e}")
+        return False
+
 def subir_diagnostico_video(diag):
     """Sube un JSON de diagnóstico de UN video a _diagnostico/videos/ en la rama
     diagnostico. No interrumpe la producción si falla (best-effort)."""
@@ -2546,6 +2576,12 @@ def procesar():
                             ruta_srt = _srt_shift
                             _diag["subtitulos"]["desplazado_por_hooks"] = True
                             print(f"   [SUBS] Tiempos desplazados para los hooks (sincronía mantenida).")
+                    # Subir el SRT FINAL a GitHub para revisar los tiempos exactos
+                    # sin tener que pedírselos al usuario.
+                    try:
+                        subir_srt_revision(ruta_srt, marca_audio, tarea.get("id", "sinid"))
+                    except Exception:
+                        pass
                     if ruta_srt and os.path.exists(ruta_srt):
                         sub_path = ruta_srt.replace('\\', '/').replace(':', '\\:')
                         filtro_sub = (
