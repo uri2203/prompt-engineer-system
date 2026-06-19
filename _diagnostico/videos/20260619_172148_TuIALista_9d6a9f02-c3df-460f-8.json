@@ -1,0 +1,24 @@
+{
+  "id": "9d6a9f02-c3df-460f-8d2f-2f21b5ef5da2_asm",
+  "marca": "TuIALista",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-19 17:21:24",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Pre-flight abortado: Nodo de IMÁGENES (SD) no responde en http://192.168.0.215:7861"
+  ]
+}
