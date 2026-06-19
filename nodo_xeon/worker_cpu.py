@@ -947,11 +947,6 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
         print("   [ERROR] Texto vacío.")
         return None
 
-    texto_completo = " ".join(escenas_texto) if escenas_texto else texto_locucion
-    if not texto_completo.strip():
-        print("   [ERROR] Texto vacío.")
-        return None
-
     cfg = _config_subs(marca)
 
     # ── MÉTODO PRINCIPAL: Whisper (timestamps REALES por palabra) ──
@@ -960,12 +955,10 @@ def _generar_subtitulos_shorts(ruta_audio, texto_locucion, escenas_texto, marca,
     # falla, cae automáticamente al método anterior (bloques por silencios).
     _n_whisper = _generar_srt_whisper(ruta_audio, texto_completo, marca, ruta_srt, cfg["max_palabras"])
     if _n_whisper:
-        # Aplicar offset del canal si lo hubiera (normalmente 0 con Whisper, pero se respeta)
-        _offset = cfg.get("offset_seg", 0.0)
-        if _offset:
-            _aplicar_offset_srt(ruta_srt, _offset)
-            print(f"   [SUBS] Offset {_offset:+.2f}s aplicado sobre Whisper (canal {marca})")
-        print(f"   [OK] SRT generado con Whisper.")
+        # NO se aplica el offset_seg del canal: ese offset existía para compensar el
+        # MÉTODO VIEJO (estimación por silencios). Whisper ya da el tiempo EXACTO de
+        # cada palabra, así que aplicar el offset lo desincronizaría (adelantaría de más).
+        print(f"   [OK] SRT generado con Whisper (sincronía exacta, sin offset).")
         return ruta_srt, _n_whisper
 
     # ── MÉTODO DE RESPALDO: bloques de habla por silencios (el anterior) ──
