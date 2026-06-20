@@ -920,51 +920,47 @@ def _generar_srt_whisper(ruta_audio, texto_guion, marca, ruta_srt, max_pal=5):
         # Nota: Whisper transcribe la palabra REAL aunque la voz tenga grafía fonética
         # (ej. oye "eks pli ca" y escribe "explica"). Verificado en producción.
 
-        # Agrupar palabras en líneas de subtítulo de forma INTELIGENTE:
-        # - Corta preferentemente tras PUNTUACIÓN (. , ! ? ; :) — fin natural de frase.
-        # - Corta en PAUSAS largas (>0.5s entre palabras).
-        # - Respeta un máximo de palabras, pero si la siguiente palabra completa una
-        #   frase corta (queda 1-2 palabras para puntuación), espera a cerrarla.
-        # Esto evita cortes como "antojitos / mexicanos" o palabras huérfanas.
-        def termina_en_punt(palabra):
-            return palabra.rstrip()[-1:] in ".,!?;:…"
-        def termina_en_punt_fuerte(palabra):
-            return palabra.rstrip()[-1:] in ".!?…"
+        # AGRUPACIÓN POR FRASES (robusta): acumula palabras y solo corta en un punto
+        # LÓGICO — después de puntuación (. , ! ? ; :) o en una pausa larga. Nunca corta
+        # a media frase como "MEJORA TU" o "CAMBIA / TODO". Si llega al máximo sin
+        # puntuación, sigue hasta la próxima coma/punto (aunque la línea quede un poco
+        # más larga, es preferible a partir una frase sin sentido).
+        def termina_en_punt(p):
+            return p.rstrip()[-1:] in ".,!?;:…"
+        def termina_en_punt_fuerte(p):
+            return p.rstrip()[-1:] in ".!?…"
+
+        LIMITE_DURO = max_pal + 4  # tope absoluto para no dejar líneas eternas
 
         lineas = []
         grupo = []
         for i, (ini, fin, pal) in enumerate(palabras):
-            if grupo:
-                pausa = ini - grupo[-1][1]
-                prev_pal = grupo[-1][2]
-                cortar = False
-                # 1. Pausa larga = casi seguro cambio de frase
-                if pausa > 0.5:
-                    cortar = True
-                # 2. La palabra anterior terminó en puntuación fuerte (. ! ?)
-                elif termina_en_punt_fuerte(prev_pal):
-                    cortar = True
-                # 3. Llegamos al máximo Y la anterior terminó en coma/puntuación
-                elif len(grupo) >= max_pal and termina_en_punt(prev_pal):
-                    cortar = True
-                # 4. Pasamos bastante del máximo (no dejar líneas eternas)
-                elif len(grupo) >= max_pal + 2:
-                    cortar = True
-                if cortar:
-                    lineas.append(grupo)
-                    grupo = []
             grupo.append((ini, fin, pal))
+            # ¿deberíamos cerrar el grupo aquí (después de esta palabra)?
+            siguiente_ini = palabras[i+1][0] if i+1 < len(palabras) else None
+            pausa_despues = (siguiente_ini - fin) if siguiente_ini is not None else 99
+            cerrar = False
+            if termina_en_punt_fuerte(pal):
+                cerrar = True                      # fin de oración: siempre corta
+            elif pausa_despues > 0.5:
+                cerrar = True                      # pausa larga: corte natural
+            elif len(grupo) >= max_pal and termina_en_punt(pal):
+                cerrar = True                      # alcanzó tamaño Y hay coma: buen punto
+            elif len(grupo) >= LIMITE_DURO:
+                cerrar = True                      # demasiado larga: corte forzado
+            if cerrar:
+                lineas.append(grupo)
+                grupo = []
         if grupo:
             lineas.append(grupo)
 
-        # Fusionar líneas huérfanas cortas (1-2 palabras) con la anterior si la pausa
-        # es corta — evita que "MEXICANOS." o "ENCONTRABAN?" aparezcan solas un instante.
+        # Fusionar líneas huérfanas muy cortas (1-2 palabras sin sentido solas) con la
+        # anterior, si caben y están pegadas.
         i = 1
         while i < len(lineas):
             if len(lineas[i]) <= 2 and lineas[i-1]:
                 pausa = lineas[i][0][0] - lineas[i-1][-1][1]
-                # fusionar si están pegadas y la línea anterior no queda demasiado larga
-                if pausa <= 0.5 and (len(lineas[i-1]) + len(lineas[i])) <= max_pal + 3:
+                if pausa <= 0.6 and (len(lineas[i-1]) + len(lineas[i])) <= LIMITE_DURO:
                     lineas[i-1].extend(lineas[i])
                     lineas.pop(i)
                     continue
@@ -983,7 +979,6 @@ def _generar_srt_whisper(ruta_audio, texto_guion, marca, ruta_srt, max_pal=5):
                 t_ini = grupo[0][0]
                 t_fin = grupo[-1][1]
                 texto = " ".join(p[2] for p in grupo).strip()
-                # Limpiar espacios antes de puntuación que Whisper a veces deja
                 texto = re.sub(r'\s+([,.;:!?])', r'\1', texto)
                 f.write(f"{idx}\n{fmt_t(t_ini)} --> {fmt_t(t_fin)}\n{texto}\n\n")
         print(f"   [SUBS] ✅ {len(lineas)} subtítulos con timestamps REALES de Whisper.")
