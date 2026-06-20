@@ -1,29 +1,10 @@
 {
-  "estado_lote": "completado",
+  "estado_lote": "produciendo",
   "total": 2,
-  "completados": 2,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 4s",
-  "mensaje": "Lote completado.",
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
   "resumen": "LaesquinaRandom: 1s+0L | TuIALista: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "LaesquinaRandom",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 112.2,
-      "hora": "15:56"
-    },
-    {
-      "n": 2,
-      "marca": "TuIALista",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 114.2,
-      "hora": "16:57"
-    }
-  ]
+  "historial": []
 }
