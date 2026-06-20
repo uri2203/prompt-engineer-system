@@ -3057,17 +3057,40 @@ def procesar():
                         marca_limpia = marca_tarea.lower()
                         
                         if marca_limpia in ["la esquina random", "laesquinarandom"]:
+                            # Limpiar del prompt de la escena términos que disparan el
+                            # filtro NSFW por FALSO POSITIVO (situaciones cómicas inocentes
+                            # que el modelo malinterpreta y devuelve negro). Se sustituyen
+                            # por equivalentes seguros, sin cambiar el sentido cómico.
+                            _esc_safe = prompt_esc
+                            _reemplazos_nsfw = {
+                                "underwear": "pajamas", "in underwear": "in pajamas",
+                                "calzones": "pajamas", "ropa interior": "pijama",
+                                "naked": "fully dressed", "desnudo": "vestido",
+                                "desnuda": "vestida", "bikini": "summer outfit",
+                                "swimsuit": "summer outfit", "traje de baño": "ropa de verano",
+                                "shower": "kitchen", "regadera": "cocina", "ducha": "cocina",
+                                "bra": "shirt", "lingerie": "casual clothes",
+                                "topless": "wearing a shirt", "bathtub": "living room",
+                                "tina": "sala", "bañera": "sala",
+                            }
+                            _low = _esc_safe.lower()
+                            for _bad, _good in _reemplazos_nsfw.items():
+                                if _bad in _low:
+                                    _esc_safe = re.sub(re.escape(_bad), _good, _esc_safe, flags=re.IGNORECASE)
+                                    _low = _esc_safe.lower()
                             prompt_limpio = (
-                                f"{prompt_esc}, funny cartoon style, 2D animation, clean vector art, "
+                                f"family-friendly wholesome cartoon, fully clothed characters, "
+                                f"{_esc_safe}, funny cartoon style, 2D animation, clean vector art, "
                                 f"vibrant flat colors, comic book aesthetic, expressive caricature, "
                                 f"exaggerated facial expressions, clear well-defined faces, "
                                 f"detailed eyes with clear round pupils, both eyes looking the same direction, "
                                 f"symmetrical well-drawn eyes, complete eyes with iris and pupil, "
                                 f"correct anatomy, simple clean shapes, single main character in focus, "
                                 f"clean uncluttered background, humorous situation, "
-                                f"vibrant lighting, cel shaded, high quality cartoon illustration"
+                                f"bright vibrant lighting, cel shaded, high quality cartoon illustration"
                             )
                             neg_prompt = (
+                                "nude, naked, nudity, nsfw, suggestive, underwear, lingerie, "
                                 "empty white eyes, eyes without pupils, blank eyes, missing pupils, "
                                 "pupilless eyes, hollow eyes, eyes rolled back, all white eyeballs, "
                                 "deformed eyes, crossed eyes, lazy eye, misaligned eyes, asymmetric eyes, "
@@ -3079,8 +3102,8 @@ def procesar():
                                 "fused fingers, extra arms, extra legs, malformed hands, bad hands, "
                                 "melted face, twisted body, broken anatomy, blurry, low quality, jpeg artifacts, "
                                 "nonsense, gibberish, abstract mess, photorealistic, realistic, 3d render, "
-                                "hyperrealistic, photography, raw photo, dark, gloomy, horror, serious, "
-                                "monochrome, anime, manga, text, watermark, signature"
+                                "hyperrealistic, photography, raw photo, black image, all black, underexposed, "
+                                "dark, gloomy, horror, serious, monochrome, anime, manga, text, watermark, signature"
                             )
                         
                         elif marca_limpia in ["la viuda", "laviuda"]:
