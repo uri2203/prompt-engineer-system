@@ -3078,9 +3078,52 @@ def procesar():
                                 if _bad in _low:
                                     _esc_safe = re.sub(re.escape(_bad), _good, _esc_safe, flags=re.IGNORECASE)
                                     _low = _esc_safe.lower()
+                            # VARIEDAD: lista de tipos de escena/composición cómica que rota
+                            # por video, para que no salgan siempre los mismos encuadres.
+                            _composiciones_esquina = [
+                                "exaggerated close-up reaction face, huge expressive eyes, comic shock",
+                                "wide funny scene in a messy living room, chaotic comedy",
+                                "character at a kitchen table with absurd situation, everyday comedy",
+                                "street scene with a ridiculous unexpected event, urban comedy",
+                                "office or workplace comedy, exaggerated boss and employee",
+                                "character in a car stuck in traffic, frustrated funny expression",
+                                "supermarket aisle comedy, character overwhelmed by choices",
+                                "classroom or school comedy, silly exaggerated students",
+                                "gym scene comedy, character struggling with equipment",
+                                "restaurant comedy, waiter and customer absurd interaction",
+                                "park bench scene, two characters in funny conversation",
+                                "bus or metro comedy, crowded silly situation",
+                                "living room couch potato comedy, snacks everywhere",
+                                "doctor office waiting room, nervous funny character",
+                                "birthday party comedy, chaos and confetti",
+                                "character cooking and failing hilariously in the kitchen",
+                                "neighbors arguing over a fence, suburban comedy",
+                                "phone call reaction comedy, dramatic facial expression",
+                                "character waking up late rushing comically",
+                                "family dinner comedy, exaggerated relatives reactions",
+                                "pet causing chaos with funny owner reaction",
+                                "shopping mall comedy, character lost and confused",
+                                "rainy day comedy, character without umbrella exaggerated misery",
+                                "character trying to assemble furniture, comic frustration",
+                                "barbershop or salon comedy, dramatic haircut reaction",
+                                "bank or government office comedy, endless line frustration",
+                                "beach day comedy fully dressed, character vs seagulls",
+                                "character on a video call with technical problems, comedy",
+                                "elevator comedy, awkward characters squeezed together",
+                                "character receiving a huge bill, dramatic shocked reaction",
+                                "kitchen breakfast comedy, coffee disaster",
+                                "character winning or losing dramatically at a board game",
+                                "gym locker room comedy fully clothed, comic vanity",
+                                "character lost reading a confusing map, exaggerated confusion",
+                                "couch interview style, character talking to camera comically",
+                            ]
+                            import random as _rnd_e
+                            _ord_e = list(range(len(_composiciones_esquina)))
+                            _rnd_e.Random(str(tarea.get("id","")) + "esquina").shuffle(_ord_e)
+                            _comp_e = _composiciones_esquina[_ord_e[i % len(_composiciones_esquina)]]
                             prompt_limpio = (
                                 f"family-friendly wholesome cartoon, fully clothed characters, "
-                                f"{_esc_safe}, funny cartoon style, 2D animation, clean vector art, "
+                                f"{_esc_safe}, {_comp_e}, funny cartoon style, 2D animation, clean vector art, "
                                 f"vibrant flat colors, comic book aesthetic, expressive caricature, "
                                 f"exaggerated facial expressions, clear well-defined faces, "
                                 f"detailed eyes with clear round pupils, both eyes looking the same direction, "
@@ -3144,6 +3187,16 @@ def procesar():
                                 "single bare lightbulb swinging in darkness, harsh shadows, interrogation of fear",
                                 "overgrown abandoned house exterior at dusk, broken windows, red haze",
                                 "close-up of a trembling candle flame reflected in a dark eye, extreme intimacy of fear",
+                                "long-abandoned hospital corridor, peeling paint, wheelchair in shadow, clinical dread",
+                                "creepy children's nursery, old porcelain dolls staring, music box, unsettling innocence",
+                                "fog-shrouded forest path at night, gnarled trees, faint distant figure, primal fear",
+                                "flooded basement with reflections, submerged objects, cold dread, murky water",
+                                "old church interior in ruins, broken pews, shafts of dim light, sacred horror",
+                                "close-up of a Ouija board planchette moving, candlelight, supernatural contact",
+                                "decrepit puppet or marionette hanging limp in shadow, strings, eerie stillness",
+                                "frost-covered window with a handprint from inside, trapped presence, cold horror",
+                                "narrow well descending into darkness, stone walls, echo of dread, claustrophobia",
+                                "abandoned carnival at night, broken carousel, faded colors, sinister nostalgia",
                             ]
                             # Barajar el orden por video (semilla = id de tarea) para que
                             # no salga siempre la misma secuencia, sin repetir dentro del video
@@ -3194,6 +3247,25 @@ def procesar():
                                 "communication tower silhouette at sunset, network infrastructure",
                                 "desert airstrip with parked aircraft, remote military outpost",
                                 "stock exchange or financial district exterior, economic power",
+                                "crowded currency exchange board with fluctuating numbers, economic volatility",
+                                "gold bars stacked in a vault, wealth and reserves, financial power",
+                                "shipping route map with glowing trade lines across continents, global commerce",
+                                "protest crowd filling a city square seen from above, social unrest",
+                                "long queue of people at a border or bank, economic hardship, human scale",
+                                "modern parliament or government building facade, political institution",
+                                "factory assembly line with robotic arms, manufacturing power, automation",
+                                "rare earth mine open pit, raw materials extraction, resource geopolitics",
+                                "semiconductor chip macro close-up, technology supremacy, microchips",
+                                "undersea data cable on the ocean floor, global connectivity infrastructure",
+                                "drone swarm in formation against the sky, modern warfare technology",
+                                "wind turbine field and solar panels, energy transition, green power",
+                                "wheat fields stretching to horizon, food security, agricultural power",
+                                "container port at night with illuminated cranes, 24/7 global trade",
+                                "central bank building columns, monetary policy, economic authority",
+                                "satellite orbiting earth over a continent, space and surveillance power",
+                                "city skyline split between wealth and poverty, economic inequality",
+                                "diplomatic round table with empty chairs and flags, international negotiation",
+                                "high-speed train crossing a vast landscape, infrastructure and development",
                             ]
                             import random as _rnd_m
                             _ord_m = list(range(len(_composiciones_monky)))
@@ -3240,6 +3312,25 @@ def procesar():
                                 "car keys and a packed bag by the entrance, decision made",
                                 "blurred figure leaving through a doorway in the background, departure",
                                 "torn photograph pieces on a desk, broken relationship",
+                                "hands holding an old family photo album, nostalgia and secrets",
+                                "a hidden box of letters discovered in an attic, family secret revealed",
+                                "money envelope left discreetly on a table, financial tension, hidden help",
+                                "hospital waiting room chairs empty, anxious wait, health crisis",
+                                "two hands reaching toward each other across a table, reconciliation",
+                                "a child's drawing on a fridge, innocent perspective on family drama",
+                                "positive pregnancy test on a bathroom counter, life-changing news",
+                                "an old voicemail playing on a phone, voice from the past",
+                                "packed boxes in an empty apartment, new beginning after a breakup",
+                                "a single candle lit at a small home altar, remembrance and grief",
+                                "wedding dress hanging alone in a closet, doubts before the ceremony",
+                                "a restaurant table set for a surprise celebration, anticipation",
+                                "an envelope with DNA test results unopened, identity revelation",
+                                "rain-soaked figure standing outside a window looking in, longing",
+                                "a phone showing dozens of missed calls, urgency and worry",
+                                "two coffee mugs being filled, morning reconciliation, warmth returning",
+                                "an old wedding photo next to a recent one, time and change",
+                                "house keys being handed from one hand to another, trust or farewell",
+                                "a suitcase by the door at dawn, leaving to start over, hope",
                             ]
                             import random as _rnd_f
                             _ord_f = list(range(len(_composiciones_filtrado)))
@@ -3261,13 +3352,127 @@ def procesar():
                                 "office, corporate, business, medical, hospital, outdoor, nature"
                             )
 
-                        else:
-                            prompt_limpio = (
-                                f"{prompt_esc}, RAW photo, photorealistic, real photography, "
-                                f"no people, no humans, no persons, natural lighting, film grain, "
-                                f"gritty texture, shot on location, physical environment, "
-                                f"no cgi, no digital art, no abstract"
+                        elif marca_limpia in ["tuialista"]:
+                            _estilo_tuia = (
+                                "clean modern tech aesthetic, professional editorial photography, "
+                                "soft studio lighting, sharp focus, contemporary and trustworthy mood"
                             )
+                            _composiciones_tuia = [
+                                "modern laptop on a clean desk with abstract data on screen, workspace",
+                                "close-up of a smartphone showing an AI app interface, technology in hand",
+                                "futuristic but clean robot assistant, friendly approachable design",
+                                "abstract neural network visualization, glowing connected nodes, elegant",
+                                "person silhouette interacting with a holographic interface, human and AI",
+                                "macro shot of a computer chip on a circuit board, microtechnology",
+                                "clean minimalist home office with smart devices, modern living",
+                                "data center with neat server rows, soft blue lighting, infrastructure",
+                                "hands typing on a backlit keyboard, productivity and coding",
+                                "smart home devices on a shelf, voice assistant, connected life",
+                                "electric vehicle dashboard with digital displays, future mobility",
+                                "abstract flowing data streams in clean gradient colors, information age",
+                                "modern smartwatch displaying health metrics, wearable tech",
+                                "drone hovering against a clear sky, autonomous technology",
+                                "clean desk with tablet, stylus and design app open, creative tech",
+                                "augmented reality glasses showing overlaid information, future vision",
+                                "solar panels and wind turbines, clean energy technology",
+                                "robotic arm in a bright modern lab, automation and precision",
+                                "person presenting on a large screen with charts, tech explainer",
+                                "abstract glowing brain made of light connections, AI and intelligence",
+                                "clean smartphone manufacturing line, technology production",
+                                "minimalist app icons floating on a gradient background, software",
+                                "satellite over earth at night with connection lines, global tech",
+                                "modern office meeting with a holographic chart, business tech",
+                                "close-up of an eye with subtle digital reflection, human-AI interface",
+                                "sleek autonomous car on a clean highway, self-driving future",
+                                "3D printer creating an object, additive manufacturing",
+                                "quantum computer abstract representation, cutting-edge tech",
+                                "person using a VR headset in a bright room, immersive technology",
+                                "clean infographic-style scene with floating tech icons, explainer",
+                                "modern smartphone with a glowing AI chatbot conversation, assistant",
+                                "futuristic city skyline with clean integrated technology, smart city",
+                                "hands holding a transparent tablet with data, future devices",
+                                "abstract digital lock and shield, cybersecurity and privacy",
+                                "bright lab with scientists and AI screens, research and innovation",
+                            ]
+                            import random as _rnd_t
+                            _ord_t = list(range(len(_composiciones_tuia)))
+                            _rnd_t.Random(str(tarea.get("id","")) + "tuia").shuffle(_ord_t)
+                            _comp_t = _composiciones_tuia[_ord_t[i % len(_composiciones_tuia)]]
+                            _plano_t = "wide clean shot" if i % 2 == 0 else "close-up detail, shallow depth of field"
+                            prompt_limpio = (
+                                f"{prompt_esc}, {_comp_t}, {_plano_t}, {_estilo_tuia}, "
+                                f"high quality, clean composition"
+                            )
+                            neg_prompt = (
+                                "nude, naked, nsfw, explicit, deformed, bad anatomy, malformed hands, "
+                                "extra fingers, distorted face, ugly, blurry, low quality, jpeg artifacts, "
+                                "dark, gloomy, horror, scary, dystopian, chaotic, cluttered, messy, "
+                                "text, watermark, signature, logo, brand, cartoon, anime, childish, "
+                                "old fashioned, retro, vintage, low tech, grainy, cheap, amateur"
+                            )
+
+                        elif marca_limpia in ["umbral alterno", "umbralalterno"]:
+                            _estilo_umbral = (
+                                "cinematic documentary photography, epic scale, atmospheric haze, "
+                                "desaturated color grade with one accent, dramatic natural lighting, "
+                                "photorealistic, serious contemplative mood, film still aesthetic"
+                            )
+                            _composiciones_umbral = [
+                                "vast surreal landscape where reality bends at the horizon, epic scale",
+                                "lone figure looking at an impossible phenomenon in the distance, scale",
+                                "ordinary city skyline with one uncanny alteration in the sky, subtle wrong",
+                                "abandoned modern structure reclaimed by nature, time and collapse",
+                                "branching paths diverging in a misty landscape, alternate timelines",
+                                "vast control room or observatory looking at data, the place of analysis",
+                                "two moons or anomaly over a normal landscape, alternate reality",
+                                "empty highway stretching into an uncertain horizon, the path ahead",
+                                "colossal structure dwarfing tiny human figures, overwhelming scale",
+                                "flooded or transformed familiar city, climate scenario, eerie calm",
+                                "ancient ruins juxtaposed with futuristic elements, time collision",
+                                "lone satellite or probe in deep space over a planet, cosmic perspective",
+                                "desert with mysterious monolith, the unexplained, contemplation",
+                                "split landscape showing two possible futures, divergence visualized",
+                                "vast crowd seen from far above forming a pattern, human scale",
+                                "frozen or transformed natural landmark, environmental scenario",
+                                "empty modern interior bathed in strange light, liminal threshold",
+                                "aerial view of infrastructure stretching to the horizon, civilization scale",
+                                "storm or phenomenon approaching a calm settlement, impending change",
+                                "abstract representation of a timeline or web of consequences, cause and effect",
+                                "lone observer on a high vantage point overlooking a vast scene, perspective",
+                                "transformed solar system or sky phenomenon, cosmic what-if",
+                                "ghostly overlay of a past version over a present place, time layers",
+                                "vast archive or data hall stretching into distance, accumulated knowledge",
+                                "barren post-event landscape with subtle signs of former life, aftermath",
+                                "monumental gateway or threshold structure in a landscape, the umbral",
+                                "city at the moment of transition between day and an altered state",
+                                "scientific apparatus in a vast facility, the simulation chamber",
+                                "tiny boat on an immense ocean under a dramatic sky, insignificance and scale",
+                                "network of lights connecting across a dark continent at night, connection",
+                                "mountain range with an impossible structure integrated, altered geography",
+                                "vast empty stadium or public space, absence and scale",
+                                "horizon where land meets an unnatural sky gradient, boundary of realities",
+                                "lone tree standing in a transformed environment, resilience and change",
+                                "epic wide shot of a world on the edge of transformation, the turning point",
+                            ]
+                            import random as _rnd_u
+                            _ord_u = list(range(len(_composiciones_umbral)))
+                            _rnd_u.Random(str(tarea.get("id","")) + "umbral").shuffle(_ord_u)
+                            _comp_u = _composiciones_umbral[_ord_u[i % len(_composiciones_umbral)]]
+                            _plano_u = "epic wide establishing shot" if i % 2 == 0 else "atmospheric medium shot with depth"
+                            prompt_limpio = (
+                                f"{prompt_esc}, {_comp_u}, {_plano_u}, {_estilo_umbral}, "
+                                f"high quality, no text, cinematic"
+                            )
+                            neg_prompt = (
+                                "nude, naked, nsfw, explicit, deformed, bad anatomy, malformed hands, "
+                                "extra fingers, distorted face, ugly, blurry, low quality, jpeg artifacts, "
+                                "cartoon, anime, illustration, cute, childish, comedy, funny, silly, "
+                                "bright cheerful, oversaturated, neon, cheap, amateur, "
+                                "text, watermark, signature, logo, brand, meme, "
+                                "close-up face, portrait, selfie, gore, graphic violence"
+                            )
+
+                        else:
                             neg_prompt = (
                                 "person, people, human, man, woman, boy, girl, face, body, character, "
                                 "figure, portrait, selfie, eye, eyes, closeup face, macro face, skin pores, "
