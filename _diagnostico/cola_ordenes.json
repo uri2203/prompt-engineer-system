@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "b133ec23-2765-48a3-86e0-aca14ee3e5a9",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Abstract digital data streams, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital data streams, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Fable, la 'mejor' IA del mundo, acaba de colapsar.\", \"pexels_query\": \"data streams abstract\"}, {\"id\": 2, \"prompt\": \"Server racks with blinking lights, network cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Server racks with blinking lights, network cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Desapareció en solo 72 horas, sin avisar a nadie.\", \"pexels_query\": \"server racks network\"}, {\"id\": 3, \"prompt\": \"Digital interface displaying error messages, pixelated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface displaying error messages, pixelated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Miles de proyectos y datos se perdieron para siempre.\", \"pexels_query\": \"error interface digital\"}, {\"id\": 4, \"prompt\": \"Abstract circuit board pattern, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract circuit board pattern, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto lo cambia todo para quien usa cualquier IA.\", \"pexels_query\": \"circuit board abstract\"}, {\"id\": 5, \"prompt\": \"Data center cooling systems, vapor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data center cooling systems, vapor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Revela la extrema fragilidad de las herramientas actuales.\", \"pexels_query\": \"data center cooling\"}, {\"id\": 6, \"prompt\": \"Abstract network graph, interconnected nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract network graph, interconnected nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu trabajo podría desaparecer así, en segundos.\", \"pexels_query\": \"network graph nodes\"}, {\"id\": 7, \"prompt\": \"Futuristic digital screen, data visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic digital screen, data visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Fable prometía el futuro, y se fue en un instante.\", \"pexels_query\": \"digital screen futuristic\"}, {\"id\": 8, \"prompt\": \"Close-up of a GPU chip, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Close-up of a GPU chip, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Muchos creyeron ciegamente en su supuesta estabilidad.\", \"pexels_query\": \"GPU chip close-up\"}, {\"id\": 9, \"prompt\": \"Abstract representation of data migration, moving blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data migration, moving blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero ¿qué pasó realmente con esta prometedora IA?\", \"pexels_query\": \"data migration abstract\"}, {\"id\": 10, \"prompt\": \"Digital security padlock icon, encrypted data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital security padlock icon, encrypted data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La financiación es un gran reto para las startups.\", \"pexels_query\": \"security padlock digital\"}, {\"id\": 11, \"prompt\": \"Server racks in dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Server racks in dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Escalabilidad y costos operativos son desafíos gigantescos.\", \"pexels_query\": \"data center dark\"}, {\"id\": 12, \"prompt\": \"Abstract visual of a failing system, broken lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract visual of a failing system, broken lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algunas IA prometen más de lo que pueden sostener.\", \"pexels_query\": \"system failure abstract\"}, {\"id\": 13, \"prompt\": \"Binary code scrolling on a screen, green text, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Binary code scrolling on a screen, green text, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Es crucial entender sus límites antes de invertir.\", \"pexels_query\": \"binary code screen\"}, {\"id\": 14, \"prompt\": \"Digital network map, global connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital network map, global connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ninguna IA es invulnerable, la estabilidad no es eterna.\", \"pexels_query\": \"network map global\"}, {\"id\": 15, \"prompt\": \"Cyberpunk city data processing, neon glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Cyberpunk city data processing, neon glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Siempre debes tener un plan B para tu información.\", \"pexels_query\": \"cyberpunk data city\"}, {\"id\": 16, \"prompt\": \"Abstract data flow through fiber optics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data flow through fiber optics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No dependas al cien por ciento de una sola herramienta.\", \"pexels_query\": \"fiber optics data\"}, {\"id\": 17, \"prompt\": \"Digital archive interface, glowing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital archive interface, glowing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Haz copias de seguridad de todo lo importante.\", \"pexels_query\": \"digital archive interface\"}, {\"id\": 18, \"prompt\": \"Abstract graphic showing data redundancy, multiple copies, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract graphic showing data redundancy, multiple copies, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Diversifica tus plataformas y fuentes de IA ahora mismo.\", \"pexels_query\": \"data redundancy abstract\"}, {\"id\": 19, \"prompt\": \"Technology blueprint design, lines and schematics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Technology blueprint design, lines and schematics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Investiga la trayectoria y el respaldo de cada servicio.\", \"pexels_query\": \"blueprint tech design\"}, {\"id\": 20, \"prompt\": \"Digital dashboard with metrics, performance indicators, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital dashboard with metrics, performance indicators, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Este evento es una señal de alerta para todos.\", \"pexels_query\": \"digital dashboard metrics\"}, {\"id\": 21, \"prompt\": \"Abstract network of interconnected servers, blue glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract network of interconnected servers, blue glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La herramienta que necesitas debe ser confiable.\", \"pexels_query\": \"interconnected servers blue\"}, {\"id\": 22, \"prompt\": \"Holographic data projection, financial graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Holographic data projection, financial graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No te dejes llevar por el hype sin fundamentos.\", \"pexels_query\": \"holographic financial data\"}, {\"id\": 23, \"prompt\": \"Digital data security illustration, shield icon, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital data security illustration, shield icon, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Prioriza siempre la seguridad y la fiabilidad.\", \"pexels_query\": \"data security shield\"}, {\"id\": 24, \"prompt\": \"Abstract digital tunnel, information flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital tunnel, information flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Puedes evitar la tragedia de Fable actuando ahora.\", \"pexels_query\": \"digital tunnel information\"}, {\"id\": 25, \"prompt\": \"Futuristic control panel, glowing buttons, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic control panel, glowing buttons, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Qué medidas tomas tú para proteger tus proyectos?\", \"pexels_query\": \"control panel futuristic\"}, {\"id\": 26, \"prompt\": \"Abstract visualization of a robust network, green lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract visualization of a robust network, green lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El futuro de tu trabajo digital depende de esto.\", \"pexels_query\": \"robust network green\"}, {\"id\": 27, \"prompt\": \"Close-up of a server hard drive, data storage, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Close-up of a server hard drive, data storage, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Sé un usuario informado, no solo un consumidor pasivo.\", \"pexels_query\": \"server hard drive\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Fable, la 'mejor' IA del mundo, acaba de colapsar. Desapareció en solo 72 horas, sin avisar a nadie. Miles de proyectos y datos se perdieron para siempre. Esto lo cambia todo para quien usa cualquier IA. Revela la extrema fragilidad de las herramientas actuales. Tu trabajo podría desaparecer así, en segundos. Fable prometía el futuro, y se fue en un instante. Muchos creyeron ciegamente en su supuesta estabilidad. Pero ¿qué pasó realmente con esta prometedora IA? La financiación es un gran reto para las startups. Escalabilidad y costos operativos son desafíos gigantescos. Algunas IA prometen más de lo que pueden sostener. Es crucial entender sus límites antes de invertir. Ninguna IA es invulnerable, la estabilidad no es eterna. Siempre debes tener un plan B para tu información. No dependas al cien por ciento de una sola herramienta. Haz copias de seguridad de todo lo importante. Diversifica tus plataformas y fuentes de IA ahora mismo. Investiga la trayectoria y el respaldo de cada servicio. Este evento es una señal de alerta para todos. La herramienta que necesitas debe ser confiable. No te dejes llevar por el hype sin fundamentos. Prioriza siempre la seguridad y la fiabilidad. Puedes evitar la tragedia de Fable actuando ahora. ¿Qué medidas tomas tú para proteger tus proyectos? El futuro de tu trabajo digital depende de esto. Sé un usuario informado, no solo un consumidor pasivo.",
+    "titulo_sugerido": "Fable: La 'mejor' IA que colapsó en 72 horas y lo que NO te cuentan",
+    "escenas_texto": [
+      "Fable, la 'mejor' IA del mundo, acaba de colapsar.",
+      "Desapareció en solo 72 horas, sin avisar a nadie.",
+      "Miles de proyectos y datos se perdieron para siempre.",
+      "Esto lo cambia todo para quien usa cualquier IA.",
+      "Revela la extrema fragilidad de las herramientas actuales.",
+      "Tu trabajo podría desaparecer así, en segundos.",
+      "Fable prometía el futuro, y se fue en un instante.",
+      "Muchos creyeron ciegamente en su supuesta estabilidad.",
+      "Pero ¿qué pasó realmente con esta prometedora IA?",
+      "La financiación es un gran reto para las startups.",
+      "Escalabilidad y costos operativos son desafíos gigantescos.",
+      "Algunas IA prometen más de lo que pueden sostener.",
+      "Es crucial entender sus límites antes de invertir.",
+      "Ninguna IA es invulnerable, la estabilidad no es eterna.",
+      "Siempre debes tener un plan B para tu información.",
+      "No dependas al cien por ciento de una sola herramienta.",
+      "Haz copias de seguridad de todo lo importante.",
+      "Diversifica tus plataformas y fuentes de IA ahora mismo.",
+      "Investiga la trayectoria y el respaldo de cada servicio.",
+      "Este evento es una señal de alerta para todos.",
+      "La herramienta que necesitas debe ser confiable.",
+      "No te dejes llevar por el hype sin fundamentos.",
+      "Prioriza siempre la seguridad y la fiabilidad.",
+      "Puedes evitar la tragedia de Fable actuando ahora.",
+      "¿Qué medidas tomas tú para proteger tus proyectos?",
+      "El futuro de tu trabajo digital depende de esto.",
+      "Sé un usuario informado, no solo un consumidor pasivo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Abstract digital data streams, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital data streams, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Fable, la 'mejor' IA del mundo, acaba de colapsar.",
+        "pexels_query": "data streams abstract"
+      },
+      {
+        "id": 2,
+        "prompt": "Server racks with blinking lights, network cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Server racks with blinking lights, network cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Desapareció en solo 72 horas, sin avisar a nadie.",
+        "pexels_query": "server racks network"
+      },
+      {
+        "id": 3,
+        "prompt": "Digital interface displaying error messages, pixelated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface displaying error messages, pixelated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Miles de proyectos y datos se perdieron para siempre.",
+        "pexels_query": "error interface digital"
+      },
+      {
+        "id": 4,
+        "prompt": "Abstract circuit board pattern, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract circuit board pattern, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto lo cambia todo para quien usa cualquier IA.",
+        "pexels_query": "circuit board abstract"
+      },
+      {
+        "id": 5,
+        "prompt": "Data center cooling systems, vapor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data center cooling systems, vapor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Revela la extrema fragilidad de las herramientas actuales.",
+        "pexels_query": "data center cooling"
+      },
+      {
+        "id": 6,
+        "prompt": "Abstract network graph, interconnected nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract network graph, interconnected nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu trabajo podría desaparecer así, en segundos.",
+        "pexels_query": "network graph nodes"
+      },
+      {
+        "id": 7,
+        "prompt": "Futuristic digital screen, data visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic digital screen, data visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Fable prometía el futuro, y se fue en un instante.",
+        "pexels_query": "digital screen futuristic"
+      },
+      {
+        "id": 8,
+        "prompt": "Close-up of a GPU chip, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Close-up of a GPU chip, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Muchos creyeron ciegamente en su supuesta estabilidad.",
+        "pexels_query": "GPU chip close-up"
+      },
+      {
+        "id": 9,
+        "prompt": "Abstract representation of data migration, moving blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data migration, moving blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero ¿qué pasó realmente con esta prometedora IA?",
+        "pexels_query": "data migration abstract"
+      },
+      {
+        "id": 10,
+        "prompt": "Digital security padlock icon, encrypted data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital security padlock icon, encrypted data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La financiación es un gran reto para las startups.",
+        "pexels_query": "security padlock digital"
+      },
+      {
+        "id": 11,
+        "prompt": "Server racks in dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Server racks in dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Escalabilidad y costos operativos son desafíos gigantescos.",
+        "pexels_query": "data center dark"
+      },
+      {
+        "id": 12,
+        "prompt": "Abstract visual of a failing system, broken lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract visual of a failing system, broken lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algunas IA prometen más de lo que pueden sostener.",
+        "pexels_query": "system failure abstract"
+      },
+      {
+        "id": 13,
+        "prompt": "Binary code scrolling on a screen, green text, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Binary code scrolling on a screen, green text, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Es crucial entender sus límites antes de invertir.",
+        "pexels_query": "binary code screen"
+      },
+      {
+        "id": 14,
+        "prompt": "Digital network map, global connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital network map, global connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ninguna IA es invulnerable, la estabilidad no es eterna.",
+        "pexels_query": "network map global"
+      },
+      {
+        "id": 15,
+        "prompt": "Cyberpunk city data processing, neon glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Cyberpunk city data processing, neon glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Siempre debes tener un plan B para tu información.",
+        "pexels_query": "cyberpunk data city"
+      },
+      {
+        "id": 16,
+        "prompt": "Abstract data flow through fiber optics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data flow through fiber optics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No dependas al cien por ciento de una sola herramienta.",
+        "pexels_query": "fiber optics data"
+      },
+      {
+        "id": 17,
+        "prompt": "Digital archive interface, glowing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital archive interface, glowing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Haz copias de seguridad de todo lo importante.",
+        "pexels_query": "digital archive interface"
+      },
+      {
+        "id": 18,
+        "prompt": "Abstract graphic showing data redundancy, multiple copies, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract graphic showing data redundancy, multiple copies, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Diversifica tus plataformas y fuentes de IA ahora mismo.",
+        "pexels_query": "data redundancy abstract"
+      },
+      {
+        "id": 19,
+        "prompt": "Technology blueprint design, lines and schematics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Technology blueprint design, lines and schematics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Investiga la trayectoria y el respaldo de cada servicio.",
+        "pexels_query": "blueprint tech design"
+      },
+      {
+        "id": 20,
+        "prompt": "Digital dashboard with metrics, performance indicators, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital dashboard with metrics, performance indicators, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Este evento es una señal de alerta para todos.",
+        "pexels_query": "digital dashboard metrics"
+      },
+      {
+        "id": 21,
+        "prompt": "Abstract network of interconnected servers, blue glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract network of interconnected servers, blue glow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La herramienta que necesitas debe ser confiable.",
+        "pexels_query": "interconnected servers blue"
+      },
+      {
+        "id": 22,
+        "prompt": "Holographic data projection, financial graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Holographic data projection, financial graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No te dejes llevar por el hype sin fundamentos.",
+        "pexels_query": "holographic financial data"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital data security illustration, shield icon, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital data security illustration, shield icon, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Prioriza siempre la seguridad y la fiabilidad.",
+        "pexels_query": "data security shield"
+      },
+      {
+        "id": 24,
+        "prompt": "Abstract digital tunnel, information flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital tunnel, information flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Puedes evitar la tragedia de Fable actuando ahora.",
+        "pexels_query": "digital tunnel information"
+      },
+      {
+        "id": 25,
+        "prompt": "Futuristic control panel, glowing buttons, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic control panel, glowing buttons, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Qué medidas tomas tú para proteger tus proyectos?",
+        "pexels_query": "control panel futuristic"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract visualization of a robust network, green lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract visualization of a robust network, green lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El futuro de tu trabajo digital depende de esto.",
+        "pexels_query": "robust network green"
+      },
+      {
+        "id": 27,
+        "prompt": "Close-up of a server hard drive, data storage, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Close-up of a server hard drive, data storage, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Sé un usuario informado, no solo un consumidor pasivo.",
+        "pexels_query": "server hard drive"
+      }
+    ],
+    "hooks": [
+      "Fable, IA 'mejor', colapsó.",
+      "Tu trabajo podía desaparecer.",
+      "El riesgo de toda IA."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
