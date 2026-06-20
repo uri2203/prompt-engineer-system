@@ -3373,9 +3373,25 @@ def procesar():
                                 # o fallo del modelo devuelven negro con HTTP 200).
                                 if _imagen_es_negra(path_out_png):
                                     print(f"   ⚠️ Escena {i+1}: imagen NEGRA detectada — regenerando (intento {intento_sd+1})...")
-                                    # variar la semilla para no repetir el mismo negro
+                                    # El negro suele ser censura NSFW o fallo del modelo.
+                                    # Cambiar seed NO basta si es censura; además:
+                                    #  - bajar cfg_scale (menos rígido, menos censura)
+                                    #  - reforzar que NO sea oscuro/negro en el prompt
+                                    #  - simplificar el negative para no confundir al modelo
                                     try:
                                         payload["seed"] = random.randint(1, 2_000_000_000)
+                                        # bajar CFG progresivamente (10 → 7 → 5)
+                                        payload["cfg_scale"] = max(5, payload.get("cfg_scale", 10) - 3)
+                                        # reforzar luminosidad en el prompt positivo
+                                        if "bright" not in payload.get("prompt", "").lower():
+                                            payload["prompt"] = ("bright well-lit colorful scene, vivid daylight, "
+                                                                 + payload.get("prompt", ""))
+                                        # quitar términos del negative que a veces fuerzan oscuridad
+                                        _neg = payload.get("negative_prompt", "")
+                                        payload["negative_prompt"] = (
+                                            "black image, all black, pure black, dark image, underexposed, "
+                                            "blank image, empty image, solid color, " + _neg
+                                        )
                                     except Exception:
                                         pass
                                     time.sleep(2)
