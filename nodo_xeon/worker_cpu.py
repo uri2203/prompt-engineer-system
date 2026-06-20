@@ -1730,6 +1730,12 @@ def procesar():
                 
                 es_cartoon_fx = (marca_audio.lower() in ["la esquina random", "laesquinarandom"])
 
+                # VIÑETA (oscurecer bordes arriba/abajo): solo en La Viuda, donde el
+                # oscurecimiento aporta al terror. En los demás canales se quita porque
+                # ensucia las imágenes (sobre todo las cartoon brillantes).
+                _es_viuda = (marca_audio.lower() in ["la viuda", "laviuda"])
+                _vineta = ",vignette=PI/4" if _es_viuda else ""
+
                 UMBRAL_SUB_EFECTOS = 4.0
 
                 print(f"⚙️ Procesando {num_escenas} matrices visuales con CPU Xeon...")
@@ -1814,7 +1820,7 @@ def procesar():
                             glitch_sub = glitch_fx if k == num_subs - 1 else ""
                             # Fade de entrada rápido en cada corte = transición limpia y marcada
                             fade_in = "fade=t=in:st=0:d=0.12"
-                            vf_sub = f"{escala_previa}{mf_sub},{fade_in},noise=alls=4:allf=t+u,vignette=PI/4,setpts=PTS-STARTPTS{glitch_sub}"
+                            vf_sub = f"{escala_previa}{mf_sub},{fade_in},noise=alls=4:allf=t+u{_vineta},setpts=PTS-STARTPTS{glitch_sub}"
                             cmd_sub = [
                                 'ffmpeg', '-y', '-i', path_origen,
                                 '-vf', vf_sub, '-t', str(dur_sub),
@@ -1855,7 +1861,7 @@ def procesar():
                     if archivo.endswith('.png'):
                         escala_previa = f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
                         mf = construir_filtro_movimiento(efecto, total_frames, fps, w, h)
-                        vf_string = f"{escala_previa}{mf},fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u,vignette=PI/4,setpts=PTS-STARTPTS{glitch_fx}"
+                        vf_string = f"{escala_previa}{mf},fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u{_vineta},setpts=PTS-STARTPTS{glitch_fx}"
                         cmd_scene = [
                             'ffmpeg', '-y', '-i', path_origen,
                             '-vf', vf_string, '-t', str(dur_exacta),
@@ -1871,7 +1877,7 @@ def procesar():
                         # y tpad rellena si el recorte quedó corto. Solo afecta a Pexels.
                         _frames_exactos = int(round(dur_exacta * fps))
                         vf_string = (
-                            f"fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u,vignette=PI/4,"
+                            f"fade=t=in:st=0:d=0.1,noise=alls=5:allf=t+u{_vineta},"
                             f"setpts=PTS-STARTPTS,fps={fps},"
                             f"trim=end_frame={_frames_exactos},"
                             f"tpad=stop_mode=clone:stop=-1,trim=end_frame={_frames_exactos},"
