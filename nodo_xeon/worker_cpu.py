@@ -15,6 +15,7 @@ import base64
 import subprocess
 import random
 import uuid
+import re
 try:
     from PIL import Image, ImageDraw, ImageFont
     PIL_DISPONIBLE = True
