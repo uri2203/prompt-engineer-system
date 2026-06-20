@@ -1,10 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 2,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 0,
-  "trabajo_actual": "Generando video 1/2 (LaesquinaRandom 9:16)",
-  "mensaje": "Produccion del video 1 iniciada.",
-  "resumen": "LaesquinaRandom: 1s+0L | TuIALista: 1s+0L",
-  "historial": []
+  "mensaje": "Cola reseteada desde el panel.",
+  "resumen": ""
 }
