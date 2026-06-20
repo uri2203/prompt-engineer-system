@@ -691,9 +691,9 @@ def _corregir_pronunciacion(texto):
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
     REEMPLAZOS = {
         # ── Reportadas por el usuario (La Viuda) ──
-        "explica": "eks plica", "explican": "eks plican", "explicar": "eks plicar",
-        "explicó": "eks plicó", "explico": "eks plico", "explicación": "eks plicación",
-        "explicaciones": "eks plicaciones", "explícame": "eks plícame", "explicando": "eks plicando",
+        "explica": "eks pli ca", "explican": "eks pli can", "explicar": "eks pli car",
+        "explicó": "eks pli có", "explico": "eks pli co", "explicación": "eks pli ca ción",
+        "explicaciones": "eks pli ca ciones", "explícame": "eks plí ca me", "explicando": "eks pli can do",
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
         "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
@@ -917,6 +917,8 @@ def _generar_srt_whisper(ruta_audio, texto_guion, marca, ruta_srt, max_pal=5):
         if len(palabras) < 2:
             print("   [SUBS] Whisper detectó muy pocas palabras — usando respaldo.")
             return None
+        # Nota: Whisper transcribe la palabra REAL aunque la voz tenga grafía fonética
+        # (ej. oye "eks pli ca" y escribe "explica"). Verificado en producción.
 
         # Agrupar palabras en líneas de subtítulo de forma INTELIGENTE:
         # - Corta preferentemente tras PUNTUACIÓN (. , ! ? ; :) — fin natural de frase.
