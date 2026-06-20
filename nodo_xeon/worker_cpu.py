@@ -3373,24 +3373,26 @@ def procesar():
                                 # o fallo del modelo devuelven negro con HTTP 200).
                                 if _imagen_es_negra(path_out_png):
                                     print(f"   ⚠️ Escena {i+1}: imagen NEGRA detectada — regenerando (intento {intento_sd+1})...")
-                                    # El negro suele ser censura NSFW o fallo del modelo.
-                                    # Cambiar seed NO basta si es censura; además:
-                                    #  - bajar cfg_scale (menos rígido, menos censura)
-                                    #  - reforzar que NO sea oscuro/negro en el prompt
-                                    #  - simplificar el negative para no confundir al modelo
+                                    # El negro suele ser: (a) NaN/VRAM, o (b) el filtro NSFW
+                                    # activado por un FALSO POSITIVO (prompt inocente que el
+                                    # modelo malinterpreta). NO se desactiva el filtro NSFW
+                                    # (protege la monetización). En su lugar:
+                                    #  - nueva seed
+                                    #  - reforzar que es contenido FAMILIAR/cartoon (baja el
+                                    #    falso positivo del filtro sin desactivarlo)
+                                    #  - reforzar negative contra desnudez (más seguro aún)
                                     try:
                                         payload["seed"] = random.randint(1, 2_000_000_000)
-                                        # bajar CFG progresivamente (10 → 7 → 5)
-                                        payload["cfg_scale"] = max(5, payload.get("cfg_scale", 10) - 3)
-                                        # reforzar luminosidad en el prompt positivo
-                                        if "bright" not in payload.get("prompt", "").lower():
-                                            payload["prompt"] = ("bright well-lit colorful scene, vivid daylight, "
-                                                                 + payload.get("prompt", ""))
-                                        # quitar términos del negative que a veces fuerzan oscuridad
+                                        _p = payload.get("prompt", "")
+                                        if "family-friendly" not in _p.lower():
+                                            payload["prompt"] = (
+                                                "family-friendly wholesome cartoon, fully clothed characters, "
+                                                "bright colorful daylight scene, " + _p
+                                            )
                                         _neg = payload.get("negative_prompt", "")
                                         payload["negative_prompt"] = (
-                                            "black image, all black, pure black, dark image, underexposed, "
-                                            "blank image, empty image, solid color, " + _neg
+                                            "nude, naked, nudity, nsfw, suggestive, black image, all black, "
+                                            "dark image, underexposed, blank image, " + _neg
                                         )
                                     except Exception:
                                         pass
