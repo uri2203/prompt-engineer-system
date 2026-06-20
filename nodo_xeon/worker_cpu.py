@@ -453,7 +453,9 @@ def _obtener_duracion_audio(ruta_audio, texto_locucion, marca_audio):
 
 def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
     """Detecta los silencios reales del audio (pausas del locutor) con ffmpeg.
-    Devuelve lista de tiempos (segundos) donde TERMINA cada silencio = inicio de habla."""
+    Devuelve lista de tiempos (segundos) en el CENTRO de cada pausa — el mejor punto
+    para insertar un re-hook, porque cae en mitad del silencio (ni cuando aún habla ni
+    justo cuando vuelve a hablar)."""
     try:
         r = subprocess.run(
             ['ffmpeg', '-i', ruta_audio, '-af',
@@ -462,11 +464,18 @@ def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
             capture_output=True, text=True
         )
         import re
-        # silencedetect imprime "silence_end: X" en stderr
-        fines = re.findall(r'silence_end:\s*([\d.]+)', r.stderr)
-        return [float(f) for f in fines]
+        starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]
+        ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]
+        # Emparejar inicio/fin y devolver el punto MEDIO de cada pausa
+        puntos = []
+        for i in range(min(len(starts), len(ends))):
+            puntos.append((starts[i] + ends[i]) / 2.0)
+        # Si quedaron silencios sin cerrar (fin sin inicio), usar los fines sueltos
+        if not puntos and ends:
+            puntos = ends
+        return puntos
     except Exception as e:
-        print(f"   [SUBS] No se pudieron detectar silencios: {e}")
+        print(f"   [HOOKS] No se pudieron detectar silencios: {e}")
         return []
 
 
@@ -1129,14 +1138,23 @@ def _detectar_silencios(ruta_audio, umbral_db=-32, dur_min=0.28):
 
 
 def _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0):
-    """Mueve un punto de corte al silencio real más cercano dentro de una ventana.
-    Si no hay silencio cerca, devuelve el tiempo objetivo original (mejor no forzar)."""
+    """Mueve un punto de corte al silencio real más cercano. Primero busca dentro de
+    la ventana; si no hay, AMPLÍA la búsqueda hasta el doble de la ventana antes de
+    rendirse, porque es preferible un re-hook en una pausa algo lejana que un re-hook
+    a media frase (encima de la narración). Solo devuelve el tiempo original si de plano
+    no hay ningún silencio razonable cerca."""
     if not silencios:
         return t_objetivo
+    # 1er intento: dentro de la ventana normal
     candidatos = [s for s in silencios if abs(s - t_objetivo) <= ventana]
-    if not candidatos:
-        return t_objetivo
-    return min(candidatos, key=lambda s: abs(s - t_objetivo))
+    if candidatos:
+        return min(candidatos, key=lambda s: abs(s - t_objetivo))
+    # 2do intento: ampliar al doble (mejor pausa lejana que cortar una palabra)
+    candidatos = [s for s in silencios if abs(s - t_objetivo) <= ventana * 2]
+    if candidatos:
+        return min(candidatos, key=lambda s: abs(s - t_objetivo))
+    # último recurso: el silencio más cercano que exista, sin importar distancia
+    return min(silencios, key=lambda s: abs(s - t_objetivo))
 
 
 def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraciones_escenas,
@@ -1173,10 +1191,14 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
         for ins in inserciones:
             i = ins["despues_de_escena"]
             if i < len(acum):
-                t_objetivo = acum[i]
-                # Ajustar el corte al silencio real más cercano (pausa entre frases)
-                t_ajustado = _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0)
-                cortes.append((t_ajustado, ins["dur"]))
+                # IMPORTANTE: las duraciones de escena YA fueron alineadas a las pausas
+                # reales del audio antes de llegar aquí (alinear_duraciones_a_silencios).
+                # Por eso acum[i] YA es un punto de pausa natural. NO se vuelve a ajustar
+                # a otro silencio, porque eso desincronizaría el stinger de audio del
+                # re-hook visual (que se inserta exactamente en acum[i]). Audio y video
+                # comparten el MISMO punto de corte.
+                t_corte = acum[i]
+                cortes.append((t_corte, ins["dur"]))
         cortes.sort()
         if not cortes:
             import shutil; shutil.copy(ruta_audio_in, ruta_audio_out); return True
