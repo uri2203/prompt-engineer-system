@@ -918,26 +918,51 @@ def _generar_srt_whisper(ruta_audio, texto_guion, marca, ruta_srt, max_pal=5):
             print("   [SUBS] Whisper detectó muy pocas palabras — usando respaldo.")
             return None
 
-        # Agrupar palabras en líneas de subtítulo de máx max_pal palabras,
-        # cortando también en pausas largas (>0.6s entre palabras) para respetar frases.
+        # Agrupar palabras en líneas de subtítulo de forma INTELIGENTE:
+        # - Corta preferentemente tras PUNTUACIÓN (. , ! ? ; :) — fin natural de frase.
+        # - Corta en PAUSAS largas (>0.5s entre palabras).
+        # - Respeta un máximo de palabras, pero si la siguiente palabra completa una
+        #   frase corta (queda 1-2 palabras para puntuación), espera a cerrarla.
+        # Esto evita cortes como "antojitos / mexicanos" o palabras huérfanas.
+        def termina_en_punt(palabra):
+            return palabra.rstrip()[-1:] in ".,!?;:…"
+        def termina_en_punt_fuerte(palabra):
+            return palabra.rstrip()[-1:] in ".!?…"
+
         lineas = []
         grupo = []
         for i, (ini, fin, pal) in enumerate(palabras):
             if grupo:
                 pausa = ini - grupo[-1][1]
-                if len(grupo) >= max_pal or pausa > 0.6:
+                prev_pal = grupo[-1][2]
+                cortar = False
+                # 1. Pausa larga = casi seguro cambio de frase
+                if pausa > 0.5:
+                    cortar = True
+                # 2. La palabra anterior terminó en puntuación fuerte (. ! ?)
+                elif termina_en_punt_fuerte(prev_pal):
+                    cortar = True
+                # 3. Llegamos al máximo Y la anterior terminó en coma/puntuación
+                elif len(grupo) >= max_pal and termina_en_punt(prev_pal):
+                    cortar = True
+                # 4. Pasamos bastante del máximo (no dejar líneas eternas)
+                elif len(grupo) >= max_pal + 2:
+                    cortar = True
+                if cortar:
                     lineas.append(grupo)
                     grupo = []
             grupo.append((ini, fin, pal))
         if grupo:
             lineas.append(grupo)
-        # Evitar líneas huérfanas de 1 sola palabra: fusionarlas con la línea anterior
-        # si la pausa entre ellas es corta (no son de frases distintas).
+
+        # Fusionar líneas huérfanas cortas (1-2 palabras) con la anterior si la pausa
+        # es corta — evita que "MEXICANOS." o "ENCONTRABAN?" aparezcan solas un instante.
         i = 1
         while i < len(lineas):
-            if len(lineas[i]) == 1 and lineas[i-1]:
+            if len(lineas[i]) <= 2 and lineas[i-1]:
                 pausa = lineas[i][0][0] - lineas[i-1][-1][1]
-                if pausa <= 0.6 and len(lineas[i-1]) < max_pal + 2:
+                # fusionar si están pegadas y la línea anterior no queda demasiado larga
+                if pausa <= 0.5 and (len(lineas[i-1]) + len(lineas[i])) <= max_pal + 3:
                     lineas[i-1].extend(lineas[i])
                     lineas.pop(i)
                     continue
