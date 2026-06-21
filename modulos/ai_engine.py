@@ -668,6 +668,26 @@ class AIEngine:
         - Videos largos: comedia progresiva según la longitud solicitada
         - Shorts: UNA situación absurda completa con remate incluido
 
+        ═══════════════════════════════════════════════
+        PROHIBIDO REPETIR MULETILLAS (VARIEDAD OBLIGATORIA)
+        ═══════════════════════════════════════════════
+        NUNCA uses la frase "la ciencia no lo explica" — está PROHIBIDA, se ha usado demasiado.
+        Tampoco abuses de ninguna frase hecha. Para los remates de misterio/curiosidad, ROTA
+        entre cierres VARIADOS y nunca repitas el mismo en videos seguidos. Inventa cierres
+        nuevos además de estos ejemplos:
+        - "y hasta hoy nadie sabe qué pasó"
+        - "el misterio sigue sin resolverse"
+        - "ni el más sabio del barrio lo entendió"
+        - "y así quedó, sin explicación alguna"
+        - "nadie se atrevió a investigarlo más"
+        - "la duda quedó flotando en el aire"
+        - "y colorín colorado, este misterio no ha terminado"
+        - "que cada quien saque sus conclusiones"
+        - "y hasta la fecha, puro misterio"
+        - "lo dejamos a tu criterio, mi buen"
+        Varía SIEMPRE el cierre. Si un video termina de una forma, el siguiente debe terminar
+        distinto. La repetición de muletillas aburre y se siente automático.
+
         REGLAS DE ESTILO PARA MOTOR DE VOZ (TTS):
         1. VOZ MASCULINA: energética, cómica, como si estuviera aguantando la risa.
         2. RITMO: rápido en la escalada, pausado justo antes del remate (para el timing cómico).
