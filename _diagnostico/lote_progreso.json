@@ -1,20 +1,10 @@
 {
-  "estado_lote": "cancelado",
-  "total": 4,
-  "completados": 1,
+  "estado_lote": "inactivo",
+  "total": 0,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Generando video 2/4 (FiltradoMX 9:16)",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L | TuIALista: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "Monkygraff",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 111.9,
-      "hora": "16:32"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Listo para iniciar.",
+  "resumen": "",
+  "historial": []
 }
