@@ -1,0 +1,63 @@
+{
+  "id": "b6804338-623d-4e98-8973-8e69b250d087_asm",
+  "marca": "Monkygraff",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-21 16:25:22",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 49.93,
+        "pausa_mas_cercana_seg": 49.87,
+        "distancia_seg": 0.06,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      4.77,
+      8.0,
+      11.29,
+      14.91,
+      18.21,
+      22.26,
+      26.29,
+      29.94,
+      33.09,
+      36.02,
+      39.68,
+      42.88,
+      46.46,
+      49.87,
+      53.2,
+      56.5,
+      60.15,
+      63.44,
+      67.5,
+      71.41,
+      75.35,
+      79.06,
+      82.53,
+      85.97,
+      89.76,
+      90.77,
+      93.83
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-06-21 16:32:33",
+  "duracion_real_seg": 111.9,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4"
+}
