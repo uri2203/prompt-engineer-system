@@ -1992,7 +1992,13 @@ def procesar():
                                                    formato="A", dur=_dur_ini_canal)
                             if _r:
                                 nuevos_clips.append(_r)
-                                _hook_inicial_dur = _dur_ini_canal
+                                # USAR LA DURACIÓN REAL del clip de hook inicial, NO la
+                                # calculada. Si difieren (por redondeo de frames/fps), el
+                                # audio mete un silencio inicial de distinta duración que el
+                                # video, y TODO el audio se desfasa del video — el desfase se
+                                # nota más adelante (el bug del re-hook en el seg 57).
+                                _dur_real_ini = _dur(_r)
+                                _hook_inicial_dur = _dur_real_ini if (_dur_real_ini and _dur_real_ini > 0) else _dur_ini_canal
 
                         # 2. Reconstruir clips_temp intercalando re-hooks tras las escenas indicadas
                         _ins_por_escena = {ins["despues_de_escena"]: ins for ins in _hook_inserciones}
@@ -2009,6 +2015,12 @@ def procesar():
                                                            formato=_ins["formato"], dur=_ins["dur"])
                                     if _r:
                                         nuevos_clips.append(_r)
+                                        # Guardar la duración REAL del clip de re-hook, para que
+                                        # el audio meta un silencio de EXACTAMENTE esa duración
+                                        # (si difiere de la calculada, se desfasa).
+                                        _dur_real_rh = _dur(_r)
+                                        if _dur_real_rh and _dur_real_rh > 0:
+                                            _ins["dur"] = _dur_real_rh
 
                         if len(nuevos_clips) > len(clips_temp):
                             clips_temp = nuevos_clips
