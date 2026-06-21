@@ -903,7 +903,7 @@ def _config_hooks(marca):
     return HOOKS_POR_CANAL.get((marca or "").lower().strip(), HOOKS_DEFAULT)
 
 
-def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=2.6, marca=""):
+def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, dur_hook=2.6, marca="", silencios=None):
     """
     Decide DÓNDE caen los re-hooks (en qué límites de escena) y con qué frase/formato.
     Devuelve:
@@ -956,15 +956,27 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
     inserciones = []
     escenas_usadas = set()
     rnd = random.Random("hooksplan")
+    _sil = silencios or []
     for idx, t_obj in enumerate(tiempos_objetivo):
-        # buscar la escena cuyo final esté más cerca del tiempo objetivo
-        mejor_i, mejor_dist = None, 1e9
+        # buscar la escena cuyo final cumpla DOS cosas:
+        #  1. esté cerca del tiempo objetivo (reparto parejo)
+        #  2. y sobre todo, que ese final caiga en una PAUSA real de la voz
+        # Se puntúa cada escena: distancia al objetivo + penalización fuerte si su
+        # final NO está cerca de un silencio. Así el re-hook cae en una pausa real.
+        mejor_i, mejor_score = None, 1e9
         for i, t_fin in enumerate(acum[:-1]):  # no tras la última escena
             if i in escenas_usadas:
                 continue
-            dist = abs(t_fin - t_obj)
-            if dist < mejor_dist:
-                mejor_dist, mejor_i = dist, i
+            dist_obj = abs(t_fin - t_obj)
+            # distancia del final de la escena al silencio más cercano
+            if _sil:
+                dist_sil = min(abs(t_fin - s) for s in _sil)
+            else:
+                dist_sil = 0.0
+            # el silencio pesa MÁS que el reparto: preferimos caer en pausa
+            score = dist_sil * 3.0 + dist_obj * 1.0
+            if score < mejor_score:
+                mejor_score, mejor_i = score, i
         if mejor_i is None:
             continue
         escenas_usadas.add(mejor_i)
@@ -1926,9 +1938,13 @@ def procesar():
                     _hooks_frases = [str(x).strip() for x in _hooks_frases if x and str(x).strip()]
                     if _hooks_frases and len(clips_temp) >= 2:
                         _es_short_hk = not es_largo_video
+                        # Detectar las pausas REALES de la narración para que los re-hooks
+                        # caigan en silencio (no a media frase). Se pasan a planificar_hooks.
+                        _silencios_voz = _detectar_silencios(_ruta_audio_original)
                         _frase_ini, _hook_inserciones = planificar_hooks(
                             len(clips_temp), duraciones_escenas, _hooks_frases,
-                            es_short=_es_short_hk, dur_hook=2.6, marca=marca_audio
+                            es_short=_es_short_hk, dur_hook=2.6, marca=marca_audio,
+                            silencios=_silencios_voz
                         )
                         # Imágenes de escena disponibles (para teasers)
                         _imgs_hk = [
