@@ -2222,6 +2222,7 @@ def procesar():
                 # video, el stinger y el re-hook visual quedan clavados.
                 try:
                     _hooks_con_stinger = [ins for ins in _hook_inserciones if ins.get("stinger_embebido")]
+                    print(f"   >>> [STINGER-FIX-9] Ejecutando codigo nuevo de hooks. Re-hooks con stinger: {len(_hooks_con_stinger)} <<<")
                     if _hooks_con_stinger and carpeta_marca_assets:
                         # Posición de cada clip de re-hook en el timeline del video final
                         _pos_acum = 0.0
@@ -3270,6 +3271,9 @@ def procesar():
 
 
 print("⚡ NODO XEON ONLINE - FIX ANTI-BUCLE APLICADO")
+print("=" * 60)
+print(">>> WORKER VERSION: STINGER-FIX-9 (re-hook dentro del stinger) <<<")
+print("=" * 60)
 while True:
     procesar()
     time.sleep(2)
