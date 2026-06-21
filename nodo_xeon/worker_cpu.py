@@ -451,51 +451,6 @@ def _obtener_duracion_audio(ruta_audio, texto_locucion, marca_audio):
         print(f"   [⚠️ ALERTA CRÍTICA] FFprobe falló. Usando Motor Matemático: {dur_estimada:.2f}s")
         return dur_estimada
 
-def _detectar_silencios(ruta_audio, umbral_db=-30, dur_min_silencio=0.35):
-    """Detecta los silencios reales del audio (pausas del locutor) con ffmpeg.
-    Devuelve lista de tiempos (segundos) en el CENTRO de cada pausa — el mejor punto
-    para insertar un re-hook, porque cae en mitad del silencio (ni cuando aún habla ni
-    justo cuando vuelve a hablar)."""
-    try:
-        r = subprocess.run(
-            ['ffmpeg', '-i', ruta_audio, '-af',
-             f'silencedetect=noise={umbral_db}dB:d={dur_min_silencio}',
-             '-f', 'null', '-'],
-            capture_output=True, text=True
-        )
-        import re
-        starts = [float(x) for x in re.findall(r'silence_start:\s*([\d.]+)', r.stderr)]
-        ends = [float(x) for x in re.findall(r'silence_end:\s*([\d.]+)', r.stderr)]
-        # Emparejar inicio/fin y devolver el punto MEDIO de cada pausa
-        puntos = []
-        for i in range(min(len(starts), len(ends))):
-            puntos.append((starts[i] + ends[i]) / 2.0)
-        # Si quedaron silencios sin cerrar (fin sin inicio), usar los fines sueltos
-        if not puntos and ends:
-            puntos = ends
-        return puntos
-    except Exception as e:
-        print(f"   [HOOKS] No se pudieron detectar silencios: {e}")
-        return []
-
-
-# ── CONFIGURACIÓN DE SUBTÍTULOS POR CANAL ────────────────────────────────────
-# Cada canal tiene distinto ritmo de voz. Para AJUSTAR un canal, cambia SUS números:
-#
-#   dur_min_silencio = cuánto debe durar una pausa para contar como frontera entre
-#                      bloques. Voz RÁPIDA necesita pausas más largas para no
-#                      fragmentar; voz LENTA usa pausas cortas (detección fina).
-#   fusionar_bloques_min = si un bloque dura menos que esto, se fusiona con el
-#                      siguiente (evita micro-bloques que desincronizan).
-#   max_palabras     = palabras máximas por línea de subtítulo (ritmo de lectura).
-#   offset_seg       = DESFASE en segundos. Es el ajuste fino de sincronía:
-#                      • Si los subtítulos van ATRASADOS (el texto llega tarde) →
-#                        usa un valor NEGATIVO (ej. -0.3) para ADELANTARLOS.
-#                      • Si van ADELANTADOS (el texto aparece antes que la voz) →
-#                        usa un valor POSITIVO (ej. 0.3) para ATRASARLOS.
-#                      • Si están bien → déjalo en 0.0.
-#                      Ajusta de a poco: 0.2-0.3s suele bastar. 1.0s es mucho.
-
 def _corregir_pronunciacion(texto):
     """Corrige palabras que el XTTS español pronuncia mal, reescribiéndolas
     fonéticamente SOLO para la voz (el texto original se conserva para subtítulos).
