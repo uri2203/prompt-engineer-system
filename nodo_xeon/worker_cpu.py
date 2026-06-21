@@ -1203,13 +1203,11 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
         for ins in inserciones:
             i = ins["despues_de_escena"]
             if i < len(acum):
-                # IMPORTANTE: las duraciones de escena YA fueron alineadas a las pausas
-                # reales del audio antes de llegar aquí (alinear_duraciones_a_silencios).
-                # Por eso acum[i] YA es un punto de pausa natural. NO se vuelve a ajustar
-                # a otro silencio, porque eso desincronizaría el stinger de audio del
-                # re-hook visual (que se inserta exactamente en acum[i]). Audio y video
-                # comparten el MISMO punto de corte.
-                t_corte = acum[i]
+                # El re-hook VISUAL aparece en 't_corte_video' (suma real de los clips de
+                # video hasta la escena i). El audio DEBE cortar exactamente ahí para que el
+                # stinger suene donde aparece el re-hook visual. Si no viene ese dato, usar
+                # acum[i] como respaldo.
+                t_corte = ins.get("t_corte_video", acum[i])
                 cortes.append((t_corte, ins["dur"]))
         cortes.sort()
         if not cortes:
@@ -1550,9 +1548,16 @@ def procesar():
                 duraciones_escenas = calcular_duraciones(num_escenas, duracion_audio, fps)
                 # Alinear a las pausas reales del audio (clave para que los re-hooks
                 # entren entre frases y no corten palabras)
+                _limites_alineados = None
                 try:
                     duraciones_escenas = alinear_duraciones_a_silencios(
                         duraciones_escenas, ruta_audio, fps)
+                    # Guardar los límites acumulados ALINEADOS (fin de cada escena en la
+                    # pausa real). Se usan después para corregir el desfase del re-hook.
+                    _limites_alineados = []
+                    _sa = 0.0
+                    for _d in duraciones_escenas:
+                        _sa += _d; _limites_alineados.append(_sa)
                     print(f"   [SYNC] Duraciones de escena alineadas a las pausas naturales del audio.")
                 except Exception as _e_align:
                     print(f"   [SYNC] No se pudieron alinear (se usan duraciones base): {_e_align}")
@@ -2003,6 +2008,19 @@ def procesar():
                         # 2. Reconstruir clips_temp intercalando re-hooks tras las escenas indicadas
                         _ins_por_escena = {ins["despues_de_escena"]: ins for ins in _hook_inserciones}
                         _rnd_img = random.Random("hkimg")
+                        # Acumulado REAL de los clips de video (para saber dónde aparece el
+                        # re-hook visual). El audio debe cortar en ESTE mismo punto para que
+                        # el stinger suene exactamente donde aparece el re-hook visual.
+                        _acum_video = []
+                        _sv = 0.0
+                        for _d in duraciones_escenas:
+                            _sv += _d; _acum_video.append(_sv)
+                        for _ins in _hook_inserciones:
+                            _ie = _ins["despues_de_escena"]
+                            # El re-hook visual aparece cuando termina el clip de la escena _ie,
+                            # es decir en _acum_video[_ie]. Forzar que el audio corte AHÍ.
+                            if _ie < len(_acum_video):
+                                _ins["t_corte_video"] = _acum_video[_ie]
                         for _idx_c, _clip in enumerate(clips_temp):
                             nuevos_clips.append(_clip)
                             if _idx_c in _ins_por_escena:
