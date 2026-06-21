@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "710ba9e6-dda3-4e27-9adc-1c8f6d8843bb",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Digital neural network visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital neural network visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA no te revelará secretos divinos, es falso.\", \"pexels_query\": \"neural network digital\"}, {\"id\": 2, \"prompt\": \"Data stream flowing through digital circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data stream flowing through digital circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Acaba de salir la verdad: procesa tus datos.\", \"pexels_query\": \"data stream digital\"}, {\"id\": 3, \"prompt\": \"Abstract representation of algorithms making decisions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of algorithms making decisions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algoritmos revelan patrones de tu comportamiento digital.\", \"pexels_query\": \"algorithm decision tech\"}, {\"id\": 4, \"prompt\": \"Server racks with blinking lights, extreme close-up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Server racks with blinking lights, extreme close-up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto lo cambia todo: tu privacidad está expuesta.\", \"pexels_query\": \"server rack lights\"}, {\"id\": 5, \"prompt\": \"Screens showing graphs of user data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Screens showing graphs of user data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ya puedes entender cómo te analizan ahora mismo.\", \"pexels_query\": \"data graphs screens\"}, {\"id\": 6, \"prompt\": \"Digital interface displaying metadata, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface displaying metadata, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Antes que nadie, descubre tus metadatos ocultos.\", \"pexels_query\": \"metadata interface digital\"}, {\"id\": 7, \"prompt\": \"Circuit board with glowing components, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Circuit board with glowing components, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La herramienta que necesitas es conocimiento, no fe.\", \"pexels_query\": \"circuit board glowing\"}, {\"id\": 8, \"prompt\": \"Abstract data visualization, chaotic yet structured, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data visualization, chaotic yet structured, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"En segundos, sabe tus datos personales recolectados.\", \"pexels_query\": \"abstract data visualization\"}, {\"id\": 9, \"prompt\": \"Digital security lock on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital security lock on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu información se usa para predecir tus acciones.\", \"pexels_query\": \"digital security lock\"}, {\"id\": 10, \"prompt\": \"Binary code flowing across a dark screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Binary code flowing across a dark screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto es lo que la IA revela realmente de ti.\", \"pexels_query\": \"binary code screen\"}, {\"id\": 11, \"prompt\": \"Abstract glowing network connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract glowing network connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No hay misticismo, solo algoritmos interpretando tu vida.\", \"pexels_query\": \"glowing network connections\"}, {\"id\": 12, \"prompt\": \"Digital representation of a database, clean and organized, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital representation of a database, clean and organized, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus búsquedas, compras, e interacciones son analizadas.\", \"pexels_query\": \"digital database organized\"}, {\"id\": 13, \"prompt\": \"Digital interface with privacy settings, blurred background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface with privacy settings, blurred background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aprende a protegerte y gestionar tu huella digital.\", \"pexels_query\": \"privacy settings interface\"}, {\"id\": 14, \"prompt\": \"Diagram of a machine learning model, abstract, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Diagram of a machine learning model, abstract, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA también revela sesgos humanos en datos.\", \"pexels_query\": \"machine learning diagram\"}, {\"id\": 15, \"prompt\": \"Visual representation of demographic data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Visual representation of demographic data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Modelos pueden discriminar si fueron mal entrenados.\", \"pexels_query\": \"demographic data analysis\"}, {\"id\": 16, \"prompt\": \"Error message on a digital screen, slightly glitchy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Error message on a digital screen, slightly glitchy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Sabías que refuerzan estereotipos sociales ahora mismo?\", \"pexels_query\": \"digital error glitch\"}, {\"id\": 17, \"prompt\": \"Abstract data cloud with connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data cloud with connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto ocurre en créditos y contrataciones importantes hoy.\", \"pexels_query\": \"abstract data cloud\"}, {\"id\": 18, \"prompt\": \"Digital code lines scrolling on a screen, clean aesthetics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital code lines scrolling on a screen, clean aesthetics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Puedes exigir transparencia y auditabilidad de algoritmos.\", \"pexels_query\": \"code lines scrolling\"}, {\"id\": 19, \"prompt\": \"Futuristic secure data center corridor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic secure data center corridor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La verdadera revelación es cómo te empoderas ahora.\", \"pexels_query\": \"secure data center\"}, {\"id\": 20, \"prompt\": \"Digital representation of ethical AI principles, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital representation of ethical AI principles, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No creas mitos, entiende los hechos, es tu futuro.\", \"pexels_query\": \"ethical AI principles\"}, {\"id\": 21, \"prompt\": \"Screens displaying real-time data flow, intense blue and cian colors, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Screens displaying real-time data flow, intense blue and cian colors, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto no es magia, es ingeniería que te afecta.\", \"pexels_query\": \"real-time data flow\"}, {\"id\": 22, \"prompt\": \"Close-up of a high-performance computer chip, detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Close-up of a high-performance computer chip, detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu información es valiosa, no la dejes desprotegida.\", \"pexels_query\": \"computer chip detailed\"}, {\"id\": 23, \"prompt\": \"Digital interface showing data security alerts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface showing data security alerts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La herramienta que necesitas es una mente crítica.\", \"pexels_query\": \"data security alerts\"}, {\"id\": 24, \"prompt\": \"Abstract digital representation of a secure network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital representation of a secure network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Listo para saber lo que la IA sabe?\", \"pexels_query\": \"secure network abstract\"}, {\"id\": 25, \"prompt\": \"Blueprint of a new AI system, technical drawing style, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Blueprint of a new AI system, technical drawing style, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Antes que nadie, úsala a tu favor.\", \"pexels_query\": \"AI system blueprint\"}, {\"id\": 26, \"prompt\": \"Digital representation of data privacy shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital representation of data privacy shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"En segundos, te mostramos cómo protegerte.\", \"pexels_query\": \"data privacy shield\"}, {\"id\": 27, \"prompt\": \"Abstract visualization of secure digital transactions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract visualization of secure digital transactions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Entiende el impacto de la IA en tu vida.\", \"pexels_query\": \"secure digital transactions\"}, {\"id\": 28, \"prompt\": \"Digital glowing matrix of interconnected data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital glowing matrix of interconnected data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No dejes que los mitos te confundan más.\", \"pexels_query\": \"data points matrix\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "La IA no te revelará secretos divinos, es falso. Acaba de salir la verdad: procesa tus datos. Algoritmos revelan patrones de tu comportamiento digital. Esto lo cambia todo: tu privacidad está expuesta. Ya puedes entender cómo te analizan ahora mismo. Antes que nadie, descubre tus metadatos ocultos. La herramienta que necesitas es conocimiento, no fe. En segundos, sabe tus datos personales recolectados. Tu información se usa para predecir tus acciones. Esto es lo que la IA revela realmente de ti. No hay misticismo, solo algoritmos interpretando tu vida. Tus búsquedas, compras, e interacciones son analizadas. Aprende a protegerte y gestionar tu huella digital. La IA también revela sesgos humanos en datos. Modelos pueden discriminar si fueron mal entrenados. ¿Sabías que refuerzan estereotipos sociales ahora mismo? Esto ocurre en créditos y contrataciones importantes hoy. Puedes exigir transparencia y auditabilidad de algoritmos. La verdadera revelación es cómo te empoderas ahora. No creas mitos, entiende los hechos, es tu futuro. Esto no es magia, es ingeniería que te afecta. Tu información es valiosa, no la dejes desprotegida. La herramienta que necesitas es una mente crítica. ¿Listo para saber lo que la IA sabe? Antes que nadie, úsala a tu favor. En segundos, te mostramos cómo protegerte. Entiende el impacto de la IA en tu vida. No dejes que los mitos te confundan más.",
+    "titulo_sugerido": "¿IA te revela tu destino? La VERDADERA revelación que nadie te cuenta",
+    "escenas_texto": [
+      "La IA no te revelará secretos divinos, es falso.",
+      "Acaba de salir la verdad: procesa tus datos.",
+      "Algoritmos revelan patrones de tu comportamiento digital.",
+      "Esto lo cambia todo: tu privacidad está expuesta.",
+      "Ya puedes entender cómo te analizan ahora mismo.",
+      "Antes que nadie, descubre tus metadatos ocultos.",
+      "La herramienta que necesitas es conocimiento, no fe.",
+      "En segundos, sabe tus datos personales recolectados.",
+      "Tu información se usa para predecir tus acciones.",
+      "Esto es lo que la IA revela realmente de ti.",
+      "No hay misticismo, solo algoritmos interpretando tu vida.",
+      "Tus búsquedas, compras, e interacciones son analizadas.",
+      "Aprende a protegerte y gestionar tu huella digital.",
+      "La IA también revela sesgos humanos en datos.",
+      "Modelos pueden discriminar si fueron mal entrenados.",
+      "¿Sabías que refuerzan estereotipos sociales ahora mismo?",
+      "Esto ocurre en créditos y contrataciones importantes hoy.",
+      "Puedes exigir transparencia y auditabilidad de algoritmos.",
+      "La verdadera revelación es cómo te empoderas ahora.",
+      "No creas mitos, entiende los hechos, es tu futuro.",
+      "Esto no es magia, es ingeniería que te afecta.",
+      "Tu información es valiosa, no la dejes desprotegida.",
+      "La herramienta que necesitas es una mente crítica.",
+      "¿Listo para saber lo que la IA sabe?",
+      "Antes que nadie, úsala a tu favor.",
+      "En segundos, te mostramos cómo protegerte.",
+      "Entiende el impacto de la IA en tu vida.",
+      "No dejes que los mitos te confundan más."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Digital neural network visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital neural network visualization, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA no te revelará secretos divinos, es falso.",
+        "pexels_query": "neural network digital"
+      },
+      {
+        "id": 2,
+        "prompt": "Data stream flowing through digital circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data stream flowing through digital circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Acaba de salir la verdad: procesa tus datos.",
+        "pexels_query": "data stream digital"
+      },
+      {
+        "id": 3,
+        "prompt": "Abstract representation of algorithms making decisions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of algorithms making decisions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algoritmos revelan patrones de tu comportamiento digital.",
+        "pexels_query": "algorithm decision tech"
+      },
+      {
+        "id": 4,
+        "prompt": "Server racks with blinking lights, extreme close-up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Server racks with blinking lights, extreme close-up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto lo cambia todo: tu privacidad está expuesta.",
+        "pexels_query": "server rack lights"
+      },
+      {
+        "id": 5,
+        "prompt": "Screens showing graphs of user data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Screens showing graphs of user data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ya puedes entender cómo te analizan ahora mismo.",
+        "pexels_query": "data graphs screens"
+      },
+      {
+        "id": 6,
+        "prompt": "Digital interface displaying metadata, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface displaying metadata, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Antes que nadie, descubre tus metadatos ocultos.",
+        "pexels_query": "metadata interface digital"
+      },
+      {
+        "id": 7,
+        "prompt": "Circuit board with glowing components, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Circuit board with glowing components, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La herramienta que necesitas es conocimiento, no fe.",
+        "pexels_query": "circuit board glowing"
+      },
+      {
+        "id": 8,
+        "prompt": "Abstract data visualization, chaotic yet structured, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data visualization, chaotic yet structured, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "En segundos, sabe tus datos personales recolectados.",
+        "pexels_query": "abstract data visualization"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital security lock on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital security lock on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu información se usa para predecir tus acciones.",
+        "pexels_query": "digital security lock"
+      },
+      {
+        "id": 10,
+        "prompt": "Binary code flowing across a dark screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Binary code flowing across a dark screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto es lo que la IA revela realmente de ti.",
+        "pexels_query": "binary code screen"
+      },
+      {
+        "id": 11,
+        "prompt": "Abstract glowing network connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract glowing network connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No hay misticismo, solo algoritmos interpretando tu vida.",
+        "pexels_query": "glowing network connections"
+      },
+      {
+        "id": 12,
+        "prompt": "Digital representation of a database, clean and organized, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital representation of a database, clean and organized, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus búsquedas, compras, e interacciones son analizadas.",
+        "pexels_query": "digital database organized"
+      },
+      {
+        "id": 13,
+        "prompt": "Digital interface with privacy settings, blurred background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface with privacy settings, blurred background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aprende a protegerte y gestionar tu huella digital.",
+        "pexels_query": "privacy settings interface"
+      },
+      {
+        "id": 14,
+        "prompt": "Diagram of a machine learning model, abstract, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Diagram of a machine learning model, abstract, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA también revela sesgos humanos en datos.",
+        "pexels_query": "machine learning diagram"
+      },
+      {
+        "id": 15,
+        "prompt": "Visual representation of demographic data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Visual representation of demographic data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Modelos pueden discriminar si fueron mal entrenados.",
+        "pexels_query": "demographic data analysis"
+      },
+      {
+        "id": 16,
+        "prompt": "Error message on a digital screen, slightly glitchy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Error message on a digital screen, slightly glitchy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Sabías que refuerzan estereotipos sociales ahora mismo?",
+        "pexels_query": "digital error glitch"
+      },
+      {
+        "id": 17,
+        "prompt": "Abstract data cloud with connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data cloud with connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto ocurre en créditos y contrataciones importantes hoy.",
+        "pexels_query": "abstract data cloud"
+      },
+      {
+        "id": 18,
+        "prompt": "Digital code lines scrolling on a screen, clean aesthetics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital code lines scrolling on a screen, clean aesthetics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Puedes exigir transparencia y auditabilidad de algoritmos.",
+        "pexels_query": "code lines scrolling"
+      },
+      {
+        "id": 19,
+        "prompt": "Futuristic secure data center corridor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic secure data center corridor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La verdadera revelación es cómo te empoderas ahora.",
+        "pexels_query": "secure data center"
+      },
+      {
+        "id": 20,
+        "prompt": "Digital representation of ethical AI principles, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital representation of ethical AI principles, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No creas mitos, entiende los hechos, es tu futuro.",
+        "pexels_query": "ethical AI principles"
+      },
+      {
+        "id": 21,
+        "prompt": "Screens displaying real-time data flow, intense blue and cian colors, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Screens displaying real-time data flow, intense blue and cian colors, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto no es magia, es ingeniería que te afecta.",
+        "pexels_query": "real-time data flow"
+      },
+      {
+        "id": 22,
+        "prompt": "Close-up of a high-performance computer chip, detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Close-up of a high-performance computer chip, detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu información es valiosa, no la dejes desprotegida.",
+        "pexels_query": "computer chip detailed"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital interface showing data security alerts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface showing data security alerts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La herramienta que necesitas es una mente crítica.",
+        "pexels_query": "data security alerts"
+      },
+      {
+        "id": 24,
+        "prompt": "Abstract digital representation of a secure network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital representation of a secure network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Listo para saber lo que la IA sabe?",
+        "pexels_query": "secure network abstract"
+      },
+      {
+        "id": 25,
+        "prompt": "Blueprint of a new AI system, technical drawing style, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Blueprint of a new AI system, technical drawing style, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Antes que nadie, úsala a tu favor.",
+        "pexels_query": "AI system blueprint"
+      },
+      {
+        "id": 26,
+        "prompt": "Digital representation of data privacy shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital representation of data privacy shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "En segundos, te mostramos cómo protegerte.",
+        "pexels_query": "data privacy shield"
+      },
+      {
+        "id": 27,
+        "prompt": "Abstract visualization of secure digital transactions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract visualization of secure digital transactions, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Entiende el impacto de la IA en tu vida.",
+        "pexels_query": "secure digital transactions"
+      },
+      {
+        "id": 28,
+        "prompt": "Digital glowing matrix of interconnected data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital glowing matrix of interconnected data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No dejes que los mitos te confundan más.",
+        "pexels_query": "data points matrix"
+      }
+    ],
+    "hooks": [
+      "IA no te revela lo divino.",
+      "Revela tus datos y sesgos.",
+      "Conoce la verdad ahora mismo."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
