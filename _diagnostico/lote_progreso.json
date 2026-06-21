@@ -1,10 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 1,
-  "completados": 1,
+  "estado_lote": "produciendo",
+  "total": 4,
+  "completados": 0,
   "fallidos": 0,
   "trabajo_actual": "",
-  "mensaje": "Lote anterior cerrado manualmente para destrabar.",
-  "resumen": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "Monkygraff: 1s+0L | FiltradoMX: 1s+0L | LaesquinaRandom: 1s+0L | TuIALista: 1s+0L",
   "historial": []
 }
