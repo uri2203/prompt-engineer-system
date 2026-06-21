@@ -1088,8 +1088,10 @@ def _texto_en_frame(ruta_img, frase, ruta_salida, w, h, pil, fuentes):
         print(f"   [HOOK] texto: {e}")
         return False
 
-def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes, formato="A", dur=1.8):
-    """Genera UN clip de hook SOLO VIDEO (el concat es mudo; el stinger va en el audio).
+def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes, formato="A", dur=1.8, ruta_stinger=None):
+    """Genera UN clip de hook. El stinger de sonido se METE DENTRO del clip (si se pasa
+    ruta_stinger), así el sonido y el visual del re-hook son el MISMO clip y es imposible
+    que se desfasen. Si no hay stinger, el clip queda mudo.
     Formato A: zoom punch + flash blanco. Formato B: zoom out + fades (teaser)."""
     try:
         frame = os.path.join(carpeta, f"_hkf_{random.randint(1000,99999)}.png")
@@ -1108,10 +1110,19 @@ def generar_clip_hook(frase, img, ruta_salida, w, h, fps, carpeta, pil, fuentes,
             vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
                   f"zoompan=z='1.15-0.1*on/{tf}':{_cx}:{_cy}:d={tf}:s={w}x{h}:fps={fps},"
                   f"fade=t=in:st=0:d=0.15,fade=t=out:st={dur-0.2:.2f}:d=0.2")
-        subprocess.run(['ffmpeg','-y','-loop','1','-i', frame,'-vf', vf,'-t', str(dur),
-                        '-r', str(fps),'-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p',
-                        '-an', ruta_salida],
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if ruta_stinger and os.path.exists(ruta_stinger):
+            # Meter el stinger DENTRO del clip: el sonido empieza exactamente cuando
+            # empieza el clip visual del re-hook → imposible desfase.
+            subprocess.run(['ffmpeg','-y','-loop','1','-i', frame,'-i', ruta_stinger,
+                            '-vf', vf,'-t', str(dur),'-r', str(fps),
+                            '-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p',
+                            '-c:a','aac','-b:a','192k','-shortest', ruta_salida],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            subprocess.run(['ffmpeg','-y','-loop','1','-i', frame,'-vf', vf,'-t', str(dur),
+                            '-r', str(fps),'-c:v','libx264','-preset','veryfast','-pix_fmt','yuv420p',
+                            '-an', ruta_salida],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if frame != img:
             try: os.remove(frame)
             except: pass
@@ -1227,25 +1238,32 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                 if _clip_valido(seg, 0.05): partes.append(seg)
                 idx += 1
-            # Silencio del hook CON STINGER (el concat de video es mudo, así que
-            # el sonido del hook debe ir aquí, en la pista de narración)
+            # Silencio del hook. Si el re-hook YA lleva el stinger embebido en su clip
+            # (stinger_embebido=True), aquí va SOLO SILENCIO (no otro stinger), para no
+            # duplicar el sonido. El stinger ya suena desde el clip del re-hook.
             sil = os.path.join(carpeta, f"_au_sil_{idx}.wav")
-            # Generar stinger del tipo correspondiente y usarlo como "relleno" del hueco
+            _embebido = False
             tipo_st = "whoosh"
             for _ins in inserciones:
                 if abs((_acum_map.get(_ins["despues_de_escena"], -99)) - t_corte) < 0.01:
                     tipo_st = "whoosh" if _ins.get("formato") == "A" else "impact"
+                    _embebido = bool(_ins.get("stinger_embebido"))
                     break
-            _st_tmp = os.path.join(carpeta, f"_st_{idx}.wav")
-            # Usa el stinger REAL del canal (stinger1/stinger2.mp3) si existe;
-            # si no, genera el sintético como respaldo.
-            _ok_st = _obtener_stinger_canal(carpeta_marca, tipo_st, dur_sil, _st_tmp)
-            if _ok_st:
-                sil = _st_tmp
-            else:
+            if _embebido:
+                # SOLO silencio: el stinger ya está dentro del clip de video del re-hook
                 subprocess.run(['ffmpeg','-y','-f','lavfi','-i','anullsrc=r=44100:cl=stereo',
                                 '-t', str(dur_sil),'-c:a','pcm_s16le','-ar','44100','-ac','2', sil],
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            else:
+                # Comportamiento anterior: meter el stinger en la pista de narración
+                _st_tmp = os.path.join(carpeta, f"_st_{idx}.wav")
+                _ok_st = _obtener_stinger_canal(carpeta_marca, tipo_st, dur_sil, _st_tmp)
+                if _ok_st:
+                    sil = _st_tmp
+                else:
+                    subprocess.run(['ffmpeg','-y','-f','lavfi','-i','anullsrc=r=44100:cl=stereo',
+                                    '-t', str(dur_sil),'-c:a','pcm_s16le','-ar','44100','-ac','2', sil],
+                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             if _clip_valido(sil, 0.05): partes.append(sil)
             idx += 1
             t_prev = t_corte
@@ -2028,14 +2046,22 @@ def procesar():
                                 _img_teaser = _rnd_img.choice(_imgs_hk) if _imgs_hk else _img_def
                                 if _img_teaser and os.path.exists(_img_teaser):
                                     _hk = os.path.join(carpeta_reciente, f"_rehook_{_idx_c:02d}.mp4")
+                                    # EL STINGER ES EL CONTENEDOR temporal del re-hook: el
+                                    # re-hook visual ocupa exactamente la duración del stinger.
+                                    # El sonido del stinger NO se mete en el clip (eso rompe el
+                                    # concat de clips mudos); en su lugar se construye después una
+                                    # pista de stingers posicionados EXACTAMENTE donde aparece
+                                    # cada re-hook visual, y se mezcla con la narración. Así el
+                                    # stinger suena justo donde está el visual.
+                                    _tipo_st = "whoosh" if _ins.get("formato") == "A" else "impact"
+                                    _dur_rh = _ins["dur"]
                                     _r = generar_clip_hook(_ins["frase"], _img_teaser, _hk, w, h, fps,
                                                            carpeta_reciente, PIL_DISPONIBLE, FUENTES_WINDOWS,
-                                                           formato=_ins["formato"], dur=_ins["dur"])
+                                                           formato=_ins["formato"], dur=_dur_rh)
                                     if _r:
                                         nuevos_clips.append(_r)
-                                        # Guardar la duración REAL del clip de re-hook, para que
-                                        # el audio meta un silencio de EXACTAMENTE esa duración
-                                        # (si difiere de la calculada, se desfasa).
+                                        _ins["stinger_embebido"] = True  # el audio NO mete stinger aquí
+                                        _ins["tipo_stinger"] = _tipo_st
                                         _dur_real_rh = _dur(_r)
                                         if _dur_real_rh and _dur_real_rh > 0:
                                             _ins["dur"] = _dur_real_rh
@@ -2186,6 +2212,62 @@ def procesar():
                 if not _audio_ok:
                     print(f"   [⚠️ AUDIO] La narración NO existe o es inválida: {ruta_audio}")
                     _diag.setdefault("errores", []).append(f"Audio de narracion ausente antes del merge: {ruta_audio}")
+
+                # ══════════ PISTA DE STINGERS POSICIONADOS ══════════
+                # El stinger es el "contenedor" del re-hook: debe sonar EXACTAMENTE donde
+                # aparece el re-hook visual. Se construye una pista de audio del largo del
+                # video con cada stinger colocado en la posición real del clip de re-hook
+                # (suma de duraciones de los clips ANTERIORES a él). Se mezcla con la
+                # narración. Como la posición se mide de los MISMOS clips que forman el
+                # video, el stinger y el re-hook visual quedan clavados.
+                try:
+                    _hooks_con_stinger = [ins for ins in _hook_inserciones if ins.get("stinger_embebido")]
+                    if _hooks_con_stinger and carpeta_marca_assets:
+                        # Posición de cada clip de re-hook en el timeline del video final
+                        _pos_acum = 0.0
+                        _stinger_eventos = []  # (tiempo_inicio, ruta_stinger, dur)
+                        for _clip in clips_temp:
+                            _bn = os.path.basename(_clip)
+                            _dclip = _dur(_clip) or 0.0
+                            if "_rehook_" in _bn:
+                                # buscar el tipo de stinger de este re-hook
+                                _tipo = "whoosh"
+                                for ins in _hooks_con_stinger:
+                                    _tipo = ins.get("tipo_stinger", "whoosh"); break
+                                _st_evt = os.path.join(carpeta_reciente, f"_stevt_{len(_stinger_eventos)}.wav")
+                                if _obtener_stinger_canal(carpeta_marca_assets, _tipo, _dclip, _st_evt):
+                                    _stinger_eventos.append((_pos_acum, _st_evt, _dclip))
+                            _pos_acum += _dclip
+                        if _stinger_eventos:
+                            # Construir la pista: cada stinger con adelay a su posición, luego amix
+                            _inputs_st = []
+                            _filtros_st = []
+                            for _k, (_t0, _stp, _dd) in enumerate(_stinger_eventos):
+                                _inputs_st.extend(['-i', _stp.replace("\\", "/")])
+                                _ms = int(_t0 * 1000)
+                                _filtros_st.append(f"[{_k}:a]adelay={_ms}|{_ms}[s{_k}]")
+                            _n_st = len(_stinger_eventos)
+                            _mix_inputs = "".join(f"[s{_k}]" for _k in range(_n_st))
+                            _pista_st = os.path.join(carpeta_reciente, "_pista_stingers.wav")
+                            _fc = ";".join(_filtros_st) + f";{_mix_inputs}amix=inputs={_n_st}:duration=longest:normalize=0[stout]"
+                            subprocess.run(['ffmpeg','-y'] + _inputs_st +
+                                           ['-filter_complex', _fc, '-map','[stout]',
+                                            '-c:a','pcm_s16le', _pista_st],
+                                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                            # Mezclar la narración con la pista de stingers
+                            if os.path.exists(_pista_st):
+                                _audio_mix = os.path.join(carpeta_reciente, "_narr_mas_stingers.m4a")
+                                subprocess.run(['ffmpeg','-y',
+                                                '-i', ruta_audio.replace("\\","/"),
+                                                '-i', _pista_st,
+                                                '-filter_complex','[0:a][1:a]amix=inputs=2:duration=first:normalize=0[a]',
+                                                '-map','[a]','-c:a','aac','-b:a','192k', _audio_mix],
+                                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                if _clip_valido(_audio_mix, 1.0):
+                                    ruta_audio = _audio_mix
+                                    print(f"   [STINGER] {_n_st} stinger(s) posicionados donde aparece el re-hook visual.")
+                except Exception as _e_st:
+                    print(f"   [STINGER] No se pudo construir la pista de stingers (no crítico): {_e_st}")
 
                 cmd_merge = [
                     'ffmpeg', '-y',
