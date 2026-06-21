@@ -506,9 +506,9 @@ def _corregir_pronunciacion(texto):
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
     REEMPLAZOS = {
         # ── Reportadas por el usuario (La Viuda) ──
-        "explica": "eks pli ca", "explican": "eks pli can", "explicar": "eks pli car",
-        "explicó": "eks pli có", "explico": "eks pli co", "explicación": "eks pli ca ción",
-        "explicaciones": "eks pli ca ciones", "explícame": "eks plí ca me", "explicando": "eks pli can do",
+        "explica": "eks pe li ca", "explican": "eks pe li can", "explicar": "eks pe li car",
+        "explicó": "eks pe li có", "explico": "eks pe li co", "explicación": "eks pe li ca ción",
+        "explicaciones": "eks pe li ca ciones", "explícame": "eks pe lí ca me", "explicando": "eks pe li can do",
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
         "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
