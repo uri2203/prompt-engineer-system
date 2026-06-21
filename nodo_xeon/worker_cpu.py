@@ -1946,37 +1946,6 @@ def procesar():
                     _d = _dur(clips_temp[_ic])
                     _dur_reales.append(_d if _d and _d > 0 else duraciones_escenas[_ic] if _ic < len(duraciones_escenas) else 3.0)
 
-                # ── CORRECCIÓN DE DESFASE ACUMULADO (causa del re-hook adelantado) ──
-                # Los clips de escena (sobre todo PNG partidos en sub-clips con zoompan)
-                # se renderizan MÁS CORTOS que lo asignado. La suma del video queda menor
-                # que la narración (ej. 45.7s de video vs 53.5s de audio) y el re-hook
-                # visual aparece ANTES que su stinger. Aquí se ESTIRA cada clip que salió
-                # corto hasta su duración asignada (congelando el último frame con tpad),
-                # para que la suma del video == la narración y todo quede sincronizado.
-                if len(_dur_reales) == len(duraciones_escenas):
-                    for _ic in range(len(clips_temp)):
-                        _objetivo = duraciones_escenas[_ic]
-                        _real = _dur_reales[_ic]
-                        if _objetivo and _real and (_objetivo - _real) > 0.15:
-                            _falta = _objetivo - _real
-                            _fix = clips_temp[_ic].replace(".mp4", "_fix.mp4")
-                            _r_fix = subprocess.run(
-                                ['ffmpeg','-y','-i', clips_temp[_ic],
-                                 '-vf', f'tpad=stop_mode=clone:stop_duration={_falta:.3f}',
-                                 '-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p',
-                                 '-r', str(fps), _fix],
-                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                            if _clip_es_valido(_fix):
-                                try: os.replace(_fix, clips_temp[_ic])
-                                except Exception: pass
-                    # Re-medir tras la corrección
-                    _dur_reales = []
-                    for _ic in range(len(clips_temp)):
-                        _d = _dur(clips_temp[_ic])
-                        _dur_reales.append(_d if _d and _d > 0 else duraciones_escenas[_ic])
-                    _suma_v = sum(_dur_reales)
-                    print(f"   [SYNC] Clips corregidos a su duración asignada. Video suma {_suma_v:.1f}s (audio ~{duracion_audio:.1f}s).")
-
                 if _dur_reales and len(_dur_reales) == len(clips_temp):
                     duraciones_escenas = _dur_reales
                     print(f"   [SYNC] Duraciones reales de {len(_dur_reales)} clips medidas (hooks y audio se alinean a ellas).")
