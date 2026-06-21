@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "completado",
   "total": 1,
-  "completados": 0,
+  "completados": 1,
   "fallidos": 0,
-  "trabajo_actual": "Generando video 1/1 (TuIALista 9:16)",
-  "mensaje": "Produccion del video 1 iniciada.",
-  "resumen": "TuIALista: 1s+0L",
+  "trabajo_actual": "",
+  "mensaje": "Lote anterior cerrado manualmente para destrabar.",
+  "resumen": "",
   "historial": []
 }
