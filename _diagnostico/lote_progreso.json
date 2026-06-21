@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 2,
-  "completados": 1,
+  "completados": 2,
   "fallidos": 0,
   "trabajo_actual": "Generando video 2/2 (TuIALista 9:16)",
-  "mensaje": "Produccion del video 2 iniciada.",
+  "mensaje": "Video 2 completado",
   "resumen": "LaesquinaRandom: 1s+0L | TuIALista: 1s+0L",
   "historial": [
     {
@@ -15,6 +15,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 110.4,
       "hora": "19:21"
+    },
+    {
+      "n": 2,
+      "marca": "TuIALista",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 121.0,
+      "hora": "20:35"
     }
   ]
 }
