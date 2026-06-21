@@ -1946,6 +1946,32 @@ def procesar():
                             es_short=_es_short_hk, dur_hook=2.6, marca=marca_audio,
                             silencios=_silencios_voz
                         )
+                        # REGISTRO DE TIEMPOS para verificar sincronía con datos reales.
+                        # Para cada re-hook: en qué segundo cae (final de su escena) y a qué
+                        # distancia está de la pausa de voz más cercana. dist≈0 = bien sincronizado.
+                        try:
+                            _acum_diag = []
+                            _s = 0.0
+                            for _d in duraciones_escenas:
+                                _s += _d; _acum_diag.append(_s)
+                            _registro = []
+                            for _ins in _hook_inserciones:
+                                _ie = _ins["despues_de_escena"]
+                                _t_hook = _acum_diag[_ie] if _ie < len(_acum_diag) else None
+                                if _t_hook is not None:
+                                    _pausa_cerca = min(_silencios_voz, key=lambda s: abs(s - _t_hook)) if _silencios_voz else None
+                                    _dist = round(abs(_pausa_cerca - _t_hook), 2) if _pausa_cerca is not None else None
+                                    _registro.append({
+                                        "rehook_en_seg": round(_t_hook, 2),
+                                        "pausa_mas_cercana_seg": round(_pausa_cerca, 2) if _pausa_cerca is not None else None,
+                                        "distancia_seg": _dist,
+                                        "formato": _ins.get("formato"),
+                                    })
+                            _diag["hooks"]["tiempos"] = _registro
+                            _diag["hooks"]["pausas_voz_detectadas"] = [round(s, 2) for s in (_silencios_voz or [])]
+                            _diag["hooks"]["hook_inicial_seg"] = 0.0
+                        except Exception as _e:
+                            _diag["hooks"]["tiempos_error"] = str(_e)
                         # Imágenes de escena disponibles (para teasers)
                         _imgs_hk = [
                             os.path.join(carpeta_reciente, f).replace("\\", "/")
