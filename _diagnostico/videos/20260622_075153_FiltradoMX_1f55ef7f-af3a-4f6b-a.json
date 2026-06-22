@@ -1,0 +1,83 @@
+{
+  "id": "1f55ef7f-af3a-4f6b-a7f3-ef382837754c_asm",
+  "marca": "FiltradoMX",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-22 07:44:49",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 59.57,
+        "pausa_mas_cercana_seg": 59.57,
+        "distancia_seg": 0.0,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      2.18,
+      4.65,
+      6.41,
+      8.95,
+      12.66,
+      16.51,
+      19.24,
+      20.83,
+      23.13,
+      25.54,
+      29.46,
+      31.63,
+      33.61,
+      35.9,
+      38.33,
+      42.42,
+      44.0,
+      46.32,
+      47.99,
+      50.67,
+      51.83,
+      53.18,
+      55.55,
+      57.28,
+      59.57,
+      63.6,
+      67.61,
+      69.59,
+      72.03,
+      75.77,
+      77.62,
+      79.86,
+      84.27,
+      88.15,
+      89.04,
+      92.32,
+      93.76,
+      96.54,
+      98.14,
+      100.97,
+      102.15,
+      105.74,
+      107.77,
+      110.09,
+      111.1,
+      114.02,
+      117.55
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-06-22 07:51:53",
+  "duracion_real_seg": 136.0,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4"
+}
