@@ -2169,62 +2169,72 @@ def procesar():
                     print(f"   [⚠️ AUDIO] La narración NO existe o es inválida: {ruta_audio}")
                     _diag.setdefault("errores", []).append(f"Audio de narracion ausente antes del merge: {ruta_audio}")
 
-                # ══════════ PISTA DE STINGERS POSICIONADOS ══════════
-                # El stinger es el "contenedor" del re-hook: debe sonar EXACTAMENTE donde
-                # aparece el re-hook visual. Se construye una pista de audio del largo del
-                # video con cada stinger colocado en la posición real del clip de re-hook
-                # (suma de duraciones de los clips ANTERIORES a él). Se mezcla con la
-                # narración. Como la posición se mide de los MISMOS clips que forman el
-                # video, el stinger y el re-hook visual quedan clavados.
+                # ══════════ PISTA DE STINGERS ANCLADOS A LAS PAUSAS DEL AUDIO FINAL ══════════
+                # El stinger debe sonar en la PAUSA de la narración donde está el re-hook.
+                # En vez de calcular la posición desde el video (que se desincroniza por el
+                # hook inicial y la acumulación de duraciones), se DETECTAN las pausas reales
+                # del audio FINAL (el que se va a pegar) y se coloca un stinger en cada pausa
+                # que corresponde a un re-hook. Así el stinger cae exactamente en el silencio
+                # que el propio audio dejó para el re-hook, sin desfase acumulado.
                 try:
                     _hooks_con_stinger = [ins for ins in _hook_inserciones if ins.get("stinger_embebido")]
-                    print(f"   >>> [SYNC-FIX-10] Ejecutando codigo de hooks. Re-hooks con stinger: {len(_hooks_con_stinger)} <<<")
-                    if _hooks_con_stinger and carpeta_marca_assets:
-                        # Posición de cada clip de re-hook en el timeline del video final
-                        _pos_acum = 0.0
-                        _stinger_eventos = []  # (tiempo_inicio, ruta_stinger, dur)
-                        for _clip in clips_temp:
-                            _bn = os.path.basename(_clip)
-                            _dclip = _dur(_clip) or 0.0
-                            if "_rehook_" in _bn:
-                                # buscar el tipo de stinger de este re-hook
-                                _tipo = "whoosh"
-                                for ins in _hooks_con_stinger:
-                                    _tipo = ins.get("tipo_stinger", "whoosh"); break
-                                _st_evt = os.path.join(carpeta_reciente, f"_stevt_{len(_stinger_eventos)}.wav")
-                                if _obtener_stinger_canal(carpeta_marca_assets, _tipo, _dclip, _st_evt):
-                                    _stinger_eventos.append((_pos_acum, _st_evt, _dclip))
-                            _pos_acum += _dclip
-                        if _stinger_eventos:
-                            # Construir la pista: cada stinger con adelay a su posición, luego amix
+                    if _hooks_con_stinger and carpeta_marca_assets and _audio_ok:
+                        # Detectar los silencios (huecos) del AUDIO FINAL que se va a mezclar.
+                        # Esos huecos son exactamente donde construir_audio_con_hooks dejó
+                        # espacio para cada re-hook (silencio de ~2.6s).
+                        _huecos = []
+                        _rr = subprocess.run(['ffmpeg','-i', ruta_audio.replace("\\","/"),
+                                              '-af','silencedetect=noise=-45dB:d=1.0','-f','null','-'],
+                                             stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+                        _ini_h = None
+                        for _l in _rr.stderr.splitlines():
+                            if 'silence_start' in _l:
+                                try: _ini_h = float(_l.split('silence_start:')[1].strip())
+                                except: pass
+                            elif 'silence_end' in _l and _ini_h is not None:
+                                try:
+                                    _fin_h = float(_l.split('silence_end:')[1].split('|')[0].strip())
+                                    _dur_h = _fin_h - _ini_h
+                                    # solo huecos largos (~duración de un re-hook), no micro-pausas
+                                    if _dur_h >= 1.5:
+                                        _huecos.append((_ini_h, _dur_h))
+                                except: pass
+                                _ini_h = None
+                        # Tomar tantos huecos como re-hooks haya (los más largos = los de re-hook)
+                        _huecos_rehook = _huecos[:len(_hooks_con_stinger)]
+                        if _huecos_rehook:
                             _inputs_st = []
                             _filtros_st = []
-                            for _k, (_t0, _stp, _dd) in enumerate(_stinger_eventos):
-                                _inputs_st.extend(['-i', _stp.replace("\\", "/")])
+                            for _k, (_t0, _dh) in enumerate(_huecos_rehook):
+                                _tipo = _hooks_con_stinger[_k].get("tipo_stinger", "whoosh") if _k < len(_hooks_con_stinger) else "whoosh"
+                                _st_evt = os.path.join(carpeta_reciente, f"_stevt_{_k}.wav")
+                                if not _obtener_stinger_canal(carpeta_marca_assets, _tipo, min(_dh, 2.6), _st_evt):
+                                    continue
+                                _inputs_st.extend(['-i', _st_evt.replace("\\", "/")])
                                 _ms = int(_t0 * 1000)
-                                _filtros_st.append(f"[{_k}:a]adelay={_ms}|{_ms}[s{_k}]")
-                            _n_st = len(_stinger_eventos)
-                            _mix_inputs = "".join(f"[s{_k}]" for _k in range(_n_st))
-                            _pista_st = os.path.join(carpeta_reciente, "_pista_stingers.wav")
-                            _fc = ";".join(_filtros_st) + f";{_mix_inputs}amix=inputs={_n_st}:duration=longest:normalize=0[stout]"
-                            subprocess.run(['ffmpeg','-y'] + _inputs_st +
-                                           ['-filter_complex', _fc, '-map','[stout]',
-                                            '-c:a','pcm_s16le', _pista_st],
-                                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                            # Mezclar la narración con la pista de stingers
-                            if os.path.exists(_pista_st):
-                                _audio_mix = os.path.join(carpeta_reciente, "_narr_mas_stingers.m4a")
-                                subprocess.run(['ffmpeg','-y',
-                                                '-i', ruta_audio.replace("\\","/"),
-                                                '-i', _pista_st,
-                                                '-filter_complex','[0:a][1:a]amix=inputs=2:duration=first:normalize=0[a]',
-                                                '-map','[a]','-c:a','aac','-b:a','192k', _audio_mix],
+                                _filtros_st.append(f"[{len(_inputs_st)//2 - 1}:a]adelay={_ms}|{_ms}[s{_k}]")
+                            if _inputs_st:
+                                _n_st = len(_filtros_st)
+                                _mix_inputs = "".join(f"[s{_k}]" for _k in range(_n_st))
+                                _pista_st = os.path.join(carpeta_reciente, "_pista_stingers.wav")
+                                _fc = ";".join(_filtros_st) + f";{_mix_inputs}amix=inputs={_n_st}:duration=longest:normalize=0[stout]"
+                                subprocess.run(['ffmpeg','-y'] + _inputs_st +
+                                               ['-filter_complex', _fc, '-map','[stout]',
+                                                '-c:a','pcm_s16le', _pista_st],
                                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                                if _clip_valido(_audio_mix, 1.0):
-                                    ruta_audio = _audio_mix
-                                    print(f"   [STINGER] {_n_st} stinger(s) posicionados donde aparece el re-hook visual.")
+                                if os.path.exists(_pista_st):
+                                    _audio_mix = os.path.join(carpeta_reciente, "_narr_mas_stingers.m4a")
+                                    subprocess.run(['ffmpeg','-y',
+                                                    '-i', ruta_audio.replace("\\","/"),
+                                                    '-i', _pista_st,
+                                                    '-filter_complex','[0:a][1:a]amix=inputs=2:duration=first:normalize=0[a]',
+                                                    '-map','[a]','-c:a','aac','-b:a','192k', _audio_mix],
+                                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                    if _clip_valido(_audio_mix, 1.0):
+                                        ruta_audio = _audio_mix
+                                        print(f"   [STINGER] {_n_st} stinger(s) anclados a las pausas reales del audio (en {[round(h[0],1) for h in _huecos_rehook]}s).")
                 except Exception as _e_st:
-                    print(f"   [STINGER] No se pudo construir la pista de stingers (no crítico): {_e_st}")
+                    print(f"   [STINGER] Pista de stingers omitida (no crítico): {_e_st}")
 
                 cmd_merge = [
                     'ffmpeg', '-y',
