@@ -1977,19 +1977,54 @@ def procesar():
                             if _ie < len(_acum_video):
                                 _ins["t_corte_video"] = _acum_video[_ie]
                         for _idx_c, _clip in enumerate(clips_temp):
+                            # Si tras esta escena va un re-hook, ajustar el final del clip
+                            # para que termine EXACTAMENTE en la pausa real de la voz (no
+                            # donde el reparto de duración lo dejó). Así el re-hook visual
+                            # entra justo cuando la voz hace pausa, no a media palabra.
+                            if _idx_c in _ins_por_escena and _silencios_voz:
+                                try:
+                                    _fin_escena = _acum_video[_idx_c] if _idx_c < len(_acum_video) else None
+                                    if _fin_escena is not None:
+                                        # silencio de la voz más cercano al final de esta escena
+                                        _sil_cerca = min(_silencios_voz, key=lambda s: abs(s - _fin_escena))
+                                        _ajuste = _sil_cerca - _fin_escena  # + = alargar, - = recortar
+                                        # solo ajustar si el desfase es perceptible y no exagerado
+                                        if 0.12 < abs(_ajuste) <= 2.5:
+                                            _dur_clip_actual = _dur(_clip) or 0.0
+                                            _dur_nueva = _dur_clip_actual + _ajuste
+                                            if _dur_nueva > 0.5:
+                                                _clip_aj = _clip.replace(".mp4", "_aj.mp4")
+                                                if _ajuste > 0:
+                                                    # alargar: congelar el último frame lo justo
+                                                    _ok_aj = subprocess.run(
+                                                        ['ffmpeg','-y','-i', _clip,
+                                                         '-vf', f'tpad=stop_mode=clone:stop_duration={_ajuste:.3f}',
+                                                         '-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p',
+                                                         '-r', str(fps), _clip_aj],
+                                                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                                else:
+                                                    # recortar el final
+                                                    _ok_aj = subprocess.run(
+                                                        ['ffmpeg','-y','-i', _clip, '-t', f'{_dur_nueva:.3f}',
+                                                         '-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p',
+                                                         '-r', str(fps), _clip_aj],
+                                                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                                if _clip_valido(_clip_aj, 0.4):
+                                                    _clip = _clip_aj
+                                                    # actualizar el acumulado desde aquí
+                                                    _nuevo_fin = _sil_cerca
+                                                    _delta = _nuevo_fin - _acum_video[_idx_c]
+                                                    for _j in range(_idx_c, len(_acum_video)):
+                                                        _acum_video[_j] += _delta
+                                                    _ins_por_escena[_idx_c]["t_corte_video"] = _sil_cerca
+                                except Exception:
+                                    pass
                             nuevos_clips.append(_clip)
                             if _idx_c in _ins_por_escena:
                                 _ins = _ins_por_escena[_idx_c]
                                 _img_teaser = _rnd_img.choice(_imgs_hk) if _imgs_hk else _img_def
                                 if _img_teaser and os.path.exists(_img_teaser):
                                     _hk = os.path.join(carpeta_reciente, f"_rehook_{_idx_c:02d}.mp4")
-                                    # EL STINGER ES EL CONTENEDOR temporal del re-hook: el
-                                    # re-hook visual ocupa exactamente la duración del stinger.
-                                    # El sonido del stinger NO se mete en el clip (eso rompe el
-                                    # concat de clips mudos); en su lugar se construye después una
-                                    # pista de stingers posicionados EXACTAMENTE donde aparece
-                                    # cada re-hook visual, y se mezcla con la narración. Así el
-                                    # stinger suena justo donde está el visual.
                                     _tipo_st = "whoosh" if _ins.get("formato") == "A" else "impact"
                                     _dur_rh = _ins["dur"]
                                     _r = generar_clip_hook(_ins["frase"], _img_teaser, _hk, w, h, fps,
