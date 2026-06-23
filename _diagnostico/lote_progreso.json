@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 1,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 0,
+  "trabajo_actual": "Reintentando encolado en 489s",
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": "FiltradoMX: 1s+0L",
+  "historial": []
 }
