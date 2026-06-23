@@ -1,20 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 1,
-  "completados": 1,
+  "estado_lote": "produciendo",
+  "total": 11,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 3s",
-  "mensaje": "Lote completado.",
-  "resumen": "FiltradoMX: 1s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "FiltradoMX",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 114.1,
-      "hora": "01:31"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "La Viuda: 0s+2L | Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
+  "historial": []
 }
