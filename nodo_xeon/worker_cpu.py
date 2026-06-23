@@ -780,8 +780,10 @@ def _clip_es_valido(ruta, dur_esperada=None):
         dur = float(r.stdout.strip())
         if dur <= 0.1:
             return False
-        # Si esperamos cierta duración, tolerar 30% de diferencia
-        if dur_esperada and dur < dur_esperada * 0.5:
+        # Si esperamos cierta duración, el clip no debe quedar corto (tolerancia 15%).
+        # Un clip notablemente más corto que lo asignado deja al video sin cubrir el
+        # audio y provoca relleno congelado al final; mejor rechazarlo y regenerarlo.
+        if dur_esperada and dur < dur_esperada * 0.85:
             return False
         return True
     except Exception:
@@ -2147,21 +2149,40 @@ def procesar():
                     pass
 
                 if duracion_audio > _dur_video_mudo + 0.3 and _dur_video_mudo > 0:
-                    # El audio es más largo: extender video congelando último frame
+                    # El audio es más largo que el video.
                     _falta = duracion_audio - _dur_video_mudo
                     ruta_video_ext = os.path.join(carpeta_reciente, "video_ext.mp4")
-                    cmd_pad = [
-                        'ffmpeg', '-y', '-i', ruta_video_mudo,
-                        '-vf', f"tpad=stop_mode=clone:stop_duration={_falta:.2f}",
-                        '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22',
-                        '-pix_fmt', 'yuv420p', '-r', str(fps), ruta_video_ext
-                    ]
-                    subprocess.run(cmd_pad, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    if _clip_es_valido(ruta_video_ext):
-                        try: os.remove(ruta_video_mudo)
-                        except Exception: pass
-                        ruta_video_mudo = ruta_video_ext
-                        print(f"   [FIX] Video extendido +{_falta:.1f}s para cubrir narración completa")
+                    if _falta > 4.0:
+                        # Faltan MUCHOS segundos (clips cortos): NO congelar tanto tiempo
+                        # (se ve como video trabado). En su lugar, repetir el video en
+                        # bucle hasta cubrir el audio, recortando al final exacto. Así el
+                        # final tiene imágenes en movimiento, no un frame congelado largo.
+                        cmd_pad = [
+                            'ffmpeg', '-y', '-stream_loop', '-1', '-i', ruta_video_mudo,
+                            '-t', f"{duracion_audio:.2f}",
+                            '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22',
+                            '-pix_fmt', 'yuv420p', '-r', str(fps), ruta_video_ext
+                        ]
+                        subprocess.run(cmd_pad, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                        if _clip_es_valido(ruta_video_ext):
+                            try: os.remove(ruta_video_mudo)
+                            except Exception: pass
+                            ruta_video_mudo = ruta_video_ext
+                            print(f"   [FIX] Faltaban {_falta:.1f}s: video repetido en bucle para cubrir el audio (sin congelar).")
+                    else:
+                        # Faltan pocos segundos: congelar el último frame es imperceptible
+                        cmd_pad = [
+                            'ffmpeg', '-y', '-i', ruta_video_mudo,
+                            '-vf', f"tpad=stop_mode=clone:stop_duration={_falta:.2f}",
+                            '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22',
+                            '-pix_fmt', 'yuv420p', '-r', str(fps), ruta_video_ext
+                        ]
+                        subprocess.run(cmd_pad, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                        if _clip_es_valido(ruta_video_ext):
+                            try: os.remove(ruta_video_mudo)
+                            except Exception: pass
+                            ruta_video_mudo = ruta_video_ext
+                            print(f"   [FIX] Video extendido +{_falta:.1f}s para cubrir narración completa")
                 elif _dur_video_mudo > duracion_audio + 0.3 and duracion_audio > 0:
                     # El video es más largo (p.ej. por los clips de hook): extender el
                     # audio con silencio para que audio y video queden EXACTAMENTE parejos
