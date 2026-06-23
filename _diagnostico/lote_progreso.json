@@ -1,10 +1,7 @@
 {
-  "estado_lote": "esperando_cuota",
-  "total": 1,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 0,
-  "trabajo_actual": "Reintentando encolado en 489s",
-  "mensaje": "La API de Gemini se quedó sin cuota (límite diario). El lote se reanudará solo cuando la cuota se restablezca.",
-  "resumen": "FiltradoMX: 1s+0L",
-  "historial": []
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
