@@ -1,10 +1,10 @@
 {
-  "estado_lote": "cancelado",
-  "total": 1,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Reintentando encolado en 722s",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "FiltradoMX: 1s+0L",
+  "trabajo_actual": "",
+  "mensaje": "Listo para iniciar.",
+  "resumen": "",
   "historial": []
 }
