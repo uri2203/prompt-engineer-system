@@ -1,20 +1,10 @@
 {
-  "estado_lote": "cancelado",
-  "total": 11,
-  "completados": 1,
+  "estado_lote": "inactivo",
+  "total": 0,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Generando video 2/11 (La Viuda 16:9 28min)",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "La Viuda: 0s+2L | Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "La Viuda",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1443.8,
-      "hora": "22:26"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Listo para iniciar.",
+  "resumen": "",
+  "historial": []
 }
