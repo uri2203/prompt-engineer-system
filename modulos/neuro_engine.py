@@ -73,27 +73,98 @@ APERTURAS_POR_CANAL = {
     ],
 }
 
+def _indice_rotacion(n_opciones, desfase=0):
+    """Índice de rotación que recorre TODO el banco aunque los videos se generen
+    a intervalos regulares. Avanza de forma fina (cada 30s) para no quedar atrapado
+    en pocas opciones por la periodicidad de los intervalos entre videos."""
+    try:
+        ahora = datetime.now()
+        contador = int(ahora.timestamp() // 30)  # avanza cada 30 segundos
+        return (contador + desfase) % max(1, n_opciones)
+    except Exception:
+        return desfase % max(1, n_opciones)
+
 def _seleccionar_aperturas(marca, n=3):
     """Devuelve estructuras de apertura ROTADAS para este video (variedad).
-    La rotación avanza de forma estable con el tiempo para que videos seguidos
-    tomen estructuras distintas. La IA rellena la estructura con el tema real."""
+    La rotación recorre todo el banco; la IA rellena el molde con el tema real."""
     bank = None
     for k, v in APERTURAS_POR_CANAL.items():
         if k.lower().strip() == (marca or "").lower().strip():
             bank = v; break
     if not bank:
         return []
-    # Índice que avanza con el tiempo: cada bloque de minutos rota la apertura.
-    # Así dos videos generados con minutos de diferencia caen en estructuras
-    # distintas (rotación determinista y estable, no aleatoria que pueda repetir).
-    try:
-        ahora = datetime.now()
-        # minutos totales desde una época fija → avanza 1 por minuto
-        minutos = int(ahora.timestamp() // 60)
-        inicio = minutos % len(bank)
-    except Exception:
-        inicio = 0
-    # tomar n estructuras consecutivas (rotando) para dar variedad sin repetir
+    inicio = _indice_rotacion(len(bank), desfase=0)
+    seleccion = [bank[(inicio + i) % len(bank)] for i in range(min(n, len(bank)))]
+    return seleccion
+
+
+# ── BANCO DE ESTRUCTURAS DE CIERRE POR CANAL ──────────────────────────────────
+# Igual que las aperturas: moldes que la IA rellena con el contenido real del
+# video → cierres siempre distintos. Rotación por tiempo para no repetir. El
+# cierre busca retención (suscripción / siguiente video / comentarios) sin sonar
+# siempre igual y sin frases de fecha que envejezcan.
+CIERRES_POR_CANAL = {
+    "La Viuda": [
+        "PREGUNTA QUE PERSIGUE: cierra con una pregunta inquietante que el espectador se llevará a la cama. NO la respondas.",
+        "HILO SUELTO: deja un detalle sin explicar que invita a comentar teorías.",
+        "VUELTA AL INICIO: conecta el final con la imagen del hook, dándole un giro perturbador.",
+        "ADVERTENCIA FINAL: cierra avisando que esto podría pasarle a quien escucha.",
+        "DATO QUE ESCALA: revela un último dato que hace todo más inquietante.",
+        "INVITACIÓN A LA OSCURIDAD: pide al espectador que comparta su propia experiencia similar en comentarios.",
+    ],
+    "Monkygraff": [
+        "PRÓXIMO MOVIMIENTO: cierra señalando qué hecho concreto vigilar a futuro (atemporal).",
+        "PREGUNTA ESTRATÉGICA: deja una pregunta geopolítica abierta para los comentarios.",
+        "IMPLICACIÓN PERSONAL: conecta el tema con cómo afecta al espectador o a su región.",
+        "ESCENARIO ABIERTO: plantea dos desenlaces posibles y pregunta cuál creen que ocurrirá.",
+        "CONEXIÓN PENDIENTE: insinúa otra pieza del tablero que se analizará en otro video.",
+        "LLAMADO A SEGUIR: invita a suscribirse para no perder el siguiente análisis del tablero.",
+    ],
+    "FiltradoMX": [
+        "GIRO FINAL: cierra con una última revelación que reconfigura todo lo contado.",
+        "PREGUNTA AL ESPECTADOR: pídele que juzgue o tome partido en comentarios.",
+        "HILO PARA OTRO CASO: insinúa que hay más historias como esta por contar.",
+        "MORALEJA INCÓMODA: cierra con una reflexión que deja pensando.",
+        "PREGUNTA ABIERTA: '¿Qué habrías hecho tú?' adaptada al caso.",
+        "INVITACIÓN A COMPARTIR: pide que cuenten si vivieron algo parecido.",
+    ],
+    "LaesquinaRandom": [
+        "REMATE CÓMICO: cierra con el chiste o giro absurdo más fuerte.",
+        "PREGUNTA RIDÍCULA: lanza una pregunta tonta-genial para comentarios.",
+        "LLAMADO JUGUETÓN: pide suscripción de forma cómica, no seria.",
+        "EXAGERACIÓN FINAL: cierra llevando la premisa al absurdo total.",
+        "RETO AL ESPECTADOR: propón algo absurdo para que comenten.",
+        "CLIFFHANGER TONTO: deja una mini intriga cómica para el próximo video.",
+    ],
+    "TuIALista": [
+        "RESUMEN ACCIONABLE: cierra con el paso concreto que el espectador debe dar ya.",
+        "PRÓXIMA HERRAMIENTA: insinúa otra herramienta/truco que verás en otro video.",
+        "PREGUNTA PRÁCTICA: pregunta qué les gustaría automatizar, para comentarios.",
+        "PROMESA CUMPLIDA: recuerda lo que aprendieron e invita a aplicarlo.",
+        "LLAMADO A SUSCRIBIRSE: por más tutoriales/herramientas de IA.",
+        "RETO PRÁCTICO: propón que prueben lo enseñado y comenten el resultado.",
+    ],
+    "Umbral Alterno": [
+        "PREGUNTA EXISTENCIAL: cierra con una gran pregunta sobre el destino o las decisiones.",
+        "ESCENARIO ABIERTO: deja el mundo alterno sin resolver, invitando a imaginar.",
+        "VUELTA A LA REALIDAD: contrasta el final con nuestro mundo y deja pensando.",
+        "PRÓXIMO UMBRAL: insinúa otro escenario hipotético para un futuro video.",
+        "DECISIÓN AL ESPECTADOR: pregunta qué habrían elegido ellos.",
+        "REFLEXIÓN FINAL: cierra con una idea que resuena más allá del video.",
+    ],
+}
+
+def _seleccionar_cierres(marca, n=2):
+    """Devuelve estructuras de CIERRE rotadas para este video (variedad).
+    La IA rellena el molde con el contenido real del video."""
+    bank = None
+    for k, v in CIERRES_POR_CANAL.items():
+        if k.lower().strip() == (marca or "").lower().strip():
+            bank = v; break
+    if not bank:
+        return []
+    # desfase distinto al de aperturas para que apertura y cierre no roten igual
+    inicio = _indice_rotacion(len(bank), desfase=3)
     seleccion = [bank[(inicio + i) % len(bank)] for i in range(min(n, len(bank)))]
     return seleccion
 
@@ -193,7 +264,7 @@ ADN_NEURO = {
             "Como si fuera información clasificada que acaba de filtrarse."
         ),
         "arco_retencion_largo": [
-            "0-2min: Dato impactante ocurrido HOY + promesa de análisis exclusivo que nadie más hará",
+            "0-2min: Dato impactante y específico + promesa de análisis exclusivo que nadie más hará (SIN fechas relativas que envejezcan)",
             "2-8min: Contexto geopolítico — por qué este momento es diferente a todo lo anterior",
             "8-15min: Análisis táctico profundo — conexiones no obvias entre eventos aparentemente separados",
             "15-22min: El dinero detrás de la guerra — quién financia, quién gana, quién pierde",
@@ -331,8 +402,8 @@ class NeuroEngine:
                 {"titulo": "La historia que nadie quiere escuchar", "canal": "Paranoia TV", "termino": "terror psicologico"},
             ],
             "Monkygraff": [
-                {"titulo": "El movimiento que cambió el mapa en 48 horas", "canal": "Geopolitica Táctica", "termino": "conflicto internacional"},
-                {"titulo": "Lo que los medios no conectaron esta semana", "canal": "Análisis Global", "termino": "geopolitica actual"},
+                {"titulo": "El movimiento que está redibujando el mapa de poder", "canal": "Geopolitica Táctica", "termino": "conflicto internacional"},
+                {"titulo": "La conexión que los medios no quieren que veas", "canal": "Análisis Global", "termino": "geopolitica actual"},
                 {"titulo": "La base que nadie debía encontrar", "canal": "Intel Táctica", "termino": "tecnología militar"},
             ]
         }
@@ -373,6 +444,20 @@ class NeuroEngine:
             )
             formula_hook = formula_hook + _bloque_aperturas
 
+        # ROTACIÓN DE CIERRES: estructuras de cierre distintas en cada video.
+        _cierres = _seleccionar_cierres(nombre_canal, n=2)
+        _bloque_cierres = ""
+        if _cierres:
+            _bloque_cierres = (
+                "\n\n━━━ CIERRE OBLIGATORIO (VARIEDAD) ━━━\n"
+                "Cierra el guión usando UNA de estas estructuras (la que mejor cierre ESTE tema). "
+                "Rellénala con el contenido real del video. Genera un cierre NUEVO, no copies literal, "
+                "y NO uses siempre el mismo tipo de cierre en videos distintos:\n"
+                + "\n".join(f"  {i+1}. {c}" for i, c in enumerate(_cierres))
+                + "\nEl cierre debe ser ATEMPORAL (sin fechas relativas) y dejar al espectador con ganas "
+                  "de suscribirse, comentar o ver otro video."
+            )
+
         # Construir directriz completa
         directriz = f"""
 [DIRECTRIZ DE NEUROMARKETING — SISTEMA PINPINELA]
@@ -391,6 +476,7 @@ Aplica estos gatillos de forma natural en el guión:
 
 ━━━ 3. FÓRMULA DEL HOOK ━━━
 {formula_hook}
+{_bloque_cierres}
 
 ━━━ 4. PALABRAS DE ALTO IMPACTO NEUROLÓGICO ━━━
 Integra estas palabras de forma natural, no forzada:
