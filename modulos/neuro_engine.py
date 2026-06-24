@@ -11,6 +11,163 @@ import logging
 import time
 from datetime import datetime, timezone
 
+# ── BANCO DE ESTRUCTURAS DE APERTURA POR CANAL ────────────────────────────────
+# NO son frases fijas (esas se repetirían). Son ESTRUCTURAS/moldes que la IA
+# rellena fresco con el tema real de cada video → variedad infinita. Una semilla
+# por video fuerza a rotar entre ellas para que no se repita la misma apertura.
+# Cada canal tiene varias estructuras distintas; se prohíbe repetir la del video
+# anterior (rotación determinista por fecha/hora del video).
+APERTURAS_POR_CANAL = {
+    "La Viuda": [
+        "AFIRMACIÓN DIRECTA EN SEGUNDA PERSONA: declara una experiencia perturbadora como un hecho ya ocurrido, sin preguntar. Ej. de molde (NO copiar literal): 'Esa noche supiste que no estabas solo'.",
+        "ESCENA CONCRETA CON HORA: pinta un instante específico (lugar + hora exacta) y rómpelo con algo anómalo. Ej. de molde: 'Las 3:33. El pasillo vacío. Hasta que dejó de estarlo'.",
+        "DETALLE SENSORIAL: empieza por un sentido (olor, sonido, temperatura) que anuncia lo inexplicable. Ej. de molde: 'Primero fue el olor. Después, los pasos donde no debía haber nadie'.",
+        "OBJETO FUERA DE LUGAR: un objeto cotidiano que cambió solo y no tiene explicación. Ej. de molde: 'Cierras con llave cada noche. ¿Por qué amaneció abierta?'.",
+        "TESTIMONIO ANCLADO: presenta a alguien real (nombre + lugar) al borde de algo que no puede explicar.",
+        "CONTRADICCIÓN DE LA REALIDAD: dos hechos que no pueden ser ciertos a la vez, ambos lo son.",
+        "PREGUNTA INQUIETANTE (úsala con moderación, no siempre): una sola pregunta que planta el miedo sin responderla.",
+        "SILENCIO ROTO: describe una calma normal y el momento exacto en que algo la quiebra.",
+    ],
+    "Monkygraff": [
+        "CIFRA IMPACTANTE: abre con un número concreto que reordena el poder. Ej. de molde: 'Tres países concentran el 70% de un recurso que mueve la economía mundial'.",
+        "CONTRADICCIÓN OFICIAL: lo que dicen los mapas/medios vs lo que muestran los hechos. Ej. de molde: 'Los comunicados dicen una cosa. El movimiento real, otra'.",
+        "PREGUNTA TÁCTICA: una pregunta estratégica que obliga a seguir. Ej. de molde: '¿Por qué tres potencias enviaron flotas al mismo punto?'.",
+        "AFIRMACIÓN DE PODER: quién controla qué y por qué importa. Ej. de molde: 'Quien controle este corredor controla el comercio de medio continente'.",
+        "CONEXIÓN OCULTA: dos hechos que nadie unió y juntos revelan el tablero. Ej. de molde: 'Dos noticias que parecían sin relación revelan la verdadera jugada'.",
+        "GEOGRAFÍA DECISIVA: un punto en el mapa (estrecho, frontera, puerto) del que depende todo.",
+        "ACTOR INESPERADO: un país o grupo que nadie miraba y que acaba de cambiar el equilibrio.",
+        "RECURSO ESTRATÉGICO: un material/energía/ruta por el que se está jugando una guerra silenciosa.",
+    ],
+    "FiltradoMX": [
+        "CONFESIÓN DIRECTA: abre como quien revela algo que prometió callar. Ej. de molde: 'Nunca conté lo que pasó esa noche. Hasta hoy'.",
+        "DETALLE INCRIMINATORIO: un dato pequeño que lo cambia todo en la historia.",
+        "PREGUNTA AL ESPECTADOR: una pregunta que lo pone en el lugar del protagonista.",
+        "GIRO ANTICIPADO: adelanta que habrá una traición/revelación sin decir cuál.",
+        "ESCENA ÍNTIMA: un momento cotidiano que esconde algo turbio debajo.",
+        "ADVERTENCIA: avisa que lo que viene es incómodo de escuchar.",
+        "CITA TEXTUAL: arranca con algo que alguien dijo y no debió decir.",
+    ],
+    "LaesquinaRandom": [
+        "ABSURDO INMEDIATO: abre con una situación ridícula presentada como normal.",
+        "PREGUNTA TONTA-GENIAL: una pregunta absurda que da curiosidad. Ej. de molde: '¿Por qué nadie ha pensado en esto?'.",
+        "DATO RIDÍCULO: un 'hecho' exagerado y cómico que engancha.",
+        "EXAGERACIÓN: lleva algo cotidiano al extremo más absurdo.",
+        "GIRO CÓMICO: empieza serio y rómpelo con humor en la segunda frase.",
+        "LISTA IMPOSIBLE: anuncia un conteo de cosas absurdas que vienen.",
+    ],
+    "TuIALista": [
+        "DATO TÉCNICO IMPACTANTE: una capacidad o cifra de IA que sorprende. Ej. de molde: 'Esta herramienta hace en segundos lo que antes tomaba semanas'.",
+        "ANTES Y DESPUÉS: contrasta cómo se hacía algo vs cómo se hace ahora con IA.",
+        "PREGUNTA ÚTIL: una pregunta práctica que el espectador se ha hecho. Ej. de molde: '¿Y si pudieras automatizar esto sin saber programar?'.",
+        "PROMESA CONCRETA: lo que el espectador va a poder hacer al terminar el video.",
+        "REVELACIÓN DE HERRAMIENTA: presenta algo que pocos conocen aún.",
+        "ERROR COMÚN: el fallo que casi todos cometen y cómo evitarlo.",
+    ],
+    "Umbral Alterno": [
+        "PREMISA HIPOTÉTICA: abre con el '¿qué pasaría si...?' del escenario, atemporal.",
+        "PUNTO DE DIVERGENCIA: el instante exacto en que la historia/realidad se bifurca.",
+        "CONSECUENCIA IMPACTANTE: adelanta el resultado extremo del escenario.",
+        "COMPARACIÓN DE MUNDOS: contrasta el mundo real con el alterno.",
+        "PREGUNTA EXISTENCIAL: una pregunta grande sobre el destino o las decisiones.",
+        "ESCENARIO EN MARCHA: describe el mundo alterno como si ya existiera.",
+    ],
+}
+
+def _indice_rotacion(n_opciones, desfase=0):
+    """Índice de rotación que recorre TODO el banco aunque los videos se generen
+    a intervalos regulares. Avanza de forma fina (cada 30s) para no quedar atrapado
+    en pocas opciones por la periodicidad de los intervalos entre videos."""
+    try:
+        ahora = datetime.now()
+        contador = int(ahora.timestamp() // 30)  # avanza cada 30 segundos
+        return (contador + desfase) % max(1, n_opciones)
+    except Exception:
+        return desfase % max(1, n_opciones)
+
+def _seleccionar_aperturas(marca, n=3):
+    """Devuelve estructuras de apertura ROTADAS para este video (variedad).
+    La rotación recorre todo el banco; la IA rellena el molde con el tema real."""
+    bank = None
+    for k, v in APERTURAS_POR_CANAL.items():
+        if k.lower().strip() == (marca or "").lower().strip():
+            bank = v; break
+    if not bank:
+        return []
+    inicio = _indice_rotacion(len(bank), desfase=0)
+    seleccion = [bank[(inicio + i) % len(bank)] for i in range(min(n, len(bank)))]
+    return seleccion
+
+
+# ── BANCO DE ESTRUCTURAS DE CIERRE POR CANAL ──────────────────────────────────
+# Igual que las aperturas: moldes que la IA rellena con el contenido real del
+# video → cierres siempre distintos. Rotación por tiempo para no repetir. El
+# cierre busca retención (suscripción / siguiente video / comentarios) sin sonar
+# siempre igual y sin frases de fecha que envejezcan.
+CIERRES_POR_CANAL = {
+    "La Viuda": [
+        "PREGUNTA QUE PERSIGUE: cierra con una pregunta inquietante que el espectador se llevará a la cama. NO la respondas.",
+        "HILO SUELTO: deja un detalle sin explicar que invita a comentar teorías.",
+        "VUELTA AL INICIO: conecta el final con la imagen del hook, dándole un giro perturbador.",
+        "ADVERTENCIA FINAL: cierra avisando que esto podría pasarle a quien escucha.",
+        "DATO QUE ESCALA: revela un último dato que hace todo más inquietante.",
+        "INVITACIÓN A LA OSCURIDAD: pide al espectador que comparta su propia experiencia similar en comentarios.",
+    ],
+    "Monkygraff": [
+        "PRÓXIMO MOVIMIENTO: cierra señalando qué hecho concreto vigilar a futuro (atemporal).",
+        "PREGUNTA ESTRATÉGICA: deja una pregunta geopolítica abierta para los comentarios.",
+        "IMPLICACIÓN PERSONAL: conecta el tema con cómo afecta al espectador o a su región.",
+        "ESCENARIO ABIERTO: plantea dos desenlaces posibles y pregunta cuál creen que ocurrirá.",
+        "CONEXIÓN PENDIENTE: insinúa otra pieza del tablero que se analizará en otro video.",
+        "LLAMADO A SEGUIR: invita a suscribirse para no perder el siguiente análisis del tablero.",
+    ],
+    "FiltradoMX": [
+        "GIRO FINAL: cierra con una última revelación que reconfigura todo lo contado.",
+        "PREGUNTA AL ESPECTADOR: pídele que juzgue o tome partido en comentarios.",
+        "HILO PARA OTRO CASO: insinúa que hay más historias como esta por contar.",
+        "MORALEJA INCÓMODA: cierra con una reflexión que deja pensando.",
+        "PREGUNTA ABIERTA: '¿Qué habrías hecho tú?' adaptada al caso.",
+        "INVITACIÓN A COMPARTIR: pide que cuenten si vivieron algo parecido.",
+    ],
+    "LaesquinaRandom": [
+        "REMATE CÓMICO: cierra con el chiste o giro absurdo más fuerte.",
+        "PREGUNTA RIDÍCULA: lanza una pregunta tonta-genial para comentarios.",
+        "LLAMADO JUGUETÓN: pide suscripción de forma cómica, no seria.",
+        "EXAGERACIÓN FINAL: cierra llevando la premisa al absurdo total.",
+        "RETO AL ESPECTADOR: propón algo absurdo para que comenten.",
+        "CLIFFHANGER TONTO: deja una mini intriga cómica para el próximo video.",
+    ],
+    "TuIALista": [
+        "RESUMEN ACCIONABLE: cierra con el paso concreto que el espectador debe dar ya.",
+        "PRÓXIMA HERRAMIENTA: insinúa otra herramienta/truco que verás en otro video.",
+        "PREGUNTA PRÁCTICA: pregunta qué les gustaría automatizar, para comentarios.",
+        "PROMESA CUMPLIDA: recuerda lo que aprendieron e invita a aplicarlo.",
+        "LLAMADO A SUSCRIBIRSE: por más tutoriales/herramientas de IA.",
+        "RETO PRÁCTICO: propón que prueben lo enseñado y comenten el resultado.",
+    ],
+    "Umbral Alterno": [
+        "PREGUNTA EXISTENCIAL: cierra con una gran pregunta sobre el destino o las decisiones.",
+        "ESCENARIO ABIERTO: deja el mundo alterno sin resolver, invitando a imaginar.",
+        "VUELTA A LA REALIDAD: contrasta el final con nuestro mundo y deja pensando.",
+        "PRÓXIMO UMBRAL: insinúa otro escenario hipotético para un futuro video.",
+        "DECISIÓN AL ESPECTADOR: pregunta qué habrían elegido ellos.",
+        "REFLEXIÓN FINAL: cierra con una idea que resuena más allá del video.",
+    ],
+}
+
+def _seleccionar_cierres(marca, n=2):
+    """Devuelve estructuras de CIERRE rotadas para este video (variedad).
+    La IA rellena el molde con el contenido real del video."""
+    bank = None
+    for k, v in CIERRES_POR_CANAL.items():
+        if k.lower().strip() == (marca or "").lower().strip():
+            bank = v; break
+    if not bank:
+        return []
+    # desfase distinto al de aperturas para que apertura y cierre no roten igual
+    inicio = _indice_rotacion(len(bank), desfase=3)
+    seleccion = [bank[(inicio + i) % len(bank)] for i in range(min(n, len(bank)))]
+    return seleccion
+
 # ── ADN DE NEUROMARKETING POR CANAL ───────────────────────────────────────────
 # Cada canal tiene gatillos psicológicos específicos basados en su nicho.
 # Escalable: agregar nuevos canales sin tocar el resto del código.
@@ -26,8 +183,13 @@ ADN_NEURO = {
         "formula_hook": (
             "Abre con una experiencia personal perturbadora en segunda persona. "
             "Nunca expliques en el hook — planta la semilla del miedo inexplicable. "
-            "Ejemplo: 'Alguna vez te has despertado a las 3 de la mañana sintiendo que alguien te observa. "
-            "Y no había nadie. O eso creías.'"
+            "VARÍA la apertura en cada video, NO empieces siempre con '¿Alguna vez...?'. "
+            "Alterna entre: (a) una afirmación directa ('Esa noche supiste que no estabas solo en casa'), "
+            "(b) una escena concreta ('Las 3:33 de la madrugada. El pasillo estaba vacío. Hasta que dejó de estarlo'), "
+            "(c) un detalle sensorial ('Primero fue el olor. Después, el sonido de pasos donde no debía haber nadie'), "
+            "(d) una segunda persona inquietante ('Cierras la puerta con llave todas las noches. Entonces, ¿por qué amaneció abierta?'), "
+            "(e) ocasionalmente una pregunta, pero no siempre. "
+            "Nunca repitas la misma estructura de apertura que un video anterior."
         ),
         "ritmo_cortes": {"short": 4, "largo": 10},
         "palabras_gatillo": [
@@ -61,17 +223,27 @@ ADN_NEURO = {
         ],
         "estructura_narrativa": "revelacion_progresiva",
         "formula_hook": (
-            "Abre con un dato concreto e impactante ocurrido en las últimas 72 horas que contradice la narrativa oficial. "
-            "Usa números específicos, nombres de países y fechas reales. "
-            "Ejemplo: 'En las últimas 48 horas, tres movimientos que los medios no conectaron acaban de redefinir el mapa de poder global. "
-            "Y ninguno de ellos apareció en los titulares.'"
+            "Abre con un dato concreto, un número específico o una conexión que contradice la narrativa oficial. "
+            "Usa cifras, nombres de países y hechos verificables. "
+            "PROHIBIDO ABSOLUTAMENTE abrir con marcos de tiempo relativos que envejecen el video: NO uses "
+            "'en las últimas 72 horas', 'en las últimas 48 horas', 'en las últimas horas', 'esta semana', "
+            "'recientemente', 'acaba de ocurrir', 'hace unos días' ni nada que ate el video a una fecha cercana "
+            "(el video se ve durante meses y esas frases lo hacen parecer viejo). "
+            "En su lugar, abre con el HECHO o la TENSIÓN en sí, atemporal. "
+            "VARÍA la apertura en cada video — alterna entre estas estructuras: "
+            "(a) una cifra impactante ('Tres países acaban de mover el 40% de las reservas mundiales de litio'), "
+            "(b) una contradicción ('Los mapas oficiales muestran una cosa. El movimiento de tropas muestra otra'), "
+            "(c) una pregunta táctica ('¿Por qué tres potencias enviaron flotas al mismo punto del Pacífico?'), "
+            "(d) una afirmación de poder ('Quien controle este corredor de 80 km controla el comercio de medio continente'), "
+            "(e) una conexión oculta ('Dos noticias que nadie unió revelan el verdadero tablero'). "
+            "Nunca repitas la misma estructura de apertura que un video anterior."
         ),
         "ritmo_cortes": {"short": 3, "largo": 12},
         "palabras_gatillo": [
-            "nadie lo reportó", "en las últimas horas", "esto cambia todo",
+            "nadie lo conectó", "esto cambia el tablero",
             "el mapa real", "lo que no te dicen", "movimiento táctico",
-            "fuentes verificadas", "antes de que lo borren", "señal clara",
-            "datos clasificados", "acaba de ocurrir", "conexión que nadie hizo"
+            "fuentes verificadas", "el dato que importa", "señal clara",
+            "la jugada de fondo", "la conexión que nadie hizo", "el verdadero objetivo"
         ],
         "temas_prioritarios_2026": [
             "Guerra Rusia-Ucrania y minerales estratégicos",
@@ -92,7 +264,7 @@ ADN_NEURO = {
             "Como si fuera información clasificada que acaba de filtrarse."
         ),
         "arco_retencion_largo": [
-            "0-2min: Dato impactante ocurrido HOY + promesa de análisis exclusivo que nadie más hará",
+            "0-2min: Dato impactante y específico + promesa de análisis exclusivo que nadie más hará (SIN fechas relativas que envejezcan)",
             "2-8min: Contexto geopolítico — por qué este momento es diferente a todo lo anterior",
             "8-15min: Análisis táctico profundo — conexiones no obvias entre eventos aparentemente separados",
             "15-22min: El dinero detrás de la guerra — quién financia, quién gana, quién pierde",
@@ -111,146 +283,6 @@ ADN_NEURO = {
     #     "estetica_miniatura": "",
     #     "arco_retencion_largo": [],
     # },
-
-    "FiltradoMX": {
-        "gatillos_primarios": [
-            "morbo_social",
-            "indignacion_moral",
-            "identificacion_personal",
-            "loop_tension_alivio",
-        ],
-        "estructura_narrativa": "revelacion_escandalosa_progresiva",
-        "formula_hook": (
-            "Abre con la confesión o el momento más fuerte de la historia, en primera persona. "
-            "Nunca reveles el final en el hook — planta la traición o el secreto y deja la pregunta abierta. "
-            "Ejemplo: 'Descubrí que mi esposo me engañaba. Lo que no sabía es que la otra persona estaba dentro de mi propia casa.'"
-        ),
-        "ritmo_cortes": {"short": 3, "largo": 8},
-        "palabras_gatillo": [
-            "nunca lo imaginé", "lo descubrí por accidente", "todo era mentira",
-            "delante de mis ojos", "jamás lo perdoné", "la verdad salió",
-            "me enteré demasiado tarde", "no fui la única", "lo tenía planeado",
-            "en mi propia cara", "confié en la persona equivocada", "nadie me creyó"
-        ],
-        "estetica_miniatura": (
-            "Paleta: tonos cálidos con contraste dramático, rojo emocional, sombras. "
-            "Sin rostros identificables. Objetos cargados de historia: anillo en el suelo, "
-            "mensaje en un teléfono, maleta hecha, foto rota. Sensación de drama íntimo expuesto."
-        ),
-        "arco_retencion_largo": [
-            "0-2min: El momento de la revelación + promesa de cómo se descubrió todo",
-            "2-8min: El contexto — cómo era todo 'antes', construyendo la confianza que será traicionada",
-            "8-15min: Las primeras señales que se ignoraron — el espectador ve venir lo que la víctima no vio",
-            "15-22min: La confrontación / el descubrimiento completo — el clímax emocional",
-            "22-28min: Las consecuencias y lo que nadie esperaba — el giro final",
-            "28-30min: La lección o la pregunta abierta — invita a juzgar y comentar"
-        ],
-    },
-
-    "LaesquinaRandom": {
-        "gatillos_primarios": [
-            "curiosidad_compulsiva",
-            "efecto_revelacion",
-            "sorpresa_cognitiva",
-            "valor_compartible",
-        ],
-        "estructura_narrativa": "lista_escalada_de_impacto",
-        "formula_hook": (
-            "Abre con el dato más increíble e improbable, planteado como pregunta o afirmación que rompe el esquema. "
-            "Promete que lo que sigue es aún más sorprendente. "
-            "Ejemplo: 'Hay un lugar en la Tierra donde llueve diamantes. Y no es el dato más raro de este video.'"
-        ),
-        "ritmo_cortes": {"short": 3, "largo": 7},
-        "palabras_gatillo": [
-            "no vas a creerlo", "la ciencia no lo explica", "esto te va a sorprender",
-            "casi nadie lo sabe", "el dato que cambia todo", "suena imposible pero",
-            "nunca lo habías pensado", "y eso no es todo", "espera a ver el siguiente",
-            "rompió todos los récords", "desafía la lógica", "más raro de lo que crees"
-        ],
-        "estetica_miniatura": (
-            "Paleta: colores vivos y saturados, alto contraste, llamativo. "
-            "El objeto/fenómeno curioso como protagonista, aislado y ampliado. "
-            "Estilo brillante tipo infografía visual. Genera el '¿qué es eso?' al instante."
-        ),
-        "arco_retencion_largo": [
-            "0-2min: El dato más fuerte de entrada + promesa de varios igual de increíbles",
-            "2-8min: Datos en escala ascendente de rareza, cada uno con su mini-revelación",
-            "8-15min: El bloque central — los datos más sorprendentes y menos conocidos",
-            "15-22min: Conexiones inesperadas entre los datos — el '¿cómo se relacionan?'",
-            "22-28min: El dato cumbre, el más impactante reservado para el final",
-            "28-30min: Cierre con pregunta que invita a buscar más / comentar el favorito"
-        ],
-    },
-
-    "TuIALista": {
-        "gatillos_primarios": [
-            "urgencia_informativa",
-            "autoridad_tecnica",
-            "fomo_tecnologico",
-            "efecto_revelacion",
-        ],
-        "estructura_narrativa": "novedad_con_implicacion_practica",
-        "formula_hook": (
-            "Abre con la herramienta o avance de IA más reciente y su implicación concreta para el espectador. "
-            "Sin hype vacío: dato real + por qué importa AHORA. NUNCA uses imágenes de robots, cerebros o Matrix. "
-            "Ejemplo: 'Esta IA que salió esta semana hace en 10 segundos lo que a un humano le toma 8 horas. Y ya puedes usarla gratis.'"
-        ),
-        "ritmo_cortes": {"short": 3, "largo": 8},
-        "palabras_gatillo": [
-            "acaba de salir", "esto lo cambia todo", "ya puedes usarlo",
-            "antes que nadie", "la herramienta que necesitas", "en segundos",
-            "gratis y sin código", "lo que viene ahora", "el futuro ya llegó",
-            "nadie está hablando de esto", "esto reemplaza", "pruébalo hoy"
-        ],
-        "estetica_miniatura": (
-            "Paleta: cian eléctrico, azul tecnológico, fondo oscuro limpio, acentos neón. "
-            "NUNCA robots humanoides, cerebros ni Matrix. Interfaces, pantallas, flujos de datos abstractos, "
-            "dispositivos reales. Estilo limpio y moderno tipo producto tech. Sensación de novedad útil."
-        ),
-        "arco_retencion_largo": [
-            "0-2min: El avance/herramienta más reciente + qué problema real resuelve",
-            "2-8min: Cómo funciona en términos prácticos, sin jerga innecesaria",
-            "8-15min: Casos de uso concretos — qué puedes hacer TÚ con esto hoy",
-            "15-22min: Comparación con lo anterior y por qué este momento es distinto",
-            "22-28min: Implicaciones a futuro — hacia dónde va esto sin caer en hype",
-            "28-30min: Recomendación accionable + qué vigilar después"
-        ],
-    },
-    "Umbral Alterno": {
-        "gatillos_primarios": [
-            "curiosidad_existencial",
-            "fascinacion_catastrofica",
-            "plausibilidad_inquietante",
-            "efecto_revelacion",
-        ],
-        "estructura_narrativa": "escenario_hipotetico_documental",
-        "formula_hook": (
-            "Abre en el momento MÁS perturbador del escenario, en presente, como si ya estuviera "
-            "ocurriendo. Sin explicar aún qué pasó. Imagen impactante + consecuencia inesperada + "
-            "pregunta que deja el loop abierto. Tono documental serio, nunca catastrofista barato. "
-            "Ejemplo: 'Las pantallas están apagadas. Los aviones, detenidos. En 47 países, algo se ha roto.'"
-        ),
-        "ritmo_cortes": {"short": 3, "largo": 9},
-        "palabras_gatillo": [
-            "imagina que", "qué pasaría si", "en cuestión de horas", "nadie lo vio venir",
-            "todo cambió", "el primer día", "lo que vino después", "pero eso fue antes",
-            "los datos lo confirman", "esto ya casi ocurre", "el mundo que conocías", "y entonces"
-        ],
-        "estetica_miniatura": (
-            "Paleta: desaturada con UN color de acento dominante (azul frío o ámbar), fondo oscuro. "
-            "Escenario impactante hiperrealista (ciudad a oscuras, megaciudad inundada, cielo anómalo). "
-            "Sin rostros, pocas o ninguna persona. Texto de 4 palabras en mayúscula que NO completan la "
-            "historia. Estilo documental cinematográfico, sensación de quietud inquietante."
-        ),
-        "arco_retencion_largo": [
-            "0-2min: El momento más perturbador del escenario (gancho en presente, loop abierto)",
-            "2-5min: El mundo HOY — cómo funciona el sistema real con datos verificables",
-            "5-12min: El evento — el momento exacto en que empieza la simulación",
-            "12-20min: La cascada — consecuencias en escalada temporal, cada vez más profundas",
-            "20-27min: El giro — la implicación que el espectador no había considerado",
-            "27-30min: Cierre + firma 'Esto fue una simulación. Por ahora.' + pregunta retórica"
-        ],
-    },
 }
 
 # ── ESTRATEGIAS DE RETENCIÓN UNIVERSAL ────────────────────────────────────────
@@ -316,11 +348,7 @@ class NeuroEngine:
             # Términos de búsqueda basados en el nicho
             terminos = {
                 "La Viuda": ["terror psicologico", "misterio sin resolver", "caso real perturbador"],
-                "Monkygraff": ["geopolitica 2026", "conflicto internacional", "analisis tactico"],
-                "FiltradoMX": ["historias de infidelidad", "confesiones reales", "drama traicion"],
-                "LaesquinaRandom": ["datos curiosos", "cosas que no sabias", "hechos sorprendentes"],
-                "TuIALista": ["nuevas herramientas IA", "inteligencia artificial novedades", "IA tutorial"],
-                "Umbral Alterno": ["que pasaria si", "escenario hipotetico", "simulacion futuro"],
+                "Monkygraff": ["geopolitica actual", "conflicto internacional", "analisis tactico"]
             }
             busquedas = terminos.get(marca, ["videos virales"])
 
@@ -374,30 +402,10 @@ class NeuroEngine:
                 {"titulo": "La historia que nadie quiere escuchar", "canal": "Paranoia TV", "termino": "terror psicologico"},
             ],
             "Monkygraff": [
-                {"titulo": "El movimiento que cambió el mapa en 48 horas", "canal": "Geopolitica Táctica", "termino": "conflicto internacional"},
-                {"titulo": "Lo que los medios no conectaron esta semana", "canal": "Análisis Global", "termino": "geopolitica 2026"},
+                {"titulo": "El movimiento que está redibujando el mapa de poder", "canal": "Geopolitica Táctica", "termino": "conflicto internacional"},
+                {"titulo": "La conexión que los medios no quieren que veas", "canal": "Análisis Global", "termino": "geopolitica actual"},
                 {"titulo": "La base que nadie debía encontrar", "canal": "Intel Táctica", "termino": "tecnología militar"},
-            ],
-            "FiltradoMX": [
-                {"titulo": "Descubrí la verdad el día de mi boda", "canal": "Confesiones Reales", "termino": "infidelidad"},
-                {"titulo": "Mi mejor amiga me traicionó con él", "canal": "Drama MX", "termino": "traicion"},
-                {"titulo": "El mensaje que destruyó a mi familia", "canal": "Historias Filtradas", "termino": "confesiones"},
-            ],
-            "LaesquinaRandom": [
-                {"titulo": "El lugar donde llueven diamantes", "canal": "Datos Locos", "termino": "datos curiosos"},
-                {"titulo": "Por qué este animal no debería existir", "canal": "Curiosidades", "termino": "hechos sorprendentes"},
-                {"titulo": "El experimento que rompió la ciencia", "canal": "Random Facts", "termino": "cosas que no sabias"},
-            ],
-            "TuIALista": [
-                {"titulo": "Esta IA gratis reemplaza a 5 herramientas", "canal": "IA Práctica", "termino": "herramientas IA"},
-                {"titulo": "Lo que esta IA hace en 10 segundos", "canal": "Tech Hoy", "termino": "inteligencia artificial"},
-                {"titulo": "La herramienta que nadie está usando aún", "canal": "Futuro IA", "termino": "IA novedades"},
-            ],
-            "Umbral Alterno": [
-                {"titulo": "Qué pasaría si el internet cayera 7 días", "canal": "Simulaciones", "termino": "escenario hipotetico"},
-                {"titulo": "El mundo si esa guerra nunca hubiera pasado", "canal": "Historia Alterna", "termino": "historia alternativa"},
-                {"titulo": "Cómo será tu ciudad en el año 2075", "canal": "Futuro Probable", "termino": "simulacion futuro"},
-            ],
+            ]
         }
         return respaldo.get(marca, respaldo["La Viuda"])
 
@@ -420,6 +428,36 @@ class NeuroEngine:
         estetica = adn.get("estetica_miniatura", "")
         arco = adn.get("arco_retencion_largo", [])
 
+        # ROTACIÓN DE APERTURAS: estructuras distintas en cada video (variedad infinita).
+        # La IA rellena el molde con el tema real; la rotación evita repetir aperturas.
+        _aperturas = _seleccionar_aperturas(nombre_canal, n=3)
+        if _aperturas:
+            _bloque_aperturas = (
+                "\n\n━━━ APERTURA OBLIGATORIA (VARIEDAD) ━━━\n"
+                "Para ESTE video, abre el guión usando UNA de estas estructuras (elige la que mejor "
+                "encaje con el tema, pero NO uses siempre la misma en videos distintos). Rellénala con "
+                "el tema real y específico de hoy. Genera una apertura NUEVA, no copies los ejemplos:\n"
+                + "\n".join(f"  {i+1}. {a}" for i, a in enumerate(_aperturas))
+                + "\nNUNCA abras con frases de tiempo relativo que envejecen el video "
+                  "('en las últimas 72 horas', 'esta semana', 'recientemente', 'acaba de ocurrir', "
+                  "'hace unos días'). El video se ve durante meses: la apertura debe ser ATEMPORAL."
+            )
+            formula_hook = formula_hook + _bloque_aperturas
+
+        # ROTACIÓN DE CIERRES: estructuras de cierre distintas en cada video.
+        _cierres = _seleccionar_cierres(nombre_canal, n=2)
+        _bloque_cierres = ""
+        if _cierres:
+            _bloque_cierres = (
+                "\n\n━━━ CIERRE OBLIGATORIO (VARIEDAD) ━━━\n"
+                "Cierra el guión usando UNA de estas estructuras (la que mejor cierre ESTE tema). "
+                "Rellénala con el contenido real del video. Genera un cierre NUEVO, no copies literal, "
+                "y NO uses siempre el mismo tipo de cierre en videos distintos:\n"
+                + "\n".join(f"  {i+1}. {c}" for i, c in enumerate(_cierres))
+                + "\nEl cierre debe ser ATEMPORAL (sin fechas relativas) y dejar al espectador con ganas "
+                  "de suscribirse, comentar o ver otro video."
+            )
+
         # Construir directriz completa
         directriz = f"""
 [DIRECTRIZ DE NEUROMARKETING — SISTEMA PINPINELA]
@@ -438,6 +476,7 @@ Aplica estos gatillos de forma natural en el guión:
 
 ━━━ 3. FÓRMULA DEL HOOK ━━━
 {formula_hook}
+{_bloque_cierres}
 
 ━━━ 4. PALABRAS DE ALTO IMPACTO NEUROLÓGICO ━━━
 Integra estas palabras de forma natural, no forzada:
@@ -480,19 +519,8 @@ def _describir_gatillo(gatillo):
         "loop_tension_alivio": "Crea tensión sostenida con micro-alivios cada 30-45 segundos que enganchan.",
         "efecto_testigo": "Ancla la historia a personas reales con nombres y fechas específicas.",
         "autoridad_tactica": "El narrador demuestra saber más. Usa datos precisos y jerga especializada.",
-        "autoridad_tecnica": "Demuestra dominio técnico real con datos concretos, nombres y cifras verificables.",
-        "urgencia_informativa": "Todo sucede AHORA. Usa tiempos presentes y marcadores temporales recientes.",
-        "efecto_revelacion": "Presenta información como si fuera exclusiva y temporalmente disponible.",
+        "urgencia_informativa": "Transmite que esto importa AHORA por su relevancia, sin frases de fecha relativa ('últimas horas', 'esta semana') que envejecen el video. La urgencia viene del peso del hecho, no de la fecha.",
+        "efecto_revelacion": "Presenta la información como exclusiva y valiosa, algo que pocos conectaron, sin sugerir que 'desaparecerá' o que es de una fecha concreta.",
         "prueba_social_inversa": "Los que saben ya lo saben. ¿Tú eres de los que saben?",
-        "morbo_social": "El espectador no puede dejar de mirar el drama ajeno. Expón el conflicto sin juzgar.",
-        "indignacion_moral": "Activa el sentido de justicia: presenta la traición/injusticia para que el espectador reaccione.",
-        "identificacion_personal": "Haz que el espectador piense 'esto me pasó a mí' o 'le pasó a alguien que conozco'.",
-        "curiosidad_compulsiva": "Abre un bucle de información que el cerebro NECESITA cerrar para sentirse satisfecho.",
-        "sorpresa_cognitiva": "Rompe el esquema mental: el dato debe contradecir lo que se da por sentado.",
-        "valor_compartible": "El contenido debe dar ganas de compartirlo ('tienes que ver esto').",
-        "fomo_tecnologico": "Miedo a quedarse atrás: si no conoces esta herramienta, otros ya te llevan ventaja.",
-        "curiosidad_existencial": "Activa preguntas profundas sobre el mundo, el futuro y lo que podría ser. El cerebro no puede dejar un '¿y si?' sin explorar.",
-        "fascinacion_catastrofica": "El espectador no puede dejar de mirar el escenario que se desmorona — fascinación por la magnitud, no morbo barato.",
-        "plausibilidad_inquietante": "Ancla el escenario hipotético en datos y hechos REALES para que se sienta posible, no fantasía. Lo plausible inquieta más que lo imposible.",
     }
     return descripciones.get(gatillo, "Aplica con naturalidad según el contexto.")
