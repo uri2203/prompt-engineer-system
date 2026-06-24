@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "esperando_cuota",
   "total": 6,
   "completados": 0,
   "fallidos": 1,
-  "trabajo_actual": "Reintentando encolado en 0s",
-  "mensaje": "Video 1 (FiltradoMX 16:9) falló al encolar 3 veces — se omite y se continúa.",
+  "trabajo_actual": "Esperando cuota de Gemini (se reintenta periódicamente)",
+  "mensaje": "La API de Gemini se quedó sin cuota (límite diario). El lote se reanudará solo cuando la cuota se restablezca.",
   "resumen": "FiltradoMX: 0s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
   "historial": []
 }
