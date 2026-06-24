@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "esperando_cuota",
   "total": 7,
   "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "",
-  "mensaje": "Lote creado, iniciando produccion.",
+  "trabajo_actual": "Esperando cuota de Gemini (se reintenta periódicamente)",
+  "mensaje": "La API de Gemini se quedó sin cuota (límite diario). El lote se reanudará solo cuando la cuota se restablezca.",
   "resumen": "FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
   "historial": []
 }
