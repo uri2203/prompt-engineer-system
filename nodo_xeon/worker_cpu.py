@@ -1,4 +1,12 @@
 import sys
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
+# ║  VERSION_WORKER = "2026-06-23_A"                                   ║
+# ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
+# ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
+# ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
+# ╚══════════════════════════════════════════════════════════════════╝
+VERSION_WORKER = "2026-06-23_A"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -3297,9 +3305,10 @@ def procesar():
             pass
 
 
-print("⚡ NODO XEON ONLINE - FIX ANTI-BUCLE APLICADO")
+print("⚡ NODO XEON ONLINE")
 print("=" * 60)
-print(">>> WORKER VERSION: SYNC-FIX-10 (clips estirados a duracion real) <<<")
+print(f">>> VERSION_WORKER: {VERSION_WORKER} <<<")
+print(">>> Video completo siempre + orden del lote + re-hook en pausa <<<")
 print("=" * 60)
 while True:
     procesar()
