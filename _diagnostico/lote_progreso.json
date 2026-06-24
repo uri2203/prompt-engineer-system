@@ -1,20 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 9,
-  "completados": 1,
-  "fallidos": 3,
-  "trabajo_actual": "Generando video 5/9 (LaesquinaRandom 16:9 28min)",
-  "mensaje": "Produccion del video 5 iniciada.",
-  "resumen": "Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "Monkygraff",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1949.5,
-      "hora": "02:34"
-    }
-  ]
+  "estado_lote": "inactivo",
+  "total": 0,
+  "completados": 0,
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
