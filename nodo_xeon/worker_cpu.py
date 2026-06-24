@@ -1331,26 +1331,12 @@ def procesar():
                 if _viejos:
                     print(f"🧹 [LIMPIEZA] {len(_viejos)} ensamblaje(s) viejo(s) (>6h) descartado(s) de la cola local — no pertenecen al lote actual.")
 
-            if locales:
-                # Descartar ensamblajes cuya MARCA no coincide con la del lote actual.
-                # Si el lote está produciendo "Monkygraff" pero en la cola local quedó
-                # un ensamblaje de "La Viuda" (de una corrida anterior), procesarlo haría
-                # un video del canal equivocado. Se descartan esos hasta hallar el correcto.
-                _marca_lote = _marca_esperada_del_lote()
-                if _marca_lote:
-                    _quedan = []
-                    for _arch in locales:
-                        try:
-                            with open(_arch, encoding="utf-8") as _f:
-                                _m_arch = (json.load(_f) or {}).get("marca", "")
-                            if _m_arch and _m_arch.lower().strip() != _marca_lote.lower().strip():
-                                os.remove(_arch)
-                                print(f"🧹 [LIMPIEZA] Ensamblaje de '{_m_arch}' descartado (el lote produce '{_marca_lote}').")
-                            else:
-                                _quedan.append(_arch)
-                        except Exception:
-                            _quedan.append(_arch)
-                    locales = _quedan
+            # NOTA: NO se descartan ensamblajes por "marca distinta a la del lote".
+            # Eso era riesgoso: mientras el worker arma el ensamblaje de un canal, el
+            # orquestador puede avanzar al siguiente, y un ensamblaje VÁLIDO en curso
+            # se vería como "de otro canal" y se borraría (perdiendo el video). El
+            # descarte por EDAD (>6h, arriba) es suficiente y seguro para limpiar
+            # basura de sesiones viejas sin tocar los ensamblajes legítimos en curso.
 
             if locales:
                 archivo_local = locales[0]
@@ -1439,8 +1425,26 @@ def procesar():
                 texto_locucion = tarea.get("texto_locucion", "")
                 marca_audio    = tarea.get("marca", "La Viuda")
 
+                # Reconstruir el texto desde las escenas si vino vacío (red de seguridad)
+                if not texto_locucion and tarea.get("escenas_texto"):
+                    texto_locucion = " ".join(t for t in tarea.get("escenas_texto", []) if t)
+                if not texto_locucion and tarea.get("escenas"):
+                    texto_locucion = " ".join(e.get("texto_locucion","") for e in tarea.get("escenas", []) if e.get("texto_locucion"))
+
                 if not texto_locucion:
-                    print("⚠️ No hay texto de locución en la tarea.")
+                    # Sin texto no se puede generar voz. Reportar como finalizado (con error)
+                    # para NO colgar al orquestador esperando este video para siempre.
+                    print("⚠️ No hay texto de locución en la tarea — reportando para no bloquear el lote.")
+                    _diag["errores"].append("Ensamblaje sin texto de locución: video no generado.")
+                    try: subir_diagnostico_video(_diag)
+                    except Exception: pass
+                    _id_orig = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+                    for _tid in {tarea_id, _id_orig}:
+                        try:
+                            requests.post(f"{RENDER_URL}/api/nodo/tarea_completada",
+                                          json={"tarea_id": _tid, "estado": "finalizado"}, timeout=15)
+                        except Exception:
+                            pass
                     return
 
                 carpetas = [
@@ -2433,14 +2437,25 @@ def procesar():
                         _dur_real = _obtener_duracion_audio_simple(ruta_final)
                     except Exception:
                         _dur_real = 0.0
-                    requests.post(
-                        f"{RENDER_URL}/api/nodo/tarea_completada",
-                        json={"tarea_id": tarea_id, "estado": "finalizado",
-                              "duracion_real_seg": round(_dur_real, 1),
-                              "marca": marca_audio, "formato": formato_ensamblaje},
-                        timeout=30
-                    )
-                    print(f"✅ [TAREA {tarea_id}] Cerrada y purgada del servidor en la nube.")
+                    # CRÍTICO PARA EL ORDEN DEL LOTE: el orquestador espera el tarea_id
+                    # ORIGINAL (el de la orden de imágenes). El ensamblaje tiene id
+                    # "<original>_asm". Si reportáramos "_asm", el orquestador NUNCA vería
+                    # completado el video original y avanzaría al siguiente canal al terminar
+                    # solo las IMÁGENES, dejando este video a medias y repitiendo canal.
+                    # Reportamos AMBOS ids para que Render cierre el correcto.
+                    _id_original = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+                    for _tid in {tarea_id, _id_original}:
+                        try:
+                            requests.post(
+                                f"{RENDER_URL}/api/nodo/tarea_completada",
+                                json={"tarea_id": _tid, "estado": "finalizado",
+                                      "duracion_real_seg": round(_dur_real, 1),
+                                      "marca": marca_audio, "formato": formato_ensamblaje},
+                                timeout=30
+                            )
+                        except Exception:
+                            pass
+                    print(f"✅ [TAREA {tarea_id}] Cerrada (reportada como {_id_original}).")
                     # Completar y subir el diagnóstico del video a la rama diagnostico
                     _diag["fin"] = time.strftime("%Y-%m-%d %H:%M:%S")
                     _diag["duracion_real_seg"] = round(_dur_real, 1)
@@ -3213,41 +3228,51 @@ def procesar():
                         json=payload_upload, timeout=400
                     )
                     
-                    # 🛑 FIX MAESTRO ANTI-BUCLE: Notificamos también aquí por si acaso tu servidor usa este endpoint para cerrar
-                    requests.post(
-                        f"{RENDER_URL}/api/nodo/tarea_completada",
-                        json={"tarea_id": tarea_id, "estado": "finalizado"},
-                        timeout=30
-                    )
-
-                    # ENCOLAR EL ENSAMBLAJE LOCALMENTE (no depende de /tmp de Render, que es efímero).
-                    # El worker tiene todos los datos, así que arma el ensamblaje y lo guarda en disco local.
-                    if tarea.get("texto_locucion") or tarea.get("origen", "").startswith("bot"):
-                        try:
-                            voice_id = "PHKlYg202ODwQRa3Fxuo" if tarea.get("marca") == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
-                            ensamblaje_local = {
-                                "id": f"{tarea_id}_asm",
-                                "tipo": "ENSAMBLAJE",
-                                "formato": tarea.get("formato", "9:16"),
-                                "marca": tarea.get("marca", "La Viuda"),
-                                "texto_locucion": tarea.get("texto_locucion", ""),
-                                "escenas_texto": tarea.get("escenas_texto", []),
-                                "escenas": tarea.get("escenas", []),
-                                "titulo_sugerido": tarea.get("titulo_sugerido", ""),
-                                "hooks": tarea.get("hooks", []),
-                                "voice_id": voice_id,
-                                "origen": tarea.get("origen", "bot"),
-                            }
-                            os.makedirs(r"C:\NODO_PINPINELA\cola_local", exist_ok=True)
-                            with open(rf"C:\NODO_PINPINELA\cola_local\ensamblaje_{tarea_id}.json", "w", encoding="utf-8") as f:
-                                json.dump(ensamblaje_local, f, ensure_ascii=False)
-                            print(f"   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente")
-                        except Exception as e:
-                            print(f"   ⚠️ No se pudo encolar ensamblaje local: {e}")
-
-                    print(f"✅ [LOTE COMPLETADO] Nodo local sincronizado y tarea cerrada.\n")
+                    # NOTA: NO reportar el video como "finalizado" aquí. Tras las imágenes
+                    # todavía falta el ENSAMBLAJE (voz + video). Si marcáramos "finalizado"
+                    # ahora, el orquestador creería que el video completo terminó y avanzaría
+                    # al siguiente canal dejando ESTE video sin voz ni ensamblar (y repitiendo
+                    # canal). El cierre real lo hace el ENSAMBLAJE al terminar el MP4.
+                    # Solo confirmamos recepción de imágenes para el anti-bucle, sin cerrar.
+                    print(f"✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).\n")
                 except Exception as e:
-                    print(f"⚠️ Error al sincronizar cierre de lote: {e}")
+                    print(f"⚠️ Error al sincronizar imágenes con Render (no crítico, el ensamblaje sigue): {e}")
+
+                # ENCOLAR EL ENSAMBLAJE LOCALMENTE — FUERA del try de Render.
+                # CRÍTICO: esto debe ejecutarse SIEMPRE que se generaron imágenes, aunque
+                # el upload a Render falle. Si dependiera del try anterior, un timeout de
+                # Render dejaría el video sin voz ni ensamblaje (genera imágenes y salta al
+                # siguiente). El worker ya tiene TODOS los datos, así que encola local sí o sí.
+                if tarea.get("texto_locucion") or tarea.get("escenas_texto") or tarea.get("origen", "").startswith("bot"):
+                    try:
+                        voice_id = "PHKlYg202ODwQRa3Fxuo" if tarea.get("marca") == "Monkygraff" else "GTY55jD77hLBRrnQOhNk"
+                        # Reconstruir texto de locución desde escenas si el campo vino vacío
+                        _texto_loc = tarea.get("texto_locucion", "")
+                        if not _texto_loc and tarea.get("escenas_texto"):
+                            _texto_loc = " ".join(t for t in tarea.get("escenas_texto", []) if t)
+                        if not _texto_loc and tarea.get("escenas"):
+                            _texto_loc = " ".join(e.get("texto_locucion","") for e in tarea.get("escenas", []) if e.get("texto_locucion"))
+                        ensamblaje_local = {
+                            "id": f"{tarea_id}_asm",
+                            "tipo": "ENSAMBLAJE",
+                            "formato": tarea.get("formato", "9:16"),
+                            "marca": tarea.get("marca", "La Viuda"),
+                            "texto_locucion": _texto_loc,
+                            "escenas_texto": tarea.get("escenas_texto", []),
+                            "escenas": tarea.get("escenas", []),
+                            "titulo_sugerido": tarea.get("titulo_sugerido", ""),
+                            "hooks": tarea.get("hooks", []),
+                            "voice_id": voice_id,
+                            "origen": tarea.get("origen", "bot"),
+                        }
+                        os.makedirs(r"C:\NODO_PINPINELA\cola_local", exist_ok=True)
+                        with open(rf"C:\NODO_PINPINELA\cola_local\ensamblaje_{tarea_id}.json", "w", encoding="utf-8") as f:
+                            json.dump(ensamblaje_local, f, ensure_ascii=False)
+                        print(f"   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente")
+                    except Exception as e:
+                        print(f"   ⚠️ No se pudo encolar ensamblaje local: {e}")
+                else:
+                    print(f"   ⚠️ [AVISO] Tarea sin texto de locución ni escenas — no se encola ensamblaje (video quedaría mudo).")
 
     except Exception as e:
         print(f"⚠️ Error en ciclo de ejecución: {e}")
