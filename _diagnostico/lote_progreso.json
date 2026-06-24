@@ -2,9 +2,9 @@
   "estado_lote": "produciendo",
   "total": 9,
   "completados": 1,
-  "fallidos": 0,
+  "fallidos": 1,
   "trabajo_actual": "Reintentando encolado en 17s",
-  "mensaje": "No se pudo encolar el video 2 (intento 2/3), reintentando...",
+  "mensaje": "Video 2 (Monkygraff 16:9) falló al encolar 3 veces — se omite y se continúa.",
   "resumen": "Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
   "historial": [
     {
