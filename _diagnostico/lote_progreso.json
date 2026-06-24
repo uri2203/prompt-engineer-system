@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "produciendo",
+  "total": 9,
   "completados": 0,
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": ""
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
+  "historial": []
 }
