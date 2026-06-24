@@ -1,10 +1,10 @@
 {
-  "estado_lote": "esperando_cuota",
+  "estado_lote": "produciendo",
   "total": 9,
   "completados": 1,
   "fallidos": 3,
-  "trabajo_actual": "Reintentando encolado en 19s",
-  "mensaje": "La API de Gemini se quedó sin cuota (límite diario). El lote se reanudará solo cuando la cuota se restablezca.",
+  "trabajo_actual": "Generando video 5 (LaesquinaRandom)",
+  "mensaje": "Produccion del video 5 iniciada.",
   "resumen": "Monkygraff: 0s+2L | FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
   "historial": [
     {
