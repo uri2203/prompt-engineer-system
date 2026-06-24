@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 7,
   "completados": 0,
+  "fallidos": 0,
+  "trabajo_actual": "Reintentando encolado en 824s",
   "mensaje": "Lote cancelado por el operador.",
-  "resumen": ""
+  "resumen": "FiltradoMX: 1s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
+  "historial": []
 }
