@@ -1238,6 +1238,26 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
 
 # ═══════════ FIN MÓDULO DE HOOKS V2 ═══════════
 
+def _marca_esperada_del_lote():
+    """Lee del progreso del lote qué MARCA se está produciendo ahora. Sirve para
+    descartar ensamblajes de la cola local que sean de OTRO canal (basura de una
+    corrida anterior), que harían un video del canal equivocado."""
+    try:
+        r = requests.get(f"{RENDER_URL}/api/bot/lote_progreso", timeout=15)
+        if r.status_code == 200:
+            d = r.json()
+            if d.get("estado_lote") != "produciendo":
+                return None
+            desc = (d.get("trabajo_actual") or "") + " " + (d.get("trabajo_actual_desc") or "")
+            # Buscar el nombre de canal dentro del texto del trabajo actual
+            for _m in ["La Viuda", "Monkygraff", "FiltradoMX", "LaesquinaRandom",
+                       "TuIALista", "Umbral Alterno"]:
+                if _m.lower() in desc.lower():
+                    return _m
+    except Exception:
+        pass
+    return None
+
 def _lote_fue_cancelado():
     """Consulta a Render si el lote fue cancelado. Si es así, el worker debe
     limpiar su cola local en vez de seguir produciendo videos de un lote muerto."""
@@ -1287,6 +1307,51 @@ def procesar():
                 _limpiar_cola_local("Lote cancelado por el operador — no se producen videos viejos.")
         if os.path.isdir(cola_local_dir):
             locales = sorted(_glob.glob(os.path.join(cola_local_dir, "*.json")))
+            if locales:
+                # Descartar ensamblajes VIEJOS de la cola local (de lotes/sesiones
+                # anteriores que quedaron sin procesar). Si un ensamblaje fue creado
+                # hace más de 6 horas, es basura de una corrida previa y NO pertenece
+                # al lote actual — procesarlo produce videos del canal equivocado
+                # (p.ej. repetir La Viuda cuando el lote ya pidió otros canales).
+                MAX_EDAD_SEG = 6 * 3600
+                _ahora = time.time()
+                _viejos = []
+                for _arch in list(locales):
+                    try:
+                        if (_ahora - os.path.getmtime(_arch)) > MAX_EDAD_SEG:
+                            _viejos.append(_arch)
+                    except Exception:
+                        pass
+                for _arch in _viejos:
+                    try:
+                        os.remove(_arch)
+                        locales.remove(_arch)
+                    except Exception:
+                        pass
+                if _viejos:
+                    print(f"🧹 [LIMPIEZA] {len(_viejos)} ensamblaje(s) viejo(s) (>6h) descartado(s) de la cola local — no pertenecen al lote actual.")
+
+            if locales:
+                # Descartar ensamblajes cuya MARCA no coincide con la del lote actual.
+                # Si el lote está produciendo "Monkygraff" pero en la cola local quedó
+                # un ensamblaje de "La Viuda" (de una corrida anterior), procesarlo haría
+                # un video del canal equivocado. Se descartan esos hasta hallar el correcto.
+                _marca_lote = _marca_esperada_del_lote()
+                if _marca_lote:
+                    _quedan = []
+                    for _arch in locales:
+                        try:
+                            with open(_arch, encoding="utf-8") as _f:
+                                _m_arch = (json.load(_f) or {}).get("marca", "")
+                            if _m_arch and _m_arch.lower().strip() != _marca_lote.lower().strip():
+                                os.remove(_arch)
+                                print(f"🧹 [LIMPIEZA] Ensamblaje de '{_m_arch}' descartado (el lote produce '{_marca_lote}').")
+                            else:
+                                _quedan.append(_arch)
+                        except Exception:
+                            _quedan.append(_arch)
+                    locales = _quedan
+
             if locales:
                 archivo_local = locales[0]
                 try:
