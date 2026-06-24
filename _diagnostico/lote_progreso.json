@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "produciendo",
+  "total": 6,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "FiltradoMX: 0s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
+  "historial": []
 }
