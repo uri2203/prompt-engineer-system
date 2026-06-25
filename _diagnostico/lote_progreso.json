@@ -1,10 +1,20 @@
 {
   "estado_lote": "produciendo",
   "total": 6,
-  "completados": 0,
+  "completados": 1,
   "fallidos": 1,
   "trabajo_actual": "Generando video 2/6 (FiltradoMX 16:9 28min)",
-  "mensaje": "Produccion del video 2 iniciada.",
+  "mensaje": "Video 2 completado",
   "resumen": "FiltradoMX: 0s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
-  "historial": []
+  "historial": [
+    {
+      "n": 2,
+      "marca": "FiltradoMX",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 1076.0,
+      "hora": "00:57"
+    }
+  ]
 }
