@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_A"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_B"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_A"
+VERSION_WORKER = "2026-06-23_B"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -466,6 +466,36 @@ def _corregir_pronunciacion(texto):
     combinaciones de letras. Este diccionario se amplía con lo que el usuario detecte.
     El reemplazo respeta mayúsculas/minúsculas y solo afecta palabras completas."""
     import re
+
+    # ── LIMPIEZA DE PAUSAS ANTINATURALES (antes que nada) ──
+    # Los puntos suspensivos y separaciones entre palabras hacen que el TTS meta
+    # pausas largas que cortan la narración ("la... más... grande" suena entrecortado).
+    # Se quitan los "..." a media frase y se normaliza la puntuación para que la voz
+    # lea de corrido y natural. (El texto original se conserva aparte para subtítulos.)
+    if texto:
+        # Primero: colapsar secuencias donde hay varios "..." muy seguidos entre
+        # palabras cortas (patrón "X... Y... Z...") — esas cadenas hacen la voz muy
+        # entrecortada. Se quitan los puntos y se deja el texto fluido.
+        # Detectar 2+ grupos de "..." en una ventana corta y quitarlos.
+        def _colapsar_cadena(m):
+            # quitar los puntos suspensivos internos, dejando las palabras unidas
+            seg = m.group(0)
+            seg = re.sub(r'\s*\.\.\.+\s*', ' ', seg)
+            seg = re.sub(r'\s*…\s*', ' ', seg)
+            return re.sub(r'\s{2,}', ' ', seg).strip() + ' '
+        # ventana: palabra ...espacio... palabra ...espacio... palabra (cadena de pausas)
+        texto = re.sub(r'(\w+\s*(?:\.\.\.+|…)\s*){2,}\w+', _colapsar_cadena, texto)
+
+        # Lo que quede de "..." sueltos (una pausa aislada) → coma suave
+        texto = re.sub(r'\s*\.\.\.+\s*', ', ', texto)
+        texto = re.sub(r'\s*…\s*', ', ', texto)
+        texto = re.sub(r'(\w)\s+\.\s+(\w)', r'\1 \2', texto)
+        texto = re.sub(r'\s+[—–-]\s+', ', ', texto)
+        texto = re.sub(r'\s*,\s*,\s*', ', ', texto)
+        texto = re.sub(r'\s{2,}', ' ', texto)
+        texto = re.sub(r',\s*([.!?])', r'\1', texto)
+        texto = texto.strip().strip(',').strip()
+
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
     REEMPLAZOS = {
         # ── Reportadas por el usuario (La Viuda) ──
@@ -3090,13 +3120,30 @@ def procesar():
                                         True,   # enable
                                         False,  # skip_img2img
                                         {
+                                            # Paso 1: detectar y corregir CARAS (confianza más baja
+                                            # para que también atrape caras pequeñas o medio deformes
+                                            # que antes se escapaban y salían con un ojo o derretidas)
                                             "ad_model": "face_yolov8n.pt",
-                                            "ad_prompt": "clear well-defined cartoon face, correct anatomy, expressive eyes, clean lines, high quality",
-                                            "ad_negative_prompt": "deformed, malformed, distorted face, ugly, asymmetric, extra eyes, crossed eyes, melted, blurry, bad anatomy",
-                                            "ad_confidence": 0.15,
+                                            "ad_prompt": "clear well-defined cartoon face, two symmetric eyes, both eyes present, correct facial anatomy, expressive clean eyes, clean line art, high quality cartoon",
+                                            "ad_negative_prompt": "deformed, malformed, distorted face, ugly, asymmetric face, extra eyes, missing eye, one eye, crossed eyes, blank eyes, melted face, blurry, bad anatomy, mutated",
+                                            "ad_confidence": 0.3,
+                                            "ad_dilate_erode": 4,
+                                            "ad_denoising_strength": 0.45,
+                                            "ad_inpaint_only_masked": True,
+                                            "ad_inpaint_only_masked_padding": 32,
+                                            "ad_use_steps": True,
+                                            "ad_steps": 30
+                                        },
+                                        {
+                                            # Paso 2: corregir específicamente los OJOS (los que más
+                                            # se deforman en cartoon: falta de un ojo, ojos disparejos)
+                                            "ad_model": "mediapipe_face_mesh_eyes_only",
+                                            "ad_prompt": "two clear symmetric cartoon eyes, both eyes present and aligned, expressive eyes, clean line art",
+                                            "ad_negative_prompt": "missing eye, one eye, blank eyes, deformed eyes, crossed eyes, asymmetric eyes, extra eyes",
+                                            "ad_confidence": 0.3,
                                             "ad_denoising_strength": 0.4,
                                             "ad_inpaint_only_masked": True,
-                                            "ad_inpaint_only_masked_padding": 32
+                                            "ad_inpaint_only_masked_padding": 24
                                         }
                                     ]
                                 }
@@ -3194,6 +3241,13 @@ def procesar():
                                 break
                             else:
                                 print(f"   ⚠️ SD respondió {res_sd.status_code} — reintentando...")
+                                # Si el payload llevaba ADetailer y SD lo rechazó (p.ej. la
+                                # extensión no está instalada en la PC GPU), quitarlo para que
+                                # la imagen se genere igual sin la corrección de rostros. Así
+                                # nunca se queda sin imagen por culpa de ADetailer.
+                                if "alwayson_scripts" in payload:
+                                    payload.pop("alwayson_scripts", None)
+                                    print("   ℹ️ ADetailer retirado del payload para este reintento (¿no instalado en la GPU?).")
                                 time.sleep(5)
                         except Exception as e:
                             print(f"   ⚠️ SD error intento {intento_sd+1}: {e}")
