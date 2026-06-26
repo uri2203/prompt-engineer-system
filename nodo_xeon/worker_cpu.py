@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_B"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_C"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_B"
+VERSION_WORKER = "2026-06-23_C"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -2717,7 +2717,10 @@ def procesar():
                                 f"exaggerated facial expressions, clear well-defined faces, "
                                 f"detailed eyes with clear round pupils, both eyes looking the same direction, "
                                 f"symmetrical well-drawn eyes, complete eyes with iris and pupil, "
-                                f"correct anatomy, simple clean shapes, single main character in focus, "
+                                f"correct anatomy, simple clean shapes, "
+                                f"ONE single large character as the clear focus, character close-up, "
+                                f"face large and centered in frame, big clear face, "
+                                f"no background characters, no crowd, no small distant figures, "
                                 f"clean uncluttered background, humorous situation, "
                                 f"bright vibrant lighting, cel shaded, high quality cartoon illustration"
                             )
@@ -2725,10 +2728,12 @@ def procesar():
                                 "nude, naked, nudity, nsfw, suggestive, underwear, lingerie, "
                                 "empty white eyes, eyes without pupils, blank eyes, missing pupils, "
                                 "pupilless eyes, hollow eyes, eyes rolled back, all white eyeballs, "
-                                "deformed eyes, crossed eyes, lazy eye, misaligned eyes, asymmetric eyes, "
-                                "uneven eyes, googly eyes, wandering eye, extra eyes, wall-eyed, "
-                                "background crowd, distant people, crowd of people, many people, "
-                                "tiny faces, small distant figures, blurry background figures, "
+                                "missing eye, one eye, single eye, deformed eyes, crossed eyes, lazy eye, "
+                                "misaligned eyes, asymmetric eyes, uneven eyes, googly eyes, wandering eye, "
+                                "extra eyes, wall-eyed, "
+                                "background crowd, distant people, crowd of people, many people, multiple people, "
+                                "group of characters, several characters, two characters, "
+                                "tiny faces, small distant figures, small faces, blurry background figures, "
                                 "deformed, bad anatomy, malformed, mutated, disfigured, distorted face, "
                                 "ugly face, asymmetric face, extra limbs, extra fingers, missing fingers, "
                                 "fused fingers, extra arms, extra legs, malformed hands, bad hands, "
@@ -3120,30 +3125,35 @@ def procesar():
                                         True,   # enable
                                         False,  # skip_img2img
                                         {
-                                            # Paso 1: detectar y corregir CARAS (confianza más baja
-                                            # para que también atrape caras pequeñas o medio deformes
-                                            # que antes se escapaban y salían con un ojo o derretidas)
-                                            "ad_model": "face_yolov8n.pt",
+                                            # Paso 1: CARAS con el modelo SMALL (yolov8s), más preciso
+                                            # que el nano para detectar caras pequeñas o deformadas que
+                                            # el modelo ligero dejaba pasar. (yolov8s se autodescarga la
+                                            # primera vez; yolov8m requeriría descarga manual.) Denoising
+                                            # ALTO (0.6) para que REHAGA la cara deforme, no solo la retoque.
+                                            "ad_model": "face_yolov8s.pt",
                                             "ad_prompt": "clear well-defined cartoon face, two symmetric eyes, both eyes present, correct facial anatomy, expressive clean eyes, clean line art, high quality cartoon",
                                             "ad_negative_prompt": "deformed, malformed, distorted face, ugly, asymmetric face, extra eyes, missing eye, one eye, crossed eyes, blank eyes, melted face, blurry, bad anatomy, mutated",
-                                            "ad_confidence": 0.3,
-                                            "ad_dilate_erode": 4,
-                                            "ad_denoising_strength": 0.45,
+                                            "ad_confidence": 0.25,
+                                            "ad_dilate_erode": 8,
+                                            "ad_denoising_strength": 0.6,
                                             "ad_inpaint_only_masked": True,
-                                            "ad_inpaint_only_masked_padding": 32,
+                                            "ad_inpaint_only_masked_padding": 48,
                                             "ad_use_steps": True,
-                                            "ad_steps": 30
+                                            "ad_steps": 40,
+                                            "ad_use_cfg_scale": True,
+                                            "ad_cfg_scale": 7.5
                                         },
                                         {
-                                            # Paso 2: corregir específicamente los OJOS (los que más
-                                            # se deforman en cartoon: falta de un ojo, ojos disparejos)
+                                            # Paso 2: OJOS por separado (lo que más se deforma en
+                                            # cartoon: falta de un ojo, ojos disparejos). Denoising
+                                            # alto para reconstruir el ojo faltante.
                                             "ad_model": "mediapipe_face_mesh_eyes_only",
                                             "ad_prompt": "two clear symmetric cartoon eyes, both eyes present and aligned, expressive eyes, clean line art",
                                             "ad_negative_prompt": "missing eye, one eye, blank eyes, deformed eyes, crossed eyes, asymmetric eyes, extra eyes",
-                                            "ad_confidence": 0.3,
-                                            "ad_denoising_strength": 0.4,
+                                            "ad_confidence": 0.25,
+                                            "ad_denoising_strength": 0.5,
                                             "ad_inpaint_only_masked": True,
-                                            "ad_inpaint_only_masked_padding": 24
+                                            "ad_inpaint_only_masked_padding": 32
                                         }
                                     ]
                                 }
