@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_G"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_H"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_G"
+VERSION_WORKER = "2026-06-23_H"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -3199,62 +3199,88 @@ def procesar():
                             )
 
                         elif marca_limpia in ["tuialista"]:
+                            # ESTILO CINEMATOGRÁFICO PROFESIONAL E IMPACTANTE (no "clean/soft"
+                            # genérico). Alto contraste, iluminación dramática azul-naranja,
+                            # hyper-realista, calidad de producción de cine. Lo que detiene el scroll.
                             _estilo_tuia = (
-                                "clean modern tech aesthetic, professional editorial photography, "
-                                "soft studio lighting, sharp focus, contemporary and trustworthy mood"
+                                "cinematic photography, dramatic high-contrast lighting, teal and orange "
+                                "color grade, volumetric light, hyper-realistic, ultra-detailed, shot on "
+                                "ARRI Alexa, 35mm lens, shallow depth of field, professional color grading, "
+                                "moody atmospheric, premium tech aesthetic, sharp crisp details, 8k, "
+                                "award-winning photography, dramatic shadows and highlights"
                             )
+                            # COMPOSICIONES VARIADAS Y CON IMPACTO. Menos abstracciones (cerebros/chips),
+                            # más humanos reales en escenas dramáticas con tecnología, momentos con
+                            # tensión visual, perspectivas cinematográficas. Variedad alta.
                             _composiciones_tuia = [
-                                "modern laptop on a clean desk with abstract data on screen, workspace",
-                                "close-up of a smartphone showing an AI app interface, technology in hand",
-                                "futuristic but clean robot assistant, friendly approachable design",
-                                "abstract neural network visualization, glowing connected nodes, elegant",
-                                "person silhouette interacting with a holographic interface, human and AI",
-                                "macro shot of a computer chip on a circuit board, microtechnology",
-                                "clean minimalist home office with smart devices, modern living",
-                                "data center with neat server rows, soft blue lighting, infrastructure",
-                                "hands typing on a backlit keyboard, productivity and coding",
-                                "smart home devices on a shelf, voice assistant, connected life",
-                                "electric vehicle dashboard with digital displays, future mobility",
-                                "abstract flowing data streams in clean gradient colors, information age",
-                                "modern smartwatch displaying health metrics, wearable tech",
-                                "drone hovering against a clear sky, autonomous technology",
-                                "clean desk with tablet, stylus and design app open, creative tech",
-                                "augmented reality glasses showing overlaid information, future vision",
-                                "solar panels and wind turbines, clean energy technology",
-                                "robotic arm in a bright modern lab, automation and precision",
-                                "person presenting on a large screen with charts, tech explainer",
-                                "abstract glowing brain made of light connections, AI and intelligence",
-                                "clean smartphone manufacturing line, technology production",
-                                "minimalist app icons floating on a gradient background, software",
-                                "satellite over earth at night with connection lines, global tech",
-                                "modern office meeting with a holographic chart, business tech",
-                                "close-up of an eye with subtle digital reflection, human-AI interface",
-                                "sleek autonomous car on a clean highway, self-driving future",
-                                "3D printer creating an object, additive manufacturing",
-                                "quantum computer abstract representation, cutting-edge tech",
-                                "person using a VR headset in a bright room, immersive technology",
-                                "clean infographic-style scene with floating tech icons, explainer",
-                                "modern smartphone with a glowing AI chatbot conversation, assistant",
-                                "futuristic city skyline with clean integrated technology, smart city",
-                                "hands holding a transparent tablet with data, future devices",
-                                "abstract digital lock and shield, cybersecurity and privacy",
-                                "bright lab with scientists and AI screens, research and innovation",
+                                # — Humanos reales con tecnología (lo que más conecta) —
+                                "a focused professional working late at night, face lit by multiple glowing monitors, dramatic rim light, reflection in glasses",
+                                "close-up of a person's amazed face illuminated by a screen glow, blue and orange light, emotional reaction",
+                                "a developer in a dark room surrounded by floating holographic code, cinematic atmosphere, dramatic backlight",
+                                "hands typing fast on a mechanical keyboard, sparks of light, motion blur, intense focus, dramatic side lighting",
+                                "a young entrepreneur presenting confidently in front of a giant glowing data wall, powerful pose, cinematic",
+                                "silhouette of a person standing before a massive screen of cascading data, dramatic scale, backlit",
+                                "a scientist examining a glowing holographic display, intense concentration, volumetric light beams",
+                                "over-the-shoulder shot of someone discovering something shocking on a laptop, dramatic glow, suspense",
+                                # — Dispositivos premium con estética de cine —
+                                "a sleek smartphone floating with a glowing AI interface erupting from the screen, dramatic dark background, premium product shot",
+                                "a futuristic laptop on a reflective surface, holographic projections rising, neon rim lighting, cinematic product photography",
+                                "extreme close-up of a smartwatch with a vibrant glowing interface, water droplets, dramatic lighting, macro",
+                                "premium AR glasses with glowing holographic overlays, dark moody background, intense reflections, product hero shot",
+                                "a high-end robot hand reaching toward a human hand, dramatic lighting, the spark of contact, cinematic tension",
+                                # — Escenas de futuro y tecnología a gran escala —
+                                "a vast futuristic server room with dramatic blue lighting and glowing corridors, deep perspective, cinematic scale",
+                                "a sleek autonomous car speeding through a neon city at night, light trails, dramatic motion, cinematic",
+                                "a humanoid robot with expressive design standing in a dramatic spotlight, photorealistic, powerful presence",
+                                "a futuristic control room with massive curved screens and dramatic lighting, a lone operator, epic scale",
+                                "a drone taking off with dramatic lens flare against a moody sky, cinematic action shot",
+                                "a holographic globe with glowing network connections floating in a dark dramatic space, premium visualization",
+                                "a high-tech laboratory bathed in dramatic blue and orange light, glowing experiments, cinematic atmosphere",
+                                # — Conceptos visuales potentes (sin caer en cerebros genéricos) —
+                                "a glowing AI core pulsing with energy inside a sleek dark chamber, dramatic volumetric light, cinematic",
+                                "streams of vibrant data flowing like liquid light through a dark dramatic space, premium motion graphics feel",
+                                "a single glowing chip held between fingers with dramatic lighting, intense detail, shallow focus, hero shot",
+                                "a futuristic interface materializing in mid-air with particles of light, dark dramatic background",
+                                "a powerful burst of light and data exploding outward from a device, dramatic energy, cinematic impact",
+                                "a digital human face forming from particles of light, dramatic and emotional, cinematic close-up",
+                                # — Productividad y creatividad con energía —
+                                "a creative workspace at golden hour with dramatic light streaming in, glowing screens, cinematic lifestyle",
+                                "a person wearing a VR headset reaching out, immersed, surrounded by dramatic glowing light, cinematic",
+                                "multiple floating screens around a focused person in a dark room, dramatic glow, command center feel",
+                                "a smartphone screen exploding with vibrant app icons and light, dynamic energy, dramatic dark background",
+                                "a futuristic city skyline at night pulsing with connected lights, dramatic aerial view, cinematic",
+                                "a robot and a child looking at each other with wonder, warm dramatic lighting, emotional cinematic moment",
+                                "a glowing neural interface headset on a dramatic stand, premium product photography, moody lighting",
+                                "an explosion of colorful light representing creativity and AI, dramatic and dynamic, cinematic abstract",
                             ]
                             import random as _rnd_t
                             _ord_t = list(range(len(_composiciones_tuia)))
                             _rnd_t.Random(str(tarea.get("id","")) + "tuia").shuffle(_ord_t)
                             _comp_t = _composiciones_tuia[_ord_t[i % len(_composiciones_tuia)]]
-                            _plano_t = "wide clean shot" if i % 2 == 0 else "close-up detail, shallow depth of field"
+                            # Variedad de plano para no repetir encuadre
+                            _planos_t = [
+                                "extreme close-up, shallow depth of field",
+                                "wide cinematic establishing shot",
+                                "dramatic low angle shot",
+                                "over-the-shoulder cinematic framing",
+                                "medium shot with bokeh background",
+                                "dynamic dutch angle, energetic",
+                            ]
+                            _plano_t = _planos_t[i % len(_planos_t)]
                             prompt_limpio = (
-                                f"{prompt_esc}, {_comp_t}, {_plano_t}, {_estilo_tuia}, "
-                                f"high quality, clean composition"
+                                f"{prompt_esc}, {_comp_t}, {_plano_t}, {_estilo_tuia}"
                             )
                             neg_prompt = (
-                                "nude, naked, nsfw, explicit, deformed, bad anatomy, malformed hands, "
-                                "extra fingers, distorted face, ugly, blurry, low quality, jpeg artifacts, "
-                                "dark, gloomy, horror, scary, dystopian, chaotic, cluttered, messy, "
-                                "text, watermark, signature, logo, brand, cartoon, anime, childish, "
-                                "old fashioned, retro, vintage, low tech, grainy, cheap, amateur"
+                                "deformed, malformed, bad anatomy, distorted face, mutated, disfigured, "
+                                "extra fingers, fused fingers, malformed hands, extra limbs, "
+                                "deformed processor, melted circuit, distorted chip, broken device, "
+                                "multiple brains, weird brain, abstract brain blob, generic brain, "
+                                "ugly, blurry, low quality, jpeg artifacts, grainy, pixelated, "
+                                "flat lighting, dull, washed out, low contrast, boring, plain, "
+                                "amateur, cheap, stock photo, clipart, cartoon, anime, childish, "
+                                "oversaturated mess, cluttered, chaotic, messy composition, "
+                                "text, watermark, signature, logo, brand name, "
+                                "plastic skin, waxy, fake looking, AI artifacts, uncanny"
                             )
 
                         elif marca_limpia in ["umbral alterno", "umbralalterno"]:
