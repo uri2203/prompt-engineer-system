@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_D"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_E"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_D"
+VERSION_WORKER = "2026-06-23_E"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -542,15 +542,87 @@ def _corregir_pronunciacion(texto):
         "ceo": "si i o", "ceos": "si i os", "fbi": "efe be i", "cia": "ce i a",
         "nasa": "nasa", "fps": "efe pe ese", "vpn": "ve pe ene",
         "ai": "i a", "ml": "eme ele", "iot": "i o te",
-        # ── Nombres propios / geográficos extranjeros ──
+        # ── TECNOLOGÍA / IA / INTERNET (ampliado) ──
+        "smartwatch": "smártguach", "bluetooth": "blutúz", "usb": "u ese be",
+        "gps": "ge pe ese", "url": "u erre ele", "html": "ache te eme ele",
+        "wifi": "guifi", "pixel": "píksel", "pixels": "píksels",
+        "selfie": "sélfi", "selfies": "sélfis", "meme": "mim", "memes": "mims",
+        "emoji": "emóyi", "emojis": "emóyis", "gif": "gif", "gifs": "gifs",
+        "app": "ap", "apps": "aps", "chat": "chat", "chats": "chats",
+        "bot": "bot", "bots": "bots", "chatbot": "chátbot", "chatbots": "chátbots",
+        "prompt": "prómpt", "prompts": "prómpts", "token": "tóken", "tokens": "tókens",
+        "dataset": "déitaset", "datasets": "déitasets", "big data": "big déita",
+        "machine": "mashín", "deep": "díp", "neural": "niúral",
+        "cluster": "cláster", "backup": "bákap", "firewall": "fáirgüol",
+        "malware": "málgüer", "ransomware": "ránsomgüer", "phishing": "físhin",
+        "hacker": "jáker", "hackers": "jákers", "hacking": "jákin",
+        "screenshot": "scrínshot", "screenshots": "scrínshots",
+        "download": "daunlóud", "upload": "aplóud", "loading": "lóudin",
+        "browser": "bráuser", "cookie": "cúki", "cookies": "cúkis",
+        "widget": "güíyet", "widgets": "güíyets", "plugin": "plágin", "plugins": "plágins",
+        "framework": "fréimguork", "frontend": "frónten", "backend": "báken",
+        "deploy": "diplói", "debug": "dibág", "commit": "comít",
+        "trending": "tréndin", "viral": "virál", "reels": "ríls",
+        "story": "estóri", "stories": "estóris", "live": "laiv",
+        "follower": "fólouer", "followers": "fólouers", "like": "laik", "likes": "laiks",
+        "post": "post", "posts": "posts", "feed": "fid", "feeds": "fids",
+        "trend": "trend", "trends": "trends", "hype": "jaip",
+        # ── NEGOCIOS / FINANZAS / ECONOMÍA (ampliado) ──
+        "business": "bísnes", "manager": "mánayer", "managers": "mánayers",
+        "marketing": "márketin", "ecommerce": "icómers", "retail": "ríteil",
+        "broker": "bróuker", "brokers": "bróukers", "stock": "estók", "stocks": "estóks",
+        "trader": "tréider", "cash": "cash", "crash": "crash",
+        "boom": "bum", "rally": "ráli", "bull": "bul", "bear": "ber",
+        "venture": "vénchur", "capital": "capitál", "equity": "ékuiti",
+        "leasing": "lísin", "factoring": "fáctorin", "outsourcing": "áutsorsin",
+        "freelance": "frílans", "freelancer": "frílanser", "networking": "nétguorkin",
+        "deadline": "dédlain", "briefing": "brífin", "workshop": "guórkshop",
+        "pitch": "pich", "ranking": "ránkin", "target": "tárguet",
+        "lead": "lid", "leads": "lids", "deal": "dil", "deals": "dils",
+        "partner": "pártner", "partners": "pártners", "staff": "estáf",
+        "ceo": "si i o", "cfo": "ce efe o", "cto": "ce te o", "coo": "ce o o",
+        "kpi": "ka pe i", "kpis": "ka pe is", "roi": "erre o i",
+        "fintech": "fíntek", "proptech": "próptek", "unicornio": "unicórnio",
+        # ── DEPORTES (ampliado) ──
+        "match": "mach", "team": "tim", "coach": "couch",
+        "ranking": "ránkin", "set": "set", "sets": "sets", "match point": "mach point",
+        "knockout": "nocáut", "sprint": "esprínt", "record": "récord",
+        "fan": "fan", "fans": "fans", "hooligan": "júligan",
+        "manager": "mánayer", "draft": "draft", "rookie": "rúki",
+        # ── CULTURA POP / ENTRETENIMIENTO (ampliado) ──
+        "show": "show", "shows": "shows", "reality": "riáliti",
+        "celebrity": "selébriti", "gossip": "gósip", "fashion": "fáshion",
+        "outfit": "áutfit", "look": "luk", "looks": "luks", "vintage": "víntach",
+        "cool": "cul", "trendy": "tréndi", "sexy": "séksi",
+        "remix": "rímiks", "beat": "bit", "beats": "bits", "flow": "flou",
+        "rapper": "ráper", "single": "síngol", "hit": "jit", "hits": "jits",
+        "soundtrack": "sáundtrak", "blockbuster": "blókbaster",
+        "spoiler": "espóiler", "spoilers": "espóilers", "fandom": "fándom",
+        "cosplay": "cóspley", "gameplay": "guéimpley", "streamer": "estrímer",
+        # ── NOMBRES PROPIOS / EMPRESAS / GEOGRAFÍA (ampliado) ──
         "hollywood": "jóligud",
-        "trump": "tramp", "biden": "báiden", "putin": "pútin",
+        "trump": "tramp", "biden": "báiden", "putin": "pútin", "xi": "shi",
         "beijing": "beishín", "shanghai": "shanghái", "taiwan": "taiguán",
         "microsoft": "máicrosoft", "tesla": "tésla", "amazon": "ámazon",
         "netflix": "nétflics", "spotify": "espótifai", "tiktok": "tíktok",
         "facebook": "féisbuk", "instagram": "ínstagram", "twitter": "tuíter",
         "openai": "óupen ei ái", "nvidia": "envídia", "intel": "íntel",
-        "samsung": "sámsun", "huawei": "juáguei",
+        "samsung": "sámsun", "huawei": "juáguei", "xiaomi": "shiaómi",
+        "apple": "ápol", "disney": "dísney", "pixar": "píksar",
+        "uber": "úber", "airbnb": "érbianbi", "paypal": "péipal",
+        "linkedin": "línkedin", "reddit": "rédit", "discord": "díscord",
+        "twitch": "tuích", "snapchat": "snápchat", "pinterest": "pínterest",
+        "ebay": "íbei", "alibaba": "alibabá", "oracle": "óracol",
+        "ibm": "i be eme", "amd": "a eme de", "qualcomm": "cuálcom",
+        "boeing": "bóing", "airbus": "érbas", "ferrari": "ferári",
+        "mercedes": "mercédes", "volkswagen": "fólksvaguen", "toyota": "toyóta",
+        "london": "lóndon", "new jersey": "niu yérsi", "texas": "téksas",
+        "los angeles": "los ángeles", "miami": "maiámi", "chicago": "chicágo",
+        "seattle": "siátol", "boston": "bóston", "detroit": "ditróit",
+        "qatar": "catár", "dubai": "dubái", "tokyo": "tókio", "kyoto": "kióto",
+        "seoul": "seúl", "mumbai": "mumbái", "moscow": "móscu",
+        "ukraine": "ucráin", "kiev": "kíev", "iran": "irán", "iraq": "irák",
+        "israel": "ísrael", "jerusalem": "yerusalén",
     }
     # frases de varias palabras (se reemplazan primero)
     REEMPLAZOS_FRASE = {
@@ -612,40 +684,72 @@ def _corregir_pronunciacion(texto):
     for frase, rep in REEMPLAZOS_FRASE.items():
         resultado = re.sub(r'\b' + re.escape(frase) + r'\b', rep, resultado, flags=re.IGNORECASE)
 
-    # 3b. ── REGLAS FONÉTICAS AUTOMÁTICAS (corrigen PATRONES, no palabras sueltas) ──
-    # Estas reglas arreglan familias enteras de palabras de una sola vez, sin tener
-    # que reportar cada una. Cubren los patrones que XTTS español rompe siempre.
-    def _aplicar_reglas_foneticas(texto_in):
+    # 4. Palabras del DICCIONARIO primero (tienen prioridad sobre las reglas automáticas).
+    #    Se marca cada palabra ya corregida para que las reglas fonéticas no la pisen.
+    _ya_corregidas = set()
+    def _reemplazar_marcando(match):
+        palabra = match.group(0)
+        clave = palabra.lower()
+        if clave in REEMPLAZOS:
+            nuevo = REEMPLAZOS[clave]
+            if palabra[0].isupper():
+                nuevo = nuevo[0].upper() + nuevo[1:]
+            _ya_corregidas.add(nuevo.lower())
+            return nuevo
+        return palabra
+    resultado = re.sub(r'\b\w+\b', _reemplazar_marcando, resultado, flags=re.UNICODE)
+
+    # 5. Reglas fonéticas automáticas (corrigen patrones), SOLO en palabras que el
+    #    diccionario NO tocó (para no dañar las correcciones ya hechas como sóftgüer).
+    def _aplicar_reglas_foneticas(texto_in, ya_corregidas):
         t = texto_in
         # (A) "x" + consonante → "ks" : explica, experto, extra, texto, éxito, sexto...
-        #     XTTS lee la "x" antes de consonante de forma rota; "ks" la estabiliza.
-        #     Solo cuando la x va seguida de consonante (no en "examen" x entre vocales).
         def _x_consonante(m):
             return m.group(1) + "ks" + m.group(2)
-        # x precedida de vocal y seguida de consonante
         t = re.sub(r'([aeiouáéíóúAEIOUÁÉÍÓÚ])x([bcdfghjklmnpqrstvwxyzñ])', _x_consonante, t)
-        # (B) "x" entre vocales se lee "ks" también (examen → eksamen) — más natural en XTTS
+        # (B) "x" entre vocales → "ks" (examen → eksamen)
         t = re.sub(r'([aeiouáéíóú])x([aeiouáéíóú])', r'\1ks\2', t, flags=re.IGNORECASE)
-        # (C) Terminación inglesa "-tion" → "shon" (por si algún anglicismo se cuela)
+        # (C) Terminación inglesa "-tion" → "shon"
         t = re.sub(r'\b(\w+?)tion\b', r'\1shon', t, flags=re.IGNORECASE)
-        # (D) Terminación "-ing" en palabra que NO es española → "in"
-        #     (solo si la raíz parece inglesa: contiene combos no españoles)
+        # (D) Terminación "-ing" si la raíz es inglesa → "in"
         def _ing(m):
+            if m.group(0).lower() in ya_corregidas:
+                return m.group(0)
             raiz = m.group(1)
-            # si la raíz tiene letras/combos típicos del inglés, es anglicismo
             if re.search(r'(sh|th|ck|tt|oo|ee|ph|w|k|y$)', raiz, re.IGNORECASE):
                 return raiz + "in"
             return m.group(0)
         t = re.sub(r'\b(\w+?)ing\b', _ing, t, flags=re.IGNORECASE)
-        # (E) "w" inglesa → "gu" cuando va seguida de vocal (web → gueb) salvo nombres ya en dicc
-        # (se aplica suave; los nombres propios importantes ya están en REEMPLAZOS)
-        # (F) doble consonante inglesa rara "ll" al inicio de anglicismo → se deja (español la usa)
+        # (G) Combos ingleses en palabras que NO son españolas (y no ya corregidas).
+        def _es_anglicismo(palabra):
+            p = palabra.lower()
+            if p in ya_corregidas:
+                return False  # ya la tocó el diccionario, no re-procesar
+            # combos que el español NUNCA usa (oo/ee NO, el español los tiene)
+            if re.search(r'(sh|th|ck|ph|^w|w[aeiou]|^y[aeiou])', p):
+                return True
+            if re.search(r'(ing|tion)$', p):
+                return True
+            return False
+        def _foneticar_combos(m):
+            palabra = m.group(0)
+            if not _es_anglicismo(palabra):
+                return palabra
+            p = palabra
+            reglas_combo = [
+                (r'th', 't'), (r'ck', 'k'), (r'ph', 'f'),
+                (r'oo', 'u'), (r'ee', 'i'),
+                (r'^w', 'gu'), (r'w', 'gu'),
+                (r'ng\b', 'n'), (r'y$', 'i'),
+            ]
+            for pat, rep in reglas_combo:
+                p = re.sub(pat, rep, p, flags=re.IGNORECASE)
+            return p
+        t = re.sub(r'\b[a-zA-Z]+\b', _foneticar_combos, t)
         return t
-    resultado = _aplicar_reglas_foneticas(resultado)
+    resultado = _aplicar_reglas_foneticas(resultado, _ya_corregidas)
 
-    # 4. Palabras sueltas
-    resultado = re.sub(r'\b\w+\b', _reemplazar, resultado, flags=re.UNICODE)
-    # 5. Espacio antes de coma/punto: workaround del bug de XTTS español que debilita
+    # 6. Espacio antes de coma/punto: workaround del bug de XTTS español que debilita
     #    o corta la última sílaba antes de la puntuación (tu "quince→quice").
     resultado = re.sub(r'\s*([,.;:!?…])', r' \1', resultado)
     # Limpiar espacios dobles que pudieron quedar
