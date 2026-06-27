@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_C"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_D"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_C"
+VERSION_WORKER = "2026-06-23_D"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -497,11 +497,10 @@ def _corregir_pronunciacion(texto):
         texto = texto.strip().strip(',').strip()
 
     # clave = palabra original (en minúscula) ; valor = escritura que XTTS pronuncia bien
+    # NOTA: las palabras con "x" (explica, experto, texto, máximo...) ya las corrige
+    # automáticamente la regla fonética 3b, así que NO hace falta listarlas aquí.
     REEMPLAZOS = {
-        # ── Reportadas por el usuario (La Viuda) ──
-        "explica": "eks pe li ca", "explican": "eks pe li can", "explicar": "eks pe li car",
-        "explicó": "eks pe li có", "explico": "eks pe li co", "explicación": "eks pe li ca ción",
-        "explicaciones": "eks pe li ca ciones", "explícame": "eks pe lí ca me", "explicando": "eks pe li can do",
+        # ── Nombres propios / geográficos que las reglas no cubren ──
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
         "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
@@ -528,13 +527,30 @@ def _corregir_pronunciacion(texto):
         "trading": "tréidin", "trader": "tréider", "traders": "tréiders",
         "holding": "jóldin", "holdings": "jóldins", "dumping": "dámpin",
         "boom": "bum", "default": "difólt", "lobby": "lóbi",
+        # ── Más anglicismos comunes (ampliado para cubrir más casos automáticamente) ──
+        "feedback": "fídbak", "background": "bákgraund", "gadget": "gáyet",
+        "laptop": "láptop", "tablet": "táblet", "router": "rúter",
+        "password": "pásgüord", "email": "ímeil", "spam": "espám",
+        "link": "link", "links": "links", "clic": "clik", "click": "clik",
+        "cloud": "claud", "server": "sérver", "hosting": "jóstin",
+        "dashboard": "dáshbord", "update": "apdéit", "upgrade": "apgréid",
+        "gaming": "guéimin", "gamer": "guéimer", "stream": "estrím",
+        "playlist": "pléilist", "thriller": "tríler", "teaser": "tíser",
+        "trailer": "tréiler", "casting": "cástin", "remake": "riméik",
+        "shock": "shok", "stress": "estrés", "fitness": "fítnes",
+        "coach": "couch", "coaching": "cóuchin", "mindset": "máindset",
+        "ceo": "si i o", "ceos": "si i os", "fbi": "efe be i", "cia": "ce i a",
+        "nasa": "nasa", "fps": "efe pe ese", "vpn": "ve pe ene",
+        "ai": "i a", "ml": "eme ele", "iot": "i o te",
         # ── Nombres propios / geográficos extranjeros ──
         "hollywood": "jóligud",
         "trump": "tramp", "biden": "báiden", "putin": "pútin",
         "beijing": "beishín", "shanghai": "shanghái", "taiwan": "taiguán",
         "microsoft": "máicrosoft", "tesla": "tésla", "amazon": "ámazon",
-        # ── Combinaciones que el modelo suele romper ──
-        "algoritmo": "algorítmo", "algoritmos": "algorítmos",
+        "netflix": "nétflics", "spotify": "espótifai", "tiktok": "tíktok",
+        "facebook": "féisbuk", "instagram": "ínstagram", "twitter": "tuíter",
+        "openai": "óupen ei ái", "nvidia": "envídia", "intel": "íntel",
+        "samsung": "sámsun", "huawei": "juáguei",
     }
     # frases de varias palabras (se reemplazan primero)
     REEMPLAZOS_FRASE = {
@@ -595,6 +611,38 @@ def _corregir_pronunciacion(texto):
     # 3. Frases de varias palabras
     for frase, rep in REEMPLAZOS_FRASE.items():
         resultado = re.sub(r'\b' + re.escape(frase) + r'\b', rep, resultado, flags=re.IGNORECASE)
+
+    # 3b. ── REGLAS FONÉTICAS AUTOMÁTICAS (corrigen PATRONES, no palabras sueltas) ──
+    # Estas reglas arreglan familias enteras de palabras de una sola vez, sin tener
+    # que reportar cada una. Cubren los patrones que XTTS español rompe siempre.
+    def _aplicar_reglas_foneticas(texto_in):
+        t = texto_in
+        # (A) "x" + consonante → "ks" : explica, experto, extra, texto, éxito, sexto...
+        #     XTTS lee la "x" antes de consonante de forma rota; "ks" la estabiliza.
+        #     Solo cuando la x va seguida de consonante (no en "examen" x entre vocales).
+        def _x_consonante(m):
+            return m.group(1) + "ks" + m.group(2)
+        # x precedida de vocal y seguida de consonante
+        t = re.sub(r'([aeiouáéíóúAEIOUÁÉÍÓÚ])x([bcdfghjklmnpqrstvwxyzñ])', _x_consonante, t)
+        # (B) "x" entre vocales se lee "ks" también (examen → eksamen) — más natural en XTTS
+        t = re.sub(r'([aeiouáéíóú])x([aeiouáéíóú])', r'\1ks\2', t, flags=re.IGNORECASE)
+        # (C) Terminación inglesa "-tion" → "shon" (por si algún anglicismo se cuela)
+        t = re.sub(r'\b(\w+?)tion\b', r'\1shon', t, flags=re.IGNORECASE)
+        # (D) Terminación "-ing" en palabra que NO es española → "in"
+        #     (solo si la raíz parece inglesa: contiene combos no españoles)
+        def _ing(m):
+            raiz = m.group(1)
+            # si la raíz tiene letras/combos típicos del inglés, es anglicismo
+            if re.search(r'(sh|th|ck|tt|oo|ee|ph|w|k|y$)', raiz, re.IGNORECASE):
+                return raiz + "in"
+            return m.group(0)
+        t = re.sub(r'\b(\w+?)ing\b', _ing, t, flags=re.IGNORECASE)
+        # (E) "w" inglesa → "gu" cuando va seguida de vocal (web → gueb) salvo nombres ya en dicc
+        # (se aplica suave; los nombres propios importantes ya están en REEMPLAZOS)
+        # (F) doble consonante inglesa rara "ll" al inicio de anglicismo → se deja (español la usa)
+        return t
+    resultado = _aplicar_reglas_foneticas(resultado)
+
     # 4. Palabras sueltas
     resultado = re.sub(r'\b\w+\b', _reemplazar, resultado, flags=re.UNICODE)
     # 5. Espacio antes de coma/punto: workaround del bug de XTTS español que debilita
