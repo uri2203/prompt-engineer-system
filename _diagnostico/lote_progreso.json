@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "esperando_nodo",
   "total": 6,
   "completados": 1,
   "fallidos": 3,
-  "trabajo_actual": "Generando video 5/6 (TuIALista 16:9 28min)",
-  "mensaje": "Produccion del video 5 iniciada.",
+  "trabajo_actual": "Esperando nodo: SD (imagenes), Voz",
+  "mensaje": "Nodo(s) caido(s): SD (imagenes), Voz. Esperando que vuelvan...",
   "resumen": "FiltradoMX: 0s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
   "historial": [
     {
