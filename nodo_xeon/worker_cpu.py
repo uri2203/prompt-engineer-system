@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_E"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_F"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_E"
+VERSION_WORKER = "2026-06-23_F"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -503,10 +503,16 @@ def _corregir_pronunciacion(texto):
         # ── Nombres propios / geográficos que las reglas no cubren ──
         "iceberg": "áisberg", "icebergs": "áisbergs",
         "washington": "guáshington",
-        "amiga": "amíga", "amigas": "amígas", "amigo": "amígo", "amigos": "amígos",
         "illinois": "ilinóis",
         "quince": "kínse",
         "bloodgood": "blad gud",
+        # ── Palabras con "w" ya aceptadas en español (forma correcta, para que la
+        #    regla automática de w→gu no las deforme) ──
+        "whisky": "güíski", "whiskey": "güíski", "kiwi": "kígüi", "kiwis": "kígüis",
+        "web": "gueb", "webs": "guebs", "wifi": "güifi", "kilowatt": "kilováti",
+        "kilowatts": "kilovátis", "watt": "váti", "watts": "vátis", "sandwich": "sángüich",
+        "sandwiches": "sángüiches", "kiwicha": "kigüícha", "hawaiano": "jaguaiáno",
+        "taekwondo": "taecuóndo", "kuwait": "kuáit",
         # ── Reportadas por el usuario (Monkygraff) ──
         "enterprise": "énterprayz",
         "nearshoring": "níar shórin",
@@ -608,6 +614,23 @@ def _corregir_pronunciacion(texto):
         "facebook": "féisbuk", "instagram": "ínstagram", "twitter": "tuíter",
         "openai": "óupen ei ái", "nvidia": "envídia", "intel": "íntel",
         "samsung": "sámsun", "huawei": "juáguei", "xiaomi": "shiaómi",
+        # ── Anglicismos compuestos comunes (las reglas no pueden deducirlos) ──
+        "newsletter": "niúsleter", "mainstream": "méinstrim", "brainstorm": "bréinstorm",
+        "brainstorming": "bréinstormin", "shareholder": "shérjolder", "paywall": "péigüol",
+        "headhunter": "jédjanter", "outsourced": "áutsorsd", "outsourcing": "áutsorsin",
+        "football": "fútbol", "newsletter": "niúsleter", "weekend": "güíken",
+        "downloadable": "daunlóudabol", "stakeholder": "stéijolder", "storytelling": "estóritelin",
+        "crowdfunding": "cráudfandin", "ghostwriter": "góustraiter", "copywriting": "cópiraitin",
+        "wireframe": "guáirfreim", "clickbait": "clikbéit", "throwback": "tróubak",
+        "flashback": "fláshbak", "background": "bákgraun", "feedback": "fídbak",
+        "overbooking": "overbúkin", "babysitter": "béibisiter", "bestseller": "bestséler",
+        "afterparty": "áfterparti", "happy hour": "japi áuer", "fast food": "fast fud",
+        "smart tv": "smart ti vi", "reality show": "riáliti show", "talk show": "tok show",
+        "boyband": "bóiban", "girlband": "guérlban", "comeback": "cámbak",
+        "lifestyle": "láifstail", "workflow": "guórkflou", "milestone": "máilstoun",
+        "roadmap": "róudmap", "benchmark": "bénchmark", "showroom": "shórrum",
+        "playoff": "pléiof", "playoffs": "pléiofs", "halftime": "jáftaim",
+        "smartwatch": "smártguach", "powerbank": "páuerbank", "touchscreen": "táchscrin",
         "apple": "ápol", "disney": "dísney", "pixar": "píksar",
         "uber": "úber", "airbnb": "érbianbi", "paypal": "péipal",
         "linkedin": "línkedin", "reddit": "rédit", "discord": "díscord",
@@ -725,11 +748,18 @@ def _corregir_pronunciacion(texto):
             p = palabra.lower()
             if p in ya_corregidas:
                 return False  # ya la tocó el diccionario, no re-procesar
-            # combos que el español NUNCA usa (oo/ee NO, el español los tiene)
-            if re.search(r'(sh|th|ck|ph|^w|w[aeiou]|^y[aeiou])', p):
+            # SOLO marcas que el español NUNCA usa (cero riesgo de marcar español):
+            #   sh, th, ck, ph (no existen en español) ; w en posición inglesa.
+            if re.search(r'(sh|th|ck|ph)', p):
                 return True
-            if re.search(r'(ing|tion)$', p):
+            if re.search(r'(^w|w[aeiou]|[aeiou]w)', p):
                 return True
+            # terminaciones inequívocamente inglesas (español no las usa así)
+            if re.search(r'(ing|ung|ough|ight)$', p):
+                return True
+            # NOTA: NO se usa "oo/ee + consonante" como marca: rompe palabras
+            # españolas (leer, creer, poseer, coordinar, cooperar). Los anglicismos
+            # con oo/ee (food, week, football) van en el diccionario.
             return False
         def _foneticar_combos(m):
             palabra = m.group(0)
@@ -738,12 +768,16 @@ def _corregir_pronunciacion(texto):
             p = palabra
             reglas_combo = [
                 (r'th', 't'), (r'ck', 'k'), (r'ph', 'f'),
-                (r'oo', 'u'), (r'ee', 'i'),
-                (r'^w', 'gu'), (r'w', 'gu'),
                 (r'ng\b', 'n'), (r'y$', 'i'),
             ]
             for pat, rep in reglas_combo:
                 p = re.sub(pat, rep, p, flags=re.IGNORECASE)
+            # La "w" se transforma a "gu" SOLO en palabras claramente inglesas
+            # (con sh/th/ck/ph, o w al inicio). Las w-words comunes ya están en
+            # el diccionario con su forma correcta.
+            if re.search(r'(sh|th|ck|ph)', p, re.IGNORECASE) or re.match(r'^w', p, re.IGNORECASE):
+                p = re.sub(r'^w', 'gu', p, flags=re.IGNORECASE)
+                p = re.sub(r'w', 'gu', p, flags=re.IGNORECASE)
             return p
         t = re.sub(r'\b[a-zA-Z]+\b', _foneticar_combos, t)
         return t
