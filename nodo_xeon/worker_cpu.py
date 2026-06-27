@@ -1,12 +1,12 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_F"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_G"                                   ║
 # ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
 # ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_F"
+VERSION_WORKER = "2026-06-23_G"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -579,7 +579,7 @@ def _corregir_pronunciacion(texto):
         "broker": "bróuker", "brokers": "bróukers", "stock": "estók", "stocks": "estóks",
         "trader": "tréider", "cash": "cash", "crash": "crash",
         "boom": "bum", "rally": "ráli", "bull": "bul", "bear": "ber",
-        "venture": "vénchur", "capital": "capitál", "equity": "ékuiti",
+        "venture": "vénchur", "equity": "ékuiti",
         "leasing": "lísin", "factoring": "fáctorin", "outsourcing": "áutsorsin",
         "freelance": "frílans", "freelancer": "frílanser", "networking": "nétguorkin",
         "deadline": "dédlain", "briefing": "brífin", "workshop": "guórkshop",
@@ -677,6 +677,54 @@ def _corregir_pronunciacion(texto):
             return nuevo
         return palabra
     resultado = texto
+
+    # 0. ABREVIATURAS COMUNES EN ESPAÑOL (práctica validada de normalización TTS:
+    #    expandir abreviaturas a su forma hablada para que la voz las lea completas).
+    #    Se hace ANTES que nada, con límites de palabra y respetando el punto.
+    ABREVIATURAS = {
+        r'\bSr\.': 'Señor', r'\bSra\.': 'Señora', r'\bSrta\.': 'Señorita',
+        r'\bDr\.': 'Doctor', r'\bDra\.': 'Doctora', r'\bLic\.': 'Licenciado',
+        r'\bIng\.': 'Ingeniero', r'\bProf\.': 'Profesor', r'\bGral\.': 'General',
+        r'\bAv\.': 'Avenida', r'\bAvda\.': 'Avenida', r'\bC\/': 'Calle ',
+        r'\bNo\.': 'número', r'\bNº': 'número', r'\bnúm\.': 'número',
+        r'\bpág\.': 'página', r'\bpágs\.': 'páginas', r'\bcap\.': 'capítulo',
+        r'\bart\.': 'artículo', r'\betc\.': 'etcétera', r'\bp\.ej\.': 'por ejemplo',
+        r'\bej\.': 'ejemplo', r'\baprox\.': 'aproximadamente', r'\bvs\.': 'versus',
+        r'\bvs\b': 'versus', r'\bd\.C\.': 'después de Cristo', r'\ba\.C\.': 'antes de Cristo',
+        r'\bEE\.\s?UU\.': 'Estados Unidos', r'\bm\.s\.n\.m\.': 'metros sobre el nivel del mar',
+        r'\bkm/h\b': 'kilómetros por hora', r'\bkm\b': 'kilómetros',
+        r'\bkg\b': 'kilogramos', r'\bcm\b': 'centímetros', r'\bmm\b': 'milímetros',
+        r'\bml\b': 'mililitros', r'\bm²\b': 'metros cuadrados', r'\bm³\b': 'metros cúbicos',
+        r'\bhrs\.': 'horas', r'\bhr\.': 'hora', r'\bmin\.': 'minutos', r'\bseg\.': 'segundos',
+    }
+    for abr, exp in ABREVIATURAS.items():
+        resultado = re.sub(abr, exp, resultado, flags=re.IGNORECASE)
+
+    # 0b. HORAS tipo "14:30" → "catorce treinta" ; "9:05" → "nueve cero cinco"
+    def _hora(m):
+        h, mi = int(m.group(1)), m.group(2)
+        try:
+            from num2words import num2words as _n
+            hh = _n(h, lang="es")
+            if mi == "00":
+                return f"{hh} en punto"
+            mm = _n(int(mi), lang="es") if mi[0] != "0" else "cero " + _n(int(mi), lang="es")
+            return f"{hh} {mm}"
+        except Exception:
+            return m.group(0)
+    resultado = re.sub(r'\b(\d{1,2}):(\d{2})\b', _hora, resultado)
+
+    # 0c. MONEDAS: "$100" → "100 pesos" ; "€50" → "50 euros" ; "US$20" → "20 dólares"
+    #     Captura el número COMPLETO. Si ya hay una palabra de moneda después
+    #     (dólares, euros, pesos), solo se quita el símbolo para no duplicar.
+    resultado = re.sub(r'US\$\s*([\d.,]+)(\s+(?:dólares?|dolares?|usd))', r'\1\2', resultado, flags=re.IGNORECASE)
+    resultado = re.sub(r'\$\s*([\d.,]+)(\s+(?:dólares?|dolares?|pesos?|euros?|usd))', r'\1\2', resultado, flags=re.IGNORECASE)
+    resultado = re.sub(r'€\s*([\d.,]+)(\s+euros?)', r'\1\2', resultado, flags=re.IGNORECASE)
+    resultado = re.sub(r'US\$\s*([\d.,]+)', r'\1 dólares ', resultado)
+    resultado = re.sub(r'\$\s*([\d.,]+)', r'\1 pesos ', resultado)
+    resultado = re.sub(r'€\s*([\d.,]+)', r'\1 euros ', resultado)
+    resultado = re.sub(r'£\s*([\d.,]+)', r'\1 libras ', resultado)
+
     # 1. Siglas primero (incluyen puntos y símbolos, antes de tocar nada)
     #    Se ordenan de más larga a más corta para no romper las compuestas (S&P 500 antes que S&P).
     for sigla in sorted(SIGLAS, key=len, reverse=True):
@@ -684,24 +732,42 @@ def _corregir_pronunciacion(texto):
     # 1b. Símbolos comunes a palabras (antes de procesar números)
     resultado = re.sub(r'(\d)\s*%', r'\1 por ciento', resultado)
     resultado = resultado.replace("%", " por ciento ")
+    resultado = re.sub(r'(\d)\s*°C', r'\1 grados centígrados', resultado)
     resultado = re.sub(r'(\d)\s*°', r'\1 grados', resultado)
     resultado = resultado.replace("$", " ").replace("€", " euros ").replace("&", " y ")
-    # 2. Números → palabras. Usa num2words (robusto: años, decimales, millones) si está
-    #    instalado; si no, cae a una regla casera para decimales. Así el worker nunca falla.
+    resultado = resultado.replace("+", " más ").replace("=", " igual a ")
+    resultado = re.sub(r'(\d)\s*x\s*(\d)', r'\1 por \2', resultado)  # 3x4 → 3 por 4
+    # 2. Números → palabras. Maneja correctamente la convención española donde el
+    #    PUNTO suele ser separador de miles (1.500 = mil quinientos) y la COMA el
+    #    decimal (3,14 = tres coma catorce), pero también el uso anglosajón (3.14).
+    #    Heurística: un punto seguido de exactamente 3 dígitos = separador de miles;
+    #    1-2 dígitos = decimal.
     try:
         from num2words import num2words as _n2w
         def _num_a_palabras(m):
             try:
-                txt = m.group(0).replace(",", "")  # quitar separador de miles
-                if "." in txt:
-                    return _n2w(float(txt), lang="es")
-                return _n2w(int(txt), lang="es")
+                txt = m.group(0)
+                # coma decimal española: "3,14" → decimal
+                if re.match(r'^\d+,\d{1,2}$', txt):
+                    entero, dec = txt.split(",")
+                    return _n2w(int(entero), lang="es") + " coma " + " ".join(_n2w(int(d), lang="es") for d in dec)
+                # punto como separador de miles: "1.500", "1.234.567"
+                if re.match(r'^\d{1,3}(\.\d{3})+$', txt):
+                    return _n2w(int(txt.replace(".", "")), lang="es")
+                # coma como separador de miles: "1,500"
+                if re.match(r'^\d{1,3}(,\d{3})+$', txt):
+                    return _n2w(int(txt.replace(",", "")), lang="es")
+                # punto decimal anglosajón: "3.14" (1-2 decimales)
+                if re.match(r'^\d+\.\d{1,2}$', txt):
+                    entero, dec = txt.split(".")
+                    return _n2w(int(entero), lang="es") + " punto " + " ".join(_n2w(int(d), lang="es") for d in dec)
+                # entero normal
+                limpio = txt.replace(".", "").replace(",", "")
+                return _n2w(int(limpio), lang="es")
             except Exception:
                 return m.group(0)
-        # Números con posibles separadores de miles y decimales
         resultado = re.sub(r'\d[\d.,]*\d|\d', _num_a_palabras, resultado)
     except Exception:
-        # Respaldo si num2words no está instalado: al menos arreglar decimales
         resultado = re.sub(r'(\d+)\.(\d+)', r'\1 punto \2', resultado)
     # 3. Frases de varias palabras
     for frase, rep in REEMPLAZOS_FRASE.items():
