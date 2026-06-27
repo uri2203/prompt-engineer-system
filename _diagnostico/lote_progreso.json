@@ -1,29 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 6,
-  "completados": 2,
-  "fallidos": 4,
-  "trabajo_actual": "Reintentando encolado en 16s",
-  "mensaje": "Lote terminado: 2 completados, 4 fallidos (omitidos).",
-  "resumen": "FiltradoMX: 0s+2L | LaesquinaRandom: 0s+2L | TuIALista: 0s+2L",
-  "historial": [
-    {
-      "n": 2,
-      "marca": "FiltradoMX",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1076.0,
-      "hora": "00:57"
-    },
-    {
-      "n": 5,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1907.4,
-      "hora": "23:56"
-    }
-  ]
+  "estado_lote": "produciendo",
+  "total": 1,
+  "completados": 0,
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "TuIALista: 0s+1L",
+  "historial": []
 }
