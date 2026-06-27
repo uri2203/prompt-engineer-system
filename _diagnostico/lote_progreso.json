@@ -1,20 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 1,
-  "completados": 1,
+  "estado_lote": "produciendo",
+  "total": 4,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 0s",
-  "mensaje": "Lote completado.",
-  "resumen": "TuIALista: 0s+1L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2034.3,
-      "hora": "10:58"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "La Viuda: 0s+2L | TuIALista: 0s+2L",
+  "historial": []
 }
