@@ -1,0 +1,24 @@
+{
+  "id": "4a221fa5-210a-4b8f-a11f-e438583bc3ad_asm",
+  "marca": "TuIALista",
+  "formato": "16:9",
+  "tipo": "Largo",
+  "inicio": "2026-06-28 01:40:13",
+  "hooks": {
+    "frases_recibidas": 23,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Pre-flight abortado: Nodo de VOZ no responde en http://192.168.0.251:8000"
+  ]
+}
