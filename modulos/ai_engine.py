@@ -1239,19 +1239,17 @@ Formato: SHORT 9:16 YouTube Shorts y TikTok
 
 INSTRUCCIONES ESTRICTAS:
 - TÍTULO: máx 70 caracteres, llena al menos 55. Estrategia "vacío de información" (crea curiosidad sin revelar), keyword principal en los primeros 40 caracteres (ahí el algoritmo le da más peso), específico NO genérico.
-- DESCRIPCIÓN: 150+ palabras, primeras 2 líneas enganchan (aparecen antes del "ver más"), integra keywords del tema de forma NATURAL (YouTube 2026 penaliza amontonar keywords; premia lenguaje natural y contextual), 1 pregunta al espectador, cierra con CTA.
+- DESCRIPCIÓN: MÍNIMO 200 palabras (esto sube el score SEO). Las primeras 2 líneas enganchan (aparecen antes del "ver más") e incluyen la keyword principal. A lo largo del texto integra de forma NATURAL la keyword principal 2-3 veces y 8-12 keywords secundarias del tema (sin amontonar; YouTube 2026 premia lenguaje natural). Incluye 1 pregunta al espectador y cierra con CTA (suscríbete, activa la campana). Agrega una línea de "También te puede interesar" con 2-3 frases de búsqueda relacionadas.
 - HASHTAGS: exactamente 5-7 (NUNCA más de 8). Los 3 primeros son los más relevantes y aparecen sobre el título. IMPORTANTE: pasar de 15 hashtags hace que YouTube ignore TODOS — por eso pocos y buenos. Incluye #Shorts.
-- KEYWORDS/TAGS: específicas al tema, hasta 500 caracteres. Keyword principal primero, luego variantes long-tail y sinónimos. NO repetir relleno (cuenta como keyword stuffing).
-- PRIMER COMENTARIO: pregunta provocadora del tema, invita a comentar.
-- HOOK: prompt de imagen impactante del elemento más icónico del tema real. SIN personas, SIN texto, SIN violencia gráfica (normas de monetización).
+- KEYWORDS/TAGS: ESTE CAMPO ES CLAVE PARA EL SCORE. Genera entre 18 y 25 etiquetas que SUMEN cerca de 480-500 caracteres (sin pasarse). Ordénalas así: (1) la keyword principal exacta, (2) 4-5 variantes long-tail de esa keyword (frases de 3-5 palabras que la gente busca), (3) 5-6 keywords ESPECÍFICAS del tema real del video, (4) 5-6 keywords AMPLIAS y POPULARES del nicho (alto volumen de búsqueda, ej. para terror: "historias de terror", "terror psicológico", "creepypastas", "miedo", "suspenso"), (5) 2-3 del nombre del canal y marca. Todas RELEVANTES al video (nada de relleno que no tenga que ver). Esta mezcla de específicas + amplias populares es lo que da puntuación VERDE.
 
 SALIDA: ÚNICAMENTE JSON válido.
 
 {{
   "titulo_final": "Título final optimizado SEO, máximo 70 caracteres, alto CTR, keyword principal en los primeros 40 caracteres",
-  "descripcion": "Descripción completa de al menos 150 palabras, primeras 2 líneas enganchan, keywords integradas con naturalidad.",
+  "descripcion": "Descripción de MÍNIMO 200 palabras, primeras 2 líneas enganchan con keyword principal, keywords integradas con naturalidad, pregunta al espectador, CTA, y línea de contenido relacionado.",
   "hashtags": "#hashtag1 #hashtag2 ... exactamente 5-7 hashtags, los 3 primeros los más relevantes, incluye #Shorts",
-  "keywords": "palabra1, palabra2, ... específicas al tema, máximo 500 caracteres, sin relleno repetido",
+  "keywords": "18-25 etiquetas relevantes que sumen ~480-500 caracteres: keyword principal, variantes long-tail, específicas del tema, amplias populares del nicho, y marca. Separadas por comas.",
   "primer_comentario": "Comentario para fijar, pregunta provocadora del tema. Termina invitando a comentar.",
   "prompt_hook": "Prompt para imagen de hook del elemento más icónico del tema real. Ultra detallado, high contrast, dramatic lighting, no people, no text, no graphic violence, en inglés."
 }}
@@ -1319,7 +1317,7 @@ ADN VISUAL DEL CANAL:
 
 **HASHTAGS**: exactamente 5-8 (NUNCA más). Mezcla de amplios (#terror) y específicos del tema. Los 3 primeros son los más importantes (YouTube los muestra sobre el título). CRÍTICO: pasar de 15 hashtags hace que YouTube ignore TODOS los del video — por eso pocos y bien elegidos.
 
-**KEYWORDS/TAGS**: hasta 500 caracteres. Mezcla: keyword principal, variantes long-tail, sinónimos, nombres propios del tema, y términos de búsqueda reales. Específicas al video, sin relleno repetido (YouTube 2026 penaliza el keyword stuffing).
+**KEYWORDS/TAGS**: ESTE CAMPO ES CLAVE PARA EL SCORE SEO. Genera entre 20 y 28 etiquetas que SUMEN cerca de 480-500 caracteres (sin pasarse de 500). Ordénalas así: (1) keyword principal exacta, (2) 5-6 variantes long-tail (frases de 3-5 palabras que la gente realmente busca), (3) 6-7 keywords ESPECÍFICAS del tema real, (4) 6-7 keywords AMPLIAS y POPULARES del nicho con alto volumen de búsqueda (ej. para terror: "historias de terror", "terror psicológico", "creepypastas", "casos paranormales"), (5) 2-3 del nombre del canal. TODAS deben ser RELEVANTES al video (nada de relleno sin relación). Esta mezcla de específicas + amplias populares es lo que da puntuación VERDE en las herramientas SEO. Separadas por comas.
 
 **PRIMER COMENTARIO**: genera debate. Pregunta provocadora anclada al tema específico. Termina invitando a compartir experiencias.
 
@@ -1337,8 +1335,8 @@ SALIDA: ÚNICAMENTE JSON válido.
 {{
   "titulo_final": "Título SEO optimizado siguiendo TODAS las reglas de arriba",
   "descripcion": "Descripción 350+ palabras siguiendo la estructura de arriba",
-  "hashtags": "12-15 hashtags separados por espacio, los 3 más relevantes primero",
-  "keywords": "keywords específicas al tema, hasta 500 caracteres, separadas por coma",
+  "hashtags": "exactamente 5-8 hashtags separados por espacio (NUNCA más de 8), los 3 más relevantes primero",
+  "keywords": "20-28 etiquetas relevantes que sumen ~480-500 caracteres: keyword principal, variantes long-tail, específicas del tema, amplias populares del nicho, y marca. Separadas por comas.",
   "primer_comentario": "Comentario que genera debate, pregunta provocadora del tema específico",
   "prompt_hook": "Prompt de VIDEO con movimiento de cámara para el hook de inicio — objeto/momento más icónico del tema real, {adn['paleta'].split(',')[0]}, {adn['estilo']}, cinematic camera motion, dramatic lighting, no people, no text, no graphic violence, ultra detailed, en inglés",
   "prompt_hook_imagen": "Versión imagen estática del mismo hook para fallback con Stable Diffusion — mismo contenido sin descripción de movimiento, {adn['paleta'].split(',')[0]}, dramatic lighting, no people, photorealistic, en inglés"
@@ -1352,11 +1350,119 @@ SALIDA: ÚNICAMENTE JSON válido.
         )
         resultado, errores = self._llamar_gemini(system_pub, prompt_paquete, llaves)
         if resultado:
-            return resultado
+            # REFUERZO DE METADATOS: garantiza keywords suficientes y descripción larga
+            # para lograr puntuación verde en las herramientas SEO, aunque la IA se
+            # haya quedado corta. Completa con keywords del nicho SI hace falta.
+            return self._reforzar_metadatos(resultado, marca, titulo, texto_locucion, formato)
         # RED DE SEGURIDAD: si Gemini falló (p.ej. las 8 keys agotadas), generar
         # metadatos básicos para que el video NUNCA quede sin paquete de publicación.
         print(f"[PAQUETE] ⚠️ Gemini no generó el paquete — usando metadatos de respaldo. ({'; '.join(errores[:2]) if errores else 'sin detalle'})")
         return self._paquete_respaldo(marca, titulo, texto_locucion, formato, canal_info)
+
+    def _reforzar_metadatos(self, resultado_json, marca, titulo, texto_locucion, formato):
+        """Asegura que keywords y descripción cumplan lo que las herramientas SEO
+        (vidIQ/TubeBuddy) miden para dar VERDE: cantidad y volumen de etiquetas,
+        y longitud/uso de keywords en la descripción. Si la IA se quedó corta, se
+        completa con keywords amplias y populares del nicho (siempre relevantes)."""
+        import json as _json, re as _re
+        try:
+            paq = _json.loads(resultado_json) if isinstance(resultado_json, str) else resultado_json
+        except Exception:
+            return resultado_json  # si no se puede parsear, devolver tal cual
+
+        marca_l = marca.lower().replace(" ", "")
+        # Banco de keywords AMPLIAS y populares por nicho (alto volumen de búsqueda).
+        # Solo se usan para COMPLETAR si faltan; todas son relevantes al canal.
+        nicho_keywords = {
+            "viuda": ["historias de terror", "terror psicologico", "creepypasta", "creepypastas",
+                      "miedo", "suspenso", "historias de miedo", "relatos de terror", "horror",
+                      "casos paranormales", "terror real", "historias perturbadoras", "misterio",
+                      "narracion de terror", "cuentos de terror", "terror nocturno", "historias reales de terror",
+                      "creepypastas en espanol", "terror en espanol", "historias de miedo reales",
+                      "relatos de horror", "leyendas urbanas", "casos reales de terror", "miedo profundo",
+                      "historias para no dormir", "terror psicologico espanol", "lo paranormal", "fantasmas",
+                      "historias escalofriantes", "terror y misterio"],
+            "monkygraff": ["geopolitica", "noticias internacionales", "analisis geopolitico",
+                           "politica internacional", "economia mundial", "conflictos mundiales",
+                           "actualidad", "noticias del mundo", "geopolitica explicada", "guerra",
+                           "potencias mundiales", "relaciones internacionales", "analisis politico",
+                           "geopolitica 2026", "noticias geopoliticas", "conflicto internacional",
+                           "economia global", "politica mundial", "tensiones geopoliticas", "estrategia global",
+                           "analisis internacional", "geopolitica actual", "crisis mundial", "poder mundial"],
+            "filtrad": ["confesiones", "historias reales", "drama", "casos de la vida real",
+                        "historias de la vida", "confesiones reales", "relatos reales", "chisme",
+                        "historias impactantes", "testimonios", "historias personales", "secretos",
+                        "confesiones anonimas", "historias de drama", "casos reales", "relatos de la vida",
+                        "historias fuertes", "confesiones impactantes", "drama real", "historias de traicion",
+                        "secretos revelados", "historias sorprendentes", "relatos impactantes"],
+            "esquina": ["humor", "comedia", "videos graciosos", "risas", "memes", "humor absurdo",
+                        "comedia mexicana", "videos de risa", "humor random", "chistes", "parodia",
+                        "momentos graciosos", "humor negro", "comedia absurda", "videos de humor",
+                        "humor en espanol", "comedia random", "videos comicos", "humor mexicano",
+                        "situaciones graciosas", "comedia y risas", "humor viral", "videos divertidos"],
+            "tuialista": ["inteligencia artificial", "herramientas de IA", "tecnologia",
+                          "inteligencia artificial 2026", "IA", "herramientas IA gratis", "chatgpt",
+                          "tutoriales de IA", "tecnologia 2026", "automatizacion", "productividad",
+                          "novedades tecnologicas", "apps de inteligencia artificial", "IA explicada",
+                          "mejores herramientas de IA", "inteligencia artificial explicada", "IA gratis",
+                          "trucos de IA", "tecnologia e IA", "noticias de IA", "inteligencia artificial tutorial",
+                          "herramientas de inteligencia artificial", "IA para principiantes", "futuro de la IA"],
+            "umbral": ["escenarios hipoteticos", "que pasaria si", "documentales", "futuro",
+                       "realidades alternativas", "ciencia", "hipotesis", "mundos alternativos",
+                       "especulacion", "futurismo", "escenarios alternativos", "historia alternativa",
+                       "que pasaria si documentales", "mundos hipoteticos", "realidad alterna",
+                       "escenarios del futuro", "documentales hipoteticos", "y si", "futuros posibles",
+                       "universos alternativos", "especulacion cientifica", "escenarios posibles"],
+        }
+        banco = next((v for k, v in nicho_keywords.items() if k in marca_l), 
+                     ["historias", "viral", "videos", "contenido", "tendencia", "fyp",
+                      "parati", "viral 2026", "trending", "lo mas visto"])
+
+        # 1) Reforzar KEYWORDS: combinar las de la IA + palabras del título + banco del nicho
+        kw = paq.get("keywords", "") or ""
+        kw_lista = [k.strip() for k in kw.split(",") if k.strip()]
+        # añadir frases del título (long-tail relevantes)
+        titulo_kw = (titulo or "").lower().strip()
+        if titulo_kw and titulo_kw not in [k.lower() for k in kw_lista]:
+            kw_lista.append(titulo_kw)
+        # añadir keywords del nicho que no estén ya, hasta llenar ~490 caracteres
+        for nk in banco:
+            if len(", ".join(kw_lista)) >= 485:
+                break
+            if nk.lower() not in [k.lower() for k in kw_lista]:
+                kw_lista.append(nk)
+        # añadir la marca como tag
+        if marca.lower() not in [k.lower() for k in kw_lista]:
+            kw_lista.append(marca.lower())
+        # recortar a 500 caracteres exactos sin cortar una palabra
+        kw_final = ""
+        for k in kw_lista:
+            if len(kw_final) + len(k) + 2 > 500:
+                break
+            kw_final += (", " if kw_final else "") + k
+        paq["keywords"] = kw_final
+
+        # 2) Reforzar DESCRIPCIÓN si está corta (las herramientas premian 150+ palabras)
+        desc = paq.get("descripcion", "") or ""
+        if len(desc.split()) < 150:
+            # construir una descripción más completa integrando keywords del nicho
+            kw_para_desc = ", ".join(banco[:5])
+            extra = (
+                f"\n\nEn este video de {marca} exploramos a fondo este tema, con todos los detalles "
+                f"que necesitas conocer. Si te gusta el contenido sobre {banco[0] if banco else 'estos temas'}, "
+                f"este video es para ti. "
+                f"\n\nNo olvides SUSCRIBIRTE al canal y ACTIVAR LA CAMPANA 🔔 para no perderte ninguno "
+                f"de nuestros próximos videos. Cada semana subimos contenido nuevo. "
+                f"\n\n¿Qué opinas sobre esto? Déjanos tu comentario, nos encanta leerte y responder. "
+                f"Comparte el video con alguien a quien le pueda interesar. "
+                f"\n\n🔎 También te puede interesar: {kw_para_desc}. "
+                f"\n\nGracias por ver hasta el final. Tu apoyo ayuda muchísimo al canal."
+            )
+            desc = (desc + extra).strip()
+            paq["descripcion"] = desc
+
+        paq["marca"] = marca
+        return _json.dumps(paq, indent=4, ensure_ascii=False)
 
     def _paquete_respaldo(self, marca, titulo, texto_locucion, formato, canal_info=""):
         """Metadatos mínimos viables cuando Gemini no está disponible. No son óptimos
@@ -1385,18 +1491,45 @@ SALIDA: ÚNICAMENTE JSON válido.
         marca_l = marca.lower().replace(" ", "")
         htags = next((v for k, v in hashtags_base.items() if k in marca_l), "#viral #historias #fyp")
         htags += " #shorts" if not es_largo else " #video"
+        # Completar keywords con amplias del nicho para lograr buen volumen (verde)
+        nicho_kw = {
+            "viuda": ["historias de terror","terror psicologico","creepypasta","miedo","suspenso",
+                      "historias de miedo","relatos de terror","casos paranormales","misterio","horror"],
+            "monkygraff": ["geopolitica","noticias internacionales","analisis geopolitico","actualidad",
+                           "economia mundial","politica internacional","noticias del mundo","guerra"],
+            "filtrad": ["confesiones","historias reales","drama","casos de la vida real","chisme",
+                        "relatos reales","historias impactantes","testimonios"],
+            "esquina": ["humor","comedia","videos graciosos","risas","memes","humor absurdo",
+                        "comedia mexicana","videos de risa"],
+            "tuialista": ["inteligencia artificial","herramientas de IA","tecnologia","IA","chatgpt",
+                          "tutoriales de IA","automatizacion","productividad"],
+            "umbral": ["escenarios hipoteticos","que pasaria si","documentales","futuro",
+                       "realidades alternativas","hipotesis","mundos alternativos"],
+        }
+        banco = next((v for k, v in nicho_kw.items() if k in marca_l), ["historias","viral","videos"])
+        for nk in banco:
+            if len(", ".join(frecuentes)) >= 470:
+                break
+            if nk.lower() not in [f.lower() for f in frecuentes]:
+                frecuentes.append(nk)
+        kw_final = ""
+        for k in frecuentes:
+            if len(kw_final) + len(k) + 2 > 500:
+                break
+            kw_final += (", " if kw_final else "") + k
         descripcion = (
             f"{titulo_final}. {texto_locucion[:200].strip()}... "
-            f"\n\nSuscríbete para más contenido de {marca}. "
-            f"Activa la campana para no perderte ningún video. "
+            f"\n\nEn este video de {marca} exploramos este tema a fondo. "
+            f"Suscríbete para más contenido y activa la campana para no perderte ningún video. "
             f"\n\n¿Qué opinas? Déjanoslo en los comentarios. "
+            f"\n\nTambién te puede interesar: {', '.join(banco[:3])}. "
             f"\n\n{htags}"
         )
         paquete = {
             "titulo_final": titulo_final,
             "descripcion": descripcion,
             "hashtags": htags,
-            "keywords": ", ".join(frecuentes)[:500],
+            "keywords": kw_final,
             "primer_comentario": "¿Qué te pareció? Cuéntanos tu opinión en los comentarios 👇",
             "prompt_hook": "dramatic cinematic establishing shot, high contrast, dramatic lighting, no people, no text",
             "marca": marca,
