@@ -1,7 +1,20 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
-  "completados": 0,
+  "estado_lote": "cancelado",
+  "total": 9,
+  "completados": 1,
+  "fallidos": 1,
+  "trabajo_actual": "Generando video 3/9 (Monkygraff 16:9 28min)",
   "mensaje": "Lote cancelado por el operador.",
-  "resumen": ""
+  "resumen": "La Viuda: 5s+0L | Monkygraff: 0s+4L",
+  "historial": [
+    {
+      "n": 1,
+      "marca": "Monkygraff",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 1945.1,
+      "hora": "07:45"
+    }
+  ]
 }
