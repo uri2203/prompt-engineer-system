@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_J"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_K"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_J"
+VERSION_WORKER = "2026-06-23_K"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -1244,28 +1244,54 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
         # buscar la escena cuyo final cumpla DOS cosas:
         #  1. esté cerca del tiempo objetivo (reparto parejo)
         #  2. y sobre todo, que ese final caiga en una PAUSA real de la voz
-        # Se puntúa cada escena: distancia al objetivo + penalización fuerte si su
-        # final NO está cerca de un silencio. Así el re-hook cae en una pausa real.
+        # ESTRATEGIA EN DOS PASADAS para garantizar que el re-hook caiga en pausa:
+        #  Pasada 1: entre las escenas cuyo final está MUY cerca de una pausa (<1.5s,
+        #            ajustable sin congelar mucho frame), elegir la más cercana al objetivo.
+        #  Pasada 2 (respaldo): si ninguna escena tiene pausa cercana, elegir la que
+        #            minimice distancia a la pausa (aunque haya que repartir distinto).
         mejor_i, mejor_score = None, 1e9
-        for i, t_fin in enumerate(acum[:-1]):  # no tras la última escena
+        # Pasada 1: candidatas con pausa muy cercana
+        candidatas_con_pausa = []
+        for i, t_fin in enumerate(acum[:-1]):
             if i in escenas_usadas:
                 continue
-            dist_obj = abs(t_fin - t_obj)
-            # distancia del final de la escena al silencio más cercano
             if _sil:
                 dist_sil = min(abs(t_fin - s) for s in _sil)
             else:
                 dist_sil = 0.0
-            # el silencio pesa MUCHO más que el reparto: es prioritario caer en una
-            # pausa real (peso 6) sobre repartir parejo (peso 1). Así se elige una
-            # escena cuyo final YA coincida con una pausa, y el ajuste posterior del
-            # clip es mínimo (evita congelar frames demasiado tiempo). Esto corrige
-            # TuIALista/FiltradoMX, donde antes el re-hook caía con la voz hablando.
-            score = dist_sil * 6.0 + dist_obj * 1.0
-            if score < mejor_score:
-                mejor_score, mejor_i = score, i
+            if dist_sil <= 1.5:  # el final ya cae casi en una pausa
+                candidatas_con_pausa.append((i, dist_sil, abs(t_fin - t_obj)))
+        if candidatas_con_pausa:
+            # entre las que tienen pausa cercana, la más próxima al tiempo objetivo
+            mejor_i = min(candidatas_con_pausa, key=lambda c: c[2] + c[1] * 2.0)[0]
+        else:
+            # Pasada 2 (respaldo): minimizar sobre todo la distancia a la pausa
+            for i, t_fin in enumerate(acum[:-1]):
+                if i in escenas_usadas:
+                    continue
+                dist_obj = abs(t_fin - t_obj)
+                if _sil:
+                    dist_sil = min(abs(t_fin - s) for s in _sil)
+                else:
+                    dist_sil = 0.0
+                # peso de la pausa MUY alto (10): preferimos caer en pausa aunque
+                # el reparto quede menos parejo (mejor un re-hook en pausa lejana del
+                # objetivo que uno a media frase).
+                score = dist_sil * 10.0 + dist_obj * 1.0
+                if score < mejor_score:
+                    mejor_score, mejor_i = score, i
         if mejor_i is None:
             continue
+        # SALVAGUARDA FINAL: si la escena elegida termina demasiado lejos de cualquier
+        # pausa real (>4.5s, fuera del alcance del ajuste de clip), NO colocar este
+        # re-hook. Es preferible un re-hook menos que uno que caiga a media frase con
+        # la narración hablando (el problema que reportó el usuario). Solo aplica si
+        # hay datos de silencios; sin ellos, se coloca igual (no se puede verificar).
+        if _sil:
+            _t_fin_elegida = acum[mejor_i]
+            _dist_pausa_final = min(abs(_t_fin_elegida - s) for s in _sil)
+            if _dist_pausa_final > 4.5:
+                continue  # saltar este re-hook: no hay pausa alcanzable cerca
         escenas_usadas.add(mejor_i)
         frase = frases_inter[idx] if idx < len(frases_inter) else frases_inter[-1]
         # Alternar formato A (pattern interrupt) y B (flash-forward)
@@ -1502,18 +1528,21 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
             i = ins["despues_de_escena"]
             if i < len(acum):
                 # El re-hook VISUAL aparece en 't_corte_video' (suma real de los clips de
-                # video hasta la escena i). El audio DEBE cortar exactamente ahí para que el
-                # stinger suene donde aparece el re-hook visual. Si no viene ese dato, usar
-                # acum[i] como respaldo.
-                t_corte = ins.get("t_corte_video", acum[i])
-                # RED DE SEGURIDAD: ajustar el corte del audio al silencio REAL más cercano
-                # de la narración, para que la pausa caiga entre frases y no a media palabra.
-                # Esto corrige los casos (TuIALista, FiltradoMX) donde el re-hook caía con la
-                # narración aún hablando. Solo se ajusta si hay un silencio razonablemente cerca.
-                if silencios:
-                    _sil_cercano = min(silencios, key=lambda s: abs(s - t_corte))
-                    if abs(_sil_cercano - t_corte) <= 4.5:
-                        t_corte = _sil_cercano
+                # video hasta la escena i, YA ajustado a la pausa de voz por las capas
+                # anteriores). El audio DEBE cortar EXACTAMENTE ahí para quedar sincronizado
+                # con el re-hook visual (mismo punto = sin desfase).
+                if "t_corte_video" in ins:
+                    # ya viene sincronizado con el video: usarlo TAL CUAL (no re-buscar
+                    # silencio, eso introducía un micro-desfase video-audio).
+                    t_corte = ins["t_corte_video"]
+                else:
+                    # respaldo: no vino el dato del video, así que el audio busca por su
+                    # cuenta el silencio real más cercano al fin de escena teórico.
+                    t_corte = acum[i]
+                    if silencios:
+                        _sil_cercano = min(silencios, key=lambda s: abs(s - t_corte))
+                        if abs(_sil_cercano - t_corte) <= 4.5:
+                            t_corte = _sil_cercano
                 cortes.append((t_corte, ins["dur"]))
         cortes.sort()
         if not cortes:
