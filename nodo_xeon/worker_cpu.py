@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_I"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_J"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_I"
+VERSION_WORKER = "2026-06-23_J"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -1256,8 +1256,12 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
                 dist_sil = min(abs(t_fin - s) for s in _sil)
             else:
                 dist_sil = 0.0
-            # el silencio pesa MÁS que el reparto: preferimos caer en pausa
-            score = dist_sil * 3.0 + dist_obj * 1.0
+            # el silencio pesa MUCHO más que el reparto: es prioritario caer en una
+            # pausa real (peso 6) sobre repartir parejo (peso 1). Así se elige una
+            # escena cuyo final YA coincida con una pausa, y el ajuste posterior del
+            # clip es mínimo (evita congelar frames demasiado tiempo). Esto corrige
+            # TuIALista/FiltradoMX, donde antes el re-hook caía con la voz hablando.
+            score = dist_sil * 6.0 + dist_obj * 1.0
             if score < mejor_score:
                 mejor_score, mejor_i = score, i
         if mejor_i is None:
@@ -1502,6 +1506,14 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
                 # stinger suene donde aparece el re-hook visual. Si no viene ese dato, usar
                 # acum[i] como respaldo.
                 t_corte = ins.get("t_corte_video", acum[i])
+                # RED DE SEGURIDAD: ajustar el corte del audio al silencio REAL más cercano
+                # de la narración, para que la pausa caiga entre frases y no a media palabra.
+                # Esto corrige los casos (TuIALista, FiltradoMX) donde el re-hook caía con la
+                # narración aún hablando. Solo se ajusta si hay un silencio razonablemente cerca.
+                if silencios:
+                    _sil_cercano = min(silencios, key=lambda s: abs(s - t_corte))
+                    if abs(_sil_cercano - t_corte) <= 4.5:
+                        t_corte = _sil_cercano
                 cortes.append((t_corte, ins["dur"]))
         cortes.sort()
         if not cortes:
@@ -2385,8 +2397,12 @@ def procesar():
                                         # silencio de la voz más cercano al final de esta escena
                                         _sil_cerca = min(_silencios_voz, key=lambda s: abs(s - _fin_escena))
                                         _ajuste = _sil_cerca - _fin_escena  # + = alargar, - = recortar
-                                        # solo ajustar si el desfase es perceptible y no exagerado
-                                        if 0.12 < abs(_ajuste) <= 2.5:
+                                        # Ajustar si el desfase es perceptible. El límite superior
+                                        # se subió a 4.5s: en canales con re-hooks densos (TuIALista,
+                                        # FiltradoMX) la pausa de voz puede quedar más lejos del final
+                                        # de la escena, y con 2.5s no se alcanzaba → el re-hook caía a
+                                        # media frase (narración continua). Con 4.5s sí se alinea.
+                                        if 0.12 < abs(_ajuste) <= 4.5:
                                             _dur_clip_actual = _dur(_clip) or 0.0
                                             _dur_nueva = _dur_clip_actual + _ajuste
                                             if _dur_nueva > 0.5:
