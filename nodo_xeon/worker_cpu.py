@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_L"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_M"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_L"
+VERSION_WORKER = "2026-06-23_M"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -1269,23 +1269,53 @@ def _clip_valido(ruta, min_dur=0.2):
 #   intensidad_texto= "fuerte" (texto grande/contrastado) o "suave"
 # Para AJUSTAR un canal: cambia sus números aquí. No afecta a los demás.
 HOOKS_POR_CANAL = {
-    # La Viuda (terror): hooks pausados, lectura lenta, pocos (no romper la tensión)
-    "la viuda":          {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave"},
-    "laviuda":           {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave"},
-    # Monkygraff (geopolítica, denso): hooks más largos para leer, ritmo medio
-    "monkygraff":        {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 80, "max_rehooks": 8, "intensidad_texto": "fuerte"},
-    # FiltradoMX (drama): hooks ágiles, más frecuentes (mantener el morbo)
-    "filtradomx":        {"dur_hook": 2.4, "dur_inicial": 2.6, "seg_por_rehook": 60, "max_rehooks": 10, "intensidad_texto": "fuerte"},
-    # LaesquinaRandom (curiosidades, ágil): hooks rápidos y frecuentes
-    "laesquinarandom":   {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte"},
-    "la esquina random": {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte"},
-    # TuIALista (tech): hooks medios, informativos
-    "tuialista":         {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 70, "max_rehooks": 9, "intensidad_texto": "fuerte"},
-    # Umbral Alterno (documental): hooks pausados para leer, ritmo medio-serio
-    "umbral alterno":    {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave"},
-    "umbralalterno":     {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave"},
+    # Cada canal tiene AHORA sus propios parámetros de SINCRONIZACIÓN, además de los
+    # de ritmo. Esto permite ajustar un canal SIN tocar los demás (antes la lógica de
+    # sincronía era compartida y arreglar uno descomponía otro).
+    #
+    # Parámetros de sincronización (por canal):
+    #   sync_dist_pausa   : distancia (s) para considerar que una escena "cae en pausa"
+    #                       en la pasada 1 de planificación. Menor = más estricto.
+    #   sync_peso_pausa   : cuánto pesa caer en pausa vs repartir parejo (pasada 2).
+    #                       Mayor = prioriza más la pausa.
+    #   sync_limite_ajuste: desfase máximo (s) que el clip puede estirarse/recortarse
+    #                       para alcanzar la pausa. Mayor = alcanza pausas más lejanas
+    #                       (pero congela más frame).
+    #   sync_saltar_si    : si el re-hook quedaría a más de esta distancia (s) de
+    #                       cualquier pausa, se SALTA (mejor uno menos que uno a media
+    #                       frase). Suele = sync_limite_ajuste.
+    #
+    # ── CANALES QUE YA FUNCIONAN: CONGELADOS. No tocar estos valores. ──
+    # La Viuda (terror): hooks pausados, lectura lenta, pocos. FUNCIONA — CONGELADO.
+    "la viuda":          {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    "laviuda":           {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 90, "max_rehooks": 6, "intensidad_texto": "suave",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    # Monkygraff (geopolítica, denso): ritmo medio. FUNCIONA — CONGELADO.
+    "monkygraff":        {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 80, "max_rehooks": 8, "intensidad_texto": "fuerte",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    # LaesquinaRandom (ágil): hooks rápidos. FUNCIONA — CONGELADO.
+    "laesquinarandom":   {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    "la esquina random": {"dur_hook": 2.2, "dur_inicial": 2.4, "seg_por_rehook": 55, "max_rehooks": 10, "intensidad_texto": "fuerte",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    #
+    # ── CANALES EN AJUSTE: estos SÍ se pueden tocar sin afectar a los de arriba. ──
+    # FiltradoMX (drama): hooks ágiles, MUY frecuentes (seg_por_rehook 60 = denso).
+    # Necesita alcanzar pausas más lejanas → límite de ajuste más alto.
+    "filtradomx":        {"dur_hook": 2.4, "dur_inicial": 2.6, "seg_por_rehook": 60, "max_rehooks": 10, "intensidad_texto": "fuerte",
+                          "sync_dist_pausa": 2.0, "sync_peso_pausa": 10.0, "sync_limite_ajuste": 4.5, "sync_saltar_si": 4.5},
+    # TuIALista (tech): hooks medios-densos (seg_por_rehook 70). En ajuste.
+    "tuialista":         {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 70, "max_rehooks": 9, "intensidad_texto": "fuerte",
+                          "sync_dist_pausa": 2.0, "sync_peso_pausa": 10.0, "sync_limite_ajuste": 4.5, "sync_saltar_si": 4.5},
+    # Umbral Alterno (documental): pausado. Valores conservadores como los congelados.
+    "umbral alterno":    {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
+    "umbralalterno":     {"dur_hook": 2.8, "dur_inicial": 3.0, "seg_por_rehook": 85, "max_rehooks": 8, "intensidad_texto": "suave",
+                          "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5},
 }
-HOOKS_DEFAULT = {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 75, "max_rehooks": 8, "intensidad_texto": "fuerte"}
+HOOKS_DEFAULT = {"dur_hook": 2.6, "dur_inicial": 2.8, "seg_por_rehook": 75, "max_rehooks": 8, "intensidad_texto": "fuerte",
+                 "sync_dist_pausa": 1.5, "sync_peso_pausa": 6.0, "sync_limite_ajuste": 2.5, "sync_saltar_si": 4.5}
 
 def _config_hooks(marca):
     """Devuelve la config de re-hooks del canal (o el default)."""
@@ -1346,17 +1376,21 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
     escenas_usadas = set()
     rnd = random.Random("hooksplan")
     _sil = silencios or []
+    # PARÁMETROS DE SINCRONIZACIÓN DEL CANAL (independientes por canal).
+    # Así, ajustar un canal no afecta a los demás (los congelados conservan sus valores).
+    _sync_dist_pausa = cfg.get("sync_dist_pausa", 1.5)
+    _sync_peso_pausa = cfg.get("sync_peso_pausa", 6.0)
     for idx, t_obj in enumerate(tiempos_objetivo):
         # buscar la escena cuyo final cumpla DOS cosas:
         #  1. esté cerca del tiempo objetivo (reparto parejo)
         #  2. y sobre todo, que ese final caiga en una PAUSA real de la voz
         # ESTRATEGIA EN DOS PASADAS para garantizar que el re-hook caiga en pausa:
-        #  Pasada 1: entre las escenas cuyo final está MUY cerca de una pausa (<1.5s,
-        #            ajustable sin congelar mucho frame), elegir la más cercana al objetivo.
-        #  Pasada 2 (respaldo): si ninguna escena tiene pausa cercana, elegir la que
-        #            minimice distancia a la pausa (aunque haya que repartir distinto).
+        #  Pasada 1: entre las escenas cuyo final está cerca de una pausa
+        #            (sync_dist_pausa del canal), elegir la más cercana al objetivo.
+        #  Pasada 2 (respaldo): si ninguna tiene pausa cercana, elegir la que minimice
+        #            distancia a la pausa (peso sync_peso_pausa del canal).
         mejor_i, mejor_score = None, 1e9
-        # Pasada 1: candidatas con pausa muy cercana
+        # Pasada 1: candidatas con pausa cercana (umbral del canal)
         candidatas_con_pausa = []
         for i, t_fin in enumerate(acum[:-1]):
             if i in escenas_usadas:
@@ -1365,7 +1399,7 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
                 dist_sil = min(abs(t_fin - s) for s in _sil)
             else:
                 dist_sil = 0.0
-            if dist_sil <= 1.5:  # el final ya cae casi en una pausa
+            if dist_sil <= _sync_dist_pausa:  # el final ya cae casi en una pausa
                 candidatas_con_pausa.append((i, dist_sil, abs(t_fin - t_obj)))
         if candidatas_con_pausa:
             # entre las que tienen pausa cercana, la más próxima al tiempo objetivo
@@ -1380,23 +1414,21 @@ def planificar_hooks(num_escenas, duraciones_escenas, hooks_frases, es_short, du
                     dist_sil = min(abs(t_fin - s) for s in _sil)
                 else:
                     dist_sil = 0.0
-                # peso de la pausa MUY alto (10): preferimos caer en pausa aunque
-                # el reparto quede menos parejo (mejor un re-hook en pausa lejana del
-                # objetivo que uno a media frase).
-                score = dist_sil * 10.0 + dist_obj * 1.0
+                # peso de la pausa del canal: preferimos caer en pausa aunque el
+                # reparto quede menos parejo (mejor pausa lejana que media frase).
+                score = dist_sil * _sync_peso_pausa + dist_obj * 1.0
                 if score < mejor_score:
                     mejor_score, mejor_i = score, i
         if mejor_i is None:
             continue
         # SALVAGUARDA FINAL: si la escena elegida termina demasiado lejos de cualquier
-        # pausa real (>4.5s, fuera del alcance del ajuste de clip), NO colocar este
-        # re-hook. Es preferible un re-hook menos que uno que caiga a media frase con
-        # la narración hablando (el problema que reportó el usuario). Solo aplica si
-        # hay datos de silencios; sin ellos, se coloca igual (no se puede verificar).
+        # pausa real (más de sync_saltar_si del canal, fuera del alcance del ajuste),
+        # NO colocar este re-hook. Es preferible un re-hook menos que uno que caiga a
+        # media frase. Solo aplica si hay datos de silencios.
         if _sil:
             _t_fin_elegida = acum[mejor_i]
             _dist_pausa_final = min(abs(_t_fin_elegida - s) for s in _sil)
-            if _dist_pausa_final > 4.5:
+            if _dist_pausa_final > cfg.get("sync_saltar_si", 4.5):
                 continue  # saltar este re-hook: no hay pausa alcanzable cerca
         escenas_usadas.add(mejor_i)
         frase = frases_inter[idx] if idx < len(frases_inter) else frases_inter[-1]
@@ -1600,7 +1632,8 @@ def _ajustar_corte_a_silencio(t_objetivo, silencios, ventana=4.0):
 
 
 def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraciones_escenas,
-                               dur_hook_inicial, carpeta, hook_inicial_presente, carpeta_marca=None):
+                               dur_hook_inicial, carpeta, hook_inicial_presente, carpeta_marca=None,
+                               marca=""):
     """
     Reconstruye el audio de narración insertando, en cada punto de hook, un tramo
     de silencio de duración = dur del hook (para que el audio NO pise el hook visual,
@@ -1647,7 +1680,8 @@ def construir_audio_con_hooks(ruta_audio_in, ruta_audio_out, inserciones, duraci
                     t_corte = acum[i]
                     if silencios:
                         _sil_cercano = min(silencios, key=lambda s: abs(s - t_corte))
-                        if abs(_sil_cercano - t_corte) <= 4.5:
+                        _lim_canal = _config_hooks(marca).get("sync_limite_ajuste", 2.5)
+                        if abs(_sil_cercano - t_corte) <= _lim_canal:
                             t_corte = _sil_cercano
                 cortes.append((t_corte, ins["dur"]))
         cortes.sort()
@@ -2532,12 +2566,13 @@ def procesar():
                                         # silencio de la voz más cercano al final de esta escena
                                         _sil_cerca = min(_silencios_voz, key=lambda s: abs(s - _fin_escena))
                                         _ajuste = _sil_cerca - _fin_escena  # + = alargar, - = recortar
-                                        # Ajustar si el desfase es perceptible. El límite superior
-                                        # se subió a 4.5s: en canales con re-hooks densos (TuIALista,
-                                        # FiltradoMX) la pausa de voz puede quedar más lejos del final
-                                        # de la escena, y con 2.5s no se alcanzaba → el re-hook caía a
-                                        # media frase (narración continua). Con 4.5s sí se alinea.
-                                        if 0.12 < abs(_ajuste) <= 4.5:
+                                        # Límite de ajuste POR CANAL (sync_limite_ajuste):
+                                        # los canales densos (TuIALista, FiltradoMX) usan un
+                                        # límite mayor para alcanzar pausas más lejanas; los
+                                        # congelados (La Viuda, Monkygraff...) usan el suyo y
+                                        # NO se ven afectados por ajustes de otros canales.
+                                        _limite_aj = _cfg_hk.get("sync_limite_ajuste", 2.5)
+                                        if 0.12 < abs(_ajuste) <= _limite_aj:
                                             _dur_clip_actual = _dur(_clip) or 0.0
                                             _dur_nueva = _dur_clip_actual + _ajuste
                                             if _dur_nueva > 0.5:
@@ -2595,7 +2630,8 @@ def procesar():
                                 ruta_audio, _audio_hk, _hook_inserciones, duraciones_escenas,
                                 _hook_inicial_dur, carpeta_reciente,
                                 hook_inicial_presente=(_hook_inicial_dur > 0),
-                                carpeta_marca=carpeta_marca_assets
+                                carpeta_marca=carpeta_marca_assets,
+                                marca=marca_audio
                             ):
                                 ruta_audio = _audio_hk
                                 duracion_audio = _dur(_audio_hk)
