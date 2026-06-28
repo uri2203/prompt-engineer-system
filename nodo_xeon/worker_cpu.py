@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_M"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_N"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_M"
+VERSION_WORKER = "2026-06-23_N"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -781,13 +781,45 @@ def _corregir_pronunciacion(texto):
         "ibm": "i be eme", "amd": "a eme de", "qualcomm": "cuálcom",
         "boeing": "bóing", "airbus": "érbas", "ferrari": "ferári",
         "mercedes": "mercédes", "volkswagen": "fólksvaguen", "toyota": "toyóta",
-        "london": "lóndon", "new jersey": "niu yérsi", "texas": "téksas",
+        "london": "lóndon", "new jersey": "niu yérsi",
         "los angeles": "los ángeles", "miami": "maiámi", "chicago": "chicágo",
         "seattle": "siátol", "boston": "bóston", "detroit": "ditróit",
         "qatar": "catár", "dubai": "dubái", "tokyo": "tókio", "kyoto": "kióto",
         "seoul": "seúl", "mumbai": "mumbái", "moscow": "móscu",
-        "ukraine": "ucráin", "kiev": "kíev", "iran": "irán", "iraq": "irák",
-        "israel": "ísrael", "jerusalem": "yerusalén",
+        "ukraine": "ucráin", "kiev": "kíev",
+        # ── Nombres de países/lugares con pronunciación que la voz dice raro ──
+        # Israel: la voz lo cortaba "iiisael"; la tilde en la é final marca el acento
+        # correcto (a-gu-da) sin guion que cause pausa rara.
+        "israel": "Israél", "israelí": "israelí", "israelíes": "israelíes",
+        "irán": "irán", "iraq": "irák", "irak": "irák",
+        "jerusalem": "yerusalén", "jerusalén": "yerusalén",
+        "qatar": "catár", "kuwait": "kuwáit", "dubái": "dubái",
+        "afganistán": "afganistán", "pakistán": "pakistán",
+        "kazajistán": "kazajistán", "uzbekistán": "uzbekistán",
+        "azerbaiyán": "aserbaiyán", "kirguistán": "kirguistán",
+        "taiwán": "taiguán", "vietnam": "vietnám", "tailandia": "tailándia",
+        "singapur": "singapúr", "malasia": "malásia", "filipinas": "filipínas",
+        "indonesia": "indonésia", "bangladesh": "bangladésh",
+        "etiopía": "etiopía", "kenia": "kénia", "nigeria": "niyéria",
+        "zimbabue": "simbábue", "sudáfrica": "sudáfrica",
+        "marruecos": "marruécos", "argelia": "aryélia", "túnez": "túnes",
+        "catar": "catár", "yemen": "yémen", "omán": "omán",
+        "noruega": "noruéga", "suecia": "suécia", "finlandia": "finlándia",
+        "dinamarca": "dinamárca", "islandia": "islándia",
+        "hungría": "ungría", "rumanía": "rumanía", "bulgaria": "bulgária",
+        "croacia": "croácia", "serbia": "sérbia", "ucrania": "ucránia",
+        "bielorrusia": "bielorrúsia", "georgia": "yeóryia", "armenia": "arménia",
+    }
+    # x que suena como "j" (NO como "ks"): topónimos y nombres mexicanos.
+    # Se aplica ANTES de la regla general de la x para que México→méjico, no meksico.
+    X_COMO_J = {
+        "méxico": "méjico", "mexico": "méjico",
+        "mexicano": "mejicáno", "mexicana": "mejicána",
+        "mexicanos": "mejicános", "mexicanas": "mejicánas",
+        "texas": "téjas", "texano": "tejáno", "texana": "tejána",
+        "oaxaca": "oajáca", "oaxaqueño": "oajaqueño",
+        "xavier": "javiér", "ximena": "jiména", "xiomara": "jiomára",
+        "mexicali": "mejicáli", "texcoco": "tejcóco",
     }
     # frases de varias palabras (se reemplazan primero)
     REEMPLAZOS_FRASE = {
@@ -918,6 +950,22 @@ def _corregir_pronunciacion(texto):
     # 4. Palabras del DICCIONARIO primero (tienen prioridad sobre las reglas automáticas).
     #    Se marca cada palabra ya corregida para que las reglas fonéticas no la pisen.
     _ya_corregidas = set()
+
+    # 4a. X QUE SUENA COMO "J" (México→méjico, Texas→téjas, Oaxaca→oajáca...).
+    #     Se aplica ANTES de la regla general de la x, porque esas palabras NO deben
+    #     convertirse en "ks" (méxico NO es meksico). Se marcan como ya corregidas.
+    def _x_como_j(match):
+        palabra = match.group(0)
+        clave = palabra.lower()
+        if clave in X_COMO_J:
+            nuevo = X_COMO_J[clave]
+            if palabra[0].isupper():
+                nuevo = nuevo[0].upper() + nuevo[1:]
+            _ya_corregidas.add(nuevo.lower())
+            return nuevo
+        return palabra
+    resultado = re.sub(r'\b\w+\b', _x_como_j, resultado, flags=re.UNICODE)
+
     def _reemplazar_marcando(match):
         palabra = match.group(0)
         clave = palabra.lower()
@@ -934,12 +982,22 @@ def _corregir_pronunciacion(texto):
     #    diccionario NO tocó (para no dañar las correcciones ya hechas como sóftgüer).
     def _aplicar_reglas_foneticas(texto_in, ya_corregidas):
         t = texto_in
-        # (A) "x" + consonante → "ks" : explica, experto, extra, texto, éxito, sexto...
-        def _x_consonante(m):
-            return m.group(1) + "ks" + m.group(2)
-        t = re.sub(r'([aeiouáéíóúAEIOUÁÉÍÓÚ])x([bcdfghjklmnpqrstvwxyzñ])', _x_consonante, t)
-        # (B) "x" entre vocales → "ks" (examen → eksamen)
-        t = re.sub(r'([aeiouáéíóú])x([aeiouáéíóú])', r'\1ks\2', t, flags=re.IGNORECASE)
+        # (A+B) "x" → "ks" (explica→eksplica, examen→eksamen), PERO respetando las
+        #       palabras ya corregidas (México→méjico ya no debe tocarse). Se procesa
+        #       palabra por palabra para poder saltar las del diccionario X_COMO_J.
+        def _x_en_palabra(m):
+            palabra = m.group(0)
+            if palabra.lower() in ya_corregidas:
+                return palabra  # ya corregida (méjico, téjas...): no tocar
+            p = palabra
+            # x + consonante → ks
+            p = re.sub(r'([aeiouáéíóúAEIOUÁÉÍÓÚ])x([bcdfghjklmnpqrstvwxyzñBCDFGHJKLMNPQRSTVWXYZÑ])',
+                       lambda mm: mm.group(1) + "ks" + mm.group(2), p)
+            # x entre vocales → ks
+            p = re.sub(r'([aeiouáéíóúAEIOUÁÉÍÓÚ])x([aeiouáéíóúAEIOUÁÉÍÓÚ])',
+                       lambda mm: mm.group(1) + "ks" + mm.group(2), p)
+            return p
+        t = re.sub(r'\b[\wáéíóúñÁÉÍÓÚÑ]+\b', _x_en_palabra, t)
         # (C) Terminación inglesa "-tion" → "shon"
         t = re.sub(r'\b(\w+?)tion\b', r'\1shon', t, flags=re.IGNORECASE)
         # (D) Terminación "-ing" si la raíz es inglesa → "in"
