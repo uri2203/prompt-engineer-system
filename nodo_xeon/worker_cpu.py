@@ -1,12 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_H"                                   ║
-# ║  Arregla: video completo siempre (no salta voz) + orden del lote   ║
-# ║  + re-hook en pausa + cobertura de audio (sin congelar final).     ║
+# ║  VERSION_WORKER = "2026-06-23_I"                                   ║
+# ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
+# ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
+# ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_H"
+VERSION_WORKER = "2026-06-23_I"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -467,7 +468,42 @@ def _corregir_pronunciacion(texto):
     El reemplazo respeta mayúsculas/minúsculas y solo afecta palabras completas."""
     import re
 
-    # ── LIMPIEZA DE PAUSAS ANTINATURALES (antes que nada) ──
+    # ── LIMPIEZA DE SÍMBOLOS DE FORMATO (antes que nada) ──
+    # La IA a veces deja marcas de formato (markdown) en el guion: *palabra*, **negrita**,
+    # _cursiva_, # títulos, etc. El TTS los lee literalmente ("asterisco la cama asterisco").
+    # Se ELIMINAN todos estos símbolos conservando el texto que envuelven, para que la voz
+    # lea solo las palabras. Aplica a TODOS los canales.
+    if texto:
+        # **negrita** o *énfasis* → quitar los asteriscos, dejar la palabra
+        texto = re.sub(r'\*{1,3}([^*\n]+?)\*{1,3}', r'\1', texto)
+        # asteriscos sueltos que hayan quedado
+        texto = texto.replace('*', ' ')
+        # _cursiva_ o __subrayado__ → quitar guiones bajos que envuelven palabras
+        texto = re.sub(r'(?<!\w)_{1,3}([^_\n]+?)_{1,3}(?!\w)', r'\1', texto)
+        # ~~tachado~~ → quitar
+        texto = re.sub(r'~~([^~\n]+?)~~', r'\1', texto)
+        texto = texto.replace('~', ' ')
+        # `código` o ```bloque``` → quitar comillas invertidas (backticks)
+        texto = re.sub(r'`{1,3}([^`\n]+?)`{1,3}', r'\1', texto)
+        texto = texto.replace('`', ' ')
+        # # Títulos markdown al inicio de línea → quitar las almohadillas
+        texto = re.sub(r'(?m)^\s*#{1,6}\s*', '', texto)
+        # almohadillas sueltas que no sean hashtags reales (se leen "almohadilla")
+        texto = re.sub(r'#(?=\s)', ' ', texto)
+        texto = re.sub(r'(?<=\s)#(?=\s)', ' ', texto)
+        # > citas markdown al inicio de línea
+        texto = re.sub(r'(?m)^\s*>\s*', '', texto)
+        # corchetes y llaves de markdown/listas: [texto] o {texto} → dejar el texto
+        texto = re.sub(r'\[([^\]\n]*?)\]', r'\1', texto)
+        texto = re.sub(r'\{([^}\n]*?)\}', r'\1', texto)
+        # viñetas de lista al inicio de línea: "- " o "• " o "* " (el * ya se quitó)
+        texto = re.sub(r'(?m)^\s*[-•·]\s+', '', texto)
+        # caracteres de barra vertical (tablas markdown)
+        texto = texto.replace('|', ' ')
+        # limpiar espacios múltiples que pudieron quedar
+        texto = re.sub(r'\s{2,}', ' ', texto).strip()
+
+    # ── LIMPIEZA DE PAUSAS ANTINATURALES ──
     # Los puntos suspensivos y separaciones entre palabras hacen que el TTS meta
     # pausas largas que cortan la narración ("la... más... grande" suena entrecortado).
     # Se quitan los "..." a media frase y se normaliza la puntuación para que la voz
