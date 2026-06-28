@@ -3,101 +3,146 @@
 config_productos.py - Configuracion del MODULO DE VIDEOS PUBLICITARIOS (image-to-video).
 
 Genera un COMERCIAL del producto a partir de UNA foto de referencia, usando WAN
-(image-to-video) local en la RTX 3060. La foto es la referencia; la IA genera el
-video manteniendo el producto y poniendolo en escenas publicitarias con movimiento.
+(image-to-video) local en la RTX 3060, con un PIPELINE DE CALIDAD para que la IA
+NO deforme el producto (etiquetas, texto, bordes se mantienen).
 
+Basado en investigacion tecnica real (ComfyUI/WAN 2026). Ver MODULO_PRODUCTOS.md.
 IMPORTANTE: este modulo NUNCA sube nada a ninguna plataforma. Tu publicas a mano.
 """
 
-VERSION_PRODUCTOS = "2026-06-23_prod_B_i2v"
+VERSION_PRODUCTOS = "2026-06-23_prod_C_calidad"
+
+# =============================================================================
+# PIPELINE DE CALIDAD (el orden importa, cada paso reduce las fallas de la IA)
+# =============================================================================
+# 1. PREPARAR foto: limpiar/sharpen sutil + escalar a resolucion nativa de WAN.
+# 2. GENERAR con WAN 2.2 14B (NO 5B) a resolucion nativa, prompt SIMPLE de accion,
+#    movimiento CONTROLADO (motion bajo = menos deformacion), batch 4n+1.
+# 3. VALIDAR: generar varias tomas (seeds distintas) y quedarse con la mejor.
+# 4. UPSCALE CONSERVADOR con SeedVR2: preserva etiquetas/texto/bordes del producto
+#    sin inventar detalles (es la clave para que el producto se vea fiel).
+# 5. ENSAMBLAR: texto/precio/musica.
 
 # -----------------------------------------------------------------------------
-# MOTOR DE GENERACION (WAN image-to-video, local en la 3060)
+# 1. MODELO DE GENERACION (WAN 2.2 14B image-to-video, local en la 3060)
 # -----------------------------------------------------------------------------
 WAN_I2V = {
-    "ip": "192.168.0.215",          # PC GPU
-    "puerto": 8600,                 # servidor de WAN (ComfyUI / API)
-    "modelo": "wan_i2v",            # modelo image-to-video que quepa en 12GB
-    "resolucion": (768, 768),       # resolucion del video generado
-    "duracion_clip_seg": 5,         # cada generacion de WAN (clips cortos)
-    "fps": 16,                      # fps del video generado por WAN
-    "pasos": 30,                    # calidad (mas pasos = mejor, mas lento)
-    "intentos_por_escena": 2,       # generar N tomas y quedarse con la mejor
+    "ip": "192.168.0.215",
+    "puerto": 8600,
+    # MODELO: 14B fp8 (cabe en 12GB y da CALIDAD). La investigacion es explicita:
+    # "Never use the Wan 5B variant" — el 5B da peor calidad. Para producto = 14B.
+    "modelo": "wan2.2_i2v_14B_fp8_scaled",
+    # RESOLUCION NATIVA de WAN (clave para no introducir deformaciones).
+    # Verticales nativas: 720x1264. Cuadrada: 960x960. Para producto vertical:
+    "resolucion": (720, 1264),
+    "duracion_clip_seg": 5,
+    "fps": 16,                      # fps nativo de WAN (luego se interpola a 30)
+    # PASOS: 20-30 es el rango bueno. Con LoRA Lightning se puede bajar a 4-8.
+    "pasos": 28,
+    "sampler": "uni_pc",            # sampler recomendado para WAN
+    # MOVIMIENTO CONTROLADO: bajo = el producto se deforma MENOS. La causa #1 de
+    # "smearing/warping" es demasiado movimiento. Para producto, movimiento sutil.
+    "motion_strength": 0.45,        # 0.3-0.5 = sutil y seguro para productos
+    # BATCH 4n+1 (5,9,13,17...) elimina el parpadeo entre frames (consistencia).
+    "batch_size": 13,
+    # VRAM: optimizaciones para que el 14B quepa en 12GB.
+    "block_swap": True,             # intercambia bloques GPU<->RAM (cabe el 14B)
+    "vae_tiled": True,              # VAE en mosaicos (menos pico de memoria)
+    # Generar N tomas con seeds distintas y quedarse con la mejor (iterar).
+    "intentos_por_escena": 3,
+}
+
+# LoRAs de aceleracion (opcionales; reducen MUCHO el tiempo de render).
+# Si se activan, bajar 'pasos' a 4-8.
+LORAS_ACELERACION = {
+    "usar": False,                  # activar cuando esten descargadas
+    "lightning": {"usar": False, "strength": 1.0},   # generacion en 4 pasos
+    "lightx2v":  {"usar": False, "strength": 0.5},
+    "causvid":   {"usar": False, "strength": 0.4},
 }
 
 # -----------------------------------------------------------------------------
-# ESCENAS PUBLICITARIAS (el producto aparece en estos ambientes)
-# Cada escena es un prompt de movimiento+ambiente. La IA mantiene el producto
-# de la foto y lo coloca en estas escenas. Se eligen 1 o varias por comercial.
+# 1b. PREPARACION DE LA FOTO (antes de generar) — reduce deformaciones
+# -----------------------------------------------------------------------------
+PREP_FOTO = {
+    # Subir resolucion de la foto ANTES y generar a resolucion menor preserva
+    # detalle reduciendo VRAM (truco PRO de la investigacion).
+    "upscale_previo": True,
+    "sharpen_sutil": True,          # un sharpen leve ayuda a mantener bordes nitidos
+    "fondo_limpio_recomendado": True,  # aviso: mejor foto con fondo limpio
+}
+
+# -----------------------------------------------------------------------------
+# 4. UPSCALER CONSERVADOR (SeedVR2) — LA CLAVE para fidelidad del producto
+# -----------------------------------------------------------------------------
+# SeedVR2 es el upscaler que PRESERVA etiquetas, texto y bordes del producto sin
+# inventar detalles. La investigacion: "conservative upscaling models are
+# necessary for product images". Apache 2.0, gratis, corre en 12GB con block swap.
+UPSCALER = {
+    "usar": True,
+    "modelo": "seedvr2_ema_3b_fp16",   # 3B fp16 va bien en 12GB (mejor que fp8 aqui)
+    "resolucion_objetivo": 1080,       # altura objetivo tras el upscale
+    "batch_size": 13,                  # 4n+1 para consistencia temporal
+    "block_swap": 32,                  # para caber en 12GB
+    "vae_tiled": True,
+    # Truco SeedVR2: bajar la imagen a 0.35 megapixeles antes da mejor resultado.
+    "downscale_previo_mp": 0.35,
+    "pasadas_max": 2,                  # max 2 pasadas (4x); mas introduce artefactos
+}
+
+# -----------------------------------------------------------------------------
+# ESCENAS PUBLICITARIAS — prompts SIMPLES y de ACCION (no recargados)
+# La investigacion: prompts simples y centrados en la accion deforman menos.
+# Cada escena: una accion de camara clara + ambiente breve.
 # -----------------------------------------------------------------------------
 ESCENAS_COMERCIAL = {
-    "premium_mesa":     "the product on a luxurious marble table, warm dramatic lighting, "
-                        "slow cinematic dolly-in, premium commercial, shallow depth of field, "
-                        "elegant atmosphere, soft bokeh background",
-    "estudio_limpio":   "the product on a clean studio background, professional product lighting, "
-                        "smooth slow camera orbit around the product, crisp and sharp, "
-                        "high-end commercial look, subtle reflections",
-    "ambiente_uso":     "the product in a real-life lifestyle setting being showcased, "
-                        "natural warm light, gentle camera movement, aspirational mood, "
-                        "cinematic commercial, depth and atmosphere",
-    "dramatico_oscuro": "the product highlighted with dramatic spotlight on a dark background, "
-                        "glowing rim light, slow reveal camera movement, luxury commercial, "
-                        "high contrast, premium and exclusive feel",
-    "dinamico_energia": "the product with dynamic energy, particles and light around it, "
-                        "fast engaging camera movement, vibrant colors, modern commercial, "
-                        "exciting and bold, eye-catching",
-    "naturaleza_fresco":"the product in a fresh natural environment with soft daylight, "
-                        "clean and organic mood, gentle floating camera, wholesome commercial, "
-                        "natural textures and light",
+    "giro_estudio":     "the product slowly rotates on a clean studio background, soft professional lighting",
+    "acercamiento":     "the camera slowly pushes in toward the product, warm elegant lighting, shallow depth of field",
+    "mesa_premium":     "the product sits on a marble surface, the camera slowly orbits around it, premium lighting",
+    "revelado_luz":     "soft light gradually reveals the product on a dark background, slow camera movement, dramatic",
+    "ambiente_calido":  "the product in a warm cozy setting, gentle camera drift, natural daylight",
+    "elevacion":        "the product floats and slowly turns, clean minimal background, premium commercial lighting",
 }
+ESCENA_DEFAULT = "acercamiento"
+ESCENAS_POR_COMERCIAL = 2
 
-# Escena por defecto y cuantas escenas distintas combinar en un comercial
-ESCENA_DEFAULT = "premium_mesa"
-ESCENAS_POR_COMERCIAL = 2          # combina N escenas distintas en el comercial final
-
-# -----------------------------------------------------------------------------
-# PROMPT BASE (se antepone para reforzar que MANTENGA el producto)
-# Clave para que la IA no deforme el producto de la foto.
-# -----------------------------------------------------------------------------
-PROMPT_MANTENER_PRODUCTO = (
-    "keep the exact same product from the reference image, same shape, same color, "
-    "same details, do not change the product, photorealistic, high quality, "
-)
-# Lo que NO queremos que pase
+# PROMPT que refuerza MANTENER el producto (simple, va junto a la escena).
+PROMPT_MANTENER_PRODUCTO = "keep the exact same product, same shape, same color, same labels, photorealistic, "
+# Negative anti-deformacion (lo que NO queremos).
 NEGATIVE_PRODUCTO = (
-    "deformed product, distorted product, changed product, different product, "
-    "morphing, melting, warped, blurry, low quality, extra objects, "
-    "garbled text, distorted logo, ugly, artifacts"
+    "deformed, distorted, warped, melting, morphing, changed product, different product, "
+    "garbled text, distorted label, blurry, low quality, extra objects, duplicated product, "
+    "smearing, flickering, artifacts, ugly, bad quality"
 )
 
 # -----------------------------------------------------------------------------
 # FORMATO DEL COMERCIAL FINAL
 # -----------------------------------------------------------------------------
 FORMATO = {
-    "orientacion": "vertical",      # "vertical" (9:16) | "horizontal" (16:9)
+    "orientacion": "vertical",
     "resolucion_vertical": (1080, 1920),
     "resolucion_horizontal": (1920, 1080),
-    "fps": 30,                      # fps del comercial final (se interpola desde WAN)
-    "duracion_total_max_seg": 20,   # tope del comercial final
+    "fps": 30,                      # se interpola desde los 16fps de WAN
+    "interpolar_a_30": True,        # interpolacion de frames para fluidez
+    "duracion_total_max_seg": 20,
 }
 
 # -----------------------------------------------------------------------------
-# PRESENTACION (texto, precio, musica) - se agrega DESPUES de generar el video IA
+# PRESENTACION (texto, precio, musica) - se agrega DESPUES del pipeline IA
 # -----------------------------------------------------------------------------
 PRESENTACION = {
     "mostrar_texto": True,
     "posicion_texto": "inferior",
     "musica_fondo": True,
     "carpeta_musica": r"C:\NODO_CLIPS\productos\musica",
-    "voz_corta": False,             # narracion corta opcional (maquina de voz 251)
+    "voz_corta": False,
     "logo_marca": False,
 }
-
 PLANTILLAS = {
-    "oferta":    {"color_acento": "#FF3B30", "energia": "alta",  "texto_grande": True},
-    "review":    {"color_acento": "#007AFF", "energia": "media", "texto_grande": False},
-    "elegante":  {"color_acento": "#C9A227", "energia": "baja",  "texto_grande": False},
-    "lujo":      {"color_acento": "#1C1C1E", "energia": "baja",  "texto_grande": False},
+    "oferta":   {"color_acento": "#FF3B30", "energia": "alta",  "texto_grande": True},
+    "review":   {"color_acento": "#007AFF", "energia": "media", "texto_grande": False},
+    "elegante": {"color_acento": "#C9A227", "energia": "baja",  "texto_grande": False},
+    "lujo":     {"color_acento": "#1C1C1E", "energia": "baja",  "texto_grande": False},
 }
 PLANTILLA_DEFAULT = "elegante"
 
@@ -105,26 +150,24 @@ PLANTILLA_DEFAULT = "elegante"
 # RUTAS
 # -----------------------------------------------------------------------------
 RUTAS = {
-    "referencia": r"C:\NODO_CLIPS\productos\referencia",  # AQUI subes la foto del producto
-    "salida":     r"C:\NODO_CLIPS\productos\salida",      # AQUI sale el comercial
+    "referencia": r"C:\NODO_CLIPS\productos\referencia",
+    "salida":     r"C:\NODO_CLIPS\productos\salida",
     "temp":       r"C:\NODO_CLIPS\productos\temp",
 }
 
-# NUNCA subir a plataformas. El usuario publica manualmente.
 SUBIR_AUTOMATICO = False
 
 
 def resumen():
-    print("=" * 62)
-    print(f"  MODULO DE PRODUCTOS (image-to-video) - {VERSION_PRODUCTOS}")
-    print(f"  Motor: WAN I2V local en la 3060 (la foto es referencia)")
-    print(f"  La IA genera un COMERCIAL del producto en escenas/ambientes")
-    print(f"  Escenas por comercial: {ESCENAS_POR_COMERCIAL} (de {len(ESCENAS_COMERCIAL)} disponibles)")
-    print(f"  Formato: {FORMATO['orientacion']} @ {FORMATO['fps']}fps")
-    print(f"  Texto/precio: {'si' if PRESENTACION['mostrar_texto'] else 'no'} | "
-          f"Musica: {'si' if PRESENTACION['musica_fondo'] else 'no'}")
+    print("=" * 64)
+    print(f"  MODULO PRODUCTOS (I2V de CALIDAD) - {VERSION_PRODUCTOS}")
+    print(f"  Modelo: WAN 2.2 14B fp8 (calidad, NO el 5B)")
+    print(f"  Resolucion nativa: {WAN_I2V['resolucion']} | movimiento: {WAN_I2V['motion_strength']} (sutil)")
+    print(f"  Batch 4n+1: {WAN_I2V['batch_size']} (sin parpadeo) | intentos: {WAN_I2V['intentos_por_escena']}")
+    print(f"  Upscaler conservador SeedVR2: {'SI' if UPSCALER['usar'] else 'no'} (preserva etiquetas/texto)")
+    print(f"  Pipeline: preparar foto -> generar -> validar -> upscale -> ensamblar")
     print(f"  Subida automatica: {'SI' if SUBIR_AUTOMATICO else 'NO (tu publicas)'}")
-    print("=" * 62)
+    print("=" * 64)
 
 
 if __name__ == "__main__":
