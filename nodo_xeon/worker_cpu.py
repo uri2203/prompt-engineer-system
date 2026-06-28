@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_K"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_L"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_K"
+VERSION_WORKER = "2026-06-23_L"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -69,6 +69,112 @@ def _leer_token_github():
             return f.read().strip()
     except Exception:
         return ""
+
+def analizar_video_real(ruta_video, plan_rehooks=None, silencios_plan=None):
+    """ANÁLISIS REAL del video terminado con FFmpeg. Mide lo que de verdad quedó en
+    el MP4 (no lo que el worker planeó), para diagnosticar los re-hooks de raíz.
+
+    Mide:
+      - Silencios REALES de la voz en el video final (silencedetect).
+      - Cortes de escena REALES (donde cambian los clips → donde entran los re-hooks).
+      - Para cada re-hook que el worker planeó: a qué distancia quedó de un silencio real.
+
+    Devuelve un dict con todo, para meterlo en el diagnóstico. best-effort: si algo
+    falla, devuelve lo que pudo medir (nunca rompe la producción).
+    """
+    resultado = {"analisis_ffmpeg": "ok"}
+    try:
+        # 1) DURACIÓN real
+        try:
+            dur = float(subprocess.run(
+                ['ffprobe', '-v', 'quiet', '-show_entries', 'format=duration',
+                 '-of', 'csv=p=0', ruta_video],
+                capture_output=True, text=True, timeout=60).stdout.strip())
+        except Exception:
+            dur = 0.0
+        resultado["duracion_video_seg"] = round(dur, 2)
+
+        # 2) SILENCIOS REALES de la voz (pausas de la narración en el video final)
+        #    silencedetect imprime silence_start / silence_end en stderr.
+        silencios_reales = []
+        try:
+            out = subprocess.run(
+                ['ffmpeg', '-hide_banner', '-vn', '-i', ruta_video,
+                 '-af', 'silencedetect=noise=-32dB:d=0.3', '-f', 'null', '-'],
+                capture_output=True, text=True, timeout=300).stderr
+            import re as _re
+            # cada pausa: tomamos el punto medio entre start y end como "centro de la pausa"
+            starts = [float(m) for m in _re.findall(r'silence_start:\s*([0-9.]+)', out)]
+            ends = [float(m) for m in _re.findall(r'silence_end:\s*([0-9.]+)', out)]
+            for i in range(min(len(starts), len(ends))):
+                silencios_reales.append(round((starts[i] + ends[i]) / 2.0, 2))
+        except Exception as e:
+            resultado["silencios_error"] = str(e)[:100]
+        resultado["silencios_reales"] = silencios_reales
+        resultado["num_silencios_reales"] = len(silencios_reales)
+
+        # 3) CORTES DE ESCENA REALES (cambios de clip → donde aparece el re-hook visual)
+        cortes_escena = []
+        try:
+            out = subprocess.run(
+                ['ffmpeg', '-hide_banner', '-i', ruta_video,
+                 '-vf', "select='gt(scene,0.3)',metadata=print",
+                 '-an', '-f', 'null', '-'],
+                capture_output=True, text=True, timeout=400).stderr
+            import re as _re
+            cortes_escena = [round(float(m), 2) for m in _re.findall(r'pts_time:([0-9.]+)', out)]
+        except Exception as e:
+            resultado["cortes_error"] = str(e)[:100]
+        resultado["cortes_escena_reales"] = cortes_escena[:60]  # cap por tamaño
+        resultado["num_cortes_escena"] = len(cortes_escena)
+
+        # 4) CRUCE: para cada re-hook PLANEADO por el worker, ¿a qué distancia de un
+        #    silencio REAL quedó? Este es el dato clave para diagnosticar el bug.
+        if plan_rehooks:
+            analisis_rehooks = []
+            for rh in plan_rehooks:
+                # t_corte_video = donde el worker dijo que iría el re-hook
+                t_plan = rh.get("t_corte_video")
+                if t_plan is None:
+                    continue
+                # distancia al silencio real más cercano
+                if silencios_reales:
+                    sil_cerca = min(silencios_reales, key=lambda s: abs(s - t_plan))
+                    dist_silencio_real = round(abs(sil_cerca - t_plan), 3)
+                else:
+                    sil_cerca = None
+                    dist_silencio_real = None
+                # distancia al corte de escena real más cercano (¿el re-hook visual
+                # de verdad quedó donde el worker dijo?)
+                if cortes_escena:
+                    corte_cerca = min(cortes_escena, key=lambda c: abs(c - t_plan))
+                    dist_corte_real = round(abs(corte_cerca - t_plan), 3)
+                else:
+                    corte_cerca = None
+                    dist_corte_real = None
+                analisis_rehooks.append({
+                    "escena": rh.get("despues_de_escena"),
+                    "t_planeado": round(t_plan, 2),
+                    "silencio_real_cercano": sil_cerca,
+                    "dist_a_pausa_real": dist_silencio_real,   # <-- DATO CLAVE
+                    "corte_escena_real_cercano": corte_cerca,
+                    "dist_a_corte_real": dist_corte_real,
+                    "EN_PAUSA": (dist_silencio_real is not None and dist_silencio_real <= 0.6),
+                })
+            resultado["rehooks_analisis"] = analisis_rehooks
+            # resumen rápido: cuántos re-hooks NO quedaron en pausa
+            fuera = [r for r in analisis_rehooks if not r["EN_PAUSA"]]
+            resultado["rehooks_total"] = len(analisis_rehooks)
+            resultado["rehooks_fuera_de_pausa"] = len(fuera)
+            resultado["VEREDICTO"] = ("TODOS EN PAUSA" if not fuera
+                                      else f"{len(fuera)} re-hook(s) FUERA de pausa")
+        if silencios_plan is not None:
+            resultado["silencios_que_uso_el_worker"] = [round(s, 2) for s in silencios_plan][:60]
+        return resultado
+    except Exception as e:
+        resultado["analisis_ffmpeg"] = f"error: {str(e)[:150]}"
+        return resultado
+
 
 def subir_diagnostico_video(diag):
     """Sube un JSON de diagnóstico de UN video a _diagnostico/videos/ en la rama
@@ -2831,6 +2937,20 @@ def procesar():
                     _diag["fin"] = time.strftime("%Y-%m-%d %H:%M:%S")
                     _diag["duracion_real_seg"] = round(_dur_real, 1)
                     _diag["video_final"] = os.path.basename(ruta_final)
+                    # ANÁLISIS REAL del video terminado con FFmpeg: mide dónde quedaron
+                    # los re-hooks vs las pausas REALES de la voz. Esto permite
+                    # diagnosticar de raíz (con el video real, no con simulaciones).
+                    try:
+                        _plan_rh = _hook_inserciones if '_hook_inserciones' in dir() else None
+                        _sil_plan = _silencios_voz if '_silencios_voz' in dir() else None
+                        _analisis = analizar_video_real(ruta_final, _plan_rh, _sil_plan)
+                        _diag["MEDICION_REAL"] = _analisis
+                        # imprimir el veredicto en consola para verlo al instante
+                        if _analisis.get("VEREDICTO"):
+                            print(f"   [DIAG re-hooks] {_analisis['VEREDICTO']} "
+                                  f"({_analisis.get('rehooks_total',0)} re-hooks medidos en el video real)")
+                    except Exception as _e:
+                        _diag["MEDICION_REAL"] = {"error": str(_e)[:150]}
                     subir_diagnostico_video(_diag)
                 except Exception as e:
                     print(f"⚠️ Error reportando cierre de ensamblaje al servidor: {e}")
