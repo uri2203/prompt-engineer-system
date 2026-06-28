@@ -1,81 +1,100 @@
-# MÓDULO DE CLIPS DE PRODUCTOS (dentro de nodo_clips/)
+# MÓDULO DE VIDEOS PUBLICITARIOS DE PRODUCTOS (image-to-video)
 
-## QUÉ ES
-Un apartado SEPARADO para generar **videos cortos de productos** a partir de
-imágenes del producto, dándoles movimiento profesional (rotación, zoom, ángulos,
-presentación dinámica). Sirve para promoción de productos (afiliados, tiendas,
-reviews), NO para los 6 canales de contenido.
+## QUÉ ES (enfoque CORRECTO)
+Subes UNA foto de referencia del producto. La IA "mira" esa foto, mantiene el
+producto idéntico, y GENERA un video publicitario nuevo (comercial completo)
+donde el producto aparece en escenas/ambientes con movimiento real.
 
-## DIFERENCIA CLAVE CON LOS CLIPS DE CANAL
-| Aspecto              | Clips de CANAL (los 6 canales)      | Clips de PRODUCTO                    |
-|----------------------|--------------------------------------|--------------------------------------|
-| Entrada              | Prompt de texto (la IA inventa)      | IMÁGENES reales del producto         |
-| Objetivo             | Contenido (terror, tech, etc.)       | Vender/promocionar un producto        |
-| Voz                  | Narración larga del guion            | Opcional (corta o solo música)        |
-| Subida a YouTube     | (no se automatiza ninguna)           | NUNCA — el usuario las publica a mano |
-| Longitud             | Video largo o short                  | Clip corto (5-30s típico)            |
+**La foto NO se convierte en slideshow.** La foto es solo la REFERENCIA para que
+la IA sepa qué producto mostrar. El video (escenas, movimiento, cámara) lo crea
+la IA desde cero, manteniendo el producto consistente.
 
-## DE DÓNDE SALE EL MOVIMIENTO
-El producto entra como IMAGEN (foto del producto que tú subes). El sistema le da
-movimiento de dos formas posibles:
-1. **Movimiento por imagen (rápido, sin IA de video):** zoom, paneo, rotación
-   simulada, parallax 2.5D sobre la foto. Es como el zoompan/DepthFlow actual pero
-   pensado para lucir el producto. NO necesita WAN ni GPU pesada. RÁPIDO.
-2. **Movimiento por IA de video (lento, con WAN):** generar un clip donde el
-   producto se mueve de verdad (gira, la cámara orbita). Más impactante, pero lento.
-   Usa las mismas tarjetas que los clips de canal.
+## TIPO DE VIDEO ELEGIDO
+Comercial completo: el producto aparece en escenas/ambientes publicitarios
+(no solo cámara orbitando un fondo vacío). Ej: el producto sobre una mesa elegante
+con luz dramática, en uso, en un ambiente que vende el producto.
 
-Empezamos por el (1) porque es rápido, no necesita ComfyUI, y da resultados ya.
-El (2) se suma después si quieres más impacto.
+## CÓMO FUNCIONA (image-to-video / I2V)
+La foto del producto es el "ancla" (primer fotograma de referencia). La IA genera
+el resto del video manteniendo el producto igual (sin "visual drift": los detalles,
+color, forma del producto se conservan), y le añade el movimiento y la escena que
+tú describas en el prompt.
 
-## FLUJO DEL MÓDULO DE PRODUCTOS
-```
-  Tú subes fotos del producto  →  carpeta de entrada
-                │
-                ▼
-  product_clips.py:
-    - toma las fotos
-    - les aplica movimiento (zoom/paneo/parallax o IA de video)
-    - arma un clip corto con transiciones
-    - opcional: texto/precio en pantalla, música, voz corta
-                │
-                ▼
-  Clip de producto listo  →  carpeta de salida
-                │
-                ▼
-  TÚ lo publicas manualmente (NO se sube solo a ningún lado)
-```
+  Foto de referencia del producto  +  prompt del comercial
+  (fondo limpio idealmente)            ("el producto en una mesa de marmol,
+                |                        luz calida, camara que se acerca lento")
+                v
+  WAN (image-to-video) en la RTX 3060
+                |
+                v
+  Video del producto en esa escena, con movimiento real
+                |
+                v
+  Se le agrega texto/precio/musica (opcional)
+                |
+                v
+  Comercial listo  ->  TU lo publicas (NUNCA se sube solo)
 
-## ESTRUCTURA DE ARCHIVOS (dentro de nodo_clips/)
-```
-nodo_clips/
-├── productos/
-│   ├── product_clips.py          ← motor de clips de producto
-│   ├── config_productos.py       ← configuración del módulo de productos
-│   ├── entrada/                  ← AQUÍ subes las fotos del producto
-│   └── salida/                   ← AQUÍ salen los clips listos
-```
+## MOTOR: WAN LOCAL (gratis, en tu RTX 3060)
+- WAN es el modelo de I2V que corre LOCAL (los buenos de nube -Kling, Seedance,
+  Veo- son de pago). WAN es gratis pero requiere ComfyUI instalado.
+- Tu le das: la foto + un prompt de movimiento/escena. WAN genera el video.
+- Es LENTO (varios minutos por clip de 5s en la 3060), pero para productos no
+  necesitas volumen: generas el comercial de un producto cuando lo necesites.
 
-## PLAN DE IMPLEMENTACIÓN (por partes, sin romper nada)
-### FASE P0 — Base (esto se hace ahora)
-- [x] Documentación del módulo.
-- [ ] config_productos.py (estilos, duración, transiciones, opciones).
-- [ ] product_clips.py base (movimiento por imagen, sin IA de video).
+## REQUISITOS
+1. ComfyUI instalado en la PC GPU (192.168.0.215) - aun NO esta. Primer paso.
+2. Modelo WAN I2V descargado en ComfyUI (el que quepa en 12GB).
+3. Foto de buena calidad del producto: fondo limpio, producto bien visible,
+   sin texto encima, buena resolucion. Mejor foto = mejor mantiene el producto.
 
-### FASE P1 — Clip por movimiento de imagen (rápido, sin ComfyUI)
-- [ ] Tomar 1 foto de producto y generar un clip con zoom/paneo profesional.
-- [ ] Probar con varias fotos → clip con transiciones entre ángulos.
-- [ ] Opcional: texto en pantalla (nombre, precio), música de fondo.
+## LO QUE LA IA HACE BIEN Y LO QUE NO (honesto)
+BIEN:
+- Mantiene el producto consistente (forma, color) gracias a la referencia.
+- Genera movimiento de camara y escenas atractivas.
+- Varias variaciones del mismo producto en distintos ambientes.
 
-### FASE P2 — Mejoras de presentación
-- [ ] Plantillas de presentación (estilo "review", "unboxing", "oferta").
-- [ ] Fondos, marcos, efectos de luz sobre el producto.
+MAL (limitaciones reales de 2026):
+- Detalles MUY finos pueden distorsionarse: etiquetas, texto en el producto,
+  logos pequenos, telas con patron complejo, liquidos. La IA a veces los deforma.
+- Por eso conviene generar varias tomas y elegir la mejor (iterar).
+- Productos con texto/marca muy visible son los mas dificiles de mantener perfectos.
 
-### FASE P3 — Movimiento por IA de video (opcional, lento)
-- [ ] Integrar WAN para que el producto se mueva de verdad (cuando ComfyUI esté).
+## ESTRUCTURA DE ARCHIVOS (nodo_clips/productos/)
+nodo_clips/productos/
+├── product_i2v.py             <- motor image-to-video (genera el comercial con WAN)
+├── config_productos.py        <- configuracion (escenas, movimientos, presentacion)
+├── ensamblar_comercial.py     <- agrega texto/precio/musica al video generado
+├── referencia/                <- AQUI subes la foto del producto
+└── salida/                    <- AQUI sale el comercial generado
+
+## PLAN POR FASES
+### FASE P0 - Base (ahora, sin generar todavia)
+- [x] Documentacion con el enfoque correcto (I2V).
+- [ ] config_productos.py reenfocado a I2V (escenas, prompts de comercial).
+- [ ] product_i2v.py base (estructura del flujo, listo para cuando WAN este).
+
+### FASE P1 - Instalar WAN (requiere ComfyUI)
+- [ ] Instalar ComfyUI en la PC GPU.
+- [ ] Descargar el modelo WAN I2V que quepa en 12GB.
+- [ ] Probar generar 1 video desde 1 foto de producto. Medir tiempo y calidad.
+
+### FASE P2 - Comercial completo
+- [ ] Generar el video I2V + agregar texto/precio/musica.
+- [ ] Plantillas de escena (producto en mesa, en uso, ambiente premium...).
+- [ ] Generar varias variaciones y elegir la mejor.
+
+### FASE P3 - Afinar
+- [ ] Ajustar prompts de escena por tipo de producto.
+- [ ] Mejorar la consistencia del producto (mejores fotos de referencia, seeds).
 
 ## REGLAS
-- Va dentro de nodo_clips/productos/ — separado de todo lo demás.
-- NO automatiza subida a ninguna plataforma. Tú publicas.
-- NO toca el sistema de imágenes ni los clips de canal.
-- Empieza por movimiento de imagen (rápido) antes que IA de video (lento).
+- Dentro de nodo_clips/productos/ - separado de todo lo demas.
+- NUNCA sube a plataformas. Tu publicas.
+- NO toca el sistema de imagenes ni los clips de canal.
+- Es LENTO (I2V con WAN): para productos puntuales, no para volumen.
+
+## NOTA
+El motor de slideshow anterior (product_clips.py) queda OBSOLETO - esto lo
+reemplaza con el enfoque correcto (I2V). Si en algun momento quieres un slideshow
+rapido como respaldo, ese codigo sigue en el historial de git.
