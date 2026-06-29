@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "84bcdf3a-df14-4a8f-accf-f322ed1881f0",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"dark hallway, slightly distorted perspective, deep shadows, single flickering light at the end, grainy texture\", \"prompt_visual\": \"dark hallway, slightly distorted perspective, deep shadows, single flickering light at the end, grainy texture\", \"texto_locucion\": \"Esa noche, tu casa dejó de ser el lugar seguro.\", \"pexels_query\": \"dark hallway light flickering\"}, {\"id\": 2, \"prompt\": \"extremely long hallway, receding into deep darkness, sense of impossible depth, desaturated colors\", \"prompt_visual\": \"extremely long hallway, receding into deep darkness, sense of impossible depth, desaturated colors\", \"texto_locucion\": \"Los pasillos familiares se estiraban sin fin aparente.\", \"pexels_query\": \"long dark hallway\"}, {\"id\": 3, \"prompt\": \"empty living room, single piece of furniture off-center, exaggerated scale, cold blue tones\", \"prompt_visual\": \"empty living room, single piece of furniture off-center, exaggerated scale, cold blue tones\", \"texto_locucion\": \"Las habitaciones se sentían vacías, más grandes que nunca.\", \"pexels_query\": \"empty room dark\"}, {\"id\": 4, \"prompt\": \"window pane with rain, but no sound, dark muted tones, subtle condensation\", \"prompt_visual\": \"window pane with rain, but no sound, dark muted tones, subtle condensation\", \"texto_locucion\": \"Un silencio absoluto se tragaba cada sonido.\", \"pexels_query\": \"dark window rain\"}, {\"id\": 5, \"prompt\": \"dark corner of a room, subtle, barely visible distortion in the wall, unsettling geometry\", \"prompt_visual\": \"dark corner of a room, subtle, barely visible distortion in the wall, unsettling geometry\", \"texto_locucion\": \"Mirabas esquinas, esperando ver algo que no debería.\", \"pexels_query\": \"dark room corner\"}, {\"id\": 6, \"prompt\": \"row of identical dark wooden doors in a corridor, slightly ajar, unsettling symmetry\", \"prompt_visual\": \"row of identical dark wooden doors in a corridor, slightly ajar, unsettling symmetry\", \"texto_locucion\": \"Cada puerta se veía idéntica, como en un laberinto.\", \"pexels_query\": \"identical doors corridor\"}, {\"id\": 7, \"prompt\": \"close up on an old brass doorknob, faint distorted reflection, deep shadows\", \"prompt_visual\": \"close up on an old brass doorknob, faint distorted reflection, deep shadows\", \"texto_locucion\": \"Girabas una perilla; daba a otro pasillo igual.\", \"pexels_query\": \"old doorknob dark\"}, {\"id\": 8, \"prompt\": \"a new, unfamiliar door in a known wall, no handle, dark wood, subtle glow from crack\", \"prompt_visual\": \"a new, unfamiliar door in a known wall, no handle, dark wood, subtle glow from crack\", \"texto_locucion\": \"No recordabas que existiera tal lugar en tu hogar.\", \"pexels_query\": \"mysterious door wall\"}, {\"id\": 9, \"prompt\": \"still air, heavy curtains, subtle dust motes in a shaft of light, desaturated atmosphere\", \"prompt_visual\": \"still air, heavy curtains, subtle dust motes in a shaft of light, desaturated atmosphere\", \"texto_locucion\": \"El aire se sentía denso, como antes de una tormenta.\", \"pexels_query\": \"heavy curtains dust\"}, {\"id\": 10, \"prompt\": \"a small, unidentifiable shimmer of cold air, empty space, faint blue hue\", \"prompt_visual\": \"a small, unidentifiable shimmer of cold air, empty space, faint blue hue\", \"texto_locucion\": \"Una sensación fría te recorría la espalda lentamente.\", \"pexels_query\": \"cold air abstract\"}, {\"id\": 11, \"prompt\": \"faint, indistinct silhouette at the end of a long, dark hallway, barely visible form\", \"prompt_visual\": \"faint, indistinct silhouette at the end of a long, dark hallway, barely visible form\", \"texto_locucion\": \"Sabías que no estabas solo en esa quietud.\", \"pexels_query\": \"dark silhouette hallway\"}, {\"id\": 12, \"prompt\": \"distorted shadow stretching longer than it should be, on a cracked wall, deep black\", \"prompt_visual\": \"distorted shadow stretching longer than it should be, on a cracked wall, deep black\", \"texto_locucion\": \"Algo te seguía, invisible, pisándote los talones.\", \"pexels_query\": \"distorted shadow wall\"}, {\"id\": 13, \"prompt\": \"subtle vibration in a glass of water on a table, dark setting, single light source\", \"prompt_visual\": \"subtle vibration in a glass of water on a table, dark setting, single light source\", \"texto_locucion\": \"Escuchaste un susurro, pero no reconociste la voz.\", \"pexels_query\": \"vibrating water glass\"}, {\"id\": 14, \"prompt\": \"open mouth, dark, barely visible, emphasizing absence of sound, no identifiable features\", \"prompt_visual\": \"open mouth, dark, barely visible, emphasizing absence of sound, no identifiable features\", \"texto_locucion\": \"Intentaste gritar, pero tu voz no salía.\", \"pexels_query\": \"dark open mouth\"}, {\"id\": 15, \"prompt\": \"phone screen flickering erratically, handheld in darkness, distorted interface\", \"prompt_visual\": \"phone screen flickering erratically, handheld in darkness, distorted interface\", \"texto_locucion\": \"La luz de tu celular temblaba sin motivo aparente.\", \"pexels_query\": \"phone screen flickering\"}, {\"id\": 16, \"prompt\": \"a stopped analog clock, hands at an odd, impossible position, dark wall\", \"prompt_visual\": \"a stopped analog clock, hands at an odd, impossible position, dark wall\", \"texto_locucion\": \"El tiempo mismo parecía haberse disuelto en aquel lugar.\", \"pexels_query\": \"stopped analog clock\"}, {\"id\": 17, \"prompt\": \"endless corridor perspective, no exit visible, receding into black, cracked floor\", \"prompt_visual\": \"endless corridor perspective, no exit visible, receding into black, cracked floor\", \"texto_locucion\": \"Caminabas y caminabas, sin hallar ninguna salida.\", \"pexels_query\": \"endless dark corridor\"}, {\"id\": 18, \"prompt\": \"old, dusty mirror reflecting a distorted, empty room, cracked glass, deep shadows\", \"prompt_visual\": \"old, dusty mirror reflecting a distorted, empty room, cracked glass, deep shadows\", \"texto_locucion\": \"El reflejo en el espejo era ligeramente diferente.\", \"pexels_query\": \"dusty mirror dark\"}, {\"id\": 19, \"prompt\": \"a chair pushed slightly away from a table, implying recent movement, cold light\", \"prompt_visual\": \"a chair pushed slightly away from a table, implying recent movement, cold light\", \"texto_locucion\": \"Lo sentiste antes, esa extraña familiaridad ausente.\", \"pexels_query\": \"chair away table\"}, {\"id\": 20, \"prompt\": \"subtle, unsettling undulation in a brick wall texture, dark, breathing effect\", \"prompt_visual\": \"subtle, unsettling undulation in a brick wall texture, dark, breathing effect\", \"texto_locucion\": \"Las paredes parecían moverse, respirar alrededor tuyo.\", \"pexels_query\": \"undulating wall texture\"}, {\"id\": 21, \"prompt\": \"pareidolia, unsettling face-like form in a complex shadow pattern, deep black\", \"prompt_visual\": \"pareidolia, unsettling face-like form in a complex shadow pattern, deep black\", \"texto_locucion\": \"Cada sombra guardaba una forma que no debía existir.\", \"pexels_query\": \"pareidolia shadow face\"}, {\"id\": 22, \"prompt\": \"a blurry, desaturated photograph of a house interior, distorted, old film grain\", \"prompt_visual\": \"a blurry, desaturated photograph of a house interior, distorted, old film grain\", \"texto_locucion\": \"Tu memoria flaqueaba, ¿siempre fue así tu hogar?\", \"pexels_query\": \"blurry house interior\"}, {\"id\": 23, \"prompt\": \"empty street outside a house, quiet, desolate, under a faint streetlight, long shadows\", \"prompt_visual\": \"empty street outside a house, quiet, desolate, under a faint streetlight, long shadows\", \"texto_locucion\": \"Nadie lo vio, nadie más puede sentir este cambio.\", \"pexels_query\": \"empty street night\"}, {\"id\": 24, \"prompt\": \"barely visible mist curling around a dark doorway, cold blue light\", \"prompt_visual\": \"barely visible mist curling around a dark doorway, cold blue light\", \"texto_locucion\": \"El aire frío te susurraba secretos inentendibles cerca.\", \"pexels_query\": \"mist dark doorway\"}, {\"id\": 25, \"prompt\": \"a single, slightly open drawer in an otherwise normal dresser, deep shadow within, subtle glint\", \"prompt_visual\": \"a single, slightly open drawer in an otherwise normal dresser, deep shadow within, subtle glint\", \"texto_locucion\": \"Ahora sabes que algo no está bien, nunca lo estuvo.\", \"pexels_query\": \"open drawer dark\"}, {\"id\": 26, \"prompt\": \"a pair of glowing, indistinct eyes in deep darkness, framed by a door crack, menacing\", \"prompt_visual\": \"a pair of glowing, indistinct eyes in deep darkness, framed by a door crack, menacing\", \"texto_locucion\": \"Y no puedes ignorarlo. El lugar ya te conoce.\", \"pexels_query\": \"glowing eyes dark crack\"}, {\"id\": 27, \"prompt\": \"a familiar front door, but the handle is missing, a slight gap underneath, unsettling void\", \"prompt_visual\": \"a familiar front door, but the handle is missing, a slight gap underneath, unsettling void\", \"texto_locucion\": \"¿Qué hace que un hogar se convierta en una trampa?\", \"pexels_query\": \"front door missing handle\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Esa noche, tu casa dejó de ser el lugar seguro. Los pasillos familiares se estiraban sin fin aparente. Las habitaciones se sentían vacías, más grandes que nunca. Un silencio absoluto se tragaba cada sonido. Mirabas esquinas, esperando ver algo que no debería. Cada puerta se veía idéntica, como en un laberinto. Girabas una perilla; daba a otro pasillo igual. No recordabas que existiera tal lugar en tu hogar. El aire se sentía denso, como antes de una tormenta. Una sensación fría te recorría la espalda lentamente. Sabías que no estabas solo en esa quietud. Algo te seguía, invisible, pisándote los talones. Escuchaste un susurro, pero no reconociste la voz. Intentaste gritar, pero tu voz no salía. La luz de tu celular temblaba sin motivo aparente. El tiempo mismo parecía haberse disuelto en aquel lugar. Caminabas y caminabas, sin hallar ninguna salida. El reflejo en el espejo era ligeramente diferente. Lo sentiste antes, esa extraña familiaridad ausente. Las paredes parecían moverse, respirar alrededor tuyo. Cada sombra guardaba una forma que no debía existir. Tu memoria flaqueaba, ¿siempre fue así tu hogar? Nadie lo vio, nadie más puede sentir este cambio. El aire frío te susurraba secretos inentendibles cerca. Ahora sabes que algo no está bien, nunca lo estuvo. Y no puedes ignorarlo. El lugar ya te conoce. ¿Qué hace que un hogar se convierta en una trampa?",
+    "titulo_sugerido": "¿Tu Casa Te Esconde Algo? No Estás Solo",
+    "escenas_texto": [
+      "Esa noche, tu casa dejó de ser el lugar seguro.",
+      "Los pasillos familiares se estiraban sin fin aparente.",
+      "Las habitaciones se sentían vacías, más grandes que nunca.",
+      "Un silencio absoluto se tragaba cada sonido.",
+      "Mirabas esquinas, esperando ver algo que no debería.",
+      "Cada puerta se veía idéntica, como en un laberinto.",
+      "Girabas una perilla; daba a otro pasillo igual.",
+      "No recordabas que existiera tal lugar en tu hogar.",
+      "El aire se sentía denso, como antes de una tormenta.",
+      "Una sensación fría te recorría la espalda lentamente.",
+      "Sabías que no estabas solo en esa quietud.",
+      "Algo te seguía, invisible, pisándote los talones.",
+      "Escuchaste un susurro, pero no reconociste la voz.",
+      "Intentaste gritar, pero tu voz no salía.",
+      "La luz de tu celular temblaba sin motivo aparente.",
+      "El tiempo mismo parecía haberse disuelto en aquel lugar.",
+      "Caminabas y caminabas, sin hallar ninguna salida.",
+      "El reflejo en el espejo era ligeramente diferente.",
+      "Lo sentiste antes, esa extraña familiaridad ausente.",
+      "Las paredes parecían moverse, respirar alrededor tuyo.",
+      "Cada sombra guardaba una forma que no debía existir.",
+      "Tu memoria flaqueaba, ¿siempre fue así tu hogar?",
+      "Nadie lo vio, nadie más puede sentir este cambio.",
+      "El aire frío te susurraba secretos inentendibles cerca.",
+      "Ahora sabes que algo no está bien, nunca lo estuvo.",
+      "Y no puedes ignorarlo. El lugar ya te conoce.",
+      "¿Qué hace que un hogar se convierta en una trampa?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "dark hallway, slightly distorted perspective, deep shadows, single flickering light at the end, grainy texture",
+        "prompt_visual": "dark hallway, slightly distorted perspective, deep shadows, single flickering light at the end, grainy texture",
+        "texto_locucion": "Esa noche, tu casa dejó de ser el lugar seguro.",
+        "pexels_query": "dark hallway light flickering"
+      },
+      {
+        "id": 2,
+        "prompt": "extremely long hallway, receding into deep darkness, sense of impossible depth, desaturated colors",
+        "prompt_visual": "extremely long hallway, receding into deep darkness, sense of impossible depth, desaturated colors",
+        "texto_locucion": "Los pasillos familiares se estiraban sin fin aparente.",
+        "pexels_query": "long dark hallway"
+      },
+      {
+        "id": 3,
+        "prompt": "empty living room, single piece of furniture off-center, exaggerated scale, cold blue tones",
+        "prompt_visual": "empty living room, single piece of furniture off-center, exaggerated scale, cold blue tones",
+        "texto_locucion": "Las habitaciones se sentían vacías, más grandes que nunca.",
+        "pexels_query": "empty room dark"
+      },
+      {
+        "id": 4,
+        "prompt": "window pane with rain, but no sound, dark muted tones, subtle condensation",
+        "prompt_visual": "window pane with rain, but no sound, dark muted tones, subtle condensation",
+        "texto_locucion": "Un silencio absoluto se tragaba cada sonido.",
+        "pexels_query": "dark window rain"
+      },
+      {
+        "id": 5,
+        "prompt": "dark corner of a room, subtle, barely visible distortion in the wall, unsettling geometry",
+        "prompt_visual": "dark corner of a room, subtle, barely visible distortion in the wall, unsettling geometry",
+        "texto_locucion": "Mirabas esquinas, esperando ver algo que no debería.",
+        "pexels_query": "dark room corner"
+      },
+      {
+        "id": 6,
+        "prompt": "row of identical dark wooden doors in a corridor, slightly ajar, unsettling symmetry",
+        "prompt_visual": "row of identical dark wooden doors in a corridor, slightly ajar, unsettling symmetry",
+        "texto_locucion": "Cada puerta se veía idéntica, como en un laberinto.",
+        "pexels_query": "identical doors corridor"
+      },
+      {
+        "id": 7,
+        "prompt": "close up on an old brass doorknob, faint distorted reflection, deep shadows",
+        "prompt_visual": "close up on an old brass doorknob, faint distorted reflection, deep shadows",
+        "texto_locucion": "Girabas una perilla; daba a otro pasillo igual.",
+        "pexels_query": "old doorknob dark"
+      },
+      {
+        "id": 8,
+        "prompt": "a new, unfamiliar door in a known wall, no handle, dark wood, subtle glow from crack",
+        "prompt_visual": "a new, unfamiliar door in a known wall, no handle, dark wood, subtle glow from crack",
+        "texto_locucion": "No recordabas que existiera tal lugar en tu hogar.",
+        "pexels_query": "mysterious door wall"
+      },
+      {
+        "id": 9,
+        "prompt": "still air, heavy curtains, subtle dust motes in a shaft of light, desaturated atmosphere",
+        "prompt_visual": "still air, heavy curtains, subtle dust motes in a shaft of light, desaturated atmosphere",
+        "texto_locucion": "El aire se sentía denso, como antes de una tormenta.",
+        "pexels_query": "heavy curtains dust"
+      },
+      {
+        "id": 10,
+        "prompt": "a small, unidentifiable shimmer of cold air, empty space, faint blue hue",
+        "prompt_visual": "a small, unidentifiable shimmer of cold air, empty space, faint blue hue",
+        "texto_locucion": "Una sensación fría te recorría la espalda lentamente.",
+        "pexels_query": "cold air abstract"
+      },
+      {
+        "id": 11,
+        "prompt": "faint, indistinct silhouette at the end of a long, dark hallway, barely visible form",
+        "prompt_visual": "faint, indistinct silhouette at the end of a long, dark hallway, barely visible form",
+        "texto_locucion": "Sabías que no estabas solo en esa quietud.",
+        "pexels_query": "dark silhouette hallway"
+      },
+      {
+        "id": 12,
+        "prompt": "distorted shadow stretching longer than it should be, on a cracked wall, deep black",
+        "prompt_visual": "distorted shadow stretching longer than it should be, on a cracked wall, deep black",
+        "texto_locucion": "Algo te seguía, invisible, pisándote los talones.",
+        "pexels_query": "distorted shadow wall"
+      },
+      {
+        "id": 13,
+        "prompt": "subtle vibration in a glass of water on a table, dark setting, single light source",
+        "prompt_visual": "subtle vibration in a glass of water on a table, dark setting, single light source",
+        "texto_locucion": "Escuchaste un susurro, pero no reconociste la voz.",
+        "pexels_query": "vibrating water glass"
+      },
+      {
+        "id": 14,
+        "prompt": "open mouth, dark, barely visible, emphasizing absence of sound, no identifiable features",
+        "prompt_visual": "open mouth, dark, barely visible, emphasizing absence of sound, no identifiable features",
+        "texto_locucion": "Intentaste gritar, pero tu voz no salía.",
+        "pexels_query": "dark open mouth"
+      },
+      {
+        "id": 15,
+        "prompt": "phone screen flickering erratically, handheld in darkness, distorted interface",
+        "prompt_visual": "phone screen flickering erratically, handheld in darkness, distorted interface",
+        "texto_locucion": "La luz de tu celular temblaba sin motivo aparente.",
+        "pexels_query": "phone screen flickering"
+      },
+      {
+        "id": 16,
+        "prompt": "a stopped analog clock, hands at an odd, impossible position, dark wall",
+        "prompt_visual": "a stopped analog clock, hands at an odd, impossible position, dark wall",
+        "texto_locucion": "El tiempo mismo parecía haberse disuelto en aquel lugar.",
+        "pexels_query": "stopped analog clock"
+      },
+      {
+        "id": 17,
+        "prompt": "endless corridor perspective, no exit visible, receding into black, cracked floor",
+        "prompt_visual": "endless corridor perspective, no exit visible, receding into black, cracked floor",
+        "texto_locucion": "Caminabas y caminabas, sin hallar ninguna salida.",
+        "pexels_query": "endless dark corridor"
+      },
+      {
+        "id": 18,
+        "prompt": "old, dusty mirror reflecting a distorted, empty room, cracked glass, deep shadows",
+        "prompt_visual": "old, dusty mirror reflecting a distorted, empty room, cracked glass, deep shadows",
+        "texto_locucion": "El reflejo en el espejo era ligeramente diferente.",
+        "pexels_query": "dusty mirror dark"
+      },
+      {
+        "id": 19,
+        "prompt": "a chair pushed slightly away from a table, implying recent movement, cold light",
+        "prompt_visual": "a chair pushed slightly away from a table, implying recent movement, cold light",
+        "texto_locucion": "Lo sentiste antes, esa extraña familiaridad ausente.",
+        "pexels_query": "chair away table"
+      },
+      {
+        "id": 20,
+        "prompt": "subtle, unsettling undulation in a brick wall texture, dark, breathing effect",
+        "prompt_visual": "subtle, unsettling undulation in a brick wall texture, dark, breathing effect",
+        "texto_locucion": "Las paredes parecían moverse, respirar alrededor tuyo.",
+        "pexels_query": "undulating wall texture"
+      },
+      {
+        "id": 21,
+        "prompt": "pareidolia, unsettling face-like form in a complex shadow pattern, deep black",
+        "prompt_visual": "pareidolia, unsettling face-like form in a complex shadow pattern, deep black",
+        "texto_locucion": "Cada sombra guardaba una forma que no debía existir.",
+        "pexels_query": "pareidolia shadow face"
+      },
+      {
+        "id": 22,
+        "prompt": "a blurry, desaturated photograph of a house interior, distorted, old film grain",
+        "prompt_visual": "a blurry, desaturated photograph of a house interior, distorted, old film grain",
+        "texto_locucion": "Tu memoria flaqueaba, ¿siempre fue así tu hogar?",
+        "pexels_query": "blurry house interior"
+      },
+      {
+        "id": 23,
+        "prompt": "empty street outside a house, quiet, desolate, under a faint streetlight, long shadows",
+        "prompt_visual": "empty street outside a house, quiet, desolate, under a faint streetlight, long shadows",
+        "texto_locucion": "Nadie lo vio, nadie más puede sentir este cambio.",
+        "pexels_query": "empty street night"
+      },
+      {
+        "id": 24,
+        "prompt": "barely visible mist curling around a dark doorway, cold blue light",
+        "prompt_visual": "barely visible mist curling around a dark doorway, cold blue light",
+        "texto_locucion": "El aire frío te susurraba secretos inentendibles cerca.",
+        "pexels_query": "mist dark doorway"
+      },
+      {
+        "id": 25,
+        "prompt": "a single, slightly open drawer in an otherwise normal dresser, deep shadow within, subtle glint",
+        "prompt_visual": "a single, slightly open drawer in an otherwise normal dresser, deep shadow within, subtle glint",
+        "texto_locucion": "Ahora sabes que algo no está bien, nunca lo estuvo.",
+        "pexels_query": "open drawer dark"
+      },
+      {
+        "id": 26,
+        "prompt": "a pair of glowing, indistinct eyes in deep darkness, framed by a door crack, menacing",
+        "prompt_visual": "a pair of glowing, indistinct eyes in deep darkness, framed by a door crack, menacing",
+        "texto_locucion": "Y no puedes ignorarlo. El lugar ya te conoce.",
+        "pexels_query": "glowing eyes dark crack"
+      },
+      {
+        "id": 27,
+        "prompt": "a familiar front door, but the handle is missing, a slight gap underneath, unsettling void",
+        "prompt_visual": "a familiar front door, but the handle is missing, a slight gap underneath, unsettling void",
+        "texto_locucion": "¿Qué hace que un hogar se convierta en una trampa?",
+        "pexels_query": "front door missing handle"
+      }
+    ],
+    "hooks": [
+      "Tu casa no es tuya.",
+      "El hogar te mira.",
+      "Las paredes respiran."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
