@@ -1,0 +1,131 @@
+{
+  "id": "551c9dcd-fde3-4849-aa18-540b5625bdde_asm",
+  "marca": "La Viuda",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-06-29 12:20:39",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 41.77,
+        "pausa_mas_cercana_seg": 41.93,
+        "distancia_seg": 0.17,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      3.9,
+      5.9,
+      18.83,
+      22.08,
+      24.91,
+      27.54,
+      30.59,
+      33.58,
+      39.11,
+      41.93,
+      47.76,
+      50.36,
+      52.65,
+      55.32,
+      61.34,
+      69.14,
+      72.12,
+      74.46,
+      77.1,
+      80.51,
+      83.96
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-06-29 12:28:45",
+  "duracion_real_seg": 107.0,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4",
+  "MEDICION_REAL": {
+    "analisis_ffmpeg": "ok",
+    "duracion_video_seg": 107.04,
+    "silencios_reales": [
+      2.63,
+      10.27,
+      12.22,
+      15.83,
+      28.43,
+      61.3,
+      61.76,
+      64.42,
+      70.49,
+      86.23,
+      106.71
+    ],
+    "num_silencios_reales": 11,
+    "cortes_escena_reales": [
+      3.34,
+      3.38,
+      10.18,
+      10.24,
+      22.58,
+      25.18,
+      25.28,
+      33.91,
+      48.28,
+      48.31,
+      56.81,
+      59.71,
+      60.91,
+      73.68,
+      92.41,
+      104.04
+    ],
+    "num_cortes_escena": 16,
+    "rehooks_analisis": [
+      {
+        "escena": 13,
+        "t_planeado": 41.93,
+        "silencio_real_cercano": 28.43,
+        "dist_a_pausa_real": 13.505,
+        "corte_escena_real_cercano": 48.28,
+        "dist_a_corte_real": 6.345,
+        "EN_PAUSA": false
+      }
+    ],
+    "rehooks_total": 1,
+    "rehooks_fuera_de_pausa": 1,
+    "VEREDICTO": "1 re-hook(s) FUERA de pausa",
+    "silencios_que_uso_el_worker": [
+      3.9,
+      5.9,
+      18.83,
+      22.08,
+      24.91,
+      27.54,
+      30.59,
+      33.58,
+      39.11,
+      41.93,
+      47.76,
+      50.36,
+      52.65,
+      55.32,
+      61.34,
+      69.14,
+      72.12,
+      74.46,
+      77.1,
+      80.51,
+      83.96
+    ]
+  }
+}
