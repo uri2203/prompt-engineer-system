@@ -1,10 +1,20 @@
 {
   "estado_lote": "produciendo",
   "total": 9,
-  "completados": 0,
+  "completados": 1,
   "fallidos": 2,
   "trabajo_actual": "Generando video 3/9 (Monkygraff 16:9 28min)",
-  "mensaje": "Produccion del video 3 iniciada.",
+  "mensaje": "Video 3 completado",
   "resumen": "La Viuda: 5s+0L | Monkygraff: 0s+4L",
-  "historial": []
+  "historial": [
+    {
+      "n": 3,
+      "marca": "Monkygraff",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2061.2,
+      "hora": "05:30"
+    }
+  ]
 }
