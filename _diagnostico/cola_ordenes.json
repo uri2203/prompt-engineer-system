@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "2a0db445-93f7-4504-a7a4-3e1b107d4ec8",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Endless identical hallway, flickering fluorescent lights, cold blue tint, long shadows\", \"prompt_visual\": \"Endless identical hallway, flickering fluorescent lights, cold blue tint, long shadows\", \"texto_locucion\": \"Tú sabes que ese pasillo... no existía antes.\", \"pexels_query\": \"endless hallway lights\"}, {\"id\": 2, \"prompt\": \"Muted corporate office floor, empty, slightly too quiet, distorted reflections\", \"prompt_visual\": \"Muted corporate office floor, empty, slightly too quiet, distorted reflections\", \"texto_locucion\": \"Saliste a buscar algo simple, un café.\", \"pexels_query\": \"empty office floor\"}, {\"id\": 3, \"prompt\": \"Elevator door slightly ajar, darkness inside, faint hum, unsettling silence\", \"prompt_visual\": \"Elevator door slightly ajar, darkness inside, faint hum, unsettling silence\", \"texto_locucion\": \"Pero el elevador te llevó a otro piso.\", \"pexels_query\": \"elevator dark silence\"}, {\"id\": 4, \"prompt\": \"Dimly lit corridor, old industrial carpet, no doors, just blank walls\", \"prompt_visual\": \"Dimly lit corridor, old industrial carpet, no doors, just blank walls\", \"texto_locucion\": \"Un piso que no habías visto jamás.\", \"pexels_query\": \"dim industrial corridor\"}, {\"id\": 5, \"prompt\": \"Faint, almost imperceptible handprint on a dusty, institutional wall\", \"prompt_visual\": \"Faint, almost imperceptible handprint on a dusty, institutional wall\", \"texto_locucion\": \"El aire era más denso, más frío allí.\", \"pexels_query\": \"dusty wall texture\"}, {\"id\": 6, \"prompt\": \"Long, empty, desolate corridor, no windows, unsettling perspective distortion\", \"prompt_visual\": \"Long, empty, desolate corridor, no windows, unsettling perspective distortion\", \"texto_locucion\": \"El silencio absoluto te envolvió completo.\", \"pexels_query\": \"desolate long corridor\"}, {\"id\": 7, \"prompt\": \"Empty, sterile room, single chair oddly placed in the center, subtle shadows\", \"prompt_visual\": \"Empty, sterile room, single chair oddly placed in the center, subtle shadows\", \"texto_locucion\": \"No había personas, ni ruidos familiares.\", \"pexels_query\": \"sterile empty room\"}, {\"id\": 8, \"prompt\": \"Close-up on a worn, discolored linoleum floor, subtle water stain, grainy texture\", \"prompt_visual\": \"Close-up on a worn, discolored linoleum floor, subtle water stain, grainy texture\", \"texto_locucion\": \"Algo no estaba bien en ese lugar.\", \"pexels_query\": \"linoleum floor texture\"}, {\"id\": 9, \"prompt\": \"Flickering overhead light in a long, narrow hall, casting erratic shadows\", \"prompt_visual\": \"Flickering overhead light in a long, narrow hall, casting erratic shadows\", \"texto_locucion\": \"Tus pasos resonaban demasiado fuerte ahora.\", \"pexels_query\": \"flickering hallway light\"}, {\"id\": 10, \"prompt\": \"Corridor turning a corner into deeper darkness, hint of a distorted shadow\", \"prompt_visual\": \"Corridor turning a corner into deeper darkness, hint of a distorted shadow\", \"texto_locucion\": \"Sentiste una presencia... al final del pasillo.\", \"pexels_query\": \"dark corridor corner\"}, {\"id\": 11, \"prompt\": \"A door, slightly ajar, revealing only deep, oppressive shadow inside, no light\", \"prompt_visual\": \"A door, slightly ajar, revealing only deep, oppressive shadow inside, no light\", \"texto_locucion\": \"Una puerta crujió, muy lentamente, al fondo.\", \"pexels_query\": \"ajar dark door\"}, {\"id\": 12, \"prompt\": \"Close-up of a dull, grey institutional door handle, slightly tarnished, ominous\", \"prompt_visual\": \"Close-up of a dull, grey institutional door handle, slightly tarnished, ominous\", \"texto_locucion\": \"¿Quién más estaría en ese piso fantasma?\", \"pexels_query\": \"institutional door handle\"}, {\"id\": 13, \"prompt\": \"Perspective shot down a long, identical row of empty office cubicles, chillingly neat\", \"prompt_visual\": \"Perspective shot down a long, identical row of empty office cubicles, chillingly neat\", \"texto_locucion\": \"Lo sentiste antes, esa sensación de no estar solo.\", \"pexels_query\": \"empty office cubicles\"}, {\"id\": 14, \"prompt\": \"A single, old, worn telephone receiver off the hook on a desolate desk\", \"prompt_visual\": \"A single, old, worn telephone receiver off the hook on a desolate desk\", \"texto_locucion\": \"Entonces, oíste un murmullo muy lejano.\", \"pexels_query\": \"old phone off hook\"}, {\"id\": 15, \"prompt\": \"Distorted reflection in a grimy window overlooking an indistinguishable void\", \"prompt_visual\": \"Distorted reflection in a grimy window overlooking an indistinguishable void\", \"texto_locucion\": \"No puedes ignorarlo. Te está buscando.\", \"pexels_query\": \"grimy window void\"}, {\"id\": 16, \"prompt\": \"Shadow of a tall, indistinct figure stretching unnaturally long down a wall\", \"prompt_visual\": \"Shadow of a tall, indistinct figure stretching unnaturally long down a wall\", \"texto_locucion\": \"Te volteaste, pero nadie lo vio.\", \"pexels_query\": \"unnatural shadow figure\"}, {\"id\": 17, \"prompt\": \"A single, empty filing cabinet drawer, slightly open, revealing only darkness\", \"prompt_visual\": \"A single, empty filing cabinet drawer, slightly open, revealing only darkness\", \"texto_locucion\": \"Regresaste al elevador, corriendo sin mirar.\", \"pexels_query\": \"empty filing cabinet\"}, {\"id\": 18, \"prompt\": \"Elevator buttons panel, one button (e.g., floor 7) glowing with an eerie red light\", \"prompt_visual\": \"Elevator buttons panel, one button (e.g., floor 7) glowing with an eerie red light\", \"texto_locucion\": \"Marcaste tu piso, desesperado por salir.\", \"pexels_query\": \"elevator buttons red\"}, {\"id\": 19, \"prompt\": \"View from inside an elevator, doors closing, revealing a dark, empty corridor\", \"prompt_visual\": \"View from inside an elevator, doors closing, revealing a dark, empty corridor\", \"texto_locucion\": \"Las puertas se cerraron muy lentamente.\", \"pexels_query\": \"elevator closing dark\"}, {\"id\": 20, \"prompt\": \"Digital floor indicator inside elevator, rapidly cycling through non-existent floors\", \"prompt_visual\": \"Digital floor indicator inside elevator, rapidly cycling through non-existent floors\", \"texto_locucion\": \"Subiste. O eso creíste en ese instante.\", \"pexels_query\": \"elevator floor indicator\"}, {\"id\": 21, \"prompt\": \"Same familiar office hallway, but a subtle detail is now different, e.g., a painting moved\", \"prompt_visual\": \"Same familiar office hallway, but a subtle detail is now different, e.g., a painting moved\", \"texto_locucion\": \"Volviste a tu piso, al mismo lugar.\", \"pexels_query\": \"familiar office hallway\"}, {\"id\": 22, \"prompt\": \"Close-up of a familiar door handle, now with a faint, unidentifiable scratch mark\", \"prompt_visual\": \"Close-up of a familiar door handle, now with a faint, unidentifiable scratch mark\", \"texto_locucion\": \"Pero la familiaridad ya no era igual.\", \"pexels_query\": \"door handle scratch\"}, {\"id\": 23, \"prompt\": \"Your own reflection in a dark computer screen, subtly distorted, paranoid eyes\", \"prompt_visual\": \"Your own reflection in a dark computer screen, subtly distorted, paranoid eyes\", \"texto_locucion\": \"Tus recuerdos empezaron a confundirse ahora.\", \"pexels_query\": \"reflection computer screen\"}, {\"id\": 24, \"prompt\": \"Empty office chair, facing away, in a dark cubicle, faint glow from a monitor\", \"prompt_visual\": \"Empty office chair, facing away, in a dark cubicle, faint glow from a monitor\", \"texto_locucion\": \"Recuerdas perfectamente lo que viste.\", \"pexels_query\": \"empty office chair\"}, {\"id\": 25, \"prompt\": \"A single, forgotten cup of coffee on a desk, a subtle ripple in its surface\", \"prompt_visual\": \"A single, forgotten cup of coffee on a desk, a subtle ripple in its surface\", \"texto_locucion\": \"Pero ese piso nunca debió existir.\", \"pexels_query\": \"forgotten coffee desk\"}, {\"id\": 26, \"prompt\": \"A slightly ajar closet door in an otherwise normal room, with deep shadow within\", \"prompt_visual\": \"A slightly ajar closet door in an otherwise normal room, with deep shadow within\", \"texto_locucion\": \"Cuántos pisos más se ocultan ahí fuera?\", \"pexels_query\": \"ajar closet dark\"}, {\"id\": 27, \"prompt\": \"A dark, empty corner of a familiar room, a subtle sense of being watched, no source\", \"prompt_visual\": \"A dark, empty corner of a familiar room, a subtle sense of being watched, no source\", \"texto_locucion\": \"¿Cuántos existen sin que tú los veas?\", \"pexels_query\": \"empty room corner\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Tú sabes que ese pasillo... no existía antes. Saliste a buscar algo simple, un café. Pero el elevador te llevó a otro piso. Un piso que no habías visto jamás. El aire era más denso, más frío allí. El silencio absoluto te envolvió completo. No había personas, ni ruidos familiares. Algo no estaba bien en ese lugar. Tus pasos resonaban demasiado fuerte ahora. Sentiste una presencia... al final del pasillo. Una puerta crujió, muy lentamente, al fondo. ¿Quién más estaría en ese piso fantasma? Lo sentiste antes, esa sensación de no estar solo. Entonces, oíste un murmullo muy lejano. No puedes ignorarlo. Te está buscando. Te volteaste, pero nadie lo vio. Regresaste al elevador, corriendo sin mirar. Marcaste tu piso, desesperado por salir. Las puertas se cerraron muy lentamente. Subiste. O eso creíste en ese instante. Volviste a tu piso, al mismo lugar. Pero la familiaridad ya no era igual. Tus recuerdos empezaron a confundirse ahora. Recuerdas perfectamente lo que viste. Pero ese piso nunca debió existir. Cuántos pisos más se ocultan ahí fuera? ¿Cuántos existen sin que tú los veas?",
+    "titulo_sugerido": "Los Pasillos Que Sobran",
+    "escenas_texto": [
+      "Tú sabes que ese pasillo... no existía antes.",
+      "Saliste a buscar algo simple, un café.",
+      "Pero el elevador te llevó a otro piso.",
+      "Un piso que no habías visto jamás.",
+      "El aire era más denso, más frío allí.",
+      "El silencio absoluto te envolvió completo.",
+      "No había personas, ni ruidos familiares.",
+      "Algo no estaba bien en ese lugar.",
+      "Tus pasos resonaban demasiado fuerte ahora.",
+      "Sentiste una presencia... al final del pasillo.",
+      "Una puerta crujió, muy lentamente, al fondo.",
+      "¿Quién más estaría en ese piso fantasma?",
+      "Lo sentiste antes, esa sensación de no estar solo.",
+      "Entonces, oíste un murmullo muy lejano.",
+      "No puedes ignorarlo. Te está buscando.",
+      "Te volteaste, pero nadie lo vio.",
+      "Regresaste al elevador, corriendo sin mirar.",
+      "Marcaste tu piso, desesperado por salir.",
+      "Las puertas se cerraron muy lentamente.",
+      "Subiste. O eso creíste en ese instante.",
+      "Volviste a tu piso, al mismo lugar.",
+      "Pero la familiaridad ya no era igual.",
+      "Tus recuerdos empezaron a confundirse ahora.",
+      "Recuerdas perfectamente lo que viste.",
+      "Pero ese piso nunca debió existir.",
+      "Cuántos pisos más se ocultan ahí fuera?",
+      "¿Cuántos existen sin que tú los veas?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Endless identical hallway, flickering fluorescent lights, cold blue tint, long shadows",
+        "prompt_visual": "Endless identical hallway, flickering fluorescent lights, cold blue tint, long shadows",
+        "texto_locucion": "Tú sabes que ese pasillo... no existía antes.",
+        "pexels_query": "endless hallway lights"
+      },
+      {
+        "id": 2,
+        "prompt": "Muted corporate office floor, empty, slightly too quiet, distorted reflections",
+        "prompt_visual": "Muted corporate office floor, empty, slightly too quiet, distorted reflections",
+        "texto_locucion": "Saliste a buscar algo simple, un café.",
+        "pexels_query": "empty office floor"
+      },
+      {
+        "id": 3,
+        "prompt": "Elevator door slightly ajar, darkness inside, faint hum, unsettling silence",
+        "prompt_visual": "Elevator door slightly ajar, darkness inside, faint hum, unsettling silence",
+        "texto_locucion": "Pero el elevador te llevó a otro piso.",
+        "pexels_query": "elevator dark silence"
+      },
+      {
+        "id": 4,
+        "prompt": "Dimly lit corridor, old industrial carpet, no doors, just blank walls",
+        "prompt_visual": "Dimly lit corridor, old industrial carpet, no doors, just blank walls",
+        "texto_locucion": "Un piso que no habías visto jamás.",
+        "pexels_query": "dim industrial corridor"
+      },
+      {
+        "id": 5,
+        "prompt": "Faint, almost imperceptible handprint on a dusty, institutional wall",
+        "prompt_visual": "Faint, almost imperceptible handprint on a dusty, institutional wall",
+        "texto_locucion": "El aire era más denso, más frío allí.",
+        "pexels_query": "dusty wall texture"
+      },
+      {
+        "id": 6,
+        "prompt": "Long, empty, desolate corridor, no windows, unsettling perspective distortion",
+        "prompt_visual": "Long, empty, desolate corridor, no windows, unsettling perspective distortion",
+        "texto_locucion": "El silencio absoluto te envolvió completo.",
+        "pexels_query": "desolate long corridor"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty, sterile room, single chair oddly placed in the center, subtle shadows",
+        "prompt_visual": "Empty, sterile room, single chair oddly placed in the center, subtle shadows",
+        "texto_locucion": "No había personas, ni ruidos familiares.",
+        "pexels_query": "sterile empty room"
+      },
+      {
+        "id": 8,
+        "prompt": "Close-up on a worn, discolored linoleum floor, subtle water stain, grainy texture",
+        "prompt_visual": "Close-up on a worn, discolored linoleum floor, subtle water stain, grainy texture",
+        "texto_locucion": "Algo no estaba bien en ese lugar.",
+        "pexels_query": "linoleum floor texture"
+      },
+      {
+        "id": 9,
+        "prompt": "Flickering overhead light in a long, narrow hall, casting erratic shadows",
+        "prompt_visual": "Flickering overhead light in a long, narrow hall, casting erratic shadows",
+        "texto_locucion": "Tus pasos resonaban demasiado fuerte ahora.",
+        "pexels_query": "flickering hallway light"
+      },
+      {
+        "id": 10,
+        "prompt": "Corridor turning a corner into deeper darkness, hint of a distorted shadow",
+        "prompt_visual": "Corridor turning a corner into deeper darkness, hint of a distorted shadow",
+        "texto_locucion": "Sentiste una presencia... al final del pasillo.",
+        "pexels_query": "dark corridor corner"
+      },
+      {
+        "id": 11,
+        "prompt": "A door, slightly ajar, revealing only deep, oppressive shadow inside, no light",
+        "prompt_visual": "A door, slightly ajar, revealing only deep, oppressive shadow inside, no light",
+        "texto_locucion": "Una puerta crujió, muy lentamente, al fondo.",
+        "pexels_query": "ajar dark door"
+      },
+      {
+        "id": 12,
+        "prompt": "Close-up of a dull, grey institutional door handle, slightly tarnished, ominous",
+        "prompt_visual": "Close-up of a dull, grey institutional door handle, slightly tarnished, ominous",
+        "texto_locucion": "¿Quién más estaría en ese piso fantasma?",
+        "pexels_query": "institutional door handle"
+      },
+      {
+        "id": 13,
+        "prompt": "Perspective shot down a long, identical row of empty office cubicles, chillingly neat",
+        "prompt_visual": "Perspective shot down a long, identical row of empty office cubicles, chillingly neat",
+        "texto_locucion": "Lo sentiste antes, esa sensación de no estar solo.",
+        "pexels_query": "empty office cubicles"
+      },
+      {
+        "id": 14,
+        "prompt": "A single, old, worn telephone receiver off the hook on a desolate desk",
+        "prompt_visual": "A single, old, worn telephone receiver off the hook on a desolate desk",
+        "texto_locucion": "Entonces, oíste un murmullo muy lejano.",
+        "pexels_query": "old phone off hook"
+      },
+      {
+        "id": 15,
+        "prompt": "Distorted reflection in a grimy window overlooking an indistinguishable void",
+        "prompt_visual": "Distorted reflection in a grimy window overlooking an indistinguishable void",
+        "texto_locucion": "No puedes ignorarlo. Te está buscando.",
+        "pexels_query": "grimy window void"
+      },
+      {
+        "id": 16,
+        "prompt": "Shadow of a tall, indistinct figure stretching unnaturally long down a wall",
+        "prompt_visual": "Shadow of a tall, indistinct figure stretching unnaturally long down a wall",
+        "texto_locucion": "Te volteaste, pero nadie lo vio.",
+        "pexels_query": "unnatural shadow figure"
+      },
+      {
+        "id": 17,
+        "prompt": "A single, empty filing cabinet drawer, slightly open, revealing only darkness",
+        "prompt_visual": "A single, empty filing cabinet drawer, slightly open, revealing only darkness",
+        "texto_locucion": "Regresaste al elevador, corriendo sin mirar.",
+        "pexels_query": "empty filing cabinet"
+      },
+      {
+        "id": 18,
+        "prompt": "Elevator buttons panel, one button (e.g., floor 7) glowing with an eerie red light",
+        "prompt_visual": "Elevator buttons panel, one button (e.g., floor 7) glowing with an eerie red light",
+        "texto_locucion": "Marcaste tu piso, desesperado por salir.",
+        "pexels_query": "elevator buttons red"
+      },
+      {
+        "id": 19,
+        "prompt": "View from inside an elevator, doors closing, revealing a dark, empty corridor",
+        "prompt_visual": "View from inside an elevator, doors closing, revealing a dark, empty corridor",
+        "texto_locucion": "Las puertas se cerraron muy lentamente.",
+        "pexels_query": "elevator closing dark"
+      },
+      {
+        "id": 20,
+        "prompt": "Digital floor indicator inside elevator, rapidly cycling through non-existent floors",
+        "prompt_visual": "Digital floor indicator inside elevator, rapidly cycling through non-existent floors",
+        "texto_locucion": "Subiste. O eso creíste en ese instante.",
+        "pexels_query": "elevator floor indicator"
+      },
+      {
+        "id": 21,
+        "prompt": "Same familiar office hallway, but a subtle detail is now different, e.g., a painting moved",
+        "prompt_visual": "Same familiar office hallway, but a subtle detail is now different, e.g., a painting moved",
+        "texto_locucion": "Volviste a tu piso, al mismo lugar.",
+        "pexels_query": "familiar office hallway"
+      },
+      {
+        "id": 22,
+        "prompt": "Close-up of a familiar door handle, now with a faint, unidentifiable scratch mark",
+        "prompt_visual": "Close-up of a familiar door handle, now with a faint, unidentifiable scratch mark",
+        "texto_locucion": "Pero la familiaridad ya no era igual.",
+        "pexels_query": "door handle scratch"
+      },
+      {
+        "id": 23,
+        "prompt": "Your own reflection in a dark computer screen, subtly distorted, paranoid eyes",
+        "prompt_visual": "Your own reflection in a dark computer screen, subtly distorted, paranoid eyes",
+        "texto_locucion": "Tus recuerdos empezaron a confundirse ahora.",
+        "pexels_query": "reflection computer screen"
+      },
+      {
+        "id": 24,
+        "prompt": "Empty office chair, facing away, in a dark cubicle, faint glow from a monitor",
+        "prompt_visual": "Empty office chair, facing away, in a dark cubicle, faint glow from a monitor",
+        "texto_locucion": "Recuerdas perfectamente lo que viste.",
+        "pexels_query": "empty office chair"
+      },
+      {
+        "id": 25,
+        "prompt": "A single, forgotten cup of coffee on a desk, a subtle ripple in its surface",
+        "prompt_visual": "A single, forgotten cup of coffee on a desk, a subtle ripple in its surface",
+        "texto_locucion": "Pero ese piso nunca debió existir.",
+        "pexels_query": "forgotten coffee desk"
+      },
+      {
+        "id": 26,
+        "prompt": "A slightly ajar closet door in an otherwise normal room, with deep shadow within",
+        "prompt_visual": "A slightly ajar closet door in an otherwise normal room, with deep shadow within",
+        "texto_locucion": "Cuántos pisos más se ocultan ahí fuera?",
+        "pexels_query": "ajar closet dark"
+      },
+      {
+        "id": 27,
+        "prompt": "A dark, empty corner of a familiar room, a subtle sense of being watched, no source",
+        "prompt_visual": "A dark, empty corner of a familiar room, a subtle sense of being watched, no source",
+        "texto_locucion": "¿Cuántos existen sin que tú los veas?",
+        "pexels_query": "empty room corner"
+      }
+    ],
+    "hooks": [
+      "¿Qué era ese lugar?",
+      "Siempre estuvo ahí.",
+      "Ahora, busca más."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
