@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "014156c3-b48b-4101-b66b-da8ebd5ea94b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty convenience store aisle, long shadows, single fluorescent light flickering, desaturated cold colors\", \"prompt_visual\": \"Empty convenience store aisle, long shadows, single fluorescent light flickering, desaturated cold colors\", \"texto_locucion\": \"Primero fue el frío. Extraño. Sin explicación lógica.\", \"pexels_query\": \"empty store aisle\"}, {\"id\": 2, \"prompt\": \"Close-up on a thermometer showing a sudden drop in temperature, grainy texture\", \"prompt_visual\": \"Close-up on a thermometer showing a sudden drop in temperature, grainy texture\", \"texto_locucion\": \"Una brisa helada en pleno verano. Tú lo sentiste.\", \"pexels_query\": \"thermometer drop\"}, {\"id\": 3, \"prompt\": \"Long, dark aisle, blurred shape in far distance, indistinct humanoid silhouette\", \"prompt_visual\": \"Long, dark aisle, blurred shape in far distance, indistinct humanoid silhouette\", \"texto_locucion\": \"Miraste al fondo del pasillo. Nada. O casi nada.\", \"pexels_query\": \"dark store aisle\"}, {\"id\": 4, \"prompt\": \"Row of products, one package slightly askew, subtle displacement\", \"prompt_visual\": \"Row of products, one package slightly askew, subtle displacement\", \"texto_locucion\": \"Volviste y un producto estaba un poco movido.\", \"pexels_query\": \"askew product shelf\"}, {\"id\": 5, \"prompt\": \"Close-up on a flickering fluorescent light, old industrial style\", \"prompt_visual\": \"Close-up on a flickering fluorescent light, old industrial style\", \"texto_locucion\": \"La luz parpadeó. Solo la de tu pasillo.\", \"pexels_query\": \"flickering fluorescent light\"}, {\"id\": 6, \"prompt\": \"Shadowed corner of a store, hint of movement in the periphery, deep black\", \"prompt_visual\": \"Shadowed corner of a store, hint of movement in the periphery, deep black\", \"texto_locucion\": \"Una sombra. Muy rápida. Quizá fue tu imaginación.\", \"pexels_query\": \"shadow corner store\"}, {\"id\": 7, \"prompt\": \"Empty counter, reflection of distorted shadow on polished surface\", \"prompt_visual\": \"Empty counter, reflection of distorted shadow on polished surface\", \"texto_locucion\": \"Estás solo en el turno nocturno, sabes que sí.\", \"pexels_query\": \"empty counter reflection\"}, {\"id\": 8, \"prompt\": \"A security mirror showing only a distorted, empty reflection of the aisle\", \"prompt_visual\": \"A security mirror showing only a distorted, empty reflection of the aisle\", \"texto_locucion\": \"Pero la sensación de que alguien observa, no se va.\", \"pexels_query\": \"security mirror distorted\"}, {\"id\": 9, \"prompt\": \"Shelf with snacks, one bag slightly torn open, no human presence\", \"prompt_visual\": \"Shelf with snacks, one bag slightly torn open, no human presence\", \"texto_locucion\": \"Encontraste una bolsa de patatas recién abierta.\", \"pexels_query\": \"torn snack bag\"}, {\"id\": 10, \"prompt\": \"Dark aisle, sound waves radiating from a dark corner, eerie silence\", \"prompt_visual\": \"Dark aisle, sound waves radiating from a dark corner, eerie silence\", \"texto_locucion\": \"Un susurro muy tenue, justo detrás de ti.\", \"pexels_query\": \"sound waves dark\"}, {\"id\": 11, \"prompt\": \"Close-up on an old, dusty security camera lens, blurred background\", \"prompt_visual\": \"Close-up on an old, dusty security camera lens, blurred background\", \"texto_locucion\": \"Nadie lo vio en las grabaciones. Nadie excepto tú.\", \"pexels_query\": \"dusty security lens\"}, {\"id\": 12, \"prompt\": \"Empty aisle, focus on a single cart slightly moved, wheels askew\", \"prompt_visual\": \"Empty aisle, focus on a single cart slightly moved, wheels askew\", \"texto_locucion\": \"El carrito estaba al otro lado del pasillo ahora.\", \"pexels_query\": \"shopping cart askew\"}, {\"id\": 13, \"prompt\": \"Dark hallway in the back of the store, single, dim light, ominous feeling\", \"prompt_visual\": \"Dark hallway in the back of the store, single, dim light, ominous feeling\", \"texto_locucion\": \"En el almacén. Crees escuchar pasos lentos.\", \"pexels_query\": \"dark store hallway\"}, {\"id\": 14, \"prompt\": \"Empty employee locker room, one locker slightly ajar, darkness inside\", \"prompt_visual\": \"Empty employee locker room, one locker slightly ajar, darkness inside\", \"texto_locucion\": \"Revisaste los casilleros. Todos estaban vacíos.\", \"pexels_query\": \"ajar locker dark\"}, {\"id\": 15, \"prompt\": \"Reflection of a blurry, distorted face in a dirty glass door\", \"prompt_visual\": \"Reflection of a blurry, distorted face in a dirty glass door\", \"texto_locucion\": \"Viste tu propio reflejo. ¿Era solo el tuyo?\", \"pexels_query\": \"distorted reflection glass\"}, {\"id\": 16, \"prompt\": \"A single dollar bill on the floor, slightly crinkled, in an empty space\", \"prompt_visual\": \"A single dollar bill on the floor, slightly crinkled, in an empty space\", \"texto_locucion\": \"Dejaste un billete. Alguien lo recogió y lo movió.\", \"pexels_query\": \"dollar bill floor\"}, {\"id\": 17, \"prompt\": \"Blurred image of a hand reaching out from deep shadow, inhuman form\", \"prompt_visual\": \"Blurred image of a hand reaching out from deep shadow, inhuman form\", \"texto_locucion\": \"Sentiste que algo frío rozaba tu nuca.\", \"pexels_query\": \"shadow hand reaching\"}, {\"id\": 18, \"prompt\": \"Empty register counter, monitor displaying static, chilling glow\", \"prompt_visual\": \"Empty register counter, monitor displaying static, chilling glow\", \"texto_locucion\": \"Las pantallas se encendieron solas. Pura estática.\", \"pexels_query\": \"static monitor counter\"}, {\"id\": 19, \"prompt\": \"Deep shadows under shelves, hint of two glowing eyes, pareidolia\", \"prompt_visual\": \"Deep shadows under shelves, hint of two glowing eyes, pareidolia\", \"texto_locucion\": \"En la oscuridad bajo los estantes, algo te miraba.\", \"pexels_query\": \"eyes under shelf\"}, {\"id\": 20, \"prompt\": \"An open cleaning supply closet, single mop leaning against the wall, eerie light\", \"prompt_visual\": \"An open cleaning supply closet, single mop leaning against the wall, eerie light\", \"texto_locucion\": \"El clóset de limpieza estaba abierto de par en par.\", \"pexels_query\": \"open closet mop\"}, {\"id\": 21, \"prompt\": \"Distorted reflection in a metal surface, stretched and unsettling human-like shape\", \"prompt_visual\": \"Distorted reflection in a metal surface, stretched and unsettling human-like shape\", \"texto_locucion\": \"Tu reflejo en el metal ya no era familiar.\", \"pexels_query\": \"metal reflection distorted\"}, {\"id\": 22, \"prompt\": \"Dark corner of the store, floor wet, as if from an unknown liquid\", \"prompt_visual\": \"Dark corner of the store, floor wet, as if from an unknown liquid\", \"texto_locucion\": \"Encontraste el piso húmedo. No había fugas.\", \"pexels_query\": \"wet floor dark\"}, {\"id\": 23, \"prompt\": \"Empty aisle, the only visible object is a child's toy dropped on the floor\", \"prompt_visual\": \"Empty aisle, the only visible object is a child's toy dropped on the floor\", \"texto_locucion\": \"¿Un juguete de niño? Nadie había entrado en horas.\", \"pexels_query\": \"child toy dropped\"}, {\"id\": 24, \"prompt\": \"Close-up on a face, eyes wide, showing extreme paranoia, no identifiable features\", \"prompt_visual\": \"Close-up on a face, eyes wide, showing extreme paranoia, no identifiable features\", \"texto_locucion\": \"Tu mente te dijo: algo no está bien. Aquí no.\", \"pexels_query\": \"paranoid eyes wide\"}, {\"id\": 25, \"prompt\": \"Sunrise through a store window, casting long, empty shadows, still unsettling\", \"prompt_visual\": \"Sunrise through a store window, casting long, empty shadows, still unsettling\", \"texto_locucion\": \"Amanece. El alivio es fugaz. La duda permanece.\", \"pexels_query\": \"sunrise store shadows\"}, {\"id\": 26, \"prompt\": \"Empty store, faint, almost transparent human-like silhouette standing near the entrance\", \"prompt_visual\": \"Empty store, faint, almost transparent human-like silhouette standing near the entrance\", \"texto_locucion\": \"¿Cuántas noches más lo sentirás acechando?\", \"pexels_query\": \"faint silhouette store\"}, {\"id\": 27, \"prompt\": \"Your own hand trembling as you lock the store door, out of focus background\", \"prompt_visual\": \"Your own hand trembling as you lock the store door, out of focus background\", \"texto_locucion\": \"El silencio absoluto ya no es consuelo para ti.\", \"pexels_query\": \"trembling hand lock\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Primero fue el frío. Extraño. Sin explicación lógica. Una brisa helada en pleno verano. Tú lo sentiste. Miraste al fondo del pasillo. Nada. O casi nada. Volviste y un producto estaba un poco movido. La luz parpadeó. Solo la de tu pasillo. Una sombra. Muy rápida. Quizá fue tu imaginación. Estás solo en el turno nocturno, sabes que sí. Pero la sensación de que alguien observa, no se va. Encontraste una bolsa de patatas recién abierta. Un susurro muy tenue, justo detrás de ti. Nadie lo vio en las grabaciones. Nadie excepto tú. El carrito estaba al otro lado del pasillo ahora. En el almacén. Crees escuchar pasos lentos. Revisaste los casilleros. Todos estaban vacíos. Viste tu propio reflejo. ¿Era solo el tuyo? Dejaste un billete. Alguien lo recogió y lo movió. Sentiste que algo frío rozaba tu nuca. Las pantallas se encendieron solas. Pura estática. En la oscuridad bajo los estantes, algo te miraba. El clóset de limpieza estaba abierto de par en par. Tu reflejo en el metal ya no era familiar. Encontraste el piso húmedo. No había fugas. ¿Un juguete de niño? Nadie había entrado en horas. Tu mente te dijo: algo no está bien. Aquí no. Amanece. El alivio es fugaz. La duda permanece. ¿Cuántas noches más lo sentirás acechando? El silencio absoluto ya no es consuelo para ti.",
+    "titulo_sugerido": "Turno Nocturno: Esa Tienda Nunca Estuvo Vacía",
+    "escenas_texto": [
+      "Primero fue el frío. Extraño. Sin explicación lógica.",
+      "Una brisa helada en pleno verano. Tú lo sentiste.",
+      "Miraste al fondo del pasillo. Nada. O casi nada.",
+      "Volviste y un producto estaba un poco movido.",
+      "La luz parpadeó. Solo la de tu pasillo.",
+      "Una sombra. Muy rápida. Quizá fue tu imaginación.",
+      "Estás solo en el turno nocturno, sabes que sí.",
+      "Pero la sensación de que alguien observa, no se va.",
+      "Encontraste una bolsa de patatas recién abierta.",
+      "Un susurro muy tenue, justo detrás de ti.",
+      "Nadie lo vio en las grabaciones. Nadie excepto tú.",
+      "El carrito estaba al otro lado del pasillo ahora.",
+      "En el almacén. Crees escuchar pasos lentos.",
+      "Revisaste los casilleros. Todos estaban vacíos.",
+      "Viste tu propio reflejo. ¿Era solo el tuyo?",
+      "Dejaste un billete. Alguien lo recogió y lo movió.",
+      "Sentiste que algo frío rozaba tu nuca.",
+      "Las pantallas se encendieron solas. Pura estática.",
+      "En la oscuridad bajo los estantes, algo te miraba.",
+      "El clóset de limpieza estaba abierto de par en par.",
+      "Tu reflejo en el metal ya no era familiar.",
+      "Encontraste el piso húmedo. No había fugas.",
+      "¿Un juguete de niño? Nadie había entrado en horas.",
+      "Tu mente te dijo: algo no está bien. Aquí no.",
+      "Amanece. El alivio es fugaz. La duda permanece.",
+      "¿Cuántas noches más lo sentirás acechando?",
+      "El silencio absoluto ya no es consuelo para ti."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty convenience store aisle, long shadows, single fluorescent light flickering, desaturated cold colors",
+        "prompt_visual": "Empty convenience store aisle, long shadows, single fluorescent light flickering, desaturated cold colors",
+        "texto_locucion": "Primero fue el frío. Extraño. Sin explicación lógica.",
+        "pexels_query": "empty store aisle"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up on a thermometer showing a sudden drop in temperature, grainy texture",
+        "prompt_visual": "Close-up on a thermometer showing a sudden drop in temperature, grainy texture",
+        "texto_locucion": "Una brisa helada en pleno verano. Tú lo sentiste.",
+        "pexels_query": "thermometer drop"
+      },
+      {
+        "id": 3,
+        "prompt": "Long, dark aisle, blurred shape in far distance, indistinct humanoid silhouette",
+        "prompt_visual": "Long, dark aisle, blurred shape in far distance, indistinct humanoid silhouette",
+        "texto_locucion": "Miraste al fondo del pasillo. Nada. O casi nada.",
+        "pexels_query": "dark store aisle"
+      },
+      {
+        "id": 4,
+        "prompt": "Row of products, one package slightly askew, subtle displacement",
+        "prompt_visual": "Row of products, one package slightly askew, subtle displacement",
+        "texto_locucion": "Volviste y un producto estaba un poco movido.",
+        "pexels_query": "askew product shelf"
+      },
+      {
+        "id": 5,
+        "prompt": "Close-up on a flickering fluorescent light, old industrial style",
+        "prompt_visual": "Close-up on a flickering fluorescent light, old industrial style",
+        "texto_locucion": "La luz parpadeó. Solo la de tu pasillo.",
+        "pexels_query": "flickering fluorescent light"
+      },
+      {
+        "id": 6,
+        "prompt": "Shadowed corner of a store, hint of movement in the periphery, deep black",
+        "prompt_visual": "Shadowed corner of a store, hint of movement in the periphery, deep black",
+        "texto_locucion": "Una sombra. Muy rápida. Quizá fue tu imaginación.",
+        "pexels_query": "shadow corner store"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty counter, reflection of distorted shadow on polished surface",
+        "prompt_visual": "Empty counter, reflection of distorted shadow on polished surface",
+        "texto_locucion": "Estás solo en el turno nocturno, sabes que sí.",
+        "pexels_query": "empty counter reflection"
+      },
+      {
+        "id": 8,
+        "prompt": "A security mirror showing only a distorted, empty reflection of the aisle",
+        "prompt_visual": "A security mirror showing only a distorted, empty reflection of the aisle",
+        "texto_locucion": "Pero la sensación de que alguien observa, no se va.",
+        "pexels_query": "security mirror distorted"
+      },
+      {
+        "id": 9,
+        "prompt": "Shelf with snacks, one bag slightly torn open, no human presence",
+        "prompt_visual": "Shelf with snacks, one bag slightly torn open, no human presence",
+        "texto_locucion": "Encontraste una bolsa de patatas recién abierta.",
+        "pexels_query": "torn snack bag"
+      },
+      {
+        "id": 10,
+        "prompt": "Dark aisle, sound waves radiating from a dark corner, eerie silence",
+        "prompt_visual": "Dark aisle, sound waves radiating from a dark corner, eerie silence",
+        "texto_locucion": "Un susurro muy tenue, justo detrás de ti.",
+        "pexels_query": "sound waves dark"
+      },
+      {
+        "id": 11,
+        "prompt": "Close-up on an old, dusty security camera lens, blurred background",
+        "prompt_visual": "Close-up on an old, dusty security camera lens, blurred background",
+        "texto_locucion": "Nadie lo vio en las grabaciones. Nadie excepto tú.",
+        "pexels_query": "dusty security lens"
+      },
+      {
+        "id": 12,
+        "prompt": "Empty aisle, focus on a single cart slightly moved, wheels askew",
+        "prompt_visual": "Empty aisle, focus on a single cart slightly moved, wheels askew",
+        "texto_locucion": "El carrito estaba al otro lado del pasillo ahora.",
+        "pexels_query": "shopping cart askew"
+      },
+      {
+        "id": 13,
+        "prompt": "Dark hallway in the back of the store, single, dim light, ominous feeling",
+        "prompt_visual": "Dark hallway in the back of the store, single, dim light, ominous feeling",
+        "texto_locucion": "En el almacén. Crees escuchar pasos lentos.",
+        "pexels_query": "dark store hallway"
+      },
+      {
+        "id": 14,
+        "prompt": "Empty employee locker room, one locker slightly ajar, darkness inside",
+        "prompt_visual": "Empty employee locker room, one locker slightly ajar, darkness inside",
+        "texto_locucion": "Revisaste los casilleros. Todos estaban vacíos.",
+        "pexels_query": "ajar locker dark"
+      },
+      {
+        "id": 15,
+        "prompt": "Reflection of a blurry, distorted face in a dirty glass door",
+        "prompt_visual": "Reflection of a blurry, distorted face in a dirty glass door",
+        "texto_locucion": "Viste tu propio reflejo. ¿Era solo el tuyo?",
+        "pexels_query": "distorted reflection glass"
+      },
+      {
+        "id": 16,
+        "prompt": "A single dollar bill on the floor, slightly crinkled, in an empty space",
+        "prompt_visual": "A single dollar bill on the floor, slightly crinkled, in an empty space",
+        "texto_locucion": "Dejaste un billete. Alguien lo recogió y lo movió.",
+        "pexels_query": "dollar bill floor"
+      },
+      {
+        "id": 17,
+        "prompt": "Blurred image of a hand reaching out from deep shadow, inhuman form",
+        "prompt_visual": "Blurred image of a hand reaching out from deep shadow, inhuman form",
+        "texto_locucion": "Sentiste que algo frío rozaba tu nuca.",
+        "pexels_query": "shadow hand reaching"
+      },
+      {
+        "id": 18,
+        "prompt": "Empty register counter, monitor displaying static, chilling glow",
+        "prompt_visual": "Empty register counter, monitor displaying static, chilling glow",
+        "texto_locucion": "Las pantallas se encendieron solas. Pura estática.",
+        "pexels_query": "static monitor counter"
+      },
+      {
+        "id": 19,
+        "prompt": "Deep shadows under shelves, hint of two glowing eyes, pareidolia",
+        "prompt_visual": "Deep shadows under shelves, hint of two glowing eyes, pareidolia",
+        "texto_locucion": "En la oscuridad bajo los estantes, algo te miraba.",
+        "pexels_query": "eyes under shelf"
+      },
+      {
+        "id": 20,
+        "prompt": "An open cleaning supply closet, single mop leaning against the wall, eerie light",
+        "prompt_visual": "An open cleaning supply closet, single mop leaning against the wall, eerie light",
+        "texto_locucion": "El clóset de limpieza estaba abierto de par en par.",
+        "pexels_query": "open closet mop"
+      },
+      {
+        "id": 21,
+        "prompt": "Distorted reflection in a metal surface, stretched and unsettling human-like shape",
+        "prompt_visual": "Distorted reflection in a metal surface, stretched and unsettling human-like shape",
+        "texto_locucion": "Tu reflejo en el metal ya no era familiar.",
+        "pexels_query": "metal reflection distorted"
+      },
+      {
+        "id": 22,
+        "prompt": "Dark corner of the store, floor wet, as if from an unknown liquid",
+        "prompt_visual": "Dark corner of the store, floor wet, as if from an unknown liquid",
+        "texto_locucion": "Encontraste el piso húmedo. No había fugas.",
+        "pexels_query": "wet floor dark"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty aisle, the only visible object is a child's toy dropped on the floor",
+        "prompt_visual": "Empty aisle, the only visible object is a child's toy dropped on the floor",
+        "texto_locucion": "¿Un juguete de niño? Nadie había entrado en horas.",
+        "pexels_query": "child toy dropped"
+      },
+      {
+        "id": 24,
+        "prompt": "Close-up on a face, eyes wide, showing extreme paranoia, no identifiable features",
+        "prompt_visual": "Close-up on a face, eyes wide, showing extreme paranoia, no identifiable features",
+        "texto_locucion": "Tu mente te dijo: algo no está bien. Aquí no.",
+        "pexels_query": "paranoid eyes wide"
+      },
+      {
+        "id": 25,
+        "prompt": "Sunrise through a store window, casting long, empty shadows, still unsettling",
+        "prompt_visual": "Sunrise through a store window, casting long, empty shadows, still unsettling",
+        "texto_locucion": "Amanece. El alivio es fugaz. La duda permanece.",
+        "pexels_query": "sunrise store shadows"
+      },
+      {
+        "id": 26,
+        "prompt": "Empty store, faint, almost transparent human-like silhouette standing near the entrance",
+        "prompt_visual": "Empty store, faint, almost transparent human-like silhouette standing near the entrance",
+        "texto_locucion": "¿Cuántas noches más lo sentirás acechando?",
+        "pexels_query": "faint silhouette store"
+      },
+      {
+        "id": 27,
+        "prompt": "Your own hand trembling as you lock the store door, out of focus background",
+        "prompt_visual": "Your own hand trembling as you lock the store door, out of focus background",
+        "texto_locucion": "El silencio absoluto ya no es consuelo para ti.",
+        "pexels_query": "trembling hand lock"
+      }
+    ],
+    "hooks": [
+      "Nunca estás realmente solo.",
+      "El turno de noche.",
+      "Tu mente te traiciona."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
