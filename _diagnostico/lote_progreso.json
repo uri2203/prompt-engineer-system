@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 10,
-  "completados": 8,
+  "completados": 9,
   "fallidos": 0,
   "trabajo_actual": "Generando video 9/10 (La Viuda 9:16)",
-  "mensaje": "Produccion del video 9 iniciada.",
+  "mensaje": "Video 9 completado",
   "resumen": "La Viuda: 10s+0L",
   "historial": [
     {
@@ -78,6 +78,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 0,
       "hora": "15:28"
+    },
+    {
+      "n": 9,
+      "marca": "La Viuda",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 130.3,
+      "hora": "16:01"
     }
   ]
 }
