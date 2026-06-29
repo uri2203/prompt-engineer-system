@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_N"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_O"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_N"
+VERSION_WORKER = "2026-06-23_O"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -1997,17 +1997,21 @@ def procesar():
                     texto_locucion = " ".join(e.get("texto_locucion","") for e in tarea.get("escenas", []) if e.get("texto_locucion"))
 
                 if not texto_locucion:
-                    # Sin texto no se puede generar voz. Reportar como finalizado (con error)
-                    # para NO colgar al orquestador esperando este video para siempre.
-                    print("⚠️ No hay texto de locución en la tarea — reportando para no bloquear el lote.")
-                    _diag["errores"].append("Ensamblaje sin texto de locución: video no generado.")
+                    # Sin texto NO se puede generar el video. Esto suele pasar cuando
+                    # Render falló al mandar la orden (deploy/reinicio/caída): la orden
+                    # llega vacía. NO marcar "finalizado" (eso daría el video por bueno
+                    # creando solo una carpeta vacía). Marcar "fallido" para que el
+                    # orquestador lo REINTENTE en vez de darlo por completado.
+                    print("⚠️ No hay texto de locución en la tarea (¿Render no envió la orden?) — "
+                          "marcando FALLIDO para que el orquestador reintente, no como completado.")
+                    _diag["errores"].append("Ensamblaje sin texto de locución: video NO generado (orden vacía).")
                     try: subir_diagnostico_video(_diag)
                     except Exception: pass
                     _id_orig = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
                     for _tid in {tarea_id, _id_orig}:
                         try:
                             requests.post(f"{RENDER_URL}/api/nodo/tarea_completada",
-                                          json={"tarea_id": _tid, "estado": "finalizado"}, timeout=15)
+                                          json={"tarea_id": _tid, "estado": "fallido"}, timeout=15)
                         except Exception:
                             pass
                     return
@@ -3008,13 +3012,52 @@ def procesar():
                         _dur_real = _obtener_duracion_audio_simple(ruta_final)
                     except Exception:
                         _dur_real = 0.0
+
+                    # VERIFICACIÓN ANTI-VIDEO-VACÍO (crítico): antes de reportar el video
+                    # como COMPLETADO, confirmar que el MP4 final EXISTE, tiene tamaño real
+                    # y duración real. Si Render falló y la orden llegó incompleta, el video
+                    # podría quedar vacío/inexistente; en ese caso NO debe marcarse completado
+                    # (eso dejaba carpetas vacías "OK"). Se marca FALLIDO para que el
+                    # orquestador lo reintente.
+                    _video_ok = False
+                    try:
+                        if ruta_final and os.path.exists(ruta_final):
+                            _tam = os.path.getsize(ruta_final)
+                            # un video real pesa mucho más que unos pocos KB y dura > 3s
+                            if _tam > 100_000 and _dur_real >= 3.0:
+                                _video_ok = True
+                            else:
+                                print(f"⚠️ Video final sospechoso: tamaño={_tam}B, duración={_dur_real}s "
+                                      f"(esperado >100KB y >3s). NO se marca completado.")
+                        else:
+                            print(f"⚠️ El video final NO existe en disco ({ruta_final}). NO se marca completado.")
+                    except Exception as _ev:
+                        print(f"⚠️ No se pudo verificar el video final: {_ev}")
+
+                    _id_original = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+
+                    if not _video_ok:
+                        # Video vacío/inexistente → reportar FALLIDO (no completado) para
+                        # que el orquestador lo reintente en vez de darlo por bueno.
+                        _diag.setdefault("errores", []).append(
+                            f"Video final no válido (tam/dur insuficiente) — reportado FALLIDO para reintento.")
+                        try: subir_diagnostico_video(_diag)
+                        except Exception: pass
+                        for _tid in {tarea_id, _id_original}:
+                            try:
+                                requests.post(f"{RENDER_URL}/api/nodo/tarea_completada",
+                                              json={"tarea_id": _tid, "estado": "fallido"}, timeout=20)
+                            except Exception:
+                                pass
+                        print(f"❌ [TAREA {tarea_id}] Video NO válido — marcado FALLIDO (el orquestador lo reintentará).")
+                        return
+
                     # CRÍTICO PARA EL ORDEN DEL LOTE: el orquestador espera el tarea_id
                     # ORIGINAL (el de la orden de imágenes). El ensamblaje tiene id
                     # "<original>_asm". Si reportáramos "_asm", el orquestador NUNCA vería
                     # completado el video original y avanzaría al siguiente canal al terminar
                     # solo las IMÁGENES, dejando este video a medias y repitiendo canal.
                     # Reportamos AMBOS ids para que Render cierre el correcto.
-                    _id_original = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
                     for _tid in {tarea_id, _id_original}:
                         try:
                             requests.post(
