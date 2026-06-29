@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "a9413bda-affc-4f3c-a4d8-6ff870e9fc6a",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Endless, dimly lit, generic office corridor, slightly too long, faded yellow walls, unsettling uniformity\", \"prompt_visual\": \"Endless, dimly lit, generic office corridor, slightly too long, faded yellow walls, unsettling uniformity\", \"texto_locucion\": \"Tú sabes que el pasillo no era así.\", \"pexels_query\": \"empty hallway\"}, {\"id\": 2, \"prompt\": \"Flickering fluorescent light, long shadows, damp stained ceiling tiles, abandoned cart in corner\", \"prompt_visual\": \"Flickering fluorescent light, long shadows, damp stained ceiling tiles, abandoned cart in corner\", \"texto_locucion\": \"La luz parpadeaba lenta, con un zumbido agudo.\", \"pexels_query\": \"flickering lights\"}, {\"id\": 3, \"prompt\": \"Empty, cold, industrial room, concrete floor, pipes on wall, a single open door into darkness\", \"prompt_visual\": \"Empty, cold, industrial room, concrete floor, pipes on wall, a single open door into darkness\", \"texto_locucion\": \"Cada puerta llevaba a un lugar ajeno, desconocido.\", \"pexels_query\": \"empty industrial room\"}, {\"id\": 4, \"prompt\": \"Monochromatic view of repetitive office cubicles, no people, unsettling order, low light\", \"prompt_visual\": \"Monochromatic view of repetitive office cubicles, no people, unsettling order, low light\", \"texto_locucion\": \"Los cubículos se repetían, idénticos, sin rastro humano.\", \"pexels_query\": \"repetitive cubicles\"}, {\"id\": 5, \"prompt\": \"Cracked, peeling paint on a generic wall, dark stains, subtle unnatural pattern in the cracks\", \"prompt_visual\": \"Cracked, peeling paint on a generic wall, dark stains, subtle unnatural pattern in the cracks\", \"texto_locucion\": \"El olor a moho, a humedad estancada te envolvió.\", \"pexels_query\": \"peeling paint wall\"}, {\"id\": 6, \"prompt\": \"Empty stairwell going down into extreme darkness, concrete walls, no railing visible, unsettling void\", \"prompt_visual\": \"Empty stairwell going down into extreme darkness, concrete walls, no railing visible, unsettling void\", \"texto_locucion\": \"Bajaste, pero el final nunca llegaba a ti.\", \"pexels_query\": \"dark stairwell\"}, {\"id\": 7, \"prompt\": \"Deserted lobby area, faded furniture, reception desk empty, unnatural stillness, shadows loom\", \"prompt_visual\": \"Deserted lobby area, faded furniture, reception desk empty, unnatural stillness, shadows loom\", \"texto_locucion\": \"El eco de tus pasos fue el único sonido.\", \"pexels_query\": \"deserted lobby\"}, {\"id\": 8, \"prompt\": \"Unnaturally smooth, blank wall, no doors, no windows, just seamless surface, disorienting\", \"prompt_visual\": \"Unnaturally smooth, blank wall, no doors, no windows, just seamless surface, disorienting\", \"texto_locucion\": \"La pared era lisa, no había salida posible.\", \"pexels_query\": \"blank wall\"}, {\"id\": 9, \"prompt\": \"Hallway intersection, identical corridors stretching into the distance, confusing symmetry, low light\", \"prompt_visual\": \"Hallway intersection, identical corridors stretching into the distance, confusing symmetry, low light\", \"texto_locucion\": \"Cada cruce te llevaba al mismo lugar siempre.\", \"pexels_query\": \"hallway intersection\"}, {\"id\": 10, \"prompt\": \"Out-of-place vending machine in a dark, empty space, anachronistic, faint glow from screen\", \"prompt_visual\": \"Out-of-place vending machine in a dark, empty space, anachronistic, faint glow from screen\", \"texto_locucion\": \"Una máquina expendedora vacía, sin sentido alguno.\", \"pexels_query\": \"vending machine strange place\"}, {\"id\": 11, \"prompt\": \"Long, narrow room, low ceiling, pipes and wires running along, claustrophobic feeling, dirty walls\", \"prompt_visual\": \"Long, narrow room, low ceiling, pipes and wires running along, claustrophobic feeling, dirty walls\", \"texto_locucion\": \"Sentiste que las paredes se acercaban lento.\", \"pexels_query\": \"utility room pipes\"}, {\"id\": 12, \"prompt\": \"Dark corner of a room, subtle humanoid shadow blending with wall, ambiguous, unsettling presence\", \"prompt_visual\": \"Dark corner of a room, subtle humanoid shadow blending with wall, ambiguous, unsettling presence\", \"texto_locucion\": \"Sabías que no estabas solo allí dentro.\", \"pexels_query\": \"shadow presence\"}, {\"id\": 13, \"prompt\": \"A single, old, worn-out office chair in the middle of a vast empty room, lit by a single bulb\", \"prompt_visual\": \"A single, old, worn-out office chair in the middle of a vast empty room, lit by a single bulb\", \"texto_locucion\": \"Una silla vacía, esperando por quién, quizá.\", \"pexels_query\": \"empty room chair\"}, {\"id\": 14, \"prompt\": \"Ceiling vent, slightly ajar, darkness inside, faint distorted eyes implied by pareidolia\", \"prompt_visual\": \"Ceiling vent, slightly ajar, darkness inside, faint distorted eyes implied by pareidolia\", \"texto_locucion\": \"Escuchaste un rasguño suave, justo encima de ti.\", \"pexels_query\": \"ceiling vent dark\"}, {\"id\": 15, \"prompt\": \"Water stained ceiling, abstract patterns resembling distorted faces, eerie glow from above\", \"prompt_visual\": \"Water stained ceiling, abstract patterns resembling distorted faces, eerie glow from above\", \"texto_locucion\": \"Las manchas parecían mirarte fijamente, sin parpadear.\", \"pexels_query\": \"water stained ceiling\"}, {\"id\": 16, \"prompt\": \"Elevator door, slightly open, revealing only impenetrable darkness inside, unsettling invitation\", \"prompt_visual\": \"Elevator door, slightly open, revealing only impenetrable darkness inside, unsettling invitation\", \"texto_locucion\": \"El ascensor se abrió, pero no había cabina.\", \"pexels_query\": \"dark elevator\"}, {\"id\": 17, \"prompt\": \"Empty, cold, grey concrete room, single bare light bulb hanging from ceiling, creating deep shadows\", \"prompt_visual\": \"Empty, cold, grey concrete room, single bare light bulb hanging from ceiling, creating deep shadows\", \"texto_locucion\": \"Ese día, sentiste que algo no estaba bien.\", \"pexels_query\": \"bare light room\"}, {\"id\": 18, \"prompt\": \"A repetitive pattern on a wall, slightly off, inducing unease, endless repetition, dull colors\", \"prompt_visual\": \"A repetitive pattern on a wall, slightly off, inducing unease, endless repetition, dull colors\", \"texto_locucion\": \"La repetición infinita era una tortura lenta.\", \"pexels_query\": \"repetitive pattern wall\"}, {\"id\": 19, \"prompt\": \"A desktop computer monitor, turned off, reflecting a distorted, empty room, unsettling reflection\", \"prompt_visual\": \"A desktop computer monitor, turned off, reflecting a distorted, empty room, unsettling reflection\", \"texto_locucion\": \"Viste tu reflejo, pero no era tu cara.\", \"pexels_query\": \"dark monitor reflection\"}, {\"id\": 20, \"prompt\": \"Long, desolate hallway, no windows, distant single light source, distorted perspective, blurry edges\", \"prompt_visual\": \"Long, desolate hallway, no windows, distant single light source, distorted perspective, blurry edges\", \"texto_locucion\": \"La distancia se estiraba, inacabable, irreal.\", \"pexels_query\": \"desolate hallway\"}, {\"id\": 21, \"prompt\": \"A fire alarm pull station, old, dusty, slightly broken, against a stained wall, nobody around\", \"prompt_visual\": \"A fire alarm pull station, old, dusty, slightly broken, against a stained wall, nobody around\", \"texto_locucion\": \"No había alarmas, ni salidas de emergencia.\", \"pexels_query\": \"old fire alarm\"}, {\"id\": 22, \"prompt\": \"A single, generic door in a vast, featureless wall, only slightly ajar, leading nowhere visible\", \"prompt_visual\": \"A single, generic door in a vast, featureless wall, only slightly ajar, leading nowhere visible\", \"texto_locucion\": \"El silencio absoluto te envolvió de nuevo.\", \"pexels_query\": \"door slightly ajar\"}, {\"id\": 23, \"prompt\": \"Gloomy, empty warehouse interior, high ceiling, sparse pillars, dust motes in faint light beams\", \"prompt_visual\": \"Gloomy, empty warehouse interior, high ceiling, sparse pillars, dust motes in faint light beams\", \"texto_locucion\": \"Lo sentiste antes, un frío súbito en ti.\", \"pexels_query\": \"empty warehouse\"}, {\"id\": 24, \"prompt\": \"A discarded, crumpled paper cup on a pristine, empty floor, unsettling anomaly, high contrast\", \"prompt_visual\": \"A discarded, crumpled paper cup on a pristine, empty floor, unsettling anomaly, high contrast\", \"texto_locucion\": \"Ese objeto no debía estar allí, jamás.\", \"pexels_query\": \"crumpled cup floor\"}, {\"id\": 25, \"prompt\": \"Distorted perspective of a room, walls bending slightly, giving a sense of unease, wrong geometry\", \"prompt_visual\": \"Distorted perspective of a room, walls bending slightly, giving a sense of unease, wrong geometry\", \"texto_locucion\": \"La realidad se doblaba, ¿o eras tú quien?\", \"pexels_query\": \"distorted room\"}, {\"id\": 26, \"prompt\": \"Dark corridor ending in a solid wall, no exit, trapped feeling, deep shadows, subtle grainy texture\", \"prompt_visual\": \"Dark corridor ending in a solid wall, no exit, trapped feeling, deep shadows, subtle grainy texture\", \"texto_locucion\": \"Ahora, no puedes ignorarlo por mucho tiempo.\", \"pexels_query\": \"dead end corridor\"}, {\"id\": 27, \"prompt\": \"Subtle, ethereal, human-like silhouette behind a frosted glass panel, indistinct, chilling presence\", \"prompt_visual\": \"Subtle, ethereal, human-like silhouette behind a frosted glass panel, indistinct, chilling presence\", \"texto_locucion\": \"¿Por qué nadie más lo vio nunca?\", \"pexels_query\": \"frosted glass silhouette\"}, {\"id\": 28, \"prompt\": \"A dark, empty space, only a faint, undefined light source in the extreme distance, unsettling vastness\", \"prompt_visual\": \"A dark, empty space, only a faint, undefined light source in the extreme distance, unsettling vastness\", \"texto_locucion\": \"Y ahora, ¿cómo sabes dónde estás realmente?\", \"pexels_query\": \"dark vast emptiness\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Tú sabes que el pasillo no era así. La luz parpadeaba lenta, con un zumbido agudo. Cada puerta llevaba a un lugar ajeno, desconocido. Los cubículos se repetían, idénticos, sin rastro humano. El olor a moho, a humedad estancada te envolvió. Bajaste, pero el final nunca llegaba a ti. El eco de tus pasos fue el único sonido. La pared era lisa, no había salida posible. Cada cruce te llevaba al mismo lugar siempre. Una máquina expendedora vacía, sin sentido alguno. Sentiste que las paredes se acercaban lento. Sabías que no estabas solo allí dentro. Una silla vacía, esperando por quién, quizá. Escuchaste un rasguño suave, justo encima de ti. Las manchas parecían mirarte fijamente, sin parpadear. El ascensor se abrió, pero no había cabina. Ese día, sentiste que algo no estaba bien. La repetición infinita era una tortura lenta. Viste tu reflejo, pero no era tu cara. La distancia se estiraba, inacabable, irreal. No había alarmas, ni salidas de emergencia. El silencio absoluto te envolvió de nuevo. Lo sentiste antes, un frío súbito en ti. Ese objeto no debía estar allí, jamás. La realidad se doblaba, ¿o eras tú quien? Ahora, no puedes ignorarlo por mucho tiempo. ¿Por qué nadie más lo vio nunca? Y ahora, ¿cómo sabes dónde estás realmente?",
+    "titulo_sugerido": "Cuando el lugar ya no es el tuyo | Backrooms real",
+    "escenas_texto": [
+      "Tú sabes que el pasillo no era así.",
+      "La luz parpadeaba lenta, con un zumbido agudo.",
+      "Cada puerta llevaba a un lugar ajeno, desconocido.",
+      "Los cubículos se repetían, idénticos, sin rastro humano.",
+      "El olor a moho, a humedad estancada te envolvió.",
+      "Bajaste, pero el final nunca llegaba a ti.",
+      "El eco de tus pasos fue el único sonido.",
+      "La pared era lisa, no había salida posible.",
+      "Cada cruce te llevaba al mismo lugar siempre.",
+      "Una máquina expendedora vacía, sin sentido alguno.",
+      "Sentiste que las paredes se acercaban lento.",
+      "Sabías que no estabas solo allí dentro.",
+      "Una silla vacía, esperando por quién, quizá.",
+      "Escuchaste un rasguño suave, justo encima de ti.",
+      "Las manchas parecían mirarte fijamente, sin parpadear.",
+      "El ascensor se abrió, pero no había cabina.",
+      "Ese día, sentiste que algo no estaba bien.",
+      "La repetición infinita era una tortura lenta.",
+      "Viste tu reflejo, pero no era tu cara.",
+      "La distancia se estiraba, inacabable, irreal.",
+      "No había alarmas, ni salidas de emergencia.",
+      "El silencio absoluto te envolvió de nuevo.",
+      "Lo sentiste antes, un frío súbito en ti.",
+      "Ese objeto no debía estar allí, jamás.",
+      "La realidad se doblaba, ¿o eras tú quien?",
+      "Ahora, no puedes ignorarlo por mucho tiempo.",
+      "¿Por qué nadie más lo vio nunca?",
+      "Y ahora, ¿cómo sabes dónde estás realmente?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Endless, dimly lit, generic office corridor, slightly too long, faded yellow walls, unsettling uniformity",
+        "prompt_visual": "Endless, dimly lit, generic office corridor, slightly too long, faded yellow walls, unsettling uniformity",
+        "texto_locucion": "Tú sabes que el pasillo no era así.",
+        "pexels_query": "empty hallway"
+      },
+      {
+        "id": 2,
+        "prompt": "Flickering fluorescent light, long shadows, damp stained ceiling tiles, abandoned cart in corner",
+        "prompt_visual": "Flickering fluorescent light, long shadows, damp stained ceiling tiles, abandoned cart in corner",
+        "texto_locucion": "La luz parpadeaba lenta, con un zumbido agudo.",
+        "pexels_query": "flickering lights"
+      },
+      {
+        "id": 3,
+        "prompt": "Empty, cold, industrial room, concrete floor, pipes on wall, a single open door into darkness",
+        "prompt_visual": "Empty, cold, industrial room, concrete floor, pipes on wall, a single open door into darkness",
+        "texto_locucion": "Cada puerta llevaba a un lugar ajeno, desconocido.",
+        "pexels_query": "empty industrial room"
+      },
+      {
+        "id": 4,
+        "prompt": "Monochromatic view of repetitive office cubicles, no people, unsettling order, low light",
+        "prompt_visual": "Monochromatic view of repetitive office cubicles, no people, unsettling order, low light",
+        "texto_locucion": "Los cubículos se repetían, idénticos, sin rastro humano.",
+        "pexels_query": "repetitive cubicles"
+      },
+      {
+        "id": 5,
+        "prompt": "Cracked, peeling paint on a generic wall, dark stains, subtle unnatural pattern in the cracks",
+        "prompt_visual": "Cracked, peeling paint on a generic wall, dark stains, subtle unnatural pattern in the cracks",
+        "texto_locucion": "El olor a moho, a humedad estancada te envolvió.",
+        "pexels_query": "peeling paint wall"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty stairwell going down into extreme darkness, concrete walls, no railing visible, unsettling void",
+        "prompt_visual": "Empty stairwell going down into extreme darkness, concrete walls, no railing visible, unsettling void",
+        "texto_locucion": "Bajaste, pero el final nunca llegaba a ti.",
+        "pexels_query": "dark stairwell"
+      },
+      {
+        "id": 7,
+        "prompt": "Deserted lobby area, faded furniture, reception desk empty, unnatural stillness, shadows loom",
+        "prompt_visual": "Deserted lobby area, faded furniture, reception desk empty, unnatural stillness, shadows loom",
+        "texto_locucion": "El eco de tus pasos fue el único sonido.",
+        "pexels_query": "deserted lobby"
+      },
+      {
+        "id": 8,
+        "prompt": "Unnaturally smooth, blank wall, no doors, no windows, just seamless surface, disorienting",
+        "prompt_visual": "Unnaturally smooth, blank wall, no doors, no windows, just seamless surface, disorienting",
+        "texto_locucion": "La pared era lisa, no había salida posible.",
+        "pexels_query": "blank wall"
+      },
+      {
+        "id": 9,
+        "prompt": "Hallway intersection, identical corridors stretching into the distance, confusing symmetry, low light",
+        "prompt_visual": "Hallway intersection, identical corridors stretching into the distance, confusing symmetry, low light",
+        "texto_locucion": "Cada cruce te llevaba al mismo lugar siempre.",
+        "pexels_query": "hallway intersection"
+      },
+      {
+        "id": 10,
+        "prompt": "Out-of-place vending machine in a dark, empty space, anachronistic, faint glow from screen",
+        "prompt_visual": "Out-of-place vending machine in a dark, empty space, anachronistic, faint glow from screen",
+        "texto_locucion": "Una máquina expendedora vacía, sin sentido alguno.",
+        "pexels_query": "vending machine strange place"
+      },
+      {
+        "id": 11,
+        "prompt": "Long, narrow room, low ceiling, pipes and wires running along, claustrophobic feeling, dirty walls",
+        "prompt_visual": "Long, narrow room, low ceiling, pipes and wires running along, claustrophobic feeling, dirty walls",
+        "texto_locucion": "Sentiste que las paredes se acercaban lento.",
+        "pexels_query": "utility room pipes"
+      },
+      {
+        "id": 12,
+        "prompt": "Dark corner of a room, subtle humanoid shadow blending with wall, ambiguous, unsettling presence",
+        "prompt_visual": "Dark corner of a room, subtle humanoid shadow blending with wall, ambiguous, unsettling presence",
+        "texto_locucion": "Sabías que no estabas solo allí dentro.",
+        "pexels_query": "shadow presence"
+      },
+      {
+        "id": 13,
+        "prompt": "A single, old, worn-out office chair in the middle of a vast empty room, lit by a single bulb",
+        "prompt_visual": "A single, old, worn-out office chair in the middle of a vast empty room, lit by a single bulb",
+        "texto_locucion": "Una silla vacía, esperando por quién, quizá.",
+        "pexels_query": "empty room chair"
+      },
+      {
+        "id": 14,
+        "prompt": "Ceiling vent, slightly ajar, darkness inside, faint distorted eyes implied by pareidolia",
+        "prompt_visual": "Ceiling vent, slightly ajar, darkness inside, faint distorted eyes implied by pareidolia",
+        "texto_locucion": "Escuchaste un rasguño suave, justo encima de ti.",
+        "pexels_query": "ceiling vent dark"
+      },
+      {
+        "id": 15,
+        "prompt": "Water stained ceiling, abstract patterns resembling distorted faces, eerie glow from above",
+        "prompt_visual": "Water stained ceiling, abstract patterns resembling distorted faces, eerie glow from above",
+        "texto_locucion": "Las manchas parecían mirarte fijamente, sin parpadear.",
+        "pexels_query": "water stained ceiling"
+      },
+      {
+        "id": 16,
+        "prompt": "Elevator door, slightly open, revealing only impenetrable darkness inside, unsettling invitation",
+        "prompt_visual": "Elevator door, slightly open, revealing only impenetrable darkness inside, unsettling invitation",
+        "texto_locucion": "El ascensor se abrió, pero no había cabina.",
+        "pexels_query": "dark elevator"
+      },
+      {
+        "id": 17,
+        "prompt": "Empty, cold, grey concrete room, single bare light bulb hanging from ceiling, creating deep shadows",
+        "prompt_visual": "Empty, cold, grey concrete room, single bare light bulb hanging from ceiling, creating deep shadows",
+        "texto_locucion": "Ese día, sentiste que algo no estaba bien.",
+        "pexels_query": "bare light room"
+      },
+      {
+        "id": 18,
+        "prompt": "A repetitive pattern on a wall, slightly off, inducing unease, endless repetition, dull colors",
+        "prompt_visual": "A repetitive pattern on a wall, slightly off, inducing unease, endless repetition, dull colors",
+        "texto_locucion": "La repetición infinita era una tortura lenta.",
+        "pexels_query": "repetitive pattern wall"
+      },
+      {
+        "id": 19,
+        "prompt": "A desktop computer monitor, turned off, reflecting a distorted, empty room, unsettling reflection",
+        "prompt_visual": "A desktop computer monitor, turned off, reflecting a distorted, empty room, unsettling reflection",
+        "texto_locucion": "Viste tu reflejo, pero no era tu cara.",
+        "pexels_query": "dark monitor reflection"
+      },
+      {
+        "id": 20,
+        "prompt": "Long, desolate hallway, no windows, distant single light source, distorted perspective, blurry edges",
+        "prompt_visual": "Long, desolate hallway, no windows, distant single light source, distorted perspective, blurry edges",
+        "texto_locucion": "La distancia se estiraba, inacabable, irreal.",
+        "pexels_query": "desolate hallway"
+      },
+      {
+        "id": 21,
+        "prompt": "A fire alarm pull station, old, dusty, slightly broken, against a stained wall, nobody around",
+        "prompt_visual": "A fire alarm pull station, old, dusty, slightly broken, against a stained wall, nobody around",
+        "texto_locucion": "No había alarmas, ni salidas de emergencia.",
+        "pexels_query": "old fire alarm"
+      },
+      {
+        "id": 22,
+        "prompt": "A single, generic door in a vast, featureless wall, only slightly ajar, leading nowhere visible",
+        "prompt_visual": "A single, generic door in a vast, featureless wall, only slightly ajar, leading nowhere visible",
+        "texto_locucion": "El silencio absoluto te envolvió de nuevo.",
+        "pexels_query": "door slightly ajar"
+      },
+      {
+        "id": 23,
+        "prompt": "Gloomy, empty warehouse interior, high ceiling, sparse pillars, dust motes in faint light beams",
+        "prompt_visual": "Gloomy, empty warehouse interior, high ceiling, sparse pillars, dust motes in faint light beams",
+        "texto_locucion": "Lo sentiste antes, un frío súbito en ti.",
+        "pexels_query": "empty warehouse"
+      },
+      {
+        "id": 24,
+        "prompt": "A discarded, crumpled paper cup on a pristine, empty floor, unsettling anomaly, high contrast",
+        "prompt_visual": "A discarded, crumpled paper cup on a pristine, empty floor, unsettling anomaly, high contrast",
+        "texto_locucion": "Ese objeto no debía estar allí, jamás.",
+        "pexels_query": "crumpled cup floor"
+      },
+      {
+        "id": 25,
+        "prompt": "Distorted perspective of a room, walls bending slightly, giving a sense of unease, wrong geometry",
+        "prompt_visual": "Distorted perspective of a room, walls bending slightly, giving a sense of unease, wrong geometry",
+        "texto_locucion": "La realidad se doblaba, ¿o eras tú quien?",
+        "pexels_query": "distorted room"
+      },
+      {
+        "id": 26,
+        "prompt": "Dark corridor ending in a solid wall, no exit, trapped feeling, deep shadows, subtle grainy texture",
+        "prompt_visual": "Dark corridor ending in a solid wall, no exit, trapped feeling, deep shadows, subtle grainy texture",
+        "texto_locucion": "Ahora, no puedes ignorarlo por mucho tiempo.",
+        "pexels_query": "dead end corridor"
+      },
+      {
+        "id": 27,
+        "prompt": "Subtle, ethereal, human-like silhouette behind a frosted glass panel, indistinct, chilling presence",
+        "prompt_visual": "Subtle, ethereal, human-like silhouette behind a frosted glass panel, indistinct, chilling presence",
+        "texto_locucion": "¿Por qué nadie más lo vio nunca?",
+        "pexels_query": "frosted glass silhouette"
+      },
+      {
+        "id": 28,
+        "prompt": "A dark, empty space, only a faint, undefined light source in the extreme distance, unsettling vastness",
+        "prompt_visual": "A dark, empty space, only a faint, undefined light source in the extreme distance, unsettling vastness",
+        "texto_locucion": "Y ahora, ¿cómo sabes dónde estás realmente?",
+        "pexels_query": "dark vast emptiness"
+      }
+    ],
+    "hooks": [
+      "Pasillos sin fin",
+      "El lugar no era tuyo",
+      "No hay salida aquí"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
