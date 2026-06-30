@@ -193,7 +193,9 @@
     "5e420dd0-1d86-4fe6-ae9d-bd8bd259d53f",
     "5e420dd0-1d86-4fe6-ae9d-bd8bd259d53f_asm",
     "9cd30857-0738-4e5b-95cd-50341d738bbe",
-    "9cd30857-0738-4e5b-95cd-50341d738bbe_asm"
+    "9cd30857-0738-4e5b-95cd-50341d738bbe_asm",
+    "295c7ea9-a51d-4818-8d13-29806f5e69cf",
+    "295c7ea9-a51d-4818-8d13-29806f5e69cf_asm"
   ],
   "detalles": {
     "711c706f-7f52-460b-8638-be31a5a90aaf": {
@@ -662,6 +664,11 @@
     },
     "9cd30857-0738-4e5b-95cd-50341d738bbe": {
       "duracion_real_seg": 99.4,
+      "marca": "Monkygraff",
+      "formato": "9:16"
+    },
+    "295c7ea9-a51d-4818-8d13-29806f5e69cf": {
+      "duracion_real_seg": 109.8,
       "marca": "Monkygraff",
       "formato": "9:16"
     }
