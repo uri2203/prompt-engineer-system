@@ -1,101 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 10,
-  "completados": 10,
+  "estado_lote": "produciendo",
+  "total": 25,
+  "completados": 0,
   "fallidos": 0,
-  "trabajo_actual": "Enfriando nodos... 2s",
-  "mensaje": "Lote completado.",
-  "resumen": "La Viuda: 10s+0L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 137.1,
-      "hora": "11:02"
-    },
-    {
-      "n": 2,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 107.0,
-      "hora": "12:28"
-    },
-    {
-      "n": 3,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 135.8,
-      "hora": "14:08"
-    },
-    {
-      "n": 4,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 123.1,
-      "hora": "14:36"
-    },
-    {
-      "n": 5,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 0,
-      "hora": "14:49"
-    },
-    {
-      "n": 6,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 0,
-      "hora": "15:03"
-    },
-    {
-      "n": 7,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 0,
-      "hora": "15:15"
-    },
-    {
-      "n": 8,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 0,
-      "hora": "15:28"
-    },
-    {
-      "n": 9,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 130.3,
-      "hora": "16:01"
-    },
-    {
-      "n": 10,
-      "marca": "La Viuda",
-      "formato": "9:16",
-      "tipo": "Short",
-      "duracion_sel": null,
-      "duracion_real_seg": 145.1,
-      "hora": "17:21"
-    }
-  ]
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
+  "historial": []
 }
