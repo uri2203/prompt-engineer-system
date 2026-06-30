@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 7,
+  "completados": 8,
   "fallidos": 0,
-  "trabajo_actual": "Generando video 8/25 (Monkygraff 9:16)",
-  "mensaje": "Produccion del video 8 iniciada.",
+  "trabajo_actual": "Enfriando nodos... 154s",
+  "mensaje": "Enfriamiento entre videos: 154s",
   "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
   "historial": [
     {
@@ -69,6 +69,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 110.7,
       "hora": "03:52"
+    },
+    {
+      "n": 8,
+      "marca": "Monkygraff",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 119.7,
+      "hora": "04:59"
     }
   ]
 }
