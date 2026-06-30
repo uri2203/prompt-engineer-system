@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "017d73e7-77f9-4717-af84-b4659d2e6da9",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dimly lit empty hallway, cold blue light from a window, subtle dust motes in the air, a single old wooden door slightly ajar.\", \"prompt_visual\": \"Dimly lit empty hallway, cold blue light from a window, subtle dust motes in the air, a single old wooden door slightly ajar.\", \"texto_locucion\": \"Primero, un escalofrío. La historia volvió a tu mente.\", \"pexels_query\": \"empty hallway cold\"}, {\"id\": 2, \"prompt\": \"Dark living room corner, a worn armchair facing away, long deep shadows, feeling of unseen presence.\", \"prompt_visual\": \"Dark living room corner, a worn armchair facing away, long deep shadows, feeling of unseen presence.\", \"texto_locucion\": \"Era un relato sin nombre. Nadie sabía de dónde vino.\", \"pexels_query\": \"dark armchair shadows\"}, {\"id\": 3, \"prompt\": \"A vintage tape recorder on a dusty table, slight static visible in the air, subtle light from an unseen source.\", \"prompt_visual\": \"A vintage tape recorder on a dusty table, slight static visible in the air, subtle light from an unseen source.\", \"texto_locucion\": \"Pero tú lo escuchaste. Esa noche no estabas solo.\", \"pexels_query\": \"vintage tape recorder\"}, {\"id\": 4, \"prompt\": \"A close-up of a static-filled old television screen, glowing faintly in a dark room, reflecting vague shapes.\", \"prompt_visual\": \"A close-up of a static-filled old television screen, glowing faintly in a dark room, reflecting vague shapes.\", \"texto_locucion\": \"Hablaban de verdades secretas, de un terror oculto.\", \"pexels_query\": \"static tv screen\"}, {\"id\": 5, \"prompt\": \"A darkened staircase, the banister showing wear, a subtle, distorted shadow figure at the top of the stairs.\", \"prompt_visual\": \"A darkened staircase, the banister showing wear, a subtle, distorted shadow figure at the top of the stairs.\", \"texto_locucion\": \"Desde entonces, tu casa se sentía diferente.\", \"pexels_query\": \"dark staircase shadows\"}, {\"id\": 6, \"prompt\": \"A slightly opened closet door in a dark bedroom, a sliver of deep darkness visible inside, menacing quiet.\", \"prompt_visual\": \"A slightly opened closet door in a dark bedroom, a sliver of deep darkness visible inside, menacing quiet.\", \"texto_locucion\": \"Escuchabas ruidos donde no debía haber nadie.\", \"pexels_query\": \"open closet door\"}, {\"id\": 7, \"prompt\": \"A single, old-fashioned rotary telephone on a nightstand, completely still in an empty, quiet room.\", \"prompt_visual\": \"A single, old-fashioned rotary telephone on a nightstand, completely still in an empty, quiet room.\", \"texto_locucion\": \"Llamadas que terminaban en silencio absoluto.\", \"pexels_query\": \"old rotary phone\"}, {\"id\": 8, \"prompt\": \"A reflection of a distorted shadow on a polished wooden floor, barely visible, near a closed door.\", \"prompt_visual\": \"A reflection of a distorted shadow on a polished wooden floor, barely visible, near a closed door.\", \"texto_locucion\": \"Una figura que nadie más lo vio.\", \"pexels_query\": \"shadow on floor\"}, {\"id\": 9, \"prompt\": \"A window pane streaked with rain, reflecting faint, unsettling lights from outside, dark and blurry forms.\", \"prompt_visual\": \"A window pane streaked with rain, reflecting faint, unsettling lights from outside, dark and blurry forms.\", \"texto_locucion\": \"Mirabas por la ventana, buscando algo afuera.\", \"pexels_query\": \"rainy window night\"}, {\"id\": 10, \"prompt\": \"A kitchen knife resting on a clean, empty counter, the light glinting unsettlingly on its blade, no one around.\", \"prompt_visual\": \"A kitchen knife resting on a clean, empty counter, the light glinting unsettlingly on its blade, no one around.\", \"texto_locucion\": \"Pero el miedo crecía dentro. Algo no está bien.\", \"pexels_query\": \"kitchen knife counter\"}, {\"id\": 11, \"prompt\": \"A child's drawing left on a table, depicting a simple house with a disproportionately large, dark shadow behind it.\", \"prompt_visual\": \"A child's drawing left on a table, depicting a simple house with a disproportionately large, dark shadow behind it.\", \"texto_locucion\": \"Aquellas historias se arraigaron profundo en tu mente.\", \"pexels_query\": \"child drawing shadow\"}, {\"id\": 12, \"prompt\": \"A dark, empty living room, a single floor lamp casting a long, stretched shadow of itself on the wall.\", \"prompt_visual\": \"A dark, empty living room, a single floor lamp casting a long, stretched shadow of itself on the wall.\", \"texto_locucion\": \"Distorsionaban todo lo que conocías y creías.\", \"pexels_query\": \"floor lamp shadow\"}, {\"id\": 13, \"prompt\": \"A close-up of an old, dusty book with its cover slightly ajar, revealing dark, unreadable text.\", \"prompt_visual\": \"A close-up of an old, dusty book with its cover slightly ajar, revealing dark, unreadable text.\", \"texto_locucion\": \"Te preguntabas si eran solo cuentos macabros.\", \"pexels_query\": \"old dusty book\"}, {\"id\": 14, \"prompt\": \"An antique mirror reflecting only darkness, with a subtle, almost imperceptible smudge resembling a face.\", \"prompt_visual\": \"An antique mirror reflecting only darkness, with a subtle, almost imperceptible smudge resembling a face.\", \"texto_locucion\": \"¿O era una verdad que no podías ver?\", \"pexels_query\": \"dark antique mirror\"}, {\"id\": 15, \"prompt\": \"A dimly lit bedroom with the bed perfectly made, but one pillow is slightly indented as if someone just left.\", \"prompt_visual\": \"A dimly lit bedroom with the bed perfectly made, but one pillow is slightly indented as if someone just left.\", \"texto_locucion\": \"Sentiste que alguien estuvo muy cerca de ti.\", \"pexels_query\": \"indented pillow bed\"}, {\"id\": 16, \"prompt\": \"A single teacup left on a kitchen table, a faint ring of moisture beneath it, suggesting recent use by an unknown party.\", \"prompt_visual\": \"A single teacup left on a kitchen table, a faint ring of moisture beneath it, suggesting recent use by an unknown party.\", \"texto_locucion\": \"La misma sensación que lo sentiste antes.\", \"pexels_query\": \"teacup kitchen table\"}, {\"id\": 17, \"prompt\": \"A narrow, dark corridor with a single bare lightbulb flickering erratically, creating jumpy shadows.\", \"prompt_visual\": \"A narrow, dark corridor with a single bare lightbulb flickering erratically, creating jumpy shadows.\", \"texto_locucion\": \"La luz parpadea. Un frío recorre tu espalda.\", \"pexels_query\": \"flickering light corridor\"}, {\"id\": 18, \"prompt\": \"A shadow extending from beneath a closed bedroom door, unusually long and thin, almost reaching across the hallway.\", \"prompt_visual\": \"A shadow extending from beneath a closed bedroom door, unusually long and thin, almost reaching across the hallway.\", \"texto_locucion\": \"Sabes que no puedes ignorarlo. Te está buscando.\", \"pexels_query\": \"shadow under door\"}, {\"id\": 19, \"prompt\": \"A close-up of a blurred human hand reaching out from dense fog or smoke, indistinct and threatening.\", \"prompt_visual\": \"A close-up of a blurred human hand reaching out from dense fog or smoke, indistinct and threatening.\", \"texto_locucion\": \"Las historias son una puerta. Abren tu percepción.\", \"pexels_query\": \"hand in fog\"}, {\"id\": 20, \"prompt\": \"An old, dusty window pane, a single, deliberate scratch mark on its surface, as if made by a claw.\", \"prompt_visual\": \"An old, dusty window pane, a single, deliberate scratch mark on its surface, as if made by a claw.\", \"texto_locucion\": \"Una vez que la escuchas, la realidad se tuerce.\", \"pexels_query\": \"scratched window glass\"}, {\"id\": 21, \"prompt\": \"A wall covered in peeling, stained wallpaper, a subtle dark stain resembling a reaching hand.\", \"prompt_visual\": \"A wall covered in peeling, stained wallpaper, a subtle dark stain resembling a reaching hand.\", \"texto_locucion\": \"Los relatos no mueren. Se quedan contigo.\", \"pexels_query\": \"peeling wallpaper stain\"}, {\"id\": 22, \"prompt\": \"A dark, empty street at night, a single streetlamp flickering, casting long, wavering shadows of unseen trees.\", \"prompt_visual\": \"A dark, empty street at night, a single streetlamp flickering, casting long, wavering shadows of unseen trees.\", \"texto_locucion\": \"Transforman tu mundo, tu propia seguridad.\", \"pexels_query\": \"flickering streetlamp night\"}, {\"id\": 23, \"prompt\": \"A pair of old, worn shoes left carelessly by a bedside table, but a subtle, distorted shadow lies between them.\", \"prompt_visual\": \"A pair of old, worn shoes left carelessly by a bedside table, but a subtle, distorted shadow lies between them.\", \"texto_locucion\": \"Ahora entiendes lo clasificado de esos relatos.\", \"pexels_query\": \"shoes beside bed\"}, {\"id\": 24, \"prompt\": \"A reflection of an unidentifiable, dark, elongated silhouette in a dark puddle on a wet street.\", \"prompt_visual\": \"A reflection of an unidentifiable, dark, elongated silhouette in a dark puddle on a wet street.\", \"texto_locucion\": \"Son más que palabras. Son una infección sutil.\", \"pexels_query\": \"reflection dark puddle\"}, {\"id\": 25, \"prompt\": \"A close-up of a wooden door with a single, old-fashioned peephole, showing only absolute darkness inside.\", \"prompt_visual\": \"A close-up of a wooden door with a single, old-fashioned peephole, showing only absolute darkness inside.\", \"texto_locucion\": \"Ya no puedes escapar. Está dentro de ti.\", \"pexels_query\": \"door peephole dark\"}, {\"id\": 26, \"prompt\": \"A single, unlit candle on a dark wooden table, surrounded by an inexplicable, faint wispy mist or vapor.\", \"prompt_visual\": \"A single, unlit candle on a dark wooden table, surrounded by an inexplicable, faint wispy mist or vapor.\", \"texto_locucion\": \"Lo que oíste, lo que sentiste, es real.\", \"pexels_query\": \"unlit candle mist\"}, {\"id\": 27, \"prompt\": \"A tightly closed window with heavy, dark curtains, but a thin sliver of light escapes from the very edge, revealing something outside.\", \"prompt_visual\": \"A tightly closed window with heavy, dark curtains, but a thin sliver of light escapes from the very edge, revealing something outside.\", \"texto_locucion\": \"Una verdad que el tiempo no podrá borrar.\", \"pexels_query\": \"closed curtains light\"}, {\"id\": 28, \"prompt\": \"An empty, dimly lit room, a single old wooden chair facing the wall, a faint, translucent outline of a presence behind it.\", \"prompt_visual\": \"An empty, dimly lit room, a single old wooden chair facing the wall, a faint, translucent outline of a presence behind it.\", \"texto_locucion\": \"¿Qué verdad ocultan los relatos que te persiguen?\", \"pexels_query\": \"empty room chair\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Primero, un escalofrío. La historia volvió a tu mente. Era un relato sin nombre. Nadie sabía de dónde vino. Pero tú lo escuchaste. Esa noche no estabas solo. Hablaban de verdades secretas, de un terror oculto. Desde entonces, tu casa se sentía diferente. Escuchabas ruidos donde no debía haber nadie. Llamadas que terminaban en silencio absoluto. Una figura que nadie más lo vio. Mirabas por la ventana, buscando algo afuera. Pero el miedo crecía dentro. Algo no está bien. Aquellas historias se arraigaron profundo en tu mente. Distorsionaban todo lo que conocías y creías. Te preguntabas si eran solo cuentos macabros. ¿O era una verdad que no podías ver? Sentiste que alguien estuvo muy cerca de ti. La misma sensación que lo sentiste antes. La luz parpadea. Un frío recorre tu espalda. Sabes que no puedes ignorarlo. Te está buscando. Las historias son una puerta. Abren tu percepción. Una vez que la escuchas, la realidad se tuerce. Los relatos no mueren. Se quedan contigo. Transforman tu mundo, tu propia seguridad. Ahora entiendes lo clasificado de esos relatos. Son más que palabras. Son una infección sutil. Ya no puedes escapar. Está dentro de ti. Lo que oíste, lo que sentiste, es real. Una verdad que el tiempo no podrá borrar. ¿Qué verdad ocultan los relatos que te persiguen?",
+    "titulo_sugerido": "La Verdad Clasificada de las Historias Contadas",
+    "escenas_texto": [
+      "Primero, un escalofrío. La historia volvió a tu mente.",
+      "Era un relato sin nombre. Nadie sabía de dónde vino.",
+      "Pero tú lo escuchaste. Esa noche no estabas solo.",
+      "Hablaban de verdades secretas, de un terror oculto.",
+      "Desde entonces, tu casa se sentía diferente.",
+      "Escuchabas ruidos donde no debía haber nadie.",
+      "Llamadas que terminaban en silencio absoluto.",
+      "Una figura que nadie más lo vio.",
+      "Mirabas por la ventana, buscando algo afuera.",
+      "Pero el miedo crecía dentro. Algo no está bien.",
+      "Aquellas historias se arraigaron profundo en tu mente.",
+      "Distorsionaban todo lo que conocías y creías.",
+      "Te preguntabas si eran solo cuentos macabros.",
+      "¿O era una verdad que no podías ver?",
+      "Sentiste que alguien estuvo muy cerca de ti.",
+      "La misma sensación que lo sentiste antes.",
+      "La luz parpadea. Un frío recorre tu espalda.",
+      "Sabes que no puedes ignorarlo. Te está buscando.",
+      "Las historias son una puerta. Abren tu percepción.",
+      "Una vez que la escuchas, la realidad se tuerce.",
+      "Los relatos no mueren. Se quedan contigo.",
+      "Transforman tu mundo, tu propia seguridad.",
+      "Ahora entiendes lo clasificado de esos relatos.",
+      "Son más que palabras. Son una infección sutil.",
+      "Ya no puedes escapar. Está dentro de ti.",
+      "Lo que oíste, lo que sentiste, es real.",
+      "Una verdad que el tiempo no podrá borrar.",
+      "¿Qué verdad ocultan los relatos que te persiguen?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dimly lit empty hallway, cold blue light from a window, subtle dust motes in the air, a single old wooden door slightly ajar.",
+        "prompt_visual": "Dimly lit empty hallway, cold blue light from a window, subtle dust motes in the air, a single old wooden door slightly ajar.",
+        "texto_locucion": "Primero, un escalofrío. La historia volvió a tu mente.",
+        "pexels_query": "empty hallway cold"
+      },
+      {
+        "id": 2,
+        "prompt": "Dark living room corner, a worn armchair facing away, long deep shadows, feeling of unseen presence.",
+        "prompt_visual": "Dark living room corner, a worn armchair facing away, long deep shadows, feeling of unseen presence.",
+        "texto_locucion": "Era un relato sin nombre. Nadie sabía de dónde vino.",
+        "pexels_query": "dark armchair shadows"
+      },
+      {
+        "id": 3,
+        "prompt": "A vintage tape recorder on a dusty table, slight static visible in the air, subtle light from an unseen source.",
+        "prompt_visual": "A vintage tape recorder on a dusty table, slight static visible in the air, subtle light from an unseen source.",
+        "texto_locucion": "Pero tú lo escuchaste. Esa noche no estabas solo.",
+        "pexels_query": "vintage tape recorder"
+      },
+      {
+        "id": 4,
+        "prompt": "A close-up of a static-filled old television screen, glowing faintly in a dark room, reflecting vague shapes.",
+        "prompt_visual": "A close-up of a static-filled old television screen, glowing faintly in a dark room, reflecting vague shapes.",
+        "texto_locucion": "Hablaban de verdades secretas, de un terror oculto.",
+        "pexels_query": "static tv screen"
+      },
+      {
+        "id": 5,
+        "prompt": "A darkened staircase, the banister showing wear, a subtle, distorted shadow figure at the top of the stairs.",
+        "prompt_visual": "A darkened staircase, the banister showing wear, a subtle, distorted shadow figure at the top of the stairs.",
+        "texto_locucion": "Desde entonces, tu casa se sentía diferente.",
+        "pexels_query": "dark staircase shadows"
+      },
+      {
+        "id": 6,
+        "prompt": "A slightly opened closet door in a dark bedroom, a sliver of deep darkness visible inside, menacing quiet.",
+        "prompt_visual": "A slightly opened closet door in a dark bedroom, a sliver of deep darkness visible inside, menacing quiet.",
+        "texto_locucion": "Escuchabas ruidos donde no debía haber nadie.",
+        "pexels_query": "open closet door"
+      },
+      {
+        "id": 7,
+        "prompt": "A single, old-fashioned rotary telephone on a nightstand, completely still in an empty, quiet room.",
+        "prompt_visual": "A single, old-fashioned rotary telephone on a nightstand, completely still in an empty, quiet room.",
+        "texto_locucion": "Llamadas que terminaban en silencio absoluto.",
+        "pexels_query": "old rotary phone"
+      },
+      {
+        "id": 8,
+        "prompt": "A reflection of a distorted shadow on a polished wooden floor, barely visible, near a closed door.",
+        "prompt_visual": "A reflection of a distorted shadow on a polished wooden floor, barely visible, near a closed door.",
+        "texto_locucion": "Una figura que nadie más lo vio.",
+        "pexels_query": "shadow on floor"
+      },
+      {
+        "id": 9,
+        "prompt": "A window pane streaked with rain, reflecting faint, unsettling lights from outside, dark and blurry forms.",
+        "prompt_visual": "A window pane streaked with rain, reflecting faint, unsettling lights from outside, dark and blurry forms.",
+        "texto_locucion": "Mirabas por la ventana, buscando algo afuera.",
+        "pexels_query": "rainy window night"
+      },
+      {
+        "id": 10,
+        "prompt": "A kitchen knife resting on a clean, empty counter, the light glinting unsettlingly on its blade, no one around.",
+        "prompt_visual": "A kitchen knife resting on a clean, empty counter, the light glinting unsettlingly on its blade, no one around.",
+        "texto_locucion": "Pero el miedo crecía dentro. Algo no está bien.",
+        "pexels_query": "kitchen knife counter"
+      },
+      {
+        "id": 11,
+        "prompt": "A child's drawing left on a table, depicting a simple house with a disproportionately large, dark shadow behind it.",
+        "prompt_visual": "A child's drawing left on a table, depicting a simple house with a disproportionately large, dark shadow behind it.",
+        "texto_locucion": "Aquellas historias se arraigaron profundo en tu mente.",
+        "pexels_query": "child drawing shadow"
+      },
+      {
+        "id": 12,
+        "prompt": "A dark, empty living room, a single floor lamp casting a long, stretched shadow of itself on the wall.",
+        "prompt_visual": "A dark, empty living room, a single floor lamp casting a long, stretched shadow of itself on the wall.",
+        "texto_locucion": "Distorsionaban todo lo que conocías y creías.",
+        "pexels_query": "floor lamp shadow"
+      },
+      {
+        "id": 13,
+        "prompt": "A close-up of an old, dusty book with its cover slightly ajar, revealing dark, unreadable text.",
+        "prompt_visual": "A close-up of an old, dusty book with its cover slightly ajar, revealing dark, unreadable text.",
+        "texto_locucion": "Te preguntabas si eran solo cuentos macabros.",
+        "pexels_query": "old dusty book"
+      },
+      {
+        "id": 14,
+        "prompt": "An antique mirror reflecting only darkness, with a subtle, almost imperceptible smudge resembling a face.",
+        "prompt_visual": "An antique mirror reflecting only darkness, with a subtle, almost imperceptible smudge resembling a face.",
+        "texto_locucion": "¿O era una verdad que no podías ver?",
+        "pexels_query": "dark antique mirror"
+      },
+      {
+        "id": 15,
+        "prompt": "A dimly lit bedroom with the bed perfectly made, but one pillow is slightly indented as if someone just left.",
+        "prompt_visual": "A dimly lit bedroom with the bed perfectly made, but one pillow is slightly indented as if someone just left.",
+        "texto_locucion": "Sentiste que alguien estuvo muy cerca de ti.",
+        "pexels_query": "indented pillow bed"
+      },
+      {
+        "id": 16,
+        "prompt": "A single teacup left on a kitchen table, a faint ring of moisture beneath it, suggesting recent use by an unknown party.",
+        "prompt_visual": "A single teacup left on a kitchen table, a faint ring of moisture beneath it, suggesting recent use by an unknown party.",
+        "texto_locucion": "La misma sensación que lo sentiste antes.",
+        "pexels_query": "teacup kitchen table"
+      },
+      {
+        "id": 17,
+        "prompt": "A narrow, dark corridor with a single bare lightbulb flickering erratically, creating jumpy shadows.",
+        "prompt_visual": "A narrow, dark corridor with a single bare lightbulb flickering erratically, creating jumpy shadows.",
+        "texto_locucion": "La luz parpadea. Un frío recorre tu espalda.",
+        "pexels_query": "flickering light corridor"
+      },
+      {
+        "id": 18,
+        "prompt": "A shadow extending from beneath a closed bedroom door, unusually long and thin, almost reaching across the hallway.",
+        "prompt_visual": "A shadow extending from beneath a closed bedroom door, unusually long and thin, almost reaching across the hallway.",
+        "texto_locucion": "Sabes que no puedes ignorarlo. Te está buscando.",
+        "pexels_query": "shadow under door"
+      },
+      {
+        "id": 19,
+        "prompt": "A close-up of a blurred human hand reaching out from dense fog or smoke, indistinct and threatening.",
+        "prompt_visual": "A close-up of a blurred human hand reaching out from dense fog or smoke, indistinct and threatening.",
+        "texto_locucion": "Las historias son una puerta. Abren tu percepción.",
+        "pexels_query": "hand in fog"
+      },
+      {
+        "id": 20,
+        "prompt": "An old, dusty window pane, a single, deliberate scratch mark on its surface, as if made by a claw.",
+        "prompt_visual": "An old, dusty window pane, a single, deliberate scratch mark on its surface, as if made by a claw.",
+        "texto_locucion": "Una vez que la escuchas, la realidad se tuerce.",
+        "pexels_query": "scratched window glass"
+      },
+      {
+        "id": 21,
+        "prompt": "A wall covered in peeling, stained wallpaper, a subtle dark stain resembling a reaching hand.",
+        "prompt_visual": "A wall covered in peeling, stained wallpaper, a subtle dark stain resembling a reaching hand.",
+        "texto_locucion": "Los relatos no mueren. Se quedan contigo.",
+        "pexels_query": "peeling wallpaper stain"
+      },
+      {
+        "id": 22,
+        "prompt": "A dark, empty street at night, a single streetlamp flickering, casting long, wavering shadows of unseen trees.",
+        "prompt_visual": "A dark, empty street at night, a single streetlamp flickering, casting long, wavering shadows of unseen trees.",
+        "texto_locucion": "Transforman tu mundo, tu propia seguridad.",
+        "pexels_query": "flickering streetlamp night"
+      },
+      {
+        "id": 23,
+        "prompt": "A pair of old, worn shoes left carelessly by a bedside table, but a subtle, distorted shadow lies between them.",
+        "prompt_visual": "A pair of old, worn shoes left carelessly by a bedside table, but a subtle, distorted shadow lies between them.",
+        "texto_locucion": "Ahora entiendes lo clasificado de esos relatos.",
+        "pexels_query": "shoes beside bed"
+      },
+      {
+        "id": 24,
+        "prompt": "A reflection of an unidentifiable, dark, elongated silhouette in a dark puddle on a wet street.",
+        "prompt_visual": "A reflection of an unidentifiable, dark, elongated silhouette in a dark puddle on a wet street.",
+        "texto_locucion": "Son más que palabras. Son una infección sutil.",
+        "pexels_query": "reflection dark puddle"
+      },
+      {
+        "id": 25,
+        "prompt": "A close-up of a wooden door with a single, old-fashioned peephole, showing only absolute darkness inside.",
+        "prompt_visual": "A close-up of a wooden door with a single, old-fashioned peephole, showing only absolute darkness inside.",
+        "texto_locucion": "Ya no puedes escapar. Está dentro de ti.",
+        "pexels_query": "door peephole dark"
+      },
+      {
+        "id": 26,
+        "prompt": "A single, unlit candle on a dark wooden table, surrounded by an inexplicable, faint wispy mist or vapor.",
+        "prompt_visual": "A single, unlit candle on a dark wooden table, surrounded by an inexplicable, faint wispy mist or vapor.",
+        "texto_locucion": "Lo que oíste, lo que sentiste, es real.",
+        "pexels_query": "unlit candle mist"
+      },
+      {
+        "id": 27,
+        "prompt": "A tightly closed window with heavy, dark curtains, but a thin sliver of light escapes from the very edge, revealing something outside.",
+        "prompt_visual": "A tightly closed window with heavy, dark curtains, but a thin sliver of light escapes from the very edge, revealing something outside.",
+        "texto_locucion": "Una verdad que el tiempo no podrá borrar.",
+        "pexels_query": "closed curtains light"
+      },
+      {
+        "id": 28,
+        "prompt": "An empty, dimly lit room, a single old wooden chair facing the wall, a faint, translucent outline of a presence behind it.",
+        "prompt_visual": "An empty, dimly lit room, a single old wooden chair facing the wall, a faint, translucent outline of a presence behind it.",
+        "texto_locucion": "¿Qué verdad ocultan los relatos que te persiguen?",
+        "pexels_query": "empty room chair"
+      }
+    ],
+    "hooks": [
+      "Las historias te cambian.",
+      "Nunca más dormirás tranquilo.",
+      "¿Y si fue real?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
