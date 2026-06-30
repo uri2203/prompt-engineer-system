@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 2,
+  "completados": 3,
   "fallidos": 0,
   "trabajo_actual": "Generando video 3/25 (La Viuda 9:16)",
-  "mensaje": "Produccion del video 3 iniciada.",
+  "mensaje": "Video 3 completado",
   "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
   "historial": [
     {
@@ -24,6 +24,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 119.2,
       "hora": "22:10"
+    },
+    {
+      "n": 3,
+      "marca": "La Viuda",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 113.2,
+      "hora": "23:21"
     }
   ]
 }
