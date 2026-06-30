@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "265fc288-973c-4ef3-b3a2-2e0e422cd3cb",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Digital clock, glowing red 3:33, stark darkness, bedroom environment, high contrast\", \"prompt_visual\": \"Digital clock, glowing red 3:33, stark darkness, bedroom environment, high contrast\", \"texto_locucion\": \"Despiertas a las 3:33. Siempre a esa hora.\", \"pexels_query\": \"digital clock 3:33\"}, {\"id\": 2, \"prompt\": \"Digital clock, 3:33 AM, minimalist bedroom, cold blue light, deep shadows\", \"prompt_visual\": \"Digital clock, 3:33 AM, minimalist bedroom, cold blue light, deep shadows\", \"texto_locucion\": \"El reloj digital es inmaculado ahora.\", \"pexels_query\": \"digital clock dark\"}, {\"id\": 3, \"prompt\": \"Empty bedroom, deep shadows, slightly open closet door, sense of dread, cold tones\", \"prompt_visual\": \"Empty bedroom, deep shadows, slightly open closet door, sense of dread, cold tones\", \"texto_locucion\": \"Un chilling silencio absoluto te rodea.\", \"pexels_query\": \"dark bedroom closet\"}, {\"id\": 4, \"prompt\": \"Dark hallway, single weak bulb, long shadows stretching, unsettling perspective\", \"prompt_visual\": \"Dark hallway, single weak bulb, long shadows stretching, unsettling perspective\", \"texto_locucion\": \"Sabes que algo no está bien contigo.\", \"pexels_query\": \"dark hallway light\"}, {\"id\": 5, \"prompt\": \"Immersive darkness, faint outlines of furniture, feeling of being consumed, black void\", \"prompt_visual\": \"Immersive darkness, faint outlines of furniture, feeling of being consumed, black void\", \"texto_locucion\": \"La oscuridad te envuelve por completo.\", \"pexels_query\": \"deep darkness room\"}, {\"id\": 6, \"prompt\": \"Textured skin, subtle goosebumps, illuminated by an unseen, cold light, abstract\", \"prompt_visual\": \"Textured skin, subtle goosebumps, illuminated by an unseen, cold light, abstract\", \"texto_locucion\": \"Sientes la piel erizarse despacio y lento.\", \"pexels_query\": \"goosebumps cold light\"}, {\"id\": 7, \"prompt\": \"Wisps of cold mist in a dark, still room, near a flowing curtain, blue hues\", \"prompt_visual\": \"Wisps of cold mist in a dark, still room, near a flowing curtain, blue hues\", \"texto_locucion\": \"Una helada ráfaga te roza la nuca.\", \"pexels_query\": \"cold mist dark\"}, {\"id\": 8, \"prompt\": \"Dark window, reflecting deeper darkness, subtle smudge on glass, closed curtains\", \"prompt_visual\": \"Dark window, reflecting deeper darkness, subtle smudge on glass, closed curtains\", \"texto_locucion\": \"No hay ventanas abiertas. Nadie en casa.\", \"pexels_query\": \"dark window reflection\"}, {\"id\": 9, \"prompt\": \"POV from shadows looking into a dimly lit space, focusing on indistinct shapes, eerie\", \"prompt_visual\": \"POV from shadows looking into a dimly lit space, focusing on indistinct shapes, eerie\", \"texto_locucion\": \"Tus ojos buscan algo en la penumbra.\", \"pexels_query\": \"shadows looking into room\"}, {\"id\": 10, \"prompt\": \"Dark corner of a room, familiar, yet threatening, subtle distortion, long exposure effect\", \"prompt_visual\": \"Dark corner of a room, familiar, yet threatening, subtle distortion, long exposure effect\", \"texto_locucion\": \"Cada noche, lo sentiste antes, presente.\", \"pexels_query\": \"dark room corner\"}, {\"id\": 11, \"prompt\": \"Empty bed, deep indent in the pillow, as if someone just left, or is still there invisibly\", \"prompt_visual\": \"Empty bed, deep indent in the pillow, as if someone just left, or is still there invisibly\", \"texto_locucion\": \"Algo respira muy cerca de tu cama.\", \"pexels_query\": \"empty bed indent\"}, {\"id\": 12, \"prompt\": \"Bedroom door, slightly ajar, revealing absolute blackness beyond, deep shadows\", \"prompt_visual\": \"Bedroom door, slightly ajar, revealing absolute blackness beyond, deep shadows\", \"texto_locucion\": \"No estabas solo en esa habitación nunca.\", \"pexels_query\": \"door slightly ajar\"}, {\"id\": 13, \"prompt\": \"Distorted shadows on a wall, resembling an elongated figure, no clear form, ominous\", \"prompt_visual\": \"Distorted shadows on a wall, resembling an elongated figure, no clear form, ominous\", \"texto_locucion\": \"El miedo se vuelve palpable y espeso.\", \"pexels_query\": \"distorted wall shadows\"}, {\"id\": 14, \"prompt\": \"Extreme close-up on old wooden floorboards, single thin crack, deep shadow, grainy texture\", \"prompt_visual\": \"Extreme close-up on old wooden floorboards, single thin crack, deep shadow, grainy texture\", \"texto_locucion\": \"Escuchas un crujido leve en la tabla.\", \"pexels_query\": \"old floorboards crack\"}, {\"id\": 15, \"prompt\": \"Long, empty, dark corridor, faint, barely visible shimmer near the floor, eerie perspective\", \"prompt_visual\": \"Long, empty, dark corridor, faint, barely visible shimmer near the floor, eerie perspective\", \"texto_locucion\": \"Proviene del pasillo silencioso afuera, cerca.\", \"pexels_query\": \"dark corridor shimmer\"}, {\"id\": 16, \"prompt\": \"Blurred, indistinct image in a mirror, as if a fleeting shadow passed, dark room\", \"prompt_visual\": \"Blurred, indistinct image in a mirror, as if a fleeting shadow passed, dark room\", \"texto_locucion\": \"Nadie lo vio, nadie nunca te cree.\", \"pexels_query\": \"blurred mirror shadow\"}, {\"id\": 17, \"prompt\": \"Front door, previously locked, now slightly open, letting in deep blackness, high contrast\", \"prompt_visual\": \"Front door, previously locked, now slightly open, letting in deep blackness, high contrast\", \"texto_locucion\": \"Pero la puerta estaba entreabierta ahora.\", \"pexels_query\": \"front door open\"}, {\"id\": 18, \"prompt\": \"A single key hanging on a hook, slightly askew, in a dark entryway, unsettling detail\", \"prompt_visual\": \"A single key hanging on a hook, slightly askew, in a dark entryway, unsettling detail\", \"texto_locucion\": \"La dejaste cerrada con absoluta certeza.\", \"pexels_query\": \"key askew hook\"}, {\"id\": 19, \"prompt\": \"Vapor cloud, cold breath effect, in dark, still air, close to the viewer, blue tint\", \"prompt_visual\": \"Vapor cloud, cold breath effect, in dark, still air, close to the viewer, blue tint\", \"texto_locucion\": \"Un leve aliento helado roza tu cuello.\", \"pexels_query\": \"cold breath vapor\"}, {\"id\": 20, \"prompt\": \"Glass of water on a nightstand, with subtle ripples, as if disturbed by an unseen force, dark room\", \"prompt_visual\": \"Glass of water on a nightstand, with subtle ripples, as if disturbed by an unseen force, dark room\", \"texto_locucion\": \"No puedes ignorarlo, está muy cerca.\", \"pexels_query\": \"water ripples nightstand\"}, {\"id\": 21, \"prompt\": \"Single burning candle in a vast, dark room, its flame flickering erratically, long shadows\", \"prompt_visual\": \"Single burning candle in a vast, dark room, its flame flickering erratically, long shadows\", \"texto_locucion\": \"Tu mente intenta encontrar alguna lógica.\", \"pexels_query\": \"candle flickering dark\"}, {\"id\": 22, \"prompt\": \"Silhouette of a familiar house from outside, dark, cloudy sky, one window glowing eerily\", \"prompt_visual\": \"Silhouette of a familiar house from outside, dark, cloudy sky, one window glowing eerily\", \"texto_locucion\": \"Es tu casa, tu espacio, tu mente.\", \"pexels_query\": \"eerie house silhouette\"}, {\"id\": 23, \"prompt\": \"Digital clock, 3:33 AM again, but now with a subtle glitch or distortion in the numbers\", \"prompt_visual\": \"Digital clock, 3:33 AM again, but now with a subtle glitch or distortion in the numbers\", \"texto_locucion\": \"Pero cada noche a las 3:33...\", \"pexels_query\": \"digital clock glitch\"}, {\"id\": 24, \"prompt\": \"Vast, empty, silent room, light barely entering from an unseen source, dust motes frozen in air\", \"prompt_visual\": \"Vast, empty, silent room, light barely entering from an unseen source, dust motes frozen in air\", \"texto_locucion\": \"El silencio absoluto es el mensaje claro.\", \"pexels_query\": \"empty silent room\"}, {\"id\": 25, \"prompt\": \"Long shadow stretching from a doorway, ending in a distorted, reaching form, ominous\", \"prompt_visual\": \"Long shadow stretching from a doorway, ending in a distorted, reaching form, ominous\", \"texto_locucion\": \"Hay algo esperando, solo para ti.\", \"pexels_query\": \"distorted shadow reaching\"}, {\"id\": 26, \"prompt\": \"Dark, deep corner of a room, where shadows seem to coalesce into a vague, ominous mass\", \"prompt_visual\": \"Dark, deep corner of a room, where shadows seem to coalesce into a vague, ominous mass\", \"texto_locucion\": \"Y seguirá acechando allí eternamente.\", \"pexels_query\": \"ominous shadows corner\"}, {\"id\": 27, \"prompt\": \"Two faint, glowing points (eyes) in deep, absolute darkness, barely visible, unsettling\", \"prompt_visual\": \"Two faint, glowing points (eyes) in deep, absolute darkness, barely visible, unsettling\", \"texto_locucion\": \"El vacío te observa desde la penumbra.\", \"pexels_query\": \"glowing eyes darkness\"}, {\"id\": 28, \"prompt\": \"A bed in darkness, perfectly made, yet emitting an aura of profound unease, untouched\", \"prompt_visual\": \"A bed in darkness, perfectly made, yet emitting an aura of profound unease, untouched\", \"texto_locucion\": \"Nunca podrás volver a dormir en paz.\", \"pexels_query\": \"uneasy bed darkness\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Despiertas a las 3:33. Siempre a esa hora. El reloj digital es inmaculado ahora. Un chilling silencio absoluto te rodea. Sabes que algo no está bien contigo. La oscuridad te envuelve por completo. Sientes la piel erizarse despacio y lento. Una helada ráfaga te roza la nuca. No hay ventanas abiertas. Nadie en casa. Tus ojos buscan algo en la penumbra. Cada noche, lo sentiste antes, presente. Algo respira muy cerca de tu cama. No estabas solo en esa habitación nunca. El miedo se vuelve palpable y espeso. Escuchas un crujido leve en la tabla. Proviene del pasillo silencioso afuera, cerca. Nadie lo vio, nadie nunca te cree. Pero la puerta estaba entreabierta ahora. La dejaste cerrada con absoluta certeza. Un leve aliento helado roza tu cuello. No puedes ignorarlo, está muy cerca. Tu mente intenta encontrar alguna lógica. Es tu casa, tu espacio, tu mente. Pero cada noche a las 3:33... El silencio absoluto es el mensaje claro. Hay algo esperando, solo para ti. Y seguirá acechando allí eternamente. El vacío te observa desde la penumbra. Nunca podrás volver a dormir en paz.",
+    "titulo_sugerido": "3:33 AM: El Silencio que Observa",
+    "escenas_texto": [
+      "Despiertas a las 3:33. Siempre a esa hora.",
+      "El reloj digital es inmaculado ahora.",
+      "Un chilling silencio absoluto te rodea.",
+      "Sabes que algo no está bien contigo.",
+      "La oscuridad te envuelve por completo.",
+      "Sientes la piel erizarse despacio y lento.",
+      "Una helada ráfaga te roza la nuca.",
+      "No hay ventanas abiertas. Nadie en casa.",
+      "Tus ojos buscan algo en la penumbra.",
+      "Cada noche, lo sentiste antes, presente.",
+      "Algo respira muy cerca de tu cama.",
+      "No estabas solo en esa habitación nunca.",
+      "El miedo se vuelve palpable y espeso.",
+      "Escuchas un crujido leve en la tabla.",
+      "Proviene del pasillo silencioso afuera, cerca.",
+      "Nadie lo vio, nadie nunca te cree.",
+      "Pero la puerta estaba entreabierta ahora.",
+      "La dejaste cerrada con absoluta certeza.",
+      "Un leve aliento helado roza tu cuello.",
+      "No puedes ignorarlo, está muy cerca.",
+      "Tu mente intenta encontrar alguna lógica.",
+      "Es tu casa, tu espacio, tu mente.",
+      "Pero cada noche a las 3:33...",
+      "El silencio absoluto es el mensaje claro.",
+      "Hay algo esperando, solo para ti.",
+      "Y seguirá acechando allí eternamente.",
+      "El vacío te observa desde la penumbra.",
+      "Nunca podrás volver a dormir en paz."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Digital clock, glowing red 3:33, stark darkness, bedroom environment, high contrast",
+        "prompt_visual": "Digital clock, glowing red 3:33, stark darkness, bedroom environment, high contrast",
+        "texto_locucion": "Despiertas a las 3:33. Siempre a esa hora.",
+        "pexels_query": "digital clock 3:33"
+      },
+      {
+        "id": 2,
+        "prompt": "Digital clock, 3:33 AM, minimalist bedroom, cold blue light, deep shadows",
+        "prompt_visual": "Digital clock, 3:33 AM, minimalist bedroom, cold blue light, deep shadows",
+        "texto_locucion": "El reloj digital es inmaculado ahora.",
+        "pexels_query": "digital clock dark"
+      },
+      {
+        "id": 3,
+        "prompt": "Empty bedroom, deep shadows, slightly open closet door, sense of dread, cold tones",
+        "prompt_visual": "Empty bedroom, deep shadows, slightly open closet door, sense of dread, cold tones",
+        "texto_locucion": "Un chilling silencio absoluto te rodea.",
+        "pexels_query": "dark bedroom closet"
+      },
+      {
+        "id": 4,
+        "prompt": "Dark hallway, single weak bulb, long shadows stretching, unsettling perspective",
+        "prompt_visual": "Dark hallway, single weak bulb, long shadows stretching, unsettling perspective",
+        "texto_locucion": "Sabes que algo no está bien contigo.",
+        "pexels_query": "dark hallway light"
+      },
+      {
+        "id": 5,
+        "prompt": "Immersive darkness, faint outlines of furniture, feeling of being consumed, black void",
+        "prompt_visual": "Immersive darkness, faint outlines of furniture, feeling of being consumed, black void",
+        "texto_locucion": "La oscuridad te envuelve por completo.",
+        "pexels_query": "deep darkness room"
+      },
+      {
+        "id": 6,
+        "prompt": "Textured skin, subtle goosebumps, illuminated by an unseen, cold light, abstract",
+        "prompt_visual": "Textured skin, subtle goosebumps, illuminated by an unseen, cold light, abstract",
+        "texto_locucion": "Sientes la piel erizarse despacio y lento.",
+        "pexels_query": "goosebumps cold light"
+      },
+      {
+        "id": 7,
+        "prompt": "Wisps of cold mist in a dark, still room, near a flowing curtain, blue hues",
+        "prompt_visual": "Wisps of cold mist in a dark, still room, near a flowing curtain, blue hues",
+        "texto_locucion": "Una helada ráfaga te roza la nuca.",
+        "pexels_query": "cold mist dark"
+      },
+      {
+        "id": 8,
+        "prompt": "Dark window, reflecting deeper darkness, subtle smudge on glass, closed curtains",
+        "prompt_visual": "Dark window, reflecting deeper darkness, subtle smudge on glass, closed curtains",
+        "texto_locucion": "No hay ventanas abiertas. Nadie en casa.",
+        "pexels_query": "dark window reflection"
+      },
+      {
+        "id": 9,
+        "prompt": "POV from shadows looking into a dimly lit space, focusing on indistinct shapes, eerie",
+        "prompt_visual": "POV from shadows looking into a dimly lit space, focusing on indistinct shapes, eerie",
+        "texto_locucion": "Tus ojos buscan algo en la penumbra.",
+        "pexels_query": "shadows looking into room"
+      },
+      {
+        "id": 10,
+        "prompt": "Dark corner of a room, familiar, yet threatening, subtle distortion, long exposure effect",
+        "prompt_visual": "Dark corner of a room, familiar, yet threatening, subtle distortion, long exposure effect",
+        "texto_locucion": "Cada noche, lo sentiste antes, presente.",
+        "pexels_query": "dark room corner"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty bed, deep indent in the pillow, as if someone just left, or is still there invisibly",
+        "prompt_visual": "Empty bed, deep indent in the pillow, as if someone just left, or is still there invisibly",
+        "texto_locucion": "Algo respira muy cerca de tu cama.",
+        "pexels_query": "empty bed indent"
+      },
+      {
+        "id": 12,
+        "prompt": "Bedroom door, slightly ajar, revealing absolute blackness beyond, deep shadows",
+        "prompt_visual": "Bedroom door, slightly ajar, revealing absolute blackness beyond, deep shadows",
+        "texto_locucion": "No estabas solo en esa habitación nunca.",
+        "pexels_query": "door slightly ajar"
+      },
+      {
+        "id": 13,
+        "prompt": "Distorted shadows on a wall, resembling an elongated figure, no clear form, ominous",
+        "prompt_visual": "Distorted shadows on a wall, resembling an elongated figure, no clear form, ominous",
+        "texto_locucion": "El miedo se vuelve palpable y espeso.",
+        "pexels_query": "distorted wall shadows"
+      },
+      {
+        "id": 14,
+        "prompt": "Extreme close-up on old wooden floorboards, single thin crack, deep shadow, grainy texture",
+        "prompt_visual": "Extreme close-up on old wooden floorboards, single thin crack, deep shadow, grainy texture",
+        "texto_locucion": "Escuchas un crujido leve en la tabla.",
+        "pexels_query": "old floorboards crack"
+      },
+      {
+        "id": 15,
+        "prompt": "Long, empty, dark corridor, faint, barely visible shimmer near the floor, eerie perspective",
+        "prompt_visual": "Long, empty, dark corridor, faint, barely visible shimmer near the floor, eerie perspective",
+        "texto_locucion": "Proviene del pasillo silencioso afuera, cerca.",
+        "pexels_query": "dark corridor shimmer"
+      },
+      {
+        "id": 16,
+        "prompt": "Blurred, indistinct image in a mirror, as if a fleeting shadow passed, dark room",
+        "prompt_visual": "Blurred, indistinct image in a mirror, as if a fleeting shadow passed, dark room",
+        "texto_locucion": "Nadie lo vio, nadie nunca te cree.",
+        "pexels_query": "blurred mirror shadow"
+      },
+      {
+        "id": 17,
+        "prompt": "Front door, previously locked, now slightly open, letting in deep blackness, high contrast",
+        "prompt_visual": "Front door, previously locked, now slightly open, letting in deep blackness, high contrast",
+        "texto_locucion": "Pero la puerta estaba entreabierta ahora.",
+        "pexels_query": "front door open"
+      },
+      {
+        "id": 18,
+        "prompt": "A single key hanging on a hook, slightly askew, in a dark entryway, unsettling detail",
+        "prompt_visual": "A single key hanging on a hook, slightly askew, in a dark entryway, unsettling detail",
+        "texto_locucion": "La dejaste cerrada con absoluta certeza.",
+        "pexels_query": "key askew hook"
+      },
+      {
+        "id": 19,
+        "prompt": "Vapor cloud, cold breath effect, in dark, still air, close to the viewer, blue tint",
+        "prompt_visual": "Vapor cloud, cold breath effect, in dark, still air, close to the viewer, blue tint",
+        "texto_locucion": "Un leve aliento helado roza tu cuello.",
+        "pexels_query": "cold breath vapor"
+      },
+      {
+        "id": 20,
+        "prompt": "Glass of water on a nightstand, with subtle ripples, as if disturbed by an unseen force, dark room",
+        "prompt_visual": "Glass of water on a nightstand, with subtle ripples, as if disturbed by an unseen force, dark room",
+        "texto_locucion": "No puedes ignorarlo, está muy cerca.",
+        "pexels_query": "water ripples nightstand"
+      },
+      {
+        "id": 21,
+        "prompt": "Single burning candle in a vast, dark room, its flame flickering erratically, long shadows",
+        "prompt_visual": "Single burning candle in a vast, dark room, its flame flickering erratically, long shadows",
+        "texto_locucion": "Tu mente intenta encontrar alguna lógica.",
+        "pexels_query": "candle flickering dark"
+      },
+      {
+        "id": 22,
+        "prompt": "Silhouette of a familiar house from outside, dark, cloudy sky, one window glowing eerily",
+        "prompt_visual": "Silhouette of a familiar house from outside, dark, cloudy sky, one window glowing eerily",
+        "texto_locucion": "Es tu casa, tu espacio, tu mente.",
+        "pexels_query": "eerie house silhouette"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital clock, 3:33 AM again, but now with a subtle glitch or distortion in the numbers",
+        "prompt_visual": "Digital clock, 3:33 AM again, but now with a subtle glitch or distortion in the numbers",
+        "texto_locucion": "Pero cada noche a las 3:33...",
+        "pexels_query": "digital clock glitch"
+      },
+      {
+        "id": 24,
+        "prompt": "Vast, empty, silent room, light barely entering from an unseen source, dust motes frozen in air",
+        "prompt_visual": "Vast, empty, silent room, light barely entering from an unseen source, dust motes frozen in air",
+        "texto_locucion": "El silencio absoluto es el mensaje claro.",
+        "pexels_query": "empty silent room"
+      },
+      {
+        "id": 25,
+        "prompt": "Long shadow stretching from a doorway, ending in a distorted, reaching form, ominous",
+        "prompt_visual": "Long shadow stretching from a doorway, ending in a distorted, reaching form, ominous",
+        "texto_locucion": "Hay algo esperando, solo para ti.",
+        "pexels_query": "distorted shadow reaching"
+      },
+      {
+        "id": 26,
+        "prompt": "Dark, deep corner of a room, where shadows seem to coalesce into a vague, ominous mass",
+        "prompt_visual": "Dark, deep corner of a room, where shadows seem to coalesce into a vague, ominous mass",
+        "texto_locucion": "Y seguirá acechando allí eternamente.",
+        "pexels_query": "ominous shadows corner"
+      },
+      {
+        "id": 27,
+        "prompt": "Two faint, glowing points (eyes) in deep, absolute darkness, barely visible, unsettling",
+        "prompt_visual": "Two faint, glowing points (eyes) in deep, absolute darkness, barely visible, unsettling",
+        "texto_locucion": "El vacío te observa desde la penumbra.",
+        "pexels_query": "glowing eyes darkness"
+      },
+      {
+        "id": 28,
+        "prompt": "A bed in darkness, perfectly made, yet emitting an aura of profound unease, untouched",
+        "prompt_visual": "A bed in darkness, perfectly made, yet emitting an aura of profound unease, untouched",
+        "texto_locucion": "Nunca podrás volver a dormir en paz.",
+        "pexels_query": "uneasy bed darkness"
+      }
+    ],
+    "hooks": [
+      "Cada noche, a las 3:33.",
+      "Algo respira en la oscuridad.",
+      "Nunca volverás a dormir."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
