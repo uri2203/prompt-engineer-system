@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 10,
+  "completados": 11,
   "fallidos": 0,
-  "trabajo_actual": "Generando video 11/25 (FiltradoMX 9:16)",
-  "mensaje": "Produccion del video 11 iniciada.",
+  "trabajo_actual": "Enfriando nodos... 153s",
+  "mensaje": "Enfriamiento entre videos: 153s",
   "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
   "historial": [
     {
@@ -96,6 +96,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 109.8,
       "hora": "08:00"
+    },
+    {
+      "n": 11,
+      "marca": "FiltradoMX",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 131.1,
+      "hora": "08:54"
     }
   ]
 }
