@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "67df2ede-4a22-41eb-894d-0de7c75d34ff",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dusty old book on a wooden table in a dimly lit room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dusty old book on a wooden table in a dimly lit room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nunca conté lo que ocultaba ese viejo convento.\", \"pexels_query\": \"old book dust\"}, {\"id\": 2, \"prompt\": \"A worn wooden rosary on a simple, dark cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A worn wooden rosary on a simple, dark cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi tía, la madre superiora, siempre fue muy estricta.\", \"pexels_query\": \"wooden rosary cloth\"}, {\"id\": 3, \"prompt\": \"An old key hanging on a rusty hook on a stone wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An old key hanging on a rusty hook on a stone wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Cuando me pidió vivir ahí, no pude negarme.\", \"pexels_query\": \"old key hook\"}, {\"id\": 4, \"prompt\": \"Long shadow stretching down an empty, stone corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Long shadow stretching down an empty, stone corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El lugar imponía, un silencio absoluto que perturbaba.\", \"pexels_query\": \"stone corridor shadow\"}, {\"id\": 5, \"prompt\": \"A single lit candle in a dark, empty room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single lit candle in a dark, empty room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"A veces juraba escuchar susurros en las noches.\", \"pexels_query\": \"candle dark room\"}, {\"id\": 6, \"prompt\": \"A wooden door slightly ajar, revealing only darkness, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A wooden door slightly ajar, revealing only darkness, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las monjas tenían reglas muy extrañas, casi secretas.\", \"pexels_query\": \"door ajar darkness\"}, {\"id\": 7, \"prompt\": \"A locked ornate metal gate, partially obscured by shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A locked ornate metal gate, partially obscured by shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Había un ala del convento completamente prohibida para mí.\", \"pexels_query\": \"locked metal gate\"}, {\"id\": 8, \"prompt\": \"A hand reaching for a forbidden old wooden door handle, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A hand reaching for a forbidden old wooden door handle, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero la curiosidad, ya sabes, no puedes ignorarla.\", \"pexels_query\": \"hand old door\"}, {\"id\": 9, \"prompt\": \"A dimly lit narrow hallway with a single window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dimly lit narrow hallway with a single window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un día, mientras todas dormían, me atreví a entrar.\", \"pexels_query\": \"dim hallway window\"}, {\"id\": 10, \"prompt\": \"Dust motes floating in a single beam of light in a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dust motes floating in a single beam of light in a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El aire era pesado, con un olor viejo y extraño.\", \"pexels_query\": \"dust light beam\"}, {\"id\": 11, \"prompt\": \"A dusty old trunk in a forgotten corner of a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dusty old trunk in a forgotten corner of a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Descubrí un cuarto lleno de objetos personales, antiguos.\", \"pexels_query\": \"dusty old trunk\"}, {\"id\": 12, \"prompt\": \"Small, faded baby shoes on a wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Small, faded baby shoes on a wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No eran de monjas, sino de niños muy pequeños.\", \"pexels_query\": \"faded baby shoes\"}, {\"id\": 13, \"prompt\": \"An empty, antique wooden cradle covered in a thin layer of dust, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An empty, antique wooden cradle covered in a thin layer of dust, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Había cunas vacías y ropa infantil descolorida allí.\", \"pexels_query\": \"empty antique cradle\"}, {\"id\": 14, \"prompt\": \"A small, worn rag doll lying face down on a dusty floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, worn rag doll lying face down on a dusty floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Algo no estaba bien; lo sentiste antes de saberlo.\", \"pexels_query\": \"worn rag doll\"}, {\"id\": 15, \"prompt\": \"A small, leather-bound diary partially hidden under a loose floorboard, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, leather-bound diary partially hidden under a loose floorboard, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Encontré un diario escondido bajo una tabla suelta.\", \"pexels_query\": \"hidden leather diary\"}, {\"id\": 16, \"prompt\": \"Close-up of old, handwritten script in a diary, blurred text, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of old, handwritten script in a diary, blurred text, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sus páginas revelaban una verdad aterradora y cruel.\", \"pexels_query\": \"old handwritten diary\"}, {\"id\": 17, \"prompt\": \"A rusted sign, barely legible, pointing towards 'Orphanage' or 'Home', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A rusted sign, barely legible, pointing towards 'Orphanage' or 'Home', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El convento no era un lugar de oración, sino un albergue.\", \"pexels_query\": \"rusted orphanage sign\"}, {\"id\": 18, \"prompt\": \"A small, faded photograph of a woman with a baby, partially torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, faded photograph of a woman with a baby, partially torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Para madres solteras y sus hijos, ocultados del mundo.\", \"pexels_query\": \"faded baby photo\"}, {\"id\": 19, \"prompt\": \"A single, small empty shoe left in a doorway, suggesting a sudden departure, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, small empty shoe left in a doorway, suggesting a sudden departure, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero muchos de esos niños simplemente desaparecían sin rastro.\", \"pexels_query\": \"empty child shoe\"}, {\"id\": 20, \"prompt\": \"A small, antique locket open, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, antique locket open, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las monjas vendían a los bebés al mejor postor.\", \"pexels_query\": \"empty antique locket\"}, {\"id\": 21, \"prompt\": \"An imposing old wooden desk, with a single, unlit lamp, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An imposing old wooden desk, with a single, unlit lamp, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi tía, la superiora, era la cabecilla de todo esto.\", \"pexels_query\": \"old desk lamp\"}, {\"id\": 22, \"prompt\": \"A pair of old, wire-frame glasses resting on a disturbing document, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A pair of old, wire-frame glasses resting on a disturbing document, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ellas creían que nadie lo vio, pero yo lo descubrí.\", \"pexels_query\": \"glasses document blurred\"}, {\"id\": 23, \"prompt\": \"A single drop of water falling on a dusty surface, creating a ripple, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single drop of water falling on a dusty surface, creating a ripple, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La conmoción fue terrible; no estabas sola con el secreto.\", \"pexels_query\": \"water drop dust\"}, {\"id\": 24, \"prompt\": \"A hand holding a ringing old rotary phone, silhouetted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A hand holding a ringing old rotary phone, silhouetted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Decidí contarlo todo, a pesar del riesgo inmenso.\", \"pexels_query\": \"old rotary phone\"}, {\"id\": 25, \"prompt\": \"Sunlight breaking through stained glass windows onto an empty altar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Sunlight breaking through stained glass windows onto an empty altar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La verdad salió a la luz, desmantelando su cruel negocio.\", \"pexels_query\": \"sunlight stained glass altar\"}, {\"id\": 26, \"prompt\": \"A single, empty pew in a vast, silent chapel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, empty pew in a vast, silent chapel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero el silencio absoluto del convento... aún me persigue.\", \"pexels_query\": \"empty pew chapel\"}, {\"id\": 27, \"prompt\": \"A flickering old lamp illuminating a hidden, dark corridor entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A flickering old lamp illuminating a hidden, dark corridor entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Hasta dónde la fe puede esconder un secreto tan oscuro?\", \"pexels_query\": \"flickering lamp corridor\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Nunca conté lo que ocultaba ese viejo convento. Mi tía, la madre superiora, siempre fue muy estricta. Cuando me pidió vivir ahí, no pude negarme. El lugar imponía, un silencio absoluto que perturbaba. A veces juraba escuchar susurros en las noches. Las monjas tenían reglas muy extrañas, casi secretas. Había un ala del convento completamente prohibida para mí. Pero la curiosidad, ya sabes, no puedes ignorarla. Un día, mientras todas dormían, me atreví a entrar. El aire era pesado, con un olor viejo y extraño. Descubrí un cuarto lleno de objetos personales, antiguos. No eran de monjas, sino de niños muy pequeños. Había cunas vacías y ropa infantil descolorida allí. Algo no estaba bien; lo sentiste antes de saberlo. Encontré un diario escondido bajo una tabla suelta. Sus páginas revelaban una verdad aterradora y cruel. El convento no era un lugar de oración, sino un albergue. Para madres solteras y sus hijos, ocultados del mundo. Pero muchos de esos niños simplemente desaparecían sin rastro. Las monjas vendían a los bebés al mejor postor. Mi tía, la superiora, era la cabecilla de todo esto. Ellas creían que nadie lo vio, pero yo lo descubrí. La conmoción fue terrible; no estabas sola con el secreto. Decidí contarlo todo, a pesar del riesgo inmenso. La verdad salió a la luz, desmantelando su cruel negocio. Pero el silencio absoluto del convento... aún me persigue. ¿Hasta dónde la fe puede esconder un secreto tan oscuro?",
+    "titulo_sugerido": "El espeluznante secreto de un convento: lo que nunca se contó",
+    "escenas_texto": [
+      "Nunca conté lo que ocultaba ese viejo convento.",
+      "Mi tía, la madre superiora, siempre fue muy estricta.",
+      "Cuando me pidió vivir ahí, no pude negarme.",
+      "El lugar imponía, un silencio absoluto que perturbaba.",
+      "A veces juraba escuchar susurros en las noches.",
+      "Las monjas tenían reglas muy extrañas, casi secretas.",
+      "Había un ala del convento completamente prohibida para mí.",
+      "Pero la curiosidad, ya sabes, no puedes ignorarla.",
+      "Un día, mientras todas dormían, me atreví a entrar.",
+      "El aire era pesado, con un olor viejo y extraño.",
+      "Descubrí un cuarto lleno de objetos personales, antiguos.",
+      "No eran de monjas, sino de niños muy pequeños.",
+      "Había cunas vacías y ropa infantil descolorida allí.",
+      "Algo no estaba bien; lo sentiste antes de saberlo.",
+      "Encontré un diario escondido bajo una tabla suelta.",
+      "Sus páginas revelaban una verdad aterradora y cruel.",
+      "El convento no era un lugar de oración, sino un albergue.",
+      "Para madres solteras y sus hijos, ocultados del mundo.",
+      "Pero muchos de esos niños simplemente desaparecían sin rastro.",
+      "Las monjas vendían a los bebés al mejor postor.",
+      "Mi tía, la superiora, era la cabecilla de todo esto.",
+      "Ellas creían que nadie lo vio, pero yo lo descubrí.",
+      "La conmoción fue terrible; no estabas sola con el secreto.",
+      "Decidí contarlo todo, a pesar del riesgo inmenso.",
+      "La verdad salió a la luz, desmantelando su cruel negocio.",
+      "Pero el silencio absoluto del convento... aún me persigue.",
+      "¿Hasta dónde la fe puede esconder un secreto tan oscuro?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dusty old book on a wooden table in a dimly lit room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dusty old book on a wooden table in a dimly lit room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nunca conté lo que ocultaba ese viejo convento.",
+        "pexels_query": "old book dust"
+      },
+      {
+        "id": 2,
+        "prompt": "A worn wooden rosary on a simple, dark cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A worn wooden rosary on a simple, dark cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi tía, la madre superiora, siempre fue muy estricta.",
+        "pexels_query": "wooden rosary cloth"
+      },
+      {
+        "id": 3,
+        "prompt": "An old key hanging on a rusty hook on a stone wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An old key hanging on a rusty hook on a stone wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Cuando me pidió vivir ahí, no pude negarme.",
+        "pexels_query": "old key hook"
+      },
+      {
+        "id": 4,
+        "prompt": "Long shadow stretching down an empty, stone corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Long shadow stretching down an empty, stone corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El lugar imponía, un silencio absoluto que perturbaba.",
+        "pexels_query": "stone corridor shadow"
+      },
+      {
+        "id": 5,
+        "prompt": "A single lit candle in a dark, empty room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single lit candle in a dark, empty room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "A veces juraba escuchar susurros en las noches.",
+        "pexels_query": "candle dark room"
+      },
+      {
+        "id": 6,
+        "prompt": "A wooden door slightly ajar, revealing only darkness, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A wooden door slightly ajar, revealing only darkness, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las monjas tenían reglas muy extrañas, casi secretas.",
+        "pexels_query": "door ajar darkness"
+      },
+      {
+        "id": 7,
+        "prompt": "A locked ornate metal gate, partially obscured by shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A locked ornate metal gate, partially obscured by shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Había un ala del convento completamente prohibida para mí.",
+        "pexels_query": "locked metal gate"
+      },
+      {
+        "id": 8,
+        "prompt": "A hand reaching for a forbidden old wooden door handle, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A hand reaching for a forbidden old wooden door handle, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero la curiosidad, ya sabes, no puedes ignorarla.",
+        "pexels_query": "hand old door"
+      },
+      {
+        "id": 9,
+        "prompt": "A dimly lit narrow hallway with a single window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dimly lit narrow hallway with a single window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un día, mientras todas dormían, me atreví a entrar.",
+        "pexels_query": "dim hallway window"
+      },
+      {
+        "id": 10,
+        "prompt": "Dust motes floating in a single beam of light in a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dust motes floating in a single beam of light in a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El aire era pesado, con un olor viejo y extraño.",
+        "pexels_query": "dust light beam"
+      },
+      {
+        "id": 11,
+        "prompt": "A dusty old trunk in a forgotten corner of a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dusty old trunk in a forgotten corner of a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Descubrí un cuarto lleno de objetos personales, antiguos.",
+        "pexels_query": "dusty old trunk"
+      },
+      {
+        "id": 12,
+        "prompt": "Small, faded baby shoes on a wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Small, faded baby shoes on a wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No eran de monjas, sino de niños muy pequeños.",
+        "pexels_query": "faded baby shoes"
+      },
+      {
+        "id": 13,
+        "prompt": "An empty, antique wooden cradle covered in a thin layer of dust, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An empty, antique wooden cradle covered in a thin layer of dust, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Había cunas vacías y ropa infantil descolorida allí.",
+        "pexels_query": "empty antique cradle"
+      },
+      {
+        "id": 14,
+        "prompt": "A small, worn rag doll lying face down on a dusty floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, worn rag doll lying face down on a dusty floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Algo no estaba bien; lo sentiste antes de saberlo.",
+        "pexels_query": "worn rag doll"
+      },
+      {
+        "id": 15,
+        "prompt": "A small, leather-bound diary partially hidden under a loose floorboard, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, leather-bound diary partially hidden under a loose floorboard, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Encontré un diario escondido bajo una tabla suelta.",
+        "pexels_query": "hidden leather diary"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up of old, handwritten script in a diary, blurred text, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of old, handwritten script in a diary, blurred text, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sus páginas revelaban una verdad aterradora y cruel.",
+        "pexels_query": "old handwritten diary"
+      },
+      {
+        "id": 17,
+        "prompt": "A rusted sign, barely legible, pointing towards 'Orphanage' or 'Home', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A rusted sign, barely legible, pointing towards 'Orphanage' or 'Home', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El convento no era un lugar de oración, sino un albergue.",
+        "pexels_query": "rusted orphanage sign"
+      },
+      {
+        "id": 18,
+        "prompt": "A small, faded photograph of a woman with a baby, partially torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, faded photograph of a woman with a baby, partially torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Para madres solteras y sus hijos, ocultados del mundo.",
+        "pexels_query": "faded baby photo"
+      },
+      {
+        "id": 19,
+        "prompt": "A single, small empty shoe left in a doorway, suggesting a sudden departure, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, small empty shoe left in a doorway, suggesting a sudden departure, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero muchos de esos niños simplemente desaparecían sin rastro.",
+        "pexels_query": "empty child shoe"
+      },
+      {
+        "id": 20,
+        "prompt": "A small, antique locket open, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, antique locket open, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las monjas vendían a los bebés al mejor postor.",
+        "pexels_query": "empty antique locket"
+      },
+      {
+        "id": 21,
+        "prompt": "An imposing old wooden desk, with a single, unlit lamp, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An imposing old wooden desk, with a single, unlit lamp, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi tía, la superiora, era la cabecilla de todo esto.",
+        "pexels_query": "old desk lamp"
+      },
+      {
+        "id": 22,
+        "prompt": "A pair of old, wire-frame glasses resting on a disturbing document, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A pair of old, wire-frame glasses resting on a disturbing document, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ellas creían que nadie lo vio, pero yo lo descubrí.",
+        "pexels_query": "glasses document blurred"
+      },
+      {
+        "id": 23,
+        "prompt": "A single drop of water falling on a dusty surface, creating a ripple, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single drop of water falling on a dusty surface, creating a ripple, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La conmoción fue terrible; no estabas sola con el secreto.",
+        "pexels_query": "water drop dust"
+      },
+      {
+        "id": 24,
+        "prompt": "A hand holding a ringing old rotary phone, silhouetted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A hand holding a ringing old rotary phone, silhouetted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Decidí contarlo todo, a pesar del riesgo inmenso.",
+        "pexels_query": "old rotary phone"
+      },
+      {
+        "id": 25,
+        "prompt": "Sunlight breaking through stained glass windows onto an empty altar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Sunlight breaking through stained glass windows onto an empty altar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La verdad salió a la luz, desmantelando su cruel negocio.",
+        "pexels_query": "sunlight stained glass altar"
+      },
+      {
+        "id": 26,
+        "prompt": "A single, empty pew in a vast, silent chapel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, empty pew in a vast, silent chapel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero el silencio absoluto del convento... aún me persigue.",
+        "pexels_query": "empty pew chapel"
+      },
+      {
+        "id": 27,
+        "prompt": "A flickering old lamp illuminating a hidden, dark corridor entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A flickering old lamp illuminating a hidden, dark corridor entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Hasta dónde la fe puede esconder un secreto tan oscuro?",
+        "pexels_query": "flickering lamp corridor"
+      }
+    ],
+    "hooks": [
+      "Convento ocultaba secretos terribles",
+      "Bebés desaparecían sin dejar rastro",
+      "¿La fe era puro engaño?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
