@@ -185,7 +185,9 @@
     "741dd7cd-b8b8-4129-9653-bf41c54399c0",
     "741dd7cd-b8b8-4129-9653-bf41c54399c0_asm",
     "017d73e7-77f9-4717-af84-b4659d2e6da9",
-    "017d73e7-77f9-4717-af84-b4659d2e6da9_asm"
+    "017d73e7-77f9-4717-af84-b4659d2e6da9_asm",
+    "3875d53e-ff01-43db-ba47-adc45fdc95ca",
+    "3875d53e-ff01-43db-ba47-adc45fdc95ca_asm"
   ],
   "detalles": {
     "711c706f-7f52-460b-8638-be31a5a90aaf": {
@@ -635,6 +637,11 @@
     "017d73e7-77f9-4717-af84-b4659d2e6da9": {
       "duracion_real_seg": 133.0,
       "marca": "La Viuda",
+      "formato": "9:16"
+    },
+    "3875d53e-ff01-43db-ba47-adc45fdc95ca": {
+      "duracion_real_seg": 100.7,
+      "marca": "Monkygraff",
       "formato": "9:16"
     }
   }
