@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "3e52e519-ac47-4314-bd29-bdae9815c2cc",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Ancient rolled papyrus scrolls, damaged, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Ancient rolled papyrus scrolls, damaged, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hace dos mil años, algo crucial fue sellado.\", \"pexels_query\": \"damaged papyrus scroll\"}, {\"id\": 2, \"prompt\": \"Volcanic ash covering ancient artifacts, close up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Volcanic ash covering ancient artifacts, close up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tú pensabas que su historia estaba perdida para siempre.\", \"pexels_query\": \"volcanic ash artifacts\"}, {\"id\": 3, \"prompt\": \"Buried ancient city ruins, dark tones, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Buried ancient city ruins, dark tones, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"En Herculano, la lava cubrió papiros valiosísimos.\", \"pexels_query\": \"buried ancient city\"}, {\"id\": 4, \"prompt\": \"Crumbled ancient texts, unreadable, high contrast, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Crumbled ancient texts, unreadable, high contrast, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Imagina: secretos de filósofos guardados en ceniza.\", \"pexels_query\": \"crumbled ancient text\"}, {\"id\": 5, \"prompt\": \"Archaeological dig site, shadowy, focusing on excavation tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Archaeological dig site, shadowy, focusing on excavation tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie pudo leerlos por casi dos milenios.\", \"pexels_query\": \"archaeological tools site\"}, {\"id\": 6, \"prompt\": \"Empty ancient library shelves, dust, silence implied, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty ancient library shelves, dust, silence implied, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio absoluto reinó sobre ese conocimiento.\", \"pexels_query\": \"empty ancient library\"}, {\"id\": 7, \"prompt\": \"Glowing AI neural network over ancient artifacts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glowing AI neural network over ancient artifacts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero una IA acaba de cambiarlo todo radicalmente.\", \"pexels_query\": \"AI neural network artifacts\"}, {\"id\": 8, \"prompt\": \"Data center servers with glowing lights, intricate cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data center servers with glowing lights, intricate cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No estabas solo creyendo en ese tesoro histórico.\", \"pexels_query\": \"server racks glowing\"}, {\"id\": 9, \"prompt\": \"Digital rendering of a contest winner announcement, abstract technology, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital rendering of a contest winner announcement, abstract technology, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El ‘Vesuvius Challenge’ buscaba un milagro tecnológico.\", \"pexels_query\": \"digital winner announcement\"}, {\"id\": 10, \"prompt\": \"Advanced computer processing data, abstract light trails, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Advanced computer processing data, abstract light trails, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Y la inteligencia artificial lo hizo posible ahora.\", \"pexels_query\": \"computer data processing\"}, {\"id\": 11, \"prompt\": \"3D scan of an ancient rolled papyrus, digital overlay showing layers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"3D scan of an ancient rolled papyrus, digital overlay showing layers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algoritmos avanzados 'desenrollaron' virtualmente los papiros.\", \"pexels_query\": \"3D papyrus scan\"}, {\"id\": 12, \"prompt\": \"Microscopic view of ink on ancient parchment, highly detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Microscopic view of ink on ancient parchment, highly detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Reconocieron cada letra, cada palabra oculta dentro.\", \"pexels_query\": \"microscopic ink parchment\"}, {\"id\": 13, \"prompt\": \"Digital text being rendered from ancient fragments on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital text being rendered from ancient fragments on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ahora leemos textos que nadie lo vio antes.\", \"pexels_query\": \"digital ancient text\"}, {\"id\": 14, \"prompt\": \"Ancient Greek philosophical text, illuminated manuscript style but digitally recreated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Ancient Greek philosophical text, illuminated manuscript style but digitally recreated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Filosofía griega antigua: Epicuro y sus discípulos.\", \"pexels_query\": \"greek philosophy text\"}, {\"id\": 15, \"prompt\": \"Abstract representation of rediscovered knowledge, glowing lines connecting dots, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of rediscovered knowledge, glowing lines connecting dots, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ideas complejas que creíamos perdidas, regresan ahora.\", \"pexels_query\": \"rediscovered knowledge abstract\"}, {\"id\": 16, \"prompt\": \"History books with digital overlays, challenging old narratives, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"History books with digital overlays, challenging old narratives, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto redefine nuestra comprensión de la historia.\", \"pexels_query\": \"digital history books\"}, {\"id\": 17, \"prompt\": \"Fragmented historical timeline, some parts missing, digital glitch effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Fragmented historical timeline, some parts missing, digital glitch effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Porque algo no está bien con lo que sabíamos.\", \"pexels_query\": \"fragmented timeline glitch\"}, {\"id\": 18, \"prompt\": \"Unseen data flowing through complex circuits, hidden patterns, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Unseen data flowing through complex circuits, hidden patterns, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hay más conocimiento esperando ser descubierto así.\", \"pexels_query\": \"hidden data circuits\"}, {\"id\": 19, \"prompt\": \"Intuitive abstract pattern, sense of a puzzle being solved, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Intuitive abstract pattern, sense of a puzzle being solved, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes: la historia está incompleta.\", \"pexels_query\": \"puzzle solving abstract\"}, {\"id\": 20, \"prompt\": \"AI interface scanning various ancient texts, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"AI interface scanning various ancient texts, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esta IA puede revelar muchísimos más secretos.\", \"pexels_query\": \"AI scanning ancient\"}, {\"id\": 21, \"prompt\": \"World map with glowing points highlighting historical sites, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"World map with glowing points highlighting historical sites, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Manuscritos ocultos en todo el mundo son el siguiente paso.\", \"pexels_query\": \"historical sites map\"}, {\"id\": 22, \"prompt\": \"Vast digital library, holographic books, modern and ancient, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Vast digital library, holographic books, modern and ancient, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Imagina bibliotecas enteras regresando a la vida digital.\", \"pexels_query\": \"holographic digital library\"}, {\"id\": 23, \"prompt\": \"AI processing core, bright energy pulse, representing resurrection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"AI processing core, bright energy pulse, representing resurrection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El poder de la IA para resucitar el pasado.\", \"pexels_query\": \"AI core energy\"}, {\"id\": 24, \"prompt\": \"Chronological timeline reconfiguring itself digitally, shifting events, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Chronological timeline reconfiguring itself digitally, shifting events, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo: la historia se reescribe.\", \"pexels_query\": \"digital timeline reconfigure\"}, {\"id\": 25, \"prompt\": \"Futuristic window opening to a view of ancient world, glowing portal, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic window opening to a view of ancient world, glowing portal, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La tecnología abre ventanas a eras remotas.\", \"pexels_query\": \"futuristic ancient portal\"}, {\"id\": 26, \"prompt\": \"User interface showing accessible historical data, clean design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"User interface showing accessible historical data, clean design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pronto, tú podrás leer los nuevos hallazgos.\", \"pexels_query\": \"historical data interface\"}, {\"id\": 27, \"prompt\": \"Hand reaching towards a glowing digital archive, knowledge acquisition, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hand reaching towards a glowing digital archive, knowledge acquisition, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aprovecha esta IA; el conocimiento te espera.\", \"pexels_query\": \"hand digital knowledge\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Hace dos mil años, algo crucial fue sellado. Tú pensabas que su historia estaba perdida para siempre. En Herculano, la lava cubrió papiros valiosísimos. Imagina: secretos de filósofos guardados en ceniza. Nadie pudo leerlos por casi dos milenios. El silencio absoluto reinó sobre ese conocimiento. Pero una IA acaba de cambiarlo todo radicalmente. No estabas solo creyendo en ese tesoro histórico. El ‘Vesuvius Challenge’ buscaba un milagro tecnológico. Y la inteligencia artificial lo hizo posible ahora. Algoritmos avanzados 'desenrollaron' virtualmente los papiros. Reconocieron cada letra, cada palabra oculta dentro. Ahora leemos textos que nadie lo vio antes. Filosofía griega antigua: Epicuro y sus discípulos. Ideas complejas que creíamos perdidas, regresan ahora. Esto redefine nuestra comprensión de la historia. Porque algo no está bien con lo que sabíamos. Hay más conocimiento esperando ser descubierto así. Lo sentiste antes: la historia está incompleta. Esta IA puede revelar muchísimos más secretos. Manuscritos ocultos en todo el mundo son el siguiente paso. Imagina bibliotecas enteras regresando a la vida digital. El poder de la IA para resucitar el pasado. No puedes ignorarlo: la historia se reescribe. La tecnología abre ventanas a eras remotas. Pronto, tú podrás leer los nuevos hallazgos. Aprovecha esta IA; el conocimiento te espera.",
+    "titulo_sugerido": "IA DESVELA: Así leemos PAPIROS de 2000 AÑOS",
+    "escenas_texto": [
+      "Hace dos mil años, algo crucial fue sellado.",
+      "Tú pensabas que su historia estaba perdida para siempre.",
+      "En Herculano, la lava cubrió papiros valiosísimos.",
+      "Imagina: secretos de filósofos guardados en ceniza.",
+      "Nadie pudo leerlos por casi dos milenios.",
+      "El silencio absoluto reinó sobre ese conocimiento.",
+      "Pero una IA acaba de cambiarlo todo radicalmente.",
+      "No estabas solo creyendo en ese tesoro histórico.",
+      "El ‘Vesuvius Challenge’ buscaba un milagro tecnológico.",
+      "Y la inteligencia artificial lo hizo posible ahora.",
+      "Algoritmos avanzados 'desenrollaron' virtualmente los papiros.",
+      "Reconocieron cada letra, cada palabra oculta dentro.",
+      "Ahora leemos textos que nadie lo vio antes.",
+      "Filosofía griega antigua: Epicuro y sus discípulos.",
+      "Ideas complejas que creíamos perdidas, regresan ahora.",
+      "Esto redefine nuestra comprensión de la historia.",
+      "Porque algo no está bien con lo que sabíamos.",
+      "Hay más conocimiento esperando ser descubierto así.",
+      "Lo sentiste antes: la historia está incompleta.",
+      "Esta IA puede revelar muchísimos más secretos.",
+      "Manuscritos ocultos en todo el mundo son el siguiente paso.",
+      "Imagina bibliotecas enteras regresando a la vida digital.",
+      "El poder de la IA para resucitar el pasado.",
+      "No puedes ignorarlo: la historia se reescribe.",
+      "La tecnología abre ventanas a eras remotas.",
+      "Pronto, tú podrás leer los nuevos hallazgos.",
+      "Aprovecha esta IA; el conocimiento te espera."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Ancient rolled papyrus scrolls, damaged, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Ancient rolled papyrus scrolls, damaged, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hace dos mil años, algo crucial fue sellado.",
+        "pexels_query": "damaged papyrus scroll"
+      },
+      {
+        "id": 2,
+        "prompt": "Volcanic ash covering ancient artifacts, close up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Volcanic ash covering ancient artifacts, close up, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tú pensabas que su historia estaba perdida para siempre.",
+        "pexels_query": "volcanic ash artifacts"
+      },
+      {
+        "id": 3,
+        "prompt": "Buried ancient city ruins, dark tones, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Buried ancient city ruins, dark tones, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "En Herculano, la lava cubrió papiros valiosísimos.",
+        "pexels_query": "buried ancient city"
+      },
+      {
+        "id": 4,
+        "prompt": "Crumbled ancient texts, unreadable, high contrast, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Crumbled ancient texts, unreadable, high contrast, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Imagina: secretos de filósofos guardados en ceniza.",
+        "pexels_query": "crumbled ancient text"
+      },
+      {
+        "id": 5,
+        "prompt": "Archaeological dig site, shadowy, focusing on excavation tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Archaeological dig site, shadowy, focusing on excavation tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie pudo leerlos por casi dos milenios.",
+        "pexels_query": "archaeological tools site"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty ancient library shelves, dust, silence implied, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty ancient library shelves, dust, silence implied, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio absoluto reinó sobre ese conocimiento.",
+        "pexels_query": "empty ancient library"
+      },
+      {
+        "id": 7,
+        "prompt": "Glowing AI neural network over ancient artifacts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glowing AI neural network over ancient artifacts, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero una IA acaba de cambiarlo todo radicalmente.",
+        "pexels_query": "AI neural network artifacts"
+      },
+      {
+        "id": 8,
+        "prompt": "Data center servers with glowing lights, intricate cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data center servers with glowing lights, intricate cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No estabas solo creyendo en ese tesoro histórico.",
+        "pexels_query": "server racks glowing"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital rendering of a contest winner announcement, abstract technology, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital rendering of a contest winner announcement, abstract technology, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El ‘Vesuvius Challenge’ buscaba un milagro tecnológico.",
+        "pexels_query": "digital winner announcement"
+      },
+      {
+        "id": 10,
+        "prompt": "Advanced computer processing data, abstract light trails, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Advanced computer processing data, abstract light trails, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Y la inteligencia artificial lo hizo posible ahora.",
+        "pexels_query": "computer data processing"
+      },
+      {
+        "id": 11,
+        "prompt": "3D scan of an ancient rolled papyrus, digital overlay showing layers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "3D scan of an ancient rolled papyrus, digital overlay showing layers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algoritmos avanzados 'desenrollaron' virtualmente los papiros.",
+        "pexels_query": "3D papyrus scan"
+      },
+      {
+        "id": 12,
+        "prompt": "Microscopic view of ink on ancient parchment, highly detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Microscopic view of ink on ancient parchment, highly detailed, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Reconocieron cada letra, cada palabra oculta dentro.",
+        "pexels_query": "microscopic ink parchment"
+      },
+      {
+        "id": 13,
+        "prompt": "Digital text being rendered from ancient fragments on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital text being rendered from ancient fragments on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ahora leemos textos que nadie lo vio antes.",
+        "pexels_query": "digital ancient text"
+      },
+      {
+        "id": 14,
+        "prompt": "Ancient Greek philosophical text, illuminated manuscript style but digitally recreated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Ancient Greek philosophical text, illuminated manuscript style but digitally recreated, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Filosofía griega antigua: Epicuro y sus discípulos.",
+        "pexels_query": "greek philosophy text"
+      },
+      {
+        "id": 15,
+        "prompt": "Abstract representation of rediscovered knowledge, glowing lines connecting dots, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of rediscovered knowledge, glowing lines connecting dots, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ideas complejas que creíamos perdidas, regresan ahora.",
+        "pexels_query": "rediscovered knowledge abstract"
+      },
+      {
+        "id": 16,
+        "prompt": "History books with digital overlays, challenging old narratives, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "History books with digital overlays, challenging old narratives, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto redefine nuestra comprensión de la historia.",
+        "pexels_query": "digital history books"
+      },
+      {
+        "id": 17,
+        "prompt": "Fragmented historical timeline, some parts missing, digital glitch effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Fragmented historical timeline, some parts missing, digital glitch effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Porque algo no está bien con lo que sabíamos.",
+        "pexels_query": "fragmented timeline glitch"
+      },
+      {
+        "id": 18,
+        "prompt": "Unseen data flowing through complex circuits, hidden patterns, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Unseen data flowing through complex circuits, hidden patterns, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hay más conocimiento esperando ser descubierto así.",
+        "pexels_query": "hidden data circuits"
+      },
+      {
+        "id": 19,
+        "prompt": "Intuitive abstract pattern, sense of a puzzle being solved, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Intuitive abstract pattern, sense of a puzzle being solved, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes: la historia está incompleta.",
+        "pexels_query": "puzzle solving abstract"
+      },
+      {
+        "id": 20,
+        "prompt": "AI interface scanning various ancient texts, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "AI interface scanning various ancient texts, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esta IA puede revelar muchísimos más secretos.",
+        "pexels_query": "AI scanning ancient"
+      },
+      {
+        "id": 21,
+        "prompt": "World map with glowing points highlighting historical sites, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "World map with glowing points highlighting historical sites, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Manuscritos ocultos en todo el mundo son el siguiente paso.",
+        "pexels_query": "historical sites map"
+      },
+      {
+        "id": 22,
+        "prompt": "Vast digital library, holographic books, modern and ancient, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Vast digital library, holographic books, modern and ancient, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Imagina bibliotecas enteras regresando a la vida digital.",
+        "pexels_query": "holographic digital library"
+      },
+      {
+        "id": 23,
+        "prompt": "AI processing core, bright energy pulse, representing resurrection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "AI processing core, bright energy pulse, representing resurrection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El poder de la IA para resucitar el pasado.",
+        "pexels_query": "AI core energy"
+      },
+      {
+        "id": 24,
+        "prompt": "Chronological timeline reconfiguring itself digitally, shifting events, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Chronological timeline reconfiguring itself digitally, shifting events, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo: la historia se reescribe.",
+        "pexels_query": "digital timeline reconfigure"
+      },
+      {
+        "id": 25,
+        "prompt": "Futuristic window opening to a view of ancient world, glowing portal, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic window opening to a view of ancient world, glowing portal, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La tecnología abre ventanas a eras remotas.",
+        "pexels_query": "futuristic ancient portal"
+      },
+      {
+        "id": 26,
+        "prompt": "User interface showing accessible historical data, clean design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "User interface showing accessible historical data, clean design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pronto, tú podrás leer los nuevos hallazgos.",
+        "pexels_query": "historical data interface"
+      },
+      {
+        "id": 27,
+        "prompt": "Hand reaching towards a glowing digital archive, knowledge acquisition, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hand reaching towards a glowing digital archive, knowledge acquisition, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aprovecha esta IA; el conocimiento te espera.",
+        "pexels_query": "hand digital knowledge"
+      }
+    ],
+    "hooks": [
+      "Secretos milenarios desvelados",
+      "Papiros de Herculano leídos",
+      "IA revela historia perdida"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
