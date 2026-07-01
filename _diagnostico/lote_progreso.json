@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 19,
+  "completados": 20,
   "fallidos": 0,
   "trabajo_actual": "Generando video 20/25 (LaesquinaRandom 9:16)",
-  "mensaje": "Produccion del video 20 iniciada.",
+  "mensaje": "Video 20 completado",
   "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
   "historial": [
     {
@@ -177,6 +177,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 118.7,
       "hora": "18:30"
+    },
+    {
+      "n": 20,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 115.6,
+      "hora": "20:04"
     }
   ]
 }
