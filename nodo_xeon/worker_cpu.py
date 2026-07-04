@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_P"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_Q"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_P"
+VERSION_WORKER = "2026-06-23_Q"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -1142,6 +1142,14 @@ def _trocear_en_tiempo(texto, t_ini, t_fin, max_pal):
 
 def _generar_word_paquete(paquete, marca, formato, carpeta):
     import tempfile, subprocess as sp
+    # Seguridad: si llega como string JSON, convertir a dict (evita Word en blanco).
+    if isinstance(paquete, str):
+        try:
+            paquete = json.loads(paquete)
+        except Exception:
+            paquete = {}
+    if not isinstance(paquete, dict):
+        paquete = {}
     es_largo   = "16:9" in formato
     carpeta_js = carpeta.replace("\\", "/")
     ruta_out   = f"{carpeta_js}/paquete_publicacion.docx"
@@ -2975,10 +2983,33 @@ def procesar():
                     )
                     if res_paquete.status_code == 200:
                         paquete = res_paquete.json().get("paquete", {})
+                        # BUG FIX DATOS EN BLANCO: generar_paquete_publicacion devuelve un
+                        # STRING JSON (json.dumps). Si se deja como string, el generador del
+                        # Word hace p.titulo_final sobre un string → TODO sale en blanco.
+                        # Convertir el string a diccionario ANTES de usarlo.
+                        if isinstance(paquete, str):
+                            try:
+                                _txt = paquete.strip()
+                                # quitar cercos ```json ... ``` por si vinieran
+                                import re as _re_pq
+                                _txt = _re_pq.sub(r'^```(?:json)?\s*', '', _txt)
+                                _txt = _re_pq.sub(r'\s*```$', '', _txt).strip()
+                                if not _txt.startswith('{'):
+                                    _i = _txt.find('{'); _f = _txt.rfind('}')
+                                    if _i != -1 and _f != -1 and _f > _i:
+                                        _txt = _txt[_i:_f+1]
+                                paquete = json.loads(_txt)
+                            except Exception as _ep:
+                                print(f"⚠️ [PAQUETE] No se pudo parsear el JSON del paquete: {_ep}")
+                                paquete = {}
                         ruta_paquete = os.path.join(carpeta_reciente, "paquete_publicacion.json")
                         with open(ruta_paquete, "w", encoding="utf-8") as f:
                             json.dump(paquete, f, indent=4, ensure_ascii=False)
                         print(f"✅ [PAQUETE] Guardado en: {ruta_paquete}")
+                        # aviso si el paquete quedó vacío o sin título (para detectarlo pronto)
+                        if not isinstance(paquete, dict) or not paquete.get("titulo_final"):
+                            print("⚠️ [PAQUETE] ¡El paquete quedó SIN datos! (título vacío) — revisar Gemini/respaldo.")
+                            _diag["errores"].append("Paquete sin datos (título vacío).")
                         print("🖼️ [PAQUETE] Miniaturas desactivadas — usa los prompts del paquete_publicacion.docx en Canva.")
                         _diag["paquete"]["generado"] = True
                         # Si Gemini falló y se usó respaldo, el paquete trae la marca _respaldo
