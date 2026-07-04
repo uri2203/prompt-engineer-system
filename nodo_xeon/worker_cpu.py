@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_O2"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_P"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_O2"
+VERSION_WORKER = "2026-06-23_P"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -685,7 +685,7 @@ def _corregir_pronunciacion(texto):
         "gaming": "guéimin", "gamer": "guéimer", "stream": "estrím",
         "playlist": "pléilist", "thriller": "tríler", "teaser": "tíser",
         "trailer": "tréiler", "casting": "cástin", "remake": "riméik",
-        "shock": "shok", "stress": "estrés", "fitness": "fítnes",
+        "shock": "chok", "shocking": "chókin", "stress": "estrés", "fitness": "fítnes",
         "coach": "couch", "coaching": "cóuchin", "mindset": "máindset",
         "ceo": "si i o", "ceos": "si i os", "fbi": "efe be i", "cia": "ce i a",
         "nasa": "nasa", "fps": "efe pe ese", "vpn": "ve pe ene",
@@ -719,7 +719,7 @@ def _corregir_pronunciacion(texto):
         "business": "bísnes", "manager": "mánayer", "managers": "mánayers",
         "marketing": "márketin", "ecommerce": "icómers", "retail": "ríteil",
         "broker": "bróuker", "brokers": "bróukers", "stock": "estók", "stocks": "estóks",
-        "trader": "tréider", "cash": "cash", "crash": "crash",
+        "trader": "tréider", "cash": "cach", "crash": "crach",
         "boom": "bum", "rally": "ráli", "bull": "bul", "bear": "ber",
         "venture": "vénchur", "equity": "ékuiti",
         "leasing": "lísin", "factoring": "fáctorin", "outsourcing": "áutsorsin",
@@ -738,8 +738,8 @@ def _corregir_pronunciacion(texto):
         "fan": "fan", "fans": "fans", "hooligan": "júligan",
         "manager": "mánayer", "draft": "draft", "rookie": "rúki",
         # ── CULTURA POP / ENTRETENIMIENTO (ampliado) ──
-        "show": "show", "shows": "shows", "reality": "riáliti",
-        "celebrity": "selébriti", "gossip": "gósip", "fashion": "fáshion",
+        "show": "chou", "shows": "chous", "reality": "riáliti",
+        "celebrity": "selébriti", "gossip": "gósip", "fashion": "fáchion",
         "outfit": "áutfit", "look": "luk", "looks": "luks", "vintage": "víntach",
         "cool": "cul", "trendy": "tréndi", "sexy": "séksi",
         "remix": "rímiks", "beat": "bit", "beats": "bits", "flow": "flou",
@@ -749,16 +749,16 @@ def _corregir_pronunciacion(texto):
         "cosplay": "cóspley", "gameplay": "guéimpley", "streamer": "estrímer",
         # ── NOMBRES PROPIOS / EMPRESAS / GEOGRAFÍA (ampliado) ──
         "hollywood": "jóligud",
-        "trump": "tramp", "biden": "báiden", "putin": "pútin", "xi": "shi",
-        "beijing": "beishín", "shanghai": "shanghái", "taiwan": "taiguán",
+        "trump": "tramp", "biden": "báiden", "putin": "pútin", "xi": "chi",
+        "beijing": "beichín", "shanghai": "changái", "taiwan": "taiguán",
         "microsoft": "máicrosoft", "tesla": "tésla", "amazon": "ámazon",
         "netflix": "nétflics", "spotify": "espótifai", "tiktok": "tíktok",
         "facebook": "féisbuk", "instagram": "ínstagram", "twitter": "tuíter",
         "openai": "óupen ei ái", "nvidia": "envídia", "intel": "íntel",
-        "samsung": "sámsun", "huawei": "juáguei", "xiaomi": "shiaómi",
+        "samsung": "sámsun", "huawei": "juáguei", "xiaomi": "chiaómi",
         # ── Anglicismos compuestos comunes (las reglas no pueden deducirlos) ──
         "newsletter": "niúsleter", "mainstream": "méinstrim", "brainstorm": "bréinstorm",
-        "brainstorming": "bréinstormin", "shareholder": "shérjolder", "paywall": "péigüol",
+        "brainstorming": "bréinstormin", "shareholder": "chérjolder", "paywall": "péigüol",
         "headhunter": "jédjanter", "outsourced": "áutsorsd", "outsourcing": "áutsorsin",
         "football": "fútbol", "newsletter": "niúsleter", "weekend": "güíken",
         "downloadable": "daunlóudabol", "stakeholder": "stéijolder", "storytelling": "estóritelin",
@@ -770,7 +770,7 @@ def _corregir_pronunciacion(texto):
         "smart tv": "smart ti vi", "reality show": "riáliti show", "talk show": "tok show",
         "boyband": "bóiban", "girlband": "guérlban", "comeback": "cámbak",
         "lifestyle": "láifstail", "workflow": "guórkflou", "milestone": "máilstoun",
-        "roadmap": "róudmap", "benchmark": "bénchmark", "showroom": "shórrum",
+        "roadmap": "róudmap", "benchmark": "bénchmark", "showroom": "chórrum",
         "playoff": "pléiof", "playoffs": "pléiofs", "halftime": "jáftaim",
         "smartwatch": "smártguach", "powerbank": "páuerbank", "touchscreen": "táchscrin",
         "apple": "ápol", "disney": "dísney", "pixar": "píksar",
@@ -1033,7 +1033,7 @@ def _corregir_pronunciacion(texto):
                 return palabra
             p = palabra
             reglas_combo = [
-                (r'th', 't'), (r'ck', 'k'), (r'ph', 'f'),
+                (r'sh', 'ch'), (r'th', 't'), (r'ck', 'k'), (r'ph', 'f'),
                 (r'ng\b', 'n'), (r'y$', 'i'),
             ]
             for pat, rep in reglas_combo:
