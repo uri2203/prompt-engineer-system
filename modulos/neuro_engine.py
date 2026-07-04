@@ -103,16 +103,21 @@ APERTURAS_POR_CANAL = {
     ],
 }
 
+import random as _random_rot
+
 def _indice_rotacion(n_opciones, desfase=0):
-    """Índice de rotación que recorre TODO el banco aunque los videos se generen
-    a intervalos regulares. Avanza de forma fina (cada 30s) para no quedar atrapado
-    en pocas opciones por la periodicidad de los intervalos entre videos."""
+    """Índice de rotación con ALEATORIEDAD por video. Antes dependía solo del tiempo
+    (timestamp//30), pero cuando se genera un LOTE de varios videos del mismo canal
+    casi al mismo tiempo, todos caían en el mismo índice → la MISMA apertura para
+    todos (el bug de '5 videos de La Viuda con la misma frase'). Ahora se usa un
+    valor aleatorio real por llamada, así cada video toma una apertura distinta
+    aunque se generen en el mismo segundo. El 'desfase' separa apertura de cierre
+    para que no elijan el mismo índice dentro de un mismo video."""
     try:
-        ahora = datetime.now()
-        contador = int(ahora.timestamp() // 30)  # avanza cada 30 segundos
-        return (contador + desfase) % max(1, n_opciones)
+        azar = _random_rot.randint(0, 1000000)
+        return (azar + desfase) % max(1, n_opciones)
     except Exception:
-        return desfase % max(1, n_opciones)
+        return _random_rot.randint(0, max(0, n_opciones - 1))
 
 def _seleccionar_aperturas(marca, n=3):
     """Devuelve estructuras de apertura ROTADAS para este video (variedad).
