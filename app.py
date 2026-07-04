@@ -1016,12 +1016,40 @@ def nodo_tarea_completada():
             "marca": data.get("marca", ""),
             "formato": data.get("formato", ""),
         }
-    # Si el ID termina en _asm, es un ENSAMBLAJE terminado = video COMPLETO.
-    # Registrarlo para que el orquestador (video_estado) sepa que terminó.
+    # Si el ID termina en _asm, es un ENSAMBLAJE terminado. Pero SOLO contarlo como
+    # video COMPLETO si el worker lo reporto como "finalizado". Si lo reporto "fallido"
+    # (p.ej. video vacio porque la orden llego incompleta tras un fallo de Render), NO
+    # marcarlo completado: asi el orquestador lo REINTENTA en vez de darlo por bueno.
+    _estado_reportado = data.get("estado", "finalizado")
+    if tarea_id.endswith("_asm") and _estado_reportado == "fallido":
+        try:
+            _fall = _gh_leer_json("_diagnostico/videos_fallidos.json", {"ids": []})
+            _fids = _fall.get("ids", [])
+            base_f = tarea_id[:-4]
+            if base_f not in _fids:
+                _fids.append(base_f)
+            _fall["ids"] = _fids[-200:]
+            _gh_guardar_json("_diagnostico/videos_fallidos.json", _fall, f"video fallido: {base_f}")
+        except Exception:
+            pass
+        return jsonify({"status": "fallido_registrado", "tarea_id": tarea_id})
+
+    # Si el ID termina en _asm y se reporto finalizado, es un video COMPLETO.
+    # Registrarlo para que el orquestador (video_estado) sepa que termino.
     if tarea_id.endswith("_asm"):
         base_id = tarea_id[:-4]  # quitar el sufijo _asm
         _videos_completados.add(base_id)
         _videos_completados.add(tarea_id)
+        # Si este video habia fallado antes y ahora SI se completo (reintento exitoso),
+        # quitarlo de la lista de fallidos para que no quede marcado como fallo.
+        try:
+            _fall = _gh_leer_json("_diagnostico/videos_fallidos.json", {"ids": []})
+            _fids = [x for x in _fall.get("ids", []) if x not in (base_id, tarea_id)]
+            if len(_fids) != len(_fall.get("ids", [])):
+                _fall["ids"] = _fids
+                _gh_guardar_json("_diagnostico/videos_fallidos.json", _fall, f"reintento OK: {base_id}")
+        except Exception:
+            pass
         # PERSISTIR en GitHub: la memoria de Render se borra en cada reinicio/deploy.
         # Si solo viviera en memoria, el orquestador no se enteraría de que el video
         # terminó (tras un reinicio) y lo reintentaría — generando otro del mismo canal.
@@ -1226,6 +1254,20 @@ def api_video_estado():
         except Exception:
             pass
     return jsonify({"completado": completado, "tarea_id": tarea_id, "detalles": detalles})
+
+@app.route('/api/bot/video_fallido', methods=['GET'])
+def api_video_fallido():
+    """El orquestador pregunta si un video fue reportado como FALLIDO por el worker."""
+    tarea_id = request.args.get("tarea_id", "")
+    fallido = False
+    try:
+        fall = _gh_leer_json("_diagnostico/videos_fallidos.json", {"ids": []})
+        ids = fall.get("ids", [])
+        base = tarea_id[:-4] if tarea_id.endswith("_asm") else tarea_id
+        fallido = (tarea_id in ids) or (base in ids)
+    except Exception:
+        pass
+    return jsonify({"fallido": fallido, "tarea_id": tarea_id})
 
 @app.route('/api/bot/lote_control', methods=['GET', 'POST'])
 def api_lote_control():
