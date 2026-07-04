@@ -1365,10 +1365,34 @@ SALIDA: ÚNICAMENTE JSON válido.
         y longitud/uso de keywords en la descripción. Si la IA se quedó corta, se
         completa con keywords amplias y populares del nicho (siempre relevantes)."""
         import json as _json, re as _re
+        # Gemini a MENUDO envuelve el JSON en ```json ... ``` o pone texto alrededor.
+        # Hay que limpiar eso ANTES de parsear, o el JSON queda inválido y los
+        # metadatos salen EN BLANCO. Se extrae el objeto JSON de forma robusta.
+        def _limpiar_a_json(texto):
+            if not isinstance(texto, str):
+                return texto
+            t = texto.strip()
+            # quitar cercos de markdown ```json ... ``` o ``` ... ```
+            t = _re.sub(r'^```(?:json)?\s*', '', t)
+            t = _re.sub(r'\s*```$', '', t)
+            t = t.strip()
+            # si aún hay texto alrededor, quedarnos con el primer objeto {...} completo
+            if not t.startswith('{'):
+                ini = t.find('{')
+                fin = t.rfind('}')
+                if ini != -1 and fin != -1 and fin > ini:
+                    t = t[ini:fin+1]
+            return t
         try:
-            paq = _json.loads(resultado_json) if isinstance(resultado_json, str) else resultado_json
+            if isinstance(resultado_json, str):
+                paq = _json.loads(_limpiar_a_json(resultado_json))
+            else:
+                paq = resultado_json
         except Exception:
-            return resultado_json  # si no se puede parsear, devolver tal cual
+            # Si aún así no se puede parsear, NO devolver el texto roto (eso deja los
+            # metadatos en blanco). Usar el paquete de respaldo, que siempre tiene datos.
+            print("[PAQUETE] ⚠️ La respuesta de la IA no era JSON válido — usando respaldo.")
+            return self._paquete_respaldo(marca, titulo, texto_locucion, formato, "")
 
         marca_l = marca.lower().replace(" ", "")
         # Banco de keywords AMPLIAS y populares por nicho (alto volumen de búsqueda).
