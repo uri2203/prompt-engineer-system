@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 10,
-  "completados": 3,
+  "completados": 4,
   "fallidos": 0,
   "trabajo_actual": "Generando video 4/10 (LaesquinaRandom 16:9 28min)",
-  "mensaje": "Produccion del video 4 iniciada.",
+  "mensaje": "Video 4 completado",
   "resumen": "LaesquinaRandom: 0s+5L | TuIALista: 0s+5L",
   "historial": [
     {
@@ -33,6 +33,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 2302.0,
       "hora": "10:14"
+    },
+    {
+      "n": 4,
+      "marca": "LaesquinaRandom",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 1782.9,
+      "hora": "13:33"
     }
   ]
 }
