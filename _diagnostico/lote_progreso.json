@@ -2,9 +2,9 @@
   "estado_lote": "produciendo",
   "total": 10,
   "completados": 8,
-  "fallidos": 0,
+  "fallidos": 1,
   "trabajo_actual": "Reintentando encolado en 19s",
-  "mensaje": "No se pudo encolar el video 9 (intento 2/3), reintentando...",
+  "mensaje": "Video 9 (TuIALista 16:9) falló al encolar 3 veces — se omite y se continúa.",
   "resumen": "LaesquinaRandom: 0s+5L | TuIALista: 0s+5L",
   "historial": [
     {
