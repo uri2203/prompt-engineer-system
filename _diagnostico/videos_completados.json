@@ -1,7 +1,5 @@
 {
   "ids": [
-    "16b06355-cf9d-4020-8889-e776ef7a4863",
-    "16b06355-cf9d-4020-8889-e776ef7a4863_asm",
     "54f7ca59-33fa-4066-acce-f9f4850666a0",
     "54f7ca59-33fa-4066-acce-f9f4850666a0_asm",
     "c26d6996-e214-48bb-a471-a84dd166535a",
@@ -199,7 +197,9 @@
     "778512cd-d797-441d-95d3-2173c05fe77b",
     "778512cd-d797-441d-95d3-2173c05fe77b_asm",
     "e15ce37a-c915-48f3-9a5a-ffbead403062",
-    "e15ce37a-c915-48f3-9a5a-ffbead403062_asm"
+    "e15ce37a-c915-48f3-9a5a-ffbead403062_asm",
+    "36c5dc8c-1eed-45e1-a0e2-3d0e55e8ea26",
+    "36c5dc8c-1eed-45e1-a0e2-3d0e55e8ea26_asm"
   ],
   "detalles": {
     "711c706f-7f52-460b-8638-be31a5a90aaf": {
@@ -942,6 +942,11 @@
       "duracion_real_seg": 1966.1,
       "marca": "TuIALista",
       "formato": "16:9"
+    },
+    "36c5dc8c-1eed-45e1-a0e2-3d0e55e8ea26": {
+      "duracion_real_seg": 127.1,
+      "marca": "La Viuda",
+      "formato": "9:16"
     }
   }
 }
