@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "36c5dc8c-1eed-45e1-a0e2-3d0e55e8ea26",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A slightly ajar old wooden door, deep shadow on one side, a sliver of eerie light from the other, grainy texture\", \"prompt_visual\": \"A slightly ajar old wooden door, deep shadow on one side, a sliver of eerie light from the other, grainy texture\", \"texto_locucion\": \"Cierras tu puerta con llave. Siempre lo haces.\", \"pexels_query\": \"ajar door shadow\"}, {\"id\": 2, \"prompt\": \"A dark hallway, a single light source at the far end creating a long, distorted shadow, subtle dust motes in the air\", \"prompt_visual\": \"A dark hallway, a single light source at the far end creating a long, distorted shadow, subtle dust motes in the air\", \"texto_locucion\": \"Pero amanece ligeramente entreabierta. Siempre. Imposible.\", \"pexels_query\": \"dark hallway light\"}, {\"id\": 3, \"prompt\": \"A hand reaching for a door handle, the hand is blurred or shadowed, the handle gleams ominously in dim light\", \"prompt_visual\": \"A hand reaching for a door handle, the hand is blurred or shadowed, the handle gleams ominously in dim light\", \"texto_locucion\": \"Alguien debió tocarla. Abrirla de nuevo.\", \"pexels_query\": \"shadow hand doorknob\"}, {\"id\": 4, \"prompt\": \"An empty, slightly askew chair in a dimly lit room, suggesting recent occupation, cold desaturated tones\", \"prompt_visual\": \"An empty, slightly askew chair in a dimly lit room, suggesting recent occupation, cold desaturated tones\", \"texto_locucion\": \"Pero no había nadie más. Nadie lo vio.\", \"pexels_query\": \"empty chair dim\"}, {\"id\": 5, \"prompt\": \"A dark corner of a room, a subtle, almost imperceptible human-like silhouette blending into the shadows, high contrast\", \"prompt_visual\": \"A dark corner of a room, a subtle, almost imperceptible human-like silhouette blending into the shadows, high contrast\", \"texto_locucion\": \"Aunque sabes que algo no está bien.\", \"pexels_query\": \"shadow figure corner\"}, {\"id\": 6, \"prompt\": \"A closed bedroom door from the outside, the light beneath the door is a different color than expected, eerie glow\", \"prompt_visual\": \"A closed bedroom door from the outside, the light beneath the door is a different color than expected, eerie glow\", \"texto_locucion\": \"¿Quién encendió la luz de tu cuarto?\", \"pexels_query\": \"door light underneath\"}, {\"id\": 7, \"prompt\": \"A dark window at night, heavy rain streaks on the glass, a faint, distorted reflection of something not quite human\", \"prompt_visual\": \"A dark window at night, heavy rain streaks on the glass, a faint, distorted reflection of something not quite human\", \"texto_locucion\": \"Llovió toda la noche. Escuchaste los pasos.\", \"pexels_query\": \"rainy window reflection\"}, {\"id\": 8, \"prompt\": \"A pair of eyes glowing faintly in absolute darkness, subtle lens flare effect, unsettling closeness\", \"prompt_visual\": \"A pair of eyes glowing faintly in absolute darkness, subtle lens flare effect, unsettling closeness\", \"texto_locucion\": \"Sentiste que no estabas solo en casa.\", \"pexels_query\": \"eyes dark glowing\"}, {\"id\": 9, \"prompt\": \"An old, worn wooden floorboard, a single drop of water reflecting a distorted ceiling light, subtle ripple\", \"prompt_visual\": \"An old, worn wooden floorboard, a single drop of water reflecting a distorted ceiling light, subtle ripple\", \"texto_locucion\": \"Huellas mojadas en el pasillo. Nadie las dejó.\", \"pexels_query\": \"wet floorboard dark\"}, {\"id\": 10, \"prompt\": \"A mirror reflecting an empty room, but a faint, translucent, indistinct human-like shape is barely visible in the reflection\", \"prompt_visual\": \"A mirror reflecting an empty room, but a faint, translucent, indistinct human-like shape is barely visible in the reflection\", \"texto_locucion\": \"Tu propio reflejo a veces, es diferente.\", \"pexels_query\": \"mirror faint reflection\"}, {\"id\": 11, \"prompt\": \"A shadowy handprint on a dusty surface, distorted, too large or with too many fingers, high contrast\", \"prompt_visual\": \"A shadowy handprint on a dusty surface, distorted, too large or with too many fingers, high contrast\", \"texto_locucion\": \"¿Reconociste esa mano en el cristal empañado?\", \"pexels_query\": \"shadowy handprint dust\"}, {\"id\": 12, \"prompt\": \"A dimly lit staircase, a single step is worn down or broken in an odd way, creating an imbalance, cold tones\", \"prompt_visual\": \"A dimly lit staircase, a single step is worn down or broken in an odd way, creating an imbalance, cold tones\", \"texto_locucion\": \"Los escalones crujen sin que nadie camine.\", \"pexels_query\": \"dark staircase broken step\"}, {\"id\": 13, \"prompt\": \"A kitchen knife resting on a counter, slightly moved from its original position, a faint scratch mark nearby, eerie light\", \"prompt_visual\": \"A kitchen knife resting on a counter, slightly moved from its original position, a faint scratch mark nearby, eerie light\", \"texto_locucion\": \"Tus objetos cambian de lugar. Sin razón.\", \"pexels_query\": \"knife moved counter\"}, {\"id\": 14, \"prompt\": \"A closed curtain, but a faint, human-like shadow is cast on it from an unseen source, slightly distorted, unsettling\", \"prompt_visual\": \"A closed curtain, but a faint, human-like shadow is cast on it from an unseen source, slightly distorted, unsettling\", \"texto_locucion\": \"Las sombras bailan en las paredes vacías.\", \"pexels_query\": \"curtain human shadow\"}, {\"id\": 15, \"prompt\": \"A half-open book on a nightstand, the pages are slightly ruffled as if just read, but you haven't touched it\", \"prompt_visual\": \"A half-open book on a nightstand, the pages are slightly ruffled as if just read, but you haven't touched it\", \"texto_locucion\": \"¿Quién leyó ese libro que dejaste cerrado?\", \"pexels_query\": \"book open nightstand\"}, {\"id\": 16, \"prompt\": \"A dark, empty hallway, a single, old-fashioned clock on the wall, its hands are blurred, indicating impossible movement\", \"prompt_visual\": \"A dark, empty hallway, a single, old-fashioned clock on the wall, its hands are blurred, indicating impossible movement\", \"texto_locucion\": \"El tiempo se estira, se encoge. Tú lo sientes.\", \"pexels_query\": \"blurry clock hallway\"}, {\"id\": 17, \"prompt\": \"A closed bathroom door, a faint, deep red glow seeping from underneath, unsettling and unnatural\", \"prompt_visual\": \"A closed bathroom door, a faint, deep red glow seeping from underneath, unsettling and unnatural\", \"texto_locucion\": \"Esa luz roja bajo la puerta, ¿la has visto?\", \"pexels_query\": \"bathroom door red light\"}, {\"id\": 18, \"prompt\": \"A lone teacup on a table, a faint ripple in the tea, as if disturbed by a non-existent touch, dark setting\", \"prompt_visual\": \"A lone teacup on a table, a faint ripple in the tea, as if disturbed by a non-existent touch, dark setting\", \"texto_locucion\": \"El agua en el vaso vibra, aunque todo esté quieto.\", \"pexels_query\": \"teacup ripple dark\"}, {\"id\": 19, \"prompt\": \"A dark window pane, a single, perfectly round drop of condensation slowly forming, reflecting nothing, ominous\", \"prompt_visual\": \"A dark window pane, a single, perfectly round drop of condensation slowly forming, reflecting nothing, ominous\", \"texto_locucion\": \"Gotas de sudor frío caen de un techo seco.\", \"pexels_query\": \"window condensation dark\"}, {\"id\": 20, \"prompt\": \"A distorted, blurry human-like face made of static on an old TV screen in a dark room, no signal\", \"prompt_visual\": \"A distorted, blurry human-like face made of static on an old TV screen in a dark room, no signal\", \"texto_locucion\": \"La televisión se enciende sola. En estática.\", \"pexels_query\": \"static tv face\"}, {\"id\": 21, \"prompt\": \"An old, dusty coat hanging on a rack, a subtle, almost imperceptible sway, no visible air current\", \"prompt_visual\": \"An old, dusty coat hanging on a rack, a subtle, almost imperceptible sway, no visible air current\", \"texto_locucion\": \"Tu abrigo se balancea. No hay corriente de aire.\", \"pexels_query\": \"coat sway dark\"}, {\"id\": 22, \"prompt\": \"A long, dark corridor, a faint, disembodied whisper creating subtle vibrations in the air, visual representation of sound waves\", \"prompt_visual\": \"A long, dark corridor, a faint, disembodied whisper creating subtle vibrations in the air, visual representation of sound waves\", \"texto_locucion\": \"Escuchas susurros vacíos. Te llaman por tu nombre.\", \"pexels_query\": \"whisper dark corridor\"}, {\"id\": 23, \"prompt\": \"A dimly lit wall, a single, thin scratch mark that wasn't there before, unsettlingly deliberate, chiaroscuro\", \"prompt_visual\": \"A dimly lit wall, a single, thin scratch mark that wasn't there before, unsettlingly deliberate, chiaroscuro\", \"texto_locucion\": \"Marcas extrañas aparecen en las paredes. Nuevas.\", \"pexels_query\": \"wall scratch mark\"}, {\"id\": 24, \"prompt\": \"A bed with perfectly smooth sheets, but a human-like indentation is subtly visible on one side, as if someone just lay there\", \"prompt_visual\": \"A bed with perfectly smooth sheets, but a human-like indentation is subtly visible on one side, as if someone just lay there\", \"texto_locucion\": \"Tu cama tiene una marca. Como si hubieras dormido allí.\", \"pexels_query\": \"bed indentation sheets\"}, {\"id\": 25, \"prompt\": \"A shadowy figure standing at the end of a long, dark hallway, barely perceptible, watching, deep blacks\", \"prompt_visual\": \"A shadowy figure standing at the end of a long, dark hallway, barely perceptible, watching, deep blacks\", \"texto_locucion\": \"Nunca estás solo. Nunca lo has estado realmente.\", \"pexels_query\": \"shadow figure hallway\"}, {\"id\": 26, \"prompt\": \"A close-up of a partially opened curtain, a single, unnerving eye peering through the gap from outside, dark and disturbing\", \"prompt_visual\": \"A close-up of a partially opened curtain, a single, unnerving eye peering through the gap from outside, dark and disturbing\", \"texto_locucion\": \"Alguien te observa desde el rincón más oscuro.\", \"pexels_query\": \"eye peering curtain\"}, {\"id\": 27, \"prompt\": \"A distorted, blurry reflection of a human-like form in a polished floor, a faint, ominous glow around it, unsettling pareidolia\", \"prompt_visual\": \"A distorted, blurry reflection of a human-like form in a polished floor, a faint, ominous glow around it, unsettling pareidolia\", \"texto_locucion\": \"Ahora mira a tu alrededor. ¿Notaste algo distinto?\", \"pexels_query\": \"floor reflection distorted\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Cierras tu puerta con llave. Siempre lo haces. Pero amanece ligeramente entreabierta. Siempre. Imposible. Alguien debió tocarla. Abrirla de nuevo. Pero no había nadie más. Nadie lo vio. Aunque sabes que algo no está bien. ¿Quién encendió la luz de tu cuarto? Llovió toda la noche. Escuchaste los pasos. Sentiste que no estabas solo en casa. Huellas mojadas en el pasillo. Nadie las dejó. Tu propio reflejo a veces, es diferente. ¿Reconociste esa mano en el cristal empañado? Los escalones crujen sin que nadie camine. Tus objetos cambian de lugar. Sin razón. Las sombras bailan en las paredes vacías. ¿Quién leyó ese libro que dejaste cerrado? El tiempo se estira, se encoge. Tú lo sientes. Esa luz roja bajo la puerta, ¿la has visto? El agua en el vaso vibra, aunque todo esté quieto. Gotas de sudor frío caen de un techo seco. La televisión se enciende sola. En estática. Tu abrigo se balancea. No hay corriente de aire. Escuchas susurros vacíos. Te llaman por tu nombre. Marcas extrañas aparecen en las paredes. Nuevas. Tu cama tiene una marca. Como si hubieras dormido allí. Nunca estás solo. Nunca lo has estado realmente. Alguien te observa desde el rincón más oscuro. Ahora mira a tu alrededor. ¿Notaste algo distinto?",
+    "titulo_sugerido": "¿Tu Casa Se Mueve Sola?",
+    "escenas_texto": [
+      "Cierras tu puerta con llave. Siempre lo haces.",
+      "Pero amanece ligeramente entreabierta. Siempre. Imposible.",
+      "Alguien debió tocarla. Abrirla de nuevo.",
+      "Pero no había nadie más. Nadie lo vio.",
+      "Aunque sabes que algo no está bien.",
+      "¿Quién encendió la luz de tu cuarto?",
+      "Llovió toda la noche. Escuchaste los pasos.",
+      "Sentiste que no estabas solo en casa.",
+      "Huellas mojadas en el pasillo. Nadie las dejó.",
+      "Tu propio reflejo a veces, es diferente.",
+      "¿Reconociste esa mano en el cristal empañado?",
+      "Los escalones crujen sin que nadie camine.",
+      "Tus objetos cambian de lugar. Sin razón.",
+      "Las sombras bailan en las paredes vacías.",
+      "¿Quién leyó ese libro que dejaste cerrado?",
+      "El tiempo se estira, se encoge. Tú lo sientes.",
+      "Esa luz roja bajo la puerta, ¿la has visto?",
+      "El agua en el vaso vibra, aunque todo esté quieto.",
+      "Gotas de sudor frío caen de un techo seco.",
+      "La televisión se enciende sola. En estática.",
+      "Tu abrigo se balancea. No hay corriente de aire.",
+      "Escuchas susurros vacíos. Te llaman por tu nombre.",
+      "Marcas extrañas aparecen en las paredes. Nuevas.",
+      "Tu cama tiene una marca. Como si hubieras dormido allí.",
+      "Nunca estás solo. Nunca lo has estado realmente.",
+      "Alguien te observa desde el rincón más oscuro.",
+      "Ahora mira a tu alrededor. ¿Notaste algo distinto?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A slightly ajar old wooden door, deep shadow on one side, a sliver of eerie light from the other, grainy texture",
+        "prompt_visual": "A slightly ajar old wooden door, deep shadow on one side, a sliver of eerie light from the other, grainy texture",
+        "texto_locucion": "Cierras tu puerta con llave. Siempre lo haces.",
+        "pexels_query": "ajar door shadow"
+      },
+      {
+        "id": 2,
+        "prompt": "A dark hallway, a single light source at the far end creating a long, distorted shadow, subtle dust motes in the air",
+        "prompt_visual": "A dark hallway, a single light source at the far end creating a long, distorted shadow, subtle dust motes in the air",
+        "texto_locucion": "Pero amanece ligeramente entreabierta. Siempre. Imposible.",
+        "pexels_query": "dark hallway light"
+      },
+      {
+        "id": 3,
+        "prompt": "A hand reaching for a door handle, the hand is blurred or shadowed, the handle gleams ominously in dim light",
+        "prompt_visual": "A hand reaching for a door handle, the hand is blurred or shadowed, the handle gleams ominously in dim light",
+        "texto_locucion": "Alguien debió tocarla. Abrirla de nuevo.",
+        "pexels_query": "shadow hand doorknob"
+      },
+      {
+        "id": 4,
+        "prompt": "An empty, slightly askew chair in a dimly lit room, suggesting recent occupation, cold desaturated tones",
+        "prompt_visual": "An empty, slightly askew chair in a dimly lit room, suggesting recent occupation, cold desaturated tones",
+        "texto_locucion": "Pero no había nadie más. Nadie lo vio.",
+        "pexels_query": "empty chair dim"
+      },
+      {
+        "id": 5,
+        "prompt": "A dark corner of a room, a subtle, almost imperceptible human-like silhouette blending into the shadows, high contrast",
+        "prompt_visual": "A dark corner of a room, a subtle, almost imperceptible human-like silhouette blending into the shadows, high contrast",
+        "texto_locucion": "Aunque sabes que algo no está bien.",
+        "pexels_query": "shadow figure corner"
+      },
+      {
+        "id": 6,
+        "prompt": "A closed bedroom door from the outside, the light beneath the door is a different color than expected, eerie glow",
+        "prompt_visual": "A closed bedroom door from the outside, the light beneath the door is a different color than expected, eerie glow",
+        "texto_locucion": "¿Quién encendió la luz de tu cuarto?",
+        "pexels_query": "door light underneath"
+      },
+      {
+        "id": 7,
+        "prompt": "A dark window at night, heavy rain streaks on the glass, a faint, distorted reflection of something not quite human",
+        "prompt_visual": "A dark window at night, heavy rain streaks on the glass, a faint, distorted reflection of something not quite human",
+        "texto_locucion": "Llovió toda la noche. Escuchaste los pasos.",
+        "pexels_query": "rainy window reflection"
+      },
+      {
+        "id": 8,
+        "prompt": "A pair of eyes glowing faintly in absolute darkness, subtle lens flare effect, unsettling closeness",
+        "prompt_visual": "A pair of eyes glowing faintly in absolute darkness, subtle lens flare effect, unsettling closeness",
+        "texto_locucion": "Sentiste que no estabas solo en casa.",
+        "pexels_query": "eyes dark glowing"
+      },
+      {
+        "id": 9,
+        "prompt": "An old, worn wooden floorboard, a single drop of water reflecting a distorted ceiling light, subtle ripple",
+        "prompt_visual": "An old, worn wooden floorboard, a single drop of water reflecting a distorted ceiling light, subtle ripple",
+        "texto_locucion": "Huellas mojadas en el pasillo. Nadie las dejó.",
+        "pexels_query": "wet floorboard dark"
+      },
+      {
+        "id": 10,
+        "prompt": "A mirror reflecting an empty room, but a faint, translucent, indistinct human-like shape is barely visible in the reflection",
+        "prompt_visual": "A mirror reflecting an empty room, but a faint, translucent, indistinct human-like shape is barely visible in the reflection",
+        "texto_locucion": "Tu propio reflejo a veces, es diferente.",
+        "pexels_query": "mirror faint reflection"
+      },
+      {
+        "id": 11,
+        "prompt": "A shadowy handprint on a dusty surface, distorted, too large or with too many fingers, high contrast",
+        "prompt_visual": "A shadowy handprint on a dusty surface, distorted, too large or with too many fingers, high contrast",
+        "texto_locucion": "¿Reconociste esa mano en el cristal empañado?",
+        "pexels_query": "shadowy handprint dust"
+      },
+      {
+        "id": 12,
+        "prompt": "A dimly lit staircase, a single step is worn down or broken in an odd way, creating an imbalance, cold tones",
+        "prompt_visual": "A dimly lit staircase, a single step is worn down or broken in an odd way, creating an imbalance, cold tones",
+        "texto_locucion": "Los escalones crujen sin que nadie camine.",
+        "pexels_query": "dark staircase broken step"
+      },
+      {
+        "id": 13,
+        "prompt": "A kitchen knife resting on a counter, slightly moved from its original position, a faint scratch mark nearby, eerie light",
+        "prompt_visual": "A kitchen knife resting on a counter, slightly moved from its original position, a faint scratch mark nearby, eerie light",
+        "texto_locucion": "Tus objetos cambian de lugar. Sin razón.",
+        "pexels_query": "knife moved counter"
+      },
+      {
+        "id": 14,
+        "prompt": "A closed curtain, but a faint, human-like shadow is cast on it from an unseen source, slightly distorted, unsettling",
+        "prompt_visual": "A closed curtain, but a faint, human-like shadow is cast on it from an unseen source, slightly distorted, unsettling",
+        "texto_locucion": "Las sombras bailan en las paredes vacías.",
+        "pexels_query": "curtain human shadow"
+      },
+      {
+        "id": 15,
+        "prompt": "A half-open book on a nightstand, the pages are slightly ruffled as if just read, but you haven't touched it",
+        "prompt_visual": "A half-open book on a nightstand, the pages are slightly ruffled as if just read, but you haven't touched it",
+        "texto_locucion": "¿Quién leyó ese libro que dejaste cerrado?",
+        "pexels_query": "book open nightstand"
+      },
+      {
+        "id": 16,
+        "prompt": "A dark, empty hallway, a single, old-fashioned clock on the wall, its hands are blurred, indicating impossible movement",
+        "prompt_visual": "A dark, empty hallway, a single, old-fashioned clock on the wall, its hands are blurred, indicating impossible movement",
+        "texto_locucion": "El tiempo se estira, se encoge. Tú lo sientes.",
+        "pexels_query": "blurry clock hallway"
+      },
+      {
+        "id": 17,
+        "prompt": "A closed bathroom door, a faint, deep red glow seeping from underneath, unsettling and unnatural",
+        "prompt_visual": "A closed bathroom door, a faint, deep red glow seeping from underneath, unsettling and unnatural",
+        "texto_locucion": "Esa luz roja bajo la puerta, ¿la has visto?",
+        "pexels_query": "bathroom door red light"
+      },
+      {
+        "id": 18,
+        "prompt": "A lone teacup on a table, a faint ripple in the tea, as if disturbed by a non-existent touch, dark setting",
+        "prompt_visual": "A lone teacup on a table, a faint ripple in the tea, as if disturbed by a non-existent touch, dark setting",
+        "texto_locucion": "El agua en el vaso vibra, aunque todo esté quieto.",
+        "pexels_query": "teacup ripple dark"
+      },
+      {
+        "id": 19,
+        "prompt": "A dark window pane, a single, perfectly round drop of condensation slowly forming, reflecting nothing, ominous",
+        "prompt_visual": "A dark window pane, a single, perfectly round drop of condensation slowly forming, reflecting nothing, ominous",
+        "texto_locucion": "Gotas de sudor frío caen de un techo seco.",
+        "pexels_query": "window condensation dark"
+      },
+      {
+        "id": 20,
+        "prompt": "A distorted, blurry human-like face made of static on an old TV screen in a dark room, no signal",
+        "prompt_visual": "A distorted, blurry human-like face made of static on an old TV screen in a dark room, no signal",
+        "texto_locucion": "La televisión se enciende sola. En estática.",
+        "pexels_query": "static tv face"
+      },
+      {
+        "id": 21,
+        "prompt": "An old, dusty coat hanging on a rack, a subtle, almost imperceptible sway, no visible air current",
+        "prompt_visual": "An old, dusty coat hanging on a rack, a subtle, almost imperceptible sway, no visible air current",
+        "texto_locucion": "Tu abrigo se balancea. No hay corriente de aire.",
+        "pexels_query": "coat sway dark"
+      },
+      {
+        "id": 22,
+        "prompt": "A long, dark corridor, a faint, disembodied whisper creating subtle vibrations in the air, visual representation of sound waves",
+        "prompt_visual": "A long, dark corridor, a faint, disembodied whisper creating subtle vibrations in the air, visual representation of sound waves",
+        "texto_locucion": "Escuchas susurros vacíos. Te llaman por tu nombre.",
+        "pexels_query": "whisper dark corridor"
+      },
+      {
+        "id": 23,
+        "prompt": "A dimly lit wall, a single, thin scratch mark that wasn't there before, unsettlingly deliberate, chiaroscuro",
+        "prompt_visual": "A dimly lit wall, a single, thin scratch mark that wasn't there before, unsettlingly deliberate, chiaroscuro",
+        "texto_locucion": "Marcas extrañas aparecen en las paredes. Nuevas.",
+        "pexels_query": "wall scratch mark"
+      },
+      {
+        "id": 24,
+        "prompt": "A bed with perfectly smooth sheets, but a human-like indentation is subtly visible on one side, as if someone just lay there",
+        "prompt_visual": "A bed with perfectly smooth sheets, but a human-like indentation is subtly visible on one side, as if someone just lay there",
+        "texto_locucion": "Tu cama tiene una marca. Como si hubieras dormido allí.",
+        "pexels_query": "bed indentation sheets"
+      },
+      {
+        "id": 25,
+        "prompt": "A shadowy figure standing at the end of a long, dark hallway, barely perceptible, watching, deep blacks",
+        "prompt_visual": "A shadowy figure standing at the end of a long, dark hallway, barely perceptible, watching, deep blacks",
+        "texto_locucion": "Nunca estás solo. Nunca lo has estado realmente.",
+        "pexels_query": "shadow figure hallway"
+      },
+      {
+        "id": 26,
+        "prompt": "A close-up of a partially opened curtain, a single, unnerving eye peering through the gap from outside, dark and disturbing",
+        "prompt_visual": "A close-up of a partially opened curtain, a single, unnerving eye peering through the gap from outside, dark and disturbing",
+        "texto_locucion": "Alguien te observa desde el rincón más oscuro.",
+        "pexels_query": "eye peering curtain"
+      },
+      {
+        "id": 27,
+        "prompt": "A distorted, blurry reflection of a human-like form in a polished floor, a faint, ominous glow around it, unsettling pareidolia",
+        "prompt_visual": "A distorted, blurry reflection of a human-like form in a polished floor, a faint, ominous glow around it, unsettling pareidolia",
+        "texto_locucion": "Ahora mira a tu alrededor. ¿Notaste algo distinto?",
+        "pexels_query": "floor reflection distorted"
+      }
+    ],
+    "hooks": [
+      "La llave giró, ¿o no?",
+      "Siluetas que no existen",
+      "Tu casa no está vacía"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
