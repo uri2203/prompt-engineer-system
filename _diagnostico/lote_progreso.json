@@ -1,92 +1,10 @@
 {
-  "estado_lote": "completado",
-  "total": 10,
-  "completados": 9,
-  "fallidos": 1,
-  "trabajo_actual": "Enfriando nodos... 20s",
-  "mensaje": "Lote terminado: 9 completados, 1 fallidos (omitidos).",
-  "resumen": "LaesquinaRandom: 0s+5L | TuIALista: 0s+5L",
-  "historial": [
-    {
-      "n": 1,
-      "marca": "LaesquinaRandom",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1948.9,
-      "hora": "22:25"
-    },
-    {
-      "n": 2,
-      "marca": "LaesquinaRandom",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2193.9,
-      "hora": "06:39"
-    },
-    {
-      "n": 3,
-      "marca": "LaesquinaRandom",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2302.0,
-      "hora": "10:14"
-    },
-    {
-      "n": 4,
-      "marca": "LaesquinaRandom",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1782.9,
-      "hora": "13:33"
-    },
-    {
-      "n": 5,
-      "marca": "LaesquinaRandom",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2013.0,
-      "hora": "00:26"
-    },
-    {
-      "n": 6,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2354.0,
-      "hora": "03:27"
-    },
-    {
-      "n": 7,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1941.4,
-      "hora": "08:39"
-    },
-    {
-      "n": 8,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1951.2,
-      "hora": "13:40"
-    },
-    {
-      "n": 10,
-      "marca": "TuIALista",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1995.9,
-      "hora": "15:03"
-    }
-  ]
+  "estado_lote": "produciendo",
+  "total": 25,
+  "completados": 0,
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
+  "historial": []
 }
