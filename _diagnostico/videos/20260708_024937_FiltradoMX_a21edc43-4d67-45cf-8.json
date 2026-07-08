@@ -1,0 +1,24 @@
+{
+  "id": "a21edc43-4d67-45cf-815b-9dbb7ab60487_asm",
+  "marca": "FiltradoMX",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-08 02:49:37",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Ensamblaje sin texto de locución: video NO generado (orden vacía)."
+  ]
+}
