@@ -1,1 +1,221 @@
-[]
+[
+  {
+    "id": "3e020364-11b2-4c54-9147-553678b51779",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"global map showing shifting alliances, strategic lines, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"global map showing shifting alliances, strategic lines, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La influencia geopolítica de Trump: no es como la perciben.\", \"pexels_query\": \"geopolitical map\"}, {\"id\": 2, \"prompt\": \"war room projection screen with tactical overlays, strategy planning, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"war room projection screen with tactical overlays, strategy planning, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Muchos analizan solo declaraciones. El verdadero impacto es táctico.\", \"pexels_query\": \"tactical war room\"}, {\"id\": 3, \"prompt\": \"industrial port with shipping containers, cranes, vast scale, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"industrial port with shipping containers, cranes, vast scale, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Trump usa la economía como palanca de negociación directa.\", \"pexels_query\": \"busy cargo port\"}, {\"id\": 4, \"prompt\": \"factory assembly line, complex machinery, production robots, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"factory assembly line, complex machinery, production robots, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Sus tarifas a China reconfiguraron cadenas de suministro globales.\", \"pexels_query\": \"automated factory line\"}, {\"id\": 5, \"prompt\": \"logistics hub, truck depots, warehouses, empty, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"logistics hub, truck depots, warehouses, empty, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó con la inversión directa en Vietnam, México.\", \"pexels_query\": \"logistics warehouse\"}, {\"id\": 6, \"prompt\": \"world map with trade routes highlighted, financial data overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"world map with trade routes highlighted, financial data overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero: no ideología, sino transacciones puras.\", \"pexels_query\": \"global trade map\"}, {\"id\": 7, \"prompt\": \"modern military base, empty hangers, armored vehicles lined up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"modern military base, empty hangers, armored vehicles lined up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Europa sintió presión directa por su presupuesto de defensa.\", \"pexels_query\": \"military base infrastructure\"}, {\"id\": 8, \"prompt\": \"conference room, empty table with flags of NATO countries, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"conference room, empty table with flags of NATO countries, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La OTAN, para él, era una alianza de costo-beneficio claro.\", \"pexels_query\": \"empty conference room flags\"}, {\"id\": 9, \"prompt\": \"satellite image of a geopolitical hot spot, border lines, strategic points, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"satellite image of a geopolitical hot spot, border lines, strategic points, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real muestra una renegociación de alianzas tradicionales.\", \"pexels_query\": \"satellite border region\"}, {\"id\": 10, \"prompt\": \"massive oil refinery complex, pipelines, industrial chimneys, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"massive oil refinery complex, pipelines, industrial chimneys, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Su acercamiento a Arabia Saudita buscó asegurar energía barata.\", \"pexels_query\": \"oil refinery complex\"}, {\"id\": 11, \"prompt\": \"command center, multiple screens displaying data, charts, strategic maps, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"command center, multiple screens displaying data, charts, strategic maps, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen: todo fue un movimiento táctico coordinado.\", \"pexels_query\": \"empty command center\"}, {\"id\": 12, \"prompt\": \"financial ticker board, stock market data, currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"financial ticker board, stock market data, currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La desdolarización BRICS aceleró tras sus sanciones unilaterales.\", \"pexels_query\": \"financial data screen\"}, {\"id\": 13, \"prompt\": \"stacks of different national currencies, juxtaposed with digital currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"stacks of different national currencies, juxtaposed with digital currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Generó un impulso hacia monedas locales y acuerdos directos.\", \"pexels_query\": \"diverse currency stacks\"}, {\"id\": 14, \"prompt\": \"ancient desert landscape, modern border crossing, security fences, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"ancient desert landscape, modern border crossing, security fences, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El acuerdo de paz de Abraham: un realineamiento regional estratégico.\", \"pexels_query\": \"desert border crossing\"}, {\"id\": 15, \"prompt\": \"radar dish array, military surveillance equipment, clear sky, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"radar dish array, military surveillance equipment, clear sky, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Israel y sus vecinos forjaron lazos ante amenaza común iraní.\", \"pexels_query\": \"military radar array\"}, {\"id\": 16, \"prompt\": \"secure data center, server racks, glowing lights, empty corridors, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"secure data center, server racks, glowing lights, empty corridors, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas confirman la prioridad transaccional sobre diplomática.\", \"pexels_query\": \"secure data center\"}, {\"id\": 17, \"prompt\": \"microchips on a circuit board, intricate electronic components, close-up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"microchips on a circuit board, intricate electronic components, close-up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Una segunda administración reactivaría la guerra comercial tecnológica.\", \"pexels_query\": \"microchip manufacturing\"}, {\"id\": 18, \"prompt\": \"advanced semiconductor factory interior, clean room environment, robotic arms, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"advanced semiconductor factory interior, clean room environment, robotic arms, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Chips, semiconductores: la batalla por la hegemonía global crece.\", \"pexels_query\": \"semiconductor clean room\"}, {\"id\": 19, \"prompt\": \"chessboard with complex position, strategic pieces, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"chessboard with complex position, strategic pieces, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Sus opositores lo subestiman, pero su lógica es brutalmente eficaz.\", \"pexels_query\": \"complex chess board\"}, {\"id\": 20, \"prompt\": \"empty supermarket shelves, stark lighting, economic scarcity visualization, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"empty supermarket shelves, stark lighting, economic scarcity visualization, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El proteccionismo extremo afectaría precios y disponibilidad mundial.\", \"pexels_query\": \"empty market shelves\"}, {\"id\": 21, \"prompt\": \"flags of EU and China, side by side, focused on fabric texture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"flags of EU and China, side by side, focused on fabric texture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La UE y China prepararían defensas económicas coordinadas ahora.\", \"pexels_query\": \"EU China flags\"}, {\"id\": 22, \"prompt\": \"broken glass shattering pattern, abstract representation of disruption, dark background, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"broken glass shattering pattern, abstract representation of disruption, dark background, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El poder de Trump no reside en consenso, sino en disrupción.\", \"pexels_query\": \"shattering glass pattern\"}, {\"id\": 23, \"prompt\": \"ancient ruins juxtaposed with modern construction, contrast of old and new order, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"ancient ruins juxtaposed with modern construction, contrast of old and new order, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta estrategia descompone el orden preestablecido, creando nuevas reglas.\", \"pexels_query\": \"ancient modern architecture\"}, {\"id\": 24, \"prompt\": \"crossroads sign, multiple directions, foggy background, strategic choice, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"crossroads sign, multiple directions, foggy background, strategic choice, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"¿Continuará este ciclo de deconstrucción global o se estabilizará?\", \"pexels_query\": \"strategic crossroads\"}, {\"id\": 25, \"prompt\": \"scales of justice, imbalanced, showing global impact, dramatic lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"scales of justice, imbalanced, showing global impact, dramatic lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"¿Cuál es el costo real de esta reconfiguración del tablero?\", \"pexels_query\": \"imbalanced scales\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "La influencia geopolítica de Trump: no es como la perciben. Muchos analizan solo declaraciones. El verdadero impacto es táctico. Trump usa la economía como palanca de negociación directa. Sus tarifas a China reconfiguraron cadenas de suministro globales. Nadie lo conectó con la inversión directa en Vietnam, México. Esto cambia el tablero: no ideología, sino transacciones puras. Europa sintió presión directa por su presupuesto de defensa. La OTAN, para él, era una alianza de costo-beneficio claro. El mapa real muestra una renegociación de alianzas tradicionales. Su acercamiento a Arabia Saudita buscó asegurar energía barata. Lo que no te dicen: todo fue un movimiento táctico coordinado. La desdolarización BRICS aceleró tras sus sanciones unilaterales. Generó un impulso hacia monedas locales y acuerdos directos. El acuerdo de paz de Abraham: un realineamiento regional estratégico. Israel y sus vecinos forjaron lazos ante amenaza común iraní. Fuentes verificadas confirman la prioridad transaccional sobre diplomática. Una segunda administración reactivaría la guerra comercial tecnológica. Chips, semiconductores: la batalla por la hegemonía global crece. Sus opositores lo subestiman, pero su lógica es brutalmente eficaz. El proteccionismo extremo afectaría precios y disponibilidad mundial. La UE y China prepararían defensas económicas coordinadas ahora. El poder de Trump no reside en consenso, sino en disrupción. Esta estrategia descompone el orden preestablecido, creando nuevas reglas. ¿Continuará este ciclo de deconstrucción global o se estabilizará? ¿Cuál es el costo real de esta reconfiguración del tablero?",
+    "titulo_sugerido": "Trump y el Tablero Global: El Mecanismo Oculto de su Poder",
+    "escenas_texto": [
+      "La influencia geopolítica de Trump: no es como la perciben.",
+      "Muchos analizan solo declaraciones. El verdadero impacto es táctico.",
+      "Trump usa la economía como palanca de negociación directa.",
+      "Sus tarifas a China reconfiguraron cadenas de suministro globales.",
+      "Nadie lo conectó con la inversión directa en Vietnam, México.",
+      "Esto cambia el tablero: no ideología, sino transacciones puras.",
+      "Europa sintió presión directa por su presupuesto de defensa.",
+      "La OTAN, para él, era una alianza de costo-beneficio claro.",
+      "El mapa real muestra una renegociación de alianzas tradicionales.",
+      "Su acercamiento a Arabia Saudita buscó asegurar energía barata.",
+      "Lo que no te dicen: todo fue un movimiento táctico coordinado.",
+      "La desdolarización BRICS aceleró tras sus sanciones unilaterales.",
+      "Generó un impulso hacia monedas locales y acuerdos directos.",
+      "El acuerdo de paz de Abraham: un realineamiento regional estratégico.",
+      "Israel y sus vecinos forjaron lazos ante amenaza común iraní.",
+      "Fuentes verificadas confirman la prioridad transaccional sobre diplomática.",
+      "Una segunda administración reactivaría la guerra comercial tecnológica.",
+      "Chips, semiconductores: la batalla por la hegemonía global crece.",
+      "Sus opositores lo subestiman, pero su lógica es brutalmente eficaz.",
+      "El proteccionismo extremo afectaría precios y disponibilidad mundial.",
+      "La UE y China prepararían defensas económicas coordinadas ahora.",
+      "El poder de Trump no reside en consenso, sino en disrupción.",
+      "Esta estrategia descompone el orden preestablecido, creando nuevas reglas.",
+      "¿Continuará este ciclo de deconstrucción global o se estabilizará?",
+      "¿Cuál es el costo real de esta reconfiguración del tablero?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "global map showing shifting alliances, strategic lines, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "global map showing shifting alliances, strategic lines, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La influencia geopolítica de Trump: no es como la perciben.",
+        "pexels_query": "geopolitical map"
+      },
+      {
+        "id": 2,
+        "prompt": "war room projection screen with tactical overlays, strategy planning, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "war room projection screen with tactical overlays, strategy planning, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Muchos analizan solo declaraciones. El verdadero impacto es táctico.",
+        "pexels_query": "tactical war room"
+      },
+      {
+        "id": 3,
+        "prompt": "industrial port with shipping containers, cranes, vast scale, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "industrial port with shipping containers, cranes, vast scale, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Trump usa la economía como palanca de negociación directa.",
+        "pexels_query": "busy cargo port"
+      },
+      {
+        "id": 4,
+        "prompt": "factory assembly line, complex machinery, production robots, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "factory assembly line, complex machinery, production robots, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Sus tarifas a China reconfiguraron cadenas de suministro globales.",
+        "pexels_query": "automated factory line"
+      },
+      {
+        "id": 5,
+        "prompt": "logistics hub, truck depots, warehouses, empty, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "logistics hub, truck depots, warehouses, empty, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó con la inversión directa en Vietnam, México.",
+        "pexels_query": "logistics warehouse"
+      },
+      {
+        "id": 6,
+        "prompt": "world map with trade routes highlighted, financial data overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "world map with trade routes highlighted, financial data overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero: no ideología, sino transacciones puras.",
+        "pexels_query": "global trade map"
+      },
+      {
+        "id": 7,
+        "prompt": "modern military base, empty hangers, armored vehicles lined up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "modern military base, empty hangers, armored vehicles lined up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Europa sintió presión directa por su presupuesto de defensa.",
+        "pexels_query": "military base infrastructure"
+      },
+      {
+        "id": 8,
+        "prompt": "conference room, empty table with flags of NATO countries, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "conference room, empty table with flags of NATO countries, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La OTAN, para él, era una alianza de costo-beneficio claro.",
+        "pexels_query": "empty conference room flags"
+      },
+      {
+        "id": 9,
+        "prompt": "satellite image of a geopolitical hot spot, border lines, strategic points, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "satellite image of a geopolitical hot spot, border lines, strategic points, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real muestra una renegociación de alianzas tradicionales.",
+        "pexels_query": "satellite border region"
+      },
+      {
+        "id": 10,
+        "prompt": "massive oil refinery complex, pipelines, industrial chimneys, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "massive oil refinery complex, pipelines, industrial chimneys, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Su acercamiento a Arabia Saudita buscó asegurar energía barata.",
+        "pexels_query": "oil refinery complex"
+      },
+      {
+        "id": 11,
+        "prompt": "command center, multiple screens displaying data, charts, strategic maps, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "command center, multiple screens displaying data, charts, strategic maps, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen: todo fue un movimiento táctico coordinado.",
+        "pexels_query": "empty command center"
+      },
+      {
+        "id": 12,
+        "prompt": "financial ticker board, stock market data, currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "financial ticker board, stock market data, currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La desdolarización BRICS aceleró tras sus sanciones unilaterales.",
+        "pexels_query": "financial data screen"
+      },
+      {
+        "id": 13,
+        "prompt": "stacks of different national currencies, juxtaposed with digital currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "stacks of different national currencies, juxtaposed with digital currency symbols, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Generó un impulso hacia monedas locales y acuerdos directos.",
+        "pexels_query": "diverse currency stacks"
+      },
+      {
+        "id": 14,
+        "prompt": "ancient desert landscape, modern border crossing, security fences, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "ancient desert landscape, modern border crossing, security fences, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El acuerdo de paz de Abraham: un realineamiento regional estratégico.",
+        "pexels_query": "desert border crossing"
+      },
+      {
+        "id": 15,
+        "prompt": "radar dish array, military surveillance equipment, clear sky, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "radar dish array, military surveillance equipment, clear sky, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Israel y sus vecinos forjaron lazos ante amenaza común iraní.",
+        "pexels_query": "military radar array"
+      },
+      {
+        "id": 16,
+        "prompt": "secure data center, server racks, glowing lights, empty corridors, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "secure data center, server racks, glowing lights, empty corridors, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas confirman la prioridad transaccional sobre diplomática.",
+        "pexels_query": "secure data center"
+      },
+      {
+        "id": 17,
+        "prompt": "microchips on a circuit board, intricate electronic components, close-up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "microchips on a circuit board, intricate electronic components, close-up, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Una segunda administración reactivaría la guerra comercial tecnológica.",
+        "pexels_query": "microchip manufacturing"
+      },
+      {
+        "id": 18,
+        "prompt": "advanced semiconductor factory interior, clean room environment, robotic arms, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "advanced semiconductor factory interior, clean room environment, robotic arms, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Chips, semiconductores: la batalla por la hegemonía global crece.",
+        "pexels_query": "semiconductor clean room"
+      },
+      {
+        "id": 19,
+        "prompt": "chessboard with complex position, strategic pieces, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "chessboard with complex position, strategic pieces, dim lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Sus opositores lo subestiman, pero su lógica es brutalmente eficaz.",
+        "pexels_query": "complex chess board"
+      },
+      {
+        "id": 20,
+        "prompt": "empty supermarket shelves, stark lighting, economic scarcity visualization, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "empty supermarket shelves, stark lighting, economic scarcity visualization, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El proteccionismo extremo afectaría precios y disponibilidad mundial.",
+        "pexels_query": "empty market shelves"
+      },
+      {
+        "id": 21,
+        "prompt": "flags of EU and China, side by side, focused on fabric texture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "flags of EU and China, side by side, focused on fabric texture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La UE y China prepararían defensas económicas coordinadas ahora.",
+        "pexels_query": "EU China flags"
+      },
+      {
+        "id": 22,
+        "prompt": "broken glass shattering pattern, abstract representation of disruption, dark background, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "broken glass shattering pattern, abstract representation of disruption, dark background, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El poder de Trump no reside en consenso, sino en disrupción.",
+        "pexels_query": "shattering glass pattern"
+      },
+      {
+        "id": 23,
+        "prompt": "ancient ruins juxtaposed with modern construction, contrast of old and new order, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "ancient ruins juxtaposed with modern construction, contrast of old and new order, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta estrategia descompone el orden preestablecido, creando nuevas reglas.",
+        "pexels_query": "ancient modern architecture"
+      },
+      {
+        "id": 24,
+        "prompt": "crossroads sign, multiple directions, foggy background, strategic choice, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "crossroads sign, multiple directions, foggy background, strategic choice, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "¿Continuará este ciclo de deconstrucción global o se estabilizará?",
+        "pexels_query": "strategic crossroads"
+      },
+      {
+        "id": 25,
+        "prompt": "scales of justice, imbalanced, showing global impact, dramatic lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "scales of justice, imbalanced, showing global impact, dramatic lighting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "¿Cuál es el costo real de esta reconfiguración del tablero?",
+        "pexels_query": "imbalanced scales"
+      }
+    ],
+    "hooks": [
+      "Poder real, no percepción.",
+      "OTAN: ¿una empresa?",
+      "Tarifas redefinen comercio."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
