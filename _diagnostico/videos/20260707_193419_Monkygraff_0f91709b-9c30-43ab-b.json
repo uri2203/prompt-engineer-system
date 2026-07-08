@@ -1,0 +1,24 @@
+{
+  "id": "0f91709b-9c30-43ab-b408-01e1f2f4ade6_asm",
+  "marca": "Monkygraff",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-07 19:34:19",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Ensamblaje sin texto de locución: video NO generado (orden vacía)."
+  ]
+}
