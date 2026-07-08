@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "65c24420-acfd-4ab1-8dc8-f9e6867ba447",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Child's colorful crayon drawing on paper, unsettling imagery, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's colorful crayon drawing on paper, unsettling imagery, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo que tu hijo dibuja... a veces esconde verdades muy incómodas.\", \"pexels_query\": \"child drawing crayon\"}, {\"id\": 2, \"prompt\": \"Messy living room, toys scattered, slightly disheveled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Messy living room, toys scattered, slightly disheveled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Había una familia que parecía perfecta. Con un hijo pequeño.\", \"pexels_query\": \"messy living room\"}, {\"id\": 3, \"prompt\": \"Child's hand holding a drawing, partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's hand holding a drawing, partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero el niño empezó a llenar hojas con dibujos extraños.\", \"pexels_query\": \"child hand drawing\"}, {\"id\": 4, \"prompt\": \"Close-up of a child's drawing, dark colors, disturbing shapes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a child's drawing, dark colors, disturbing shapes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Cosas que no tenían sentido para su edad. Figuras sombrías.\", \"pexels_query\": \"dark child drawing\"}, {\"id\": 5, \"prompt\": \"Woman's hand holding a phone, looking concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Woman's hand holding a phone, looking concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Los padres los ignoraban, decían que era pura imaginación.\", \"pexels_query\": \"woman phone worried\"}, {\"id\": 6, \"prompt\": \"Teacher's desk, pile of papers, a specific drawing highlighted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Teacher's desk, pile of papers, a specific drawing highlighted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero la maestra del kínder, ella sí vio algo diferente.\", \"pexels_query\": \"teacher desk drawing\"}, {\"id\": 7, \"prompt\": \"Document with blurred text, official-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Document with blurred text, official-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Se preocupó. Los reportó a las autoridades de protección.\", \"pexels_query\": \"official document blurred\"}, {\"id\": 8, \"prompt\": \"Hand writing on a notepad, serious tone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand writing on a notepad, serious tone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Algo no estaba bien, y ella lo sentía antes que nadie.\", \"pexels_query\": \"hand writing notes\"}, {\"id\": 9, \"prompt\": \"Front door of a house, slightly ajar, a glimpse of light from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Front door of a house, slightly ajar, a glimpse of light from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Así, un día, el Consejo Tutelar llegó a la casa.\", \"pexels_query\": \"house front door ajar\"}, {\"id\": 10, \"prompt\": \"Blurred image of a woman's silhouette arguing, hand gestures, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred image of a woman's silhouette arguing, hand gestures, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La madre estalló, gritando que era una injusticia total.\", \"pexels_query\": \"woman silhouette arguing\"}, {\"id\": 11, \"prompt\": \"Crowd of blurred figures, looking angry or concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Crowd of blurred figures, looking angry or concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Los vecinos y amigos apoyaron a la mamá, indignados.\", \"pexels_query\": \"angry crowd blurred\"}, {\"id\": 12, \"prompt\": \"Smartphone screen showing news headline (blurred), controversy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Smartphone screen showing news headline (blurred), controversy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La historia se hizo viral: 'una madre inocente, víctima'.\", \"pexels_query\": \"smartphone news headline\"}, {\"id\": 13, \"prompt\": \"Empty child's bedroom, slightly dark, a single toy on the bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty child's bedroom, slightly dark, a single toy on the bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Todos condenaban al Consejo Tutelar por su 'abuso'.\", \"pexels_query\": \"empty child bedroom\"}, {\"id\": 14, \"prompt\": \"Child's hand reaching for a therapist's hand (blurred), comforting gesture, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's hand reaching for a therapist's hand (blurred), comforting gesture, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero nadie lo vio, lo que el niño dijo realmente después.\", \"pexels_query\": \"child therapist comforting\"}, {\"id\": 15, \"prompt\": \"Close-up of a child's drawing, distinct, unsettling detail, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a child's drawing, distinct, unsettling detail, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esos dibujos no eran fantasía. Eran un grito de auxilio.\", \"pexels_query\": \"child drawing unsettling detail\"}, {\"id\": 16, \"prompt\": \"Corner of a dark room, shadows, a sense of hiding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Corner of a dark room, shadows, a sense of hiding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El niño describió horrores ocultos... en un silencio absoluto.\", \"pexels_query\": \"dark room shadows\"}, {\"id\": 17, \"prompt\": \"Frayed and worn blanket on a bed, slightly rumpled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Frayed and worn blanket on a bed, slightly rumpled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No inventó nada. Solo representó su dolor de una forma.\", \"pexels_query\": \"frayed blanket bed\"}, {\"id\": 18, \"prompt\": \"A small, overturned chair in a corner, implying sudden movement, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, overturned chair in a corner, implying sudden movement, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La madre no era la víctima, sino parte de su calvario.\", \"pexels_query\": \"overturned chair corner\"}, {\"id\": 19, \"prompt\": \"Locked diary, old and worn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Locked diary, old and worn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella lo mantuvo escondido, lo negó ante todos los ojos.\", \"pexels_query\": \"locked diary worn\"}, {\"id\": 20, \"prompt\": \"Child's teddy bear, lying face down, a bit sad, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's teddy bear, lying face down, a bit sad, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las heridas del pequeño eran más profundas que los golpes.\", \"pexels_query\": \"teddy bear face down\"}, {\"id\": 21, \"prompt\": \"Dark hallway, distant light, sense of foreboding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark hallway, distant light, sense of foreboding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y el Consejo Tutelar... solo buscaba la verdad, su protección.\", \"pexels_query\": \"dark hallway distant light\"}, {\"id\": 22, \"prompt\": \"A single, wilting flower in a small vase, fragile, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, wilting flower in a small vase, fragile, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esa madre que todos defendían, era quien lo dañaba.\", \"pexels_query\": \"wilting flower vase\"}, {\"id\": 23, \"prompt\": \"Child's small shoes, dusty, abandoned-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's small shoes, dusty, abandoned-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No puedes ignorarlo. Lo que se oculta siempre sale a la luz.\", \"pexels_query\": \"child shoes dusty\"}, {\"id\": 24, \"prompt\": \"Cracked wall texture, subtle light, suggesting hidden damage, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Cracked wall texture, subtle light, suggesting hidden damage, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las apariencias engañan y la verdad es perturbadora.\", \"pexels_query\": \"cracked wall texture\"}, {\"id\": 25, \"prompt\": \"Shadow of a hand covering a mouth, gesture of silence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shadow of a hand covering a mouth, gesture of silence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Creías que el cuento era diferente? Pues no estabas solo.\", \"pexels_query\": \"shadow hand covering mouth\"}, {\"id\": 26, \"prompt\": \"Empty swingset, lonely atmosphere, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty swingset, lonely atmosphere, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esta historia de doble vida... ¿la habías escuchado antes?\", \"pexels_query\": \"empty swingset lonely\"}, {\"id\": 27, \"prompt\": \"A single, isolated street light at dusk, mysterious, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, isolated street light at dusk, mysterious, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Les ha pasado algo así en su familia?\", \"pexels_query\": \"street light dusk\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Lo que tu hijo dibuja... a veces esconde verdades muy incómodas. Había una familia que parecía perfecta. Con un hijo pequeño. Pero el niño empezó a llenar hojas con dibujos extraños. Cosas que no tenían sentido para su edad. Figuras sombrías. Los padres los ignoraban, decían que era pura imaginación. Pero la maestra del kínder, ella sí vio algo diferente. Se preocupó. Los reportó a las autoridades de protección. Algo no estaba bien, y ella lo sentía antes que nadie. Así, un día, el Consejo Tutelar llegó a la casa. La madre estalló, gritando que era una injusticia total. Los vecinos y amigos apoyaron a la mamá, indignados. La historia se hizo viral: 'una madre inocente, víctima'. Todos condenaban al Consejo Tutelar por su 'abuso'. Pero nadie lo vio, lo que el niño dijo realmente después. Esos dibujos no eran fantasía. Eran un grito de auxilio. El niño describió horrores ocultos... en un silencio absoluto. No inventó nada. Solo representó su dolor de una forma. La madre no era la víctima, sino parte de su calvario. Ella lo mantuvo escondido, lo negó ante todos los ojos. Las heridas del pequeño eran más profundas que los golpes. Y el Consejo Tutelar... solo buscaba la verdad, su protección. Esa madre que todos defendían, era quien lo dañaba. No puedes ignorarlo. Lo que se oculta siempre sale a la luz. Las apariencias engañan y la verdad es perturbadora. ¿Creías que el cuento era diferente? Pues no estabas solo. Esta historia de doble vida... ¿la habías escuchado antes? ¿Les ha pasado algo así en su familia?",
+    "titulo_sugerido": "Madre Defiende a su Hijo, Pero Escondía Un Secreto Oscuro",
+    "escenas_texto": [
+      "Lo que tu hijo dibuja... a veces esconde verdades muy incómodas.",
+      "Había una familia que parecía perfecta. Con un hijo pequeño.",
+      "Pero el niño empezó a llenar hojas con dibujos extraños.",
+      "Cosas que no tenían sentido para su edad. Figuras sombrías.",
+      "Los padres los ignoraban, decían que era pura imaginación.",
+      "Pero la maestra del kínder, ella sí vio algo diferente.",
+      "Se preocupó. Los reportó a las autoridades de protección.",
+      "Algo no estaba bien, y ella lo sentía antes que nadie.",
+      "Así, un día, el Consejo Tutelar llegó a la casa.",
+      "La madre estalló, gritando que era una injusticia total.",
+      "Los vecinos y amigos apoyaron a la mamá, indignados.",
+      "La historia se hizo viral: 'una madre inocente, víctima'.",
+      "Todos condenaban al Consejo Tutelar por su 'abuso'.",
+      "Pero nadie lo vio, lo que el niño dijo realmente después.",
+      "Esos dibujos no eran fantasía. Eran un grito de auxilio.",
+      "El niño describió horrores ocultos... en un silencio absoluto.",
+      "No inventó nada. Solo representó su dolor de una forma.",
+      "La madre no era la víctima, sino parte de su calvario.",
+      "Ella lo mantuvo escondido, lo negó ante todos los ojos.",
+      "Las heridas del pequeño eran más profundas que los golpes.",
+      "Y el Consejo Tutelar... solo buscaba la verdad, su protección.",
+      "Esa madre que todos defendían, era quien lo dañaba.",
+      "No puedes ignorarlo. Lo que se oculta siempre sale a la luz.",
+      "Las apariencias engañan y la verdad es perturbadora.",
+      "¿Creías que el cuento era diferente? Pues no estabas solo.",
+      "Esta historia de doble vida... ¿la habías escuchado antes?",
+      "¿Les ha pasado algo así en su familia?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Child's colorful crayon drawing on paper, unsettling imagery, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's colorful crayon drawing on paper, unsettling imagery, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo que tu hijo dibuja... a veces esconde verdades muy incómodas.",
+        "pexels_query": "child drawing crayon"
+      },
+      {
+        "id": 2,
+        "prompt": "Messy living room, toys scattered, slightly disheveled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Messy living room, toys scattered, slightly disheveled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Había una familia que parecía perfecta. Con un hijo pequeño.",
+        "pexels_query": "messy living room"
+      },
+      {
+        "id": 3,
+        "prompt": "Child's hand holding a drawing, partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's hand holding a drawing, partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero el niño empezó a llenar hojas con dibujos extraños.",
+        "pexels_query": "child hand drawing"
+      },
+      {
+        "id": 4,
+        "prompt": "Close-up of a child's drawing, dark colors, disturbing shapes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a child's drawing, dark colors, disturbing shapes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Cosas que no tenían sentido para su edad. Figuras sombrías.",
+        "pexels_query": "dark child drawing"
+      },
+      {
+        "id": 5,
+        "prompt": "Woman's hand holding a phone, looking concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Woman's hand holding a phone, looking concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Los padres los ignoraban, decían que era pura imaginación.",
+        "pexels_query": "woman phone worried"
+      },
+      {
+        "id": 6,
+        "prompt": "Teacher's desk, pile of papers, a specific drawing highlighted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Teacher's desk, pile of papers, a specific drawing highlighted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero la maestra del kínder, ella sí vio algo diferente.",
+        "pexels_query": "teacher desk drawing"
+      },
+      {
+        "id": 7,
+        "prompt": "Document with blurred text, official-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Document with blurred text, official-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Se preocupó. Los reportó a las autoridades de protección.",
+        "pexels_query": "official document blurred"
+      },
+      {
+        "id": 8,
+        "prompt": "Hand writing on a notepad, serious tone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand writing on a notepad, serious tone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Algo no estaba bien, y ella lo sentía antes que nadie.",
+        "pexels_query": "hand writing notes"
+      },
+      {
+        "id": 9,
+        "prompt": "Front door of a house, slightly ajar, a glimpse of light from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Front door of a house, slightly ajar, a glimpse of light from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Así, un día, el Consejo Tutelar llegó a la casa.",
+        "pexels_query": "house front door ajar"
+      },
+      {
+        "id": 10,
+        "prompt": "Blurred image of a woman's silhouette arguing, hand gestures, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred image of a woman's silhouette arguing, hand gestures, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La madre estalló, gritando que era una injusticia total.",
+        "pexels_query": "woman silhouette arguing"
+      },
+      {
+        "id": 11,
+        "prompt": "Crowd of blurred figures, looking angry or concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Crowd of blurred figures, looking angry or concerned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Los vecinos y amigos apoyaron a la mamá, indignados.",
+        "pexels_query": "angry crowd blurred"
+      },
+      {
+        "id": 12,
+        "prompt": "Smartphone screen showing news headline (blurred), controversy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Smartphone screen showing news headline (blurred), controversy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La historia se hizo viral: 'una madre inocente, víctima'.",
+        "pexels_query": "smartphone news headline"
+      },
+      {
+        "id": 13,
+        "prompt": "Empty child's bedroom, slightly dark, a single toy on the bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty child's bedroom, slightly dark, a single toy on the bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Todos condenaban al Consejo Tutelar por su 'abuso'.",
+        "pexels_query": "empty child bedroom"
+      },
+      {
+        "id": 14,
+        "prompt": "Child's hand reaching for a therapist's hand (blurred), comforting gesture, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's hand reaching for a therapist's hand (blurred), comforting gesture, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero nadie lo vio, lo que el niño dijo realmente después.",
+        "pexels_query": "child therapist comforting"
+      },
+      {
+        "id": 15,
+        "prompt": "Close-up of a child's drawing, distinct, unsettling detail, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a child's drawing, distinct, unsettling detail, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esos dibujos no eran fantasía. Eran un grito de auxilio.",
+        "pexels_query": "child drawing unsettling detail"
+      },
+      {
+        "id": 16,
+        "prompt": "Corner of a dark room, shadows, a sense of hiding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Corner of a dark room, shadows, a sense of hiding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El niño describió horrores ocultos... en un silencio absoluto.",
+        "pexels_query": "dark room shadows"
+      },
+      {
+        "id": 17,
+        "prompt": "Frayed and worn blanket on a bed, slightly rumpled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Frayed and worn blanket on a bed, slightly rumpled, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No inventó nada. Solo representó su dolor de una forma.",
+        "pexels_query": "frayed blanket bed"
+      },
+      {
+        "id": 18,
+        "prompt": "A small, overturned chair in a corner, implying sudden movement, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, overturned chair in a corner, implying sudden movement, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La madre no era la víctima, sino parte de su calvario.",
+        "pexels_query": "overturned chair corner"
+      },
+      {
+        "id": 19,
+        "prompt": "Locked diary, old and worn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Locked diary, old and worn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella lo mantuvo escondido, lo negó ante todos los ojos.",
+        "pexels_query": "locked diary worn"
+      },
+      {
+        "id": 20,
+        "prompt": "Child's teddy bear, lying face down, a bit sad, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's teddy bear, lying face down, a bit sad, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las heridas del pequeño eran más profundas que los golpes.",
+        "pexels_query": "teddy bear face down"
+      },
+      {
+        "id": 21,
+        "prompt": "Dark hallway, distant light, sense of foreboding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark hallway, distant light, sense of foreboding, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y el Consejo Tutelar... solo buscaba la verdad, su protección.",
+        "pexels_query": "dark hallway distant light"
+      },
+      {
+        "id": 22,
+        "prompt": "A single, wilting flower in a small vase, fragile, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, wilting flower in a small vase, fragile, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esa madre que todos defendían, era quien lo dañaba.",
+        "pexels_query": "wilting flower vase"
+      },
+      {
+        "id": 23,
+        "prompt": "Child's small shoes, dusty, abandoned-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's small shoes, dusty, abandoned-looking, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No puedes ignorarlo. Lo que se oculta siempre sale a la luz.",
+        "pexels_query": "child shoes dusty"
+      },
+      {
+        "id": 24,
+        "prompt": "Cracked wall texture, subtle light, suggesting hidden damage, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Cracked wall texture, subtle light, suggesting hidden damage, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las apariencias engañan y la verdad es perturbadora.",
+        "pexels_query": "cracked wall texture"
+      },
+      {
+        "id": 25,
+        "prompt": "Shadow of a hand covering a mouth, gesture of silence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shadow of a hand covering a mouth, gesture of silence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Creías que el cuento era diferente? Pues no estabas solo.",
+        "pexels_query": "shadow hand covering mouth"
+      },
+      {
+        "id": 26,
+        "prompt": "Empty swingset, lonely atmosphere, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty swingset, lonely atmosphere, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esta historia de doble vida... ¿la habías escuchado antes?",
+        "pexels_query": "empty swingset lonely"
+      },
+      {
+        "id": 27,
+        "prompt": "A single, isolated street light at dusk, mysterious, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, isolated street light at dusk, mysterious, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Les ha pasado algo así en su familia?",
+        "pexels_query": "street light dusk"
+      }
+    ],
+    "hooks": [
+      "Dibujos que escondían verdades",
+      "La madre no era la víctima",
+      "¿Confías en las apariencias?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
