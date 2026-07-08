@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "5422e53a-d224-4fd3-81be-3272389a055b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark hallway, a slightly ajar door, soft light bleeding from inside, unsettling shadow on the wall, chiaroscuro, grainy film texture\", \"prompt_visual\": \"Dark hallway, a slightly ajar door, soft light bleeding from inside, unsettling shadow on the wall, chiaroscuro, grainy film texture\", \"texto_locucion\": \"Cierras la puerta con llave cada noche.\", \"pexels_query\": \"ajar door shadow\"}, {\"id\": 2, \"prompt\": \"Child's bedroom door, slightly open, dark, no child visible, just the unsettling gap, cold tones\", \"prompt_visual\": \"Child's bedroom door, slightly open, dark, no child visible, just the unsettling gap, cold tones\", \"texto_locucion\": \"¿Entonces, por qué tu hijo dice que la vio abierta?\", \"pexels_query\": \"child room door\"}, {\"id\": 3, \"prompt\": \"Empty living room, a single toy truck sits perfectly centered, too neat, unnerving stillness\", \"prompt_visual\": \"Empty living room, a single toy truck sits perfectly centered, too neat, unnerving stillness\", \"texto_locucion\": \"Al principio, solo eran cosas pequeñas.\", \"pexels_query\": \"empty living room\"}, {\"id\": 4, \"prompt\": \"A child's drawing, colorful but slightly distorted figures, one with unsettling empty eyes, taped to a fridge\", \"prompt_visual\": \"A child's drawing, colorful but slightly distorted figures, one with unsettling empty eyes, taped to a fridge\", \"texto_locucion\": \"Un juguete en un lugar equivocado.\", \"pexels_query\": \"child drawing fridge\"}, {\"id\": 5, \"prompt\": \"Dark kitchen counter, a glass of water, a subtle ripple in the surface despite no movement\", \"prompt_visual\": \"Dark kitchen counter, a glass of water, a subtle ripple in the surface despite no movement\", \"texto_locucion\": \"Un vaso de agua a medianoche.\", \"pexels_query\": \"kitchen counter water\"}, {\"id\": 6, \"prompt\": \"Shadow of a small hand reaching for a doorknob, faint light, unsettling stillness\", \"prompt_visual\": \"Shadow of a small hand reaching for a doorknob, faint light, unsettling stillness\", \"texto_locucion\": \"Después, sentiste una presencia extraña.\", \"pexels_query\": \"shadow hand doorknob\"}, {\"id\": 7, \"prompt\": \"Empty staircase, top of stairs, dark, a subtle, almost imperceptible shadow at the corner\", \"prompt_visual\": \"Empty staircase, top of stairs, dark, a subtle, almost imperceptible shadow at the corner\", \"texto_locucion\": \"Creías estar solo, pero no estabas solo.\", \"pexels_query\": \"empty dark staircase\"}, {\"id\": 8, \"prompt\": \"A child's bed, empty, rumpled covers, a chilling sense of recent occupancy\", \"prompt_visual\": \"A child's bed, empty, rumpled covers, a chilling sense of recent occupancy\", \"texto_locucion\": \"Tu hijo empezó a dormir menos.\", \"pexels_query\": \"empty child bed\"}, {\"id\": 9, \"prompt\": \"Dark corner of a room, a faint red glow from a night light, unsettling, blurred outlines\", \"prompt_visual\": \"Dark corner of a room, a faint red glow from a night light, unsettling, blurred outlines\", \"texto_locucion\": \"Murmuraba en silencio absoluto.\", \"pexels_query\": \"night light corner\"}, {\"id\": 10, \"prompt\": \"Reflection of a child's eyes in a dark window, unnervingly still, no emotion, deep blacks\", \"prompt_visual\": \"Reflection of a child's eyes in a dark window, unnervingly still, no emotion, deep blacks\", \"texto_locucion\": \"Su mirada no era la suya.\", \"pexels_query\": \"child eyes reflection\"}, {\"id\": 11, \"prompt\": \"A child's hand holding a worn teddy bear, fingers slightly too long, unsettling detail\", \"prompt_visual\": \"A child's hand holding a worn teddy bear, fingers slightly too long, unsettling detail\", \"texto_locucion\": \"Sus gestos eran distintos, sutilmente.\", \"pexels_query\": \"child hand teddy\"}, {\"id\": 12, \"prompt\": \"Bathroom mirror, blurry reflection of a small figure, distorted, not quite right, low light\", \"prompt_visual\": \"Bathroom mirror, blurry reflection of a small figure, distorted, not quite right, low light\", \"texto_locucion\": \"¿Alguna vez sentiste que te observaba?\", \"pexels_query\": \"blurry mirror figure\"}, {\"id\": 13, \"prompt\": \"A child's drawing on the floor, crude stick figure with unnaturally large, black eyes\", \"prompt_visual\": \"A child's drawing on the floor, crude stick figure with unnaturally large, black eyes\", \"texto_locucion\": \"Los dibujos cambiaron, ahora inquietantes.\", \"pexels_query\": \"child drawing floor\"}, {\"id\": 14, \"prompt\": \"Dark doorway, a small, vague silhouette, almost pareidolia in the shadows, waiting\", \"prompt_visual\": \"Dark doorway, a small, vague silhouette, almost pareidolia in the shadows, waiting\", \"texto_locucion\": \"Ciertas noches, esperó en tu puerta.\", \"pexels_query\": \"dark doorway silhouette\"}, {\"id\": 15, \"prompt\": \"Empty swing set in a dark yard, chains swaying slightly in an unnatural way, cold moonlight\", \"prompt_visual\": \"Empty swing set in a dark yard, chains swaying slightly in an unnatural way, cold moonlight\", \"texto_locucion\": \"Jugaba solo, pero escuchabas voces.\", \"pexels_query\": \"empty swing set\"}, {\"id\": 16, \"prompt\": \"A single, old rocking horse, gently rocking in a dark room, no one there, eerie\", \"prompt_visual\": \"A single, old rocking horse, gently rocking in a dark room, no one there, eerie\", \"texto_locucion\": \"Voces que nadie más escuchaba.\", \"pexels_query\": \"rocking horse dark\"}, {\"id\": 17, \"prompt\": \"Child's toy block pyramid, one block subtly misaligned, casting a strange shadow\", \"prompt_visual\": \"Child's toy block pyramid, one block subtly misaligned, casting a strange shadow\", \"texto_locucion\": \"Algo no está bien, lo sabes.\", \"pexels_query\": \"toy block pyramid\"}, {\"id\": 18, \"prompt\": \"Close-up on a child's closed eyelid, a faint pulsing vein, almost too visible, unsettling\", \"prompt_visual\": \"Close-up on a child's closed eyelid, a faint pulsing vein, almost too visible, unsettling\", \"texto_locucion\": \"La forma en que respira es distinta.\", \"pexels_query\": \"child eyelid vein\"}, {\"id\": 19, \"prompt\": \"A child's small hand reaching out for yours, fingers slightly too cold, shadowy context\", \"prompt_visual\": \"A child's small hand reaching out for yours, fingers slightly too cold, shadowy context\", \"texto_locucion\": \"Su tacto es frío, vacío.\", \"pexels_query\": \"child hand cold\"}, {\"id\": 20, \"prompt\": \"Dark hallway, a faint, almost imperceptible whisper-like distortion in the air, visual representation of sound\", \"prompt_visual\": \"Dark hallway, a faint, almost imperceptible whisper-like distortion in the air, visual representation of sound\", \"texto_locucion\": \"Entonces escuchas lo que susurra.\", \"pexels_query\": \"dark hallway whisper\"}, {\"id\": 21, \"prompt\": \"A child's mouth, slightly open, in shadow, no sound, but a sense of unspoken horror\", \"prompt_visual\": \"A child's mouth, slightly open, in shadow, no sound, but a sense of unspoken horror\", \"texto_locucion\": \"Palabras que no son suyas.\", \"pexels_query\": \"child mouth shadow\"}, {\"id\": 22, \"prompt\": \"Dark living room, the silhouette of a child standing unnaturally still in the doorway, watching\", \"prompt_visual\": \"Dark living room, the silhouette of a child standing unnaturally still in the doorway, watching\", \"texto_locucion\": \"Y te llama por otro nombre.\", \"pexels_query\": \"child silhouette watching\"}, {\"id\": 23, \"prompt\": \"Empty bedroom, a single light bulb hanging, swaying slightly, casting shifting shadows\", \"prompt_visual\": \"Empty bedroom, a single light bulb hanging, swaying slightly, casting shifting shadows\", \"texto_locucion\": \"Nadie lo vio, solo tú.\", \"pexels_query\": \"empty bedroom light\"}, {\"id\": 24, \"prompt\": \"Dark window, rain streaks, the blurred reflection of an ambiguous, non-human face\", \"prompt_visual\": \"Dark window, rain streaks, the blurred reflection of an ambiguous, non-human face\", \"texto_locucion\": \"Sabes que no es tu hijo.\", \"pexels_query\": \"dark window rain\"}, {\"id\": 25, \"prompt\": \"A child's bedroom door, now fully closed, a faint, rhythmic scratching sound visually implied from within\", \"prompt_visual\": \"A child's bedroom door, now fully closed, a faint, rhythmic scratching sound visually implied from within\", \"texto_locucion\": \"Algo habita en su interior.\", \"pexels_query\": \"child bedroom closed\"}, {\"id\": 26, \"prompt\": \"A familiar family photo, slightly blurred, one face subtly distorted, a chilling detail\", \"prompt_visual\": \"A familiar family photo, slightly blurred, one face subtly distorted, a chilling detail\", \"texto_locucion\": \"Y ha estado allí por siempre.\", \"pexels_query\": \"family photo distorted\"}, {\"id\": 27, \"prompt\": \"Dark hallway, endless, a single, deep black void at the end, disorienting, unsettling\", \"prompt_visual\": \"Dark hallway, endless, a single, deep black void at the end, disorienting, unsettling\", \"texto_locucion\": \"Tal vez, también te espera a ti.\", \"pexels_query\": \"dark hallway void\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Cierras la puerta con llave cada noche. ¿Entonces, por qué tu hijo dice que la vio abierta? Al principio, solo eran cosas pequeñas. Un juguete en un lugar equivocado. Un vaso de agua a medianoche. Después, sentiste una presencia extraña. Creías estar solo, pero no estabas solo. Tu hijo empezó a dormir menos. Murmuraba en silencio absoluto. Su mirada no era la suya. Sus gestos eran distintos, sutilmente. ¿Alguna vez sentiste que te observaba? Los dibujos cambiaron, ahora inquietantes. Ciertas noches, esperó en tu puerta. Jugaba solo, pero escuchabas voces. Voces que nadie más escuchaba. Algo no está bien, lo sabes. La forma en que respira es distinta. Su tacto es frío, vacío. Entonces escuchas lo que susurra. Palabras que no son suyas. Y te llama por otro nombre. Nadie lo vio, solo tú. Sabes que no es tu hijo. Algo habita en su interior. Y ha estado allí por siempre. Tal vez, también te espera a ti.",
+    "titulo_sugerido": "¿Y si alguien vive en tu hijo?",
+    "escenas_texto": [
+      "Cierras la puerta con llave cada noche.",
+      "¿Entonces, por qué tu hijo dice que la vio abierta?",
+      "Al principio, solo eran cosas pequeñas.",
+      "Un juguete en un lugar equivocado.",
+      "Un vaso de agua a medianoche.",
+      "Después, sentiste una presencia extraña.",
+      "Creías estar solo, pero no estabas solo.",
+      "Tu hijo empezó a dormir menos.",
+      "Murmuraba en silencio absoluto.",
+      "Su mirada no era la suya.",
+      "Sus gestos eran distintos, sutilmente.",
+      "¿Alguna vez sentiste que te observaba?",
+      "Los dibujos cambiaron, ahora inquietantes.",
+      "Ciertas noches, esperó en tu puerta.",
+      "Jugaba solo, pero escuchabas voces.",
+      "Voces que nadie más escuchaba.",
+      "Algo no está bien, lo sabes.",
+      "La forma en que respira es distinta.",
+      "Su tacto es frío, vacío.",
+      "Entonces escuchas lo que susurra.",
+      "Palabras que no son suyas.",
+      "Y te llama por otro nombre.",
+      "Nadie lo vio, solo tú.",
+      "Sabes que no es tu hijo.",
+      "Algo habita en su interior.",
+      "Y ha estado allí por siempre.",
+      "Tal vez, también te espera a ti."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark hallway, a slightly ajar door, soft light bleeding from inside, unsettling shadow on the wall, chiaroscuro, grainy film texture",
+        "prompt_visual": "Dark hallway, a slightly ajar door, soft light bleeding from inside, unsettling shadow on the wall, chiaroscuro, grainy film texture",
+        "texto_locucion": "Cierras la puerta con llave cada noche.",
+        "pexels_query": "ajar door shadow"
+      },
+      {
+        "id": 2,
+        "prompt": "Child's bedroom door, slightly open, dark, no child visible, just the unsettling gap, cold tones",
+        "prompt_visual": "Child's bedroom door, slightly open, dark, no child visible, just the unsettling gap, cold tones",
+        "texto_locucion": "¿Entonces, por qué tu hijo dice que la vio abierta?",
+        "pexels_query": "child room door"
+      },
+      {
+        "id": 3,
+        "prompt": "Empty living room, a single toy truck sits perfectly centered, too neat, unnerving stillness",
+        "prompt_visual": "Empty living room, a single toy truck sits perfectly centered, too neat, unnerving stillness",
+        "texto_locucion": "Al principio, solo eran cosas pequeñas.",
+        "pexels_query": "empty living room"
+      },
+      {
+        "id": 4,
+        "prompt": "A child's drawing, colorful but slightly distorted figures, one with unsettling empty eyes, taped to a fridge",
+        "prompt_visual": "A child's drawing, colorful but slightly distorted figures, one with unsettling empty eyes, taped to a fridge",
+        "texto_locucion": "Un juguete en un lugar equivocado.",
+        "pexels_query": "child drawing fridge"
+      },
+      {
+        "id": 5,
+        "prompt": "Dark kitchen counter, a glass of water, a subtle ripple in the surface despite no movement",
+        "prompt_visual": "Dark kitchen counter, a glass of water, a subtle ripple in the surface despite no movement",
+        "texto_locucion": "Un vaso de agua a medianoche.",
+        "pexels_query": "kitchen counter water"
+      },
+      {
+        "id": 6,
+        "prompt": "Shadow of a small hand reaching for a doorknob, faint light, unsettling stillness",
+        "prompt_visual": "Shadow of a small hand reaching for a doorknob, faint light, unsettling stillness",
+        "texto_locucion": "Después, sentiste una presencia extraña.",
+        "pexels_query": "shadow hand doorknob"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty staircase, top of stairs, dark, a subtle, almost imperceptible shadow at the corner",
+        "prompt_visual": "Empty staircase, top of stairs, dark, a subtle, almost imperceptible shadow at the corner",
+        "texto_locucion": "Creías estar solo, pero no estabas solo.",
+        "pexels_query": "empty dark staircase"
+      },
+      {
+        "id": 8,
+        "prompt": "A child's bed, empty, rumpled covers, a chilling sense of recent occupancy",
+        "prompt_visual": "A child's bed, empty, rumpled covers, a chilling sense of recent occupancy",
+        "texto_locucion": "Tu hijo empezó a dormir menos.",
+        "pexels_query": "empty child bed"
+      },
+      {
+        "id": 9,
+        "prompt": "Dark corner of a room, a faint red glow from a night light, unsettling, blurred outlines",
+        "prompt_visual": "Dark corner of a room, a faint red glow from a night light, unsettling, blurred outlines",
+        "texto_locucion": "Murmuraba en silencio absoluto.",
+        "pexels_query": "night light corner"
+      },
+      {
+        "id": 10,
+        "prompt": "Reflection of a child's eyes in a dark window, unnervingly still, no emotion, deep blacks",
+        "prompt_visual": "Reflection of a child's eyes in a dark window, unnervingly still, no emotion, deep blacks",
+        "texto_locucion": "Su mirada no era la suya.",
+        "pexels_query": "child eyes reflection"
+      },
+      {
+        "id": 11,
+        "prompt": "A child's hand holding a worn teddy bear, fingers slightly too long, unsettling detail",
+        "prompt_visual": "A child's hand holding a worn teddy bear, fingers slightly too long, unsettling detail",
+        "texto_locucion": "Sus gestos eran distintos, sutilmente.",
+        "pexels_query": "child hand teddy"
+      },
+      {
+        "id": 12,
+        "prompt": "Bathroom mirror, blurry reflection of a small figure, distorted, not quite right, low light",
+        "prompt_visual": "Bathroom mirror, blurry reflection of a small figure, distorted, not quite right, low light",
+        "texto_locucion": "¿Alguna vez sentiste que te observaba?",
+        "pexels_query": "blurry mirror figure"
+      },
+      {
+        "id": 13,
+        "prompt": "A child's drawing on the floor, crude stick figure with unnaturally large, black eyes",
+        "prompt_visual": "A child's drawing on the floor, crude stick figure with unnaturally large, black eyes",
+        "texto_locucion": "Los dibujos cambiaron, ahora inquietantes.",
+        "pexels_query": "child drawing floor"
+      },
+      {
+        "id": 14,
+        "prompt": "Dark doorway, a small, vague silhouette, almost pareidolia in the shadows, waiting",
+        "prompt_visual": "Dark doorway, a small, vague silhouette, almost pareidolia in the shadows, waiting",
+        "texto_locucion": "Ciertas noches, esperó en tu puerta.",
+        "pexels_query": "dark doorway silhouette"
+      },
+      {
+        "id": 15,
+        "prompt": "Empty swing set in a dark yard, chains swaying slightly in an unnatural way, cold moonlight",
+        "prompt_visual": "Empty swing set in a dark yard, chains swaying slightly in an unnatural way, cold moonlight",
+        "texto_locucion": "Jugaba solo, pero escuchabas voces.",
+        "pexels_query": "empty swing set"
+      },
+      {
+        "id": 16,
+        "prompt": "A single, old rocking horse, gently rocking in a dark room, no one there, eerie",
+        "prompt_visual": "A single, old rocking horse, gently rocking in a dark room, no one there, eerie",
+        "texto_locucion": "Voces que nadie más escuchaba.",
+        "pexels_query": "rocking horse dark"
+      },
+      {
+        "id": 17,
+        "prompt": "Child's toy block pyramid, one block subtly misaligned, casting a strange shadow",
+        "prompt_visual": "Child's toy block pyramid, one block subtly misaligned, casting a strange shadow",
+        "texto_locucion": "Algo no está bien, lo sabes.",
+        "pexels_query": "toy block pyramid"
+      },
+      {
+        "id": 18,
+        "prompt": "Close-up on a child's closed eyelid, a faint pulsing vein, almost too visible, unsettling",
+        "prompt_visual": "Close-up on a child's closed eyelid, a faint pulsing vein, almost too visible, unsettling",
+        "texto_locucion": "La forma en que respira es distinta.",
+        "pexels_query": "child eyelid vein"
+      },
+      {
+        "id": 19,
+        "prompt": "A child's small hand reaching out for yours, fingers slightly too cold, shadowy context",
+        "prompt_visual": "A child's small hand reaching out for yours, fingers slightly too cold, shadowy context",
+        "texto_locucion": "Su tacto es frío, vacío.",
+        "pexels_query": "child hand cold"
+      },
+      {
+        "id": 20,
+        "prompt": "Dark hallway, a faint, almost imperceptible whisper-like distortion in the air, visual representation of sound",
+        "prompt_visual": "Dark hallway, a faint, almost imperceptible whisper-like distortion in the air, visual representation of sound",
+        "texto_locucion": "Entonces escuchas lo que susurra.",
+        "pexels_query": "dark hallway whisper"
+      },
+      {
+        "id": 21,
+        "prompt": "A child's mouth, slightly open, in shadow, no sound, but a sense of unspoken horror",
+        "prompt_visual": "A child's mouth, slightly open, in shadow, no sound, but a sense of unspoken horror",
+        "texto_locucion": "Palabras que no son suyas.",
+        "pexels_query": "child mouth shadow"
+      },
+      {
+        "id": 22,
+        "prompt": "Dark living room, the silhouette of a child standing unnaturally still in the doorway, watching",
+        "prompt_visual": "Dark living room, the silhouette of a child standing unnaturally still in the doorway, watching",
+        "texto_locucion": "Y te llama por otro nombre.",
+        "pexels_query": "child silhouette watching"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty bedroom, a single light bulb hanging, swaying slightly, casting shifting shadows",
+        "prompt_visual": "Empty bedroom, a single light bulb hanging, swaying slightly, casting shifting shadows",
+        "texto_locucion": "Nadie lo vio, solo tú.",
+        "pexels_query": "empty bedroom light"
+      },
+      {
+        "id": 24,
+        "prompt": "Dark window, rain streaks, the blurred reflection of an ambiguous, non-human face",
+        "prompt_visual": "Dark window, rain streaks, the blurred reflection of an ambiguous, non-human face",
+        "texto_locucion": "Sabes que no es tu hijo.",
+        "pexels_query": "dark window rain"
+      },
+      {
+        "id": 25,
+        "prompt": "A child's bedroom door, now fully closed, a faint, rhythmic scratching sound visually implied from within",
+        "prompt_visual": "A child's bedroom door, now fully closed, a faint, rhythmic scratching sound visually implied from within",
+        "texto_locucion": "Algo habita en su interior.",
+        "pexels_query": "child bedroom closed"
+      },
+      {
+        "id": 26,
+        "prompt": "A familiar family photo, slightly blurred, one face subtly distorted, a chilling detail",
+        "prompt_visual": "A familiar family photo, slightly blurred, one face subtly distorted, a chilling detail",
+        "texto_locucion": "Y ha estado allí por siempre.",
+        "pexels_query": "family photo distorted"
+      },
+      {
+        "id": 27,
+        "prompt": "Dark hallway, endless, a single, deep black void at the end, disorienting, unsettling",
+        "prompt_visual": "Dark hallway, endless, a single, deep black void at the end, disorienting, unsettling",
+        "texto_locucion": "Tal vez, también te espera a ti.",
+        "pexels_query": "dark hallway void"
+      }
+    ],
+    "hooks": [
+      "La mirada no es suya.",
+      "Tu hijo, pero no él.",
+      "La voz... es diferente."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
