@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "e972ae45-f3fd-4630-939e-f5b3a1a9744b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Luxury event entrance, blurred lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Luxury event entrance, blurred lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esa noche, 'Elsa' humilló a la persona equivocada...\", \"pexels_query\": \"elegant party entrance\"}, {\"id\": 2, \"prompt\": \"Expensive champagne glass, partial view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Expensive champagne glass, partial view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"En una fiesta de élite, la vimos llegar muy altiva.\", \"pexels_query\": \"champagne glass table\"}, {\"id\": 3, \"prompt\": \"Diamond necklace on a velvet cushion, soft focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Diamond necklace on a velvet cushion, soft focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Siempre creyó ser superior a todos, ya sabes.\", \"pexels_query\": \"diamond jewelry display\"}, {\"id\": 4, \"prompt\": \"Cleaning cart with supplies in a hallway, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Cleaning cart with supplies in a hallway, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y se cruzó con la señora de limpieza, 'María'.\", \"pexels_query\": \"cleaning cart hotel\"}, {\"id\": 5, \"prompt\": \"Polished marble floor, a faint smudge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Polished marble floor, a faint smudge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Elsa exigió que quitara una mancha invisible del suelo.\", \"pexels_query\": \"clean marble floor\"}, {\"id\": 6, \"prompt\": \"Empty luxurious ballroom, slightly disarrayed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty luxurious ballroom, slightly disarrayed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Le gritó, '¡Estás arruinando mi evento exclusivo!'.\", \"pexels_query\": \"luxury ballroom empty\"}, {\"id\": 7, \"prompt\": \"Worn cleaning gloves on a bucket edge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Worn cleaning gloves on a bucket edge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"María solo asintió, su rostro era inexpresivo.\", \"pexels_query\": \"cleaning gloves bucket\"}, {\"id\": 8, \"prompt\": \"Reflected light on a wet floor, mop handle visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Reflected light on a wet floor, mop handle visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No dijo nada, solo continuó su trabajo tranquilamente.\", \"pexels_query\": \"wet floor mop\"}, {\"id\": 9, \"prompt\": \"Half-eaten fancy appetizer on a plate, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Half-eaten fancy appetizer on a plate, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Elsa no paraba de quejarse sobre su ineptitud.\", \"pexels_query\": \"gourmet appetizer plate\"}, {\"id\": 10, \"prompt\": \"Elegant cocktail table, blurred background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Elegant cocktail table, blurred background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Los invitados observaban incómodos, pero nadie hizo nada.\", \"pexels_query\": \"cocktail table blurred\"}, {\"id\": 11, \"prompt\": \"Empty chair at a long dining table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty chair at a long dining table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tú sentías que algo no estaba bien ahí.\", \"pexels_query\": \"empty chair banquet\"}, {\"id\": 12, \"prompt\": \"Dimmed chandelier in a large hall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dimmed chandelier in a large hall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Había una tensión extraña en el ambiente.\", \"pexels_query\": \"chandelier luxury hall\"}, {\"id\": 13, \"prompt\": \"Business documents on a polished desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Business documents on a polished desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pasaron semanas. Elsa intentó cerrar un gran negocio.\", \"pexels_query\": \"business documents desk\"}, {\"id\": 14, \"prompt\": \"Laptop screen with blurred charts, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Laptop screen with blurred charts, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Necesitaba inversión para su nueva empresa ambiciosa.\", \"pexels_query\": \"laptop charts business\"}, {\"id\": 15, \"prompt\": \"Empty conference room, chairs neatly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty conference room, chairs neatly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tenía una reunión decisiva con los inversionistas.\", \"pexels_query\": \"empty conference room\"}, {\"id\": 16, \"prompt\": \"Presenter's remote control on a podium, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Presenter's remote control on a podium, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Llegó al lugar, preparó todo su discurso.\", \"pexels_query\": \"podium remote control\"}, {\"id\": 17, \"prompt\": \"Heavy wooden doors slightly ajar, soft light filtering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Heavy wooden doors slightly ajar, soft light filtering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las puertas se abrieron... y no lo creerás.\", \"pexels_query\": \"wooden doors ajar\"}, {\"id\": 18, \"prompt\": \"Executive desk, an elegant hand resting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Executive desk, an elegant hand resting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sentada en la cabecera estaba 'María'.\", \"pexels_query\": \"executive desk hand\"}, {\"id\": 19, \"prompt\": \"Tailored suit jacket draped over a chair, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Tailored suit jacket draped over a chair, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero con un traje impecable y una sonrisa.\", \"pexels_query\": \"suit jacket chair\"}, {\"id\": 20, \"prompt\": \"Dropped pen on a glossy floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dropped pen on a glossy floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Elsa se quedó muda, su mandíbula cayó.\", \"pexels_query\": \"dropped pen floor\"}, {\"id\": 21, \"prompt\": \"Nameplate on a mahogany desk, blurred title, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Nameplate on a mahogany desk, blurred title, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"María era la presidenta del fondo de inversión.\", \"pexels_query\": \"desk nameplate office\"}, {\"id\": 22, \"prompt\": \"Keys to a large building, a discreet logo, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Keys to a large building, a discreet logo, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era dueña del local de la fiesta pasada.\", \"pexels_query\": \"building keys elegant\"}, {\"id\": 23, \"prompt\": \"Discreet security camera in a corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Discreet security camera in a corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Estaba haciendo una inspección sorpresa, disfrazada.\", \"pexels_query\": \"security camera hidden\"}, {\"id\": 24, \"prompt\": \"Crumbled napkin on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Crumbled napkin on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Elsa intentó excusarse, '¡Todo fue un error!'.\", \"pexels_query\": \"crumpled napkin table\"}, {\"id\": 25, \"prompt\": \"Closed file folder on a blank desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Closed file folder on a blank desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero María solo sonrió, 'Disculpa, no invertimos aquí'.\", \"pexels_query\": \"closed folder desk\"}, {\"id\": 26, \"prompt\": \"Melting ice cube in an empty glass, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Melting ice cube in an empty glass, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La venganza fue dulce, fría, muy merecida.\", \"pexels_query\": \"ice cube glass\"}, {\"id\": 27, \"prompt\": \"Empty prestigious office building at dusk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty prestigious office building at dusk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su proyecto nunca vio la luz, por supuesto.\", \"pexels_query\": \"empty office building\"}, {\"id\": 28, \"prompt\": \"Contemplative view from a high window, blurred city lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Contemplative view from a high window, blurred city lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Al final, ¿creen que el karma existe de verdad?\", \"pexels_query\": \"city lights window view\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Esa noche, 'Elsa' humilló a la persona equivocada... En una fiesta de élite, la vimos llegar muy altiva. Siempre creyó ser superior a todos, ya sabes. Y se cruzó con la señora de limpieza, 'María'. Elsa exigió que quitara una mancha invisible del suelo. Le gritó, '¡Estás arruinando mi evento exclusivo!'. María solo asintió, su rostro era inexpresivo. No dijo nada, solo continuó su trabajo tranquilamente. Elsa no paraba de quejarse sobre su ineptitud. Los invitados observaban incómodos, pero nadie hizo nada. Tú sentías que algo no estaba bien ahí. Había una tensión extraña en el ambiente. Pasaron semanas. Elsa intentó cerrar un gran negocio. Necesitaba inversión para su nueva empresa ambiciosa. Tenía una reunión decisiva con los inversionistas. Llegó al lugar, preparó todo su discurso. Las puertas se abrieron... y no lo creerás. Sentada en la cabecera estaba 'María'. Pero con un traje impecable y una sonrisa. Elsa se quedó muda, su mandíbula cayó. María era la presidenta del fondo de inversión. Era dueña del local de la fiesta pasada. Estaba haciendo una inspección sorpresa, disfrazada. Elsa intentó excusarse, '¡Todo fue un error!'. Pero María solo sonrió, 'Disculpa, no invertimos aquí'. La venganza fue dulce, fría, muy merecida. Su proyecto nunca vio la luz, por supuesto. Al final, ¿creen que el karma existe de verdad?",
+    "titulo_sugerido": "Humilló a la limpiadora sin saber quién era en realidad",
+    "escenas_texto": [
+      "Esa noche, 'Elsa' humilló a la persona equivocada...",
+      "En una fiesta de élite, la vimos llegar muy altiva.",
+      "Siempre creyó ser superior a todos, ya sabes.",
+      "Y se cruzó con la señora de limpieza, 'María'.",
+      "Elsa exigió que quitara una mancha invisible del suelo.",
+      "Le gritó, '¡Estás arruinando mi evento exclusivo!'.",
+      "María solo asintió, su rostro era inexpresivo.",
+      "No dijo nada, solo continuó su trabajo tranquilamente.",
+      "Elsa no paraba de quejarse sobre su ineptitud.",
+      "Los invitados observaban incómodos, pero nadie hizo nada.",
+      "Tú sentías que algo no estaba bien ahí.",
+      "Había una tensión extraña en el ambiente.",
+      "Pasaron semanas. Elsa intentó cerrar un gran negocio.",
+      "Necesitaba inversión para su nueva empresa ambiciosa.",
+      "Tenía una reunión decisiva con los inversionistas.",
+      "Llegó al lugar, preparó todo su discurso.",
+      "Las puertas se abrieron... y no lo creerás.",
+      "Sentada en la cabecera estaba 'María'.",
+      "Pero con un traje impecable y una sonrisa.",
+      "Elsa se quedó muda, su mandíbula cayó.",
+      "María era la presidenta del fondo de inversión.",
+      "Era dueña del local de la fiesta pasada.",
+      "Estaba haciendo una inspección sorpresa, disfrazada.",
+      "Elsa intentó excusarse, '¡Todo fue un error!'.",
+      "Pero María solo sonrió, 'Disculpa, no invertimos aquí'.",
+      "La venganza fue dulce, fría, muy merecida.",
+      "Su proyecto nunca vio la luz, por supuesto.",
+      "Al final, ¿creen que el karma existe de verdad?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Luxury event entrance, blurred lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Luxury event entrance, blurred lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esa noche, 'Elsa' humilló a la persona equivocada...",
+        "pexels_query": "elegant party entrance"
+      },
+      {
+        "id": 2,
+        "prompt": "Expensive champagne glass, partial view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Expensive champagne glass, partial view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "En una fiesta de élite, la vimos llegar muy altiva.",
+        "pexels_query": "champagne glass table"
+      },
+      {
+        "id": 3,
+        "prompt": "Diamond necklace on a velvet cushion, soft focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Diamond necklace on a velvet cushion, soft focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Siempre creyó ser superior a todos, ya sabes.",
+        "pexels_query": "diamond jewelry display"
+      },
+      {
+        "id": 4,
+        "prompt": "Cleaning cart with supplies in a hallway, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Cleaning cart with supplies in a hallway, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y se cruzó con la señora de limpieza, 'María'.",
+        "pexels_query": "cleaning cart hotel"
+      },
+      {
+        "id": 5,
+        "prompt": "Polished marble floor, a faint smudge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Polished marble floor, a faint smudge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Elsa exigió que quitara una mancha invisible del suelo.",
+        "pexels_query": "clean marble floor"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty luxurious ballroom, slightly disarrayed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty luxurious ballroom, slightly disarrayed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Le gritó, '¡Estás arruinando mi evento exclusivo!'.",
+        "pexels_query": "luxury ballroom empty"
+      },
+      {
+        "id": 7,
+        "prompt": "Worn cleaning gloves on a bucket edge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Worn cleaning gloves on a bucket edge, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "María solo asintió, su rostro era inexpresivo.",
+        "pexels_query": "cleaning gloves bucket"
+      },
+      {
+        "id": 8,
+        "prompt": "Reflected light on a wet floor, mop handle visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Reflected light on a wet floor, mop handle visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No dijo nada, solo continuó su trabajo tranquilamente.",
+        "pexels_query": "wet floor mop"
+      },
+      {
+        "id": 9,
+        "prompt": "Half-eaten fancy appetizer on a plate, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Half-eaten fancy appetizer on a plate, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Elsa no paraba de quejarse sobre su ineptitud.",
+        "pexels_query": "gourmet appetizer plate"
+      },
+      {
+        "id": 10,
+        "prompt": "Elegant cocktail table, blurred background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Elegant cocktail table, blurred background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Los invitados observaban incómodos, pero nadie hizo nada.",
+        "pexels_query": "cocktail table blurred"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty chair at a long dining table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty chair at a long dining table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tú sentías que algo no estaba bien ahí.",
+        "pexels_query": "empty chair banquet"
+      },
+      {
+        "id": 12,
+        "prompt": "Dimmed chandelier in a large hall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dimmed chandelier in a large hall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Había una tensión extraña en el ambiente.",
+        "pexels_query": "chandelier luxury hall"
+      },
+      {
+        "id": 13,
+        "prompt": "Business documents on a polished desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Business documents on a polished desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pasaron semanas. Elsa intentó cerrar un gran negocio.",
+        "pexels_query": "business documents desk"
+      },
+      {
+        "id": 14,
+        "prompt": "Laptop screen with blurred charts, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Laptop screen with blurred charts, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Necesitaba inversión para su nueva empresa ambiciosa.",
+        "pexels_query": "laptop charts business"
+      },
+      {
+        "id": 15,
+        "prompt": "Empty conference room, chairs neatly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty conference room, chairs neatly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tenía una reunión decisiva con los inversionistas.",
+        "pexels_query": "empty conference room"
+      },
+      {
+        "id": 16,
+        "prompt": "Presenter's remote control on a podium, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Presenter's remote control on a podium, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Llegó al lugar, preparó todo su discurso.",
+        "pexels_query": "podium remote control"
+      },
+      {
+        "id": 17,
+        "prompt": "Heavy wooden doors slightly ajar, soft light filtering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Heavy wooden doors slightly ajar, soft light filtering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las puertas se abrieron... y no lo creerás.",
+        "pexels_query": "wooden doors ajar"
+      },
+      {
+        "id": 18,
+        "prompt": "Executive desk, an elegant hand resting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Executive desk, an elegant hand resting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sentada en la cabecera estaba 'María'.",
+        "pexels_query": "executive desk hand"
+      },
+      {
+        "id": 19,
+        "prompt": "Tailored suit jacket draped over a chair, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Tailored suit jacket draped over a chair, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero con un traje impecable y una sonrisa.",
+        "pexels_query": "suit jacket chair"
+      },
+      {
+        "id": 20,
+        "prompt": "Dropped pen on a glossy floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dropped pen on a glossy floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Elsa se quedó muda, su mandíbula cayó.",
+        "pexels_query": "dropped pen floor"
+      },
+      {
+        "id": 21,
+        "prompt": "Nameplate on a mahogany desk, blurred title, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Nameplate on a mahogany desk, blurred title, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "María era la presidenta del fondo de inversión.",
+        "pexels_query": "desk nameplate office"
+      },
+      {
+        "id": 22,
+        "prompt": "Keys to a large building, a discreet logo, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Keys to a large building, a discreet logo, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era dueña del local de la fiesta pasada.",
+        "pexels_query": "building keys elegant"
+      },
+      {
+        "id": 23,
+        "prompt": "Discreet security camera in a corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Discreet security camera in a corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Estaba haciendo una inspección sorpresa, disfrazada.",
+        "pexels_query": "security camera hidden"
+      },
+      {
+        "id": 24,
+        "prompt": "Crumbled napkin on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Crumbled napkin on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Elsa intentó excusarse, '¡Todo fue un error!'.",
+        "pexels_query": "crumpled napkin table"
+      },
+      {
+        "id": 25,
+        "prompt": "Closed file folder on a blank desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Closed file folder on a blank desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero María solo sonrió, 'Disculpa, no invertimos aquí'.",
+        "pexels_query": "closed folder desk"
+      },
+      {
+        "id": 26,
+        "prompt": "Melting ice cube in an empty glass, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Melting ice cube in an empty glass, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La venganza fue dulce, fría, muy merecida.",
+        "pexels_query": "ice cube glass"
+      },
+      {
+        "id": 27,
+        "prompt": "Empty prestigious office building at dusk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty prestigious office building at dusk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su proyecto nunca vio la luz, por supuesto.",
+        "pexels_query": "empty office building"
+      },
+      {
+        "id": 28,
+        "prompt": "Contemplative view from a high window, blurred city lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Contemplative view from a high window, blurred city lights, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Al final, ¿creen que el karma existe de verdad?",
+        "pexels_query": "city lights window view"
+      }
+    ],
+    "hooks": [
+      "Humilló a la persona equivocada",
+      "La limpiadora era presidenta",
+      "¿Crees en el karma?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
