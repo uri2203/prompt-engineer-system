@@ -1,0 +1,24 @@
+{
+  "id": "e56d12bf-6697-451e-a59c-dcc6f44af1dd_asm",
+  "marca": "La Viuda",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-08 22:44:42",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": false,
+    "respaldo": false
+  },
+  "errores": [
+    "Pre-flight abortado: Nodo de VOZ no responde en http://192.168.0.251:8000"
+  ]
+}
