@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "b160f378-072a-46f9-aa3b-69fafa6c191b",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"an empty, dimly lit hallway in an old house, shadows deepening, a sense of profound quiet, dust motes in the air, cold tones\", \"prompt_visual\": \"an empty, dimly lit hallway in an old house, shadows deepening, a sense of profound quiet, dust motes in the air, cold tones\", \"texto_locucion\": \"Primero fue el silencio. Demasiado profundo.\", \"pexels_query\": \"empty hallway silence\"}, {\"id\": 2, \"prompt\": \"a single, small, old wooden toy train isolated in the center of a vast, dark, wooden floor, distant light from a window, overwhelming empty space\", \"prompt_visual\": \"a single, small, old wooden toy train isolated in the center of a vast, dark, wooden floor, distant light from a window, overwhelming empty space\", \"texto_locucion\": \"En la casa. Donde nadie te escuchaba.\", \"pexels_query\": \"toy train alone\"}, {\"id\": 3, \"prompt\": \"a slightly tilted, ancient, empty rocking chair in a dark corner of a child's room, not moving, but implying recent use, heavy shadows\", \"prompt_visual\": \"a slightly tilted, ancient, empty rocking chair in a dark corner of a child's room, not moving, but implying recent use, heavy shadows\", \"texto_locucion\": \"Y tú sentías que algo no estaba bien.\", \"pexels_query\": \"empty rocking chair\"}, {\"id\": 4, \"prompt\": \"a blurry, indistinct dark shape at the edge of perception in a poorly lit room, a feeling of being watched, subtle distortion\", \"prompt_visual\": \"a blurry, indistinct dark shape at the edge of perception in a poorly lit room, a feeling of being watched, subtle distortion\", \"texto_locucion\": \"No podías explicarlo. Solo una sensación.\", \"pexels_query\": \"blurry dark shape\"}, {\"id\": 5, \"prompt\": \"a child's worn teddy bear sitting upright on a high shelf where it shouldn't be, eyes staring forward, unnaturally posed, stark lighting\", \"prompt_visual\": \"a child's worn teddy bear sitting upright on a high shelf where it shouldn't be, eyes staring forward, unnaturally posed, stark lighting\", \"texto_locucion\": \"Un juguete que apareció fuera de lugar.\", \"pexels_query\": \"teddy bear shelf\"}, {\"id\": 6, \"prompt\": \"a heavy wooden door, slightly ajar, revealing only deep darkness beyond, a sliver of light from the side, unsettling gap\", \"prompt_visual\": \"a heavy wooden door, slightly ajar, revealing only deep darkness beyond, a sliver of light from the side, unsettling gap\", \"texto_locucion\": \"Una puerta que jamás cerraste bien.\", \"pexels_query\": \"door slightly ajar\"}, {\"id\": 7, \"prompt\": \"the same door, now fully open to a pitch-black room, a cold draft implied, chilling emptiness, eerie absence\", \"prompt_visual\": \"the same door, now fully open to a pitch-black room, a cold draft implied, chilling emptiness, eerie absence\", \"texto_locucion\": \"Pero al despertar, la encontrabas abierta.\", \"pexels_query\": \"open dark door\"}, {\"id\": 8, \"prompt\": \"a long, winding staircase covered in dark, worn carpet, the bottom steps in shadow, no one visible, but a sense of upward movement implied\", \"prompt_visual\": \"a long, winding staircase covered in dark, worn carpet, the bottom steps in shadow, no one visible, but a sense of upward movement implied\", \"texto_locucion\": \"Escuchabas pasos lentos. Subían la escalera.\", \"pexels_query\": \"dark carpeted stairs\"}, {\"id\": 9, \"prompt\": \"a distorted shadow figure stretching across a wall in a child's bedroom, thin and elongated, not human, menacing presence\", \"prompt_visual\": \"a distorted shadow figure stretching across a wall in a child's bedroom, thin and elongated, not human, menacing presence\", \"texto_locucion\": \"Sabías que no estabas solo en casa.\", \"pexels_query\": \"elongated shadow figure\"}, {\"id\": 10, \"prompt\": \"an old, muted, rotary phone on a dusty table, receiver slightly off the hook, suggesting dismissed calls or unheard pleas, static\", \"prompt_visual\": \"an old, muted, rotary phone on a dusty table, receiver slightly off the hook, suggesting dismissed calls or unheard pleas, static\", \"texto_locucion\": \"Tus padres decían: \\\"Es solo tu imaginación\\\".\", \"pexels_query\": \"old phone receiver\"}, {\"id\": 11, \"prompt\": \"a close-up, out-of-focus shot of an indistinct dark mass just behind a sheer curtain, implying a presence nearby, almost touching\", \"prompt_visual\": \"a close-up, out-of-focus shot of an indistinct dark mass just behind a sheer curtain, implying a presence nearby, almost touching\", \"texto_locucion\": \"Pero tú lo sentías. Muy cerca de ti.\", \"pexels_query\": \"dark mass curtain\"}, {\"id\": 12, \"prompt\": \"a single window pane covered in condensation and a thin layer of frost from the inside, suggesting an unnatural chill, gloomy view\", \"prompt_visual\": \"a single window pane covered in condensation and a thin layer of frost from the inside, suggesting an unnatural chill, gloomy view\", \"texto_locucion\": \"Había algo más. Un frío que te invadía.\", \"pexels_query\": \"frosted window pane\"}, {\"id\": 13, \"prompt\": \"the corner of a child's room, where normal furniture casts unsettling, disproportionate shadows on the wall, creating monster-like forms\", \"prompt_visual\": \"the corner of a child's room, where normal furniture casts unsettling, disproportionate shadows on the wall, creating monster-like forms\", \"texto_locucion\": \"En tu cuarto, las sombras eran distintas.\", \"pexels_query\": \"distorted furniture shadows\"}, {\"id\": 14, \"prompt\": \"intricate, long shadows on a textured wall, seeming to writhe and shift subtly, organic and unsettling, subtle movement blur\", \"prompt_visual\": \"intricate, long shadows on a textured wall, seeming to writhe and shift subtly, organic and unsettling, subtle movement blur\", \"texto_locucion\": \"Las siluetas se estiraban. Parecían moverse.\", \"pexels_query\": \"shifting wall shadows\"}, {\"id\": 15, \"prompt\": \"a crack in an old, peeling painted wall, with a faint, almost invisible wisp of dark mist or vapor emerging, implying sound\", \"prompt_visual\": \"a crack in an old, peeling painted wall, with a faint, almost invisible wisp of dark mist or vapor emerging, implying sound\", \"texto_locucion\": \"A veces, un susurro. Llamándote muy bajo.\", \"pexels_query\": \"wall crack mist\"}, {\"id\": 16, \"prompt\": \"a single, old, worn children's book lying open on a dark floor, pages turned by an unseen force, light flickering, isolated\", \"prompt_visual\": \"a single, old, worn children's book lying open on a dark floor, pages turned by an unseen force, light flickering, isolated\", \"texto_locucion\": \"Nadie lo vio. Pero tú sí lo escuchaste.\", \"pexels_query\": \"open children's book\"}, {\"id\": 17, \"prompt\": \"a simple wooden chair, completely out of place, standing alone in the middle of a long, dark, empty hallway, perfectly centered\", \"prompt_visual\": \"a simple wooden chair, completely out of place, standing alone in the middle of a long, dark, empty hallway, perfectly centered\", \"texto_locucion\": \"Una silla en el pasillo. Donde no iba.\", \"pexels_query\": \"chair in hallway\"}, {\"id\": 18, \"prompt\": \"the same chair, viewed from a slightly different angle, implying it has been moved and returned, ominous repetition, unchanging position\", \"prompt_visual\": \"the same chair, viewed from a slightly different angle, implying it has been moved and returned, ominous repetition, unchanging position\", \"texto_locucion\": \"La movías. Y volvía a aparecer allí.\", \"pexels_query\": \"chair alone hallway\"}, {\"id\": 19, \"prompt\": \"a child's crayon drawing, depicting a simple house, now fallen to the floor from a wall, lying face down, isolated\", \"prompt_visual\": \"a child's crayon drawing, depicting a simple house, now fallen to the floor from a wall, lying face down, isolated\", \"texto_locucion\": \"Tus dibujos infantiles. Caían sin razón.\", \"pexels_query\": \"crayon drawing fallen\"}, {\"id\": 20, \"prompt\": \"an intensely dark, undefined void occupying the space just behind an open closet door, a sense of immense pressure, no light escaping\", \"prompt_visual\": \"an intensely dark, undefined void occupying the space just behind an open closet door, a sense of immense pressure, no light escaping\", \"texto_locucion\": \"El aire pesado. Justo detrás de ti.\", \"pexels_query\": \"dark closet void\"}, {\"id\": 21, \"prompt\": \"a small, barely visible patch of dark, damp soil on an otherwise clean wooden floorboard, unnatural and out of place, subtle texture\", \"prompt_visual\": \"a small, barely visible patch of dark, damp soil on an otherwise clean wooden floorboard, unnatural and out of place, subtle texture\", \"texto_locucion\": \"Y ese olor peculiar. A tierra húmeda y vieja.\", \"pexels_query\": \"damp soil floor\"}, {\"id\": 22, \"prompt\": \"a shadowy, humanoid outline formed by dust and grime on a disused windowpane, a faint, vague face, pareidolia, unsettling\", \"prompt_visual\": \"a shadowy, humanoid outline formed by dust and grime on a disused windowpane, a faint, vague face, pareidolia, unsettling\", \"texto_locucion\": \"Era el olor de lo que te acompañaba.\", \"pexels_query\": \"dust outline window\"}, {\"id\": 23, \"prompt\": \"a long, dark corridor with multiple closed doors, all identical, one door handle slightly turned downward, implying recent unseen entry\", \"prompt_visual\": \"a long, dark corridor with multiple closed doors, all identical, one door handle slightly turned downward, implying recent unseen entry\", \"texto_locucion\": \"Te seguía en el silencio absoluto de tu hogar.\", \"pexels_query\": \"multiple dark doors\"}, {\"id\": 24, \"prompt\": \"a child's drawing on a wall, initially innocent, but now with an extra, crude, dark figure drawn beside the child, primitive and menacing\", \"prompt_visual\": \"a child's drawing on a wall, initially innocent, but now with an extra, crude, dark figure drawn beside the child, primitive and menacing\", \"texto_locucion\": \"Una presencia que creció contigo cada día.\", \"pexels_query\": \"child drawing extra figure\"}, {\"id\": 25, \"prompt\": \"a single, abandoned dinner plate with uneaten food on a large, empty dining table, only one setting, cold, desolate atmosphere\", \"prompt_visual\": \"a single, abandoned dinner plate with uneaten food on a large, empty dining table, only one setting, cold, desolate atmosphere\", \"texto_locucion\": \"Porque tus padres... casi nunca estaban allí.\", \"pexels_query\": \"abandoned dinner plate\"}, {\"id\": 26, \"prompt\": \"a gaping, pitch-black void under a child's bed, reaching out like a silent maw, not just shadow, but an absence of light\", \"prompt_visual\": \"a gaping, pitch-black void under a child's bed, reaching out like a silent maw, not just shadow, but an absence of light\", \"texto_locucion\": \"Dejaron un vacío. Y algo lo llenó.\", \"pexels_query\": \"void under bed\"}, {\"id\": 27, \"prompt\": \"a pair of glowing, malevolent, unseen eyes peering from extreme darkness in a bedroom, only the eyes are visible, chillingly bright\", \"prompt_visual\": \"a pair of glowing, malevolent, unseen eyes peering from extreme darkness in a bedroom, only the eyes are visible, chillingly bright\", \"texto_locucion\": \"Ahora tú lo sabes. Aquel miedo era real.\", \"pexels_query\": \"glowing eyes darkness\"}, {\"id\": 28, \"prompt\": \"the silhouette of a tall, thin, inhuman entity standing at the far end of a very long, dark hallway, barely perceptible but undeniably there, watching\", \"prompt_visual\": \"the silhouette of a tall, thin, inhuman entity standing at the far end of a very long, dark hallway, barely perceptible but undeniably there, watching\", \"texto_locucion\": \"Quizá nunca se fue. Solo te esperaba.\", \"pexels_query\": \"entity long hallway\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Primero fue el silencio. Demasiado profundo. En la casa. Donde nadie te escuchaba. Y tú sentías que algo no estaba bien. No podías explicarlo. Solo una sensación. Un juguete que apareció fuera de lugar. Una puerta que jamás cerraste bien. Pero al despertar, la encontrabas abierta. Escuchabas pasos lentos. Subían la escalera. Sabías que no estabas solo en casa. Tus padres decían: \"Es solo tu imaginación\". Pero tú lo sentías. Muy cerca de ti. Había algo más. Un frío que te invadía. En tu cuarto, las sombras eran distintas. Las siluetas se estiraban. Parecían moverse. A veces, un susurro. Llamándote muy bajo. Nadie lo vio. Pero tú sí lo escuchaste. Una silla en el pasillo. Donde no iba. La movías. Y volvía a aparecer allí. Tus dibujos infantiles. Caían sin razón. El aire pesado. Justo detrás de ti. Y ese olor peculiar. A tierra húmeda y vieja. Era el olor de lo que te acompañaba. Te seguía en el silencio absoluto de tu hogar. Una presencia que creció contigo cada día. Porque tus padres... casi nunca estaban allí. Dejaron un vacío. Y algo lo llenó. Ahora tú lo sabes. Aquel miedo era real. Quizá nunca se fue. Solo te esperaba.",
+    "titulo_sugerido": "El Vacío Que Te Creó",
+    "escenas_texto": [
+      "Primero fue el silencio. Demasiado profundo.",
+      "En la casa. Donde nadie te escuchaba.",
+      "Y tú sentías que algo no estaba bien.",
+      "No podías explicarlo. Solo una sensación.",
+      "Un juguete que apareció fuera de lugar.",
+      "Una puerta que jamás cerraste bien.",
+      "Pero al despertar, la encontrabas abierta.",
+      "Escuchabas pasos lentos. Subían la escalera.",
+      "Sabías que no estabas solo en casa.",
+      "Tus padres decían: \"Es solo tu imaginación\".",
+      "Pero tú lo sentías. Muy cerca de ti.",
+      "Había algo más. Un frío que te invadía.",
+      "En tu cuarto, las sombras eran distintas.",
+      "Las siluetas se estiraban. Parecían moverse.",
+      "A veces, un susurro. Llamándote muy bajo.",
+      "Nadie lo vio. Pero tú sí lo escuchaste.",
+      "Una silla en el pasillo. Donde no iba.",
+      "La movías. Y volvía a aparecer allí.",
+      "Tus dibujos infantiles. Caían sin razón.",
+      "El aire pesado. Justo detrás de ti.",
+      "Y ese olor peculiar. A tierra húmeda y vieja.",
+      "Era el olor de lo que te acompañaba.",
+      "Te seguía en el silencio absoluto de tu hogar.",
+      "Una presencia que creció contigo cada día.",
+      "Porque tus padres... casi nunca estaban allí.",
+      "Dejaron un vacío. Y algo lo llenó.",
+      "Ahora tú lo sabes. Aquel miedo era real.",
+      "Quizá nunca se fue. Solo te esperaba."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "an empty, dimly lit hallway in an old house, shadows deepening, a sense of profound quiet, dust motes in the air, cold tones",
+        "prompt_visual": "an empty, dimly lit hallway in an old house, shadows deepening, a sense of profound quiet, dust motes in the air, cold tones",
+        "texto_locucion": "Primero fue el silencio. Demasiado profundo.",
+        "pexels_query": "empty hallway silence"
+      },
+      {
+        "id": 2,
+        "prompt": "a single, small, old wooden toy train isolated in the center of a vast, dark, wooden floor, distant light from a window, overwhelming empty space",
+        "prompt_visual": "a single, small, old wooden toy train isolated in the center of a vast, dark, wooden floor, distant light from a window, overwhelming empty space",
+        "texto_locucion": "En la casa. Donde nadie te escuchaba.",
+        "pexels_query": "toy train alone"
+      },
+      {
+        "id": 3,
+        "prompt": "a slightly tilted, ancient, empty rocking chair in a dark corner of a child's room, not moving, but implying recent use, heavy shadows",
+        "prompt_visual": "a slightly tilted, ancient, empty rocking chair in a dark corner of a child's room, not moving, but implying recent use, heavy shadows",
+        "texto_locucion": "Y tú sentías que algo no estaba bien.",
+        "pexels_query": "empty rocking chair"
+      },
+      {
+        "id": 4,
+        "prompt": "a blurry, indistinct dark shape at the edge of perception in a poorly lit room, a feeling of being watched, subtle distortion",
+        "prompt_visual": "a blurry, indistinct dark shape at the edge of perception in a poorly lit room, a feeling of being watched, subtle distortion",
+        "texto_locucion": "No podías explicarlo. Solo una sensación.",
+        "pexels_query": "blurry dark shape"
+      },
+      {
+        "id": 5,
+        "prompt": "a child's worn teddy bear sitting upright on a high shelf where it shouldn't be, eyes staring forward, unnaturally posed, stark lighting",
+        "prompt_visual": "a child's worn teddy bear sitting upright on a high shelf where it shouldn't be, eyes staring forward, unnaturally posed, stark lighting",
+        "texto_locucion": "Un juguete que apareció fuera de lugar.",
+        "pexels_query": "teddy bear shelf"
+      },
+      {
+        "id": 6,
+        "prompt": "a heavy wooden door, slightly ajar, revealing only deep darkness beyond, a sliver of light from the side, unsettling gap",
+        "prompt_visual": "a heavy wooden door, slightly ajar, revealing only deep darkness beyond, a sliver of light from the side, unsettling gap",
+        "texto_locucion": "Una puerta que jamás cerraste bien.",
+        "pexels_query": "door slightly ajar"
+      },
+      {
+        "id": 7,
+        "prompt": "the same door, now fully open to a pitch-black room, a cold draft implied, chilling emptiness, eerie absence",
+        "prompt_visual": "the same door, now fully open to a pitch-black room, a cold draft implied, chilling emptiness, eerie absence",
+        "texto_locucion": "Pero al despertar, la encontrabas abierta.",
+        "pexels_query": "open dark door"
+      },
+      {
+        "id": 8,
+        "prompt": "a long, winding staircase covered in dark, worn carpet, the bottom steps in shadow, no one visible, but a sense of upward movement implied",
+        "prompt_visual": "a long, winding staircase covered in dark, worn carpet, the bottom steps in shadow, no one visible, but a sense of upward movement implied",
+        "texto_locucion": "Escuchabas pasos lentos. Subían la escalera.",
+        "pexels_query": "dark carpeted stairs"
+      },
+      {
+        "id": 9,
+        "prompt": "a distorted shadow figure stretching across a wall in a child's bedroom, thin and elongated, not human, menacing presence",
+        "prompt_visual": "a distorted shadow figure stretching across a wall in a child's bedroom, thin and elongated, not human, menacing presence",
+        "texto_locucion": "Sabías que no estabas solo en casa.",
+        "pexels_query": "elongated shadow figure"
+      },
+      {
+        "id": 10,
+        "prompt": "an old, muted, rotary phone on a dusty table, receiver slightly off the hook, suggesting dismissed calls or unheard pleas, static",
+        "prompt_visual": "an old, muted, rotary phone on a dusty table, receiver slightly off the hook, suggesting dismissed calls or unheard pleas, static",
+        "texto_locucion": "Tus padres decían: \"Es solo tu imaginación\".",
+        "pexels_query": "old phone receiver"
+      },
+      {
+        "id": 11,
+        "prompt": "a close-up, out-of-focus shot of an indistinct dark mass just behind a sheer curtain, implying a presence nearby, almost touching",
+        "prompt_visual": "a close-up, out-of-focus shot of an indistinct dark mass just behind a sheer curtain, implying a presence nearby, almost touching",
+        "texto_locucion": "Pero tú lo sentías. Muy cerca de ti.",
+        "pexels_query": "dark mass curtain"
+      },
+      {
+        "id": 12,
+        "prompt": "a single window pane covered in condensation and a thin layer of frost from the inside, suggesting an unnatural chill, gloomy view",
+        "prompt_visual": "a single window pane covered in condensation and a thin layer of frost from the inside, suggesting an unnatural chill, gloomy view",
+        "texto_locucion": "Había algo más. Un frío que te invadía.",
+        "pexels_query": "frosted window pane"
+      },
+      {
+        "id": 13,
+        "prompt": "the corner of a child's room, where normal furniture casts unsettling, disproportionate shadows on the wall, creating monster-like forms",
+        "prompt_visual": "the corner of a child's room, where normal furniture casts unsettling, disproportionate shadows on the wall, creating monster-like forms",
+        "texto_locucion": "En tu cuarto, las sombras eran distintas.",
+        "pexels_query": "distorted furniture shadows"
+      },
+      {
+        "id": 14,
+        "prompt": "intricate, long shadows on a textured wall, seeming to writhe and shift subtly, organic and unsettling, subtle movement blur",
+        "prompt_visual": "intricate, long shadows on a textured wall, seeming to writhe and shift subtly, organic and unsettling, subtle movement blur",
+        "texto_locucion": "Las siluetas se estiraban. Parecían moverse.",
+        "pexels_query": "shifting wall shadows"
+      },
+      {
+        "id": 15,
+        "prompt": "a crack in an old, peeling painted wall, with a faint, almost invisible wisp of dark mist or vapor emerging, implying sound",
+        "prompt_visual": "a crack in an old, peeling painted wall, with a faint, almost invisible wisp of dark mist or vapor emerging, implying sound",
+        "texto_locucion": "A veces, un susurro. Llamándote muy bajo.",
+        "pexels_query": "wall crack mist"
+      },
+      {
+        "id": 16,
+        "prompt": "a single, old, worn children's book lying open on a dark floor, pages turned by an unseen force, light flickering, isolated",
+        "prompt_visual": "a single, old, worn children's book lying open on a dark floor, pages turned by an unseen force, light flickering, isolated",
+        "texto_locucion": "Nadie lo vio. Pero tú sí lo escuchaste.",
+        "pexels_query": "open children's book"
+      },
+      {
+        "id": 17,
+        "prompt": "a simple wooden chair, completely out of place, standing alone in the middle of a long, dark, empty hallway, perfectly centered",
+        "prompt_visual": "a simple wooden chair, completely out of place, standing alone in the middle of a long, dark, empty hallway, perfectly centered",
+        "texto_locucion": "Una silla en el pasillo. Donde no iba.",
+        "pexels_query": "chair in hallway"
+      },
+      {
+        "id": 18,
+        "prompt": "the same chair, viewed from a slightly different angle, implying it has been moved and returned, ominous repetition, unchanging position",
+        "prompt_visual": "the same chair, viewed from a slightly different angle, implying it has been moved and returned, ominous repetition, unchanging position",
+        "texto_locucion": "La movías. Y volvía a aparecer allí.",
+        "pexels_query": "chair alone hallway"
+      },
+      {
+        "id": 19,
+        "prompt": "a child's crayon drawing, depicting a simple house, now fallen to the floor from a wall, lying face down, isolated",
+        "prompt_visual": "a child's crayon drawing, depicting a simple house, now fallen to the floor from a wall, lying face down, isolated",
+        "texto_locucion": "Tus dibujos infantiles. Caían sin razón.",
+        "pexels_query": "crayon drawing fallen"
+      },
+      {
+        "id": 20,
+        "prompt": "an intensely dark, undefined void occupying the space just behind an open closet door, a sense of immense pressure, no light escaping",
+        "prompt_visual": "an intensely dark, undefined void occupying the space just behind an open closet door, a sense of immense pressure, no light escaping",
+        "texto_locucion": "El aire pesado. Justo detrás de ti.",
+        "pexels_query": "dark closet void"
+      },
+      {
+        "id": 21,
+        "prompt": "a small, barely visible patch of dark, damp soil on an otherwise clean wooden floorboard, unnatural and out of place, subtle texture",
+        "prompt_visual": "a small, barely visible patch of dark, damp soil on an otherwise clean wooden floorboard, unnatural and out of place, subtle texture",
+        "texto_locucion": "Y ese olor peculiar. A tierra húmeda y vieja.",
+        "pexels_query": "damp soil floor"
+      },
+      {
+        "id": 22,
+        "prompt": "a shadowy, humanoid outline formed by dust and grime on a disused windowpane, a faint, vague face, pareidolia, unsettling",
+        "prompt_visual": "a shadowy, humanoid outline formed by dust and grime on a disused windowpane, a faint, vague face, pareidolia, unsettling",
+        "texto_locucion": "Era el olor de lo que te acompañaba.",
+        "pexels_query": "dust outline window"
+      },
+      {
+        "id": 23,
+        "prompt": "a long, dark corridor with multiple closed doors, all identical, one door handle slightly turned downward, implying recent unseen entry",
+        "prompt_visual": "a long, dark corridor with multiple closed doors, all identical, one door handle slightly turned downward, implying recent unseen entry",
+        "texto_locucion": "Te seguía en el silencio absoluto de tu hogar.",
+        "pexels_query": "multiple dark doors"
+      },
+      {
+        "id": 24,
+        "prompt": "a child's drawing on a wall, initially innocent, but now with an extra, crude, dark figure drawn beside the child, primitive and menacing",
+        "prompt_visual": "a child's drawing on a wall, initially innocent, but now with an extra, crude, dark figure drawn beside the child, primitive and menacing",
+        "texto_locucion": "Una presencia que creció contigo cada día.",
+        "pexels_query": "child drawing extra figure"
+      },
+      {
+        "id": 25,
+        "prompt": "a single, abandoned dinner plate with uneaten food on a large, empty dining table, only one setting, cold, desolate atmosphere",
+        "prompt_visual": "a single, abandoned dinner plate with uneaten food on a large, empty dining table, only one setting, cold, desolate atmosphere",
+        "texto_locucion": "Porque tus padres... casi nunca estaban allí.",
+        "pexels_query": "abandoned dinner plate"
+      },
+      {
+        "id": 26,
+        "prompt": "a gaping, pitch-black void under a child's bed, reaching out like a silent maw, not just shadow, but an absence of light",
+        "prompt_visual": "a gaping, pitch-black void under a child's bed, reaching out like a silent maw, not just shadow, but an absence of light",
+        "texto_locucion": "Dejaron un vacío. Y algo lo llenó.",
+        "pexels_query": "void under bed"
+      },
+      {
+        "id": 27,
+        "prompt": "a pair of glowing, malevolent, unseen eyes peering from extreme darkness in a bedroom, only the eyes are visible, chillingly bright",
+        "prompt_visual": "a pair of glowing, malevolent, unseen eyes peering from extreme darkness in a bedroom, only the eyes are visible, chillingly bright",
+        "texto_locucion": "Ahora tú lo sabes. Aquel miedo era real.",
+        "pexels_query": "glowing eyes darkness"
+      },
+      {
+        "id": 28,
+        "prompt": "the silhouette of a tall, thin, inhuman entity standing at the far end of a very long, dark hallway, barely perceptible but undeniably there, watching",
+        "prompt_visual": "the silhouette of a tall, thin, inhuman entity standing at the far end of a very long, dark hallway, barely perceptible but undeniably there, watching",
+        "texto_locucion": "Quizá nunca se fue. Solo te esperaba.",
+        "pexels_query": "entity long hallway"
+      }
+    ],
+    "hooks": [
+      "La silla no estaba así.",
+      "Nadie más lo oía.",
+      "Algo ocupó tu lugar."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
