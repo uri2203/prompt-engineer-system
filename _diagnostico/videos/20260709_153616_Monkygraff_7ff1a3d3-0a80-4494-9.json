@@ -1,0 +1,62 @@
+{
+  "id": "7ff1a3d3-0a80-4494-9e22-2ea5b36ab663_asm",
+  "marca": "Monkygraff",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-09 15:31:02",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 46.3,
+        "pausa_mas_cercana_seg": 46.33,
+        "distancia_seg": 0.03,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      3.38,
+      6.75,
+      10.7,
+      14.23,
+      18.34,
+      21.74,
+      28.46,
+      32.43,
+      35.79,
+      38.97,
+      42.5,
+      46.33,
+      49.66,
+      52.82,
+      55.75,
+      59.2,
+      62.8,
+      66.35,
+      69.44,
+      72.75,
+      76.41,
+      80.07,
+      83.76,
+      86.89,
+      89.78
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [
+    "Audio de narracion ausente antes del merge: C:\\DarkFactory_Renders\\7ff1a3d3-0a80-4494-9e22-2ea5b36ab663\\locucion_hooks.m4a",
+    "Video sin pista de audio tras merge",
+    "Video final no válido (tam/dur insuficiente) — reportado FALLIDO para reintento."
+  ]
+}
