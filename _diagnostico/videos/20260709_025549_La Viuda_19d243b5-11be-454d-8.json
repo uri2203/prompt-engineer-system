@@ -1,0 +1,68 @@
+{
+  "id": "19d243b5-11be-454d-818b-0e48ce27c77d_asm",
+  "marca": "La Viuda",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-09 02:48:45",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 72.37,
+        "pausa_mas_cercana_seg": 72.48,
+        "distancia_seg": 0.11,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      0.17,
+      2.62,
+      5.59,
+      13.98,
+      22.49,
+      26.52,
+      29.04,
+      32.58,
+      34.7,
+      37.5,
+      40.64,
+      42.15,
+      46.32,
+      59.6,
+      70.8,
+      72.48,
+      76.27,
+      77.62,
+      81.98,
+      84.05,
+      86.67,
+      91.12,
+      92.48,
+      100.83,
+      109.84,
+      117.1,
+      121.56,
+      124.17,
+      128.09,
+      131.04,
+      133.85
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [
+    "Audio de narracion ausente antes del merge: C:\\DarkFactory_Renders\\19d243b5-11be-454d-818b-0e48ce27c77d\\locucion_hooks.m4a",
+    "Video sin pista de audio tras merge",
+    "Video final no válido (tam/dur insuficiente) — reportado FALLIDO para reintento."
+  ]
+}
