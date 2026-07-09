@@ -1,7 +1,5 @@
 {
   "ids": [
-    "2a0db445-93f7-4504-a7a4-3e1b107d4ec8",
-    "2a0db445-93f7-4504-a7a4-3e1b107d4ec8_asm",
     "1c452a3a-f820-4f6e-896d-160763803e50",
     "1c452a3a-f820-4f6e-896d-160763803e50_asm",
     "84bcdf3a-df14-4a8f-accf-f322ed1881f0",
@@ -199,7 +197,9 @@
     "cfaa1336-18c9-43c6-ba68-d312bcce9b31",
     "cfaa1336-18c9-43c6-ba68-d312bcce9b31_asm",
     "bb1defe9-89fc-4e58-a8ee-091a23ec5cb4",
-    "bb1defe9-89fc-4e58-a8ee-091a23ec5cb4_asm"
+    "bb1defe9-89fc-4e58-a8ee-091a23ec5cb4_asm",
+    "7ff1a3d3-0a80-4494-9e22-2ea5b36ab663",
+    "7ff1a3d3-0a80-4494-9e22-2ea5b36ab663_asm"
   ],
   "detalles": {
     "711c706f-7f52-460b-8638-be31a5a90aaf": {
@@ -1089,6 +1089,11 @@
     "bb1defe9-89fc-4e58-a8ee-091a23ec5cb4": {
       "duracion_real_seg": 120.9,
       "marca": "La Viuda",
+      "formato": "9:16"
+    },
+    "7ff1a3d3-0a80-4494-9e22-2ea5b36ab663": {
+      "duracion_real_seg": 107.1,
+      "marca": "Monkygraff",
       "formato": "9:16"
     }
   }
