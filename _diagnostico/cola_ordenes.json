@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "19d243b5-11be-454d-818b-0e48ce27c77d",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark, empty hallway, a single, antique porcelain doll figurine on a small wooden table, its head slightly tilted, deep shadow\", \"prompt_visual\": \"Dark, empty hallway, a single, antique porcelain doll figurine on a small wooden table, its head slightly tilted, deep shadow\", \"texto_locucion\": \"Tu casa. Siempre tranquila. Ese silencio absoluto conocías.\", \"pexels_query\": \"porcelain doll antique\"}, {\"id\": 2, \"prompt\": \"Close-up of the porcelain doll's face, slightly chipped, one eye seems to gleam in the dim light, unsettling, blurred background\", \"prompt_visual\": \"Close-up of the porcelain doll's face, slightly chipped, one eye seems to gleam in the dim light, unsettling, blurred background\", \"texto_locucion\": \"Había una figura. Una muñeca vieja. Nadie le dio atención.\", \"pexels_query\": \"creepy doll face\"}, {\"id\": 3, \"prompt\": \"Living room, empty couch, the doll now on the coffee table, facing the viewer, slightly closer than before, eerie light\", \"prompt_visual\": \"Living room, empty couch, the doll now on the coffee table, facing the viewer, slightly closer than before, eerie light\", \"texto_locucion\": \"Un día notaste un cambio. Imperceptible. ¿Se había movido sola?\", \"pexels_query\": \"living room doll\"}, {\"id\": 4, \"prompt\": \"Dark bedroom, only light from a window, the doll now sitting on a bedside table, its back to the viewer, shadow, unsettling\", \"prompt_visual\": \"Dark bedroom, only light from a window, the doll now sitting on a bedside table, its back to the viewer, shadow, unsettling\", \"texto_locucion\": \"Lo atribuiste al viento, a tu propia imaginación. Solo eso.\", \"pexels_query\": \"doll bedside table\"}, {\"id\": 5, \"prompt\": \"Shadowed kitchen counter, the doll next to a coffee cup, its head now turned slightly more, as if listening, deep focus\", \"prompt_visual\": \"Shadowed kitchen counter, the doll next to a coffee cup, its head now turned slightly more, as if listening, deep focus\", \"texto_locucion\": \"Pero volvía a pasar. Cada mañana en un lugar distinto.\", \"pexels_query\": \"doll kitchen counter\"}, {\"id\": 6, \"prompt\": \"Staircase in shadow, the doll at the bottom step, looking up, sense of dread, no visible human, grainy texture\", \"prompt_visual\": \"Staircase in shadow, the doll at the bottom step, looking up, sense of dread, no visible human, grainy texture\", \"texto_locucion\": \"Nunca la viste. Nadie lo vio. Eras tú solo.\", \"pexels_query\": \"doll staircase shadow\"}, {\"id\": 7, \"prompt\": \"Empty desk, papers scattered, the doll now positioned staring at the computer screen, faint glow from screen, unsettling\", \"prompt_visual\": \"Empty desk, papers scattered, the doll now positioned staring at the computer screen, faint glow from screen, unsettling\", \"texto_locucion\": \"¿Se movía sola? La idea era absurda. No podía ser real.\", \"pexels_query\": \"doll desk computer\"}, {\"id\": 8, \"prompt\": \"Dark hallway, a door slightly ajar, the doll peeking from behind the doorframe, shadow figure, eerie light\", \"prompt_visual\": \"Dark hallway, a door slightly ajar, the doll peeking from behind the doorframe, shadow figure, eerie light\", \"texto_locucion\": \"Entonces, comenzó a seguirte. A aparecer donde no debía.\", \"pexels_query\": \"doll door shadow\"}, {\"id\": 9, \"prompt\": \"Bathroom mirror reflecting a dark corner, the doll is subtly visible in the reflection, watching from a distance, ominous\", \"prompt_visual\": \"Bathroom mirror reflecting a dark corner, the doll is subtly visible in the reflection, watching from a distance, ominous\", \"texto_locucion\": \"Miraba. Siempre miraba. Sin importar dónde la dejaras.\", \"pexels_query\": \"doll mirror reflection\"}, {\"id\": 10, \"prompt\": \"Child's playroom, toys scattered, the doll sitting alone on a rocking horse, appearing out of place, slightly sinister\", \"prompt_visual\": \"Child's playroom, toys scattered, the doll sitting alone on a rocking horse, appearing out of place, slightly sinister\", \"texto_locucion\": \"La colocabas. Al rato, ya no estaba allí.\", \"pexels_query\": \"doll playroom\"}, {\"id\": 11, \"prompt\": \"Close-up on the doll's hands, unnaturally posed, as if reaching, dark, deep shadows surrounding, eerie textures\", \"prompt_visual\": \"Close-up on the doll's hands, unnaturally posed, as if reaching, dark, deep shadows surrounding, eerie textures\", \"texto_locucion\": \"Empezaste a sentirlo. No estabas solo. Nunca más.\", \"pexels_query\": \"creepy doll hands\"}, {\"id\": 12, \"prompt\": \"Empty dining table, the doll at one end, a single chair pulled out, as if someone just left, unsettling quiet\", \"prompt_visual\": \"Empty dining table, the doll at one end, a single chair pulled out, as if someone just left, unsettling quiet\", \"texto_locucion\": \"Tu mente creaba escenarios. Ruidos. Sombras donde no había.\", \"pexels_query\": \"doll dining table\"}, {\"id\": 13, \"prompt\": \"Dark corner of a room, a subtle silhouette of something humanoid in the shadow, with the doll placed strategically\", \"prompt_visual\": \"Dark corner of a room, a subtle silhouette of something humanoid in the shadow, with the doll placed strategically\", \"texto_locucion\": \"Ese objeto inerte. ¿Era el origen de todo tu miedo?\", \"pexels_query\": \"shadow figure doll\"}, {\"id\": 14, \"prompt\": \"Close-up of the doll's eyes, appearing darker, more intense, almost pupil-like, reflecting faint light, disturbing gaze\", \"prompt_visual\": \"Close-up of the doll's eyes, appearing darker, more intense, almost pupil-like, reflecting faint light, disturbing gaze\", \"texto_locucion\": \"Sentías su presencia. Aunque no la vieras. Lo sentiste antes.\", \"pexels_query\": \"doll eyes close up\"}, {\"id\": 15, \"prompt\": \"Dark hallway, multiple doors, one door slightly ajar, the doll barely visible through the crack, watching intently\", \"prompt_visual\": \"Dark hallway, multiple doors, one door slightly ajar, the doll barely visible through the crack, watching intently\", \"texto_locucion\": \"Tu propia casa. Se volvió ajena, hostil. Un lugar extraño.\", \"pexels_query\": \"ajar door doll\"}, {\"id\": 16, \"prompt\": \"Bedroom closet door, slightly open, the doll's head peeking out from the darkness, chilling, faint light\", \"prompt_visual\": \"Bedroom closet door, slightly open, the doll's head peeking out from the darkness, chilling, faint light\", \"texto_locucion\": \"Cada noche, antes de dormir. La buscabas. Con la mirada.\", \"pexels_query\": \"doll closet peeking\"}, {\"id\": 17, \"prompt\": \"Window at night, rain streaking down, the doll placed on the sill, looking out into the void, stark contrast\", \"prompt_visual\": \"Window at night, rain streaking down, the doll placed on the sill, looking out into the void, stark contrast\", \"texto_locucion\": \"Rezabas para que se quedara. No cambiara de lugar.\", \"pexels_query\": \"doll window rain\"}, {\"id\": 18, \"prompt\": \"Dark hallway, a child's footprint on the dusty floor, the doll next to it, implying movement, cold light\", \"prompt_visual\": \"Dark hallway, a child's footprint on the dusty floor, the doll next to it, implying movement, cold light\", \"texto_locucion\": \"Pero siempre se movía. Te recordaba su existencia.\", \"pexels_query\": \"footprint doll\"}, {\"id\": 19, \"prompt\": \"Close-up on a single shadow hand, long fingers, reaching for the doll from behind, blurred background, ominous\", \"prompt_visual\": \"Close-up on a single shadow hand, long fingers, reaching for the doll from behind, blurred background, ominous\", \"texto_locucion\": \"Algo no está bien. Lo sabes. Lo sentiste antes.\", \"pexels_query\": \"shadow hand doll\"}, {\"id\": 20, \"prompt\": \"Empty living room, focus on a rocking chair, gently swaying, the doll sitting stiffly on it, facing away, unsettling motion\", \"prompt_visual\": \"Empty living room, focus on a rocking chair, gently swaying, the doll sitting stiffly on it, facing away, unsettling motion\", \"texto_locucion\": \"Tu cordura. Poco a poco. Empezaba a desvanecerse.\", \"pexels_query\": \"doll rocking chair\"}, {\"id\": 21, \"prompt\": \"A dark, unused attic corner, cobwebs, dusty boxes, the doll sitting atop a box, looking neglected yet watchful\", \"prompt_visual\": \"A dark, unused attic corner, cobwebs, dusty boxes, the doll sitting atop a box, looking neglected yet watchful\", \"texto_locucion\": \"Intentaste deshacerte de ella. La tiraste lejos de casa.\", \"pexels_query\": \"doll attic corner\"}, {\"id\": 22, \"prompt\": \"Outdoor garbage can, lid slightly ajar, the doll's head subtly peeking from inside, impossible return, deep shadow\", \"prompt_visual\": \"Outdoor garbage can, lid slightly ajar, the doll's head subtly peeking from inside, impossible return, deep shadow\", \"texto_locucion\": \"Al día siguiente, te esperaba de vuelta. En el umbral.\", \"pexels_query\": \"doll garbage can\"}, {\"id\": 23, \"prompt\": \"Close-up on a lock of hair, dark and coarse, tangled around the doll's porcelain leg, subtle yet disturbing detail\", \"prompt_visual\": \"Close-up on a lock of hair, dark and coarse, tangled around the doll's porcelain leg, subtle yet disturbing detail\", \"texto_locucion\": \"Desde entonces no duermes. La observas. Tú la vigilas.\", \"pexels_query\": \"hair doll leg\"}, {\"id\": 24, \"prompt\": \"Dark room, the doll on a shelf, its shadow on the wall behind it distorted, appearing much larger and menacing\", \"prompt_visual\": \"Dark room, the doll on a shelf, its shadow on the wall behind it distorted, appearing much larger and menacing\", \"texto_locucion\": \"Crees que un objeto no puede dañarte. Te equivocas.\", \"pexels_query\": \"doll shadow menacing\"}, {\"id\": 25, \"prompt\": \"Empty bedroom, the doll is the only object in focus, sitting on the pillow, facing the door, stark, silent vigil\", \"prompt_visual\": \"Empty bedroom, the doll is the only object in focus, sitting on the pillow, facing the door, stark, silent vigil\", \"texto_locucion\": \"Ella no se irá. No puedes ignorarlo. Te pertenece ahora.\", \"pexels_query\": \"doll pillow bedroom\"}, {\"id\": 26, \"prompt\": \"Deep dark corridor, a single faint light source, the doll's silhouette at the very end of the corridor, growing larger\", \"prompt_visual\": \"Deep dark corridor, a single faint light source, the doll's silhouette at the very end of the corridor, growing larger\", \"texto_locucion\": \"Y ahora, tú también lo sabes. Un objeto puede acecharte.\", \"pexels_query\": \"doll dark corridor\"}, {\"id\": 27, \"prompt\": \"Extreme close-up on the doll's mouth, a faint, almost imperceptible smirk, chillingly human, dark background\", \"prompt_visual\": \"Extreme close-up on the doll's mouth, a faint, almost imperceptible smirk, chillingly human, dark background\", \"texto_locucion\": \"Mira tus propios objetos inofensivos. ¿Hay algo en ellos?\", \"pexels_query\": \"doll smirk disturbing\"}, {\"id\": 28, \"prompt\": \"A single, old, worn teddy bear or doll, sitting on a child's bed, its eyes glowing faintly in the pitch black, ominous presence\", \"prompt_visual\": \"A single, old, worn teddy bear or doll, sitting on a child's bed, its eyes glowing faintly in the pitch black, ominous presence\", \"texto_locucion\": \"¿Se han movido? Quizá no eres tú quien está solo.\", \"pexels_query\": \"glowing eyes doll bed\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Tu casa. Siempre tranquila. Ese silencio absoluto conocías. Había una figura. Una muñeca vieja. Nadie le dio atención. Un día notaste un cambio. Imperceptible. ¿Se había movido sola? Lo atribuiste al viento, a tu propia imaginación. Solo eso. Pero volvía a pasar. Cada mañana en un lugar distinto. Nunca la viste. Nadie lo vio. Eras tú solo. ¿Se movía sola? La idea era absurda. No podía ser real. Entonces, comenzó a seguirte. A aparecer donde no debía. Miraba. Siempre miraba. Sin importar dónde la dejaras. La colocabas. Al rato, ya no estaba allí. Empezaste a sentirlo. No estabas solo. Nunca más. Tu mente creaba escenarios. Ruidos. Sombras donde no había. Ese objeto inerte. ¿Era el origen de todo tu miedo? Sentías su presencia. Aunque no la vieras. Lo sentiste antes. Tu propia casa. Se volvió ajena, hostil. Un lugar extraño. Cada noche, antes de dormir. La buscabas. Con la mirada. Rezabas para que se quedara. No cambiara de lugar. Pero siempre se movía. Te recordaba su existencia. Algo no está bien. Lo sabes. Lo sentiste antes. Tu cordura. Poco a poco. Empezaba a desvanecerse. Intentaste deshacerte de ella. La tiraste lejos de casa. Al día siguiente, te esperaba de vuelta. En el umbral. Desde entonces no duermes. La observas. Tú la vigilas. Crees que un objeto no puede dañarte. Te equivocas. Ella no se irá. No puedes ignorarlo. Te pertenece ahora. Y ahora, tú también lo sabes. Un objeto puede acecharte. Mira tus propios objetos inofensivos. ¿Hay algo en ellos? ¿Se han movido? Quizá no eres tú quien está solo.",
+    "titulo_sugerido": "¿Quién Mueve Tus Objetos?",
+    "escenas_texto": [
+      "Tu casa. Siempre tranquila. Ese silencio absoluto conocías.",
+      "Había una figura. Una muñeca vieja. Nadie le dio atención.",
+      "Un día notaste un cambio. Imperceptible. ¿Se había movido sola?",
+      "Lo atribuiste al viento, a tu propia imaginación. Solo eso.",
+      "Pero volvía a pasar. Cada mañana en un lugar distinto.",
+      "Nunca la viste. Nadie lo vio. Eras tú solo.",
+      "¿Se movía sola? La idea era absurda. No podía ser real.",
+      "Entonces, comenzó a seguirte. A aparecer donde no debía.",
+      "Miraba. Siempre miraba. Sin importar dónde la dejaras.",
+      "La colocabas. Al rato, ya no estaba allí.",
+      "Empezaste a sentirlo. No estabas solo. Nunca más.",
+      "Tu mente creaba escenarios. Ruidos. Sombras donde no había.",
+      "Ese objeto inerte. ¿Era el origen de todo tu miedo?",
+      "Sentías su presencia. Aunque no la vieras. Lo sentiste antes.",
+      "Tu propia casa. Se volvió ajena, hostil. Un lugar extraño.",
+      "Cada noche, antes de dormir. La buscabas. Con la mirada.",
+      "Rezabas para que se quedara. No cambiara de lugar.",
+      "Pero siempre se movía. Te recordaba su existencia.",
+      "Algo no está bien. Lo sabes. Lo sentiste antes.",
+      "Tu cordura. Poco a poco. Empezaba a desvanecerse.",
+      "Intentaste deshacerte de ella. La tiraste lejos de casa.",
+      "Al día siguiente, te esperaba de vuelta. En el umbral.",
+      "Desde entonces no duermes. La observas. Tú la vigilas.",
+      "Crees que un objeto no puede dañarte. Te equivocas.",
+      "Ella no se irá. No puedes ignorarlo. Te pertenece ahora.",
+      "Y ahora, tú también lo sabes. Un objeto puede acecharte.",
+      "Mira tus propios objetos inofensivos. ¿Hay algo en ellos?",
+      "¿Se han movido? Quizá no eres tú quien está solo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark, empty hallway, a single, antique porcelain doll figurine on a small wooden table, its head slightly tilted, deep shadow",
+        "prompt_visual": "Dark, empty hallway, a single, antique porcelain doll figurine on a small wooden table, its head slightly tilted, deep shadow",
+        "texto_locucion": "Tu casa. Siempre tranquila. Ese silencio absoluto conocías.",
+        "pexels_query": "porcelain doll antique"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up of the porcelain doll's face, slightly chipped, one eye seems to gleam in the dim light, unsettling, blurred background",
+        "prompt_visual": "Close-up of the porcelain doll's face, slightly chipped, one eye seems to gleam in the dim light, unsettling, blurred background",
+        "texto_locucion": "Había una figura. Una muñeca vieja. Nadie le dio atención.",
+        "pexels_query": "creepy doll face"
+      },
+      {
+        "id": 3,
+        "prompt": "Living room, empty couch, the doll now on the coffee table, facing the viewer, slightly closer than before, eerie light",
+        "prompt_visual": "Living room, empty couch, the doll now on the coffee table, facing the viewer, slightly closer than before, eerie light",
+        "texto_locucion": "Un día notaste un cambio. Imperceptible. ¿Se había movido sola?",
+        "pexels_query": "living room doll"
+      },
+      {
+        "id": 4,
+        "prompt": "Dark bedroom, only light from a window, the doll now sitting on a bedside table, its back to the viewer, shadow, unsettling",
+        "prompt_visual": "Dark bedroom, only light from a window, the doll now sitting on a bedside table, its back to the viewer, shadow, unsettling",
+        "texto_locucion": "Lo atribuiste al viento, a tu propia imaginación. Solo eso.",
+        "pexels_query": "doll bedside table"
+      },
+      {
+        "id": 5,
+        "prompt": "Shadowed kitchen counter, the doll next to a coffee cup, its head now turned slightly more, as if listening, deep focus",
+        "prompt_visual": "Shadowed kitchen counter, the doll next to a coffee cup, its head now turned slightly more, as if listening, deep focus",
+        "texto_locucion": "Pero volvía a pasar. Cada mañana en un lugar distinto.",
+        "pexels_query": "doll kitchen counter"
+      },
+      {
+        "id": 6,
+        "prompt": "Staircase in shadow, the doll at the bottom step, looking up, sense of dread, no visible human, grainy texture",
+        "prompt_visual": "Staircase in shadow, the doll at the bottom step, looking up, sense of dread, no visible human, grainy texture",
+        "texto_locucion": "Nunca la viste. Nadie lo vio. Eras tú solo.",
+        "pexels_query": "doll staircase shadow"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty desk, papers scattered, the doll now positioned staring at the computer screen, faint glow from screen, unsettling",
+        "prompt_visual": "Empty desk, papers scattered, the doll now positioned staring at the computer screen, faint glow from screen, unsettling",
+        "texto_locucion": "¿Se movía sola? La idea era absurda. No podía ser real.",
+        "pexels_query": "doll desk computer"
+      },
+      {
+        "id": 8,
+        "prompt": "Dark hallway, a door slightly ajar, the doll peeking from behind the doorframe, shadow figure, eerie light",
+        "prompt_visual": "Dark hallway, a door slightly ajar, the doll peeking from behind the doorframe, shadow figure, eerie light",
+        "texto_locucion": "Entonces, comenzó a seguirte. A aparecer donde no debía.",
+        "pexels_query": "doll door shadow"
+      },
+      {
+        "id": 9,
+        "prompt": "Bathroom mirror reflecting a dark corner, the doll is subtly visible in the reflection, watching from a distance, ominous",
+        "prompt_visual": "Bathroom mirror reflecting a dark corner, the doll is subtly visible in the reflection, watching from a distance, ominous",
+        "texto_locucion": "Miraba. Siempre miraba. Sin importar dónde la dejaras.",
+        "pexels_query": "doll mirror reflection"
+      },
+      {
+        "id": 10,
+        "prompt": "Child's playroom, toys scattered, the doll sitting alone on a rocking horse, appearing out of place, slightly sinister",
+        "prompt_visual": "Child's playroom, toys scattered, the doll sitting alone on a rocking horse, appearing out of place, slightly sinister",
+        "texto_locucion": "La colocabas. Al rato, ya no estaba allí.",
+        "pexels_query": "doll playroom"
+      },
+      {
+        "id": 11,
+        "prompt": "Close-up on the doll's hands, unnaturally posed, as if reaching, dark, deep shadows surrounding, eerie textures",
+        "prompt_visual": "Close-up on the doll's hands, unnaturally posed, as if reaching, dark, deep shadows surrounding, eerie textures",
+        "texto_locucion": "Empezaste a sentirlo. No estabas solo. Nunca más.",
+        "pexels_query": "creepy doll hands"
+      },
+      {
+        "id": 12,
+        "prompt": "Empty dining table, the doll at one end, a single chair pulled out, as if someone just left, unsettling quiet",
+        "prompt_visual": "Empty dining table, the doll at one end, a single chair pulled out, as if someone just left, unsettling quiet",
+        "texto_locucion": "Tu mente creaba escenarios. Ruidos. Sombras donde no había.",
+        "pexels_query": "doll dining table"
+      },
+      {
+        "id": 13,
+        "prompt": "Dark corner of a room, a subtle silhouette of something humanoid in the shadow, with the doll placed strategically",
+        "prompt_visual": "Dark corner of a room, a subtle silhouette of something humanoid in the shadow, with the doll placed strategically",
+        "texto_locucion": "Ese objeto inerte. ¿Era el origen de todo tu miedo?",
+        "pexels_query": "shadow figure doll"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of the doll's eyes, appearing darker, more intense, almost pupil-like, reflecting faint light, disturbing gaze",
+        "prompt_visual": "Close-up of the doll's eyes, appearing darker, more intense, almost pupil-like, reflecting faint light, disturbing gaze",
+        "texto_locucion": "Sentías su presencia. Aunque no la vieras. Lo sentiste antes.",
+        "pexels_query": "doll eyes close up"
+      },
+      {
+        "id": 15,
+        "prompt": "Dark hallway, multiple doors, one door slightly ajar, the doll barely visible through the crack, watching intently",
+        "prompt_visual": "Dark hallway, multiple doors, one door slightly ajar, the doll barely visible through the crack, watching intently",
+        "texto_locucion": "Tu propia casa. Se volvió ajena, hostil. Un lugar extraño.",
+        "pexels_query": "ajar door doll"
+      },
+      {
+        "id": 16,
+        "prompt": "Bedroom closet door, slightly open, the doll's head peeking out from the darkness, chilling, faint light",
+        "prompt_visual": "Bedroom closet door, slightly open, the doll's head peeking out from the darkness, chilling, faint light",
+        "texto_locucion": "Cada noche, antes de dormir. La buscabas. Con la mirada.",
+        "pexels_query": "doll closet peeking"
+      },
+      {
+        "id": 17,
+        "prompt": "Window at night, rain streaking down, the doll placed on the sill, looking out into the void, stark contrast",
+        "prompt_visual": "Window at night, rain streaking down, the doll placed on the sill, looking out into the void, stark contrast",
+        "texto_locucion": "Rezabas para que se quedara. No cambiara de lugar.",
+        "pexels_query": "doll window rain"
+      },
+      {
+        "id": 18,
+        "prompt": "Dark hallway, a child's footprint on the dusty floor, the doll next to it, implying movement, cold light",
+        "prompt_visual": "Dark hallway, a child's footprint on the dusty floor, the doll next to it, implying movement, cold light",
+        "texto_locucion": "Pero siempre se movía. Te recordaba su existencia.",
+        "pexels_query": "footprint doll"
+      },
+      {
+        "id": 19,
+        "prompt": "Close-up on a single shadow hand, long fingers, reaching for the doll from behind, blurred background, ominous",
+        "prompt_visual": "Close-up on a single shadow hand, long fingers, reaching for the doll from behind, blurred background, ominous",
+        "texto_locucion": "Algo no está bien. Lo sabes. Lo sentiste antes.",
+        "pexels_query": "shadow hand doll"
+      },
+      {
+        "id": 20,
+        "prompt": "Empty living room, focus on a rocking chair, gently swaying, the doll sitting stiffly on it, facing away, unsettling motion",
+        "prompt_visual": "Empty living room, focus on a rocking chair, gently swaying, the doll sitting stiffly on it, facing away, unsettling motion",
+        "texto_locucion": "Tu cordura. Poco a poco. Empezaba a desvanecerse.",
+        "pexels_query": "doll rocking chair"
+      },
+      {
+        "id": 21,
+        "prompt": "A dark, unused attic corner, cobwebs, dusty boxes, the doll sitting atop a box, looking neglected yet watchful",
+        "prompt_visual": "A dark, unused attic corner, cobwebs, dusty boxes, the doll sitting atop a box, looking neglected yet watchful",
+        "texto_locucion": "Intentaste deshacerte de ella. La tiraste lejos de casa.",
+        "pexels_query": "doll attic corner"
+      },
+      {
+        "id": 22,
+        "prompt": "Outdoor garbage can, lid slightly ajar, the doll's head subtly peeking from inside, impossible return, deep shadow",
+        "prompt_visual": "Outdoor garbage can, lid slightly ajar, the doll's head subtly peeking from inside, impossible return, deep shadow",
+        "texto_locucion": "Al día siguiente, te esperaba de vuelta. En el umbral.",
+        "pexels_query": "doll garbage can"
+      },
+      {
+        "id": 23,
+        "prompt": "Close-up on a lock of hair, dark and coarse, tangled around the doll's porcelain leg, subtle yet disturbing detail",
+        "prompt_visual": "Close-up on a lock of hair, dark and coarse, tangled around the doll's porcelain leg, subtle yet disturbing detail",
+        "texto_locucion": "Desde entonces no duermes. La observas. Tú la vigilas.",
+        "pexels_query": "hair doll leg"
+      },
+      {
+        "id": 24,
+        "prompt": "Dark room, the doll on a shelf, its shadow on the wall behind it distorted, appearing much larger and menacing",
+        "prompt_visual": "Dark room, the doll on a shelf, its shadow on the wall behind it distorted, appearing much larger and menacing",
+        "texto_locucion": "Crees que un objeto no puede dañarte. Te equivocas.",
+        "pexels_query": "doll shadow menacing"
+      },
+      {
+        "id": 25,
+        "prompt": "Empty bedroom, the doll is the only object in focus, sitting on the pillow, facing the door, stark, silent vigil",
+        "prompt_visual": "Empty bedroom, the doll is the only object in focus, sitting on the pillow, facing the door, stark, silent vigil",
+        "texto_locucion": "Ella no se irá. No puedes ignorarlo. Te pertenece ahora.",
+        "pexels_query": "doll pillow bedroom"
+      },
+      {
+        "id": 26,
+        "prompt": "Deep dark corridor, a single faint light source, the doll's silhouette at the very end of the corridor, growing larger",
+        "prompt_visual": "Deep dark corridor, a single faint light source, the doll's silhouette at the very end of the corridor, growing larger",
+        "texto_locucion": "Y ahora, tú también lo sabes. Un objeto puede acecharte.",
+        "pexels_query": "doll dark corridor"
+      },
+      {
+        "id": 27,
+        "prompt": "Extreme close-up on the doll's mouth, a faint, almost imperceptible smirk, chillingly human, dark background",
+        "prompt_visual": "Extreme close-up on the doll's mouth, a faint, almost imperceptible smirk, chillingly human, dark background",
+        "texto_locucion": "Mira tus propios objetos inofensivos. ¿Hay algo en ellos?",
+        "pexels_query": "doll smirk disturbing"
+      },
+      {
+        "id": 28,
+        "prompt": "A single, old, worn teddy bear or doll, sitting on a child's bed, its eyes glowing faintly in the pitch black, ominous presence",
+        "prompt_visual": "A single, old, worn teddy bear or doll, sitting on a child's bed, its eyes glowing faintly in the pitch black, ominous presence",
+        "texto_locucion": "¿Se han movido? Quizá no eres tú quien está solo.",
+        "pexels_query": "glowing eyes doll bed"
+      }
+    ],
+    "hooks": [
+      "Tu juguete, ¿te observa?",
+      "Un objeto inofensivo.",
+      "Ya no puedes dormir."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
