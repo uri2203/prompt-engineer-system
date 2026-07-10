@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "2bf0729c-e7bd-4cc5-9ed2-2a906418a4ba",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark convenience store aisle at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark convenience store aisle at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esa noche... supiste que no estabas solo.\", \"pexels_query\": \"dark store aisle\"}, {\"id\": 2, \"prompt\": \"Empty checkout counter at night, digital display off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty checkout counter at night, digital display off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era un turno nocturno, en una tienda vacía.\", \"pexels_query\": \"empty checkout counter\"}, {\"id\": 3, \"prompt\": \"Security camera monitor showing static, dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Security camera monitor showing static, dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi primer trabajo, solo, después de medianoche.\", \"pexels_query\": \"static security monitor\"}, {\"id\": 4, \"prompt\": \"Shelf with items slightly disarranged, single product out of place, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shelf with items slightly disarranged, single product out of place, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empecé a escuchar ruidos extraños, leves, constantes.\", \"pexels_query\": \"disarranged store shelf\"}, {\"id\": 5, \"prompt\": \"Long, empty dark corridor in a building, subtle light at the end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Long, empty dark corridor in a building, subtle light at the end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Como si alguien caminara por pasillos oscuros.\", \"pexels_query\": \"dark empty corridor\"}, {\"id\": 6, \"prompt\": \"Window of a convenience store with a closed sign, blurred street outside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Window of a convenience store with a closed sign, blurred street outside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Al principio pensé que era el viento.\", \"pexels_query\": \"store closed sign\"}, {\"id\": 7, \"prompt\": \"Rolling can of soda on a tiled floor, subtle motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Rolling can of soda on a tiled floor, subtle motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero los objetos se movían solos, muy sutilmente.\", \"pexels_query\": \"rolling can floor\"}, {\"id\": 8, \"prompt\": \"A single tin can slightly ajar from a neat stack on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single tin can slightly ajar from a neat stack on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una lata de sopa rodó suave desde el estante.\", \"pexels_query\": \"soup can shelf\"}, {\"id\": 9, \"prompt\": \"Flickering fluorescent light in an empty room, power cable visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Flickering fluorescent light in an empty room, power cable visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Después, las luces parpadeaban, y la radio también.\", \"pexels_query\": \"flickering fluorescent light\"}, {\"id\": 10, \"prompt\": \"A chilled glass door of a refrigerator unit, showing condensation, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A chilled glass door of a refrigerator unit, showing condensation, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sentía una presencia helada, detrás de mí siempre.\", \"pexels_query\": \"chilled glass condensation\"}, {\"id\": 11, \"prompt\": \"Security mirror reflection, slightly distorted view of an empty store corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Security mirror reflection, slightly distorted view of an empty store corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Miraba el espejo, buscando algo, pero nadie.\", \"pexels_query\": \"security mirror reflection\"}, {\"id\": 12, \"prompt\": \"Empty coffee cup on a stained counter in a convenience store, very still, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty coffee cup on a stained counter in a convenience store, very still, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio absoluto era la parte más aterradora.\", \"pexels_query\": \"empty coffee cup counter\"}, {\"id\": 13, \"prompt\": \"Hand reaching for a light switch in a dark room, but the light is off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand reaching for a light switch in a dark room, but the light is off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No podías ignorarlo, algo no estaba bien ahí.\", \"pexels_query\": \"hand light switch off\"}, {\"id\": 14, \"prompt\": \"Door handle slowly turning on an old wooden door, subtle light from under the door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Door handle slowly turning on an old wooden door, subtle light from under the door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las puertas se abrían y cerraban, sin explicación.\", \"pexels_query\": \"door handle turning\"}, {\"id\": 15, \"prompt\": \"Keys on a hook next to a door, one key slot empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Keys on a hook next to a door, one key slot empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Imposible, estaban aseguradas desde dentro, lo juraba.\", \"pexels_query\": \"keys on hook\"}, {\"id\": 16, \"prompt\": \"Empty soda cans on a table, one slightly displaced, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty soda cans on a table, one slightly displaced, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Los murmullos empezaron, voces lejanas, casi ahogadas.\", \"pexels_query\": \"empty soda cans\"}, {\"id\": 17, \"prompt\": \"A faint shadow cast by an unseen object on a blank wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A faint shadow cast by an unseen object on a blank wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie más estaba ahí, solo yo y el frío.\", \"pexels_query\": \"faint wall shadow\"}, {\"id\": 18, \"prompt\": \"Phone recording a dark room, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Phone recording a dark room, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empecé a grabar mi turno, si nadie me creía.\", \"pexels_query\": \"phone recording dark\"}, {\"id\": 19, \"prompt\": \"Blurry video footage on a phone screen, grainy and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurry video footage on a phone screen, grainy and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Quería pruebas, no estaba enloqueciendo, de verdad.\", \"pexels_query\": \"blurry phone footage\"}, {\"id\": 20, \"prompt\": \"Laptop screen displaying security camera feed with glitches and static, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Laptop screen displaying security camera feed with glitches and static, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Revisa tus videos, no creerás lo que verás.\", \"pexels_query\": \"glitching security feed\"}, {\"id\": 21, \"prompt\": \"An office desk with a blurry document titled 'Termination Notice' partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An office desk with a blurry document titled 'Termination Notice' partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi jefe me despidió, alegando estrés. No creyó.\", \"pexels_query\": \"termination notice desk\"}, {\"id\": 22, \"prompt\": \"Stack of employee files, one file partially open, showing generic names, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Stack of employee files, one file partially open, showing generic names, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Varios empleados anteriores contaron exactamente lo mismo.\", \"pexels_query\": \"employee files stack\"}, {\"id\": 23, \"prompt\": \"Empty locker, door ajar, in a dark backroom of a store, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty locker, door ajar, in a dark backroom of a store, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Todos terminaban 'renunciando' misteriosamente, de repente.\", \"pexels_query\": \"empty locker ajar\"}, {\"id\": 24, \"prompt\": \"A dusty 'Hiring' sign on a darkened store window, slightly askew, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dusty 'Hiring' sign on a darkened store window, slightly askew, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie quería admitir lo que habitaba esa tienda.\", \"pexels_query\": \"dusty hiring sign\"}, {\"id\": 25, \"prompt\": \"Manager's office door, slightly ajar, casting a long shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Manager's office door, slightly ajar, casting a long shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La gerente solo quería encubrirlo todo, por supuesto.\", \"pexels_query\": \"managers office door\"}, {\"id\": 26, \"prompt\": \"A simple 'Manager' name tag lying face down on a counter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A simple 'Manager' name tag lying face down on a counter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El verdadero miedo era mi jefe, no el fantasma.\", \"pexels_query\": \"manager name tag\"}, {\"id\": 27, \"prompt\": \"Cash register, screen blank and dark, surrounded by empty counter space, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Cash register, screen blank and dark, surrounded by empty counter space, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Qué harías si tu trabajo fuera así de peligroso?\", \"pexels_query\": \"blank cash register\"}, {\"id\": 28, \"prompt\": \"Darkened entrance of a convenience store at night, glass door reflection distorted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Darkened entrance of a convenience store at night, glass door reflection distorted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Crees que lo inexplicable se puede esconder siempre?\", \"pexels_query\": \"dark store entrance\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Esa noche... supiste que no estabas solo. Era un turno nocturno, en una tienda vacía. Mi primer trabajo, solo, después de medianoche. Empecé a escuchar ruidos extraños, leves, constantes. Como si alguien caminara por pasillos oscuros. Al principio pensé que era el viento. Pero los objetos se movían solos, muy sutilmente. Una lata de sopa rodó suave desde el estante. Después, las luces parpadeaban, y la radio también. Sentía una presencia helada, detrás de mí siempre. Miraba el espejo, buscando algo, pero nadie. El silencio absoluto era la parte más aterradora. No podías ignorarlo, algo no estaba bien ahí. Las puertas se abrían y cerraban, sin explicación. Imposible, estaban aseguradas desde dentro, lo juraba. Los murmullos empezaron, voces lejanas, casi ahogadas. Nadie más estaba ahí, solo yo y el frío. Empecé a grabar mi turno, si nadie me creía. Quería pruebas, no estaba enloqueciendo, de verdad. Revisa tus videos, no creerás lo que verás. Mi jefe me despidió, alegando estrés. No creyó. Varios empleados anteriores contaron exactamente lo mismo. Todos terminaban 'renunciando' misteriosamente, de repente. Nadie quería admitir lo que habitaba esa tienda. La gerente solo quería encubrirlo todo, por supuesto. El verdadero miedo era mi jefe, no el fantasma. ¿Qué harías si tu trabajo fuera así de peligroso? ¿Crees que lo inexplicable se puede esconder siempre?",
+    "titulo_sugerido": "Mi jefe me obligaba a trabajar con algo inexplicable",
+    "escenas_texto": [
+      "Esa noche... supiste que no estabas solo.",
+      "Era un turno nocturno, en una tienda vacía.",
+      "Mi primer trabajo, solo, después de medianoche.",
+      "Empecé a escuchar ruidos extraños, leves, constantes.",
+      "Como si alguien caminara por pasillos oscuros.",
+      "Al principio pensé que era el viento.",
+      "Pero los objetos se movían solos, muy sutilmente.",
+      "Una lata de sopa rodó suave desde el estante.",
+      "Después, las luces parpadeaban, y la radio también.",
+      "Sentía una presencia helada, detrás de mí siempre.",
+      "Miraba el espejo, buscando algo, pero nadie.",
+      "El silencio absoluto era la parte más aterradora.",
+      "No podías ignorarlo, algo no estaba bien ahí.",
+      "Las puertas se abrían y cerraban, sin explicación.",
+      "Imposible, estaban aseguradas desde dentro, lo juraba.",
+      "Los murmullos empezaron, voces lejanas, casi ahogadas.",
+      "Nadie más estaba ahí, solo yo y el frío.",
+      "Empecé a grabar mi turno, si nadie me creía.",
+      "Quería pruebas, no estaba enloqueciendo, de verdad.",
+      "Revisa tus videos, no creerás lo que verás.",
+      "Mi jefe me despidió, alegando estrés. No creyó.",
+      "Varios empleados anteriores contaron exactamente lo mismo.",
+      "Todos terminaban 'renunciando' misteriosamente, de repente.",
+      "Nadie quería admitir lo que habitaba esa tienda.",
+      "La gerente solo quería encubrirlo todo, por supuesto.",
+      "El verdadero miedo era mi jefe, no el fantasma.",
+      "¿Qué harías si tu trabajo fuera así de peligroso?",
+      "¿Crees que lo inexplicable se puede esconder siempre?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark convenience store aisle at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark convenience store aisle at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esa noche... supiste que no estabas solo.",
+        "pexels_query": "dark store aisle"
+      },
+      {
+        "id": 2,
+        "prompt": "Empty checkout counter at night, digital display off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty checkout counter at night, digital display off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era un turno nocturno, en una tienda vacía.",
+        "pexels_query": "empty checkout counter"
+      },
+      {
+        "id": 3,
+        "prompt": "Security camera monitor showing static, dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Security camera monitor showing static, dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi primer trabajo, solo, después de medianoche.",
+        "pexels_query": "static security monitor"
+      },
+      {
+        "id": 4,
+        "prompt": "Shelf with items slightly disarranged, single product out of place, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shelf with items slightly disarranged, single product out of place, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empecé a escuchar ruidos extraños, leves, constantes.",
+        "pexels_query": "disarranged store shelf"
+      },
+      {
+        "id": 5,
+        "prompt": "Long, empty dark corridor in a building, subtle light at the end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Long, empty dark corridor in a building, subtle light at the end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Como si alguien caminara por pasillos oscuros.",
+        "pexels_query": "dark empty corridor"
+      },
+      {
+        "id": 6,
+        "prompt": "Window of a convenience store with a closed sign, blurred street outside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Window of a convenience store with a closed sign, blurred street outside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Al principio pensé que era el viento.",
+        "pexels_query": "store closed sign"
+      },
+      {
+        "id": 7,
+        "prompt": "Rolling can of soda on a tiled floor, subtle motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Rolling can of soda on a tiled floor, subtle motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero los objetos se movían solos, muy sutilmente.",
+        "pexels_query": "rolling can floor"
+      },
+      {
+        "id": 8,
+        "prompt": "A single tin can slightly ajar from a neat stack on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single tin can slightly ajar from a neat stack on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una lata de sopa rodó suave desde el estante.",
+        "pexels_query": "soup can shelf"
+      },
+      {
+        "id": 9,
+        "prompt": "Flickering fluorescent light in an empty room, power cable visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Flickering fluorescent light in an empty room, power cable visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Después, las luces parpadeaban, y la radio también.",
+        "pexels_query": "flickering fluorescent light"
+      },
+      {
+        "id": 10,
+        "prompt": "A chilled glass door of a refrigerator unit, showing condensation, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A chilled glass door of a refrigerator unit, showing condensation, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sentía una presencia helada, detrás de mí siempre.",
+        "pexels_query": "chilled glass condensation"
+      },
+      {
+        "id": 11,
+        "prompt": "Security mirror reflection, slightly distorted view of an empty store corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Security mirror reflection, slightly distorted view of an empty store corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Miraba el espejo, buscando algo, pero nadie.",
+        "pexels_query": "security mirror reflection"
+      },
+      {
+        "id": 12,
+        "prompt": "Empty coffee cup on a stained counter in a convenience store, very still, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty coffee cup on a stained counter in a convenience store, very still, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio absoluto era la parte más aterradora.",
+        "pexels_query": "empty coffee cup counter"
+      },
+      {
+        "id": 13,
+        "prompt": "Hand reaching for a light switch in a dark room, but the light is off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand reaching for a light switch in a dark room, but the light is off, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No podías ignorarlo, algo no estaba bien ahí.",
+        "pexels_query": "hand light switch off"
+      },
+      {
+        "id": 14,
+        "prompt": "Door handle slowly turning on an old wooden door, subtle light from under the door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Door handle slowly turning on an old wooden door, subtle light from under the door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las puertas se abrían y cerraban, sin explicación.",
+        "pexels_query": "door handle turning"
+      },
+      {
+        "id": 15,
+        "prompt": "Keys on a hook next to a door, one key slot empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Keys on a hook next to a door, one key slot empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Imposible, estaban aseguradas desde dentro, lo juraba.",
+        "pexels_query": "keys on hook"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty soda cans on a table, one slightly displaced, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty soda cans on a table, one slightly displaced, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Los murmullos empezaron, voces lejanas, casi ahogadas.",
+        "pexels_query": "empty soda cans"
+      },
+      {
+        "id": 17,
+        "prompt": "A faint shadow cast by an unseen object on a blank wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A faint shadow cast by an unseen object on a blank wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie más estaba ahí, solo yo y el frío.",
+        "pexels_query": "faint wall shadow"
+      },
+      {
+        "id": 18,
+        "prompt": "Phone recording a dark room, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Phone recording a dark room, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empecé a grabar mi turno, si nadie me creía.",
+        "pexels_query": "phone recording dark"
+      },
+      {
+        "id": 19,
+        "prompt": "Blurry video footage on a phone screen, grainy and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurry video footage on a phone screen, grainy and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Quería pruebas, no estaba enloqueciendo, de verdad.",
+        "pexels_query": "blurry phone footage"
+      },
+      {
+        "id": 20,
+        "prompt": "Laptop screen displaying security camera feed with glitches and static, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Laptop screen displaying security camera feed with glitches and static, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Revisa tus videos, no creerás lo que verás.",
+        "pexels_query": "glitching security feed"
+      },
+      {
+        "id": 21,
+        "prompt": "An office desk with a blurry document titled 'Termination Notice' partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An office desk with a blurry document titled 'Termination Notice' partially visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi jefe me despidió, alegando estrés. No creyó.",
+        "pexels_query": "termination notice desk"
+      },
+      {
+        "id": 22,
+        "prompt": "Stack of employee files, one file partially open, showing generic names, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Stack of employee files, one file partially open, showing generic names, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Varios empleados anteriores contaron exactamente lo mismo.",
+        "pexels_query": "employee files stack"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty locker, door ajar, in a dark backroom of a store, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty locker, door ajar, in a dark backroom of a store, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Todos terminaban 'renunciando' misteriosamente, de repente.",
+        "pexels_query": "empty locker ajar"
+      },
+      {
+        "id": 24,
+        "prompt": "A dusty 'Hiring' sign on a darkened store window, slightly askew, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dusty 'Hiring' sign on a darkened store window, slightly askew, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie quería admitir lo que habitaba esa tienda.",
+        "pexels_query": "dusty hiring sign"
+      },
+      {
+        "id": 25,
+        "prompt": "Manager's office door, slightly ajar, casting a long shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Manager's office door, slightly ajar, casting a long shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La gerente solo quería encubrirlo todo, por supuesto.",
+        "pexels_query": "managers office door"
+      },
+      {
+        "id": 26,
+        "prompt": "A simple 'Manager' name tag lying face down on a counter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A simple 'Manager' name tag lying face down on a counter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El verdadero miedo era mi jefe, no el fantasma.",
+        "pexels_query": "manager name tag"
+      },
+      {
+        "id": 27,
+        "prompt": "Cash register, screen blank and dark, surrounded by empty counter space, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Cash register, screen blank and dark, surrounded by empty counter space, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Qué harías si tu trabajo fuera así de peligroso?",
+        "pexels_query": "blank cash register"
+      },
+      {
+        "id": 28,
+        "prompt": "Darkened entrance of a convenience store at night, glass door reflection distorted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Darkened entrance of a convenience store at night, glass door reflection distorted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Crees que lo inexplicable se puede esconder siempre?",
+        "pexels_query": "dark store entrance"
+      }
+    ],
+    "hooks": [
+      "Algo te observa trabajar.",
+      "Tu jefe lo sabía.",
+      "¿Te atreverías a volver?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
