@@ -1,0 +1,44 @@
+{
+  "id": "aeb47e10-0179-4d2d-a23a-d670e01e096d_asm",
+  "marca": "TuIALista",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-10 22:39:30",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-07-10 22:42:27",
+  "duracion_real_seg": 122.3,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4",
+  "MEDICION_REAL": {
+    "analisis_ffmpeg": "ok",
+    "duracion_video_seg": 122.28,
+    "silencios_reales": [
+      75.06
+    ],
+    "num_silencios_reales": 1,
+    "cortes_escena_reales": [
+      8.73,
+      26.2,
+      34.93,
+      43.67,
+      61.13,
+      69.87,
+      78.6,
+      96.07
+    ],
+    "num_cortes_escena": 8
+  }
+}
