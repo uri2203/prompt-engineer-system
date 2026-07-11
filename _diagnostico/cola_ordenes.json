@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "2ecd40ab-c567-4dfe-a93f-d2cad97ddb10",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dimly lit living room, single cold light source from a window, subtle frost on the pane, empty armchair, deep shadows\", \"prompt_visual\": \"Dimly lit living room, single cold light source from a window, subtle frost on the pane, empty armchair, deep shadows\", \"texto_locucion\": \"Primero fue el frío. Después, la certeza te observaba.\", \"pexels_query\": \"cold living room\"}, {\"id\": 2, \"prompt\": \"Darkened hallway, slightly open door, distorted shadow stretching from beneath the door, no clear source\", \"prompt_visual\": \"Darkened hallway, slightly open door, distorted shadow stretching from beneath the door, no clear source\", \"texto_locucion\": \"La tecnología capta lo visible. Tu miedo va más allá.\", \"pexels_query\": \"dark hallway door shadow\"}, {\"id\": 3, \"prompt\": \"Grainy, desaturated image of an empty corner of a room, subtle pareidolia in the shadows forming a face\", \"prompt_visual\": \"Grainy, desaturated image of an empty corner of a room, subtle pareidolia in the shadows forming a face\", \"texto_locucion\": \"Creíste ver algo en la pantalla. Fue un error.\", \"pexels_query\": \"grainy empty room shadow\"}, {\"id\": 4, \"prompt\": \"A dark staircase, one step subtly cracked, a feeling of descent into darkness\", \"prompt_visual\": \"A dark staircase, one step subtly cracked, a feeling of descent into darkness\", \"texto_locucion\": \"Tu mente llena los espacios. Con algo peor.\", \"pexels_query\": \"dark staircase cracked\"}, {\"id\": 5, \"prompt\": \"Ancient, weathered stone wall in a basement, faint, disturbing symbols scratched into the surface\", \"prompt_visual\": \"Ancient, weathered stone wall in a basement, faint, disturbing symbols scratched into the surface\", \"texto_locucion\": \"¿Y si no hay fantasmas, sino algo antiguo?\", \"pexels_query\": \"ancient stone wall basement\"}, {\"id\": 6, \"prompt\": \"Kitchen at night, a single cupboard door slightly ajar, casting an odd shadow on the floor\", \"prompt_visual\": \"Kitchen at night, a single cupboard door slightly ajar, casting an odd shadow on the floor\", \"texto_locucion\": \"¿Sentiste que no estabas solo en casa?\", \"pexels_query\": \"kitchen cupboard ajar\"}, {\"id\": 7, \"prompt\": \"A curtain blowing gently inward from a slightly open window in a dark room, suggesting an unseen draft\", \"prompt_visual\": \"A curtain blowing gently inward from a slightly open window in a dark room, suggesting an unseen draft\", \"texto_locucion\": \"Esa presencia invisible que eriza tu piel.\", \"pexels_query\": \"curtain blowing dark room\"}, {\"id\": 8, \"prompt\": \"A distorted reflection in a tarnished mirror, not a human face, but an indistinct, unsettling shape\", \"prompt_visual\": \"A distorted reflection in a tarnished mirror, not a human face, but an indistinct, unsettling shape\", \"texto_locucion\": \"Sí. Tú sabes que algo no está bien.\", \"pexels_query\": \"tarnished mirror reflection\"}, {\"id\": 9, \"prompt\": \"An old, silent grandfather clock in a dark, empty room, its pendulum still\", \"prompt_visual\": \"An old, silent grandfather clock in a dark, empty room, its pendulum still\", \"texto_locucion\": \"Se alimenta del silencio absoluto de tu hogar.\", \"pexels_query\": \"silent grandfather clock\"}, {\"id\": 10, \"prompt\": \"A corner of a room deeply engulfed in shadow, a sense of something lurking just out of sight\", \"prompt_visual\": \"A corner of a room deeply engulfed in shadow, a sense of something lurking just out of sight\", \"texto_locucion\": \"Vive en las sombras, en tu punto ciego.\", \"pexels_query\": \"room corner deep shadow\"}, {\"id\": 11, \"prompt\": \"A floorboard, slightly lifted, on an old wooden floor, hinting at pressure from below\", \"prompt_visual\": \"A floorboard, slightly lifted, on an old wooden floor, hinting at pressure from below\", \"texto_locucion\": \"Escuchaste pasos. Nadie más lo vio, ni tú.\", \"pexels_query\": \"lifted floorboard old wood\"}, {\"id\": 12, \"prompt\": \"A single candle flame flickering violently in an otherwise still, dark room\", \"prompt_visual\": \"A single candle flame flickering violently in an otherwise still, dark room\", \"texto_locucion\": \"¿Fue el viento o una respiración helada?\", \"pexels_query\": \"flickering candle flame\"}, {\"id\": 13, \"prompt\": \"Blurry outlines of familiar objects on a dusty shelf, disorienting focus\", \"prompt_visual\": \"Blurry outlines of familiar objects on a dusty shelf, disorienting focus\", \"texto_locucion\": \"Tus recuerdos se mezclan. La paranoia crece.\", \"pexels_query\": \"blurry dusty shelf\"}, {\"id\": 14, \"prompt\": \"A small, ordinary table lamp, now tilted at an impossible, disturbing angle\", \"prompt_visual\": \"A small, ordinary table lamp, now tilted at an impossible, disturbing angle\", \"texto_locucion\": \"Un objeto cambió de lugar. Muy sutil.\", \"pexels_query\": \"tilted table lamp\"}, {\"id\": 15, \"prompt\": \"A chair pushed back from a table in an empty room, as if someone just left\", \"prompt_visual\": \"A chair pushed back from a table in an empty room, as if someone just left\", \"texto_locucion\": \"¿Lo dejaste así? No puedes ignorarlo.\", \"pexels_query\": \"empty chair pushed back\"}, {\"id\": 16, \"prompt\": \"A dark, empty hallway, the far end shrouded in an oppressive blackness\", \"prompt_visual\": \"A dark, empty hallway, the far end shrouded in an oppressive blackness\", \"texto_locucion\": \"Lo sentiste antes. Ahora, lo sabes.\", \"pexels_query\": \"dark oppressive hallway\"}, {\"id\": 17, \"prompt\": \"An open doorway leading to a completely dark room, an unsettling void\", \"prompt_visual\": \"An open doorway leading to a completely dark room, an unsettling void\", \"texto_locucion\": \"No hay nada. Pero no estás solo.\", \"pexels_query\": \"open dark doorway\"}, {\"id\": 18, \"prompt\": \"A bed in a dark room, the sheets subtly rumpled as if disturbed by an unseen weight\", \"prompt_visual\": \"A bed in a dark room, the sheets subtly rumpled as if disturbed by an unseen weight\", \"texto_locucion\": \"Cada noche, la vigilia te consume lento.\", \"pexels_query\": \"rumpled bed sheets dark\"}, {\"id\": 19, \"prompt\": \"A familiar street sign at night, subtly bent and twisted, almost imperceptibly wrong\", \"prompt_visual\": \"A familiar street sign at night, subtly bent and twisted, almost imperceptibly wrong\", \"texto_locucion\": \"Tu mundo cotidiano se vuelve irreconocible, extraño.\", \"pexels_query\": \"twisted street sign night\"}, {\"id\": 20, \"prompt\": \"A cracked windowpane, through which a distorted, almost menacing shadow is visible outside\", \"prompt_visual\": \"A cracked windowpane, through which a distorted, almost menacing shadow is visible outside\", \"texto_locucion\": \"Los \\\"fantasmas\\\" son excusas de tu mente.\", \"pexels_query\": \"cracked window shadow\"}, {\"id\": 21, \"prompt\": \"A dark void where a door should be, framed by an ancient, rotting wooden frame\", \"prompt_visual\": \"A dark void where a door should be, framed by an ancient, rotting wooden frame\", \"texto_locucion\": \"Hay algo peor. Sin nombre, ni rostro.\", \"pexels_query\": \"rotting door frame void\"}, {\"id\": 22, \"prompt\": \"An old, rotary phone, ringing silently in a dark, dusty room\", \"prompt_visual\": \"An old, rotary phone, ringing silently in a dark, dusty room\", \"texto_locucion\": \"El silencio mismo es la prueba. Te persigue.\", \"pexels_query\": \"silent rotary phone dark\"}, {\"id\": 23, \"prompt\": \"A single, bare lightbulb hanging from a frayed wire, casting unsettling shadows\", \"prompt_visual\": \"A single, bare lightbulb hanging from a frayed wire, casting unsettling shadows\", \"texto_locucion\": \"Tu refugio no es más que una trampa.\", \"pexels_query\": \"bare lightbulb frayed\"}, {\"id\": 24, \"prompt\": \"A television screen in a dark room, showing only static, with a very subtle, almost unnoticeable distortion\", \"prompt_visual\": \"A television screen in a dark room, showing only static, with a very subtle, almost unnoticeable distortion\", \"texto_locucion\": \"Si grabas, solo captarás su burla, su sombra.\", \"pexels_query\": \"static tv screen distortion\"}, {\"id\": 25, \"prompt\": \"A wall with old, peeling wallpaper, a subtle, dark stain forming an indistinct shape\", \"prompt_visual\": \"A wall with old, peeling wallpaper, a subtle, dark stain forming an indistinct shape\", \"texto_locucion\": \"Siempre estuvo ahí. Te ha estado esperando.\", \"pexels_query\": \"peeling wallpaper dark stain\"}, {\"id\": 26, \"prompt\": \"A single, dusty cobweb stretching across a dark corner, seemingly alive\", \"prompt_visual\": \"A single, dusty cobweb stretching across a dark corner, seemingly alive\", \"texto_locucion\": \"Respirando cuando tú no puedes hacerlo.\", \"pexels_query\": \"dusty cobweb dark\"}, {\"id\": 27, \"prompt\": \"Two faint, glowing orbs of light deep within an impenetrable shadow, like eyes\", \"prompt_visual\": \"Two faint, glowing orbs of light deep within an impenetrable shadow, like eyes\", \"texto_locucion\": \"Sus ojos no tienen párpados. Tú lo sabes.\", \"pexels_query\": \"glowing orbs shadow\"}, {\"id\": 28, \"prompt\": \"A dark, empty bedroom, a single pillow on the bed, subtly indented as if a head had just rested there\", \"prompt_visual\": \"A dark, empty bedroom, a single pillow on the bed, subtly indented as if a head had just rested there\", \"texto_locucion\": \"¿Crees estar realmente solo cuando cierras tus ojos?\", \"pexels_query\": \"empty bedroom indented pillow\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Primero fue el frío. Después, la certeza te observaba. La tecnología capta lo visible. Tu miedo va más allá. Creíste ver algo en la pantalla. Fue un error. Tu mente llena los espacios. Con algo peor. ¿Y si no hay fantasmas, sino algo antiguo? ¿Sentiste que no estabas solo en casa? Esa presencia invisible que eriza tu piel. Sí. Tú sabes que algo no está bien. Se alimenta del silencio absoluto de tu hogar. Vive en las sombras, en tu punto ciego. Escuchaste pasos. Nadie más lo vio, ni tú. ¿Fue el viento o una respiración helada? Tus recuerdos se mezclan. La paranoia crece. Un objeto cambió de lugar. Muy sutil. ¿Lo dejaste así? No puedes ignorarlo. Lo sentiste antes. Ahora, lo sabes. No hay nada. Pero no estás solo. Cada noche, la vigilia te consume lento. Tu mundo cotidiano se vuelve irreconocible, extraño. Los \"fantasmas\" son excusas de tu mente. Hay algo peor. Sin nombre, ni rostro. El silencio mismo es la prueba. Te persigue. Tu refugio no es más que una trampa. Si grabas, solo captarás su burla, su sombra. Siempre estuvo ahí. Te ha estado esperando. Respirando cuando tú no puedes hacerlo. Sus ojos no tienen párpados. Tú lo sabes. ¿Crees estar realmente solo cuando cierras tus ojos?",
+    "titulo_sugerido": "¿Qué te observa cuando la cámara no graba?",
+    "escenas_texto": [
+      "Primero fue el frío. Después, la certeza te observaba.",
+      "La tecnología capta lo visible. Tu miedo va más allá.",
+      "Creíste ver algo en la pantalla. Fue un error.",
+      "Tu mente llena los espacios. Con algo peor.",
+      "¿Y si no hay fantasmas, sino algo antiguo?",
+      "¿Sentiste que no estabas solo en casa?",
+      "Esa presencia invisible que eriza tu piel.",
+      "Sí. Tú sabes que algo no está bien.",
+      "Se alimenta del silencio absoluto de tu hogar.",
+      "Vive en las sombras, en tu punto ciego.",
+      "Escuchaste pasos. Nadie más lo vio, ni tú.",
+      "¿Fue el viento o una respiración helada?",
+      "Tus recuerdos se mezclan. La paranoia crece.",
+      "Un objeto cambió de lugar. Muy sutil.",
+      "¿Lo dejaste así? No puedes ignorarlo.",
+      "Lo sentiste antes. Ahora, lo sabes.",
+      "No hay nada. Pero no estás solo.",
+      "Cada noche, la vigilia te consume lento.",
+      "Tu mundo cotidiano se vuelve irreconocible, extraño.",
+      "Los \"fantasmas\" son excusas de tu mente.",
+      "Hay algo peor. Sin nombre, ni rostro.",
+      "El silencio mismo es la prueba. Te persigue.",
+      "Tu refugio no es más que una trampa.",
+      "Si grabas, solo captarás su burla, su sombra.",
+      "Siempre estuvo ahí. Te ha estado esperando.",
+      "Respirando cuando tú no puedes hacerlo.",
+      "Sus ojos no tienen párpados. Tú lo sabes.",
+      "¿Crees estar realmente solo cuando cierras tus ojos?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dimly lit living room, single cold light source from a window, subtle frost on the pane, empty armchair, deep shadows",
+        "prompt_visual": "Dimly lit living room, single cold light source from a window, subtle frost on the pane, empty armchair, deep shadows",
+        "texto_locucion": "Primero fue el frío. Después, la certeza te observaba.",
+        "pexels_query": "cold living room"
+      },
+      {
+        "id": 2,
+        "prompt": "Darkened hallway, slightly open door, distorted shadow stretching from beneath the door, no clear source",
+        "prompt_visual": "Darkened hallway, slightly open door, distorted shadow stretching from beneath the door, no clear source",
+        "texto_locucion": "La tecnología capta lo visible. Tu miedo va más allá.",
+        "pexels_query": "dark hallway door shadow"
+      },
+      {
+        "id": 3,
+        "prompt": "Grainy, desaturated image of an empty corner of a room, subtle pareidolia in the shadows forming a face",
+        "prompt_visual": "Grainy, desaturated image of an empty corner of a room, subtle pareidolia in the shadows forming a face",
+        "texto_locucion": "Creíste ver algo en la pantalla. Fue un error.",
+        "pexels_query": "grainy empty room shadow"
+      },
+      {
+        "id": 4,
+        "prompt": "A dark staircase, one step subtly cracked, a feeling of descent into darkness",
+        "prompt_visual": "A dark staircase, one step subtly cracked, a feeling of descent into darkness",
+        "texto_locucion": "Tu mente llena los espacios. Con algo peor.",
+        "pexels_query": "dark staircase cracked"
+      },
+      {
+        "id": 5,
+        "prompt": "Ancient, weathered stone wall in a basement, faint, disturbing symbols scratched into the surface",
+        "prompt_visual": "Ancient, weathered stone wall in a basement, faint, disturbing symbols scratched into the surface",
+        "texto_locucion": "¿Y si no hay fantasmas, sino algo antiguo?",
+        "pexels_query": "ancient stone wall basement"
+      },
+      {
+        "id": 6,
+        "prompt": "Kitchen at night, a single cupboard door slightly ajar, casting an odd shadow on the floor",
+        "prompt_visual": "Kitchen at night, a single cupboard door slightly ajar, casting an odd shadow on the floor",
+        "texto_locucion": "¿Sentiste que no estabas solo en casa?",
+        "pexels_query": "kitchen cupboard ajar"
+      },
+      {
+        "id": 7,
+        "prompt": "A curtain blowing gently inward from a slightly open window in a dark room, suggesting an unseen draft",
+        "prompt_visual": "A curtain blowing gently inward from a slightly open window in a dark room, suggesting an unseen draft",
+        "texto_locucion": "Esa presencia invisible que eriza tu piel.",
+        "pexels_query": "curtain blowing dark room"
+      },
+      {
+        "id": 8,
+        "prompt": "A distorted reflection in a tarnished mirror, not a human face, but an indistinct, unsettling shape",
+        "prompt_visual": "A distorted reflection in a tarnished mirror, not a human face, but an indistinct, unsettling shape",
+        "texto_locucion": "Sí. Tú sabes que algo no está bien.",
+        "pexels_query": "tarnished mirror reflection"
+      },
+      {
+        "id": 9,
+        "prompt": "An old, silent grandfather clock in a dark, empty room, its pendulum still",
+        "prompt_visual": "An old, silent grandfather clock in a dark, empty room, its pendulum still",
+        "texto_locucion": "Se alimenta del silencio absoluto de tu hogar.",
+        "pexels_query": "silent grandfather clock"
+      },
+      {
+        "id": 10,
+        "prompt": "A corner of a room deeply engulfed in shadow, a sense of something lurking just out of sight",
+        "prompt_visual": "A corner of a room deeply engulfed in shadow, a sense of something lurking just out of sight",
+        "texto_locucion": "Vive en las sombras, en tu punto ciego.",
+        "pexels_query": "room corner deep shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "A floorboard, slightly lifted, on an old wooden floor, hinting at pressure from below",
+        "prompt_visual": "A floorboard, slightly lifted, on an old wooden floor, hinting at pressure from below",
+        "texto_locucion": "Escuchaste pasos. Nadie más lo vio, ni tú.",
+        "pexels_query": "lifted floorboard old wood"
+      },
+      {
+        "id": 12,
+        "prompt": "A single candle flame flickering violently in an otherwise still, dark room",
+        "prompt_visual": "A single candle flame flickering violently in an otherwise still, dark room",
+        "texto_locucion": "¿Fue el viento o una respiración helada?",
+        "pexels_query": "flickering candle flame"
+      },
+      {
+        "id": 13,
+        "prompt": "Blurry outlines of familiar objects on a dusty shelf, disorienting focus",
+        "prompt_visual": "Blurry outlines of familiar objects on a dusty shelf, disorienting focus",
+        "texto_locucion": "Tus recuerdos se mezclan. La paranoia crece.",
+        "pexels_query": "blurry dusty shelf"
+      },
+      {
+        "id": 14,
+        "prompt": "A small, ordinary table lamp, now tilted at an impossible, disturbing angle",
+        "prompt_visual": "A small, ordinary table lamp, now tilted at an impossible, disturbing angle",
+        "texto_locucion": "Un objeto cambió de lugar. Muy sutil.",
+        "pexels_query": "tilted table lamp"
+      },
+      {
+        "id": 15,
+        "prompt": "A chair pushed back from a table in an empty room, as if someone just left",
+        "prompt_visual": "A chair pushed back from a table in an empty room, as if someone just left",
+        "texto_locucion": "¿Lo dejaste así? No puedes ignorarlo.",
+        "pexels_query": "empty chair pushed back"
+      },
+      {
+        "id": 16,
+        "prompt": "A dark, empty hallway, the far end shrouded in an oppressive blackness",
+        "prompt_visual": "A dark, empty hallway, the far end shrouded in an oppressive blackness",
+        "texto_locucion": "Lo sentiste antes. Ahora, lo sabes.",
+        "pexels_query": "dark oppressive hallway"
+      },
+      {
+        "id": 17,
+        "prompt": "An open doorway leading to a completely dark room, an unsettling void",
+        "prompt_visual": "An open doorway leading to a completely dark room, an unsettling void",
+        "texto_locucion": "No hay nada. Pero no estás solo.",
+        "pexels_query": "open dark doorway"
+      },
+      {
+        "id": 18,
+        "prompt": "A bed in a dark room, the sheets subtly rumpled as if disturbed by an unseen weight",
+        "prompt_visual": "A bed in a dark room, the sheets subtly rumpled as if disturbed by an unseen weight",
+        "texto_locucion": "Cada noche, la vigilia te consume lento.",
+        "pexels_query": "rumpled bed sheets dark"
+      },
+      {
+        "id": 19,
+        "prompt": "A familiar street sign at night, subtly bent and twisted, almost imperceptibly wrong",
+        "prompt_visual": "A familiar street sign at night, subtly bent and twisted, almost imperceptibly wrong",
+        "texto_locucion": "Tu mundo cotidiano se vuelve irreconocible, extraño.",
+        "pexels_query": "twisted street sign night"
+      },
+      {
+        "id": 20,
+        "prompt": "A cracked windowpane, through which a distorted, almost menacing shadow is visible outside",
+        "prompt_visual": "A cracked windowpane, through which a distorted, almost menacing shadow is visible outside",
+        "texto_locucion": "Los \"fantasmas\" son excusas de tu mente.",
+        "pexels_query": "cracked window shadow"
+      },
+      {
+        "id": 21,
+        "prompt": "A dark void where a door should be, framed by an ancient, rotting wooden frame",
+        "prompt_visual": "A dark void where a door should be, framed by an ancient, rotting wooden frame",
+        "texto_locucion": "Hay algo peor. Sin nombre, ni rostro.",
+        "pexels_query": "rotting door frame void"
+      },
+      {
+        "id": 22,
+        "prompt": "An old, rotary phone, ringing silently in a dark, dusty room",
+        "prompt_visual": "An old, rotary phone, ringing silently in a dark, dusty room",
+        "texto_locucion": "El silencio mismo es la prueba. Te persigue.",
+        "pexels_query": "silent rotary phone dark"
+      },
+      {
+        "id": 23,
+        "prompt": "A single, bare lightbulb hanging from a frayed wire, casting unsettling shadows",
+        "prompt_visual": "A single, bare lightbulb hanging from a frayed wire, casting unsettling shadows",
+        "texto_locucion": "Tu refugio no es más que una trampa.",
+        "pexels_query": "bare lightbulb frayed"
+      },
+      {
+        "id": 24,
+        "prompt": "A television screen in a dark room, showing only static, with a very subtle, almost unnoticeable distortion",
+        "prompt_visual": "A television screen in a dark room, showing only static, with a very subtle, almost unnoticeable distortion",
+        "texto_locucion": "Si grabas, solo captarás su burla, su sombra.",
+        "pexels_query": "static tv screen distortion"
+      },
+      {
+        "id": 25,
+        "prompt": "A wall with old, peeling wallpaper, a subtle, dark stain forming an indistinct shape",
+        "prompt_visual": "A wall with old, peeling wallpaper, a subtle, dark stain forming an indistinct shape",
+        "texto_locucion": "Siempre estuvo ahí. Te ha estado esperando.",
+        "pexels_query": "peeling wallpaper dark stain"
+      },
+      {
+        "id": 26,
+        "prompt": "A single, dusty cobweb stretching across a dark corner, seemingly alive",
+        "prompt_visual": "A single, dusty cobweb stretching across a dark corner, seemingly alive",
+        "texto_locucion": "Respirando cuando tú no puedes hacerlo.",
+        "pexels_query": "dusty cobweb dark"
+      },
+      {
+        "id": 27,
+        "prompt": "Two faint, glowing orbs of light deep within an impenetrable shadow, like eyes",
+        "prompt_visual": "Two faint, glowing orbs of light deep within an impenetrable shadow, like eyes",
+        "texto_locucion": "Sus ojos no tienen párpados. Tú lo sabes.",
+        "pexels_query": "glowing orbs shadow"
+      },
+      {
+        "id": 28,
+        "prompt": "A dark, empty bedroom, a single pillow on the bed, subtly indented as if a head had just rested there",
+        "prompt_visual": "A dark, empty bedroom, a single pillow on the bed, subtly indented as if a head had just rested there",
+        "texto_locucion": "¿Crees estar realmente solo cuando cierras tus ojos?",
+        "pexels_query": "empty bedroom indented pillow"
+      }
+    ],
+    "hooks": [
+      "Algo siempre te observa.",
+      "¿Hay alguien más contigo?",
+      "Nunca estás realmente solo."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
