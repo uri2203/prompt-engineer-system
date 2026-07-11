@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "0369997a-af3c-4698-a503-7744275ec3cb",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark server racks, glowing data center, raw photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Dark server racks, glowing data center, raw photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu iPhone ahora tiene un costo invisible.\", \"pexels_query\": \"data center servers\"}, {\"id\": 2, \"prompt\": \"Circuit board, microchips, dramatic lighting, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Circuit board, microchips, dramatic lighting, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cada pregunta a tu IA consume energía. Algo no está bien.\", \"pexels_query\": \"circuit board microchips\"}, {\"id\": 3, \"prompt\": \"Abstract digital grid, glowing lines, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital grid, glowing lines, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Apple te cobrará por usar su nueva IA.\", \"pexels_query\": \"digital grid lines\"}, {\"id\": 4, \"prompt\": \"Energy consumption meters, digital display, dark ambient, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Energy consumption meters, digital display, dark ambient, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No es solo un precio, es un costo oculto.\", \"pexels_query\": \"energy meter display\"}, {\"id\": 5, \"prompt\": \"Intricate network cables, fiber optics, server room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Intricate network cables, fiber optics, server room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Los modelos de IA gigantes devoran muchísima energía.\", \"pexels_query\": \"fiber optic cables\"}, {\"id\": 6, \"prompt\": \"Glowing processor chip, close-up, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glowing processor chip, close-up, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Entrenar GPT-4 usó 700.000 litros de agua.\", \"pexels_query\": \"processor chip glowing\"}, {\"id\": 7, \"prompt\": \"Industrial cooling systems, steam vents, abstract perspective, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Industrial cooling systems, steam vents, abstract perspective, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Eso es suficiente para 2.500 coches eléctricos.\", \"pexels_query\": \"industrial cooling vents\"}, {\"id\": 8, \"prompt\": \"Power lines grid, dark sky, abstract technology, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Power lines grid, dark sky, abstract technology, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu consulta diaria contribuye a esta demanda.\", \"pexels_query\": \"power grid abstract\"}, {\"id\": 9, \"prompt\": \"Digital data flow, binary code on screen, dark tones, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital data flow, binary code on screen, dark tones, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes: la tecnología nunca es gratuita.\", \"pexels_query\": \"binary code flow\"}, {\"id\": 10, \"prompt\": \"Empty server rack, blue glowing lights, dark room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty server rack, blue glowing lights, dark room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Apple lo sabe y por eso transfiere el gasto.\", \"pexels_query\": \"empty server rack\"}, {\"id\": 11, \"prompt\": \"Data visualization, abstract graphs, glowing lines, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data visualization, abstract graphs, glowing lines, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo; esto impacta tu bolsillo.\", \"pexels_query\": \"data visualization abstract\"}, {\"id\": 12, \"prompt\": \"Electric currents flowing, dark abstract background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Electric currents flowing, dark abstract background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero también tiene un costo ambiental importante.\", \"pexels_query\": \"electric currents abstract\"}, {\"id\": 13, \"prompt\": \"Sustainable energy plant, futuristic design, dark sky, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Sustainable energy plant, futuristic design, dark sky, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Grandes compañías buscan energía limpia para IA.\", \"pexels_query\": \"futuristic energy plant\"}, {\"id\": 14, \"prompt\": \"Overhead view of city at night, energy lights, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Overhead view of city at night, energy lights, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero la demanda es tan enorme que nadie lo vio.\", \"pexels_query\": \"city night energy\"}, {\"id\": 15, \"prompt\": \"Abstract digital network, interconnected nodes, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital network, interconnected nodes, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El poder de la IA no surge de la nada.\", \"pexels_query\": \"digital network nodes\"}, {\"id\": 16, \"prompt\": \"Cooling fans inside server, blue light, close-up, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Cooling fans inside server, blue light, close-up, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Requiere infraestructura física y muchísimos recursos.\", \"pexels_query\": \"server cooling fans\"}, {\"id\": 17, \"prompt\": \"Futuristic power plant, dark and moody, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic power plant, dark and moody, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto es la otra cara de la inteligencia artificial.\", \"pexels_query\": \"futuristic power plant\"}, {\"id\": 18, \"prompt\": \"Energy consumption graph, rising trend, dark interface, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Energy consumption graph, rising trend, dark interface, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El costo energético se triplicará en pocos años.\", \"pexels_query\": \"energy consumption graph\"}, {\"id\": 19, \"prompt\": \"Global map, illuminated data routes, dark earth, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Global map, illuminated data routes, dark earth, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu uso de IA ahora tiene un precio ambiental.\", \"pexels_query\": \"global data map\"}, {\"id\": 20, \"prompt\": \"Abstract circuit patterns, glowing lines, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract circuit patterns, glowing lines, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cuando pides una imagen, activas miles de GPUs.\", \"pexels_query\": \"abstract circuit patterns\"}, {\"id\": 21, \"prompt\": \"Server room perspective, dramatic shadows, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Server room perspective, dramatic shadows, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Este es el silencio absoluto de la energía consumida.\", \"pexels_query\": \"server room shadows\"}, {\"id\": 22, \"prompt\": \"Conceptual image of data flowing into a brain, wires, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Conceptual image of data flowing into a brain, wires, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No estabas solo en sentir que algo es costoso.\", \"pexels_query\": \"data brain concept\"}, {\"id\": 23, \"prompt\": \"Digital clock showing 3:33 AM, dark room, glowing numbers, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital clock showing 3:33 AM, dark room, glowing numbers, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA mejora tu vida, pero no sin consecuencias.\", \"pexels_query\": \"digital clock night\"}, {\"id\": 24, \"prompt\": \"Glowing data visualization, dark background, abstract, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glowing data visualization, dark background, abstract, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Sé consciente de dónde va ese dinero ahora.\", \"pexels_query\": \"glowing data abstract\"}, {\"id\": 25, \"prompt\": \"Minimalist digital interface, energy icon, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Minimalist digital interface, energy icon, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Exige más eficiencia a las empresas de tecnología.\", \"pexels_query\": \"energy icon digital\"}, {\"id\": 26, \"prompt\": \"Futuristic city with clean energy, night scene, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic city with clean energy, night scene, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Usa modelos más ligeros cuando sea posible.\", \"pexels_query\": \"futuristic city clean\"}, {\"id\": 27, \"prompt\": \"Hand interacting with holographic interface, data streams, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hand interacting with holographic interface, data streams, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Así, tú controlas mejor tu consumo y gasto.\", \"pexels_query\": \"holographic interface data\"}, {\"id\": 28, \"prompt\": \"Abstract network of interconnected glowing nodes, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract network of interconnected glowing nodes, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aprende más sobre cómo optimizar tu uso de IA.\", \"pexels_query\": \"interconnected network nodes\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Tu iPhone ahora tiene un costo invisible. Cada pregunta a tu IA consume energía. Algo no está bien. Apple te cobrará por usar su nueva IA. No es solo un precio, es un costo oculto. Los modelos de IA gigantes devoran muchísima energía. Entrenar GPT-4 usó 700.000 litros de agua. Eso es suficiente para 2.500 coches eléctricos. Tu consulta diaria contribuye a esta demanda. Lo sentiste antes: la tecnología nunca es gratuita. Apple lo sabe y por eso transfiere el gasto. No puedes ignorarlo; esto impacta tu bolsillo. Pero también tiene un costo ambiental importante. Grandes compañías buscan energía limpia para IA. Pero la demanda es tan enorme que nadie lo vio. El poder de la IA no surge de la nada. Requiere infraestructura física y muchísimos recursos. Esto es la otra cara de la inteligencia artificial. El costo energético se triplicará en pocos años. Tu uso de IA ahora tiene un precio ambiental. Cuando pides una imagen, activas miles de GPUs. Este es el silencio absoluto de la energía consumida. No estabas solo en sentir que algo es costoso. La IA mejora tu vida, pero no sin consecuencias. Sé consciente de dónde va ese dinero ahora. Exige más eficiencia a las empresas de tecnología. Usa modelos más ligeros cuando sea posible. Así, tú controlas mejor tu consumo y gasto. Aprende más sobre cómo optimizar tu uso de IA.",
+    "titulo_sugerido": "Apple te cobra por IA: el costo REAL que NADIE te explica",
+    "escenas_texto": [
+      "Tu iPhone ahora tiene un costo invisible.",
+      "Cada pregunta a tu IA consume energía. Algo no está bien.",
+      "Apple te cobrará por usar su nueva IA.",
+      "No es solo un precio, es un costo oculto.",
+      "Los modelos de IA gigantes devoran muchísima energía.",
+      "Entrenar GPT-4 usó 700.000 litros de agua.",
+      "Eso es suficiente para 2.500 coches eléctricos.",
+      "Tu consulta diaria contribuye a esta demanda.",
+      "Lo sentiste antes: la tecnología nunca es gratuita.",
+      "Apple lo sabe y por eso transfiere el gasto.",
+      "No puedes ignorarlo; esto impacta tu bolsillo.",
+      "Pero también tiene un costo ambiental importante.",
+      "Grandes compañías buscan energía limpia para IA.",
+      "Pero la demanda es tan enorme que nadie lo vio.",
+      "El poder de la IA no surge de la nada.",
+      "Requiere infraestructura física y muchísimos recursos.",
+      "Esto es la otra cara de la inteligencia artificial.",
+      "El costo energético se triplicará en pocos años.",
+      "Tu uso de IA ahora tiene un precio ambiental.",
+      "Cuando pides una imagen, activas miles de GPUs.",
+      "Este es el silencio absoluto de la energía consumida.",
+      "No estabas solo en sentir que algo es costoso.",
+      "La IA mejora tu vida, pero no sin consecuencias.",
+      "Sé consciente de dónde va ese dinero ahora.",
+      "Exige más eficiencia a las empresas de tecnología.",
+      "Usa modelos más ligeros cuando sea posible.",
+      "Así, tú controlas mejor tu consumo y gasto.",
+      "Aprende más sobre cómo optimizar tu uso de IA."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark server racks, glowing data center, raw photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Dark server racks, glowing data center, raw photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu iPhone ahora tiene un costo invisible.",
+        "pexels_query": "data center servers"
+      },
+      {
+        "id": 2,
+        "prompt": "Circuit board, microchips, dramatic lighting, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Circuit board, microchips, dramatic lighting, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cada pregunta a tu IA consume energía. Algo no está bien.",
+        "pexels_query": "circuit board microchips"
+      },
+      {
+        "id": 3,
+        "prompt": "Abstract digital grid, glowing lines, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital grid, glowing lines, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Apple te cobrará por usar su nueva IA.",
+        "pexels_query": "digital grid lines"
+      },
+      {
+        "id": 4,
+        "prompt": "Energy consumption meters, digital display, dark ambient, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Energy consumption meters, digital display, dark ambient, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No es solo un precio, es un costo oculto.",
+        "pexels_query": "energy meter display"
+      },
+      {
+        "id": 5,
+        "prompt": "Intricate network cables, fiber optics, server room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Intricate network cables, fiber optics, server room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Los modelos de IA gigantes devoran muchísima energía.",
+        "pexels_query": "fiber optic cables"
+      },
+      {
+        "id": 6,
+        "prompt": "Glowing processor chip, close-up, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glowing processor chip, close-up, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Entrenar GPT-4 usó 700.000 litros de agua.",
+        "pexels_query": "processor chip glowing"
+      },
+      {
+        "id": 7,
+        "prompt": "Industrial cooling systems, steam vents, abstract perspective, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Industrial cooling systems, steam vents, abstract perspective, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Eso es suficiente para 2.500 coches eléctricos.",
+        "pexels_query": "industrial cooling vents"
+      },
+      {
+        "id": 8,
+        "prompt": "Power lines grid, dark sky, abstract technology, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Power lines grid, dark sky, abstract technology, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu consulta diaria contribuye a esta demanda.",
+        "pexels_query": "power grid abstract"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital data flow, binary code on screen, dark tones, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital data flow, binary code on screen, dark tones, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes: la tecnología nunca es gratuita.",
+        "pexels_query": "binary code flow"
+      },
+      {
+        "id": 10,
+        "prompt": "Empty server rack, blue glowing lights, dark room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty server rack, blue glowing lights, dark room, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Apple lo sabe y por eso transfiere el gasto.",
+        "pexels_query": "empty server rack"
+      },
+      {
+        "id": 11,
+        "prompt": "Data visualization, abstract graphs, glowing lines, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data visualization, abstract graphs, glowing lines, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo; esto impacta tu bolsillo.",
+        "pexels_query": "data visualization abstract"
+      },
+      {
+        "id": 12,
+        "prompt": "Electric currents flowing, dark abstract background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Electric currents flowing, dark abstract background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero también tiene un costo ambiental importante.",
+        "pexels_query": "electric currents abstract"
+      },
+      {
+        "id": 13,
+        "prompt": "Sustainable energy plant, futuristic design, dark sky, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Sustainable energy plant, futuristic design, dark sky, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Grandes compañías buscan energía limpia para IA.",
+        "pexels_query": "futuristic energy plant"
+      },
+      {
+        "id": 14,
+        "prompt": "Overhead view of city at night, energy lights, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Overhead view of city at night, energy lights, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero la demanda es tan enorme que nadie lo vio.",
+        "pexels_query": "city night energy"
+      },
+      {
+        "id": 15,
+        "prompt": "Abstract digital network, interconnected nodes, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital network, interconnected nodes, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El poder de la IA no surge de la nada.",
+        "pexels_query": "digital network nodes"
+      },
+      {
+        "id": 16,
+        "prompt": "Cooling fans inside server, blue light, close-up, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Cooling fans inside server, blue light, close-up, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Requiere infraestructura física y muchísimos recursos.",
+        "pexels_query": "server cooling fans"
+      },
+      {
+        "id": 17,
+        "prompt": "Futuristic power plant, dark and moody, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic power plant, dark and moody, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto es la otra cara de la inteligencia artificial.",
+        "pexels_query": "futuristic power plant"
+      },
+      {
+        "id": 18,
+        "prompt": "Energy consumption graph, rising trend, dark interface, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Energy consumption graph, rising trend, dark interface, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El costo energético se triplicará en pocos años.",
+        "pexels_query": "energy consumption graph"
+      },
+      {
+        "id": 19,
+        "prompt": "Global map, illuminated data routes, dark earth, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Global map, illuminated data routes, dark earth, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu uso de IA ahora tiene un precio ambiental.",
+        "pexels_query": "global data map"
+      },
+      {
+        "id": 20,
+        "prompt": "Abstract circuit patterns, glowing lines, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract circuit patterns, glowing lines, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cuando pides una imagen, activas miles de GPUs.",
+        "pexels_query": "abstract circuit patterns"
+      },
+      {
+        "id": 21,
+        "prompt": "Server room perspective, dramatic shadows, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Server room perspective, dramatic shadows, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Este es el silencio absoluto de la energía consumida.",
+        "pexels_query": "server room shadows"
+      },
+      {
+        "id": 22,
+        "prompt": "Conceptual image of data flowing into a brain, wires, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Conceptual image of data flowing into a brain, wires, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No estabas solo en sentir que algo es costoso.",
+        "pexels_query": "data brain concept"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital clock showing 3:33 AM, dark room, glowing numbers, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital clock showing 3:33 AM, dark room, glowing numbers, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA mejora tu vida, pero no sin consecuencias.",
+        "pexels_query": "digital clock night"
+      },
+      {
+        "id": 24,
+        "prompt": "Glowing data visualization, dark background, abstract, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glowing data visualization, dark background, abstract, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Sé consciente de dónde va ese dinero ahora.",
+        "pexels_query": "glowing data abstract"
+      },
+      {
+        "id": 25,
+        "prompt": "Minimalist digital interface, energy icon, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Minimalist digital interface, energy icon, dark blue, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Exige más eficiencia a las empresas de tecnología.",
+        "pexels_query": "energy icon digital"
+      },
+      {
+        "id": 26,
+        "prompt": "Futuristic city with clean energy, night scene, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic city with clean energy, night scene, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Usa modelos más ligeros cuando sea posible.",
+        "pexels_query": "futuristic city clean"
+      },
+      {
+        "id": 27,
+        "prompt": "Hand interacting with holographic interface, data streams, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hand interacting with holographic interface, data streams, dark background, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Así, tú controlas mejor tu consumo y gasto.",
+        "pexels_query": "holographic interface data"
+      },
+      {
+        "id": 28,
+        "prompt": "Abstract network of interconnected glowing nodes, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract network of interconnected glowing nodes, raw photo, technology editorial, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aprende más sobre cómo optimizar tu uso de IA.",
+        "pexels_query": "interconnected network nodes"
+      }
+    ],
+    "hooks": [
+      "Apple te cobra por usar IA",
+      "Cada pregunta tiene un costo",
+      "Tu privacidad no es gratuita"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
