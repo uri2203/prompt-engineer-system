@@ -25,7 +25,9 @@
     "b8f535bf-37a1-4ff3-87c0-e3d5d0479982",
     "b8f535bf-37a1-4ff3-87c0-e3d5d0479982_asm",
     "adcd3e0b-43ca-443c-b4f6-0611d8704481",
-    "adcd3e0b-43ca-443c-b4f6-0611d8704481_asm"
+    "adcd3e0b-43ca-443c-b4f6-0611d8704481_asm",
+    "4ef38b47-1e67-48ed-9832-1dd23d95d25d",
+    "4ef38b47-1e67-48ed-9832-1dd23d95d25d_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -87,6 +89,11 @@
     "adcd3e0b-43ca-443c-b4f6-0611d8704481": {
       "duracion_real_seg": 120.1,
       "marca": "TuIALista",
+      "formato": "9:16"
+    },
+    "4ef38b47-1e67-48ed-9832-1dd23d95d25d": {
+      "duracion_real_seg": 132.0,
+      "marca": "La Viuda",
       "formato": "9:16"
     }
   }
