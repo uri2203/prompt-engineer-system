@@ -49,7 +49,9 @@
     "8158b9bc-e36d-460a-ac16-066e4a57d546",
     "8158b9bc-e36d-460a-ac16-066e4a57d546_asm",
     "ee6894f1-8269-421b-8eda-9b7450822922",
-    "ee6894f1-8269-421b-8eda-9b7450822922_asm"
+    "ee6894f1-8269-421b-8eda-9b7450822922_asm",
+    "6e7479d5-65ae-4e36-8e20-9a741dea128f",
+    "6e7479d5-65ae-4e36-8e20-9a741dea128f_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -170,6 +172,11 @@
     },
     "ee6894f1-8269-421b-8eda-9b7450822922": {
       "duracion_real_seg": 101.4,
+      "marca": "FiltradoMX",
+      "formato": "9:16"
+    },
+    "6e7479d5-65ae-4e36-8e20-9a741dea128f": {
+      "duracion_real_seg": 133.8,
       "marca": "FiltradoMX",
       "formato": "9:16"
     }
