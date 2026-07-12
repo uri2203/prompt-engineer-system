@@ -1,0 +1,130 @@
+{
+  "id": "5d0137e5-72b7-4045-8239-78d4ed28e9f5_asm",
+  "marca": "La Viuda",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-11 22:45:56",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 2,
+    "activos": true,
+    "tiempos": [
+      {
+        "rehook_en_seg": 47.57,
+        "pausa_mas_cercana_seg": 47.51,
+        "distancia_seg": 0.06,
+        "formato": "A"
+      }
+    ],
+    "pausas_voz_detectadas": [
+      4.01,
+      7.78,
+      11.55,
+      14.4,
+      21.46,
+      26.5,
+      28.94,
+      32.23,
+      36.2,
+      39.34,
+      43.4,
+      47.51,
+      51.9,
+      57.75,
+      60.83,
+      66.11,
+      69.58,
+      72.49,
+      75.41,
+      78.78,
+      81.98,
+      85.61,
+      88.56,
+      96.02
+    ],
+    "hook_inicial_seg": 0.0
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-07-11 22:54:06",
+  "duracion_real_seg": 116.4,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4",
+  "MEDICION_REAL": {
+    "analisis_ffmpeg": "ok",
+    "duracion_video_seg": 116.4,
+    "silencios_reales": [
+      2.37,
+      4.12,
+      6.03,
+      10.39,
+      17.9,
+      23.32,
+      66.78,
+      69.89,
+      78.58,
+      84.34,
+      91.3,
+      116.06
+    ],
+    "num_silencios_reales": 12,
+    "cortes_escena_reales": [
+      3.34,
+      3.38,
+      11.31,
+      53.88,
+      53.91,
+      63.98,
+      91.14,
+      113.39
+    ],
+    "num_cortes_escena": 8,
+    "rehooks_analisis": [
+      {
+        "escena": 13,
+        "t_planeado": 47.57,
+        "silencio_real_cercano": 66.78,
+        "dist_a_pausa_real": 19.213,
+        "corte_escena_real_cercano": 53.88,
+        "dist_a_corte_real": 6.313,
+        "EN_PAUSA": false
+      }
+    ],
+    "rehooks_total": 1,
+    "rehooks_fuera_de_pausa": 1,
+    "VEREDICTO": "1 re-hook(s) FUERA de pausa",
+    "silencios_que_uso_el_worker": [
+      4.01,
+      7.78,
+      11.55,
+      14.4,
+      21.46,
+      26.5,
+      28.94,
+      32.23,
+      36.2,
+      39.34,
+      43.4,
+      47.51,
+      51.9,
+      57.75,
+      60.83,
+      66.11,
+      69.58,
+      72.49,
+      75.41,
+      78.78,
+      81.98,
+      85.61,
+      88.56,
+      96.02
+    ]
+  }
+}
