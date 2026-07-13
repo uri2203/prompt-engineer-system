@@ -1,0 +1,64 @@
+{
+  "id": "89b3b1e8-5e4b-4821-9567-191d878a8465_asm",
+  "marca": "LaesquinaRandom",
+  "formato": "9:16",
+  "tipo": "Short",
+  "inicio": "2026-07-12 22:22:11",
+  "hooks": {
+    "frases_recibidas": 3,
+    "insertados": 0,
+    "activos": false
+  },
+  "subtitulos": {
+    "aplica": false,
+    "bloques_habla": 0,
+    "desplazado_por_hooks": false
+  },
+  "paquete": {
+    "generado": true,
+    "respaldo": false
+  },
+  "errores": [],
+  "fin": "2026-07-12 22:25:45",
+  "duracion_real_seg": 142.7,
+  "video_final": "00_FINAL_EXTREME_DYNAMICS.mp4",
+  "MEDICION_REAL": {
+    "analisis_ffmpeg": "ok",
+    "duracion_video_seg": 142.66,
+    "silencios_reales": [
+      9.93,
+      20.8,
+      32.36,
+      55.43,
+      78.6,
+      83.6,
+      113.93,
+      138.78,
+      141.47,
+      142.48
+    ],
+    "num_silencios_reales": 10,
+    "cortes_escena_reales": [
+      9.9,
+      19.8,
+      19.83,
+      29.7,
+      39.6,
+      49.5,
+      49.53,
+      59.4,
+      69.3,
+      79.2,
+      89.1,
+      99.0,
+      108.9,
+      108.93,
+      118.8,
+      128.7,
+      138.62,
+      141.91,
+      141.92
+    ],
+    "num_cortes_escena": 19
+  }
+}
