@@ -241,5 +241,248 @@
       "¿Estás realmente solo?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "52c2f416-ec8a-4980-9e9d-3ab66c1e014c",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"dark window reflection, subtle distortion, blurry, unsettling atmosphere\", \"prompt_visual\": \"dark window reflection, subtle distortion, blurry, unsettling atmosphere\", \"texto_locucion\": \"Tu reflejo en el cristal parece igual que siempre.\", \"pexels_query\": \"dark window reflection\"}, {\"id\": 2, \"prompt\": \"close up, glass surface, distorted reflection, dark edges\", \"prompt_visual\": \"close up, glass surface, distorted reflection, dark edges\", \"texto_locucion\": \"Pero un detalle mínimo, imperceptible, ahora te persigue.\", \"pexels_query\": \"distorted glass reflection\"}, {\"id\": 3, \"prompt\": \"bathroom mirror, steam, a vague, almost human-like shadow within the fog\", \"prompt_visual\": \"bathroom mirror, steam, a vague, almost human-like shadow within the fog\", \"texto_locucion\": \"No puedes explicarlo, pero sabes: algo no está bien.\", \"pexels_query\": \"foggy mirror shadow\"}, {\"id\": 4, \"prompt\": \"polished metallic surface, faint, elongated humanoid shape reflected\", \"prompt_visual\": \"polished metallic surface, faint, elongated humanoid shape reflected\", \"texto_locucion\": \"A veces ocurre con los espejos, cualquier superficie pulida.\", \"pexels_query\": \"metal reflection shadow\"}, {\"id\": 5, \"prompt\": \"dark hallway, a subtle, fleeting movement in the corner of the frame\", \"prompt_visual\": \"dark hallway, a subtle, fleeting movement in the corner of the frame\", \"texto_locucion\": \"Miras a un lado, tu visión periférica capta un movimiento.\", \"pexels_query\": \"dark hallway movement\"}, {\"id\": 6, \"prompt\": \"empty, dimly lit room, stark shadows, feeling of absence\", \"prompt_visual\": \"empty, dimly lit room, stark shadows, feeling of absence\", \"texto_locucion\": \"Giras la cabeza, pero no hay nada allí. Silencio absoluto.\", \"pexels_query\": \"empty dim room\"}, {\"id\": 7, \"prompt\": \"heavy, dark curtain, a slight, inexplicable bulge or ripple in its fabric\", \"prompt_visual\": \"heavy, dark curtain, a slight, inexplicable bulge or ripple in its fabric\", \"texto_locucion\": \"Lo sentiste antes. Esa presencia sin forma, siempre cerca.\", \"pexels_query\": \"dark curtain ripple\"}, {\"id\": 8, \"prompt\": \"dark water surface, ripple, a vague, non-humanoid shape forming briefly\", \"prompt_visual\": \"dark water surface, ripple, a vague, non-humanoid shape forming briefly\", \"texto_locucion\": \"¿Y si ese reflejo no era tuyo? ¿Y si no estabas solo?\", \"pexels_query\": \"dark water ripple\"}, {\"id\": 9, \"prompt\": \"textured wall, cracks forming a subtle, disturbing facial outline\", \"prompt_visual\": \"textured wall, cracks forming a subtle, disturbing facial outline\", \"texto_locucion\": \"Expertos hablan de pareidolia, la mente engañándose a sí misma.\", \"pexels_query\": \"wall cracks pareidolia\"}, {\"id\": 10, \"prompt\": \"shattered glass, one shard reflecting a perfectly clear, ominous eye\", \"prompt_visual\": \"shattered glass, one shard reflecting a perfectly clear, ominous eye\", \"texto_locucion\": \"Pero lo que viste en el cristal fue demasiado nítido.\", \"pexels_query\": \"shattered glass eye\"}, {\"id\": 11, \"prompt\": \"long, dark corridor, an extremely faint, tall silhouette at the very end\", \"prompt_visual\": \"long, dark corridor, an extremely faint, tall silhouette at the very end\", \"texto_locucion\": \"Una figura en el fondo de tu visión, apenas un instante.\", \"pexels_query\": \"dark corridor silhouette\"}, {\"id\": 12, \"prompt\": \"crowded public space, but focus on a dark, isolated corner where a shadow seems to deepen\", \"prompt_visual\": \"crowded public space, but focus on a dark, isolated corner where a shadow seems to deepen\", \"texto_locucion\": \"Nadie más lo vio. Sólo tú percibes esa sombra constante.\", \"pexels_query\": \"dark public corner\"}, {\"id\": 13, \"prompt\": \"close up, dark, empty eye socket of an old doll, reflection of a shadow passing\", \"prompt_visual\": \"close up, dark, empty eye socket of an old doll, reflection of a shadow passing\", \"texto_locucion\": \"Como si algo te usara de portal, observando a través de ti.\", \"pexels_query\": \"doll eye reflection\"}, {\"id\": 14, \"prompt\": \"shiny black table, reflecting a vague, elongated form above it\", \"prompt_visual\": \"shiny black table, reflecting a vague, elongated form above it\", \"texto_locucion\": \"Cada superficie pulida un posible ojo. No puedes ignorarlo.\", \"pexels_query\": \"black table reflection\"}, {\"id\": 15, \"prompt\": \"turned off TV screen, reflecting a distorted, slightly unsettling room\", \"prompt_visual\": \"turned off TV screen, reflecting a distorted, slightly unsettling room\", \"texto_locucion\": \"El cristal de tu celular, la pantalla apagada de tu televisor.\", \"pexels_query\": \"dark TV reflection\"}, {\"id\": 16, \"prompt\": \"car rearview mirror, extreme dark, faint, elongated shadow in the very far distance through the back window\", \"prompt_visual\": \"car rearview mirror, extreme dark, faint, elongated shadow in the very far distance through the back window\", \"texto_locucion\": \"Incluso el espejo retrovisor del coche, en plena noche.\", \"pexels_query\": \"rearview mirror shadow\"}, {\"id\": 17, \"prompt\": \"distorted, rippling light source on a wall, suggesting an unseen presence nearby\", \"prompt_visual\": \"distorted, rippling light source on a wall, suggesting an unseen presence nearby\", \"texto_locucion\": \"No son reflejos ópticos. Es algo más profundo, intangible.\", \"pexels_query\": \"distorted light ripple\"}, {\"id\": 18, \"prompt\": \"a crack slowly spreading across a glass surface, as if under invisible pressure\", \"prompt_visual\": \"a crack slowly spreading across a glass surface, as if under invisible pressure\", \"texto_locucion\": \"Se alimenta de tu percepción. Crece con tu miedo latente.\", \"pexels_query\": \"glass crack spreading\"}, {\"id\": 19, \"prompt\": \"close up, cold, frosted window pane, tiny, almost human-like handprint in the ice\", \"prompt_visual\": \"close up, cold, frosted window pane, tiny, almost human-like handprint in the ice\", \"texto_locucion\": \"Te susurra sin voz. Una certeza helada, irrefutable.\", \"pexels_query\": \"frosted handprint\"}, {\"id\": 20, \"prompt\": \"dark window at night, a single, unblinking eye-like light in the distance outside\", \"prompt_visual\": \"dark window at night, a single, unblinking eye-like light in the distance outside\", \"texto_locucion\": \"Tu hogar ya no es un santuario. Las ventanas son portales.\", \"pexels_query\": \"dark window eye\"}, {\"id\": 21, \"prompt\": \"old, cracked wall mirror, a single, sharp crack originating from the edge\", \"prompt_visual\": \"old, cracked wall mirror, a single, sharp crack originating from the edge\", \"texto_locucion\": \"Esa grieta en la esquina de tu espejo: ¿quién la hizo?\", \"pexels_query\": \"cracked wall mirror\"}, {\"id\": 22, \"prompt\": \"extreme close up, dark, grainy texture, faint, almost human eyes emerge from static\", \"prompt_visual\": \"extreme close up, dark, grainy texture, faint, almost human eyes emerge from static\", \"texto_locucion\": \"Cada vez que pestañeas, te mira con mayor intensidad.\", \"pexels_query\": \"grainy static eyes\"}, {\"id\": 23, \"prompt\": \"single, old, worn blanket on a floor, a visible \\\"cold breath\\\" vapor above it\", \"prompt_visual\": \"single, old, worn blanket on a floor, a visible \\\"cold breath\\\" vapor above it\", \"texto_locucion\": \"Sientes el frío que no debería existir en ese lugar.\", \"pexels_query\": \"cold breath vapor\"}, {\"id\": 24, \"prompt\": \"blurred vision, dark room, single, vibrating chair with no one in it\", \"prompt_visual\": \"blurred vision, dark room, single, vibrating chair with no one in it\", \"texto_locucion\": \"Tu respiración se acelera. Sabes que hay algo más.\", \"pexels_query\": \"vibrating empty chair\"}, {\"id\": 25, \"prompt\": \"highly distorted mirror reflection, showing a twisted, non-humanoid silhouette\", \"prompt_visual\": \"highly distorted mirror reflection, showing a twisted, non-humanoid silhouette\", \"texto_locucion\": \"Dicen que el reflejo no muestra lo que eres.\", \"pexels_query\": \"distorted mirror reflection\"}, {\"id\": 26, \"prompt\": \"very dark, empty room, a faint, tall, shadow entity standing behind the viewer's implied position\", \"prompt_visual\": \"very dark, empty room, a faint, tall, shadow entity standing behind the viewer's implied position\", \"texto_locucion\": \"Sino aquello que realmente está detrás de ti.\", \"pexels_query\": \"shadow entity behind\"}, {\"id\": 27, \"prompt\": \"familiar living room, but with an unsettling, deep shadow pooling in the corner\", \"prompt_visual\": \"familiar living room, but with an unsettling, deep shadow pooling in the corner\", \"texto_locucion\": \"Siempre lo estuvo. Dentro de tu propio hogar.\", \"pexels_query\": \"dark living room\"}, {\"id\": 28, \"prompt\": \"an extremely dark doorway, only a pair of glowing, non-human eyes visible deep within\", \"prompt_visual\": \"an extremely dark doorway, only a pair of glowing, non-human eyes visible deep within\", \"texto_locucion\": \"Y aún te observa, esperando su oportunidad.\", \"pexels_query\": \"dark doorway eyes\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Tu reflejo en el cristal parece igual que siempre. Pero un detalle mínimo, imperceptible, ahora te persigue. No puedes explicarlo, pero sabes: algo no está bien. A veces ocurre con los espejos, cualquier superficie pulida. Miras a un lado, tu visión periférica capta un movimiento. Giras la cabeza, pero no hay nada allí. Silencio absoluto. Lo sentiste antes. Esa presencia sin forma, siempre cerca. ¿Y si ese reflejo no era tuyo? ¿Y si no estabas solo? Expertos hablan de pareidolia, la mente engañándose a sí misma. Pero lo que viste en el cristal fue demasiado nítido. Una figura en el fondo de tu visión, apenas un instante. Nadie más lo vio. Sólo tú percibes esa sombra constante. Como si algo te usara de portal, observando a través de ti. Cada superficie pulida un posible ojo. No puedes ignorarlo. El cristal de tu celular, la pantalla apagada de tu televisor. Incluso el espejo retrovisor del coche, en plena noche. No son reflejos ópticos. Es algo más profundo, intangible. Se alimenta de tu percepción. Crece con tu miedo latente. Te susurra sin voz. Una certeza helada, irrefutable. Tu hogar ya no es un santuario. Las ventanas son portales. Esa grieta en la esquina de tu espejo: ¿quién la hizo? Cada vez que pestañeas, te mira con mayor intensidad. Sientes el frío que no debería existir en ese lugar. Tu respiración se acelera. Sabes que hay algo más. Dicen que el reflejo no muestra lo que eres. Sino aquello que realmente está detrás de ti. Siempre lo estuvo. Dentro de tu propio hogar. Y aún te observa, esperando su oportunidad.",
+    "titulo_sugerido": "No confíes en tu reflejo: la verdad te observa",
+    "escenas_texto": [
+      "Tu reflejo en el cristal parece igual que siempre.",
+      "Pero un detalle mínimo, imperceptible, ahora te persigue.",
+      "No puedes explicarlo, pero sabes: algo no está bien.",
+      "A veces ocurre con los espejos, cualquier superficie pulida.",
+      "Miras a un lado, tu visión periférica capta un movimiento.",
+      "Giras la cabeza, pero no hay nada allí. Silencio absoluto.",
+      "Lo sentiste antes. Esa presencia sin forma, siempre cerca.",
+      "¿Y si ese reflejo no era tuyo? ¿Y si no estabas solo?",
+      "Expertos hablan de pareidolia, la mente engañándose a sí misma.",
+      "Pero lo que viste en el cristal fue demasiado nítido.",
+      "Una figura en el fondo de tu visión, apenas un instante.",
+      "Nadie más lo vio. Sólo tú percibes esa sombra constante.",
+      "Como si algo te usara de portal, observando a través de ti.",
+      "Cada superficie pulida un posible ojo. No puedes ignorarlo.",
+      "El cristal de tu celular, la pantalla apagada de tu televisor.",
+      "Incluso el espejo retrovisor del coche, en plena noche.",
+      "No son reflejos ópticos. Es algo más profundo, intangible.",
+      "Se alimenta de tu percepción. Crece con tu miedo latente.",
+      "Te susurra sin voz. Una certeza helada, irrefutable.",
+      "Tu hogar ya no es un santuario. Las ventanas son portales.",
+      "Esa grieta en la esquina de tu espejo: ¿quién la hizo?",
+      "Cada vez que pestañeas, te mira con mayor intensidad.",
+      "Sientes el frío que no debería existir en ese lugar.",
+      "Tu respiración se acelera. Sabes que hay algo más.",
+      "Dicen que el reflejo no muestra lo que eres.",
+      "Sino aquello que realmente está detrás de ti.",
+      "Siempre lo estuvo. Dentro de tu propio hogar.",
+      "Y aún te observa, esperando su oportunidad."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "dark window reflection, subtle distortion, blurry, unsettling atmosphere",
+        "prompt_visual": "dark window reflection, subtle distortion, blurry, unsettling atmosphere",
+        "texto_locucion": "Tu reflejo en el cristal parece igual que siempre.",
+        "pexels_query": "dark window reflection"
+      },
+      {
+        "id": 2,
+        "prompt": "close up, glass surface, distorted reflection, dark edges",
+        "prompt_visual": "close up, glass surface, distorted reflection, dark edges",
+        "texto_locucion": "Pero un detalle mínimo, imperceptible, ahora te persigue.",
+        "pexels_query": "distorted glass reflection"
+      },
+      {
+        "id": 3,
+        "prompt": "bathroom mirror, steam, a vague, almost human-like shadow within the fog",
+        "prompt_visual": "bathroom mirror, steam, a vague, almost human-like shadow within the fog",
+        "texto_locucion": "No puedes explicarlo, pero sabes: algo no está bien.",
+        "pexels_query": "foggy mirror shadow"
+      },
+      {
+        "id": 4,
+        "prompt": "polished metallic surface, faint, elongated humanoid shape reflected",
+        "prompt_visual": "polished metallic surface, faint, elongated humanoid shape reflected",
+        "texto_locucion": "A veces ocurre con los espejos, cualquier superficie pulida.",
+        "pexels_query": "metal reflection shadow"
+      },
+      {
+        "id": 5,
+        "prompt": "dark hallway, a subtle, fleeting movement in the corner of the frame",
+        "prompt_visual": "dark hallway, a subtle, fleeting movement in the corner of the frame",
+        "texto_locucion": "Miras a un lado, tu visión periférica capta un movimiento.",
+        "pexels_query": "dark hallway movement"
+      },
+      {
+        "id": 6,
+        "prompt": "empty, dimly lit room, stark shadows, feeling of absence",
+        "prompt_visual": "empty, dimly lit room, stark shadows, feeling of absence",
+        "texto_locucion": "Giras la cabeza, pero no hay nada allí. Silencio absoluto.",
+        "pexels_query": "empty dim room"
+      },
+      {
+        "id": 7,
+        "prompt": "heavy, dark curtain, a slight, inexplicable bulge or ripple in its fabric",
+        "prompt_visual": "heavy, dark curtain, a slight, inexplicable bulge or ripple in its fabric",
+        "texto_locucion": "Lo sentiste antes. Esa presencia sin forma, siempre cerca.",
+        "pexels_query": "dark curtain ripple"
+      },
+      {
+        "id": 8,
+        "prompt": "dark water surface, ripple, a vague, non-humanoid shape forming briefly",
+        "prompt_visual": "dark water surface, ripple, a vague, non-humanoid shape forming briefly",
+        "texto_locucion": "¿Y si ese reflejo no era tuyo? ¿Y si no estabas solo?",
+        "pexels_query": "dark water ripple"
+      },
+      {
+        "id": 9,
+        "prompt": "textured wall, cracks forming a subtle, disturbing facial outline",
+        "prompt_visual": "textured wall, cracks forming a subtle, disturbing facial outline",
+        "texto_locucion": "Expertos hablan de pareidolia, la mente engañándose a sí misma.",
+        "pexels_query": "wall cracks pareidolia"
+      },
+      {
+        "id": 10,
+        "prompt": "shattered glass, one shard reflecting a perfectly clear, ominous eye",
+        "prompt_visual": "shattered glass, one shard reflecting a perfectly clear, ominous eye",
+        "texto_locucion": "Pero lo que viste en el cristal fue demasiado nítido.",
+        "pexels_query": "shattered glass eye"
+      },
+      {
+        "id": 11,
+        "prompt": "long, dark corridor, an extremely faint, tall silhouette at the very end",
+        "prompt_visual": "long, dark corridor, an extremely faint, tall silhouette at the very end",
+        "texto_locucion": "Una figura en el fondo de tu visión, apenas un instante.",
+        "pexels_query": "dark corridor silhouette"
+      },
+      {
+        "id": 12,
+        "prompt": "crowded public space, but focus on a dark, isolated corner where a shadow seems to deepen",
+        "prompt_visual": "crowded public space, but focus on a dark, isolated corner where a shadow seems to deepen",
+        "texto_locucion": "Nadie más lo vio. Sólo tú percibes esa sombra constante.",
+        "pexels_query": "dark public corner"
+      },
+      {
+        "id": 13,
+        "prompt": "close up, dark, empty eye socket of an old doll, reflection of a shadow passing",
+        "prompt_visual": "close up, dark, empty eye socket of an old doll, reflection of a shadow passing",
+        "texto_locucion": "Como si algo te usara de portal, observando a través de ti.",
+        "pexels_query": "doll eye reflection"
+      },
+      {
+        "id": 14,
+        "prompt": "shiny black table, reflecting a vague, elongated form above it",
+        "prompt_visual": "shiny black table, reflecting a vague, elongated form above it",
+        "texto_locucion": "Cada superficie pulida un posible ojo. No puedes ignorarlo.",
+        "pexels_query": "black table reflection"
+      },
+      {
+        "id": 15,
+        "prompt": "turned off TV screen, reflecting a distorted, slightly unsettling room",
+        "prompt_visual": "turned off TV screen, reflecting a distorted, slightly unsettling room",
+        "texto_locucion": "El cristal de tu celular, la pantalla apagada de tu televisor.",
+        "pexels_query": "dark TV reflection"
+      },
+      {
+        "id": 16,
+        "prompt": "car rearview mirror, extreme dark, faint, elongated shadow in the very far distance through the back window",
+        "prompt_visual": "car rearview mirror, extreme dark, faint, elongated shadow in the very far distance through the back window",
+        "texto_locucion": "Incluso el espejo retrovisor del coche, en plena noche.",
+        "pexels_query": "rearview mirror shadow"
+      },
+      {
+        "id": 17,
+        "prompt": "distorted, rippling light source on a wall, suggesting an unseen presence nearby",
+        "prompt_visual": "distorted, rippling light source on a wall, suggesting an unseen presence nearby",
+        "texto_locucion": "No son reflejos ópticos. Es algo más profundo, intangible.",
+        "pexels_query": "distorted light ripple"
+      },
+      {
+        "id": 18,
+        "prompt": "a crack slowly spreading across a glass surface, as if under invisible pressure",
+        "prompt_visual": "a crack slowly spreading across a glass surface, as if under invisible pressure",
+        "texto_locucion": "Se alimenta de tu percepción. Crece con tu miedo latente.",
+        "pexels_query": "glass crack spreading"
+      },
+      {
+        "id": 19,
+        "prompt": "close up, cold, frosted window pane, tiny, almost human-like handprint in the ice",
+        "prompt_visual": "close up, cold, frosted window pane, tiny, almost human-like handprint in the ice",
+        "texto_locucion": "Te susurra sin voz. Una certeza helada, irrefutable.",
+        "pexels_query": "frosted handprint"
+      },
+      {
+        "id": 20,
+        "prompt": "dark window at night, a single, unblinking eye-like light in the distance outside",
+        "prompt_visual": "dark window at night, a single, unblinking eye-like light in the distance outside",
+        "texto_locucion": "Tu hogar ya no es un santuario. Las ventanas son portales.",
+        "pexels_query": "dark window eye"
+      },
+      {
+        "id": 21,
+        "prompt": "old, cracked wall mirror, a single, sharp crack originating from the edge",
+        "prompt_visual": "old, cracked wall mirror, a single, sharp crack originating from the edge",
+        "texto_locucion": "Esa grieta en la esquina de tu espejo: ¿quién la hizo?",
+        "pexels_query": "cracked wall mirror"
+      },
+      {
+        "id": 22,
+        "prompt": "extreme close up, dark, grainy texture, faint, almost human eyes emerge from static",
+        "prompt_visual": "extreme close up, dark, grainy texture, faint, almost human eyes emerge from static",
+        "texto_locucion": "Cada vez que pestañeas, te mira con mayor intensidad.",
+        "pexels_query": "grainy static eyes"
+      },
+      {
+        "id": 23,
+        "prompt": "single, old, worn blanket on a floor, a visible \"cold breath\" vapor above it",
+        "prompt_visual": "single, old, worn blanket on a floor, a visible \"cold breath\" vapor above it",
+        "texto_locucion": "Sientes el frío que no debería existir en ese lugar.",
+        "pexels_query": "cold breath vapor"
+      },
+      {
+        "id": 24,
+        "prompt": "blurred vision, dark room, single, vibrating chair with no one in it",
+        "prompt_visual": "blurred vision, dark room, single, vibrating chair with no one in it",
+        "texto_locucion": "Tu respiración se acelera. Sabes que hay algo más.",
+        "pexels_query": "vibrating empty chair"
+      },
+      {
+        "id": 25,
+        "prompt": "highly distorted mirror reflection, showing a twisted, non-humanoid silhouette",
+        "prompt_visual": "highly distorted mirror reflection, showing a twisted, non-humanoid silhouette",
+        "texto_locucion": "Dicen que el reflejo no muestra lo que eres.",
+        "pexels_query": "distorted mirror reflection"
+      },
+      {
+        "id": 26,
+        "prompt": "very dark, empty room, a faint, tall, shadow entity standing behind the viewer's implied position",
+        "prompt_visual": "very dark, empty room, a faint, tall, shadow entity standing behind the viewer's implied position",
+        "texto_locucion": "Sino aquello que realmente está detrás de ti.",
+        "pexels_query": "shadow entity behind"
+      },
+      {
+        "id": 27,
+        "prompt": "familiar living room, but with an unsettling, deep shadow pooling in the corner",
+        "prompt_visual": "familiar living room, but with an unsettling, deep shadow pooling in the corner",
+        "texto_locucion": "Siempre lo estuvo. Dentro de tu propio hogar.",
+        "pexels_query": "dark living room"
+      },
+      {
+        "id": 28,
+        "prompt": "an extremely dark doorway, only a pair of glowing, non-human eyes visible deep within",
+        "prompt_visual": "an extremely dark doorway, only a pair of glowing, non-human eyes visible deep within",
+        "texto_locucion": "Y aún te observa, esperando su oportunidad.",
+        "pexels_query": "dark doorway eyes"
+      }
+    ],
+    "hooks": [
+      "Tu reflejo no es tuyo.",
+      "Lo viste de reojo.",
+      "Siempre estuvo detrás."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
