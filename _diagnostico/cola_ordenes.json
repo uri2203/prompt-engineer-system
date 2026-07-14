@@ -484,5 +484,240 @@
       "Siempre estuvo detrás."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "c04303bb-f092-4198-aa90-cf46f69771fb",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A half-used block of brightly colored plasticine, slightly discolored, on an empty wooden table, dim light, unsettling atmosphere\", \"prompt_visual\": \"A half-used block of brightly colored plasticine, slightly discolored, on an empty wooden table, dim light, unsettling atmosphere\", \"texto_locucion\": \"Estás solo en casa. La plastilina te esperaba.\", \"pexels_query\": \"plasticine block table\"}, {\"id\": 2, \"prompt\": \"Close-up of a small, crudely molded plasticine figure resembling a human shape, but with elongated limbs, on a dusty surface, chiaroscuro\", \"prompt_visual\": \"Close-up of a small, crudely molded plasticine figure resembling a human shape, but with elongated limbs, on a dusty surface, chiaroscuro\", \"texto_locucion\": \"Un bloque de plastilina. Tus hijos no la usaron hoy.\", \"pexels_query\": \"molded plasticine figure\"}, {\"id\": 3, \"prompt\": \"A hand (only the fingers visible, no identifiable person) reaches for the plasticine, creating an unsettling shadow, cold tones\", \"prompt_visual\": \"A hand (only the fingers visible, no identifiable person) reaches for the plasticine, creating an unsettling shadow, cold tones\", \"texto_locucion\": \"La dejaste intacta, lista para otra ocasión.\", \"pexels_query\": \"hand touching clay\"}, {\"id\": 4, \"prompt\": \"A minimalist, empty hallway, with a small, indistinct lump of plasticine on the floor near a doorframe, out of place, ominous\", \"prompt_visual\": \"A minimalist, empty hallway, with a small, indistinct lump of plasticine on the floor near a doorframe, out of place, ominous\", \"texto_locucion\": \"Pero algo no está bien cuando regresaste a casa.\", \"pexels_query\": \"empty hallway plasticine\"}, {\"id\": 5, \"prompt\": \"A shadow of an unknown, distorted figure falling across a table where a small, abstract plasticine shape lies, subtle movement implied\", \"prompt_visual\": \"A shadow of an unknown, distorted figure falling across a table where a small, abstract plasticine shape lies, subtle movement implied\", \"texto_locucion\": \"Había una pequeña forma moldeada sobre tu mesa.\", \"pexels_query\": \"shadow on table\"}, {\"id\": 6, \"prompt\": \"Extreme close-up on the surface of a plasticine block, showing faint, almost imperceptible indentations or fingerprints not your own, dark and grainy\", \"prompt_visual\": \"Extreme close-up on the surface of a plasticine block, showing faint, almost imperceptible indentations or fingerprints not your own, dark and grainy\", \"texto_locucion\": \"Un detalle mínimo que apenas notaste al inicio.\", \"pexels_query\": \"plasticine surface texture\"}, {\"id\": 7, \"prompt\": \"A child's drawing desk, empty, with a single, disturbing plasticine eye peering from behind a stack of papers, unnerving pareidolia\", \"prompt_visual\": \"A child's drawing desk, empty, with a single, disturbing plasticine eye peering from behind a stack of papers, unnerving pareidolia\", \"texto_locucion\": \"No había nadie más en la casa, eso lo jurarías.\", \"pexels_query\": \"desk plasticine eye\"}, {\"id\": 8, \"prompt\": \"A distorted reflection in a dark window showing only an ambiguous, blurry shape behind the viewer, implying a presence\", \"prompt_visual\": \"A distorted reflection in a dark window showing only an ambiguous, blurry shape behind the viewer, implying a presence\", \"texto_locucion\": \"Pero la plastilina había sido claramente manipulada.\", \"pexels_query\": \"blurry reflection window\"}, {\"id\": 9, \"prompt\": \"A plasticine figure on a windowsill, looking out, its back to the viewer, silhouetted against a dim, grey sky, creating a sense of dread\", \"prompt_visual\": \"A plasticine figure on a windowsill, looking out, its back to the viewer, silhouetted against a dim, grey sky, creating a sense of dread\", \"texto_locucion\": \"Las figuras cambiaban, sutilmente, cada día.\", \"pexels_query\": \"plasticine silhouette window\"}, {\"id\": 10, \"prompt\": \"A collection of small, abstract plasticine shapes, some slightly different, arranged on a surface, like an evolving display of unknown intent\", \"prompt_visual\": \"A collection of small, abstract plasticine shapes, some slightly different, arranged on a surface, like an evolving display of unknown intent\", \"texto_locucion\": \"Las dejabas de una forma, las encontrabas distintas.\", \"pexels_query\": \"abstract plasticine shapes\"}, {\"id\": 11, \"prompt\": \"A dark, empty corner of a room, with a very small, almost hidden, plasticine 'ear' shape protruding from the baseboard, unsettling detail\", \"prompt_visual\": \"A dark, empty corner of a room, with a very small, almost hidden, plasticine 'ear' shape protruding from the baseboard, unsettling detail\", \"texto_locucion\": \"Te dijiste que lo habías imaginado. Disociación.\", \"pexels_query\": \"plasticine ear corner\"}, {\"id\": 12, \"prompt\": \"A pair of indistinct, dark hands, seemingly emerging from shadow, reaching towards a block of plasticine, creating an eerie sense of agency\", \"prompt_visual\": \"A pair of indistinct, dark hands, seemingly emerging from shadow, reaching towards a block of plasticine, creating an eerie sense of agency\", \"texto_locucion\": \"Hasta que lo sentiste antes. Esa presencia invisible.\", \"pexels_query\": \"shadow hands clay\"}, {\"id\": 13, \"prompt\": \"A plasticine figure of a small, hunched form, with no discernible features, sitting on a chair, facing away, in a dimly lit room\", \"prompt_visual\": \"A plasticine figure of a small, hunched form, with no discernible features, sitting on a chair, facing away, in a dimly lit room\", \"texto_locucion\": \"Una mañana apareció una pequeña figura en tu silla.\", \"pexels_query\": \"plasticine figure chair\"}, {\"id\": 14, \"prompt\": \"Close-up of the plasticine figure's texture, showing tiny, unidentifiable imperfections, hinting at its creation by an unknown entity\", \"prompt_visual\": \"Close-up of the plasticine figure's texture, showing tiny, unidentifiable imperfections, hinting at its creation by an unknown entity\", \"texto_locucion\": \"Sus manos no eran como las tuyas. ¿Quién la hizo?\", \"pexels_query\": \"plasticine texture detail\"}, {\"id\": 15, \"prompt\": \"A long, dark corridor with a single, small, glowing red plasticine 'eye' on the floor at the very end, ominous and unblinking\", \"prompt_visual\": \"A long, dark corridor with a single, small, glowing red plasticine 'eye' on the floor at the very end, ominous and unblinking\", \"texto_locucion\": \"Miraste los pasillos vacíos. Silencio absoluto.\", \"pexels_query\": \"dark corridor red eye\"}, {\"id\": 16, \"prompt\": \"A closed door with a thin line of light underneath, where a small, shadow-like plasticine hand is reaching through, attempting to open it\", \"prompt_visual\": \"A closed door with a thin line of light underneath, where a small, shadow-like plasticine hand is reaching through, attempting to open it\", \"texto_locucion\": \"Sentías algo allí. No podías ignorarlo más.\", \"pexels_query\": \"door crack shadow hand\"}, {\"id\": 17, \"prompt\": \"A blurred, fleeting image of a distorted humanoid silhouette made of dark plasticine, moving quickly across a wall, caught in a flash of light\", \"prompt_visual\": \"A blurred, fleeting image of a distorted humanoid silhouette made of dark plasticine, moving quickly across a wall, caught in a flash of light\", \"texto_locucion\": \"A veces, creías ver una sombra moviéndose por casa.\", \"pexels_query\": \"blurry plasticine silhouette\"}, {\"id\": 18, \"prompt\": \"Close-up of a plasticine 'face' with hollowed-out eyes, pressed against a cold windowpane, distorting the view outside, unsettling and trapped\", \"prompt_visual\": \"Close-up of a plasticine 'face' with hollowed-out eyes, pressed against a cold windowpane, distorting the view outside, unsettling and trapped\", \"texto_locucion\": \"La plastilina se moldeaba sola. O eso parecía.\", \"pexels_query\": \"plasticine face window\"}, {\"id\": 19, \"prompt\": \"A bedroom at night, with the bed undisturbed, but a single, strange plasticine footprint on the floor beside it, suggesting an intruder\", \"prompt_visual\": \"A bedroom at night, with the bed undisturbed, but a single, strange plasticine footprint on the floor beside it, suggesting an intruder\", \"texto_locucion\": \"Huellas diminutas, como de dedos, aparecieron en el suelo.\", \"pexels_query\": \"bedroom plasticine footprint\"}, {\"id\": 20, \"prompt\": \"A dark, empty staircase, with a single, very small, indistinct plasticine figure sitting halfway up, watching the viewer from the shadows\", \"prompt_visual\": \"A dark, empty staircase, with a single, very small, indistinct plasticine figure sitting halfway up, watching the viewer from the shadows\", \"texto_locucion\": \"Cada noche escuchabas ruidos leves, arrastres sutiles.\", \"pexels_query\": \"staircase plasticine figure\"}, {\"id\": 21, \"prompt\": \"A close-up of a small, human-like plasticine hand, perfectly formed, resting on your pillow, implying an intimate, chilling presence\", \"prompt_visual\": \"A close-up of a small, human-like plasticine hand, perfectly formed, resting on your pillow, implying an intimate, chilling presence\", \"texto_locucion\": \"Una mañana, la encontraste junto a tu almohada.\", \"pexels_query\": \"plasticine hand pillow\"}, {\"id\": 22, \"prompt\": \"A discarded, crumpled piece of plasticine, resembling a tortured face, half-hidden under a bed, suggesting a violent destruction or despair\", \"prompt_visual\": \"A discarded, crumpled piece of plasticine, resembling a tortured face, half-hidden under a bed, suggesting a violent destruction or despair\", \"texto_locucion\": \"Intentaste destruirla, aplastarla. No funcionó.\", \"pexels_query\": \"crumpled plasticine face\"}, {\"id\": 23, \"prompt\": \"An antique mirror reflecting a dark, empty room, but in its surface, a faint, almost transparent plasticine figure can be seen, watching\", \"prompt_visual\": \"An antique mirror reflecting a dark, empty room, but in its surface, a faint, almost transparent plasticine figure can be seen, watching\", \"texto_locucion\": \"Siempre volvía a aparecer, reconstruida. Algo te miraba.\", \"pexels_query\": \"mirror plasticine figure\"}, {\"id\": 24, \"prompt\": \"A single, large, shadowy plasticine handprint on a clean wall, perfectly formed, implying immense pressure and an unnatural origin\", \"prompt_visual\": \"A single, large, shadowy plasticine handprint on a clean wall, perfectly formed, implying immense pressure and an unnatural origin\", \"texto_locucion\": \"Nadie lo vio nunca. Solo tú sabes lo real que es.\", \"pexels_query\": \"plasticine handprint wall\"}, {\"id\": 25, \"prompt\": \"A dimly lit room with several small, indistinct plasticine figures scattered around, some seemingly looking at the viewer, creating a collective, unsettling presence\", \"prompt_visual\": \"A dimly lit room with several small, indistinct plasticine figures scattered around, some seemingly looking at the viewer, creating a collective, unsettling presence\", \"texto_locucion\": \"Las figuras ahora son más. Siempre están contigo.\", \"pexels_query\": \"plasticine figures scattered\"}, {\"id\": 26, \"prompt\": \"A close-up of a small, perfectly formed plasticine mouth, slightly open, on an otherwise blank piece of clay, as if whispering, unnerving\", \"prompt_visual\": \"A close-up of a small, perfectly formed plasticine mouth, slightly open, on an otherwise blank piece of clay, as if whispering, unnerving\", \"texto_locucion\": \"Te observan desde los rincones más oscuros.\", \"pexels_query\": \"plasticine mouth whispering\"}, {\"id\": 27, \"prompt\": \"A single, human-like plasticine figure, but with slightly elongated, thin limbs and a featureless head, standing perfectly still in a doorway, silhouetted\", \"prompt_visual\": \"A single, human-like plasticine figure, but with slightly elongated, thin limbs and a featureless head, standing perfectly still in a doorway, silhouetted\", \"texto_locucion\": \"¿Las escuchas arrastrarse mientras duermes?\", \"pexels_query\": \"plasticine figure doorway\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Estás solo en casa. La plastilina te esperaba. Un bloque de plastilina. Tus hijos no la usaron hoy. La dejaste intacta, lista para otra ocasión. Pero algo no está bien cuando regresaste a casa. Había una pequeña forma moldeada sobre tu mesa. Un detalle mínimo que apenas notaste al inicio. No había nadie más en la casa, eso lo jurarías. Pero la plastilina había sido claramente manipulada. Las figuras cambiaban, sutilmente, cada día. Las dejabas de una forma, las encontrabas distintas. Te dijiste que lo habías imaginado. Disociación. Hasta que lo sentiste antes. Esa presencia invisible. Una mañana apareció una pequeña figura en tu silla. Sus manos no eran como las tuyas. ¿Quién la hizo? Miraste los pasillos vacíos. Silencio absoluto. Sentías algo allí. No podías ignorarlo más. A veces, creías ver una sombra moviéndose por casa. La plastilina se moldeaba sola. O eso parecía. Huellas diminutas, como de dedos, aparecieron en el suelo. Cada noche escuchabas ruidos leves, arrastres sutiles. Una mañana, la encontraste junto a tu almohada. Intentaste destruirla, aplastarla. No funcionó. Siempre volvía a aparecer, reconstruida. Algo te miraba. Nadie lo vio nunca. Solo tú sabes lo real que es. Las figuras ahora son más. Siempre están contigo. Te observan desde los rincones más oscuros. ¿Las escuchas arrastrarse mientras duermes?",
+    "titulo_sugerido": "¿Quién moldea figuras de plastilina en tu casa?",
+    "escenas_texto": [
+      "Estás solo en casa. La plastilina te esperaba.",
+      "Un bloque de plastilina. Tus hijos no la usaron hoy.",
+      "La dejaste intacta, lista para otra ocasión.",
+      "Pero algo no está bien cuando regresaste a casa.",
+      "Había una pequeña forma moldeada sobre tu mesa.",
+      "Un detalle mínimo que apenas notaste al inicio.",
+      "No había nadie más en la casa, eso lo jurarías.",
+      "Pero la plastilina había sido claramente manipulada.",
+      "Las figuras cambiaban, sutilmente, cada día.",
+      "Las dejabas de una forma, las encontrabas distintas.",
+      "Te dijiste que lo habías imaginado. Disociación.",
+      "Hasta que lo sentiste antes. Esa presencia invisible.",
+      "Una mañana apareció una pequeña figura en tu silla.",
+      "Sus manos no eran como las tuyas. ¿Quién la hizo?",
+      "Miraste los pasillos vacíos. Silencio absoluto.",
+      "Sentías algo allí. No podías ignorarlo más.",
+      "A veces, creías ver una sombra moviéndose por casa.",
+      "La plastilina se moldeaba sola. O eso parecía.",
+      "Huellas diminutas, como de dedos, aparecieron en el suelo.",
+      "Cada noche escuchabas ruidos leves, arrastres sutiles.",
+      "Una mañana, la encontraste junto a tu almohada.",
+      "Intentaste destruirla, aplastarla. No funcionó.",
+      "Siempre volvía a aparecer, reconstruida. Algo te miraba.",
+      "Nadie lo vio nunca. Solo tú sabes lo real que es.",
+      "Las figuras ahora son más. Siempre están contigo.",
+      "Te observan desde los rincones más oscuros.",
+      "¿Las escuchas arrastrarse mientras duermes?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A half-used block of brightly colored plasticine, slightly discolored, on an empty wooden table, dim light, unsettling atmosphere",
+        "prompt_visual": "A half-used block of brightly colored plasticine, slightly discolored, on an empty wooden table, dim light, unsettling atmosphere",
+        "texto_locucion": "Estás solo en casa. La plastilina te esperaba.",
+        "pexels_query": "plasticine block table"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up of a small, crudely molded plasticine figure resembling a human shape, but with elongated limbs, on a dusty surface, chiaroscuro",
+        "prompt_visual": "Close-up of a small, crudely molded plasticine figure resembling a human shape, but with elongated limbs, on a dusty surface, chiaroscuro",
+        "texto_locucion": "Un bloque de plastilina. Tus hijos no la usaron hoy.",
+        "pexels_query": "molded plasticine figure"
+      },
+      {
+        "id": 3,
+        "prompt": "A hand (only the fingers visible, no identifiable person) reaches for the plasticine, creating an unsettling shadow, cold tones",
+        "prompt_visual": "A hand (only the fingers visible, no identifiable person) reaches for the plasticine, creating an unsettling shadow, cold tones",
+        "texto_locucion": "La dejaste intacta, lista para otra ocasión.",
+        "pexels_query": "hand touching clay"
+      },
+      {
+        "id": 4,
+        "prompt": "A minimalist, empty hallway, with a small, indistinct lump of plasticine on the floor near a doorframe, out of place, ominous",
+        "prompt_visual": "A minimalist, empty hallway, with a small, indistinct lump of plasticine on the floor near a doorframe, out of place, ominous",
+        "texto_locucion": "Pero algo no está bien cuando regresaste a casa.",
+        "pexels_query": "empty hallway plasticine"
+      },
+      {
+        "id": 5,
+        "prompt": "A shadow of an unknown, distorted figure falling across a table where a small, abstract plasticine shape lies, subtle movement implied",
+        "prompt_visual": "A shadow of an unknown, distorted figure falling across a table where a small, abstract plasticine shape lies, subtle movement implied",
+        "texto_locucion": "Había una pequeña forma moldeada sobre tu mesa.",
+        "pexels_query": "shadow on table"
+      },
+      {
+        "id": 6,
+        "prompt": "Extreme close-up on the surface of a plasticine block, showing faint, almost imperceptible indentations or fingerprints not your own, dark and grainy",
+        "prompt_visual": "Extreme close-up on the surface of a plasticine block, showing faint, almost imperceptible indentations or fingerprints not your own, dark and grainy",
+        "texto_locucion": "Un detalle mínimo que apenas notaste al inicio.",
+        "pexels_query": "plasticine surface texture"
+      },
+      {
+        "id": 7,
+        "prompt": "A child's drawing desk, empty, with a single, disturbing plasticine eye peering from behind a stack of papers, unnerving pareidolia",
+        "prompt_visual": "A child's drawing desk, empty, with a single, disturbing plasticine eye peering from behind a stack of papers, unnerving pareidolia",
+        "texto_locucion": "No había nadie más en la casa, eso lo jurarías.",
+        "pexels_query": "desk plasticine eye"
+      },
+      {
+        "id": 8,
+        "prompt": "A distorted reflection in a dark window showing only an ambiguous, blurry shape behind the viewer, implying a presence",
+        "prompt_visual": "A distorted reflection in a dark window showing only an ambiguous, blurry shape behind the viewer, implying a presence",
+        "texto_locucion": "Pero la plastilina había sido claramente manipulada.",
+        "pexels_query": "blurry reflection window"
+      },
+      {
+        "id": 9,
+        "prompt": "A plasticine figure on a windowsill, looking out, its back to the viewer, silhouetted against a dim, grey sky, creating a sense of dread",
+        "prompt_visual": "A plasticine figure on a windowsill, looking out, its back to the viewer, silhouetted against a dim, grey sky, creating a sense of dread",
+        "texto_locucion": "Las figuras cambiaban, sutilmente, cada día.",
+        "pexels_query": "plasticine silhouette window"
+      },
+      {
+        "id": 10,
+        "prompt": "A collection of small, abstract plasticine shapes, some slightly different, arranged on a surface, like an evolving display of unknown intent",
+        "prompt_visual": "A collection of small, abstract plasticine shapes, some slightly different, arranged on a surface, like an evolving display of unknown intent",
+        "texto_locucion": "Las dejabas de una forma, las encontrabas distintas.",
+        "pexels_query": "abstract plasticine shapes"
+      },
+      {
+        "id": 11,
+        "prompt": "A dark, empty corner of a room, with a very small, almost hidden, plasticine 'ear' shape protruding from the baseboard, unsettling detail",
+        "prompt_visual": "A dark, empty corner of a room, with a very small, almost hidden, plasticine 'ear' shape protruding from the baseboard, unsettling detail",
+        "texto_locucion": "Te dijiste que lo habías imaginado. Disociación.",
+        "pexels_query": "plasticine ear corner"
+      },
+      {
+        "id": 12,
+        "prompt": "A pair of indistinct, dark hands, seemingly emerging from shadow, reaching towards a block of plasticine, creating an eerie sense of agency",
+        "prompt_visual": "A pair of indistinct, dark hands, seemingly emerging from shadow, reaching towards a block of plasticine, creating an eerie sense of agency",
+        "texto_locucion": "Hasta que lo sentiste antes. Esa presencia invisible.",
+        "pexels_query": "shadow hands clay"
+      },
+      {
+        "id": 13,
+        "prompt": "A plasticine figure of a small, hunched form, with no discernible features, sitting on a chair, facing away, in a dimly lit room",
+        "prompt_visual": "A plasticine figure of a small, hunched form, with no discernible features, sitting on a chair, facing away, in a dimly lit room",
+        "texto_locucion": "Una mañana apareció una pequeña figura en tu silla.",
+        "pexels_query": "plasticine figure chair"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of the plasticine figure's texture, showing tiny, unidentifiable imperfections, hinting at its creation by an unknown entity",
+        "prompt_visual": "Close-up of the plasticine figure's texture, showing tiny, unidentifiable imperfections, hinting at its creation by an unknown entity",
+        "texto_locucion": "Sus manos no eran como las tuyas. ¿Quién la hizo?",
+        "pexels_query": "plasticine texture detail"
+      },
+      {
+        "id": 15,
+        "prompt": "A long, dark corridor with a single, small, glowing red plasticine 'eye' on the floor at the very end, ominous and unblinking",
+        "prompt_visual": "A long, dark corridor with a single, small, glowing red plasticine 'eye' on the floor at the very end, ominous and unblinking",
+        "texto_locucion": "Miraste los pasillos vacíos. Silencio absoluto.",
+        "pexels_query": "dark corridor red eye"
+      },
+      {
+        "id": 16,
+        "prompt": "A closed door with a thin line of light underneath, where a small, shadow-like plasticine hand is reaching through, attempting to open it",
+        "prompt_visual": "A closed door with a thin line of light underneath, where a small, shadow-like plasticine hand is reaching through, attempting to open it",
+        "texto_locucion": "Sentías algo allí. No podías ignorarlo más.",
+        "pexels_query": "door crack shadow hand"
+      },
+      {
+        "id": 17,
+        "prompt": "A blurred, fleeting image of a distorted humanoid silhouette made of dark plasticine, moving quickly across a wall, caught in a flash of light",
+        "prompt_visual": "A blurred, fleeting image of a distorted humanoid silhouette made of dark plasticine, moving quickly across a wall, caught in a flash of light",
+        "texto_locucion": "A veces, creías ver una sombra moviéndose por casa.",
+        "pexels_query": "blurry plasticine silhouette"
+      },
+      {
+        "id": 18,
+        "prompt": "Close-up of a plasticine 'face' with hollowed-out eyes, pressed against a cold windowpane, distorting the view outside, unsettling and trapped",
+        "prompt_visual": "Close-up of a plasticine 'face' with hollowed-out eyes, pressed against a cold windowpane, distorting the view outside, unsettling and trapped",
+        "texto_locucion": "La plastilina se moldeaba sola. O eso parecía.",
+        "pexels_query": "plasticine face window"
+      },
+      {
+        "id": 19,
+        "prompt": "A bedroom at night, with the bed undisturbed, but a single, strange plasticine footprint on the floor beside it, suggesting an intruder",
+        "prompt_visual": "A bedroom at night, with the bed undisturbed, but a single, strange plasticine footprint on the floor beside it, suggesting an intruder",
+        "texto_locucion": "Huellas diminutas, como de dedos, aparecieron en el suelo.",
+        "pexels_query": "bedroom plasticine footprint"
+      },
+      {
+        "id": 20,
+        "prompt": "A dark, empty staircase, with a single, very small, indistinct plasticine figure sitting halfway up, watching the viewer from the shadows",
+        "prompt_visual": "A dark, empty staircase, with a single, very small, indistinct plasticine figure sitting halfway up, watching the viewer from the shadows",
+        "texto_locucion": "Cada noche escuchabas ruidos leves, arrastres sutiles.",
+        "pexels_query": "staircase plasticine figure"
+      },
+      {
+        "id": 21,
+        "prompt": "A close-up of a small, human-like plasticine hand, perfectly formed, resting on your pillow, implying an intimate, chilling presence",
+        "prompt_visual": "A close-up of a small, human-like plasticine hand, perfectly formed, resting on your pillow, implying an intimate, chilling presence",
+        "texto_locucion": "Una mañana, la encontraste junto a tu almohada.",
+        "pexels_query": "plasticine hand pillow"
+      },
+      {
+        "id": 22,
+        "prompt": "A discarded, crumpled piece of plasticine, resembling a tortured face, half-hidden under a bed, suggesting a violent destruction or despair",
+        "prompt_visual": "A discarded, crumpled piece of plasticine, resembling a tortured face, half-hidden under a bed, suggesting a violent destruction or despair",
+        "texto_locucion": "Intentaste destruirla, aplastarla. No funcionó.",
+        "pexels_query": "crumpled plasticine face"
+      },
+      {
+        "id": 23,
+        "prompt": "An antique mirror reflecting a dark, empty room, but in its surface, a faint, almost transparent plasticine figure can be seen, watching",
+        "prompt_visual": "An antique mirror reflecting a dark, empty room, but in its surface, a faint, almost transparent plasticine figure can be seen, watching",
+        "texto_locucion": "Siempre volvía a aparecer, reconstruida. Algo te miraba.",
+        "pexels_query": "mirror plasticine figure"
+      },
+      {
+        "id": 24,
+        "prompt": "A single, large, shadowy plasticine handprint on a clean wall, perfectly formed, implying immense pressure and an unnatural origin",
+        "prompt_visual": "A single, large, shadowy plasticine handprint on a clean wall, perfectly formed, implying immense pressure and an unnatural origin",
+        "texto_locucion": "Nadie lo vio nunca. Solo tú sabes lo real que es.",
+        "pexels_query": "plasticine handprint wall"
+      },
+      {
+        "id": 25,
+        "prompt": "A dimly lit room with several small, indistinct plasticine figures scattered around, some seemingly looking at the viewer, creating a collective, unsettling presence",
+        "prompt_visual": "A dimly lit room with several small, indistinct plasticine figures scattered around, some seemingly looking at the viewer, creating a collective, unsettling presence",
+        "texto_locucion": "Las figuras ahora son más. Siempre están contigo.",
+        "pexels_query": "plasticine figures scattered"
+      },
+      {
+        "id": 26,
+        "prompt": "A close-up of a small, perfectly formed plasticine mouth, slightly open, on an otherwise blank piece of clay, as if whispering, unnerving",
+        "prompt_visual": "A close-up of a small, perfectly formed plasticine mouth, slightly open, on an otherwise blank piece of clay, as if whispering, unnerving",
+        "texto_locucion": "Te observan desde los rincones más oscuros.",
+        "pexels_query": "plasticine mouth whispering"
+      },
+      {
+        "id": 27,
+        "prompt": "A single, human-like plasticine figure, but with slightly elongated, thin limbs and a featureless head, standing perfectly still in a doorway, silhouetted",
+        "prompt_visual": "A single, human-like plasticine figure, but with slightly elongated, thin limbs and a featureless head, standing perfectly still in a doorway, silhouetted",
+        "texto_locucion": "¿Las escuchas arrastrarse mientras duermes?",
+        "pexels_query": "plasticine figure doorway"
+      }
+    ],
+    "hooks": [
+      "¿Quién mueve la plastilina?",
+      "Formas que no hiciste tú.",
+      "Alguien moldea en tu casa."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
