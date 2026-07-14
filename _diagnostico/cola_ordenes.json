@@ -962,5 +962,256 @@
       "Nunca estás solo."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "2be8856f-6477-4b54-ad2e-d879874fcc6f",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A dimly lit shelf with various common figurines, one figurine is slightly misaligned from the others, creating a subtle disquiet.\", \"prompt_visual\": \"A dimly lit shelf with various common figurines, one figurine is slightly misaligned from the others, creating a subtle disquiet.\", \"texto_locucion\": \"Miraste el estante. Algo no estaba bien.\", \"pexels_query\": \"shelf figurines shadow\"}, {\"id\": 2, \"prompt\": \"A single clay figurine on a table, its head slightly tilted more than it should be, an almost imperceptible change.\", \"prompt_visual\": \"A single clay figurine on a table, its head slightly tilted more than it should be, an almost imperceptible change.\", \"texto_locucion\": \"Aquella figurita de plastilina, cambió. Lo jurarías.\", \"pexels_query\": \"clay figurine tilted head\"}, {\"id\": 3, \"prompt\": \"A blurred, grainy image of a small, static object, conveying a sense of brief, unconfirmed movement.\", \"prompt_visual\": \"A blurred, grainy image of a small, static object, conveying a sense of brief, unconfirmed movement.\", \"texto_locucion\": \"Solo un instante. Un mínimo, sutil movimiento.\", \"pexels_query\": \"blurred static object\"}, {\"id\": 4, \"prompt\": \"A dark, empty room with a single, ordinary object (e.g., a chair) slightly askew, suggesting cognitive dissonance.\", \"prompt_visual\": \"A dark, empty room with a single, ordinary object (e.g., a chair) slightly askew, suggesting cognitive dissonance.\", \"texto_locucion\": \"Tu cerebro lo descartó, es tu imaginación.\", \"pexels_query\": \"empty room askew chair\"}, {\"id\": 5, \"prompt\": \"A shadowy hallway leading to a door, a palpable sense of unease or unseen presence in the air.\", \"prompt_visual\": \"A shadowy hallway leading to a door, a palpable sense of unease or unseen presence in the air.\", \"texto_locucion\": \"Pero lo sentiste antes, esa extraña sensación.\", \"pexels_query\": \"shadowy hallway presence\"}, {\"id\": 6, \"prompt\": \"Close-up of a doll's or figurine's eyes in shadow, appearing to stare directly, unsettling.\", \"prompt_visual\": \"Close-up of a doll's or figurine's eyes in shadow, appearing to stare directly, unsettling.\", \"texto_locucion\": \"Los ojos de la figura ahora te miraban fijamente.\", \"pexels_query\": \"doll eyes shadow stare\"}, {\"id\": 7, \"prompt\": \"A figurine on a shelf, turned to face the viewer, a subtle but definitive change.\", \"prompt_visual\": \"A figurine on a shelf, turned to face the viewer, a subtle but definitive change.\", \"texto_locucion\": \"No podías ignorarlo. Estaba volteada hacia ti.\", \"pexels_query\": \"figurine turned shelf\"}, {\"id\": 8, \"prompt\": \"A lone, isolated object in a vast, dark space, emphasizing the personal, unshared experience.\", \"prompt_visual\": \"A lone, isolated object in a vast, dark space, emphasizing the personal, unshared experience.\", \"texto_locucion\": \"Nadie lo vio. Nadie más podía entenderlo.\", \"pexels_query\": \"isolated object dark room\"}, {\"id\": 9, \"prompt\": \"A slightly out-of-focus collection of figurines, implying observation from a distance.\", \"prompt_visual\": \"A slightly out-of-focus collection of figurines, implying observation from a distance.\", \"texto_locucion\": \"Comenzaste a vigilarlas sin que se dieran cuenta.\", \"pexels_query\": \"figurines out of focus\"}, {\"id\": 10, \"prompt\": \"A series of objects on a nightstand, one slightly moved or rotated from its original position.\", \"prompt_visual\": \"A series of objects on a nightstand, one slightly moved or rotated from its original position.\", \"texto_locucion\": \"Pequeños giros, ligeros desplazamientos de noche.\", \"pexels_query\": \"nightstand objects moved\"}, {\"id\": 11, \"prompt\": \"A wide shot of a bedroom, all objects perfectly still, creating a deceptive sense of calm.\", \"prompt_visual\": \"A wide shot of a bedroom, all objects perfectly still, creating a deceptive sense of calm.\", \"texto_locucion\": \"Cuando entrabas al cuarto, siempre estaban quietas.\", \"pexels_query\": \"still bedroom objects\"}, {\"id\": 12, \"prompt\": \"A cold, misty breath against a dark window, conveying an unnatural chill.\", \"prompt_visual\": \"A cold, misty breath against a dark window, conveying an unnatural chill.\", \"texto_locucion\": \"Algo en el aire pesaba, una presencia gélida.\", \"pexels_query\": \"cold breath window\"}, {\"id\": 13, \"prompt\": \"A desolate, quiet room with faint light, the emptiness itself feels heavy.\", \"prompt_visual\": \"A desolate, quiet room with faint light, the emptiness itself feels heavy.\", \"texto_locucion\": \"El silencio absoluto llenaba la habitación vacía.\", \"pexels_query\": \"desolate quiet room\"}, {\"id\": 14, \"prompt\": \"A dark corner of a room, a subtle shadow suggesting an unseen form.\", \"prompt_visual\": \"A dark corner of a room, a subtle shadow suggesting an unseen form.\", \"texto_locucion\": \"Tú sabías que no estabas solo en esa casa.\", \"pexels_query\": \"dark corner shadow presence\"}, {\"id\": 15, \"prompt\": \"A collection of ordinary, static objects, but with an underlying tension.\", \"prompt_visual\": \"A collection of ordinary, static objects, but with an underlying tension.\", \"texto_locucion\": \"Pero eran solo objetos inanimados. ¿Verdad?\", \"pexels_query\": \"static objects tension\"}, {\"id\": 16, \"prompt\": \"A single figurine placed in an unusual, unexpected spot, like the middle of a floor.\", \"prompt_visual\": \"A single figurine placed in an unusual, unexpected spot, like the middle of a floor.\", \"texto_locucion\": \"Un día, una de ellas, estaba en otro sitio.\", \"pexels_query\": \"figurine floor unexpected\"}, {\"id\": 17, \"prompt\": \"A small object on the floor next to a bed, unsettlingly close.\", \"prompt_visual\": \"A small object on the floor next to a bed, unsettlingly close.\", \"texto_locucion\": \"Fuera del estante. Justo frente a tu cama.\", \"pexels_query\": \"object beside bed floor\"}, {\"id\": 18, \"prompt\": \"Close-up of a figurine's head, turned upwards towards an unseen, dark ceiling.\", \"prompt_visual\": \"Close-up of a figurine's head, turned upwards towards an unseen, dark ceiling.\", \"texto_locucion\": \"Su cabeza girada. Mirando hacia el techo oscuro.\", \"pexels_query\": \"figurine head looking up\"}, {\"id\": 19, \"prompt\": \"Grainy texture, a sense of cold, a subtle shiver visually implied by distortion.\", \"prompt_visual\": \"Grainy texture, a sense of cold, a subtle shiver visually implied by distortion.\", \"texto_locucion\": \"Sentiste un escalofrío que te recorrió la espalda.\", \"pexels_query\": \"cold texture distortion\"}, {\"id\": 20, \"prompt\": \"A hand reaching for an object, but hesitating, showing disbelief and fear.\", \"prompt_visual\": \"A hand reaching for an object, but hesitating, showing disbelief and fear.\", \"texto_locucion\": \"No podías explicarlo. Nadie te creería nunca.\", \"pexels_query\": \"hesitant hand object\"}, {\"id\": 21, \"prompt\": \"Hands carefully placing figurines back on a shelf in a dimly lit room.\", \"prompt_visual\": \"Hands carefully placing figurines back on a shelf in a dimly lit room.\", \"texto_locucion\": \"Cada noche, las colocabas en su lugar.\", \"pexels_query\": \"placing figurines shelf\"}, {\"id\": 22, \"prompt\": \"A morning light revealing a displaced object on a bedside table.\", \"prompt_visual\": \"A morning light revealing a displaced object on a bedside table.\", \"texto_locucion\": \"Cada mañana, encontrabas alguna movida de nuevo.\", \"pexels_query\": \"morning light displaced object\"}, {\"id\": 23, \"prompt\": \"Eyes peering from deep shadow, pareidolia in the shape of faces within dark corners.\", \"prompt_visual\": \"Eyes peering from deep shadow, pareidolia in the shape of faces within dark corners.\", \"texto_locucion\": \"Observándote. Desde la oscuridad. Siempre esperando.\", \"pexels_query\": \"eyes shadow pareidolia\"}, {\"id\": 24, \"prompt\": \"A long, empty corridor stretching into darkness, implying an endless, ongoing situation.\", \"prompt_visual\": \"A long, empty corridor stretching into darkness, implying an endless, ongoing situation.\", \"texto_locucion\": \"¿Cuánto tiempo llevaban haciendo esto contigo?\", \"pexels_query\": \"empty corridor darkness\"}, {\"id\": 25, \"prompt\": \"A collection of identical, blank-faced objects, implying collective, silent observation.\", \"prompt_visual\": \"A collection of identical, blank-faced objects, implying collective, silent observation.\", \"texto_locucion\": \"Se acostumbran a verte. Aprenden de tus rutinas.\", \"pexels_query\": \"identical blank objects\"}, {\"id\": 26, \"prompt\": \"A shadowy hand reaching out from behind a collection of figurines, subtly taking control.\", \"prompt_visual\": \"A shadowy hand reaching out from behind a collection of figurines, subtly taking control.\", \"texto_locucion\": \"Tus objetos, tus posesiones. Ahora, ellos te poseen.\", \"pexels_query\": \"shadowy hand figurines\"}, {\"id\": 27, \"prompt\": \"A distorted reflection in a dark window, suggesting an unseen presence watching.\", \"prompt_visual\": \"A distorted reflection in a dark window, suggesting an unseen presence watching.\", \"texto_locucion\": \"Ellos están ahí. Viendo todo. Incluso ahora mismo.\", \"pexels_query\": \"distorted reflection window\"}, {\"id\": 28, \"prompt\": \"An ordinary, innocent child's toy, casting a long, sinister shadow.\", \"prompt_visual\": \"An ordinary, innocent child's toy, casting a long, sinister shadow.\", \"texto_locucion\": \"Podrían ser tus propios objetos. Tus juguetes.\", \"pexels_query\": \"child toy sinister shadow\"}, {\"id\": 29, \"prompt\": \"A door slightly ajar in a dark room, a sliver of light revealing an ambiguous, lurking shape within.\", \"prompt_visual\": \"A door slightly ajar in a dark room, a sliver of light revealing an ambiguous, lurking shape within.\", \"texto_locucion\": \"Ellos esperan a que no estés mirando.\", \"pexels_query\": \"door ajar dark shape\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Miraste el estante. Algo no estaba bien. Aquella figurita de plastilina, cambió. Lo jurarías. Solo un instante. Un mínimo, sutil movimiento. Tu cerebro lo descartó, es tu imaginación. Pero lo sentiste antes, esa extraña sensación. Los ojos de la figura ahora te miraban fijamente. No podías ignorarlo. Estaba volteada hacia ti. Nadie lo vio. Nadie más podía entenderlo. Comenzaste a vigilarlas sin que se dieran cuenta. Pequeños giros, ligeros desplazamientos de noche. Cuando entrabas al cuarto, siempre estaban quietas. Algo en el aire pesaba, una presencia gélida. El silencio absoluto llenaba la habitación vacía. Tú sabías que no estabas solo en esa casa. Pero eran solo objetos inanimados. ¿Verdad? Un día, una de ellas, estaba en otro sitio. Fuera del estante. Justo frente a tu cama. Su cabeza girada. Mirando hacia el techo oscuro. Sentiste un escalofrío que te recorrió la espalda. No podías explicarlo. Nadie te creería nunca. Cada noche, las colocabas en su lugar. Cada mañana, encontrabas alguna movida de nuevo. Observándote. Desde la oscuridad. Siempre esperando. ¿Cuánto tiempo llevaban haciendo esto contigo? Se acostumbran a verte. Aprenden de tus rutinas. Tus objetos, tus posesiones. Ahora, ellos te poseen. Ellos están ahí. Viendo todo. Incluso ahora mismo. Podrían ser tus propios objetos. Tus juguetes. Ellos esperan a que no estés mirando.",
+    "titulo_sugerido": "Tus Figuritas Te Vigilan: Cuando los Objetos Cobran Vida",
+    "escenas_texto": [
+      "Miraste el estante. Algo no estaba bien.",
+      "Aquella figurita de plastilina, cambió. Lo jurarías.",
+      "Solo un instante. Un mínimo, sutil movimiento.",
+      "Tu cerebro lo descartó, es tu imaginación.",
+      "Pero lo sentiste antes, esa extraña sensación.",
+      "Los ojos de la figura ahora te miraban fijamente.",
+      "No podías ignorarlo. Estaba volteada hacia ti.",
+      "Nadie lo vio. Nadie más podía entenderlo.",
+      "Comenzaste a vigilarlas sin que se dieran cuenta.",
+      "Pequeños giros, ligeros desplazamientos de noche.",
+      "Cuando entrabas al cuarto, siempre estaban quietas.",
+      "Algo en el aire pesaba, una presencia gélida.",
+      "El silencio absoluto llenaba la habitación vacía.",
+      "Tú sabías que no estabas solo en esa casa.",
+      "Pero eran solo objetos inanimados. ¿Verdad?",
+      "Un día, una de ellas, estaba en otro sitio.",
+      "Fuera del estante. Justo frente a tu cama.",
+      "Su cabeza girada. Mirando hacia el techo oscuro.",
+      "Sentiste un escalofrío que te recorrió la espalda.",
+      "No podías explicarlo. Nadie te creería nunca.",
+      "Cada noche, las colocabas en su lugar.",
+      "Cada mañana, encontrabas alguna movida de nuevo.",
+      "Observándote. Desde la oscuridad. Siempre esperando.",
+      "¿Cuánto tiempo llevaban haciendo esto contigo?",
+      "Se acostumbran a verte. Aprenden de tus rutinas.",
+      "Tus objetos, tus posesiones. Ahora, ellos te poseen.",
+      "Ellos están ahí. Viendo todo. Incluso ahora mismo.",
+      "Podrían ser tus propios objetos. Tus juguetes.",
+      "Ellos esperan a que no estés mirando."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A dimly lit shelf with various common figurines, one figurine is slightly misaligned from the others, creating a subtle disquiet.",
+        "prompt_visual": "A dimly lit shelf with various common figurines, one figurine is slightly misaligned from the others, creating a subtle disquiet.",
+        "texto_locucion": "Miraste el estante. Algo no estaba bien.",
+        "pexels_query": "shelf figurines shadow"
+      },
+      {
+        "id": 2,
+        "prompt": "A single clay figurine on a table, its head slightly tilted more than it should be, an almost imperceptible change.",
+        "prompt_visual": "A single clay figurine on a table, its head slightly tilted more than it should be, an almost imperceptible change.",
+        "texto_locucion": "Aquella figurita de plastilina, cambió. Lo jurarías.",
+        "pexels_query": "clay figurine tilted head"
+      },
+      {
+        "id": 3,
+        "prompt": "A blurred, grainy image of a small, static object, conveying a sense of brief, unconfirmed movement.",
+        "prompt_visual": "A blurred, grainy image of a small, static object, conveying a sense of brief, unconfirmed movement.",
+        "texto_locucion": "Solo un instante. Un mínimo, sutil movimiento.",
+        "pexels_query": "blurred static object"
+      },
+      {
+        "id": 4,
+        "prompt": "A dark, empty room with a single, ordinary object (e.g., a chair) slightly askew, suggesting cognitive dissonance.",
+        "prompt_visual": "A dark, empty room with a single, ordinary object (e.g., a chair) slightly askew, suggesting cognitive dissonance.",
+        "texto_locucion": "Tu cerebro lo descartó, es tu imaginación.",
+        "pexels_query": "empty room askew chair"
+      },
+      {
+        "id": 5,
+        "prompt": "A shadowy hallway leading to a door, a palpable sense of unease or unseen presence in the air.",
+        "prompt_visual": "A shadowy hallway leading to a door, a palpable sense of unease or unseen presence in the air.",
+        "texto_locucion": "Pero lo sentiste antes, esa extraña sensación.",
+        "pexels_query": "shadowy hallway presence"
+      },
+      {
+        "id": 6,
+        "prompt": "Close-up of a doll's or figurine's eyes in shadow, appearing to stare directly, unsettling.",
+        "prompt_visual": "Close-up of a doll's or figurine's eyes in shadow, appearing to stare directly, unsettling.",
+        "texto_locucion": "Los ojos de la figura ahora te miraban fijamente.",
+        "pexels_query": "doll eyes shadow stare"
+      },
+      {
+        "id": 7,
+        "prompt": "A figurine on a shelf, turned to face the viewer, a subtle but definitive change.",
+        "prompt_visual": "A figurine on a shelf, turned to face the viewer, a subtle but definitive change.",
+        "texto_locucion": "No podías ignorarlo. Estaba volteada hacia ti.",
+        "pexels_query": "figurine turned shelf"
+      },
+      {
+        "id": 8,
+        "prompt": "A lone, isolated object in a vast, dark space, emphasizing the personal, unshared experience.",
+        "prompt_visual": "A lone, isolated object in a vast, dark space, emphasizing the personal, unshared experience.",
+        "texto_locucion": "Nadie lo vio. Nadie más podía entenderlo.",
+        "pexels_query": "isolated object dark room"
+      },
+      {
+        "id": 9,
+        "prompt": "A slightly out-of-focus collection of figurines, implying observation from a distance.",
+        "prompt_visual": "A slightly out-of-focus collection of figurines, implying observation from a distance.",
+        "texto_locucion": "Comenzaste a vigilarlas sin que se dieran cuenta.",
+        "pexels_query": "figurines out of focus"
+      },
+      {
+        "id": 10,
+        "prompt": "A series of objects on a nightstand, one slightly moved or rotated from its original position.",
+        "prompt_visual": "A series of objects on a nightstand, one slightly moved or rotated from its original position.",
+        "texto_locucion": "Pequeños giros, ligeros desplazamientos de noche.",
+        "pexels_query": "nightstand objects moved"
+      },
+      {
+        "id": 11,
+        "prompt": "A wide shot of a bedroom, all objects perfectly still, creating a deceptive sense of calm.",
+        "prompt_visual": "A wide shot of a bedroom, all objects perfectly still, creating a deceptive sense of calm.",
+        "texto_locucion": "Cuando entrabas al cuarto, siempre estaban quietas.",
+        "pexels_query": "still bedroom objects"
+      },
+      {
+        "id": 12,
+        "prompt": "A cold, misty breath against a dark window, conveying an unnatural chill.",
+        "prompt_visual": "A cold, misty breath against a dark window, conveying an unnatural chill.",
+        "texto_locucion": "Algo en el aire pesaba, una presencia gélida.",
+        "pexels_query": "cold breath window"
+      },
+      {
+        "id": 13,
+        "prompt": "A desolate, quiet room with faint light, the emptiness itself feels heavy.",
+        "prompt_visual": "A desolate, quiet room with faint light, the emptiness itself feels heavy.",
+        "texto_locucion": "El silencio absoluto llenaba la habitación vacía.",
+        "pexels_query": "desolate quiet room"
+      },
+      {
+        "id": 14,
+        "prompt": "A dark corner of a room, a subtle shadow suggesting an unseen form.",
+        "prompt_visual": "A dark corner of a room, a subtle shadow suggesting an unseen form.",
+        "texto_locucion": "Tú sabías que no estabas solo en esa casa.",
+        "pexels_query": "dark corner shadow presence"
+      },
+      {
+        "id": 15,
+        "prompt": "A collection of ordinary, static objects, but with an underlying tension.",
+        "prompt_visual": "A collection of ordinary, static objects, but with an underlying tension.",
+        "texto_locucion": "Pero eran solo objetos inanimados. ¿Verdad?",
+        "pexels_query": "static objects tension"
+      },
+      {
+        "id": 16,
+        "prompt": "A single figurine placed in an unusual, unexpected spot, like the middle of a floor.",
+        "prompt_visual": "A single figurine placed in an unusual, unexpected spot, like the middle of a floor.",
+        "texto_locucion": "Un día, una de ellas, estaba en otro sitio.",
+        "pexels_query": "figurine floor unexpected"
+      },
+      {
+        "id": 17,
+        "prompt": "A small object on the floor next to a bed, unsettlingly close.",
+        "prompt_visual": "A small object on the floor next to a bed, unsettlingly close.",
+        "texto_locucion": "Fuera del estante. Justo frente a tu cama.",
+        "pexels_query": "object beside bed floor"
+      },
+      {
+        "id": 18,
+        "prompt": "Close-up of a figurine's head, turned upwards towards an unseen, dark ceiling.",
+        "prompt_visual": "Close-up of a figurine's head, turned upwards towards an unseen, dark ceiling.",
+        "texto_locucion": "Su cabeza girada. Mirando hacia el techo oscuro.",
+        "pexels_query": "figurine head looking up"
+      },
+      {
+        "id": 19,
+        "prompt": "Grainy texture, a sense of cold, a subtle shiver visually implied by distortion.",
+        "prompt_visual": "Grainy texture, a sense of cold, a subtle shiver visually implied by distortion.",
+        "texto_locucion": "Sentiste un escalofrío que te recorrió la espalda.",
+        "pexels_query": "cold texture distortion"
+      },
+      {
+        "id": 20,
+        "prompt": "A hand reaching for an object, but hesitating, showing disbelief and fear.",
+        "prompt_visual": "A hand reaching for an object, but hesitating, showing disbelief and fear.",
+        "texto_locucion": "No podías explicarlo. Nadie te creería nunca.",
+        "pexels_query": "hesitant hand object"
+      },
+      {
+        "id": 21,
+        "prompt": "Hands carefully placing figurines back on a shelf in a dimly lit room.",
+        "prompt_visual": "Hands carefully placing figurines back on a shelf in a dimly lit room.",
+        "texto_locucion": "Cada noche, las colocabas en su lugar.",
+        "pexels_query": "placing figurines shelf"
+      },
+      {
+        "id": 22,
+        "prompt": "A morning light revealing a displaced object on a bedside table.",
+        "prompt_visual": "A morning light revealing a displaced object on a bedside table.",
+        "texto_locucion": "Cada mañana, encontrabas alguna movida de nuevo.",
+        "pexels_query": "morning light displaced object"
+      },
+      {
+        "id": 23,
+        "prompt": "Eyes peering from deep shadow, pareidolia in the shape of faces within dark corners.",
+        "prompt_visual": "Eyes peering from deep shadow, pareidolia in the shape of faces within dark corners.",
+        "texto_locucion": "Observándote. Desde la oscuridad. Siempre esperando.",
+        "pexels_query": "eyes shadow pareidolia"
+      },
+      {
+        "id": 24,
+        "prompt": "A long, empty corridor stretching into darkness, implying an endless, ongoing situation.",
+        "prompt_visual": "A long, empty corridor stretching into darkness, implying an endless, ongoing situation.",
+        "texto_locucion": "¿Cuánto tiempo llevaban haciendo esto contigo?",
+        "pexels_query": "empty corridor darkness"
+      },
+      {
+        "id": 25,
+        "prompt": "A collection of identical, blank-faced objects, implying collective, silent observation.",
+        "prompt_visual": "A collection of identical, blank-faced objects, implying collective, silent observation.",
+        "texto_locucion": "Se acostumbran a verte. Aprenden de tus rutinas.",
+        "pexels_query": "identical blank objects"
+      },
+      {
+        "id": 26,
+        "prompt": "A shadowy hand reaching out from behind a collection of figurines, subtly taking control.",
+        "prompt_visual": "A shadowy hand reaching out from behind a collection of figurines, subtly taking control.",
+        "texto_locucion": "Tus objetos, tus posesiones. Ahora, ellos te poseen.",
+        "pexels_query": "shadowy hand figurines"
+      },
+      {
+        "id": 27,
+        "prompt": "A distorted reflection in a dark window, suggesting an unseen presence watching.",
+        "prompt_visual": "A distorted reflection in a dark window, suggesting an unseen presence watching.",
+        "texto_locucion": "Ellos están ahí. Viendo todo. Incluso ahora mismo.",
+        "pexels_query": "distorted reflection window"
+      },
+      {
+        "id": 28,
+        "prompt": "An ordinary, innocent child's toy, casting a long, sinister shadow.",
+        "prompt_visual": "An ordinary, innocent child's toy, casting a long, sinister shadow.",
+        "texto_locucion": "Podrían ser tus propios objetos. Tus juguetes.",
+        "pexels_query": "child toy sinister shadow"
+      },
+      {
+        "id": 29,
+        "prompt": "A door slightly ajar in a dark room, a sliver of light revealing an ambiguous, lurking shape within.",
+        "prompt_visual": "A door slightly ajar in a dark room, a sliver of light revealing an ambiguous, lurking shape within.",
+        "texto_locucion": "Ellos esperan a que no estés mirando.",
+        "pexels_query": "door ajar dark shape"
+      }
+    ],
+    "hooks": [
+      "Tus objetos te observan.",
+      "Ellos saben cuándo no miras.",
+      "Silencio. Pero estás acompañado."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
