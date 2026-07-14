@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "78608738-b9ef-4705-a624-dcc023ebef27",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"dark hallway, light under a closed door, unsettling stillness, old film texture, chiaroscuro\", \"prompt_visual\": \"dark hallway, light under a closed door, unsettling stillness, old film texture, chiaroscuro\", \"texto_locucion\": \"Si miras esto solo, quizá no debas continuar ahora mismo.\", \"pexels_query\": \"dark hallway door\"}, {\"id\": 2, \"prompt\": \"old smartphone screen, glitching static, dark room, single eye reflection\", \"prompt_visual\": \"old smartphone screen, glitching static, dark room, single eye reflection\", \"texto_locucion\": \"Hay imágenes que no puedes borrar.\", \"pexels_query\": \"glitch phone screen\"}, {\"id\": 3, \"prompt\": \"distorted digital static, spectral humanoid silhouette emerging, chiaroscuro\", \"prompt_visual\": \"distorted digital static, spectral humanoid silhouette emerging, chiaroscuro\", \"texto_locucion\": \"No son \\\"fantasmas\\\" captados en cámara.\", \"pexels_query\": \"digital static ghost\"}, {\"id\": 4, \"prompt\": \"faint shadow on a wall, subtle movement, empty room, vintage photo grain\", \"prompt_visual\": \"faint shadow on a wall, subtle movement, empty room, vintage photo grain\", \"texto_locucion\": \"Es algo mucho más sutil y real.\", \"pexels_query\": \"subtle shadow wall\"}, {\"id\": 5, \"prompt\": \"empty living room, dust motes in a single light beam, unsettling tranquility, blurred edges\", \"prompt_visual\": \"empty living room, dust motes in a single light beam, unsettling tranquility, blurred edges\", \"texto_locucion\": \"Algo que habita en tu propia casa.\", \"pexels_query\": \"empty living room\"}, {\"id\": 6, \"prompt\": \"stack of old printed photos, one photo slightly askew, dark, grainy filter\", \"prompt_visual\": \"stack of old printed photos, one photo slightly askew, dark, grainy filter\", \"texto_locucion\": \"En tus fotos, tus videos viejos.\", \"pexels_query\": \"old photo stack\"}, {\"id\": 7, \"prompt\": \"blurry eyes in dark, fragmented vision, sense of awakening, cold colors\", \"prompt_visual\": \"blurry eyes in dark, fragmented vision, sense of awakening, cold colors\", \"texto_locucion\": \"Solo necesitas aprender a ver.\", \"pexels_query\": \"blurry eyes dark\"}, {\"id\": 8, \"prompt\": \"elongated shadow on a street, no source visible, dusk, desaturated street\", \"prompt_visual\": \"elongated shadow on a street, no source visible, dusk, desaturated street\", \"texto_locucion\": \"A veces, parece una sombra distante.\", \"pexels_query\": \"elongated street shadow\"}, {\"id\": 9, \"prompt\": \"mirror reflecting an empty room, faint, distorted figure in background, cracked glass effect\", \"prompt_visual\": \"mirror reflecting an empty room, faint, distorted figure in background, cracked glass effect\", \"texto_locucion\": \"Un reflejo que no debería estar ahí.\", \"pexels_query\": \"distorted mirror reflection\"}, {\"id\": 10, \"prompt\": \"distant, indistinct humanoid shape, dark forest edge, misty atmosphere, subtle presence\", \"prompt_visual\": \"distant, indistinct humanoid shape, dark forest edge, misty atmosphere, subtle presence\", \"texto_locucion\": \"O una figura borrosa en el fondo.\", \"pexels_query\": \"blurry figure forest\"}, {\"id\": 11, \"prompt\": \"everyday object, slightly out of place, e.g., chair facing wall, dark room, eerie silence\", \"prompt_visual\": \"everyday object, slightly out of place, e.g., chair facing wall, dark room, eerie silence\", \"texto_locucion\": \"Lo notas. Algo no está bien, ¿cierto?\", \"pexels_query\": \"chair facing wall\"}, {\"id\": 12, \"prompt\": \"empty bed, crumpled sheets, distinct indentation, heavy darkness, blue tint\", \"prompt_visual\": \"empty bed, crumpled sheets, distinct indentation, heavy darkness, blue tint\", \"texto_locucion\": \"Esa sensación de que no estabas solo.\", \"pexels_query\": \"empty bed indentation\"}, {\"id\": 13, \"prompt\": \"pair of glowing red eyes in deep darkness, barely visible, intense stare\", \"prompt_visual\": \"pair of glowing red eyes in deep darkness, barely visible, intense stare\", \"texto_locucion\": \"Como si una presencia te observara.\", \"pexels_query\": \"red eyes darkness\"}, {\"id\": 14, \"prompt\": \"sound-dampening room, heavy curtains, utterly quiet, feeling of immense pressure\", \"prompt_visual\": \"sound-dampening room, heavy curtains, utterly quiet, feeling of immense pressure\", \"texto_locucion\": \"En un momento de silencio absoluto.\", \"pexels_query\": \"quiet soundproof room\"}, {\"id\": 15, \"prompt\": \"hallway corner, deep shadow, feeling of being watched from unseen spot, granular texture\", \"prompt_visual\": \"hallway corner, deep shadow, feeling of being watched from unseen spot, granular texture\", \"texto_locucion\": \"Cuando nadie más podía verte, ¿verdad?\", \"pexels_query\": \"dark hallway corner\"}, {\"id\": 16, \"prompt\": \"old VHS camera viewfinder, static, subtle movement in frame, desaturated colors\", \"prompt_visual\": \"old VHS camera viewfinder, static, subtle movement in frame, desaturated colors\", \"texto_locucion\": \"Y tu cámara lo grabó todo.\", \"pexels_query\": \"VHS camera viewfinder\"}, {\"id\": 17, \"prompt\": \"blurry out-of-focus background, main subject clear but unsettling detail behind it\", \"prompt_visual\": \"blurry out-of-focus background, main subject clear but unsettling detail behind it\", \"texto_locucion\": \"Pero tú no lo viste entonces.\", \"pexels_query\": \"blurry background detail\"}, {\"id\": 18, \"prompt\": \"person's hand holding old smartphone, scrolling through photos, faint light on face\", \"prompt_visual\": \"person's hand holding old smartphone, scrolling through photos, faint light on face\", \"texto_locucion\": \"Hasta que revisaste el metraje con calma.\", \"pexels_query\": \"scrolling phone photos\"}, {\"id\": 19, \"prompt\": \"wall with a hairline crack, expanding subtly, surreal, dark light\", \"prompt_visual\": \"wall with a hairline crack, expanding subtly, surreal, dark light\", \"texto_locucion\": \"Y esa grieta en la realidad apareció.\", \"pexels_query\": \"wall crack dark\"}, {\"id\": 20, \"prompt\": \"extreme close-up of a dark corner, a single, unblinking dark eye, almost hidden\", \"prompt_visual\": \"extreme close-up of a dark corner, a single, unblinking dark eye, almost hidden\", \"texto_locucion\": \"Un ojo oscuro en la esquina del cuarto.\", \"pexels_query\": \"dark corner eye\"}, {\"id\": 21, \"prompt\": \"steamy bathroom mirror, vague, indistinct human-like face, unsettling, low light\", \"prompt_visual\": \"steamy bathroom mirror, vague, indistinct human-like face, unsettling, low light\", \"texto_locucion\": \"Un rostro difuso en el espejo empañado.\", \"pexels_query\": \"foggy mirror face\"}, {\"id\": 22, \"prompt\": \"long, thin shadow figure standing directly behind a person's silhouette, deep contrast\", \"prompt_visual\": \"long, thin shadow figure standing directly behind a person's silhouette, deep contrast\", \"texto_locucion\": \"Una figura alta detrás de tu silueta.\", \"pexels_query\": \"shadow behind silhouette\"}, {\"id\": 23, \"prompt\": \"hand pointing at a small, unexplainable anomaly in a photo on a screen, dark\", \"prompt_visual\": \"hand pointing at a small, unexplainable anomaly in a photo on a screen, dark\", \"texto_locucion\": \"Lo sentiste antes. Ahora tienes pruebas.\", \"pexels_query\": \"hand pointing photo\"}, {\"id\": 24, \"prompt\": \"single eye wide open in darkness, intense focus, isolation, blue tint\", \"prompt_visual\": \"single eye wide open in darkness, intense focus, isolation, blue tint\", \"texto_locucion\": \"Pero nadie lo vio, solo tu.\", \"pexels_query\": \"single eye dark\"}, {\"id\": 25, \"prompt\": \"phone screen displaying a loop of the unsettling anomaly, close up, obsessive gaze\", \"prompt_visual\": \"phone screen displaying a loop of the unsettling anomaly, close up, obsessive gaze\", \"texto_locucion\": \"Y ahora no puedes ignorarlo más.\", \"pexels_query\": \"phone loop anomaly\"}, {\"id\": 26, \"prompt\": \"collage of dark, distorted, fragmented images, overwhelming, anxious feeling\", \"prompt_visual\": \"collage of dark, distorted, fragmented images, overwhelming, anxious feeling\", \"texto_locucion\": \"Cada foto, cada video te persigue.\", \"pexels_query\": \"distorted image collage\"}, {\"id\": 27, \"prompt\": \"lens of a smartphone camera, reflecting nothing, but with a subtle, dark glint, mysterious\", \"prompt_visual\": \"lens of a smartphone camera, reflecting nothing, but with a subtle, dark glint, mysterious\", \"texto_locucion\": \"¿Qué más está capturando tu cámara?\", \"pexels_query\": \"phone camera lens\"}, {\"id\": 28, \"prompt\": \"dark room, a tiny, barely visible red light from a camera lens, ominous, unsettling\", \"prompt_visual\": \"dark room, a tiny, barely visible red light from a camera lens, ominous, unsettling\", \"texto_locucion\": \"¿Quién te asegura que ahora mismo no te está grabando?\", \"pexels_query\": \"red camera light dark\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Si miras esto solo, quizá no debas continuar ahora mismo. Hay imágenes que no puedes borrar. No son \"fantasmas\" captados en cámara. Es algo mucho más sutil y real. Algo que habita en tu propia casa. En tus fotos, tus videos viejos. Solo necesitas aprender a ver. A veces, parece una sombra distante. Un reflejo que no debería estar ahí. O una figura borrosa en el fondo. Lo notas. Algo no está bien, ¿cierto? Esa sensación de que no estabas solo. Como si una presencia te observara. En un momento de silencio absoluto. Cuando nadie más podía verte, ¿verdad? Y tu cámara lo grabó todo. Pero tú no lo viste entonces. Hasta que revisaste el metraje con calma. Y esa grieta en la realidad apareció. Un ojo oscuro en la esquina del cuarto. Un rostro difuso en el espejo empañado. Una figura alta detrás de tu silueta. Lo sentiste antes. Ahora tienes pruebas. Pero nadie lo vio, solo tu. Y ahora no puedes ignorarlo más. Cada foto, cada video te persigue. ¿Qué más está capturando tu cámara? ¿Quién te asegura que ahora mismo no te está grabando?",
+    "titulo_sugerido": "Lo Que Tu Cámara Esconde",
+    "escenas_texto": [
+      "Si miras esto solo, quizá no debas continuar ahora mismo.",
+      "Hay imágenes que no puedes borrar.",
+      "No son \"fantasmas\" captados en cámara.",
+      "Es algo mucho más sutil y real.",
+      "Algo que habita en tu propia casa.",
+      "En tus fotos, tus videos viejos.",
+      "Solo necesitas aprender a ver.",
+      "A veces, parece una sombra distante.",
+      "Un reflejo que no debería estar ahí.",
+      "O una figura borrosa en el fondo.",
+      "Lo notas. Algo no está bien, ¿cierto?",
+      "Esa sensación de que no estabas solo.",
+      "Como si una presencia te observara.",
+      "En un momento de silencio absoluto.",
+      "Cuando nadie más podía verte, ¿verdad?",
+      "Y tu cámara lo grabó todo.",
+      "Pero tú no lo viste entonces.",
+      "Hasta que revisaste el metraje con calma.",
+      "Y esa grieta en la realidad apareció.",
+      "Un ojo oscuro en la esquina del cuarto.",
+      "Un rostro difuso en el espejo empañado.",
+      "Una figura alta detrás de tu silueta.",
+      "Lo sentiste antes. Ahora tienes pruebas.",
+      "Pero nadie lo vio, solo tu.",
+      "Y ahora no puedes ignorarlo más.",
+      "Cada foto, cada video te persigue.",
+      "¿Qué más está capturando tu cámara?",
+      "¿Quién te asegura que ahora mismo no te está grabando?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "dark hallway, light under a closed door, unsettling stillness, old film texture, chiaroscuro",
+        "prompt_visual": "dark hallway, light under a closed door, unsettling stillness, old film texture, chiaroscuro",
+        "texto_locucion": "Si miras esto solo, quizá no debas continuar ahora mismo.",
+        "pexels_query": "dark hallway door"
+      },
+      {
+        "id": 2,
+        "prompt": "old smartphone screen, glitching static, dark room, single eye reflection",
+        "prompt_visual": "old smartphone screen, glitching static, dark room, single eye reflection",
+        "texto_locucion": "Hay imágenes que no puedes borrar.",
+        "pexels_query": "glitch phone screen"
+      },
+      {
+        "id": 3,
+        "prompt": "distorted digital static, spectral humanoid silhouette emerging, chiaroscuro",
+        "prompt_visual": "distorted digital static, spectral humanoid silhouette emerging, chiaroscuro",
+        "texto_locucion": "No son \"fantasmas\" captados en cámara.",
+        "pexels_query": "digital static ghost"
+      },
+      {
+        "id": 4,
+        "prompt": "faint shadow on a wall, subtle movement, empty room, vintage photo grain",
+        "prompt_visual": "faint shadow on a wall, subtle movement, empty room, vintage photo grain",
+        "texto_locucion": "Es algo mucho más sutil y real.",
+        "pexels_query": "subtle shadow wall"
+      },
+      {
+        "id": 5,
+        "prompt": "empty living room, dust motes in a single light beam, unsettling tranquility, blurred edges",
+        "prompt_visual": "empty living room, dust motes in a single light beam, unsettling tranquility, blurred edges",
+        "texto_locucion": "Algo que habita en tu propia casa.",
+        "pexels_query": "empty living room"
+      },
+      {
+        "id": 6,
+        "prompt": "stack of old printed photos, one photo slightly askew, dark, grainy filter",
+        "prompt_visual": "stack of old printed photos, one photo slightly askew, dark, grainy filter",
+        "texto_locucion": "En tus fotos, tus videos viejos.",
+        "pexels_query": "old photo stack"
+      },
+      {
+        "id": 7,
+        "prompt": "blurry eyes in dark, fragmented vision, sense of awakening, cold colors",
+        "prompt_visual": "blurry eyes in dark, fragmented vision, sense of awakening, cold colors",
+        "texto_locucion": "Solo necesitas aprender a ver.",
+        "pexels_query": "blurry eyes dark"
+      },
+      {
+        "id": 8,
+        "prompt": "elongated shadow on a street, no source visible, dusk, desaturated street",
+        "prompt_visual": "elongated shadow on a street, no source visible, dusk, desaturated street",
+        "texto_locucion": "A veces, parece una sombra distante.",
+        "pexels_query": "elongated street shadow"
+      },
+      {
+        "id": 9,
+        "prompt": "mirror reflecting an empty room, faint, distorted figure in background, cracked glass effect",
+        "prompt_visual": "mirror reflecting an empty room, faint, distorted figure in background, cracked glass effect",
+        "texto_locucion": "Un reflejo que no debería estar ahí.",
+        "pexels_query": "distorted mirror reflection"
+      },
+      {
+        "id": 10,
+        "prompt": "distant, indistinct humanoid shape, dark forest edge, misty atmosphere, subtle presence",
+        "prompt_visual": "distant, indistinct humanoid shape, dark forest edge, misty atmosphere, subtle presence",
+        "texto_locucion": "O una figura borrosa en el fondo.",
+        "pexels_query": "blurry figure forest"
+      },
+      {
+        "id": 11,
+        "prompt": "everyday object, slightly out of place, e.g., chair facing wall, dark room, eerie silence",
+        "prompt_visual": "everyday object, slightly out of place, e.g., chair facing wall, dark room, eerie silence",
+        "texto_locucion": "Lo notas. Algo no está bien, ¿cierto?",
+        "pexels_query": "chair facing wall"
+      },
+      {
+        "id": 12,
+        "prompt": "empty bed, crumpled sheets, distinct indentation, heavy darkness, blue tint",
+        "prompt_visual": "empty bed, crumpled sheets, distinct indentation, heavy darkness, blue tint",
+        "texto_locucion": "Esa sensación de que no estabas solo.",
+        "pexels_query": "empty bed indentation"
+      },
+      {
+        "id": 13,
+        "prompt": "pair of glowing red eyes in deep darkness, barely visible, intense stare",
+        "prompt_visual": "pair of glowing red eyes in deep darkness, barely visible, intense stare",
+        "texto_locucion": "Como si una presencia te observara.",
+        "pexels_query": "red eyes darkness"
+      },
+      {
+        "id": 14,
+        "prompt": "sound-dampening room, heavy curtains, utterly quiet, feeling of immense pressure",
+        "prompt_visual": "sound-dampening room, heavy curtains, utterly quiet, feeling of immense pressure",
+        "texto_locucion": "En un momento de silencio absoluto.",
+        "pexels_query": "quiet soundproof room"
+      },
+      {
+        "id": 15,
+        "prompt": "hallway corner, deep shadow, feeling of being watched from unseen spot, granular texture",
+        "prompt_visual": "hallway corner, deep shadow, feeling of being watched from unseen spot, granular texture",
+        "texto_locucion": "Cuando nadie más podía verte, ¿verdad?",
+        "pexels_query": "dark hallway corner"
+      },
+      {
+        "id": 16,
+        "prompt": "old VHS camera viewfinder, static, subtle movement in frame, desaturated colors",
+        "prompt_visual": "old VHS camera viewfinder, static, subtle movement in frame, desaturated colors",
+        "texto_locucion": "Y tu cámara lo grabó todo.",
+        "pexels_query": "VHS camera viewfinder"
+      },
+      {
+        "id": 17,
+        "prompt": "blurry out-of-focus background, main subject clear but unsettling detail behind it",
+        "prompt_visual": "blurry out-of-focus background, main subject clear but unsettling detail behind it",
+        "texto_locucion": "Pero tú no lo viste entonces.",
+        "pexels_query": "blurry background detail"
+      },
+      {
+        "id": 18,
+        "prompt": "person's hand holding old smartphone, scrolling through photos, faint light on face",
+        "prompt_visual": "person's hand holding old smartphone, scrolling through photos, faint light on face",
+        "texto_locucion": "Hasta que revisaste el metraje con calma.",
+        "pexels_query": "scrolling phone photos"
+      },
+      {
+        "id": 19,
+        "prompt": "wall with a hairline crack, expanding subtly, surreal, dark light",
+        "prompt_visual": "wall with a hairline crack, expanding subtly, surreal, dark light",
+        "texto_locucion": "Y esa grieta en la realidad apareció.",
+        "pexels_query": "wall crack dark"
+      },
+      {
+        "id": 20,
+        "prompt": "extreme close-up of a dark corner, a single, unblinking dark eye, almost hidden",
+        "prompt_visual": "extreme close-up of a dark corner, a single, unblinking dark eye, almost hidden",
+        "texto_locucion": "Un ojo oscuro en la esquina del cuarto.",
+        "pexels_query": "dark corner eye"
+      },
+      {
+        "id": 21,
+        "prompt": "steamy bathroom mirror, vague, indistinct human-like face, unsettling, low light",
+        "prompt_visual": "steamy bathroom mirror, vague, indistinct human-like face, unsettling, low light",
+        "texto_locucion": "Un rostro difuso en el espejo empañado.",
+        "pexels_query": "foggy mirror face"
+      },
+      {
+        "id": 22,
+        "prompt": "long, thin shadow figure standing directly behind a person's silhouette, deep contrast",
+        "prompt_visual": "long, thin shadow figure standing directly behind a person's silhouette, deep contrast",
+        "texto_locucion": "Una figura alta detrás de tu silueta.",
+        "pexels_query": "shadow behind silhouette"
+      },
+      {
+        "id": 23,
+        "prompt": "hand pointing at a small, unexplainable anomaly in a photo on a screen, dark",
+        "prompt_visual": "hand pointing at a small, unexplainable anomaly in a photo on a screen, dark",
+        "texto_locucion": "Lo sentiste antes. Ahora tienes pruebas.",
+        "pexels_query": "hand pointing photo"
+      },
+      {
+        "id": 24,
+        "prompt": "single eye wide open in darkness, intense focus, isolation, blue tint",
+        "prompt_visual": "single eye wide open in darkness, intense focus, isolation, blue tint",
+        "texto_locucion": "Pero nadie lo vio, solo tu.",
+        "pexels_query": "single eye dark"
+      },
+      {
+        "id": 25,
+        "prompt": "phone screen displaying a loop of the unsettling anomaly, close up, obsessive gaze",
+        "prompt_visual": "phone screen displaying a loop of the unsettling anomaly, close up, obsessive gaze",
+        "texto_locucion": "Y ahora no puedes ignorarlo más.",
+        "pexels_query": "phone loop anomaly"
+      },
+      {
+        "id": 26,
+        "prompt": "collage of dark, distorted, fragmented images, overwhelming, anxious feeling",
+        "prompt_visual": "collage of dark, distorted, fragmented images, overwhelming, anxious feeling",
+        "texto_locucion": "Cada foto, cada video te persigue.",
+        "pexels_query": "distorted image collage"
+      },
+      {
+        "id": 27,
+        "prompt": "lens of a smartphone camera, reflecting nothing, but with a subtle, dark glint, mysterious",
+        "prompt_visual": "lens of a smartphone camera, reflecting nothing, but with a subtle, dark glint, mysterious",
+        "texto_locucion": "¿Qué más está capturando tu cámara?",
+        "pexels_query": "phone camera lens"
+      },
+      {
+        "id": 28,
+        "prompt": "dark room, a tiny, barely visible red light from a camera lens, ominous, unsettling",
+        "prompt_visual": "dark room, a tiny, barely visible red light from a camera lens, ominous, unsettling",
+        "texto_locucion": "¿Quién te asegura que ahora mismo no te está grabando?",
+        "pexels_query": "red camera light dark"
+      }
+    ],
+    "hooks": [
+      "Tu celular te observa.",
+      "Algo se mueve ahí.",
+      "¿Estás realmente solo?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
