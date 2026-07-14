@@ -22,6 +22,13 @@ except Exception:
 import os, json, time, requests
 from datetime import datetime, timezone, timedelta
 
+# ═══════════════════════════════════════════════════════════════════
+VERSION_ORQUESTADOR = "2026-06-30_R2"   # anti-video-vacio + reintentos + robustez
+# ═══════════════════════════════════════════════════════════════════
+print("=" * 60)
+print(f"  ORQUESTADOR DE LOTE — {VERSION_ORQUESTADOR}")
+print("=" * 60)
+
 RENDER_URL = "https://prompt-engineer-system-l2r6.onrender.com"
 TZ_MEXICO = timezone(timedelta(hours=-6))
 CARPETA_ESTADO = r"C:\NODO_PINPINELA\estado_lote"
@@ -42,7 +49,15 @@ NODOS = {"sd": f"http://{IP_GRAFICA}:7861/sdapi/v1/options", "voz": f"http://{IP
 def leer_lote():
     try:
         with open(ARCHIVO_LOTE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            lote = json.load(f)
+        # ROBUSTEZ: recuperar videos atascados "en_proceso" sin tarea_id (quedaron
+        # a medias por un reinicio/error). Se vuelven a poner "pendiente" para que
+        # el orquestador los relance (así NO se queda trabado sin mandar la orden).
+        if lote and isinstance(lote.get("trabajos"), list):
+            for t in lote["trabajos"]:
+                if t.get("estado") == "en_proceso" and not t.get("tarea_id"):
+                    t["estado"] = "pendiente"
+        return lote
     except Exception:
         return None
 
