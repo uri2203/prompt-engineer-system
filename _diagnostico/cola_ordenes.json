@@ -1213,5 +1213,224 @@
       "Silencio. Pero estás acompañado."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "0867583d-e798-422f-a234-5a7eaf428ca5",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"dimly lit family photo, faces obscured by deep shadow, unsettling contrast, grainy texture\", \"prompt_visual\": \"dimly lit family photo, faces obscured by deep shadow, unsettling contrast, grainy texture\", \"texto_locucion\": \"Un día miraste a tu madre de forma diferente.\", \"pexels_query\": \"shadow family photo\"}, {\"id\": 2, \"prompt\": \"empty armchair in a dark living room, a single muted light source, long shadows\", \"prompt_visual\": \"empty armchair in a dark living room, a single muted light source, long shadows\", \"texto_locucion\": \"Notaste sus silencios. Eran más largos.\", \"pexels_query\": \"empty armchair dark\"}, {\"id\": 3, \"prompt\": \"cracked wall in a dark, desolate room, a faint, inexplicable stain, deep shadows\", \"prompt_visual\": \"cracked wall in a dark, desolate room, a faint, inexplicable stain, deep shadows\", \"texto_locucion\": \"Ella observaba las paredes. Sin decir nada.\", \"pexels_query\": \"cracked dark wall\"}, {\"id\": 4, \"prompt\": \"closed bedroom door, faint light bleeding from underneath, distorted shadow by the frame\", \"prompt_visual\": \"closed bedroom door, faint light bleeding from underneath, distorted shadow by the frame\", \"texto_locucion\": \"Susurros en su habitación, cuando estaba sola.\", \"pexels_query\": \"closed bedroom door shadow\"}, {\"id\": 5, \"prompt\": \"dark corner of a room, a subtle, almost imperceptible distortion in the air, barely visible\", \"prompt_visual\": \"dark corner of a room, a subtle, almost imperceptible distortion in the air, barely visible\", \"texto_locucion\": \"Pensaste: ¿habla con alguien invisible?\", \"pexels_query\": \"dark room distortion\"}, {\"id\": 6, \"prompt\": \"small, dried, unidentifiable plants on a dusty windowsill, deep, unsettling shadows, desaturated colors\", \"prompt_visual\": \"small, dried, unidentifiable plants on a dusty windowsill, deep, unsettling shadows, desaturated colors\", \"texto_locucion\": \"Olor a tierra mojada, a hierbas secas.\", \"pexels_query\": \"dried plants windowsill\"}, {\"id\": 7, \"prompt\": \"an open window in a dark room, a single, unsettling gust of wind moving a curtain ominously\", \"prompt_visual\": \"an open window in a dark room, a single, unsettling gust of wind moving a curtain ominously\", \"texto_locucion\": \"A veces, lo sentías tú también.\", \"pexels_query\": \"curtain wind dark\"}, {\"id\": 8, \"prompt\": \"long, distorted shadow stretching across a hallway floor, originating from an unseen source, low angle\", \"prompt_visual\": \"long, distorted shadow stretching across a hallway floor, originating from an unseen source, low angle\", \"texto_locucion\": \"Una presencia. No estabas solo en casa.\", \"pexels_query\": \"distorted hallway shadow\"}, {\"id\": 9, \"prompt\": \"antique mirror reflecting a distorted, empty space, heavy darkness, cracked glass texture\", \"prompt_visual\": \"antique mirror reflecting a distorted, empty space, heavy darkness, cracked glass texture\", \"texto_locucion\": \"Tu propia madre, ¿es un misterio?\", \"pexels_query\": \"antique distorted mirror\"}, {\"id\": 10, \"prompt\": \"a single, ordinary teacup slightly off-center on a table, creating a sense of subtle unease\", \"prompt_visual\": \"a single, ordinary teacup slightly off-center on a table, creating a sense of subtle unease\", \"texto_locucion\": \"Pequeños objetos cambiaban de lugar.\", \"pexels_query\": \"teacup off-center\"}, {\"id\": 11, \"prompt\": \"a pattern on a wallpaper that seems to form a fleeting, menacing face (pareidolia), dark, high contrast\", \"prompt_visual\": \"a pattern on a wallpaper that seems to form a fleeting, menacing face (pareidolia), dark, high contrast\", \"texto_locucion\": \"Cosas que nadie más veía. Solo tú.\", \"pexels_query\": \"wallpaper pareidolia face\"}, {\"id\": 12, \"prompt\": \"a closed, almost smiling mouth in deep shadow, part of an obscured face, unsettling grin\", \"prompt_visual\": \"a closed, almost smiling mouth in deep shadow, part of an obscured face, unsettling grin\", \"texto_locucion\": \"Ella sonreía. Una sonrisa que no conocías.\", \"pexels_query\": \"shadowed smiling mouth\"}, {\"id\": 13, \"prompt\": \"two indistinct, glowing points of light in a deep dark background, resembling eyes in shadow, menacing\", \"prompt_visual\": \"two indistinct, glowing points of light in a deep dark background, resembling eyes in shadow, menacing\", \"texto_locucion\": \"¿Recuerdas sus ojos? Ahora son distintos.\", \"pexels_query\": \"glowing eyes dark\"}, {\"id\": 14, \"prompt\": \"frost forming on the inside of a window pane, despite the room's warmth, dark, mysterious\", \"prompt_visual\": \"frost forming on the inside of a window pane, despite the room's warmth, dark, mysterious\", \"texto_locucion\": \"Lo sentiste antes, un frío repentino.\", \"pexels_query\": \"frost window inside\"}, {\"id\": 15, \"prompt\": \"a half-open drawer, revealing only darkness inside, a subtle glint of something metallic, eerie\", \"prompt_visual\": \"a half-open drawer, revealing only darkness inside, a subtle glint of something metallic, eerie\", \"texto_locucion\": \"Algo no está bien. Lo sabes, ¿verdad?\", \"pexels_query\": \"half-open dark drawer\"}, {\"id\": 16, \"prompt\": \"an old, bubbling pot on a stove, dark, viscous liquid, steam rising ominously, deep shadows\", \"prompt_visual\": \"an old, bubbling pot on a stove, dark, viscous liquid, steam rising ominously, deep shadows\", \"texto_locucion\": \"Ella cocinaba. Pero no era comida normal.\", \"pexels_query\": \"bubbling dark pot\"}, {\"id\": 17, \"prompt\": \"small, rough-hewn wooden figurine, vaguely humanoid, placed on a dusty shelf, unsettling form\", \"prompt_visual\": \"small, rough-hewn wooden figurine, vaguely humanoid, placed on a dusty shelf, unsettling form\", \"texto_locucion\": \"Extrañas figuras. Talladas en madera vieja.\", \"pexels_query\": \"wooden humanoid figurine\"}, {\"id\": 18, \"prompt\": \"a small, dark corner of a room, a single, unidentifiable object partially hidden, creating mystery\", \"prompt_visual\": \"a small, dark corner of a room, a single, unidentifiable object partially hidden, creating mystery\", \"texto_locucion\": \"Nadíe lo vio. Solo tus ojos curiosos.\", \"pexels_query\": \"hidden object dark corner\"}, {\"id\": 19, \"prompt\": \"overgrown, tangled thorny bushes pressing against a dark window from outside, menacing nature\", \"prompt_visual\": \"overgrown, tangled thorny bushes pressing against a dark window from outside, menacing nature\", \"texto_locucion\": \"El jardín crecía salvaje. Demasiado rápido.\", \"pexels_query\": \"overgrown thorny bushes window\"}, {\"id\": 20, \"prompt\": \"shadowed, gnarled hands making a complex, unreadable gesture, out of focus, ancient look\", \"prompt_visual\": \"shadowed, gnarled hands making a complex, unreadable gesture, out of focus, ancient look\", \"texto_locucion\": \"Sus manos. Hacían gestos que no entendías.\", \"pexels_query\": \"gnarled hands gesture\"}, {\"id\": 21, \"prompt\": \"a long, empty, silent hallway, a sense of being watched from the dark end, chilling atmosphere\", \"prompt_visual\": \"a long, empty, silent hallway, a sense of being watched from the dark end, chilling atmosphere\", \"texto_locucion\": \"El silencio absoluto. Cuando ella te miraba.\", \"pexels_query\": \"empty silent hallway\"}, {\"id\": 22, \"prompt\": \"a familiar room, but everything is slightly shifted, creating an unsettling feeling of 'wrongness', distorted perspective\", \"prompt_visual\": \"a familiar room, but everything is slightly shifted, creating an unsettling feeling of 'wrongness', distorted perspective\", \"texto_locucion\": \"Después de eso, tu vida cambió.\", \"pexels_query\": \"shifted room wrongness\"}, {\"id\": 23, \"prompt\": \"a dark bedroom, a faint, almost invisible silhouette standing by the foot of the bed, spectral entity\", \"prompt_visual\": \"a dark bedroom, a faint, almost invisible silhouette standing by the foot of the bed, spectral entity\", \"texto_locucion\": \"Esa noche supiste que no estás solo.\", \"pexels_query\": \"dark bedroom silhouette\"}, {\"id\": 24, \"prompt\": \"a single, unlit candle on a table, dark wax dripping, hinting at recent, unseen activity\", \"prompt_visual\": \"a single, unlit candle on a table, dark wax dripping, hinting at recent, unseen activity\", \"texto_locucion\": \"Y ella nunca te lo dirá.\", \"pexels_query\": \"unlit candle dripping wax\"}, {\"id\": 25, \"prompt\": \"a reflection in a dark, still pool of water, showing only distorted shadow where a face should be, unsettling\", \"prompt_visual\": \"a reflection in a dark, still pool of water, showing only distorted shadow where a face should be, unsettling\", \"texto_locucion\": \"¿Y si tú eres el siguiente?\", \"pexels_query\": \"distorted shadow reflection\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Un día miraste a tu madre de forma diferente. Notaste sus silencios. Eran más largos. Ella observaba las paredes. Sin decir nada. Susurros en su habitación, cuando estaba sola. Pensaste: ¿habla con alguien invisible? Olor a tierra mojada, a hierbas secas. A veces, lo sentías tú también. Una presencia. No estabas solo en casa. Tu propia madre, ¿es un misterio? Pequeños objetos cambiaban de lugar. Cosas que nadie más veía. Solo tú. Ella sonreía. Una sonrisa que no conocías. ¿Recuerdas sus ojos? Ahora son distintos. Lo sentiste antes, un frío repentino. Algo no está bien. Lo sabes, ¿verdad? Ella cocinaba. Pero no era comida normal. Extrañas figuras. Talladas en madera vieja. Nadíe lo vio. Solo tus ojos curiosos. El jardín crecía salvaje. Demasiado rápido. Sus manos. Hacían gestos que no entendías. El silencio absoluto. Cuando ella te miraba. Después de eso, tu vida cambió. Esa noche supiste que no estás solo. Y ella nunca te lo dirá. ¿Y si tú eres el siguiente?",
+    "titulo_sugerido": "Cuando tu madre ya no es tu madre",
+    "escenas_texto": [
+      "Un día miraste a tu madre de forma diferente.",
+      "Notaste sus silencios. Eran más largos.",
+      "Ella observaba las paredes. Sin decir nada.",
+      "Susurros en su habitación, cuando estaba sola.",
+      "Pensaste: ¿habla con alguien invisible?",
+      "Olor a tierra mojada, a hierbas secas.",
+      "A veces, lo sentías tú también.",
+      "Una presencia. No estabas solo en casa.",
+      "Tu propia madre, ¿es un misterio?",
+      "Pequeños objetos cambiaban de lugar.",
+      "Cosas que nadie más veía. Solo tú.",
+      "Ella sonreía. Una sonrisa que no conocías.",
+      "¿Recuerdas sus ojos? Ahora son distintos.",
+      "Lo sentiste antes, un frío repentino.",
+      "Algo no está bien. Lo sabes, ¿verdad?",
+      "Ella cocinaba. Pero no era comida normal.",
+      "Extrañas figuras. Talladas en madera vieja.",
+      "Nadíe lo vio. Solo tus ojos curiosos.",
+      "El jardín crecía salvaje. Demasiado rápido.",
+      "Sus manos. Hacían gestos que no entendías.",
+      "El silencio absoluto. Cuando ella te miraba.",
+      "Después de eso, tu vida cambió.",
+      "Esa noche supiste que no estás solo.",
+      "Y ella nunca te lo dirá.",
+      "¿Y si tú eres el siguiente?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "dimly lit family photo, faces obscured by deep shadow, unsettling contrast, grainy texture",
+        "prompt_visual": "dimly lit family photo, faces obscured by deep shadow, unsettling contrast, grainy texture",
+        "texto_locucion": "Un día miraste a tu madre de forma diferente.",
+        "pexels_query": "shadow family photo"
+      },
+      {
+        "id": 2,
+        "prompt": "empty armchair in a dark living room, a single muted light source, long shadows",
+        "prompt_visual": "empty armchair in a dark living room, a single muted light source, long shadows",
+        "texto_locucion": "Notaste sus silencios. Eran más largos.",
+        "pexels_query": "empty armchair dark"
+      },
+      {
+        "id": 3,
+        "prompt": "cracked wall in a dark, desolate room, a faint, inexplicable stain, deep shadows",
+        "prompt_visual": "cracked wall in a dark, desolate room, a faint, inexplicable stain, deep shadows",
+        "texto_locucion": "Ella observaba las paredes. Sin decir nada.",
+        "pexels_query": "cracked dark wall"
+      },
+      {
+        "id": 4,
+        "prompt": "closed bedroom door, faint light bleeding from underneath, distorted shadow by the frame",
+        "prompt_visual": "closed bedroom door, faint light bleeding from underneath, distorted shadow by the frame",
+        "texto_locucion": "Susurros en su habitación, cuando estaba sola.",
+        "pexels_query": "closed bedroom door shadow"
+      },
+      {
+        "id": 5,
+        "prompt": "dark corner of a room, a subtle, almost imperceptible distortion in the air, barely visible",
+        "prompt_visual": "dark corner of a room, a subtle, almost imperceptible distortion in the air, barely visible",
+        "texto_locucion": "Pensaste: ¿habla con alguien invisible?",
+        "pexels_query": "dark room distortion"
+      },
+      {
+        "id": 6,
+        "prompt": "small, dried, unidentifiable plants on a dusty windowsill, deep, unsettling shadows, desaturated colors",
+        "prompt_visual": "small, dried, unidentifiable plants on a dusty windowsill, deep, unsettling shadows, desaturated colors",
+        "texto_locucion": "Olor a tierra mojada, a hierbas secas.",
+        "pexels_query": "dried plants windowsill"
+      },
+      {
+        "id": 7,
+        "prompt": "an open window in a dark room, a single, unsettling gust of wind moving a curtain ominously",
+        "prompt_visual": "an open window in a dark room, a single, unsettling gust of wind moving a curtain ominously",
+        "texto_locucion": "A veces, lo sentías tú también.",
+        "pexels_query": "curtain wind dark"
+      },
+      {
+        "id": 8,
+        "prompt": "long, distorted shadow stretching across a hallway floor, originating from an unseen source, low angle",
+        "prompt_visual": "long, distorted shadow stretching across a hallway floor, originating from an unseen source, low angle",
+        "texto_locucion": "Una presencia. No estabas solo en casa.",
+        "pexels_query": "distorted hallway shadow"
+      },
+      {
+        "id": 9,
+        "prompt": "antique mirror reflecting a distorted, empty space, heavy darkness, cracked glass texture",
+        "prompt_visual": "antique mirror reflecting a distorted, empty space, heavy darkness, cracked glass texture",
+        "texto_locucion": "Tu propia madre, ¿es un misterio?",
+        "pexels_query": "antique distorted mirror"
+      },
+      {
+        "id": 10,
+        "prompt": "a single, ordinary teacup slightly off-center on a table, creating a sense of subtle unease",
+        "prompt_visual": "a single, ordinary teacup slightly off-center on a table, creating a sense of subtle unease",
+        "texto_locucion": "Pequeños objetos cambiaban de lugar.",
+        "pexels_query": "teacup off-center"
+      },
+      {
+        "id": 11,
+        "prompt": "a pattern on a wallpaper that seems to form a fleeting, menacing face (pareidolia), dark, high contrast",
+        "prompt_visual": "a pattern on a wallpaper that seems to form a fleeting, menacing face (pareidolia), dark, high contrast",
+        "texto_locucion": "Cosas que nadie más veía. Solo tú.",
+        "pexels_query": "wallpaper pareidolia face"
+      },
+      {
+        "id": 12,
+        "prompt": "a closed, almost smiling mouth in deep shadow, part of an obscured face, unsettling grin",
+        "prompt_visual": "a closed, almost smiling mouth in deep shadow, part of an obscured face, unsettling grin",
+        "texto_locucion": "Ella sonreía. Una sonrisa que no conocías.",
+        "pexels_query": "shadowed smiling mouth"
+      },
+      {
+        "id": 13,
+        "prompt": "two indistinct, glowing points of light in a deep dark background, resembling eyes in shadow, menacing",
+        "prompt_visual": "two indistinct, glowing points of light in a deep dark background, resembling eyes in shadow, menacing",
+        "texto_locucion": "¿Recuerdas sus ojos? Ahora son distintos.",
+        "pexels_query": "glowing eyes dark"
+      },
+      {
+        "id": 14,
+        "prompt": "frost forming on the inside of a window pane, despite the room's warmth, dark, mysterious",
+        "prompt_visual": "frost forming on the inside of a window pane, despite the room's warmth, dark, mysterious",
+        "texto_locucion": "Lo sentiste antes, un frío repentino.",
+        "pexels_query": "frost window inside"
+      },
+      {
+        "id": 15,
+        "prompt": "a half-open drawer, revealing only darkness inside, a subtle glint of something metallic, eerie",
+        "prompt_visual": "a half-open drawer, revealing only darkness inside, a subtle glint of something metallic, eerie",
+        "texto_locucion": "Algo no está bien. Lo sabes, ¿verdad?",
+        "pexels_query": "half-open dark drawer"
+      },
+      {
+        "id": 16,
+        "prompt": "an old, bubbling pot on a stove, dark, viscous liquid, steam rising ominously, deep shadows",
+        "prompt_visual": "an old, bubbling pot on a stove, dark, viscous liquid, steam rising ominously, deep shadows",
+        "texto_locucion": "Ella cocinaba. Pero no era comida normal.",
+        "pexels_query": "bubbling dark pot"
+      },
+      {
+        "id": 17,
+        "prompt": "small, rough-hewn wooden figurine, vaguely humanoid, placed on a dusty shelf, unsettling form",
+        "prompt_visual": "small, rough-hewn wooden figurine, vaguely humanoid, placed on a dusty shelf, unsettling form",
+        "texto_locucion": "Extrañas figuras. Talladas en madera vieja.",
+        "pexels_query": "wooden humanoid figurine"
+      },
+      {
+        "id": 18,
+        "prompt": "a small, dark corner of a room, a single, unidentifiable object partially hidden, creating mystery",
+        "prompt_visual": "a small, dark corner of a room, a single, unidentifiable object partially hidden, creating mystery",
+        "texto_locucion": "Nadíe lo vio. Solo tus ojos curiosos.",
+        "pexels_query": "hidden object dark corner"
+      },
+      {
+        "id": 19,
+        "prompt": "overgrown, tangled thorny bushes pressing against a dark window from outside, menacing nature",
+        "prompt_visual": "overgrown, tangled thorny bushes pressing against a dark window from outside, menacing nature",
+        "texto_locucion": "El jardín crecía salvaje. Demasiado rápido.",
+        "pexels_query": "overgrown thorny bushes window"
+      },
+      {
+        "id": 20,
+        "prompt": "shadowed, gnarled hands making a complex, unreadable gesture, out of focus, ancient look",
+        "prompt_visual": "shadowed, gnarled hands making a complex, unreadable gesture, out of focus, ancient look",
+        "texto_locucion": "Sus manos. Hacían gestos que no entendías.",
+        "pexels_query": "gnarled hands gesture"
+      },
+      {
+        "id": 21,
+        "prompt": "a long, empty, silent hallway, a sense of being watched from the dark end, chilling atmosphere",
+        "prompt_visual": "a long, empty, silent hallway, a sense of being watched from the dark end, chilling atmosphere",
+        "texto_locucion": "El silencio absoluto. Cuando ella te miraba.",
+        "pexels_query": "empty silent hallway"
+      },
+      {
+        "id": 22,
+        "prompt": "a familiar room, but everything is slightly shifted, creating an unsettling feeling of 'wrongness', distorted perspective",
+        "prompt_visual": "a familiar room, but everything is slightly shifted, creating an unsettling feeling of 'wrongness', distorted perspective",
+        "texto_locucion": "Después de eso, tu vida cambió.",
+        "pexels_query": "shifted room wrongness"
+      },
+      {
+        "id": 23,
+        "prompt": "a dark bedroom, a faint, almost invisible silhouette standing by the foot of the bed, spectral entity",
+        "prompt_visual": "a dark bedroom, a faint, almost invisible silhouette standing by the foot of the bed, spectral entity",
+        "texto_locucion": "Esa noche supiste que no estás solo.",
+        "pexels_query": "dark bedroom silhouette"
+      },
+      {
+        "id": 24,
+        "prompt": "a single, unlit candle on a table, dark wax dripping, hinting at recent, unseen activity",
+        "prompt_visual": "a single, unlit candle on a table, dark wax dripping, hinting at recent, unseen activity",
+        "texto_locucion": "Y ella nunca te lo dirá.",
+        "pexels_query": "unlit candle dripping wax"
+      },
+      {
+        "id": 25,
+        "prompt": "a reflection in a dark, still pool of water, showing only distorted shadow where a face should be, unsettling",
+        "prompt_visual": "a reflection in a dark, still pool of water, showing only distorted shadow where a face should be, unsettling",
+        "texto_locucion": "¿Y si tú eres el siguiente?",
+        "pexels_query": "distorted shadow reflection"
+      }
+    ],
+    "hooks": [
+      "La mirada de mamá.",
+      "Algo no está bien.",
+      "¿Tú eres el siguiente?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
