@@ -1699,5 +1699,232 @@
       "Inflación silenciosa ahora"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "21c99e7d-1829-4ed8-8c93-288291929073",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty border crossing point, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty border crossing point, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que te contaron de México y Colombia no es lo principal.\", \"pexels_query\": \"empty border crossing\"}, {\"id\": 2, \"prompt\": \"Satellite image of South America, showing trade routes, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of South America, showing trade routes, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta disputa oculta movimientos tectónicos en la región.\", \"pexels_query\": \"satellite map south america\"}, {\"id\": 3, \"prompt\": \"Geopolitical map of Latin America, highlighting Mexico and Colombia, aged paper texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map of Latin America, highlighting Mexico and Colombia, aged paper texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Dos potencias latinoamericanas reajustan su tablero.\", \"pexels_query\": \"geopolitical map latin america\"}, {\"id\": 4, \"prompt\": \"Industrial port with stacked containers, empty, dawn light, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial port with stacked containers, empty, dawn light, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Ambos buscan reafirmar su liderazgo económico y político.\", \"pexels_query\": \"industrial port containers\"}, {\"id\": 5, \"prompt\": \"Modern container ship at sea, wide shot, no people on deck, stormy sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern container ship at sea, wide shot, no people on deck, stormy sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"México, primera economía, Colombia clave para el Pacífico.\", \"pexels_query\": \"container ship ocean\"}, {\"id\": 6, \"prompt\": \"Complex power grid station, intricate wiring, abstract view, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Complex power grid station, intricate wiring, abstract view, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La tensión es un síntoma de lucha por influencia.\", \"pexels_query\": \"power grid station\"}, {\"id\": 7, \"prompt\": \"Empty diplomatic conference room, modern design, wide angle, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty diplomatic conference room, modern design, wide angle, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Otros actores regionales observan atentamente el desgaste.\", \"pexels_query\": \"empty conference room diplomacy\"}, {\"id\": 8, \"prompt\": \"Oil refinery at dawn, industrial smoke stacks, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil refinery at dawn, industrial smoke stacks, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Recursos energéticos y corredores comerciales están en juego.\", \"pexels_query\": \"oil refinery industrial\"}, {\"id\": 9, \"prompt\": \"Lighthouse on a rocky coast, powerful waves, dramatic sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Lighthouse on a rocky coast, powerful waves, dramatic sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El control de rutas marítimas es vital para ambos.\", \"pexels_query\": \"lighthouse stormy coast\"}, {\"id\": 10, \"prompt\": \"Empty stock exchange trading floor, rows of monitors, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty stock exchange trading floor, rows of monitors, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Inversión extranjera busca estabilidad, no fricciones políticas.\", \"pexels_query\": \"empty trading floor\"}, {\"id\": 11, \"prompt\": \"Old geopolitical world map, faded colors, red lines indicating historical alliances, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Old geopolitical world map, faded colors, red lines indicating historical alliances, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto podría reconfigurar alianzas políticas en el subcontinente.\", \"pexels_query\": \"old geopolitical world map\"}, {\"id\": 12, \"prompt\": \"Server control room with multiple data screens, glowing light from monitors, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Server control room with multiple data screens, glowing light from monitors, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Grandes potencias analizan este nuevo movimiento táctico.\", \"pexels_query\": \"server control room\"}, {\"id\": 13, \"prompt\": \"Secure data center server racks, cold aisle, blue lights, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Secure data center server racks, cold aisle, blue lights, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen: la verdadera agenda es mucho más profunda.\", \"pexels_query\": \"data center servers\"}, {\"id\": 14, \"prompt\": \"Antique atlas open on a world map, aged pages, focus on historical routes, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Antique atlas open on a world map, aged pages, focus on historical routes, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Históricamente, estas fricciones preceden a cambios mayores.\", \"pexels_query\": \"antique world atlas\"}, {\"id\": 15, \"prompt\": \"Empty news studio set, large screen showing abstract geopolitical graphics, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty news studio set, large screen showing abstract geopolitical graphics, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los medios solo muestran la superficie del conflicto actual.\", \"pexels_query\": \"empty news studio\"}, {\"id\": 16, \"prompt\": \"Close up of a satellite dish array, pointing upwards, clear sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close up of a satellite dish array, pointing upwards, clear sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas: nuestros datos revelan otra perspectiva.\", \"pexels_query\": \"satellite dish array\"}, {\"id\": 17, \"prompt\": \"Logistics hub warehouse, long aisles of shelves, empty forklifts, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Logistics hub warehouse, long aisles of shelves, empty forklifts, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real: el interés es asegurar mercados y logística.\", \"pexels_query\": \"logistics warehouse empty\"}, {\"id\": 18, \"prompt\": \"Empty port crane against a dramatic sky, industrial silhouette, sunset, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty port crane against a dramatic sky, industrial silhouette, sunset, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"América Latina siente esta reconfiguración de poder geopolítico.\", \"pexels_query\": \"port crane industrial\"}, {\"id\": 19, \"prompt\": \"Chess board with pieces, close up, no hands, strategic setup, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Chess board with pieces, close up, no hands, strategic setup, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Movimiento táctico: es ajedrez geopolítico, cada pieza cuenta.\", \"pexels_query\": \"chess board strategy\"}, {\"id\": 20, \"prompt\": \"Automated factory floor, robotic arms in motion, no people, clean industrial setting, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Automated factory floor, robotic arms in motion, no people, clean industrial setting, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Cadenas de suministro globales dependen de esta estabilidad.\", \"pexels_query\": \"automated factory robots\"}, {\"id\": 21, \"prompt\": \"Empty modern boardroom table, chairs neatly arranged, large window view, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty modern boardroom table, chairs neatly arranged, large window view, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta es una rivalidad por influencia, no meramente personal.\", \"pexels_query\": \"empty boardroom modern\"}, {\"id\": 22, \"prompt\": \"Urban skyline at night, commercial district, bright city lights, no visible people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Urban skyline at night, commercial district, bright city lights, no visible people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó, pero estas tensiones afectan tu economía.\", \"pexels_query\": \"urban skyline night\"}, {\"id\": 23, \"prompt\": \"Digital display of stock market data, abstract financial graphs, moving lines, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital display of stock market data, abstract financial graphs, moving lines, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero: observa los flujos de capital.\", \"pexels_query\": \"stock market data screen\"}, {\"id\": 24, \"prompt\": \"Empty legislative assembly chamber, rows of seats, podium, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty legislative assembly chamber, rows of seats, podium, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un escenario es mayor polarización entre bloques regionales.\", \"pexels_query\": \"empty legislative chamber\"}, {\"id\": 25, \"prompt\": \"Modern city planning model, intricate details, scale model, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern city planning model, intricate details, scale model, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Otro, una redefinición de roles y liderazgos emergentes.\", \"pexels_query\": \"city planning model\"}, {\"id\": 26, \"prompt\": \"Empty highway at dusk, long exposure blurring traffic lights, no specific cars, abstract urban movement, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty highway at dusk, long exposure blurring traffic lights, no specific cars, abstract urban movement, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"¿Cómo impactarán estos movimientos a tu país y finanzas?\", \"pexels_query\": \"empty highway dusk\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Lo que te contaron de México y Colombia no es lo principal. Esta disputa oculta movimientos tectónicos en la región. Dos potencias latinoamericanas reajustan su tablero. Ambos buscan reafirmar su liderazgo económico y político. México, primera economía, Colombia clave para el Pacífico. La tensión es un síntoma de lucha por influencia. Otros actores regionales observan atentamente el desgaste. Recursos energéticos y corredores comerciales están en juego. El control de rutas marítimas es vital para ambos. Inversión extranjera busca estabilidad, no fricciones políticas. Esto podría reconfigurar alianzas políticas en el subcontinente. Grandes potencias analizan este nuevo movimiento táctico. Lo que no te dicen: la verdadera agenda es mucho más profunda. Históricamente, estas fricciones preceden a cambios mayores. Los medios solo muestran la superficie del conflicto actual. Fuentes verificadas: nuestros datos revelan otra perspectiva. El mapa real: el interés es asegurar mercados y logística. América Latina siente esta reconfiguración de poder geopolítico. Movimiento táctico: es ajedrez geopolítico, cada pieza cuenta. Cadenas de suministro globales dependen de esta estabilidad. Esta es una rivalidad por influencia, no meramente personal. Nadie lo conectó, pero estas tensiones afectan tu economía. Esto cambia el tablero: observa los flujos de capital. Un escenario es mayor polarización entre bloques regionales. Otro, una redefinición de roles y liderazgos emergentes. ¿Cómo impactarán estos movimientos a tu país y finanzas?",
+    "titulo_sugerido": "México y Colombia: La Verdad Detrás de la Tensión Regional",
+    "escenas_texto": [
+      "Lo que te contaron de México y Colombia no es lo principal.",
+      "Esta disputa oculta movimientos tectónicos en la región.",
+      "Dos potencias latinoamericanas reajustan su tablero.",
+      "Ambos buscan reafirmar su liderazgo económico y político.",
+      "México, primera economía, Colombia clave para el Pacífico.",
+      "La tensión es un síntoma de lucha por influencia.",
+      "Otros actores regionales observan atentamente el desgaste.",
+      "Recursos energéticos y corredores comerciales están en juego.",
+      "El control de rutas marítimas es vital para ambos.",
+      "Inversión extranjera busca estabilidad, no fricciones políticas.",
+      "Esto podría reconfigurar alianzas políticas en el subcontinente.",
+      "Grandes potencias analizan este nuevo movimiento táctico.",
+      "Lo que no te dicen: la verdadera agenda es mucho más profunda.",
+      "Históricamente, estas fricciones preceden a cambios mayores.",
+      "Los medios solo muestran la superficie del conflicto actual.",
+      "Fuentes verificadas: nuestros datos revelan otra perspectiva.",
+      "El mapa real: el interés es asegurar mercados y logística.",
+      "América Latina siente esta reconfiguración de poder geopolítico.",
+      "Movimiento táctico: es ajedrez geopolítico, cada pieza cuenta.",
+      "Cadenas de suministro globales dependen de esta estabilidad.",
+      "Esta es una rivalidad por influencia, no meramente personal.",
+      "Nadie lo conectó, pero estas tensiones afectan tu economía.",
+      "Esto cambia el tablero: observa los flujos de capital.",
+      "Un escenario es mayor polarización entre bloques regionales.",
+      "Otro, una redefinición de roles y liderazgos emergentes.",
+      "¿Cómo impactarán estos movimientos a tu país y finanzas?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty border crossing point, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty border crossing point, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que te contaron de México y Colombia no es lo principal.",
+        "pexels_query": "empty border crossing"
+      },
+      {
+        "id": 2,
+        "prompt": "Satellite image of South America, showing trade routes, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of South America, showing trade routes, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta disputa oculta movimientos tectónicos en la región.",
+        "pexels_query": "satellite map south america"
+      },
+      {
+        "id": 3,
+        "prompt": "Geopolitical map of Latin America, highlighting Mexico and Colombia, aged paper texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map of Latin America, highlighting Mexico and Colombia, aged paper texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Dos potencias latinoamericanas reajustan su tablero.",
+        "pexels_query": "geopolitical map latin america"
+      },
+      {
+        "id": 4,
+        "prompt": "Industrial port with stacked containers, empty, dawn light, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial port with stacked containers, empty, dawn light, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Ambos buscan reafirmar su liderazgo económico y político.",
+        "pexels_query": "industrial port containers"
+      },
+      {
+        "id": 5,
+        "prompt": "Modern container ship at sea, wide shot, no people on deck, stormy sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern container ship at sea, wide shot, no people on deck, stormy sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "México, primera economía, Colombia clave para el Pacífico.",
+        "pexels_query": "container ship ocean"
+      },
+      {
+        "id": 6,
+        "prompt": "Complex power grid station, intricate wiring, abstract view, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Complex power grid station, intricate wiring, abstract view, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La tensión es un síntoma de lucha por influencia.",
+        "pexels_query": "power grid station"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty diplomatic conference room, modern design, wide angle, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty diplomatic conference room, modern design, wide angle, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Otros actores regionales observan atentamente el desgaste.",
+        "pexels_query": "empty conference room diplomacy"
+      },
+      {
+        "id": 8,
+        "prompt": "Oil refinery at dawn, industrial smoke stacks, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil refinery at dawn, industrial smoke stacks, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Recursos energéticos y corredores comerciales están en juego.",
+        "pexels_query": "oil refinery industrial"
+      },
+      {
+        "id": 9,
+        "prompt": "Lighthouse on a rocky coast, powerful waves, dramatic sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Lighthouse on a rocky coast, powerful waves, dramatic sky, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El control de rutas marítimas es vital para ambos.",
+        "pexels_query": "lighthouse stormy coast"
+      },
+      {
+        "id": 10,
+        "prompt": "Empty stock exchange trading floor, rows of monitors, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty stock exchange trading floor, rows of monitors, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Inversión extranjera busca estabilidad, no fricciones políticas.",
+        "pexels_query": "empty trading floor"
+      },
+      {
+        "id": 11,
+        "prompt": "Old geopolitical world map, faded colors, red lines indicating historical alliances, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Old geopolitical world map, faded colors, red lines indicating historical alliances, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto podría reconfigurar alianzas políticas en el subcontinente.",
+        "pexels_query": "old geopolitical world map"
+      },
+      {
+        "id": 12,
+        "prompt": "Server control room with multiple data screens, glowing light from monitors, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Server control room with multiple data screens, glowing light from monitors, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Grandes potencias analizan este nuevo movimiento táctico.",
+        "pexels_query": "server control room"
+      },
+      {
+        "id": 13,
+        "prompt": "Secure data center server racks, cold aisle, blue lights, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Secure data center server racks, cold aisle, blue lights, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen: la verdadera agenda es mucho más profunda.",
+        "pexels_query": "data center servers"
+      },
+      {
+        "id": 14,
+        "prompt": "Antique atlas open on a world map, aged pages, focus on historical routes, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Antique atlas open on a world map, aged pages, focus on historical routes, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Históricamente, estas fricciones preceden a cambios mayores.",
+        "pexels_query": "antique world atlas"
+      },
+      {
+        "id": 15,
+        "prompt": "Empty news studio set, large screen showing abstract geopolitical graphics, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty news studio set, large screen showing abstract geopolitical graphics, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los medios solo muestran la superficie del conflicto actual.",
+        "pexels_query": "empty news studio"
+      },
+      {
+        "id": 16,
+        "prompt": "Close up of a satellite dish array, pointing upwards, clear sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close up of a satellite dish array, pointing upwards, clear sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas: nuestros datos revelan otra perspectiva.",
+        "pexels_query": "satellite dish array"
+      },
+      {
+        "id": 17,
+        "prompt": "Logistics hub warehouse, long aisles of shelves, empty forklifts, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Logistics hub warehouse, long aisles of shelves, empty forklifts, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real: el interés es asegurar mercados y logística.",
+        "pexels_query": "logistics warehouse empty"
+      },
+      {
+        "id": 18,
+        "prompt": "Empty port crane against a dramatic sky, industrial silhouette, sunset, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty port crane against a dramatic sky, industrial silhouette, sunset, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "América Latina siente esta reconfiguración de poder geopolítico.",
+        "pexels_query": "port crane industrial"
+      },
+      {
+        "id": 19,
+        "prompt": "Chess board with pieces, close up, no hands, strategic setup, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Chess board with pieces, close up, no hands, strategic setup, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Movimiento táctico: es ajedrez geopolítico, cada pieza cuenta.",
+        "pexels_query": "chess board strategy"
+      },
+      {
+        "id": 20,
+        "prompt": "Automated factory floor, robotic arms in motion, no people, clean industrial setting, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Automated factory floor, robotic arms in motion, no people, clean industrial setting, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Cadenas de suministro globales dependen de esta estabilidad.",
+        "pexels_query": "automated factory robots"
+      },
+      {
+        "id": 21,
+        "prompt": "Empty modern boardroom table, chairs neatly arranged, large window view, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty modern boardroom table, chairs neatly arranged, large window view, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta es una rivalidad por influencia, no meramente personal.",
+        "pexels_query": "empty boardroom modern"
+      },
+      {
+        "id": 22,
+        "prompt": "Urban skyline at night, commercial district, bright city lights, no visible people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Urban skyline at night, commercial district, bright city lights, no visible people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó, pero estas tensiones afectan tu economía.",
+        "pexels_query": "urban skyline night"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital display of stock market data, abstract financial graphs, moving lines, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital display of stock market data, abstract financial graphs, moving lines, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero: observa los flujos de capital.",
+        "pexels_query": "stock market data screen"
+      },
+      {
+        "id": 24,
+        "prompt": "Empty legislative assembly chamber, rows of seats, podium, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty legislative assembly chamber, rows of seats, podium, wide shot, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un escenario es mayor polarización entre bloques regionales.",
+        "pexels_query": "empty legislative chamber"
+      },
+      {
+        "id": 25,
+        "prompt": "Modern city planning model, intricate details, scale model, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern city planning model, intricate details, scale model, no people, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Otro, una redefinición de roles y liderazgos emergentes.",
+        "pexels_query": "city planning model"
+      },
+      {
+        "id": 26,
+        "prompt": "Empty highway at dusk, long exposure blurring traffic lights, no specific cars, abstract urban movement, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty highway at dusk, long exposure blurring traffic lights, no specific cars, abstract urban movement, harsh natural lighting, gritty texture, RAW photo, photojournalism, real photography, shot on location, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "¿Cómo impactarán estos movimientos a tu país y finanzas?",
+        "pexels_query": "empty highway dusk"
+      }
+    ],
+    "hooks": [
+      "México-Colombia: tablero oculto",
+      "Disputa por influencia regional",
+      "Tu economía es afectada"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
