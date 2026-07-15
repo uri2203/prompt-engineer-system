@@ -1,10 +1,10 @@
 {
-  "estado_lote": "cancelado",
-  "total": 25,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 7,
-  "trabajo_actual": "Generando video 8/25 (Monkygraff 9:16)",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Listo para iniciar.",
+  "resumen": "",
   "historial": []
 }
