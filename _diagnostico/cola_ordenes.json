@@ -1910,5 +1910,248 @@
       "Lo familiar te observa."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "df621e85-4ac3-4bba-80d7-459d21d3e278",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark, empty hallway, a single old wooden chair slightly askew, long ominous shadow stretching from it, faint unsettling glow, desaturated, grainy film\", \"prompt_visual\": \"Dark, empty hallway, a single old wooden chair slightly askew, long ominous shadow stretching from it, faint unsettling glow, desaturated, grainy film\", \"texto_locucion\": \"Desde aquella noche, tu casa ya no era igual.\", \"pexels_query\": \"empty dark hallway chair\"}, {\"id\": 2, \"prompt\": \"Close-up of old, worn fabric curtain in a dim room, subtle, almost imperceptible discoloration spreading, desaturated colors, deep shadows, grainy\", \"prompt_visual\": \"Close-up of old, worn fabric curtain in a dim room, subtle, almost imperceptible discoloration spreading, desaturated colors, deep shadows, grainy\", \"texto_locucion\": \"Un olor peculiar impregnó cada rincón del hogar.\", \"pexels_query\": \"old fabric curtain\"}, {\"id\": 3, \"prompt\": \"A vintage wooden cabinet, one drawer slightly ajar, revealing nothing but profound darkness, deep shadows, subtle green tint, grainy\", \"prompt_visual\": \"A vintage wooden cabinet, one drawer slightly ajar, revealing nothing but profound darkness, deep shadows, subtle green tint, grainy\", \"texto_locucion\": \"A azufre o algo viejo, casi olvidado.\", \"pexels_query\": \"vintage wooden cabinet\"}, {\"id\": 4, \"prompt\": \"Bedroom wall, wallpaper peeling slightly, revealing a darker, moist patch underneath, dim light, eerie atmosphere, desaturated\", \"prompt_visual\": \"Bedroom wall, wallpaper peeling slightly, revealing a darker, moist patch underneath, dim light, eerie atmosphere, desaturated\", \"texto_locucion\": \"Nadie más lo percibía, solo tú.\", \"pexels_query\": \"peeling wallpaper dark\"}, {\"id\": 5, \"prompt\": \"Living room corner, faint silhouette of an undefined figure lurking in the deepest shadow, barely visible, high contrast, grainy\", \"prompt_visual\": \"Living room corner, faint silhouette of an undefined figure lurking in the deepest shadow, barely visible, high contrast, grainy\", \"texto_locucion\": \"Las sombras comenzaron a moverse de forma extraña.\", \"pexels_query\": \"ominous shadow living room\"}, {\"id\": 6, \"prompt\": \"Out-of-focus reflection of a doorway in a dusty mirror, the frame slightly warped, subtle distortion, dark room, single light source, grainy\", \"prompt_visual\": \"Out-of-focus reflection of a doorway in a dusty mirror, the frame slightly warped, subtle distortion, dark room, single light source, grainy\", \"texto_locucion\": \"Creías que tus ojos te engañaban constantemente.\", \"pexels_query\": \"distorted mirror reflection\"}, {\"id\": 7, \"prompt\": \"Close-up on a person's hand, knuckles white, clutching an old, smooth stone, feeling of unease, dark, subtle red light, grainy\", \"prompt_visual\": \"Close-up on a person's hand, knuckles white, clutching an old, smooth stone, feeling of unease, dark, subtle red light, grainy\", \"texto_locucion\": \"Pero lo sentiste antes, muy dentro de ti.\", \"pexels_query\": \"hand holding old stone\"}, {\"id\": 8, \"prompt\": \"Empty corridor, light from an unseen source casting a long, narrow shadow that seems to lengthen unnaturally, desolate, grainy\", \"prompt_visual\": \"Empty corridor, light from an unseen source casting a long, narrow shadow that seems to lengthen unnaturally, desolate, grainy\", \"texto_locucion\": \"Una presencia gélida, siempre detrás de ti.\", \"pexels_query\": \"long corridor shadow\"}, {\"id\": 9, \"prompt\": \"Small, mundane object (e.g., a pen) on a table, subtly shifted from its expected position, quiet room, dark wood, desaturated\", \"prompt_visual\": \"Small, mundane object (e.g., a pen) on a table, subtly shifted from its expected position, quiet room, dark wood, desaturated\", \"texto_locucion\": \"Los objetos cambiaban sutilmente de lugar.\", \"pexels_query\": \"shifted pen on table\"}, {\"id\": 10, \"prompt\": \"A half-empty ceramic coffee cup on an old, scratched wooden desk, slightly stained, dim light, eerie silence, grainy\", \"prompt_visual\": \"A half-empty ceramic coffee cup on an old, scratched wooden desk, slightly stained, dim light, eerie silence, grainy\", \"texto_locucion\": \"La taza de café sobre el viejo escritorio.\", \"pexels_query\": \"coffee cup old desk\"}, {\"id\": 11, \"prompt\": \"Same ceramic coffee cup, now sitting on a worn leather sofa in a different, equally dim room, desaturated, high contrast\", \"prompt_visual\": \"Same ceramic coffee cup, now sitting on a worn leather sofa in a different, equally dim room, desaturated, high contrast\", \"texto_locucion\": \"Después la hallabas en el sofá de la sala.\", \"pexels_query\": \"coffee cup leather sofa\"}, {\"id\": 12, \"prompt\": \"A closed, old wooden door, peeling paint, a single, deep scratch running down its center, ominous, desaturated, grainy\", \"prompt_visual\": \"A closed, old wooden door, peeling paint, a single, deep scratch running down its center, ominous, desaturated, grainy\", \"texto_locucion\": \"Siempre pensaste en la costumbre, en el olvido.\", \"pexels_query\": \"old scratched door\"}, {\"id\": 13, \"prompt\": \"Close-up on a dusty windowsill, a dead, dried-up plant in a pot, creating an unsettling visual, faint light, deep shadows, grainy\", \"prompt_visual\": \"Close-up on a dusty windowsill, a dead, dried-up plant in a pot, creating an unsettling visual, faint light, deep shadows, grainy\", \"texto_locucion\": \"Pero esto era deliberado, una advertencia.\", \"pexels_query\": \"dead plant windowsill\"}, {\"id\": 14, \"prompt\": \"Dark corner of a room, faint, almost imperceptible ripples in the air, suggesting movement, high contrast, grainy texture\", \"prompt_visual\": \"Dark corner of a room, faint, almost imperceptible ripples in the air, suggesting movement, high contrast, grainy texture\", \"texto_locucion\": \"Escuchabas susurros ahogados, voces muy familiares.\", \"pexels_query\": \"dark room subtle ripples\"}, {\"id\": 15, \"prompt\": \"A framed, very old, faded portrait on a wall, face obscured by shadow, only the outline visible, unsettling aura, desaturated\", \"prompt_visual\": \"A framed, very old, faded portrait on a wall, face obscured by shadow, only the outline visible, unsettling aura, desaturated\", \"texto_locucion\": \"Parecía ser la de tu propia madre difunta.\", \"pexels_query\": \"faded portrait shadow\"}, {\"id\": 16, \"prompt\": \"Hands covering ears tightly in a dimly lit, empty room, sense of internal struggle and fear, desaturated, cold tones, grainy\", \"prompt_visual\": \"Hands covering ears tightly in a dimly lit, empty room, sense of internal struggle and fear, desaturated, cold tones, grainy\", \"texto_locucion\": \"Intentabas convencerte que era solo tu mente.\", \"pexels_query\": \"hands covering ears alone\"}, {\"id\": 17, \"prompt\": \"Abstract pattern of light and shadow on a bare wall, resembling a distorted, watchful eye, unsettling pareidolia, dark, grainy\", \"prompt_visual\": \"Abstract pattern of light and shadow on a bare wall, resembling a distorted, watchful eye, unsettling pareidolia, dark, grainy\", \"texto_locucion\": \"La mente puede ser tu peor enemigo silencioso.\", \"pexels_query\": \"abstract shadow eye\"}, {\"id\": 18, \"prompt\": \"Close-up on the back of a person's neck, goosebumps visible, feeling of being watched, cold light, desaturated, grainy\", \"prompt_visual\": \"Close-up on the back of a person's neck, goosebumps visible, feeling of being watched, cold light, desaturated, grainy\", \"texto_locucion\": \"No puedes ignorarlo, ese frío en la nuca.\", \"pexels_query\": \"goosebumps on neck\"}, {\"id\": 19, \"prompt\": \"Empty space behind an open door, deep shadows suggesting a presence just out of frame, unsettling stillness, grainy, high contrast\", \"prompt_visual\": \"Empty space behind an open door, deep shadows suggesting a presence just out of frame, unsettling stillness, grainy, high contrast\", \"texto_locucion\": \"Como si alguien respirara justo detrás de ti.\", \"pexels_query\": \"empty space behind door\"}, {\"id\": 20, \"prompt\": \"A still, very dark room, a single, almost invisible cobweb shimmering in a sliver of light, oppressive quiet, desaturated, grainy\", \"prompt_visual\": \"A still, very dark room, a single, almost invisible cobweb shimmering in a sliver of light, oppressive quiet, desaturated, grainy\", \"texto_locucion\": \"Girabas, y solo hallabas un silencio absoluto.\", \"pexels_query\": \"dark room cobweb\"}, {\"id\": 21, \"prompt\": \"A dusty, old photograph in a dark corner of a room, face obscured by shadow, only edges visible, sense of lost memory, grainy\", \"prompt_visual\": \"A dusty, old photograph in a dark corner of a room, face obscured by shadow, only edges visible, sense of lost memory, grainy\", \"texto_locucion\": \"Nadie lo vio, nadie te creería.\", \"pexels_query\": \"old photo shadow\"}, {\"id\": 22, \"prompt\": \"A single, flickering candle in an otherwise pitch-black room, casting distorted, elongated shadows on the walls, eerie, grainy\", \"prompt_visual\": \"A single, flickering candle in an otherwise pitch-black room, casting distorted, elongated shadows on the walls, eerie, grainy\", \"texto_locucion\": \"Pero la energía en la casa es densa.\", \"pexels_query\": \"flickering candle shadows\"}, {\"id\": 23, \"prompt\": \"An antique, leather-bound book lying open on a worn wooden table, pages yellowed, incomprehensible symbols faintly visible, mysterious, grainy\", \"prompt_visual\": \"An antique, leather-bound book lying open on a worn wooden table, pages yellowed, incomprehensible symbols faintly visible, mysterious, grainy\", \"texto_locucion\": \"Hay un rito que jamás terminaste de entender.\", \"pexels_query\": \"antique book open symbols\"}, {\"id\": 24, \"prompt\": \"Close-up of a dark, intricate, unidentifiable symbol carved subtly into a wooden beam in an old house, ominous, desaturated, grainy\", \"prompt_visual\": \"Close-up of a dark, intricate, unidentifiable symbol carved subtly into a wooden beam in an old house, ominous, desaturated, grainy\", \"texto_locucion\": \"Una herencia que ahora te pertenece a ti.\", \"pexels_query\": \"carved symbol wood\"}, {\"id\": 25, \"prompt\": \"A single, very old, dried flower pressed inside a forgotten book, unsettlingly preserved, dark tones, grainy, subtle accent color\", \"prompt_visual\": \"A single, very old, dried flower pressed inside a forgotten book, unsettlingly preserved, dark tones, grainy, subtle accent color\", \"texto_locucion\": \"Ella dejó algo aquí para ti.\", \"pexels_query\": \"dried flower old book\"}, {\"id\": 26, \"prompt\": \"Reflected distorted shadow of a humanoid form in a puddle of water on a dark, stone floor, indistinct, unsettling, grainy\", \"prompt_visual\": \"Reflected distorted shadow of a humanoid form in a puddle of water on a dark, stone floor, indistinct, unsettling, grainy\", \"texto_locucion\": \"Algo muy viejo, que quería seguir existiendo.\", \"pexels_query\": \"distorted shadow puddle\"}, {\"id\": 27, \"prompt\": \"Close-up on an eye reflecting a tiny, distorted, inhuman figure in its pupil, wide-eyed, fear, desaturated, high contrast, grainy\", \"prompt_visual\": \"Close-up on an eye reflecting a tiny, distorted, inhuman figure in its pupil, wide-eyed, fear, desaturated, high contrast, grainy\", \"texto_locucion\": \"¿Y si tú solo eres el nuevo recipiente?\", \"pexels_query\": \"eye pupil reflection horror\"}, {\"id\": 28, \"prompt\": \"Empty, dark room, the only light source coming from a barely ajar door, revealing profound blackness beyond, unsettling silence, grainy\", \"prompt_visual\": \"Empty, dark room, the only light source coming from a barely ajar door, revealing profound blackness beyond, unsettling silence, grainy\", \"texto_locucion\": \"¿Y si ya es demasiado tarde para escapar?\", \"pexels_query\": \"door ajar dark room\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Desde aquella noche, tu casa ya no era igual. Un olor peculiar impregnó cada rincón del hogar. A azufre o algo viejo, casi olvidado. Nadie más lo percibía, solo tú. Las sombras comenzaron a moverse de forma extraña. Creías que tus ojos te engañaban constantemente. Pero lo sentiste antes, muy dentro de ti. Una presencia gélida, siempre detrás de ti. Los objetos cambiaban sutilmente de lugar. La taza de café sobre el viejo escritorio. Después la hallabas en el sofá de la sala. Siempre pensaste en la costumbre, en el olvido. Pero esto era deliberado, una advertencia. Escuchabas susurros ahogados, voces muy familiares. Parecía ser la de tu propia madre difunta. Intentabas convencerte que era solo tu mente. La mente puede ser tu peor enemigo silencioso. No puedes ignorarlo, ese frío en la nuca. Como si alguien respirara justo detrás de ti. Girabas, y solo hallabas un silencio absoluto. Nadie lo vio, nadie te creería. Pero la energía en la casa es densa. Hay un rito que jamás terminaste de entender. Una herencia que ahora te pertenece a ti. Ella dejó algo aquí para ti. Algo muy viejo, que quería seguir existiendo. ¿Y si tú solo eres el nuevo recipiente? ¿Y si ya es demasiado tarde para escapar?",
+    "titulo_sugerido": "La herencia de tu madre: No es tuya, eres tú",
+    "escenas_texto": [
+      "Desde aquella noche, tu casa ya no era igual.",
+      "Un olor peculiar impregnó cada rincón del hogar.",
+      "A azufre o algo viejo, casi olvidado.",
+      "Nadie más lo percibía, solo tú.",
+      "Las sombras comenzaron a moverse de forma extraña.",
+      "Creías que tus ojos te engañaban constantemente.",
+      "Pero lo sentiste antes, muy dentro de ti.",
+      "Una presencia gélida, siempre detrás de ti.",
+      "Los objetos cambiaban sutilmente de lugar.",
+      "La taza de café sobre el viejo escritorio.",
+      "Después la hallabas en el sofá de la sala.",
+      "Siempre pensaste en la costumbre, en el olvido.",
+      "Pero esto era deliberado, una advertencia.",
+      "Escuchabas susurros ahogados, voces muy familiares.",
+      "Parecía ser la de tu propia madre difunta.",
+      "Intentabas convencerte que era solo tu mente.",
+      "La mente puede ser tu peor enemigo silencioso.",
+      "No puedes ignorarlo, ese frío en la nuca.",
+      "Como si alguien respirara justo detrás de ti.",
+      "Girabas, y solo hallabas un silencio absoluto.",
+      "Nadie lo vio, nadie te creería.",
+      "Pero la energía en la casa es densa.",
+      "Hay un rito que jamás terminaste de entender.",
+      "Una herencia que ahora te pertenece a ti.",
+      "Ella dejó algo aquí para ti.",
+      "Algo muy viejo, que quería seguir existiendo.",
+      "¿Y si tú solo eres el nuevo recipiente?",
+      "¿Y si ya es demasiado tarde para escapar?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark, empty hallway, a single old wooden chair slightly askew, long ominous shadow stretching from it, faint unsettling glow, desaturated, grainy film",
+        "prompt_visual": "Dark, empty hallway, a single old wooden chair slightly askew, long ominous shadow stretching from it, faint unsettling glow, desaturated, grainy film",
+        "texto_locucion": "Desde aquella noche, tu casa ya no era igual.",
+        "pexels_query": "empty dark hallway chair"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up of old, worn fabric curtain in a dim room, subtle, almost imperceptible discoloration spreading, desaturated colors, deep shadows, grainy",
+        "prompt_visual": "Close-up of old, worn fabric curtain in a dim room, subtle, almost imperceptible discoloration spreading, desaturated colors, deep shadows, grainy",
+        "texto_locucion": "Un olor peculiar impregnó cada rincón del hogar.",
+        "pexels_query": "old fabric curtain"
+      },
+      {
+        "id": 3,
+        "prompt": "A vintage wooden cabinet, one drawer slightly ajar, revealing nothing but profound darkness, deep shadows, subtle green tint, grainy",
+        "prompt_visual": "A vintage wooden cabinet, one drawer slightly ajar, revealing nothing but profound darkness, deep shadows, subtle green tint, grainy",
+        "texto_locucion": "A azufre o algo viejo, casi olvidado.",
+        "pexels_query": "vintage wooden cabinet"
+      },
+      {
+        "id": 4,
+        "prompt": "Bedroom wall, wallpaper peeling slightly, revealing a darker, moist patch underneath, dim light, eerie atmosphere, desaturated",
+        "prompt_visual": "Bedroom wall, wallpaper peeling slightly, revealing a darker, moist patch underneath, dim light, eerie atmosphere, desaturated",
+        "texto_locucion": "Nadie más lo percibía, solo tú.",
+        "pexels_query": "peeling wallpaper dark"
+      },
+      {
+        "id": 5,
+        "prompt": "Living room corner, faint silhouette of an undefined figure lurking in the deepest shadow, barely visible, high contrast, grainy",
+        "prompt_visual": "Living room corner, faint silhouette of an undefined figure lurking in the deepest shadow, barely visible, high contrast, grainy",
+        "texto_locucion": "Las sombras comenzaron a moverse de forma extraña.",
+        "pexels_query": "ominous shadow living room"
+      },
+      {
+        "id": 6,
+        "prompt": "Out-of-focus reflection of a doorway in a dusty mirror, the frame slightly warped, subtle distortion, dark room, single light source, grainy",
+        "prompt_visual": "Out-of-focus reflection of a doorway in a dusty mirror, the frame slightly warped, subtle distortion, dark room, single light source, grainy",
+        "texto_locucion": "Creías que tus ojos te engañaban constantemente.",
+        "pexels_query": "distorted mirror reflection"
+      },
+      {
+        "id": 7,
+        "prompt": "Close-up on a person's hand, knuckles white, clutching an old, smooth stone, feeling of unease, dark, subtle red light, grainy",
+        "prompt_visual": "Close-up on a person's hand, knuckles white, clutching an old, smooth stone, feeling of unease, dark, subtle red light, grainy",
+        "texto_locucion": "Pero lo sentiste antes, muy dentro de ti.",
+        "pexels_query": "hand holding old stone"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty corridor, light from an unseen source casting a long, narrow shadow that seems to lengthen unnaturally, desolate, grainy",
+        "prompt_visual": "Empty corridor, light from an unseen source casting a long, narrow shadow that seems to lengthen unnaturally, desolate, grainy",
+        "texto_locucion": "Una presencia gélida, siempre detrás de ti.",
+        "pexels_query": "long corridor shadow"
+      },
+      {
+        "id": 9,
+        "prompt": "Small, mundane object (e.g., a pen) on a table, subtly shifted from its expected position, quiet room, dark wood, desaturated",
+        "prompt_visual": "Small, mundane object (e.g., a pen) on a table, subtly shifted from its expected position, quiet room, dark wood, desaturated",
+        "texto_locucion": "Los objetos cambiaban sutilmente de lugar.",
+        "pexels_query": "shifted pen on table"
+      },
+      {
+        "id": 10,
+        "prompt": "A half-empty ceramic coffee cup on an old, scratched wooden desk, slightly stained, dim light, eerie silence, grainy",
+        "prompt_visual": "A half-empty ceramic coffee cup on an old, scratched wooden desk, slightly stained, dim light, eerie silence, grainy",
+        "texto_locucion": "La taza de café sobre el viejo escritorio.",
+        "pexels_query": "coffee cup old desk"
+      },
+      {
+        "id": 11,
+        "prompt": "Same ceramic coffee cup, now sitting on a worn leather sofa in a different, equally dim room, desaturated, high contrast",
+        "prompt_visual": "Same ceramic coffee cup, now sitting on a worn leather sofa in a different, equally dim room, desaturated, high contrast",
+        "texto_locucion": "Después la hallabas en el sofá de la sala.",
+        "pexels_query": "coffee cup leather sofa"
+      },
+      {
+        "id": 12,
+        "prompt": "A closed, old wooden door, peeling paint, a single, deep scratch running down its center, ominous, desaturated, grainy",
+        "prompt_visual": "A closed, old wooden door, peeling paint, a single, deep scratch running down its center, ominous, desaturated, grainy",
+        "texto_locucion": "Siempre pensaste en la costumbre, en el olvido.",
+        "pexels_query": "old scratched door"
+      },
+      {
+        "id": 13,
+        "prompt": "Close-up on a dusty windowsill, a dead, dried-up plant in a pot, creating an unsettling visual, faint light, deep shadows, grainy",
+        "prompt_visual": "Close-up on a dusty windowsill, a dead, dried-up plant in a pot, creating an unsettling visual, faint light, deep shadows, grainy",
+        "texto_locucion": "Pero esto era deliberado, una advertencia.",
+        "pexels_query": "dead plant windowsill"
+      },
+      {
+        "id": 14,
+        "prompt": "Dark corner of a room, faint, almost imperceptible ripples in the air, suggesting movement, high contrast, grainy texture",
+        "prompt_visual": "Dark corner of a room, faint, almost imperceptible ripples in the air, suggesting movement, high contrast, grainy texture",
+        "texto_locucion": "Escuchabas susurros ahogados, voces muy familiares.",
+        "pexels_query": "dark room subtle ripples"
+      },
+      {
+        "id": 15,
+        "prompt": "A framed, very old, faded portrait on a wall, face obscured by shadow, only the outline visible, unsettling aura, desaturated",
+        "prompt_visual": "A framed, very old, faded portrait on a wall, face obscured by shadow, only the outline visible, unsettling aura, desaturated",
+        "texto_locucion": "Parecía ser la de tu propia madre difunta.",
+        "pexels_query": "faded portrait shadow"
+      },
+      {
+        "id": 16,
+        "prompt": "Hands covering ears tightly in a dimly lit, empty room, sense of internal struggle and fear, desaturated, cold tones, grainy",
+        "prompt_visual": "Hands covering ears tightly in a dimly lit, empty room, sense of internal struggle and fear, desaturated, cold tones, grainy",
+        "texto_locucion": "Intentabas convencerte que era solo tu mente.",
+        "pexels_query": "hands covering ears alone"
+      },
+      {
+        "id": 17,
+        "prompt": "Abstract pattern of light and shadow on a bare wall, resembling a distorted, watchful eye, unsettling pareidolia, dark, grainy",
+        "prompt_visual": "Abstract pattern of light and shadow on a bare wall, resembling a distorted, watchful eye, unsettling pareidolia, dark, grainy",
+        "texto_locucion": "La mente puede ser tu peor enemigo silencioso.",
+        "pexels_query": "abstract shadow eye"
+      },
+      {
+        "id": 18,
+        "prompt": "Close-up on the back of a person's neck, goosebumps visible, feeling of being watched, cold light, desaturated, grainy",
+        "prompt_visual": "Close-up on the back of a person's neck, goosebumps visible, feeling of being watched, cold light, desaturated, grainy",
+        "texto_locucion": "No puedes ignorarlo, ese frío en la nuca.",
+        "pexels_query": "goosebumps on neck"
+      },
+      {
+        "id": 19,
+        "prompt": "Empty space behind an open door, deep shadows suggesting a presence just out of frame, unsettling stillness, grainy, high contrast",
+        "prompt_visual": "Empty space behind an open door, deep shadows suggesting a presence just out of frame, unsettling stillness, grainy, high contrast",
+        "texto_locucion": "Como si alguien respirara justo detrás de ti.",
+        "pexels_query": "empty space behind door"
+      },
+      {
+        "id": 20,
+        "prompt": "A still, very dark room, a single, almost invisible cobweb shimmering in a sliver of light, oppressive quiet, desaturated, grainy",
+        "prompt_visual": "A still, very dark room, a single, almost invisible cobweb shimmering in a sliver of light, oppressive quiet, desaturated, grainy",
+        "texto_locucion": "Girabas, y solo hallabas un silencio absoluto.",
+        "pexels_query": "dark room cobweb"
+      },
+      {
+        "id": 21,
+        "prompt": "A dusty, old photograph in a dark corner of a room, face obscured by shadow, only edges visible, sense of lost memory, grainy",
+        "prompt_visual": "A dusty, old photograph in a dark corner of a room, face obscured by shadow, only edges visible, sense of lost memory, grainy",
+        "texto_locucion": "Nadie lo vio, nadie te creería.",
+        "pexels_query": "old photo shadow"
+      },
+      {
+        "id": 22,
+        "prompt": "A single, flickering candle in an otherwise pitch-black room, casting distorted, elongated shadows on the walls, eerie, grainy",
+        "prompt_visual": "A single, flickering candle in an otherwise pitch-black room, casting distorted, elongated shadows on the walls, eerie, grainy",
+        "texto_locucion": "Pero la energía en la casa es densa.",
+        "pexels_query": "flickering candle shadows"
+      },
+      {
+        "id": 23,
+        "prompt": "An antique, leather-bound book lying open on a worn wooden table, pages yellowed, incomprehensible symbols faintly visible, mysterious, grainy",
+        "prompt_visual": "An antique, leather-bound book lying open on a worn wooden table, pages yellowed, incomprehensible symbols faintly visible, mysterious, grainy",
+        "texto_locucion": "Hay un rito que jamás terminaste de entender.",
+        "pexels_query": "antique book open symbols"
+      },
+      {
+        "id": 24,
+        "prompt": "Close-up of a dark, intricate, unidentifiable symbol carved subtly into a wooden beam in an old house, ominous, desaturated, grainy",
+        "prompt_visual": "Close-up of a dark, intricate, unidentifiable symbol carved subtly into a wooden beam in an old house, ominous, desaturated, grainy",
+        "texto_locucion": "Una herencia que ahora te pertenece a ti.",
+        "pexels_query": "carved symbol wood"
+      },
+      {
+        "id": 25,
+        "prompt": "A single, very old, dried flower pressed inside a forgotten book, unsettlingly preserved, dark tones, grainy, subtle accent color",
+        "prompt_visual": "A single, very old, dried flower pressed inside a forgotten book, unsettlingly preserved, dark tones, grainy, subtle accent color",
+        "texto_locucion": "Ella dejó algo aquí para ti.",
+        "pexels_query": "dried flower old book"
+      },
+      {
+        "id": 26,
+        "prompt": "Reflected distorted shadow of a humanoid form in a puddle of water on a dark, stone floor, indistinct, unsettling, grainy",
+        "prompt_visual": "Reflected distorted shadow of a humanoid form in a puddle of water on a dark, stone floor, indistinct, unsettling, grainy",
+        "texto_locucion": "Algo muy viejo, que quería seguir existiendo.",
+        "pexels_query": "distorted shadow puddle"
+      },
+      {
+        "id": 27,
+        "prompt": "Close-up on an eye reflecting a tiny, distorted, inhuman figure in its pupil, wide-eyed, fear, desaturated, high contrast, grainy",
+        "prompt_visual": "Close-up on an eye reflecting a tiny, distorted, inhuman figure in its pupil, wide-eyed, fear, desaturated, high contrast, grainy",
+        "texto_locucion": "¿Y si tú solo eres el nuevo recipiente?",
+        "pexels_query": "eye pupil reflection horror"
+      },
+      {
+        "id": 28,
+        "prompt": "Empty, dark room, the only light source coming from a barely ajar door, revealing profound blackness beyond, unsettling silence, grainy",
+        "prompt_visual": "Empty, dark room, the only light source coming from a barely ajar door, revealing profound blackness beyond, unsettling silence, grainy",
+        "texto_locucion": "¿Y si ya es demasiado tarde para escapar?",
+        "pexels_query": "door ajar dark room"
+      }
+    ],
+    "hooks": [
+      "Tu casa te observa.",
+      "Un legado oscuro.",
+      "Ella aún te busca."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
