@@ -2404,5 +2404,248 @@
       "El mapa financiero global"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "d9428848-04b0-43a3-8a6e-68991adaadbd",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Global supply chain map overlayed with semiconductor manufacturing facilities, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global supply chain map overlayed with semiconductor manufacturing facilities, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Hay una razón por la que los medios no conectan estos puntos.\", \"pexels_query\": \"semiconductor supply chain map\"}, {\"id\": 2, \"prompt\": \"Close-up of a microchip circuit board under harsh light, RAW photo, photojournalism, real photography, shot on location, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a microchip circuit board under harsh light, RAW photo, photojournalism, real photography, shot on location, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La guerra comercial China-EE.UU. ya no es solo aranceles.\", \"pexels_query\": \"microchip circuit board\"}, {\"id\": 3, \"prompt\": \"Abstract representation of data flow and server racks in a dark data center, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of data flow and server racks in a dark data center, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Mutó hacia el control total de la tecnología futura.\", \"pexels_query\": \"dark server racks\"}, {\"id\": 4, \"prompt\": \"Manufacturing facility interior with robotic arms assembling components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Manufacturing facility interior with robotic arms assembling components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El verdadero mapa real se disputa en semiconductores.\", \"pexels_query\": \"robotic manufacturing facility\"}, {\"id\": 5, \"prompt\": \"Complex network of fiber optic cables and switching equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Complex network of fiber optic cables and switching equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Quien los produce, controla la inteligencia artificial.\", \"pexels_query\": \"fiber optic network\"}, {\"id\": 6, \"prompt\": \"Satellite dish arrays against a rugged landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite dish arrays against a rugged landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"También controla la tecnología 5G y las defensas.\", \"pexels_query\": \"satellite dish array\"}, {\"id\": 7, \"prompt\": \"US Department of Commerce building exterior, federal architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"US Department of Commerce building exterior, federal architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Washington aplicó estrictos controles de exportación de chips.\", \"pexels_query\": \"department of commerce building\"}, {\"id\": 8, \"prompt\": \"Industrial facility gates with warning signs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial facility gates with warning signs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Impidiendo a China acceder a tecnología puntera.\", \"pexels_query\": \"industrial exclusion zone\"}, {\"id\": 9, \"prompt\": \"Modern high-tech factory interior with clean rooms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern high-tech factory interior with clean rooms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un movimiento táctico para ralentizar su avance tecnológico.\", \"pexels_query\": \"clean room factory\"}, {\"id\": 10, \"prompt\": \"Chinese port with cargo containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Chinese port with cargo containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Beijing respondió. Nadie lo conectó públicamente.\", \"pexels_query\": \"chinese cargo port\"}, {\"id\": 11, \"prompt\": \"Mine site for rare earth minerals, heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Mine site for rare earth minerals, heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Restringió la exportación de galio y germanio.\", \"pexels_query\": \"rare earth mine\"}, {\"id\": 12, \"prompt\": \"Close-up of a scientific lab equipment for material analysis, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a scientific lab equipment for material analysis, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Minerales críticos para la fabricación de estos chips avanzados.\", \"pexels_query\": \"materials science lab\"}, {\"id\": 13, \"prompt\": \"Map highlighting rare earth deposits globally, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map highlighting rare earth deposits globally, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"China domina el 60% de la producción mundial.\", \"pexels_query\": \"rare earth map\"}, {\"id\": 14, \"prompt\": \"Large-scale industrial processing plant for minerals, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Large-scale industrial processing plant for minerals, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero de la geopolítica tecnológica global.\", \"pexels_query\": \"mineral processing plant\"}, {\"id\": 15, \"prompt\": \"Advanced computing laboratory interior, complex machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Advanced computing laboratory interior, complex machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Ambas potencias buscan la supremacía tecnológica, no solo comercial.\", \"pexels_query\": \"advanced computing lab\"}, {\"id\": 16, \"prompt\": \"Drone view of a large container ship moving through a busy shipping lane, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Drone view of a large container ship moving through a busy shipping lane, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La disrupción en cadenas de suministro es intencional.\", \"pexels_query\": \"container ship shipping lane\"}, {\"id\": 17, \"prompt\": \"Automated factory floor producing electronics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Automated factory floor producing electronics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Busca generar dependencia o independencia estratégicas.\", \"pexels_query\": \"automated electronics factory\"}, {\"id\": 18, \"prompt\": \"Close-up of an intricate printed circuit board, high detail, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of an intricate printed circuit board, high detail, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen es el fin último de estas medidas.\", \"pexels_query\": \"intricate circuit board\"}, {\"id\": 19, \"prompt\": \"Research and development facility, sterile environment, advanced machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Research and development facility, sterile environment, advanced machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El dominio de patentes y estándares tecnológicos globales.\", \"pexels_query\": \"R&D sterile lab\"}, {\"id\": 20, \"prompt\": \"Control room with multiple screens displaying data and schematics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Control room with multiple screens displaying data and schematics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto afecta directamente cada aspecto de tu economía.\", \"pexels_query\": \"data control room\"}, {\"id\": 21, \"prompt\": \"Global economic graph showing trends and disruptions, abstract but grounded, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global economic graph showing trends and disruptions, abstract but grounded, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Desde los precios de tu móvil hasta el coche eléctrico.\", \"pexels_query\": \"global economic disruption graph\"}, {\"id\": 22, \"prompt\": \"Manufacturing robots in action on an assembly line, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Manufacturing robots in action on an assembly line, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas indican que la escalada continuará.\", \"pexels_query\": \"robots assembly line\"}, {\"id\": 23, \"prompt\": \"Abstract representation of data encryption and cyber security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of data encryption and cyber security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La dependencia mutua se convierte en vulnerabilidad crítica.\", \"pexels_query\": \"cyber security data\"}, {\"id\": 24, \"prompt\": \"Satellite image of a major industrial zone at night, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a major industrial zone at night, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las decisiones de hoy reconfiguran el poder mundial.\", \"pexels_query\": \"industrial zone satellite night\"}, {\"id\": 25, \"prompt\": \"Geopolitical map showing lines of influence and trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map showing lines of influence and trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El control de recursos críticos define el futuro.\", \"pexels_query\": \"geopolitical trade map\"}, {\"id\": 26, \"prompt\": \"Futuristic clean energy power plant, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no faces, no cgi, no digital art\", \"prompt_visual\": \"Futuristic clean energy power plant, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta disputa por la tecnología es la verdadera guerra.\", \"pexels_query\": \"clean energy power plant\"}, {\"id\": 27, \"prompt\": \"Modern high-speed data center interior, sleek design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern high-speed data center interior, sleek design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Así se decide la próxima hegemonía global.\", \"pexels_query\": \"modern data center\"}, {\"id\": 28, \"prompt\": \"Global network connectivity visualization, intricate lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global network connectivity visualization, intricate lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"¿Quién dominará la próxima era tecnológica global?\", \"pexels_query\": \"global network connectivity\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Hay una razón por la que los medios no conectan estos puntos. La guerra comercial China-EE.UU. ya no es solo aranceles. Mutó hacia el control total de la tecnología futura. El verdadero mapa real se disputa en semiconductores. Quien los produce, controla la inteligencia artificial. También controla la tecnología 5G y las defensas. Washington aplicó estrictos controles de exportación de chips. Impidiendo a China acceder a tecnología puntera. Un movimiento táctico para ralentizar su avance tecnológico. Beijing respondió. Nadie lo conectó públicamente. Restringió la exportación de galio y germanio. Minerales críticos para la fabricación de estos chips avanzados. China domina el 60% de la producción mundial. Esto cambia el tablero de la geopolítica tecnológica global. Ambas potencias buscan la supremacía tecnológica, no solo comercial. La disrupción en cadenas de suministro es intencional. Busca generar dependencia o independencia estratégicas. Lo que no te dicen es el fin último de estas medidas. El dominio de patentes y estándares tecnológicos globales. Esto afecta directamente cada aspecto de tu economía. Desde los precios de tu móvil hasta el coche eléctrico. Fuentes verificadas indican que la escalada continuará. La dependencia mutua se convierte en vulnerabilidad crítica. Las decisiones de hoy reconfiguran el poder mundial. El control de recursos críticos define el futuro. Esta disputa por la tecnología es la verdadera guerra. Así se decide la próxima hegemonía global. ¿Quién dominará la próxima era tecnológica global?",
+    "titulo_sugerido": "Guerra Comercial China-EE.UU.: El Objetivo Oculto de los Chips",
+    "escenas_texto": [
+      "Hay una razón por la que los medios no conectan estos puntos.",
+      "La guerra comercial China-EE.UU. ya no es solo aranceles.",
+      "Mutó hacia el control total de la tecnología futura.",
+      "El verdadero mapa real se disputa en semiconductores.",
+      "Quien los produce, controla la inteligencia artificial.",
+      "También controla la tecnología 5G y las defensas.",
+      "Washington aplicó estrictos controles de exportación de chips.",
+      "Impidiendo a China acceder a tecnología puntera.",
+      "Un movimiento táctico para ralentizar su avance tecnológico.",
+      "Beijing respondió. Nadie lo conectó públicamente.",
+      "Restringió la exportación de galio y germanio.",
+      "Minerales críticos para la fabricación de estos chips avanzados.",
+      "China domina el 60% de la producción mundial.",
+      "Esto cambia el tablero de la geopolítica tecnológica global.",
+      "Ambas potencias buscan la supremacía tecnológica, no solo comercial.",
+      "La disrupción en cadenas de suministro es intencional.",
+      "Busca generar dependencia o independencia estratégicas.",
+      "Lo que no te dicen es el fin último de estas medidas.",
+      "El dominio de patentes y estándares tecnológicos globales.",
+      "Esto afecta directamente cada aspecto de tu economía.",
+      "Desde los precios de tu móvil hasta el coche eléctrico.",
+      "Fuentes verificadas indican que la escalada continuará.",
+      "La dependencia mutua se convierte en vulnerabilidad crítica.",
+      "Las decisiones de hoy reconfiguran el poder mundial.",
+      "El control de recursos críticos define el futuro.",
+      "Esta disputa por la tecnología es la verdadera guerra.",
+      "Así se decide la próxima hegemonía global.",
+      "¿Quién dominará la próxima era tecnológica global?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Global supply chain map overlayed with semiconductor manufacturing facilities, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global supply chain map overlayed with semiconductor manufacturing facilities, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Hay una razón por la que los medios no conectan estos puntos.",
+        "pexels_query": "semiconductor supply chain map"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up of a microchip circuit board under harsh light, RAW photo, photojournalism, real photography, shot on location, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a microchip circuit board under harsh light, RAW photo, photojournalism, real photography, shot on location, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La guerra comercial China-EE.UU. ya no es solo aranceles.",
+        "pexels_query": "microchip circuit board"
+      },
+      {
+        "id": 3,
+        "prompt": "Abstract representation of data flow and server racks in a dark data center, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of data flow and server racks in a dark data center, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Mutó hacia el control total de la tecnología futura.",
+        "pexels_query": "dark server racks"
+      },
+      {
+        "id": 4,
+        "prompt": "Manufacturing facility interior with robotic arms assembling components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Manufacturing facility interior with robotic arms assembling components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El verdadero mapa real se disputa en semiconductores.",
+        "pexels_query": "robotic manufacturing facility"
+      },
+      {
+        "id": 5,
+        "prompt": "Complex network of fiber optic cables and switching equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Complex network of fiber optic cables and switching equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Quien los produce, controla la inteligencia artificial.",
+        "pexels_query": "fiber optic network"
+      },
+      {
+        "id": 6,
+        "prompt": "Satellite dish arrays against a rugged landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite dish arrays against a rugged landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "También controla la tecnología 5G y las defensas.",
+        "pexels_query": "satellite dish array"
+      },
+      {
+        "id": 7,
+        "prompt": "US Department of Commerce building exterior, federal architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "US Department of Commerce building exterior, federal architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Washington aplicó estrictos controles de exportación de chips.",
+        "pexels_query": "department of commerce building"
+      },
+      {
+        "id": 8,
+        "prompt": "Industrial facility gates with warning signs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial facility gates with warning signs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Impidiendo a China acceder a tecnología puntera.",
+        "pexels_query": "industrial exclusion zone"
+      },
+      {
+        "id": 9,
+        "prompt": "Modern high-tech factory interior with clean rooms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern high-tech factory interior with clean rooms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un movimiento táctico para ralentizar su avance tecnológico.",
+        "pexels_query": "clean room factory"
+      },
+      {
+        "id": 10,
+        "prompt": "Chinese port with cargo containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Chinese port with cargo containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Beijing respondió. Nadie lo conectó públicamente.",
+        "pexels_query": "chinese cargo port"
+      },
+      {
+        "id": 11,
+        "prompt": "Mine site for rare earth minerals, heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Mine site for rare earth minerals, heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Restringió la exportación de galio y germanio.",
+        "pexels_query": "rare earth mine"
+      },
+      {
+        "id": 12,
+        "prompt": "Close-up of a scientific lab equipment for material analysis, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a scientific lab equipment for material analysis, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Minerales críticos para la fabricación de estos chips avanzados.",
+        "pexels_query": "materials science lab"
+      },
+      {
+        "id": 13,
+        "prompt": "Map highlighting rare earth deposits globally, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map highlighting rare earth deposits globally, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "China domina el 60% de la producción mundial.",
+        "pexels_query": "rare earth map"
+      },
+      {
+        "id": 14,
+        "prompt": "Large-scale industrial processing plant for minerals, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Large-scale industrial processing plant for minerals, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero de la geopolítica tecnológica global.",
+        "pexels_query": "mineral processing plant"
+      },
+      {
+        "id": 15,
+        "prompt": "Advanced computing laboratory interior, complex machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Advanced computing laboratory interior, complex machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Ambas potencias buscan la supremacía tecnológica, no solo comercial.",
+        "pexels_query": "advanced computing lab"
+      },
+      {
+        "id": 16,
+        "prompt": "Drone view of a large container ship moving through a busy shipping lane, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Drone view of a large container ship moving through a busy shipping lane, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La disrupción en cadenas de suministro es intencional.",
+        "pexels_query": "container ship shipping lane"
+      },
+      {
+        "id": 17,
+        "prompt": "Automated factory floor producing electronics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Automated factory floor producing electronics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Busca generar dependencia o independencia estratégicas.",
+        "pexels_query": "automated electronics factory"
+      },
+      {
+        "id": 18,
+        "prompt": "Close-up of an intricate printed circuit board, high detail, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of an intricate printed circuit board, high detail, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen es el fin último de estas medidas.",
+        "pexels_query": "intricate circuit board"
+      },
+      {
+        "id": 19,
+        "prompt": "Research and development facility, sterile environment, advanced machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Research and development facility, sterile environment, advanced machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El dominio de patentes y estándares tecnológicos globales.",
+        "pexels_query": "R&D sterile lab"
+      },
+      {
+        "id": 20,
+        "prompt": "Control room with multiple screens displaying data and schematics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Control room with multiple screens displaying data and schematics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto afecta directamente cada aspecto de tu economía.",
+        "pexels_query": "data control room"
+      },
+      {
+        "id": 21,
+        "prompt": "Global economic graph showing trends and disruptions, abstract but grounded, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global economic graph showing trends and disruptions, abstract but grounded, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Desde los precios de tu móvil hasta el coche eléctrico.",
+        "pexels_query": "global economic disruption graph"
+      },
+      {
+        "id": 22,
+        "prompt": "Manufacturing robots in action on an assembly line, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Manufacturing robots in action on an assembly line, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas indican que la escalada continuará.",
+        "pexels_query": "robots assembly line"
+      },
+      {
+        "id": 23,
+        "prompt": "Abstract representation of data encryption and cyber security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of data encryption and cyber security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La dependencia mutua se convierte en vulnerabilidad crítica.",
+        "pexels_query": "cyber security data"
+      },
+      {
+        "id": 24,
+        "prompt": "Satellite image of a major industrial zone at night, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a major industrial zone at night, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las decisiones de hoy reconfiguran el poder mundial.",
+        "pexels_query": "industrial zone satellite night"
+      },
+      {
+        "id": 25,
+        "prompt": "Geopolitical map showing lines of influence and trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map showing lines of influence and trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El control de recursos críticos define el futuro.",
+        "pexels_query": "geopolitical trade map"
+      },
+      {
+        "id": 26,
+        "prompt": "Futuristic clean energy power plant, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no faces, no cgi, no digital art",
+        "prompt_visual": "Futuristic clean energy power plant, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta disputa por la tecnología es la verdadera guerra.",
+        "pexels_query": "clean energy power plant"
+      },
+      {
+        "id": 27,
+        "prompt": "Modern high-speed data center interior, sleek design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern high-speed data center interior, sleek design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Así se decide la próxima hegemonía global.",
+        "pexels_query": "modern data center"
+      },
+      {
+        "id": 28,
+        "prompt": "Global network connectivity visualization, intricate lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global network connectivity visualization, intricate lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "¿Quién dominará la próxima era tecnológica global?",
+        "pexels_query": "global network connectivity"
+      }
+    ],
+    "hooks": [
+      "Batalla por los chips",
+      "Tierras raras clave",
+      "Dominio tecnológico global"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
