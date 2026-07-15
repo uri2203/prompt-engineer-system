@@ -2874,5 +2874,240 @@
       "No estás solo, jamás."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "71acb58d-61f0-4cb4-b31b-3e4ac628db09",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A closed front door, slightly ajar, deep shadow inside, single light beam from a distant window, unsettling, grainy\", \"prompt_visual\": \"A closed front door, slightly ajar, deep shadow inside, single light beam from a distant window, unsettling, grainy\", \"texto_locucion\": \"Cierras tu puerta cada noche. ¿Por qué amaneció abierta?\", \"pexels_query\": \"ajar door shadow\"}, {\"id\": 2, \"prompt\": \"Empty hallway, faint light under a closed door, subtle distortion in door frame, unsettling, grainy\", \"prompt_visual\": \"Empty hallway, faint light under a closed door, subtle distortion in door frame, unsettling, grainy\", \"texto_locucion\": \"Dudas. Es un descuido, piensas. Siempre lo piensas.\", \"pexels_query\": \"hallway light door\"}, {\"id\": 3, \"prompt\": \"Kitchen counter, a single coffee mug, subtly shifted from its usual spot, dark shadows, unsettling, grainy\", \"prompt_visual\": \"Kitchen counter, a single coffee mug, subtly shifted from its usual spot, dark shadows, unsettling, grainy\", \"texto_locucion\": \"Un objeto movido. Un ligero cambio de sitio cada vez.\", \"pexels_query\": \"coffee mug counter\"}, {\"id\": 4, \"prompt\": \"Living room, a lone armchair facing away from the viewer, deep shadows, an unidentifiable, subtle ripple in the air above the chair, unsettling\", \"prompt_visual\": \"Living room, a lone armchair facing away from the viewer, deep shadows, an unidentifiable, subtle ripple in the air above the chair, unsettling\", \"texto_locucion\": \"Esa sensación. No estás solo. Lo sentiste antes.\", \"pexels_query\": \"armchair shadows\"}, {\"id\": 5, \"prompt\": \"A hand reaching for a light switch in a dark room, only the hand and part of the wall visible, unsettling, grainy\", \"prompt_visual\": \"A hand reaching for a light switch in a dark room, only the hand and part of the wall visible, unsettling, grainy\", \"texto_locucion\": \"Revisas. Cada rincón de tu casa. Cada sombra.\", \"pexels_query\": \"hand light switch\"}, {\"id\": 6, \"prompt\": \"Empty bedroom, bed perfectly made, heavy shadows, a feeling of coldness, unsettling, grainy\", \"prompt_visual\": \"Empty bedroom, bed perfectly made, heavy shadows, a feeling of coldness, unsettling, grainy\", \"texto_locucion\": \"Nada. Absolutamente nada. Solo el silencio absoluto.\", \"pexels_query\": \"empty bedroom dark\"}, {\"id\": 7, \"prompt\": \"Bathroom mirror, reflection of an empty, slightly fogged mirror, no person, subtle distortion, unsettling, grainy\", \"prompt_visual\": \"Bathroom mirror, reflection of an empty, slightly fogged mirror, no person, subtle distortion, unsettling, grainy\", \"texto_locucion\": \"Tu mente. El cansancio. Te convences. ¿Lo crees?\", \"pexels_query\": \"fogged mirror empty\"}, {\"id\": 8, \"prompt\": \"Staircase, dark wood, one step creaking visibly from pressure, no foot, unsettling, grainy\", \"prompt_visual\": \"Staircase, dark wood, one step creaking visibly from pressure, no foot, unsettling, grainy\", \"texto_locucion\": \"Pero un crujido. En el pasillo. Arriba, de noche.\", \"pexels_query\": \"creaking stairs dark\"}, {\"id\": 9, \"prompt\": \"Kitchen window, rain streaking down, blurred reflection of an ambiguous, tall, dark silhouette within the kitchen, unsettling, grainy\", \"prompt_visual\": \"Kitchen window, rain streaking down, blurred reflection of an ambiguous, tall, dark silhouette within the kitchen, unsettling, grainy\", \"texto_locucion\": \"Tú sabes que no había nadie más. Nadie lo vio.\", \"pexels_query\": \"rainy window reflection\"}, {\"id\": 10, \"prompt\": \"A table with two chairs, one chair slightly pulled out, suggesting recent occupation, deep shadows, unsettling, grainy\", \"prompt_visual\": \"A table with two chairs, one chair slightly pulled out, suggesting recent occupation, deep shadows, unsettling, grainy\", \"texto_locucion\": \"Te cuestionas todo. Tus propios recuerdos. Tu percepción.\", \"pexels_query\": \"table chairs shadows\"}, {\"id\": 11, \"prompt\": \"A row of books on a shelf, one book subtly protruding more than the others, deep shadows, unsettling, grainy\", \"prompt_visual\": \"A row of books on a shelf, one book subtly protruding more than the others, deep shadows, unsettling, grainy\", \"texto_locucion\": \"La cafetera desenchufada. La ventana entreabierta. Siempre.\", \"pexels_query\": \"bookshelf dark\"}, {\"id\": 12, \"prompt\": \"Dark corner of a room, a visible chill or mist in the air, deep shadow, unsettling, grainy\", \"prompt_visual\": \"Dark corner of a room, a visible chill or mist in the air, deep shadow, unsettling, grainy\", \"texto_locucion\": \"Un frío súbito en la sala. Como un aliento invisible.\", \"pexels_query\": \"cold corner mist\"}, {\"id\": 13, \"prompt\": \"A bedside lamp, turned on, but casting odd, shifting shadows on the wall, unsettling, grainy\", \"prompt_visual\": \"A bedside lamp, turned on, but casting odd, shifting shadows on the wall, unsettling, grainy\", \"texto_locucion\": \"Tus cosas ya no son tuyas. Tienen otra historia ahora.\", \"pexels_query\": \"bedside lamp shadows\"}, {\"id\": 14, \"prompt\": \"Long, empty hallway, a dark, vague, elongated shadow stretches from a doorway, unsettling, grainy\", \"prompt_visual\": \"Long, empty hallway, a dark, vague, elongated shadow stretches from a doorway, unsettling, grainy\", \"texto_locucion\": \"Algo no está bien. Lo sabes. No puedes ignorarlo.\", \"pexels_query\": \"long dark shadow\"}, {\"id\": 15, \"prompt\": \"Empty living room, television screen showing static, deep shadows, unsettling, grainy\", \"prompt_visual\": \"Empty living room, television screen showing static, deep shadows, unsettling, grainy\", \"texto_locucion\": \"El silencio se siente pesado. Cargado de lo invisible.\", \"pexels_query\": \"static TV dark\"}, {\"id\": 16, \"prompt\": \"Pillow on a bed, a very subtle, almost imperceptible indentation, as if someone just stood up, unsettling, grainy\", \"prompt_visual\": \"Pillow on a bed, a very subtle, almost imperceptible indentation, as if someone just stood up, unsettling, grainy\", \"texto_locucion\": \"Una marca. Una huella. Donde no debería existir.\", \"pexels_query\": \"pillow indentation bed\"}, {\"id\": 17, \"prompt\": \"A slightly warped or distorted reflection in a polished wooden surface, no clear image, just a menacing blur, unsettling, grainy\", \"prompt_visual\": \"A slightly warped or distorted reflection in a polished wooden surface, no clear image, just a menacing blur, unsettling, grainy\", \"texto_locucion\": \"Cada espejo. Cada reflejo. Podría ocultar algo.\", \"pexels_query\": \"distorted wood reflection\"}, {\"id\": 18, \"prompt\": \"Digital clock displaying 3:33 AM, glowing faintly in an otherwise pitch-dark room, unsettling, grainy\", \"prompt_visual\": \"Digital clock displaying 3:33 AM, glowing faintly in an otherwise pitch-dark room, unsettling, grainy\", \"texto_locucion\": \"Siempre de madrugada. En el punto más profundo del sueño.\", \"pexels_query\": \"digital clock 3:33\"}, {\"id\": 19, \"prompt\": \"Back of a vague human-like silhouette facing a dark, empty room, deep shadows, a sense of dread, unsettling, grainy\", \"prompt_visual\": \"Back of a vague human-like silhouette facing a dark, empty room, deep shadows, a sense of dread, unsettling, grainy\", \"texto_locucion\": \"Sientes una mirada. Directa. Justo detrás de ti.\", \"pexels_query\": \"back silhouette dark room\"}, {\"id\": 20, \"prompt\": \"A familiar household object (e.g., a chair) seen from a very low, unsettling angle, casting long, menacing shadows, unsettling, grainy\", \"prompt_visual\": \"A familiar household object (e.g., a chair) seen from a very low, unsettling angle, casting long, menacing shadows, unsettling, grainy\", \"texto_locucion\": \"Tu casa no es segura. Nunca lo fue realmente.\", \"pexels_query\": \"menacing chair shadow\"}, {\"id\": 21, \"prompt\": \"A half-open closet door, extreme darkness inside, a subtle, indescribable texture visible within the blackness, unsettling, grainy\", \"prompt_visual\": \"A half-open closet door, extreme darkness inside, a subtle, indescribable texture visible within the blackness, unsettling, grainy\", \"texto_locucion\": \"No estás perdiendo la razón. Estás viendo la verdad.\", \"pexels_query\": \"half open closet dark\"}, {\"id\": 22, \"prompt\": \"A dark corner of a room, faint, shimmering, human-like outline in the deepest shadow, barely visible, unsettling, grainy\", \"prompt_visual\": \"A dark corner of a room, faint, shimmering, human-like outline in the deepest shadow, barely visible, unsettling, grainy\", \"texto_locucion\": \"No puedes verlo. Pero su presencia es innegable ahora.\", \"pexels_query\": \"shimmering dark outline\"}, {\"id\": 23, \"prompt\": \"A window, curtains slightly billowing inwards despite being closed, no visible wind, unsettling, grainy\", \"prompt_visual\": \"A window, curtains slightly billowing inwards despite being closed, no visible wind, unsettling, grainy\", \"texto_locucion\": \"El aire se mueve. Aunque no haya ninguna corriente.\", \"pexels_query\": \"curtains billowing inwards\"}, {\"id\": 24, \"prompt\": \"A slightly displaced rug on a wooden floor, creating an uneven line, deep shadows, unsettling, grainy\", \"prompt_visual\": \"A slightly displaced rug on a wooden floor, creating an uneven line, deep shadows, unsettling, grainy\", \"texto_locucion\": \"Ya te siente. Sabe que ahora eres consciente de ello.\", \"pexels_query\": \"displaced rug dark\"}, {\"id\": 25, \"prompt\": \"A closed door, a subtle, almost invisible, hand-like impression appearing on the wood, no actual hand, unsettling, grainy\", \"prompt_visual\": \"A closed door, a subtle, almost invisible, hand-like impression appearing on the wood, no actual hand, unsettling, grainy\", \"texto_locucion\": \"Y el miedo más puro. Invadiendo cada espacio íntimo.\", \"pexels_query\": \"door hand impression\"}, {\"id\": 26, \"prompt\": \"A dark bedroom, a single, unidentifiable eye-like glow in the deep background shadow, subtle, unsettling, grainy\", \"prompt_visual\": \"A dark bedroom, a single, unidentifiable eye-like glow in the deep background shadow, subtle, unsettling, grainy\", \"texto_locucion\": \"Cierras tus ojos. Sabes que sigue ahí. Mirando.\", \"pexels_query\": \"eye glow dark bedroom\"}, {\"id\": 27, \"prompt\": \"An empty, slightly out-of-focus living room, deep shadows, a palpable sense of unease, unsettling, grainy\", \"prompt_visual\": \"An empty, slightly out-of-focus living room, deep shadows, a palpable sense of unease, unsettling, grainy\", \"texto_locucion\": \"¿De verdad estás solo en tu casa, cuando llega la noche?\", \"pexels_query\": \"uneasy living room\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Cierras tu puerta cada noche. ¿Por qué amaneció abierta? Dudas. Es un descuido, piensas. Siempre lo piensas. Un objeto movido. Un ligero cambio de sitio cada vez. Esa sensación. No estás solo. Lo sentiste antes. Revisas. Cada rincón de tu casa. Cada sombra. Nada. Absolutamente nada. Solo el silencio absoluto. Tu mente. El cansancio. Te convences. ¿Lo crees? Pero un crujido. En el pasillo. Arriba, de noche. Tú sabes que no había nadie más. Nadie lo vio. Te cuestionas todo. Tus propios recuerdos. Tu percepción. La cafetera desenchufada. La ventana entreabierta. Siempre. Un frío súbito en la sala. Como un aliento invisible. Tus cosas ya no son tuyas. Tienen otra historia ahora. Algo no está bien. Lo sabes. No puedes ignorarlo. El silencio se siente pesado. Cargado de lo invisible. Una marca. Una huella. Donde no debería existir. Cada espejo. Cada reflejo. Podría ocultar algo. Siempre de madrugada. En el punto más profundo del sueño. Sientes una mirada. Directa. Justo detrás de ti. Tu casa no es segura. Nunca lo fue realmente. No estás perdiendo la razón. Estás viendo la verdad. No puedes verlo. Pero su presencia es innegable ahora. El aire se mueve. Aunque no haya ninguna corriente. Ya te siente. Sabe que ahora eres consciente de ello. Y el miedo más puro. Invadiendo cada espacio íntimo. Cierras tus ojos. Sabes que sigue ahí. Mirando. ¿De verdad estás solo en tu casa, cuando llega la noche?",
+    "titulo_sugerido": "Cuando tu casa ya no es tuya",
+    "escenas_texto": [
+      "Cierras tu puerta cada noche. ¿Por qué amaneció abierta?",
+      "Dudas. Es un descuido, piensas. Siempre lo piensas.",
+      "Un objeto movido. Un ligero cambio de sitio cada vez.",
+      "Esa sensación. No estás solo. Lo sentiste antes.",
+      "Revisas. Cada rincón de tu casa. Cada sombra.",
+      "Nada. Absolutamente nada. Solo el silencio absoluto.",
+      "Tu mente. El cansancio. Te convences. ¿Lo crees?",
+      "Pero un crujido. En el pasillo. Arriba, de noche.",
+      "Tú sabes que no había nadie más. Nadie lo vio.",
+      "Te cuestionas todo. Tus propios recuerdos. Tu percepción.",
+      "La cafetera desenchufada. La ventana entreabierta. Siempre.",
+      "Un frío súbito en la sala. Como un aliento invisible.",
+      "Tus cosas ya no son tuyas. Tienen otra historia ahora.",
+      "Algo no está bien. Lo sabes. No puedes ignorarlo.",
+      "El silencio se siente pesado. Cargado de lo invisible.",
+      "Una marca. Una huella. Donde no debería existir.",
+      "Cada espejo. Cada reflejo. Podría ocultar algo.",
+      "Siempre de madrugada. En el punto más profundo del sueño.",
+      "Sientes una mirada. Directa. Justo detrás de ti.",
+      "Tu casa no es segura. Nunca lo fue realmente.",
+      "No estás perdiendo la razón. Estás viendo la verdad.",
+      "No puedes verlo. Pero su presencia es innegable ahora.",
+      "El aire se mueve. Aunque no haya ninguna corriente.",
+      "Ya te siente. Sabe que ahora eres consciente de ello.",
+      "Y el miedo más puro. Invadiendo cada espacio íntimo.",
+      "Cierras tus ojos. Sabes que sigue ahí. Mirando.",
+      "¿De verdad estás solo en tu casa, cuando llega la noche?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A closed front door, slightly ajar, deep shadow inside, single light beam from a distant window, unsettling, grainy",
+        "prompt_visual": "A closed front door, slightly ajar, deep shadow inside, single light beam from a distant window, unsettling, grainy",
+        "texto_locucion": "Cierras tu puerta cada noche. ¿Por qué amaneció abierta?",
+        "pexels_query": "ajar door shadow"
+      },
+      {
+        "id": 2,
+        "prompt": "Empty hallway, faint light under a closed door, subtle distortion in door frame, unsettling, grainy",
+        "prompt_visual": "Empty hallway, faint light under a closed door, subtle distortion in door frame, unsettling, grainy",
+        "texto_locucion": "Dudas. Es un descuido, piensas. Siempre lo piensas.",
+        "pexels_query": "hallway light door"
+      },
+      {
+        "id": 3,
+        "prompt": "Kitchen counter, a single coffee mug, subtly shifted from its usual spot, dark shadows, unsettling, grainy",
+        "prompt_visual": "Kitchen counter, a single coffee mug, subtly shifted from its usual spot, dark shadows, unsettling, grainy",
+        "texto_locucion": "Un objeto movido. Un ligero cambio de sitio cada vez.",
+        "pexels_query": "coffee mug counter"
+      },
+      {
+        "id": 4,
+        "prompt": "Living room, a lone armchair facing away from the viewer, deep shadows, an unidentifiable, subtle ripple in the air above the chair, unsettling",
+        "prompt_visual": "Living room, a lone armchair facing away from the viewer, deep shadows, an unidentifiable, subtle ripple in the air above the chair, unsettling",
+        "texto_locucion": "Esa sensación. No estás solo. Lo sentiste antes.",
+        "pexels_query": "armchair shadows"
+      },
+      {
+        "id": 5,
+        "prompt": "A hand reaching for a light switch in a dark room, only the hand and part of the wall visible, unsettling, grainy",
+        "prompt_visual": "A hand reaching for a light switch in a dark room, only the hand and part of the wall visible, unsettling, grainy",
+        "texto_locucion": "Revisas. Cada rincón de tu casa. Cada sombra.",
+        "pexels_query": "hand light switch"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty bedroom, bed perfectly made, heavy shadows, a feeling of coldness, unsettling, grainy",
+        "prompt_visual": "Empty bedroom, bed perfectly made, heavy shadows, a feeling of coldness, unsettling, grainy",
+        "texto_locucion": "Nada. Absolutamente nada. Solo el silencio absoluto.",
+        "pexels_query": "empty bedroom dark"
+      },
+      {
+        "id": 7,
+        "prompt": "Bathroom mirror, reflection of an empty, slightly fogged mirror, no person, subtle distortion, unsettling, grainy",
+        "prompt_visual": "Bathroom mirror, reflection of an empty, slightly fogged mirror, no person, subtle distortion, unsettling, grainy",
+        "texto_locucion": "Tu mente. El cansancio. Te convences. ¿Lo crees?",
+        "pexels_query": "fogged mirror empty"
+      },
+      {
+        "id": 8,
+        "prompt": "Staircase, dark wood, one step creaking visibly from pressure, no foot, unsettling, grainy",
+        "prompt_visual": "Staircase, dark wood, one step creaking visibly from pressure, no foot, unsettling, grainy",
+        "texto_locucion": "Pero un crujido. En el pasillo. Arriba, de noche.",
+        "pexels_query": "creaking stairs dark"
+      },
+      {
+        "id": 9,
+        "prompt": "Kitchen window, rain streaking down, blurred reflection of an ambiguous, tall, dark silhouette within the kitchen, unsettling, grainy",
+        "prompt_visual": "Kitchen window, rain streaking down, blurred reflection of an ambiguous, tall, dark silhouette within the kitchen, unsettling, grainy",
+        "texto_locucion": "Tú sabes que no había nadie más. Nadie lo vio.",
+        "pexels_query": "rainy window reflection"
+      },
+      {
+        "id": 10,
+        "prompt": "A table with two chairs, one chair slightly pulled out, suggesting recent occupation, deep shadows, unsettling, grainy",
+        "prompt_visual": "A table with two chairs, one chair slightly pulled out, suggesting recent occupation, deep shadows, unsettling, grainy",
+        "texto_locucion": "Te cuestionas todo. Tus propios recuerdos. Tu percepción.",
+        "pexels_query": "table chairs shadows"
+      },
+      {
+        "id": 11,
+        "prompt": "A row of books on a shelf, one book subtly protruding more than the others, deep shadows, unsettling, grainy",
+        "prompt_visual": "A row of books on a shelf, one book subtly protruding more than the others, deep shadows, unsettling, grainy",
+        "texto_locucion": "La cafetera desenchufada. La ventana entreabierta. Siempre.",
+        "pexels_query": "bookshelf dark"
+      },
+      {
+        "id": 12,
+        "prompt": "Dark corner of a room, a visible chill or mist in the air, deep shadow, unsettling, grainy",
+        "prompt_visual": "Dark corner of a room, a visible chill or mist in the air, deep shadow, unsettling, grainy",
+        "texto_locucion": "Un frío súbito en la sala. Como un aliento invisible.",
+        "pexels_query": "cold corner mist"
+      },
+      {
+        "id": 13,
+        "prompt": "A bedside lamp, turned on, but casting odd, shifting shadows on the wall, unsettling, grainy",
+        "prompt_visual": "A bedside lamp, turned on, but casting odd, shifting shadows on the wall, unsettling, grainy",
+        "texto_locucion": "Tus cosas ya no son tuyas. Tienen otra historia ahora.",
+        "pexels_query": "bedside lamp shadows"
+      },
+      {
+        "id": 14,
+        "prompt": "Long, empty hallway, a dark, vague, elongated shadow stretches from a doorway, unsettling, grainy",
+        "prompt_visual": "Long, empty hallway, a dark, vague, elongated shadow stretches from a doorway, unsettling, grainy",
+        "texto_locucion": "Algo no está bien. Lo sabes. No puedes ignorarlo.",
+        "pexels_query": "long dark shadow"
+      },
+      {
+        "id": 15,
+        "prompt": "Empty living room, television screen showing static, deep shadows, unsettling, grainy",
+        "prompt_visual": "Empty living room, television screen showing static, deep shadows, unsettling, grainy",
+        "texto_locucion": "El silencio se siente pesado. Cargado de lo invisible.",
+        "pexels_query": "static TV dark"
+      },
+      {
+        "id": 16,
+        "prompt": "Pillow on a bed, a very subtle, almost imperceptible indentation, as if someone just stood up, unsettling, grainy",
+        "prompt_visual": "Pillow on a bed, a very subtle, almost imperceptible indentation, as if someone just stood up, unsettling, grainy",
+        "texto_locucion": "Una marca. Una huella. Donde no debería existir.",
+        "pexels_query": "pillow indentation bed"
+      },
+      {
+        "id": 17,
+        "prompt": "A slightly warped or distorted reflection in a polished wooden surface, no clear image, just a menacing blur, unsettling, grainy",
+        "prompt_visual": "A slightly warped or distorted reflection in a polished wooden surface, no clear image, just a menacing blur, unsettling, grainy",
+        "texto_locucion": "Cada espejo. Cada reflejo. Podría ocultar algo.",
+        "pexels_query": "distorted wood reflection"
+      },
+      {
+        "id": 18,
+        "prompt": "Digital clock displaying 3:33 AM, glowing faintly in an otherwise pitch-dark room, unsettling, grainy",
+        "prompt_visual": "Digital clock displaying 3:33 AM, glowing faintly in an otherwise pitch-dark room, unsettling, grainy",
+        "texto_locucion": "Siempre de madrugada. En el punto más profundo del sueño.",
+        "pexels_query": "digital clock 3:33"
+      },
+      {
+        "id": 19,
+        "prompt": "Back of a vague human-like silhouette facing a dark, empty room, deep shadows, a sense of dread, unsettling, grainy",
+        "prompt_visual": "Back of a vague human-like silhouette facing a dark, empty room, deep shadows, a sense of dread, unsettling, grainy",
+        "texto_locucion": "Sientes una mirada. Directa. Justo detrás de ti.",
+        "pexels_query": "back silhouette dark room"
+      },
+      {
+        "id": 20,
+        "prompt": "A familiar household object (e.g., a chair) seen from a very low, unsettling angle, casting long, menacing shadows, unsettling, grainy",
+        "prompt_visual": "A familiar household object (e.g., a chair) seen from a very low, unsettling angle, casting long, menacing shadows, unsettling, grainy",
+        "texto_locucion": "Tu casa no es segura. Nunca lo fue realmente.",
+        "pexels_query": "menacing chair shadow"
+      },
+      {
+        "id": 21,
+        "prompt": "A half-open closet door, extreme darkness inside, a subtle, indescribable texture visible within the blackness, unsettling, grainy",
+        "prompt_visual": "A half-open closet door, extreme darkness inside, a subtle, indescribable texture visible within the blackness, unsettling, grainy",
+        "texto_locucion": "No estás perdiendo la razón. Estás viendo la verdad.",
+        "pexels_query": "half open closet dark"
+      },
+      {
+        "id": 22,
+        "prompt": "A dark corner of a room, faint, shimmering, human-like outline in the deepest shadow, barely visible, unsettling, grainy",
+        "prompt_visual": "A dark corner of a room, faint, shimmering, human-like outline in the deepest shadow, barely visible, unsettling, grainy",
+        "texto_locucion": "No puedes verlo. Pero su presencia es innegable ahora.",
+        "pexels_query": "shimmering dark outline"
+      },
+      {
+        "id": 23,
+        "prompt": "A window, curtains slightly billowing inwards despite being closed, no visible wind, unsettling, grainy",
+        "prompt_visual": "A window, curtains slightly billowing inwards despite being closed, no visible wind, unsettling, grainy",
+        "texto_locucion": "El aire se mueve. Aunque no haya ninguna corriente.",
+        "pexels_query": "curtains billowing inwards"
+      },
+      {
+        "id": 24,
+        "prompt": "A slightly displaced rug on a wooden floor, creating an uneven line, deep shadows, unsettling, grainy",
+        "prompt_visual": "A slightly displaced rug on a wooden floor, creating an uneven line, deep shadows, unsettling, grainy",
+        "texto_locucion": "Ya te siente. Sabe que ahora eres consciente de ello.",
+        "pexels_query": "displaced rug dark"
+      },
+      {
+        "id": 25,
+        "prompt": "A closed door, a subtle, almost invisible, hand-like impression appearing on the wood, no actual hand, unsettling, grainy",
+        "prompt_visual": "A closed door, a subtle, almost invisible, hand-like impression appearing on the wood, no actual hand, unsettling, grainy",
+        "texto_locucion": "Y el miedo más puro. Invadiendo cada espacio íntimo.",
+        "pexels_query": "door hand impression"
+      },
+      {
+        "id": 26,
+        "prompt": "A dark bedroom, a single, unidentifiable eye-like glow in the deep background shadow, subtle, unsettling, grainy",
+        "prompt_visual": "A dark bedroom, a single, unidentifiable eye-like glow in the deep background shadow, subtle, unsettling, grainy",
+        "texto_locucion": "Cierras tus ojos. Sabes que sigue ahí. Mirando.",
+        "pexels_query": "eye glow dark bedroom"
+      },
+      {
+        "id": 27,
+        "prompt": "An empty, slightly out-of-focus living room, deep shadows, a palpable sense of unease, unsettling, grainy",
+        "prompt_visual": "An empty, slightly out-of-focus living room, deep shadows, a palpable sense of unease, unsettling, grainy",
+        "texto_locucion": "¿De verdad estás solo en tu casa, cuando llega la noche?",
+        "pexels_query": "uneasy living room"
+      }
+    ],
+    "hooks": [
+      "Tu casa no está sola.",
+      "El silencio te miente.",
+      "¿Quién mueve tus cosas?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
