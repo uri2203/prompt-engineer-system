@@ -1675,5 +1675,240 @@
       "¿Qué heredaste realmente?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "f041322d-0d31-4944-8ce7-15c247d07fda",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"empty living room, flickering dim light, unsettling quiet\", \"prompt_visual\": \"empty living room, flickering dim light, unsettling quiet\", \"texto_locucion\": \"Las noches en casa no eran iguales hace un tiempo.\", \"pexels_query\": \"dark living room\"}, {\"id\": 2, \"prompt\": \"dark hallway, subtle mist on floor, cold atmosphere\", \"prompt_visual\": \"dark hallway, subtle mist on floor, cold atmosphere\", \"texto_locucion\": \"Sentiste una corriente fría donde no había ventanas.\", \"pexels_query\": \"dark hallway\"}, {\"id\": 3, \"prompt\": \"kitchen table, single coffee mug slightly displaced, shadow\", \"prompt_visual\": \"kitchen table, single coffee mug slightly displaced, shadow\", \"texto_locucion\": \"Objetos cambiaban de lugar sin que nadie los moviera.\", \"pexels_query\": \"kitchen table\"}, {\"id\": 4, \"prompt\": \"bedroom interior, closed door, faint blurry shadow under door\", \"prompt_visual\": \"bedroom interior, closed door, faint blurry shadow under door\", \"texto_locucion\": \"Pequeños susurros rompían el silencio absoluto de la noche.\", \"pexels_query\": \"dark bedroom\"}, {\"id\": 5, \"prompt\": \"blurry silhouettes of family members, backs turned, unsettling posture\", \"prompt_visual\": \"blurry silhouettes of family members, backs turned, unsettling posture\", \"texto_locucion\": \"Tu familia empezó a actuar diferente, casi ajena.\", \"pexels_query\": \"family silhouettes\"}, {\"id\": 6, \"prompt\": \"eyes in shadow, barely visible, cold, emotionless, piercing\", \"prompt_visual\": \"eyes in shadow, barely visible, cold, emotionless, piercing\", \"texto_locucion\": \"Sus miradas a veces no te reconocían, eran distantes.\", \"pexels_query\": \"shadow eyes\"}, {\"id\": 7, \"prompt\": \"staircase leading to darkness, single step creaking, an unsettling presence\", \"prompt_visual\": \"staircase leading to darkness, single step creaking, an unsettling presence\", \"texto_locucion\": \"Entonces comprendiste que algo no está bien en tu hogar.\", \"pexels_query\": \"dark staircase\"}, {\"id\": 8, \"prompt\": \"tight, oppressive room, low ceiling, sense of claustrophobia\", \"prompt_visual\": \"tight, oppressive room, low ceiling, sense of claustrophobia\", \"texto_locucion\": \"Lo sentiste antes, esa opresión, ese aire pesado.\", \"pexels_query\": \"claustrophobic room\"}, {\"id\": 9, \"prompt\": \"blurry dark silhouette at end of corridor, dissipating mist\", \"prompt_visual\": \"blurry dark silhouette at end of corridor, dissipating mist\", \"texto_locucion\": \"Una figura en el pasillo, solo por un instante, se desvaneció.\", \"pexels_query\": \"dark silhouette\"}, {\"id\": 10, \"prompt\": \"doorway with light spilling from a room, a long, thin shadow\", \"prompt_visual\": \"doorway with light spilling from a room, a long, thin shadow\", \"texto_locucion\": \"Creíste que era el sueño, pero la luz estaba encendida.\", \"pexels_query\": \"door light shadow\"}, {\"id\": 11, \"prompt\": \"pillow on bed, faint, almost invisible symbols drawn underneath\", \"prompt_visual\": \"pillow on bed, faint, almost invisible symbols drawn underneath\", \"texto_locucion\": \"Encontraste marcas extrañas bajo tu almohada, como símbolos.\", \"pexels_query\": \"pillow symbols\"}, {\"id\": 12, \"prompt\": \"window view at dusk, ominous purple and orange sky, dark trees\", \"prompt_visual\": \"window view at dusk, ominous purple and orange sky, dark trees\", \"texto_locucion\": \"No puedes ignorarlo, la tensión crece cada atardecer.\", \"pexels_query\": \"dusk window\"}, {\"id\": 13, \"prompt\": \"empty room, single chair facing wall, extreme contrast lighting\", \"prompt_visual\": \"empty room, single chair facing wall, extreme contrast lighting\", \"texto_locucion\": \"Nadie lo vio, solo tú percibes la amenaza invisible.\", \"pexels_query\": \"empty chair room\"}, {\"id\": 14, \"prompt\": \"blurred faces in old family photo, one face particularly distorted\", \"prompt_visual\": \"blurred faces in old family photo, one face particularly distorted\", \"texto_locucion\": \"El aire se enrarecía al mencionar ciertos nombres familiares.\", \"pexels_query\": \"old family photo\"}, {\"id\": 15, \"prompt\": \"ancient grimoire, open page, indecipherable arcane symbols, shadowy hand\", \"prompt_visual\": \"ancient grimoire, open page, indecipherable arcane symbols, shadowy hand\", \"texto_locucion\": \"Libros viejos aparecían abiertos en páginas prohibidas.\", \"pexels_query\": \"old book symbols\"}, {\"id\": 16, \"prompt\": \"dark bedroom, faint, almost imperceptible smoke, disturbing atmosphere\", \"prompt_visual\": \"dark bedroom, faint, almost imperceptible smoke, disturbing atmosphere\", \"texto_locucion\": \"Un olor dulce y pútrido a la vez llenaba tu cuarto.\", \"pexels_query\": \"dark room smoke\"}, {\"id\": 17, \"prompt\": \"cat's eyes in darkness, wide and fearful, looking off-camera\", \"prompt_visual\": \"cat's eyes in darkness, wide and fearful, looking off-camera\", \"texto_locucion\": \"Los animales de la casa te miraban con miedo constante.\", \"pexels_query\": \"cat eyes dark\"}, {\"id\": 18, \"prompt\": \"empty nursery room, rocking horse slightly swaying, chilling atmosphere\", \"prompt_visual\": \"empty nursery room, rocking horse slightly swaying, chilling atmosphere\", \"texto_locucion\": \"Escuchabas risas lejanas, pero estabas completamente solo.\", \"pexels_query\": \"empty nursery\"}, {\"id\": 19, \"prompt\": \"old, tarnished mirror, distorted reflection of empty room, subtle eyes\", \"prompt_visual\": \"old, tarnished mirror, distorted reflection of empty room, subtle eyes\", \"texto_locucion\": \"Tú sabes que algo te observa desde el espejo antiguo.\", \"pexels_query\": \"old mirror reflection\"}, {\"id\": 20, \"prompt\": \"cracked wall, faint, almost human-like vein patterns, whispering quality\", \"prompt_visual\": \"cracked wall, faint, almost human-like vein patterns, whispering quality\", \"texto_locucion\": \"La casa susurra secretos que nadie debería escuchar jamás.\", \"pexels_query\": \"cracked wall texture\"}, {\"id\": 21, \"prompt\": \"bedside lamp, only source of light in dark room, extreme shadows\", \"prompt_visual\": \"bedside lamp, only source of light in dark room, extreme shadows\", \"texto_locucion\": \"Ahora duermes con una luz encendida, temiendo la oscuridad.\", \"pexels_query\": \"bedside lamp\"}, {\"id\": 22, \"prompt\": \"empty desk, a single diary open, an unseen presence hovering\", \"prompt_visual\": \"empty desk, a single diary open, an unseen presence hovering\", \"texto_locucion\": \"Sospechas que no estabas solo en tus más íntimos pensamientos.\", \"pexels_query\": \"open diary desk\"}, {\"id\": 23, \"prompt\": \"corner of a room, deep shadows, a form shifting at the edge of vision\", \"prompt_visual\": \"corner of a room, deep shadows, a form shifting at the edge of vision\", \"texto_locucion\": \"Las sombras se mueven cuando apartas la vista un segundo.\", \"pexels_query\": \"moving shadows\"}, {\"id\": 24, \"prompt\": \"a single drop of dark liquid on an old, textured surface, ominous\", \"prompt_visual\": \"a single drop of dark liquid on an old, textured surface, ominous\", \"texto_locucion\": \"Incluso la sangre de tu familia ya no se siente igual.\", \"pexels_query\": \"dark liquid drop\"}, {\"id\": 25, \"prompt\": \"ancient wooden box, slightly ajar, deep shadows inside, emanating darkness\", \"prompt_visual\": \"ancient wooden box, slightly ajar, deep shadows inside, emanating darkness\", \"texto_locucion\": \"Algo antiguo ha despertado y te reclama como suyo.\", \"pexels_query\": \"old wooden box\"}, {\"id\": 26, \"prompt\": \"doorway, a distorted, shadowy hand reaching from the darkness\", \"prompt_visual\": \"doorway, a distorted, shadowy hand reaching from the darkness\", \"texto_locucion\": \"¿Cómo luchar contra lo que siempre ha estado en casa?\", \"pexels_query\": \"shadow hand door\"}, {\"id\": 27, \"prompt\": \"reflection in water, distorted, dark, almost monstrous, hints of a face\", \"prompt_visual\": \"reflection in water, distorted, dark, almost monstrous, hints of a face\", \"texto_locucion\": \"Contra lo que comparte tu misma sangre y tu pasado?\", \"pexels_query\": \"distorted water reflection\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Las noches en casa no eran iguales hace un tiempo. Sentiste una corriente fría donde no había ventanas. Objetos cambiaban de lugar sin que nadie los moviera. Pequeños susurros rompían el silencio absoluto de la noche. Tu familia empezó a actuar diferente, casi ajena. Sus miradas a veces no te reconocían, eran distantes. Entonces comprendiste que algo no está bien en tu hogar. Lo sentiste antes, esa opresión, ese aire pesado. Una figura en el pasillo, solo por un instante, se desvaneció. Creíste que era el sueño, pero la luz estaba encendida. Encontraste marcas extrañas bajo tu almohada, como símbolos. No puedes ignorarlo, la tensión crece cada atardecer. Nadie lo vio, solo tú percibes la amenaza invisible. El aire se enrarecía al mencionar ciertos nombres familiares. Libros viejos aparecían abiertos en páginas prohibidas. Un olor dulce y pútrido a la vez llenaba tu cuarto. Los animales de la casa te miraban con miedo constante. Escuchabas risas lejanas, pero estabas completamente solo. Tú sabes que algo te observa desde el espejo antiguo. La casa susurra secretos que nadie debería escuchar jamás. Ahora duermes con una luz encendida, temiendo la oscuridad. Sospechas que no estabas solo en tus más íntimos pensamientos. Las sombras se mueven cuando apartas la vista un segundo. Incluso la sangre de tu familia ya no se siente igual. Algo antiguo ha despertado y te reclama como suyo. ¿Cómo luchar contra lo que siempre ha estado en casa? Contra lo que comparte tu misma sangre y tu pasado?",
+    "titulo_sugerido": "La Casa Que Te Observa: Secretos De Sangre",
+    "escenas_texto": [
+      "Las noches en casa no eran iguales hace un tiempo.",
+      "Sentiste una corriente fría donde no había ventanas.",
+      "Objetos cambiaban de lugar sin que nadie los moviera.",
+      "Pequeños susurros rompían el silencio absoluto de la noche.",
+      "Tu familia empezó a actuar diferente, casi ajena.",
+      "Sus miradas a veces no te reconocían, eran distantes.",
+      "Entonces comprendiste que algo no está bien en tu hogar.",
+      "Lo sentiste antes, esa opresión, ese aire pesado.",
+      "Una figura en el pasillo, solo por un instante, se desvaneció.",
+      "Creíste que era el sueño, pero la luz estaba encendida.",
+      "Encontraste marcas extrañas bajo tu almohada, como símbolos.",
+      "No puedes ignorarlo, la tensión crece cada atardecer.",
+      "Nadie lo vio, solo tú percibes la amenaza invisible.",
+      "El aire se enrarecía al mencionar ciertos nombres familiares.",
+      "Libros viejos aparecían abiertos en páginas prohibidas.",
+      "Un olor dulce y pútrido a la vez llenaba tu cuarto.",
+      "Los animales de la casa te miraban con miedo constante.",
+      "Escuchabas risas lejanas, pero estabas completamente solo.",
+      "Tú sabes que algo te observa desde el espejo antiguo.",
+      "La casa susurra secretos que nadie debería escuchar jamás.",
+      "Ahora duermes con una luz encendida, temiendo la oscuridad.",
+      "Sospechas que no estabas solo en tus más íntimos pensamientos.",
+      "Las sombras se mueven cuando apartas la vista un segundo.",
+      "Incluso la sangre de tu familia ya no se siente igual.",
+      "Algo antiguo ha despertado y te reclama como suyo.",
+      "¿Cómo luchar contra lo que siempre ha estado en casa?",
+      "Contra lo que comparte tu misma sangre y tu pasado?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "empty living room, flickering dim light, unsettling quiet",
+        "prompt_visual": "empty living room, flickering dim light, unsettling quiet",
+        "texto_locucion": "Las noches en casa no eran iguales hace un tiempo.",
+        "pexels_query": "dark living room"
+      },
+      {
+        "id": 2,
+        "prompt": "dark hallway, subtle mist on floor, cold atmosphere",
+        "prompt_visual": "dark hallway, subtle mist on floor, cold atmosphere",
+        "texto_locucion": "Sentiste una corriente fría donde no había ventanas.",
+        "pexels_query": "dark hallway"
+      },
+      {
+        "id": 3,
+        "prompt": "kitchen table, single coffee mug slightly displaced, shadow",
+        "prompt_visual": "kitchen table, single coffee mug slightly displaced, shadow",
+        "texto_locucion": "Objetos cambiaban de lugar sin que nadie los moviera.",
+        "pexels_query": "kitchen table"
+      },
+      {
+        "id": 4,
+        "prompt": "bedroom interior, closed door, faint blurry shadow under door",
+        "prompt_visual": "bedroom interior, closed door, faint blurry shadow under door",
+        "texto_locucion": "Pequeños susurros rompían el silencio absoluto de la noche.",
+        "pexels_query": "dark bedroom"
+      },
+      {
+        "id": 5,
+        "prompt": "blurry silhouettes of family members, backs turned, unsettling posture",
+        "prompt_visual": "blurry silhouettes of family members, backs turned, unsettling posture",
+        "texto_locucion": "Tu familia empezó a actuar diferente, casi ajena.",
+        "pexels_query": "family silhouettes"
+      },
+      {
+        "id": 6,
+        "prompt": "eyes in shadow, barely visible, cold, emotionless, piercing",
+        "prompt_visual": "eyes in shadow, barely visible, cold, emotionless, piercing",
+        "texto_locucion": "Sus miradas a veces no te reconocían, eran distantes.",
+        "pexels_query": "shadow eyes"
+      },
+      {
+        "id": 7,
+        "prompt": "staircase leading to darkness, single step creaking, an unsettling presence",
+        "prompt_visual": "staircase leading to darkness, single step creaking, an unsettling presence",
+        "texto_locucion": "Entonces comprendiste que algo no está bien en tu hogar.",
+        "pexels_query": "dark staircase"
+      },
+      {
+        "id": 8,
+        "prompt": "tight, oppressive room, low ceiling, sense of claustrophobia",
+        "prompt_visual": "tight, oppressive room, low ceiling, sense of claustrophobia",
+        "texto_locucion": "Lo sentiste antes, esa opresión, ese aire pesado.",
+        "pexels_query": "claustrophobic room"
+      },
+      {
+        "id": 9,
+        "prompt": "blurry dark silhouette at end of corridor, dissipating mist",
+        "prompt_visual": "blurry dark silhouette at end of corridor, dissipating mist",
+        "texto_locucion": "Una figura en el pasillo, solo por un instante, se desvaneció.",
+        "pexels_query": "dark silhouette"
+      },
+      {
+        "id": 10,
+        "prompt": "doorway with light spilling from a room, a long, thin shadow",
+        "prompt_visual": "doorway with light spilling from a room, a long, thin shadow",
+        "texto_locucion": "Creíste que era el sueño, pero la luz estaba encendida.",
+        "pexels_query": "door light shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "pillow on bed, faint, almost invisible symbols drawn underneath",
+        "prompt_visual": "pillow on bed, faint, almost invisible symbols drawn underneath",
+        "texto_locucion": "Encontraste marcas extrañas bajo tu almohada, como símbolos.",
+        "pexels_query": "pillow symbols"
+      },
+      {
+        "id": 12,
+        "prompt": "window view at dusk, ominous purple and orange sky, dark trees",
+        "prompt_visual": "window view at dusk, ominous purple and orange sky, dark trees",
+        "texto_locucion": "No puedes ignorarlo, la tensión crece cada atardecer.",
+        "pexels_query": "dusk window"
+      },
+      {
+        "id": 13,
+        "prompt": "empty room, single chair facing wall, extreme contrast lighting",
+        "prompt_visual": "empty room, single chair facing wall, extreme contrast lighting",
+        "texto_locucion": "Nadie lo vio, solo tú percibes la amenaza invisible.",
+        "pexels_query": "empty chair room"
+      },
+      {
+        "id": 14,
+        "prompt": "blurred faces in old family photo, one face particularly distorted",
+        "prompt_visual": "blurred faces in old family photo, one face particularly distorted",
+        "texto_locucion": "El aire se enrarecía al mencionar ciertos nombres familiares.",
+        "pexels_query": "old family photo"
+      },
+      {
+        "id": 15,
+        "prompt": "ancient grimoire, open page, indecipherable arcane symbols, shadowy hand",
+        "prompt_visual": "ancient grimoire, open page, indecipherable arcane symbols, shadowy hand",
+        "texto_locucion": "Libros viejos aparecían abiertos en páginas prohibidas.",
+        "pexels_query": "old book symbols"
+      },
+      {
+        "id": 16,
+        "prompt": "dark bedroom, faint, almost imperceptible smoke, disturbing atmosphere",
+        "prompt_visual": "dark bedroom, faint, almost imperceptible smoke, disturbing atmosphere",
+        "texto_locucion": "Un olor dulce y pútrido a la vez llenaba tu cuarto.",
+        "pexels_query": "dark room smoke"
+      },
+      {
+        "id": 17,
+        "prompt": "cat's eyes in darkness, wide and fearful, looking off-camera",
+        "prompt_visual": "cat's eyes in darkness, wide and fearful, looking off-camera",
+        "texto_locucion": "Los animales de la casa te miraban con miedo constante.",
+        "pexels_query": "cat eyes dark"
+      },
+      {
+        "id": 18,
+        "prompt": "empty nursery room, rocking horse slightly swaying, chilling atmosphere",
+        "prompt_visual": "empty nursery room, rocking horse slightly swaying, chilling atmosphere",
+        "texto_locucion": "Escuchabas risas lejanas, pero estabas completamente solo.",
+        "pexels_query": "empty nursery"
+      },
+      {
+        "id": 19,
+        "prompt": "old, tarnished mirror, distorted reflection of empty room, subtle eyes",
+        "prompt_visual": "old, tarnished mirror, distorted reflection of empty room, subtle eyes",
+        "texto_locucion": "Tú sabes que algo te observa desde el espejo antiguo.",
+        "pexels_query": "old mirror reflection"
+      },
+      {
+        "id": 20,
+        "prompt": "cracked wall, faint, almost human-like vein patterns, whispering quality",
+        "prompt_visual": "cracked wall, faint, almost human-like vein patterns, whispering quality",
+        "texto_locucion": "La casa susurra secretos que nadie debería escuchar jamás.",
+        "pexels_query": "cracked wall texture"
+      },
+      {
+        "id": 21,
+        "prompt": "bedside lamp, only source of light in dark room, extreme shadows",
+        "prompt_visual": "bedside lamp, only source of light in dark room, extreme shadows",
+        "texto_locucion": "Ahora duermes con una luz encendida, temiendo la oscuridad.",
+        "pexels_query": "bedside lamp"
+      },
+      {
+        "id": 22,
+        "prompt": "empty desk, a single diary open, an unseen presence hovering",
+        "prompt_visual": "empty desk, a single diary open, an unseen presence hovering",
+        "texto_locucion": "Sospechas que no estabas solo en tus más íntimos pensamientos.",
+        "pexels_query": "open diary desk"
+      },
+      {
+        "id": 23,
+        "prompt": "corner of a room, deep shadows, a form shifting at the edge of vision",
+        "prompt_visual": "corner of a room, deep shadows, a form shifting at the edge of vision",
+        "texto_locucion": "Las sombras se mueven cuando apartas la vista un segundo.",
+        "pexels_query": "moving shadows"
+      },
+      {
+        "id": 24,
+        "prompt": "a single drop of dark liquid on an old, textured surface, ominous",
+        "prompt_visual": "a single drop of dark liquid on an old, textured surface, ominous",
+        "texto_locucion": "Incluso la sangre de tu familia ya no se siente igual.",
+        "pexels_query": "dark liquid drop"
+      },
+      {
+        "id": 25,
+        "prompt": "ancient wooden box, slightly ajar, deep shadows inside, emanating darkness",
+        "prompt_visual": "ancient wooden box, slightly ajar, deep shadows inside, emanating darkness",
+        "texto_locucion": "Algo antiguo ha despertado y te reclama como suyo.",
+        "pexels_query": "old wooden box"
+      },
+      {
+        "id": 26,
+        "prompt": "doorway, a distorted, shadowy hand reaching from the darkness",
+        "prompt_visual": "doorway, a distorted, shadowy hand reaching from the darkness",
+        "texto_locucion": "¿Cómo luchar contra lo que siempre ha estado en casa?",
+        "pexels_query": "shadow hand door"
+      },
+      {
+        "id": 27,
+        "prompt": "reflection in water, distorted, dark, almost monstrous, hints of a face",
+        "prompt_visual": "reflection in water, distorted, dark, almost monstrous, hints of a face",
+        "texto_locucion": "Contra lo que comparte tu misma sangre y tu pasado?",
+        "pexels_query": "distorted water reflection"
+      }
+    ],
+    "hooks": [
+      "La casa tiene otros dueños.",
+      "Tu sangre, tu condena.",
+      "Lo familiar te observa."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
