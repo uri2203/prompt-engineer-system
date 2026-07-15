@@ -3352,5 +3352,240 @@
       "Tu casa no está sola."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "7585a99f-65dd-4c93-827b-a5e9759a2ad9",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark, empty hallway, a single chair slightly off-center, ominous shadows, deep contrast\", \"prompt_visual\": \"Dark, empty hallway, a single chair slightly off-center, ominous shadows, deep contrast\", \"texto_locucion\": \"Esa noche supiste, tu casa no era tu casa.\", \"pexels_query\": \"dark hallway chair\"}, {\"id\": 2, \"prompt\": \"A familiar living room, unsettling stillness, subtle distortion in furniture lines, low light\", \"prompt_visual\": \"A familiar living room, unsettling stillness, subtle distortion in furniture lines, low light\", \"texto_locucion\": \"Algo había cambiado, pero no sabías qué.\", \"pexels_query\": \"still living room\"}, {\"id\": 3, \"prompt\": \"Close-up of a porcelain figurine on a dusty shelf, slightly askew, deep shadows creeping\", \"prompt_visual\": \"Close-up of a porcelain figurine on a dusty shelf, slightly askew, deep shadows creeping\", \"texto_locucion\": \"Los objetos se movían; lo jurarías.\", \"pexels_query\": \"figurine askew shelf\"}, {\"id\": 4, \"prompt\": \"A dark, empty doorway leading to another room, extreme chiaroscuro, unsettling void\", \"prompt_visual\": \"A dark, empty doorway leading to another room, extreme chiaroscuro, unsettling void\", \"texto_locucion\": \"Tu mente buscaba una explicación lógica.\", \"pexels_query\": \"empty dark doorway\"}, {\"id\": 5, \"prompt\": \"Corner of a dark room, shadows forming an indistinct, almost human-like shape, grainy texture\", \"prompt_visual\": \"Corner of a dark room, shadows forming an indistinct, almost human-like shape, grainy texture\", \"texto_locucion\": \"Pero los detalles no encajaban bien.\", \"pexels_query\": \"shadow figure corner\"}, {\"id\": 6, \"prompt\": \"A long, dim corridor, a faint, almost imperceptible light source at the far end, extreme depth\", \"prompt_visual\": \"A long, dim corridor, a faint, almost imperceptible light source at the far end, extreme depth\", \"texto_locucion\": \"Sentías una mirada constante en tu nuca.\", \"pexels_query\": \"dim corridor long\"}, {\"id\": 7, \"prompt\": \"Slight blur on the edge of a frame, suggesting movement in peripheral vision, dark environment\", \"prompt_visual\": \"Slight blur on the edge of a frame, suggesting movement in peripheral vision, dark environment\", \"texto_locucion\": \"Siempre al borde de tu visión periférica.\", \"pexels_query\": \"peripheral blur dark\"}, {\"id\": 8, \"prompt\": \"Empty bedroom, bed unmade, a single, distorted shadow stretching from a closet door\", \"prompt_visual\": \"Empty bedroom, bed unmade, a single, distorted shadow stretching from a closet door\", \"texto_locucion\": \"Nadie más lo notaba, solo tú.\", \"pexels_query\": \"shadow bedroom closet\"}, {\"id\": 9, \"prompt\": \"Close-up on a silent, old wall clock, frozen in time, reflecting dark, empty room\", \"prompt_visual\": \"Close-up on a silent, old wall clock, frozen in time, reflecting dark, empty room\", \"texto_locucion\": \"El silencio absoluto se volvió un tormento.\", \"pexels_query\": \"silent wall clock\"}, {\"id\": 10, \"prompt\": \"A slightly opened door, revealing impenetrable darkness within, no light seeping out\", \"prompt_visual\": \"A slightly opened door, revealing impenetrable darkness within, no light seeping out\", \"texto_locucion\": \"Como si la casa contuviera su aliento.\", \"pexels_query\": \"slightly opened door\"}, {\"id\": 11, \"prompt\": \"A stack of old, unmarked files on a desk, partially obscured by shadow, mysterious documents\", \"prompt_visual\": \"A stack of old, unmarked files on a desk, partially obscured by shadow, mysterious documents\", \"texto_locucion\": \"Hay casos similares, ocultos, sin resolver.\", \"pexels_query\": \"unmarked files desk\"}, {\"id\": 12, \"prompt\": \"Empty room, walls subtly curving inward, creating a sense of unease and distortion\", \"prompt_visual\": \"Empty room, walls subtly curving inward, creating a sense of unease and distortion\", \"texto_locucion\": \"Gente que reporta un espacio alterado.\", \"pexels_query\": \"curving walls room\"}, {\"id\": 13, \"prompt\": \"Long, narrow passage, repeating patterns on walls, creating an endless, shifting corridor illusion\", \"prompt_visual\": \"Long, narrow passage, repeating patterns on walls, creating an endless, shifting corridor illusion\", \"texto_locucion\": \"Dimensiones que cambian imperceptiblemente cada noche.\", \"pexels_query\": \"endless shifting corridor\"}, {\"id\": 14, \"prompt\": \"Dark hallway, a new, small, unnerving door appearing where none was before, very subtle\", \"prompt_visual\": \"Dark hallway, a new, small, unnerving door appearing where none was before, very subtle\", \"texto_locucion\": \"Pasillos más largos. Puertas que no estaban.\", \"pexels_query\": \"new door hallway\"}, {\"id\": 15, \"prompt\": \"An empty space, but with a palpable sense of an unseen entity, cold blue tint\", \"prompt_visual\": \"An empty space, but with a palpable sense of an unseen entity, cold blue tint\", \"texto_locucion\": \"Y esa sensación de que no estabas solo.\", \"pexels_query\": \"unseen entity presence\"}, {\"id\": 16, \"prompt\": \"Shadowy outline of a figure reflected on a polished floor, but no source for the shadow\", \"prompt_visual\": \"Shadowy outline of a figure reflected on a polished floor, but no source for the shadow\", \"texto_locucion\": \"Como un huésped invisible siempre presente.\", \"pexels_query\": \"shadow outline no source\"}, {\"id\": 17, \"prompt\": \"A single, faint light bulb flickering erratically in a completely dark room, barely illuminating anything\", \"prompt_visual\": \"A single, faint light bulb flickering erratically in a completely dark room, barely illuminating anything\", \"texto_locucion\": \"Se nutre de tu incertidumbre, de tu miedo.\", \"pexels_query\": \"flickering light dark\"}, {\"id\": 18, \"prompt\": \"A hand-drawn map of a house, lines twisting and changing, becoming incorrect and disorienting\", \"prompt_visual\": \"A hand-drawn map of a house, lines twisting and changing, becoming incorrect and disorienting\", \"texto_locucion\": \"Lo sentiste antes, sabes que es real.\", \"pexels_query\": \"distorted house map\"}, {\"id\": 19, \"prompt\": \"Long, exaggerated shadows cast indoors by an invisible light source, stretching across floor\", \"prompt_visual\": \"Long, exaggerated shadows cast indoors by an invisible light source, stretching across floor\", \"texto_locucion\": \"Ves las sombras alargarse, aunque no hay sol.\", \"pexels_query\": \"exaggerated indoor shadows\"}, {\"id\": 20, \"prompt\": \"A window reflecting a distorted, empty version of the room, as if the house itself has eyes\", \"prompt_visual\": \"A window reflecting a distorted, empty version of the room, as if the house itself has eyes\", \"texto_locucion\": \"Tu propio hogar te observa fijamente ahora.\", \"pexels_query\": \"distorted room reflection\"}, {\"id\": 21, \"prompt\": \"A thermometer displaying an unusually low temperature in an indoor setting, eerie coldness\", \"prompt_visual\": \"A thermometer displaying an unusually low temperature in an indoor setting, eerie coldness\", \"texto_locucion\": \"La temperatura desciende en ciertas habitaciones.\", \"pexels_query\": \"cold indoor thermometer\"}, {\"id\": 22, \"prompt\": \"Close-up on a wall texture, subtle pareidolia forming a whispering mouth or eye shape\", \"prompt_visual\": \"Close-up on a wall texture, subtle pareidolia forming a whispering mouth or eye shape\", \"texto_locucion\": \"Susurros apenas audibles que te llaman a veces.\", \"pexels_query\": \"pareidolia wall texture\"}, {\"id\": 23, \"prompt\": \"A pair of distant, glowing eyes in profound darkness, barely visible, unsettling and watchful\", \"prompt_visual\": \"A pair of distant, glowing eyes in profound darkness, barely visible, unsettling and watchful\", \"texto_locucion\": \"No puedes ignorarlo, está dentro de ti.\", \"pexels_query\": \"glowing eyes darkness\"}, {\"id\": 24, \"prompt\": \"A house plan, but with rooms connected illogically, new passages, old ones gone, confusing\", \"prompt_visual\": \"A house plan, but with rooms connected illogically, new passages, old ones gone, confusing\", \"texto_locucion\": \"El mapa de tu casa ya no funciona.\", \"pexels_query\": \"illogical house plan\"}, {\"id\": 25, \"prompt\": \"An everyday object, like a coat rack, casting a long, skeletal shadow, appearing menacing\", \"prompt_visual\": \"An everyday object, like a coat rack, casting a long, skeletal shadow, appearing menacing\", \"texto_locucion\": \"Cada rincón es una trampa silenciosa ahora.\", \"pexels_query\": \"skeletal coat rack\"}, {\"id\": 26, \"prompt\": \"A heavily locked front door, deadbolts visible, yet a sliver of light from underneath is suspicious\", \"prompt_visual\": \"A heavily locked front door, deadbolts visible, yet a sliver of light from underneath is suspicious\", \"texto_locucion\": \"¿Cierras bien la puerta cada noche, verdad?\", \"pexels_query\": \"locked front door light\"}, {\"id\": 27, \"prompt\": \"A dark, indistinguishable doorway in a familiar room, appearing as if it's always been there, but shouldn't be\", \"prompt_visual\": \"A dark, indistinguishable doorway in a familiar room, appearing as if it's always been there, but shouldn't be\", \"texto_locucion\": \"¿Y si la entrada principal es otra ahora?\", \"pexels_query\": \"new doorway familiar\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Esa noche supiste, tu casa no era tu casa. Algo había cambiado, pero no sabías qué. Los objetos se movían; lo jurarías. Tu mente buscaba una explicación lógica. Pero los detalles no encajaban bien. Sentías una mirada constante en tu nuca. Siempre al borde de tu visión periférica. Nadie más lo notaba, solo tú. El silencio absoluto se volvió un tormento. Como si la casa contuviera su aliento. Hay casos similares, ocultos, sin resolver. Gente que reporta un espacio alterado. Dimensiones que cambian imperceptiblemente cada noche. Pasillos más largos. Puertas que no estaban. Y esa sensación de que no estabas solo. Como un huésped invisible siempre presente. Se nutre de tu incertidumbre, de tu miedo. Lo sentiste antes, sabes que es real. Ves las sombras alargarse, aunque no hay sol. Tu propio hogar te observa fijamente ahora. La temperatura desciende en ciertas habitaciones. Susurros apenas audibles que te llaman a veces. No puedes ignorarlo, está dentro de ti. El mapa de tu casa ya no funciona. Cada rincón es una trampa silenciosa ahora. ¿Cierras bien la puerta cada noche, verdad? ¿Y si la entrada principal es otra ahora?",
+    "titulo_sugerido": "Tu Casa ya NO es Tuya",
+    "escenas_texto": [
+      "Esa noche supiste, tu casa no era tu casa.",
+      "Algo había cambiado, pero no sabías qué.",
+      "Los objetos se movían; lo jurarías.",
+      "Tu mente buscaba una explicación lógica.",
+      "Pero los detalles no encajaban bien.",
+      "Sentías una mirada constante en tu nuca.",
+      "Siempre al borde de tu visión periférica.",
+      "Nadie más lo notaba, solo tú.",
+      "El silencio absoluto se volvió un tormento.",
+      "Como si la casa contuviera su aliento.",
+      "Hay casos similares, ocultos, sin resolver.",
+      "Gente que reporta un espacio alterado.",
+      "Dimensiones que cambian imperceptiblemente cada noche.",
+      "Pasillos más largos. Puertas que no estaban.",
+      "Y esa sensación de que no estabas solo.",
+      "Como un huésped invisible siempre presente.",
+      "Se nutre de tu incertidumbre, de tu miedo.",
+      "Lo sentiste antes, sabes que es real.",
+      "Ves las sombras alargarse, aunque no hay sol.",
+      "Tu propio hogar te observa fijamente ahora.",
+      "La temperatura desciende en ciertas habitaciones.",
+      "Susurros apenas audibles que te llaman a veces.",
+      "No puedes ignorarlo, está dentro de ti.",
+      "El mapa de tu casa ya no funciona.",
+      "Cada rincón es una trampa silenciosa ahora.",
+      "¿Cierras bien la puerta cada noche, verdad?",
+      "¿Y si la entrada principal es otra ahora?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark, empty hallway, a single chair slightly off-center, ominous shadows, deep contrast",
+        "prompt_visual": "Dark, empty hallway, a single chair slightly off-center, ominous shadows, deep contrast",
+        "texto_locucion": "Esa noche supiste, tu casa no era tu casa.",
+        "pexels_query": "dark hallway chair"
+      },
+      {
+        "id": 2,
+        "prompt": "A familiar living room, unsettling stillness, subtle distortion in furniture lines, low light",
+        "prompt_visual": "A familiar living room, unsettling stillness, subtle distortion in furniture lines, low light",
+        "texto_locucion": "Algo había cambiado, pero no sabías qué.",
+        "pexels_query": "still living room"
+      },
+      {
+        "id": 3,
+        "prompt": "Close-up of a porcelain figurine on a dusty shelf, slightly askew, deep shadows creeping",
+        "prompt_visual": "Close-up of a porcelain figurine on a dusty shelf, slightly askew, deep shadows creeping",
+        "texto_locucion": "Los objetos se movían; lo jurarías.",
+        "pexels_query": "figurine askew shelf"
+      },
+      {
+        "id": 4,
+        "prompt": "A dark, empty doorway leading to another room, extreme chiaroscuro, unsettling void",
+        "prompt_visual": "A dark, empty doorway leading to another room, extreme chiaroscuro, unsettling void",
+        "texto_locucion": "Tu mente buscaba una explicación lógica.",
+        "pexels_query": "empty dark doorway"
+      },
+      {
+        "id": 5,
+        "prompt": "Corner of a dark room, shadows forming an indistinct, almost human-like shape, grainy texture",
+        "prompt_visual": "Corner of a dark room, shadows forming an indistinct, almost human-like shape, grainy texture",
+        "texto_locucion": "Pero los detalles no encajaban bien.",
+        "pexels_query": "shadow figure corner"
+      },
+      {
+        "id": 6,
+        "prompt": "A long, dim corridor, a faint, almost imperceptible light source at the far end, extreme depth",
+        "prompt_visual": "A long, dim corridor, a faint, almost imperceptible light source at the far end, extreme depth",
+        "texto_locucion": "Sentías una mirada constante en tu nuca.",
+        "pexels_query": "dim corridor long"
+      },
+      {
+        "id": 7,
+        "prompt": "Slight blur on the edge of a frame, suggesting movement in peripheral vision, dark environment",
+        "prompt_visual": "Slight blur on the edge of a frame, suggesting movement in peripheral vision, dark environment",
+        "texto_locucion": "Siempre al borde de tu visión periférica.",
+        "pexels_query": "peripheral blur dark"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty bedroom, bed unmade, a single, distorted shadow stretching from a closet door",
+        "prompt_visual": "Empty bedroom, bed unmade, a single, distorted shadow stretching from a closet door",
+        "texto_locucion": "Nadie más lo notaba, solo tú.",
+        "pexels_query": "shadow bedroom closet"
+      },
+      {
+        "id": 9,
+        "prompt": "Close-up on a silent, old wall clock, frozen in time, reflecting dark, empty room",
+        "prompt_visual": "Close-up on a silent, old wall clock, frozen in time, reflecting dark, empty room",
+        "texto_locucion": "El silencio absoluto se volvió un tormento.",
+        "pexels_query": "silent wall clock"
+      },
+      {
+        "id": 10,
+        "prompt": "A slightly opened door, revealing impenetrable darkness within, no light seeping out",
+        "prompt_visual": "A slightly opened door, revealing impenetrable darkness within, no light seeping out",
+        "texto_locucion": "Como si la casa contuviera su aliento.",
+        "pexels_query": "slightly opened door"
+      },
+      {
+        "id": 11,
+        "prompt": "A stack of old, unmarked files on a desk, partially obscured by shadow, mysterious documents",
+        "prompt_visual": "A stack of old, unmarked files on a desk, partially obscured by shadow, mysterious documents",
+        "texto_locucion": "Hay casos similares, ocultos, sin resolver.",
+        "pexels_query": "unmarked files desk"
+      },
+      {
+        "id": 12,
+        "prompt": "Empty room, walls subtly curving inward, creating a sense of unease and distortion",
+        "prompt_visual": "Empty room, walls subtly curving inward, creating a sense of unease and distortion",
+        "texto_locucion": "Gente que reporta un espacio alterado.",
+        "pexels_query": "curving walls room"
+      },
+      {
+        "id": 13,
+        "prompt": "Long, narrow passage, repeating patterns on walls, creating an endless, shifting corridor illusion",
+        "prompt_visual": "Long, narrow passage, repeating patterns on walls, creating an endless, shifting corridor illusion",
+        "texto_locucion": "Dimensiones que cambian imperceptiblemente cada noche.",
+        "pexels_query": "endless shifting corridor"
+      },
+      {
+        "id": 14,
+        "prompt": "Dark hallway, a new, small, unnerving door appearing where none was before, very subtle",
+        "prompt_visual": "Dark hallway, a new, small, unnerving door appearing where none was before, very subtle",
+        "texto_locucion": "Pasillos más largos. Puertas que no estaban.",
+        "pexels_query": "new door hallway"
+      },
+      {
+        "id": 15,
+        "prompt": "An empty space, but with a palpable sense of an unseen entity, cold blue tint",
+        "prompt_visual": "An empty space, but with a palpable sense of an unseen entity, cold blue tint",
+        "texto_locucion": "Y esa sensación de que no estabas solo.",
+        "pexels_query": "unseen entity presence"
+      },
+      {
+        "id": 16,
+        "prompt": "Shadowy outline of a figure reflected on a polished floor, but no source for the shadow",
+        "prompt_visual": "Shadowy outline of a figure reflected on a polished floor, but no source for the shadow",
+        "texto_locucion": "Como un huésped invisible siempre presente.",
+        "pexels_query": "shadow outline no source"
+      },
+      {
+        "id": 17,
+        "prompt": "A single, faint light bulb flickering erratically in a completely dark room, barely illuminating anything",
+        "prompt_visual": "A single, faint light bulb flickering erratically in a completely dark room, barely illuminating anything",
+        "texto_locucion": "Se nutre de tu incertidumbre, de tu miedo.",
+        "pexels_query": "flickering light dark"
+      },
+      {
+        "id": 18,
+        "prompt": "A hand-drawn map of a house, lines twisting and changing, becoming incorrect and disorienting",
+        "prompt_visual": "A hand-drawn map of a house, lines twisting and changing, becoming incorrect and disorienting",
+        "texto_locucion": "Lo sentiste antes, sabes que es real.",
+        "pexels_query": "distorted house map"
+      },
+      {
+        "id": 19,
+        "prompt": "Long, exaggerated shadows cast indoors by an invisible light source, stretching across floor",
+        "prompt_visual": "Long, exaggerated shadows cast indoors by an invisible light source, stretching across floor",
+        "texto_locucion": "Ves las sombras alargarse, aunque no hay sol.",
+        "pexels_query": "exaggerated indoor shadows"
+      },
+      {
+        "id": 20,
+        "prompt": "A window reflecting a distorted, empty version of the room, as if the house itself has eyes",
+        "prompt_visual": "A window reflecting a distorted, empty version of the room, as if the house itself has eyes",
+        "texto_locucion": "Tu propio hogar te observa fijamente ahora.",
+        "pexels_query": "distorted room reflection"
+      },
+      {
+        "id": 21,
+        "prompt": "A thermometer displaying an unusually low temperature in an indoor setting, eerie coldness",
+        "prompt_visual": "A thermometer displaying an unusually low temperature in an indoor setting, eerie coldness",
+        "texto_locucion": "La temperatura desciende en ciertas habitaciones.",
+        "pexels_query": "cold indoor thermometer"
+      },
+      {
+        "id": 22,
+        "prompt": "Close-up on a wall texture, subtle pareidolia forming a whispering mouth or eye shape",
+        "prompt_visual": "Close-up on a wall texture, subtle pareidolia forming a whispering mouth or eye shape",
+        "texto_locucion": "Susurros apenas audibles que te llaman a veces.",
+        "pexels_query": "pareidolia wall texture"
+      },
+      {
+        "id": 23,
+        "prompt": "A pair of distant, glowing eyes in profound darkness, barely visible, unsettling and watchful",
+        "prompt_visual": "A pair of distant, glowing eyes in profound darkness, barely visible, unsettling and watchful",
+        "texto_locucion": "No puedes ignorarlo, está dentro de ti.",
+        "pexels_query": "glowing eyes darkness"
+      },
+      {
+        "id": 24,
+        "prompt": "A house plan, but with rooms connected illogically, new passages, old ones gone, confusing",
+        "prompt_visual": "A house plan, but with rooms connected illogically, new passages, old ones gone, confusing",
+        "texto_locucion": "El mapa de tu casa ya no funciona.",
+        "pexels_query": "illogical house plan"
+      },
+      {
+        "id": 25,
+        "prompt": "An everyday object, like a coat rack, casting a long, skeletal shadow, appearing menacing",
+        "prompt_visual": "An everyday object, like a coat rack, casting a long, skeletal shadow, appearing menacing",
+        "texto_locucion": "Cada rincón es una trampa silenciosa ahora.",
+        "pexels_query": "skeletal coat rack"
+      },
+      {
+        "id": 26,
+        "prompt": "A heavily locked front door, deadbolts visible, yet a sliver of light from underneath is suspicious",
+        "prompt_visual": "A heavily locked front door, deadbolts visible, yet a sliver of light from underneath is suspicious",
+        "texto_locucion": "¿Cierras bien la puerta cada noche, verdad?",
+        "pexels_query": "locked front door light"
+      },
+      {
+        "id": 27,
+        "prompt": "A dark, indistinguishable doorway in a familiar room, appearing as if it's always been there, but shouldn't be",
+        "prompt_visual": "A dark, indistinguishable doorway in a familiar room, appearing as if it's always been there, but shouldn't be",
+        "texto_locucion": "¿Y si la entrada principal es otra ahora?",
+        "pexels_query": "new doorway familiar"
+      }
+    ],
+    "hooks": [
+      "Tu casa no es segura.",
+      "Las paredes te observan.",
+      "¿Ya no estás solo?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
