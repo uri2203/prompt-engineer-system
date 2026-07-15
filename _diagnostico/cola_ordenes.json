@@ -1432,5 +1432,248 @@
       "¿Tú eres el siguiente?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "3f205c62-e836-4e94-8e31-dd6dd4c4ac77",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark, empty hallway in an old house, a closed, ancient wooden door, faint light filtering from under it, deep shadows\", \"prompt_visual\": \"Dark, empty hallway in an old house, a closed, ancient wooden door, faint light filtering from under it, deep shadows\", \"texto_locucion\": \"Estás en casa de tu abuela. El ambiente es el mismo.\", \"pexels_query\": \"old house dark hallway\"}, {\"id\": 2, \"prompt\": \"Dust motes dancing in a single, narrow beam of light through a dusty window, an antique wooden table, an empty rocking chair\", \"prompt_visual\": \"Dust motes dancing in a single, narrow beam of light through a dusty window, an antique wooden table, an empty rocking chair\", \"texto_locucion\": \"Pero sientes algo diferente en el aire ahora.\", \"pexels_query\": \"dusty old room light\"}, {\"id\": 3, \"prompt\": \"A slightly ajar cabinet door in a dark, antique study, revealing only shadows inside, faint light from a distant window\", \"prompt_visual\": \"A slightly ajar cabinet door in a dark, antique study, revealing only shadows inside, faint light from a distant window\", \"texto_locucion\": \"Un escalofrío que antes no sentías jamás.\", \"pexels_query\": \"old cabinet open\"}, {\"id\": 4, \"prompt\": \"A shadowy, indistinct human-like form standing at the end of a long, dark corridor, almost blending with the wall\", \"prompt_visual\": \"A shadowy, indistinct human-like form standing at the end of a long, dark corridor, almost blending with the wall\", \"texto_locucion\": \"Miras una esquina. Jurarías que hay algo allí.\", \"pexels_query\": \"shadowy figure corridor\"}, {\"id\": 5, \"prompt\": \"A close-up of an old, tarnished silver picture frame, the image inside is blurry and indistinguishable, reflection of dark empty room\", \"prompt_visual\": \"A close-up of an old, tarnished silver picture frame, the image inside is blurry and indistinguishable, reflection of dark empty room\", \"texto_locucion\": \"Tu mente te dice que no hay nada.\", \"pexels_query\": \"old blurry photo frame\"}, {\"id\": 6, \"prompt\": \"A dark, heavy velvet curtain slightly swaying as if by an unseen draft, no windows visible\", \"prompt_visual\": \"A dark, heavy velvet curtain slightly swaying as if by an unseen draft, no windows visible\", \"texto_locucion\": \"Pero tu piel recuerda lo que lo sentiste antes.\", \"pexels_query\": \"dark curtain moving\"}, {\"id\": 7, \"prompt\": \"A single, flickering candle on a dark, polished wooden surface, casting long, distorted shadows around it\", \"prompt_visual\": \"A single, flickering candle on a dark, polished wooden surface, casting long, distorted shadows around it\", \"texto_locucion\": \"Un susurro apenas audible parece rozar tu nombre.\", \"pexels_query\": \"flickering candle shadows\"}, {\"id\": 8, \"prompt\": \"A narrow, dark staircase leading upwards, the top obscured by deep shadows, a single, faded carpet runner\", \"prompt_visual\": \"A narrow, dark staircase leading upwards, the top obscured by deep shadows, a single, faded carpet runner\", \"texto_locucion\": \"Subes las escaleras. El silencio absoluto te oprime.\", \"pexels_query\": \"dark winding staircase\"}, {\"id\": 9, \"prompt\": \"An antique mirror reflecting only darkness, a faint, distorted human-like silhouette barely visible within the reflection\", \"prompt_visual\": \"An antique mirror reflecting only darkness, a faint, distorted human-like silhouette barely visible within the reflection\", \"texto_locucion\": \"Alguien te observa desde tu propio reflejo.\", \"pexels_query\": \"dark mirror reflection\"}, {\"id\": 10, \"prompt\": \"A wooden door handle slowly turning downwards on its own, a sliver of light from the corridor peeking through the gap\", \"prompt_visual\": \"A wooden door handle slowly turning downwards on its own, a sliver of light from the corridor peeking through the gap\", \"texto_locucion\": \"La manija de la puerta se mueve sola lentamente.\", \"pexels_query\": \"door handle turning\"}, {\"id\": 11, \"prompt\": \"A collection of old, leather-bound books on a dusty shelf, one book slightly ajar, revealing dark, unreadable pages\", \"prompt_visual\": \"A collection of old, leather-bound books on a dusty shelf, one book slightly ajar, revealing dark, unreadable pages\", \"texto_locucion\": \"Tu abuela guardaba secretos, lo sentiste antes.\", \"pexels_query\": \"old books dark shelf\"}, {\"id\": 12, \"prompt\": \"A dimly lit room, an ornate, empty wooden chair facing away from the viewer towards a darkened corner, a feeling of being watched\", \"prompt_visual\": \"A dimly lit room, an ornate, empty wooden chair facing away from the viewer towards a darkened corner, a feeling of being watched\", \"texto_locucion\": \"Algunas noches, sabías que no estabas solo.\", \"pexels_query\": \"empty chair dark room\"}, {\"id\": 13, \"prompt\": \"A window pane covered in condensation from the inside, a faint, blurry print of a hand pressed against it\", \"prompt_visual\": \"A window pane covered in condensation from the inside, a faint, blurry print of a hand pressed against it\", \"texto_locucion\": \"Ella hablaba con algo invisible. Tú lo viste.\", \"pexels_query\": \"steamy window handprint\"}, {\"id\": 14, \"prompt\": \"A close-up of a keyhole on an old, heavy wooden chest, utter darkness visible through the keyhole, a sense of forbidden knowledge\", \"prompt_visual\": \"A close-up of a keyhole on an old, heavy wooden chest, utter darkness visible through the keyhole, a sense of forbidden knowledge\", \"texto_locucion\": \"Esa presencia nunca se fue de la casa.\", \"pexels_query\": \"old keyhole darkness\"}, {\"id\": 15, \"prompt\": \"A single, isolated eye in the deep darkness, appearing as if peering from behind a corner, barely discernible\", \"prompt_visual\": \"A single, isolated eye in the deep darkness, appearing as if peering from behind a corner, barely discernible\", \"texto_locucion\": \"Y ahora te persigue a ti sin descanso.\", \"pexels_query\": \"eye in shadows\"}, {\"id\": 16, \"prompt\": \"A shadowy, elongated figure reflected on a polished wooden floor, distinct from any visible light source\", \"prompt_visual\": \"A shadowy, elongated figure reflected on a polished wooden floor, distinct from any visible light source\", \"texto_locucion\": \"Sientes su aliento frío cerca de tu cuello.\", \"pexels_query\": \"shadow on floor distorted\"}, {\"id\": 17, \"prompt\": \"A faint, swirling mist or smoke curling around the base of an antique four-poster bed in a dark room\", \"prompt_visual\": \"A faint, swirling mist or smoke curling around the base of an antique four-poster bed in a dark room\", \"texto_locucion\": \"Despiertas de golpe. Algo no está bien.\", \"pexels_query\": \"mist around bed\"}, {\"id\": 18, \"prompt\": \"A blurred, ghostly figure moving quickly past a doorway, only a hint of its form caught in the periphery\", \"prompt_visual\": \"A blurred, ghostly figure moving quickly past a doorway, only a hint of its form caught in the periphery\", \"texto_locucion\": \"Ayer, juraste verla moverse rápido.\", \"pexels_query\": \"ghostly figure doorway\"}, {\"id\": 19, \"prompt\": \"An old, faded photograph of a family group, one face in the background is unsettlingly blurred or distorted, not a normal photo defect\", \"prompt_visual\": \"An old, faded photograph of a family group, one face in the background is unsettlingly blurred or distorted, not a normal photo defect\", \"texto_locucion\": \"Nadie en tu familia cree en esto.\", \"pexels_query\": \"distorted family photo\"}, {\"id\": 20, \"prompt\": \"A dark, empty hallway, a single light bulb hanging from the ceiling flickering erratically, casting jumpy shadows\", \"prompt_visual\": \"A dark, empty hallway, a single light bulb hanging from the ceiling flickering erratically, casting jumpy shadows\", \"texto_locucion\": \"Pero tú no puedes ignorarlo más tiempo.\", \"pexels_query\": \"flickering light hallway\"}, {\"id\": 21, \"prompt\": \"A close-up of an old, tarnished locket on a chain, lying on a dark, wooden surface, slightly open to reveal a shadow inside\", \"prompt_visual\": \"A close-up of an old, tarnished locket on a chain, lying on a dark, wooden surface, slightly open to reveal a shadow inside\", \"texto_locucion\": \"Una herencia que no se puede rechazar.\", \"pexels_query\": \"old locket dark\"}, {\"id\": 22, \"prompt\": \"A door slightly ajar, revealing a pitch black room beyond, with a single, unidentifiable object at the threshold\", \"prompt_visual\": \"A door slightly ajar, revealing a pitch black room beyond, with a single, unidentifiable object at the threshold\", \"texto_locucion\": \"Cada puerta entreabierta te genera pánico.\", \"pexels_query\": \"door ajar dark room object\"}, {\"id\": 23, \"prompt\": \"A distorted shadow of a human hand reaching out from behind a corner onto a plain, textured wall in a dimly lit room\", \"prompt_visual\": \"A distorted shadow of a human hand reaching out from behind a corner onto a plain, textured wall in a dimly lit room\", \"texto_locucion\": \"Ahora escuchas pasos donde no hay nadie.\", \"pexels_query\": \"shadow hand wall\"}, {\"id\": 24, \"prompt\": \"A close-up of a human ear straining to hear in a dark, silent room, feeling of extreme tension and paranoia\", \"prompt_visual\": \"A close-up of a human ear straining to hear in a dark, silent room, feeling of extreme tension and paranoia\", \"texto_locucion\": \"El silencio absoluto es tu peor enemigo.\", \"pexels_query\": \"ear straining silence\"}, {\"id\": 25, \"prompt\": \"A lone, antique doll with vacant eyes sitting on a dusty shelf, slightly tilted, conveying an unsettling gaze\", \"prompt_visual\": \"A lone, antique doll with vacant eyes sitting on a dusty shelf, slightly tilted, conveying an unsettling gaze\", \"texto_locucion\": \"Una mirada fría sigue todos tus movimientos.\", \"pexels_query\": \"creepy doll shelf\"}, {\"id\": 26, \"prompt\": \"A darkened hallway, a closed door with a thin line of light visible underneath, implying presence inside\", \"prompt_visual\": \"A darkened hallway, a closed door with a thin line of light visible underneath, implying presence inside\", \"texto_locucion\": \"Sientes su presencia detrás de cada pared.\", \"pexels_query\": \"closed door light gap\"}, {\"id\": 27, \"prompt\": \"A close-up of an old, hand-carved wooden box, intricate details, slightly open, revealing nothing but profound darkness within\", \"prompt_visual\": \"A close-up of an old, hand-carved wooden box, intricate details, slightly open, revealing nothing but profound darkness within\", \"texto_locucion\": \"La sangre de tu linaje te marcó.\", \"pexels_query\": \"old wooden box open\"}, {\"id\": 28, \"prompt\": \"A very dark room, a single, glowing, indistinct orb of light hovering silently, suggesting an ethereal entity\", \"prompt_visual\": \"A very dark room, a single, glowing, indistinct orb of light hovering silently, suggesting an ethereal entity\", \"texto_locucion\": \"Y la presencia familiar no te dejará nunca.\", \"pexels_query\": \"glowing orb dark room\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Estás en casa de tu abuela. El ambiente es el mismo. Pero sientes algo diferente en el aire ahora. Un escalofrío que antes no sentías jamás. Miras una esquina. Jurarías que hay algo allí. Tu mente te dice que no hay nada. Pero tu piel recuerda lo que lo sentiste antes. Un susurro apenas audible parece rozar tu nombre. Subes las escaleras. El silencio absoluto te oprime. Alguien te observa desde tu propio reflejo. La manija de la puerta se mueve sola lentamente. Tu abuela guardaba secretos, lo sentiste antes. Algunas noches, sabías que no estabas solo. Ella hablaba con algo invisible. Tú lo viste. Esa presencia nunca se fue de la casa. Y ahora te persigue a ti sin descanso. Sientes su aliento frío cerca de tu cuello. Despiertas de golpe. Algo no está bien. Ayer, juraste verla moverse rápido. Nadie en tu familia cree en esto. Pero tú no puedes ignorarlo más tiempo. Una herencia que no se puede rechazar. Cada puerta entreabierta te genera pánico. Ahora escuchas pasos donde no hay nadie. El silencio absoluto es tu peor enemigo. Una mirada fría sigue todos tus movimientos. Sientes su presencia detrás de cada pared. La sangre de tu linaje te marcó. Y la presencia familiar no te dejará nunca.",
+    "titulo_sugerido": "La herencia que no debías recibir",
+    "escenas_texto": [
+      "Estás en casa de tu abuela. El ambiente es el mismo.",
+      "Pero sientes algo diferente en el aire ahora.",
+      "Un escalofrío que antes no sentías jamás.",
+      "Miras una esquina. Jurarías que hay algo allí.",
+      "Tu mente te dice que no hay nada.",
+      "Pero tu piel recuerda lo que lo sentiste antes.",
+      "Un susurro apenas audible parece rozar tu nombre.",
+      "Subes las escaleras. El silencio absoluto te oprime.",
+      "Alguien te observa desde tu propio reflejo.",
+      "La manija de la puerta se mueve sola lentamente.",
+      "Tu abuela guardaba secretos, lo sentiste antes.",
+      "Algunas noches, sabías que no estabas solo.",
+      "Ella hablaba con algo invisible. Tú lo viste.",
+      "Esa presencia nunca se fue de la casa.",
+      "Y ahora te persigue a ti sin descanso.",
+      "Sientes su aliento frío cerca de tu cuello.",
+      "Despiertas de golpe. Algo no está bien.",
+      "Ayer, juraste verla moverse rápido.",
+      "Nadie en tu familia cree en esto.",
+      "Pero tú no puedes ignorarlo más tiempo.",
+      "Una herencia que no se puede rechazar.",
+      "Cada puerta entreabierta te genera pánico.",
+      "Ahora escuchas pasos donde no hay nadie.",
+      "El silencio absoluto es tu peor enemigo.",
+      "Una mirada fría sigue todos tus movimientos.",
+      "Sientes su presencia detrás de cada pared.",
+      "La sangre de tu linaje te marcó.",
+      "Y la presencia familiar no te dejará nunca."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark, empty hallway in an old house, a closed, ancient wooden door, faint light filtering from under it, deep shadows",
+        "prompt_visual": "Dark, empty hallway in an old house, a closed, ancient wooden door, faint light filtering from under it, deep shadows",
+        "texto_locucion": "Estás en casa de tu abuela. El ambiente es el mismo.",
+        "pexels_query": "old house dark hallway"
+      },
+      {
+        "id": 2,
+        "prompt": "Dust motes dancing in a single, narrow beam of light through a dusty window, an antique wooden table, an empty rocking chair",
+        "prompt_visual": "Dust motes dancing in a single, narrow beam of light through a dusty window, an antique wooden table, an empty rocking chair",
+        "texto_locucion": "Pero sientes algo diferente en el aire ahora.",
+        "pexels_query": "dusty old room light"
+      },
+      {
+        "id": 3,
+        "prompt": "A slightly ajar cabinet door in a dark, antique study, revealing only shadows inside, faint light from a distant window",
+        "prompt_visual": "A slightly ajar cabinet door in a dark, antique study, revealing only shadows inside, faint light from a distant window",
+        "texto_locucion": "Un escalofrío que antes no sentías jamás.",
+        "pexels_query": "old cabinet open"
+      },
+      {
+        "id": 4,
+        "prompt": "A shadowy, indistinct human-like form standing at the end of a long, dark corridor, almost blending with the wall",
+        "prompt_visual": "A shadowy, indistinct human-like form standing at the end of a long, dark corridor, almost blending with the wall",
+        "texto_locucion": "Miras una esquina. Jurarías que hay algo allí.",
+        "pexels_query": "shadowy figure corridor"
+      },
+      {
+        "id": 5,
+        "prompt": "A close-up of an old, tarnished silver picture frame, the image inside is blurry and indistinguishable, reflection of dark empty room",
+        "prompt_visual": "A close-up of an old, tarnished silver picture frame, the image inside is blurry and indistinguishable, reflection of dark empty room",
+        "texto_locucion": "Tu mente te dice que no hay nada.",
+        "pexels_query": "old blurry photo frame"
+      },
+      {
+        "id": 6,
+        "prompt": "A dark, heavy velvet curtain slightly swaying as if by an unseen draft, no windows visible",
+        "prompt_visual": "A dark, heavy velvet curtain slightly swaying as if by an unseen draft, no windows visible",
+        "texto_locucion": "Pero tu piel recuerda lo que lo sentiste antes.",
+        "pexels_query": "dark curtain moving"
+      },
+      {
+        "id": 7,
+        "prompt": "A single, flickering candle on a dark, polished wooden surface, casting long, distorted shadows around it",
+        "prompt_visual": "A single, flickering candle on a dark, polished wooden surface, casting long, distorted shadows around it",
+        "texto_locucion": "Un susurro apenas audible parece rozar tu nombre.",
+        "pexels_query": "flickering candle shadows"
+      },
+      {
+        "id": 8,
+        "prompt": "A narrow, dark staircase leading upwards, the top obscured by deep shadows, a single, faded carpet runner",
+        "prompt_visual": "A narrow, dark staircase leading upwards, the top obscured by deep shadows, a single, faded carpet runner",
+        "texto_locucion": "Subes las escaleras. El silencio absoluto te oprime.",
+        "pexels_query": "dark winding staircase"
+      },
+      {
+        "id": 9,
+        "prompt": "An antique mirror reflecting only darkness, a faint, distorted human-like silhouette barely visible within the reflection",
+        "prompt_visual": "An antique mirror reflecting only darkness, a faint, distorted human-like silhouette barely visible within the reflection",
+        "texto_locucion": "Alguien te observa desde tu propio reflejo.",
+        "pexels_query": "dark mirror reflection"
+      },
+      {
+        "id": 10,
+        "prompt": "A wooden door handle slowly turning downwards on its own, a sliver of light from the corridor peeking through the gap",
+        "prompt_visual": "A wooden door handle slowly turning downwards on its own, a sliver of light from the corridor peeking through the gap",
+        "texto_locucion": "La manija de la puerta se mueve sola lentamente.",
+        "pexels_query": "door handle turning"
+      },
+      {
+        "id": 11,
+        "prompt": "A collection of old, leather-bound books on a dusty shelf, one book slightly ajar, revealing dark, unreadable pages",
+        "prompt_visual": "A collection of old, leather-bound books on a dusty shelf, one book slightly ajar, revealing dark, unreadable pages",
+        "texto_locucion": "Tu abuela guardaba secretos, lo sentiste antes.",
+        "pexels_query": "old books dark shelf"
+      },
+      {
+        "id": 12,
+        "prompt": "A dimly lit room, an ornate, empty wooden chair facing away from the viewer towards a darkened corner, a feeling of being watched",
+        "prompt_visual": "A dimly lit room, an ornate, empty wooden chair facing away from the viewer towards a darkened corner, a feeling of being watched",
+        "texto_locucion": "Algunas noches, sabías que no estabas solo.",
+        "pexels_query": "empty chair dark room"
+      },
+      {
+        "id": 13,
+        "prompt": "A window pane covered in condensation from the inside, a faint, blurry print of a hand pressed against it",
+        "prompt_visual": "A window pane covered in condensation from the inside, a faint, blurry print of a hand pressed against it",
+        "texto_locucion": "Ella hablaba con algo invisible. Tú lo viste.",
+        "pexels_query": "steamy window handprint"
+      },
+      {
+        "id": 14,
+        "prompt": "A close-up of a keyhole on an old, heavy wooden chest, utter darkness visible through the keyhole, a sense of forbidden knowledge",
+        "prompt_visual": "A close-up of a keyhole on an old, heavy wooden chest, utter darkness visible through the keyhole, a sense of forbidden knowledge",
+        "texto_locucion": "Esa presencia nunca se fue de la casa.",
+        "pexels_query": "old keyhole darkness"
+      },
+      {
+        "id": 15,
+        "prompt": "A single, isolated eye in the deep darkness, appearing as if peering from behind a corner, barely discernible",
+        "prompt_visual": "A single, isolated eye in the deep darkness, appearing as if peering from behind a corner, barely discernible",
+        "texto_locucion": "Y ahora te persigue a ti sin descanso.",
+        "pexels_query": "eye in shadows"
+      },
+      {
+        "id": 16,
+        "prompt": "A shadowy, elongated figure reflected on a polished wooden floor, distinct from any visible light source",
+        "prompt_visual": "A shadowy, elongated figure reflected on a polished wooden floor, distinct from any visible light source",
+        "texto_locucion": "Sientes su aliento frío cerca de tu cuello.",
+        "pexels_query": "shadow on floor distorted"
+      },
+      {
+        "id": 17,
+        "prompt": "A faint, swirling mist or smoke curling around the base of an antique four-poster bed in a dark room",
+        "prompt_visual": "A faint, swirling mist or smoke curling around the base of an antique four-poster bed in a dark room",
+        "texto_locucion": "Despiertas de golpe. Algo no está bien.",
+        "pexels_query": "mist around bed"
+      },
+      {
+        "id": 18,
+        "prompt": "A blurred, ghostly figure moving quickly past a doorway, only a hint of its form caught in the periphery",
+        "prompt_visual": "A blurred, ghostly figure moving quickly past a doorway, only a hint of its form caught in the periphery",
+        "texto_locucion": "Ayer, juraste verla moverse rápido.",
+        "pexels_query": "ghostly figure doorway"
+      },
+      {
+        "id": 19,
+        "prompt": "An old, faded photograph of a family group, one face in the background is unsettlingly blurred or distorted, not a normal photo defect",
+        "prompt_visual": "An old, faded photograph of a family group, one face in the background is unsettlingly blurred or distorted, not a normal photo defect",
+        "texto_locucion": "Nadie en tu familia cree en esto.",
+        "pexels_query": "distorted family photo"
+      },
+      {
+        "id": 20,
+        "prompt": "A dark, empty hallway, a single light bulb hanging from the ceiling flickering erratically, casting jumpy shadows",
+        "prompt_visual": "A dark, empty hallway, a single light bulb hanging from the ceiling flickering erratically, casting jumpy shadows",
+        "texto_locucion": "Pero tú no puedes ignorarlo más tiempo.",
+        "pexels_query": "flickering light hallway"
+      },
+      {
+        "id": 21,
+        "prompt": "A close-up of an old, tarnished locket on a chain, lying on a dark, wooden surface, slightly open to reveal a shadow inside",
+        "prompt_visual": "A close-up of an old, tarnished locket on a chain, lying on a dark, wooden surface, slightly open to reveal a shadow inside",
+        "texto_locucion": "Una herencia que no se puede rechazar.",
+        "pexels_query": "old locket dark"
+      },
+      {
+        "id": 22,
+        "prompt": "A door slightly ajar, revealing a pitch black room beyond, with a single, unidentifiable object at the threshold",
+        "prompt_visual": "A door slightly ajar, revealing a pitch black room beyond, with a single, unidentifiable object at the threshold",
+        "texto_locucion": "Cada puerta entreabierta te genera pánico.",
+        "pexels_query": "door ajar dark room object"
+      },
+      {
+        "id": 23,
+        "prompt": "A distorted shadow of a human hand reaching out from behind a corner onto a plain, textured wall in a dimly lit room",
+        "prompt_visual": "A distorted shadow of a human hand reaching out from behind a corner onto a plain, textured wall in a dimly lit room",
+        "texto_locucion": "Ahora escuchas pasos donde no hay nadie.",
+        "pexels_query": "shadow hand wall"
+      },
+      {
+        "id": 24,
+        "prompt": "A close-up of a human ear straining to hear in a dark, silent room, feeling of extreme tension and paranoia",
+        "prompt_visual": "A close-up of a human ear straining to hear in a dark, silent room, feeling of extreme tension and paranoia",
+        "texto_locucion": "El silencio absoluto es tu peor enemigo.",
+        "pexels_query": "ear straining silence"
+      },
+      {
+        "id": 25,
+        "prompt": "A lone, antique doll with vacant eyes sitting on a dusty shelf, slightly tilted, conveying an unsettling gaze",
+        "prompt_visual": "A lone, antique doll with vacant eyes sitting on a dusty shelf, slightly tilted, conveying an unsettling gaze",
+        "texto_locucion": "Una mirada fría sigue todos tus movimientos.",
+        "pexels_query": "creepy doll shelf"
+      },
+      {
+        "id": 26,
+        "prompt": "A darkened hallway, a closed door with a thin line of light visible underneath, implying presence inside",
+        "prompt_visual": "A darkened hallway, a closed door with a thin line of light visible underneath, implying presence inside",
+        "texto_locucion": "Sientes su presencia detrás de cada pared.",
+        "pexels_query": "closed door light gap"
+      },
+      {
+        "id": 27,
+        "prompt": "A close-up of an old, hand-carved wooden box, intricate details, slightly open, revealing nothing but profound darkness within",
+        "prompt_visual": "A close-up of an old, hand-carved wooden box, intricate details, slightly open, revealing nothing but profound darkness within",
+        "texto_locucion": "La sangre de tu linaje te marcó.",
+        "pexels_query": "old wooden box open"
+      },
+      {
+        "id": 28,
+        "prompt": "A very dark room, a single, glowing, indistinct orb of light hovering silently, suggesting an ethereal entity",
+        "prompt_visual": "A very dark room, a single, glowing, indistinct orb of light hovering silently, suggesting an ethereal entity",
+        "texto_locucion": "Y la presencia familiar no te dejará nunca.",
+        "pexels_query": "glowing orb dark room"
+      }
+    ],
+    "hooks": [
+      "Tu familia guarda secretos",
+      "No estás solo en casa",
+      "¿Qué heredaste realmente?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
