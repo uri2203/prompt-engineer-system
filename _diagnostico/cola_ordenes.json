@@ -986,5 +986,240 @@
       "Irán: influencia regional"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "d40c4f7d-706f-4f3b-af39-918fee5a7cfd",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Aerial view of a narrow maritime strait, oil tankers navigating through it, desert coastline, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a narrow maritime strait, oil tankers navigating through it, desert coastline, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Si la tensión en el Estrecho de Ormuz escala,\", \"pexels_query\": \"Strait of Hormuz aerial\"}, {\"id\": 2, \"prompt\": \"Global oil refinery complex, smoke stacks, pipelines, industrial infrastructure at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global oil refinery complex, smoke stacks, pipelines, industrial infrastructure at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"el precio de todo lo que compras cambiará drásticamente.\", \"pexels_query\": \"oil refinery complex\"}, {\"id\": 3, \"prompt\": \"Large oil tanker navigating calm waters, distant coastline, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Large oil tanker navigating calm waters, distant coastline, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta ruta marítima transporta un quinto del petróleo mundial.\", \"pexels_query\": \"oil tanker cargo ship\"}, {\"id\": 4, \"prompt\": \"Industrial port infrastructure, container ships docked, cranes silhouetted against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial port infrastructure, container ships docked, cranes silhouetted against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Irán ejerce control estratégico sobre este paso vital.\", \"pexels_query\": \"industrial port containers\"}, {\"id\": 5, \"prompt\": \"Empty military patrol boat on open sea, blurred horizon, ocean waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty military patrol boat on open sea, blurred horizon, ocean waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Sus fuerzas navales pueden amenazar el tráfico marítimo.\", \"pexels_query\": \"military patrol boat\"}, {\"id\": 6, \"prompt\": \"Radar dish scanning empty sky, military installation, desert background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Radar dish scanning empty sky, military installation, desert background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los datos muestran un aumento de maniobras en la zona.\", \"pexels_query\": \"military radar installation\"}, {\"id\": 7, \"prompt\": \"Satellite image of naval vessels in a strategic chokepoint, high altitude, ocean map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of naval vessels in a strategic chokepoint, high altitude, ocean map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas confirman despliegues de activos militares.\", \"pexels_query\": \"naval vessels satellite map\"}, {\"id\": 8, \"prompt\": \"Empty aircraft carrier flight deck at sea, vast ocean, military ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty aircraft carrier flight deck at sea, vast ocean, military ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Washington mantiene una fuerte presencia disuasoria regional.\", \"pexels_query\": \"aircraft carrier deck\"}, {\"id\": 9, \"prompt\": \"Digital display showing fluctuating stock market data and oil barrel prices, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital display showing fluctuating stock market data and oil barrel prices, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó aún con la estabilidad de tu bolsillo.\", \"pexels_query\": \"oil price display\"}, {\"id\": 10, \"prompt\": \"Empty logistics warehouse, rows of shelved containers, dim lighting, global supply chain, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty logistics warehouse, rows of shelved containers, dim lighting, global supply chain, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un cierre impactaría gravemente las cadenas de suministro.\", \"pexels_query\": \"logistics warehouse empty\"}, {\"id\": 11, \"prompt\": \"Gasoline pump nozzle at a fuel station, price display showing high numbers, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Gasoline pump nozzle at a fuel station, price display showing high numbers, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los mercados petroleros reaccionarían con alzas inmediatas.\", \"pexels_query\": \"high gasoline price pump\"}, {\"id\": 12, \"prompt\": \"Geopolitical map of the Middle East, strategic routes highlighted, no specific country labels, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map of the Middle East, strategic routes highlighted, no specific country labels, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambiaría el tablero geopolítico energético globalmente.\", \"pexels_query\": \"middle east strategic map\"}, {\"id\": 13, \"prompt\": \"Empty factory floor, heavy machinery in standby, industrial setting, global economy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty factory floor, heavy machinery in standby, industrial setting, global economy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La economía mundial opera con márgenes cada vez más estrechos.\", \"pexels_query\": \"empty factory floor machinery\"}, {\"id\": 14, \"prompt\": \"Satellite image of a cargo ship queue at a port entrance, shipping traffic, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a cargo ship queue at a port entrance, shipping traffic, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Cualquier interrupción genera ondas de choque severas.\", \"pexels_query\": \"cargo ship queue satellite\"}, {\"id\": 15, \"prompt\": \"Overhead view of a naval command center control room, large screens showing tactical maps, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a naval command center control room, large screens showing tactical maps, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real del poder se define en estos puntos.\", \"pexels_query\": \"naval command center empty\"}, {\"id\": 16, \"prompt\": \"Chart of global oil prices showing sharp spikes and drops, financial data, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Chart of global oil prices showing sharp spikes and drops, financial data, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen es el costo financiero directo.\", \"pexels_query\": \"oil price chart volatility\"}, {\"id\": 17, \"prompt\": \"Massive container ship at sea, scale of global trade, distant horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Massive container ship at sea, scale of global trade, distant horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Países como China dependen críticamente de este flujo.\", \"pexels_query\": \"massive container ship ocean\"}, {\"id\": 18, \"prompt\": \"Strategic map with red arrows indicating blocked or diverted shipping lanes, naval strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Strategic map with red arrows indicating blocked or diverted shipping lanes, naval strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un movimiento táctico puede paralizar rutas clave.\", \"pexels_query\": \"shipping lanes blocked map\"}, {\"id\": 19, \"prompt\": \"Liquefied natural gas (LNG) carrier ship, industrial port, frosty pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Liquefied natural gas (LNG) carrier ship, industrial port, frosty pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El gas licuado también transita este cuello de botella.\", \"pexels_query\": \"LNG carrier ship\"}, {\"id\": 20, \"prompt\": \"Aerial view of a naval blockade formation, warships in strategic positions, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a naval blockade formation, warships in strategic positions, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las sanciones no anulan la capacidad de bloqueo naval.\", \"pexels_query\": \"naval blockade formation\"}, {\"id\": 21, \"prompt\": \"Military helicopter silhouetted against a dramatic sky, distant mountain range, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Military helicopter silhouetted against a dramatic sky, distant mountain range, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El riesgo de una escalada militar es constante.\", \"pexels_query\": \"military helicopter dramatic sky\"}, {\"id\": 22, \"prompt\": \"Empty military base perimeter fence, watchtower, desert landscape, strategic outpost, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty military base perimeter fence, watchtower, desert landscape, strategic outpost, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los aliados regionales están en máxima alerta estratégica.\", \"pexels_query\": \"military base perimeter fence\"}, {\"id\": 23, \"prompt\": \"Tactical operations room, screens displaying drone footage and intelligence data, empty command chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Tactical operations room, screens displaying drone footage and intelligence data, empty command chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Se preparan escenarios de respuesta militar y económica.\", \"pexels_query\": \"tactical operations room empty\"}, {\"id\": 24, \"prompt\": \"Warship patrolling, distant shoreline, calm sea, naval presence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Warship patrolling, distant shoreline, calm sea, naval presence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La estrategia de contención busca evitar una confrontación abierta.\", \"pexels_query\": \"warship patrol sea\"}, {\"id\": 25, \"prompt\": \"Geopolitical map highlighting energy reserves and trade routes, data overlays, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map highlighting energy reserves and trade routes, data overlays, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Pero los intereses en juego son inmensos y complejos.\", \"pexels_query\": \"energy trade routes map\"}, {\"id\": 26, \"prompt\": \"Control panel of a global energy grid, glowing buttons, complex wiring, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Control panel of a global energy grid, glowing buttons, complex wiring, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El flujo energético es una palanca de poder decisiva.\", \"pexels_query\": \"energy grid control panel\"}, {\"id\": 27, \"prompt\": \"Abstract map of global power centers connected by lines, economic influence, geopolitical strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract map of global power centers connected by lines, economic influence, geopolitical strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La pregunta es: ¿quién controla el flujo energético mundial?\", \"pexels_query\": \"global power map abstract\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Si la tensión en el Estrecho de Ormuz escala, el precio de todo lo que compras cambiará drásticamente. Esta ruta marítima transporta un quinto del petróleo mundial. Irán ejerce control estratégico sobre este paso vital. Sus fuerzas navales pueden amenazar el tráfico marítimo. Los datos muestran un aumento de maniobras en la zona. Fuentes verificadas confirman despliegues de activos militares. Washington mantiene una fuerte presencia disuasoria regional. Nadie lo conectó aún con la estabilidad de tu bolsillo. Un cierre impactaría gravemente las cadenas de suministro. Los mercados petroleros reaccionarían con alzas inmediatas. Esto cambiaría el tablero geopolítico energético globalmente. La economía mundial opera con márgenes cada vez más estrechos. Cualquier interrupción genera ondas de choque severas. El mapa real del poder se define en estos puntos. Lo que no te dicen es el costo financiero directo. Países como China dependen críticamente de este flujo. Un movimiento táctico puede paralizar rutas clave. El gas licuado también transita este cuello de botella. Las sanciones no anulan la capacidad de bloqueo naval. El riesgo de una escalada militar es constante. Los aliados regionales están en máxima alerta estratégica. Se preparan escenarios de respuesta militar y económica. La estrategia de contención busca evitar una confrontación abierta. Pero los intereses en juego son inmensos y complejos. El flujo energético es una palanca de poder decisiva. La pregunta es: ¿quién controla el flujo energético mundial?",
+    "titulo_sugerido": "Ormuz: El Punto Más Inflamable que Decide el Precio Global",
+    "escenas_texto": [
+      "Si la tensión en el Estrecho de Ormuz escala,",
+      "el precio de todo lo que compras cambiará drásticamente.",
+      "Esta ruta marítima transporta un quinto del petróleo mundial.",
+      "Irán ejerce control estratégico sobre este paso vital.",
+      "Sus fuerzas navales pueden amenazar el tráfico marítimo.",
+      "Los datos muestran un aumento de maniobras en la zona.",
+      "Fuentes verificadas confirman despliegues de activos militares.",
+      "Washington mantiene una fuerte presencia disuasoria regional.",
+      "Nadie lo conectó aún con la estabilidad de tu bolsillo.",
+      "Un cierre impactaría gravemente las cadenas de suministro.",
+      "Los mercados petroleros reaccionarían con alzas inmediatas.",
+      "Esto cambiaría el tablero geopolítico energético globalmente.",
+      "La economía mundial opera con márgenes cada vez más estrechos.",
+      "Cualquier interrupción genera ondas de choque severas.",
+      "El mapa real del poder se define en estos puntos.",
+      "Lo que no te dicen es el costo financiero directo.",
+      "Países como China dependen críticamente de este flujo.",
+      "Un movimiento táctico puede paralizar rutas clave.",
+      "El gas licuado también transita este cuello de botella.",
+      "Las sanciones no anulan la capacidad de bloqueo naval.",
+      "El riesgo de una escalada militar es constante.",
+      "Los aliados regionales están en máxima alerta estratégica.",
+      "Se preparan escenarios de respuesta militar y económica.",
+      "La estrategia de contención busca evitar una confrontación abierta.",
+      "Pero los intereses en juego son inmensos y complejos.",
+      "El flujo energético es una palanca de poder decisiva.",
+      "La pregunta es: ¿quién controla el flujo energético mundial?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Aerial view of a narrow maritime strait, oil tankers navigating through it, desert coastline, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a narrow maritime strait, oil tankers navigating through it, desert coastline, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Si la tensión en el Estrecho de Ormuz escala,",
+        "pexels_query": "Strait of Hormuz aerial"
+      },
+      {
+        "id": 2,
+        "prompt": "Global oil refinery complex, smoke stacks, pipelines, industrial infrastructure at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global oil refinery complex, smoke stacks, pipelines, industrial infrastructure at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "el precio de todo lo que compras cambiará drásticamente.",
+        "pexels_query": "oil refinery complex"
+      },
+      {
+        "id": 3,
+        "prompt": "Large oil tanker navigating calm waters, distant coastline, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Large oil tanker navigating calm waters, distant coastline, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta ruta marítima transporta un quinto del petróleo mundial.",
+        "pexels_query": "oil tanker cargo ship"
+      },
+      {
+        "id": 4,
+        "prompt": "Industrial port infrastructure, container ships docked, cranes silhouetted against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial port infrastructure, container ships docked, cranes silhouetted against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Irán ejerce control estratégico sobre este paso vital.",
+        "pexels_query": "industrial port containers"
+      },
+      {
+        "id": 5,
+        "prompt": "Empty military patrol boat on open sea, blurred horizon, ocean waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty military patrol boat on open sea, blurred horizon, ocean waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Sus fuerzas navales pueden amenazar el tráfico marítimo.",
+        "pexels_query": "military patrol boat"
+      },
+      {
+        "id": 6,
+        "prompt": "Radar dish scanning empty sky, military installation, desert background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Radar dish scanning empty sky, military installation, desert background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los datos muestran un aumento de maniobras en la zona.",
+        "pexels_query": "military radar installation"
+      },
+      {
+        "id": 7,
+        "prompt": "Satellite image of naval vessels in a strategic chokepoint, high altitude, ocean map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of naval vessels in a strategic chokepoint, high altitude, ocean map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas confirman despliegues de activos militares.",
+        "pexels_query": "naval vessels satellite map"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty aircraft carrier flight deck at sea, vast ocean, military ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty aircraft carrier flight deck at sea, vast ocean, military ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Washington mantiene una fuerte presencia disuasoria regional.",
+        "pexels_query": "aircraft carrier deck"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital display showing fluctuating stock market data and oil barrel prices, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital display showing fluctuating stock market data and oil barrel prices, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó aún con la estabilidad de tu bolsillo.",
+        "pexels_query": "oil price display"
+      },
+      {
+        "id": 10,
+        "prompt": "Empty logistics warehouse, rows of shelved containers, dim lighting, global supply chain, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty logistics warehouse, rows of shelved containers, dim lighting, global supply chain, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un cierre impactaría gravemente las cadenas de suministro.",
+        "pexels_query": "logistics warehouse empty"
+      },
+      {
+        "id": 11,
+        "prompt": "Gasoline pump nozzle at a fuel station, price display showing high numbers, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Gasoline pump nozzle at a fuel station, price display showing high numbers, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los mercados petroleros reaccionarían con alzas inmediatas.",
+        "pexels_query": "high gasoline price pump"
+      },
+      {
+        "id": 12,
+        "prompt": "Geopolitical map of the Middle East, strategic routes highlighted, no specific country labels, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map of the Middle East, strategic routes highlighted, no specific country labels, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambiaría el tablero geopolítico energético globalmente.",
+        "pexels_query": "middle east strategic map"
+      },
+      {
+        "id": 13,
+        "prompt": "Empty factory floor, heavy machinery in standby, industrial setting, global economy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty factory floor, heavy machinery in standby, industrial setting, global economy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La economía mundial opera con márgenes cada vez más estrechos.",
+        "pexels_query": "empty factory floor machinery"
+      },
+      {
+        "id": 14,
+        "prompt": "Satellite image of a cargo ship queue at a port entrance, shipping traffic, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a cargo ship queue at a port entrance, shipping traffic, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Cualquier interrupción genera ondas de choque severas.",
+        "pexels_query": "cargo ship queue satellite"
+      },
+      {
+        "id": 15,
+        "prompt": "Overhead view of a naval command center control room, large screens showing tactical maps, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a naval command center control room, large screens showing tactical maps, empty chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real del poder se define en estos puntos.",
+        "pexels_query": "naval command center empty"
+      },
+      {
+        "id": 16,
+        "prompt": "Chart of global oil prices showing sharp spikes and drops, financial data, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Chart of global oil prices showing sharp spikes and drops, financial data, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen es el costo financiero directo.",
+        "pexels_query": "oil price chart volatility"
+      },
+      {
+        "id": 17,
+        "prompt": "Massive container ship at sea, scale of global trade, distant horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Massive container ship at sea, scale of global trade, distant horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Países como China dependen críticamente de este flujo.",
+        "pexels_query": "massive container ship ocean"
+      },
+      {
+        "id": 18,
+        "prompt": "Strategic map with red arrows indicating blocked or diverted shipping lanes, naval strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Strategic map with red arrows indicating blocked or diverted shipping lanes, naval strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un movimiento táctico puede paralizar rutas clave.",
+        "pexels_query": "shipping lanes blocked map"
+      },
+      {
+        "id": 19,
+        "prompt": "Liquefied natural gas (LNG) carrier ship, industrial port, frosty pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Liquefied natural gas (LNG) carrier ship, industrial port, frosty pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El gas licuado también transita este cuello de botella.",
+        "pexels_query": "LNG carrier ship"
+      },
+      {
+        "id": 20,
+        "prompt": "Aerial view of a naval blockade formation, warships in strategic positions, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a naval blockade formation, warships in strategic positions, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las sanciones no anulan la capacidad de bloqueo naval.",
+        "pexels_query": "naval blockade formation"
+      },
+      {
+        "id": 21,
+        "prompt": "Military helicopter silhouetted against a dramatic sky, distant mountain range, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Military helicopter silhouetted against a dramatic sky, distant mountain range, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El riesgo de una escalada militar es constante.",
+        "pexels_query": "military helicopter dramatic sky"
+      },
+      {
+        "id": 22,
+        "prompt": "Empty military base perimeter fence, watchtower, desert landscape, strategic outpost, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty military base perimeter fence, watchtower, desert landscape, strategic outpost, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los aliados regionales están en máxima alerta estratégica.",
+        "pexels_query": "military base perimeter fence"
+      },
+      {
+        "id": 23,
+        "prompt": "Tactical operations room, screens displaying drone footage and intelligence data, empty command chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Tactical operations room, screens displaying drone footage and intelligence data, empty command chairs, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Se preparan escenarios de respuesta militar y económica.",
+        "pexels_query": "tactical operations room empty"
+      },
+      {
+        "id": 24,
+        "prompt": "Warship patrolling, distant shoreline, calm sea, naval presence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Warship patrolling, distant shoreline, calm sea, naval presence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La estrategia de contención busca evitar una confrontación abierta.",
+        "pexels_query": "warship patrol sea"
+      },
+      {
+        "id": 25,
+        "prompt": "Geopolitical map highlighting energy reserves and trade routes, data overlays, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map highlighting energy reserves and trade routes, data overlays, no human interaction, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Pero los intereses en juego son inmensos y complejos.",
+        "pexels_query": "energy trade routes map"
+      },
+      {
+        "id": 26,
+        "prompt": "Control panel of a global energy grid, glowing buttons, complex wiring, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Control panel of a global energy grid, glowing buttons, complex wiring, no human hands, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El flujo energético es una palanca de poder decisiva.",
+        "pexels_query": "energy grid control panel"
+      },
+      {
+        "id": 27,
+        "prompt": "Abstract map of global power centers connected by lines, economic influence, geopolitical strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract map of global power centers connected by lines, economic influence, geopolitical strategy, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La pregunta es: ¿quién controla el flujo energético mundial?",
+        "pexels_query": "global power map abstract"
+      }
+    ],
+    "hooks": [
+      "Ormuz, punto crítico mundial.",
+      "Petróleo global en riesgo.",
+      "Esto cambia el tablero."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
