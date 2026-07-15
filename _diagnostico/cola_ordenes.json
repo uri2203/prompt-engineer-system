@@ -3830,5 +3830,256 @@
       "Nueva arquitectura financiera"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "a76dfa4f-c060-4a10-9611-9f4defe43219",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Cargo ship navigating a narrow strait at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Cargo ship navigating a narrow strait at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Dos tensiones separadas revelan un movimiento táctico coordinado.\", \"pexels_query\": \"cargo ship strait\"}, {\"id\": 2, \"prompt\": \"Missile launch from a coastal area at night, long exposure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Missile launch from a coastal area at night, long exposure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El misil Houthi y el ataque sirio no son aislados.\", \"pexels_query\": \"missile launch coast\"}, {\"id\": 3, \"prompt\": \"War room map showing Middle East, tactical overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"War room map showing Middle East, tactical overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas confirman reconfiguración del tablero regional.\", \"pexels_query\": \"middle east tactical map\"}, {\"id\": 4, \"prompt\": \"Satellite view of Bab el-Mandeb Strait, shipping lanes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite view of Bab el-Mandeb Strait, shipping lanes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El estrecho Bab el-Mandeb, foco de tensión naval global.\", \"pexels_query\": \"bab el-mandeb strait satellite\"}, {\"id\": 5, \"prompt\": \"Container ship making a wide turn in open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Container ship making a wide turn in open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Más de 100 buques evitaron ya esta ruta crítica.\", \"pexels_query\": \"container ship redirection\"}, {\"id\": 6, \"prompt\": \"Empty shipping containers stacked at a port, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty shipping containers stacked at a port, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto eleva costos de transporte y seguros mundiales.\", \"pexels_query\": \"empty shipping containers\"}, {\"id\": 7, \"prompt\": \"Oil tankers in a convoy, calm seas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil tankers in a convoy, calm seas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El 12% del comercio mundial transita por allí.\", \"pexels_query\": \"oil tanker convoy\"}, {\"id\": 8, \"prompt\": \"Refinery complex at night, smoke stacks, industrial lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Refinery complex at night, smoke stacks, industrial lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen: el interés detrás.\", \"pexels_query\": \"oil refinery night\"}, {\"id\": 9, \"prompt\": \"Gas pipelines crisscrossing a desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Gas pipelines crisscrossing a desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Te conectamos la estrategia de control energético.\", \"pexels_query\": \"gas pipelines desert\"}, {\"id\": 10, \"prompt\": \"Geopolitical map of Middle East with influence zones, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map of Middle East with influence zones, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real muestra cerco geopolítico creciente.\", \"pexels_query\": \"geopolitical middle east map\"}, {\"id\": 11, \"prompt\": \"Destroyed military bunker in a desert, drone view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Destroyed military bunker in a desert, drone view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Ataques aéreos recientes en Yemen son respuesta visible.\", \"pexels_query\": \"destroyed military bunker\"}, {\"id\": 12, \"prompt\": \"Oil storage tanks at a port terminal, sunset, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil storage tanks at a port terminal, sunset, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Pero el objetivo es asegurar rutas de petróleo.\", \"pexels_query\": \"oil storage terminal\"}, {\"id\": 13, \"prompt\": \"Modern port facility with cranes loading containers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern port facility with cranes loading containers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Arabia Saudita observa su economía ligada al mar.\", \"pexels_query\": \"modern port facility\"}, {\"id\": 14, \"prompt\": \"Naval patrol vessel on open water, cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval patrol vessel on open water, cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Irán y sus aliados buscan influir en el flujo.\", \"pexels_query\": \"naval patrol vessel\"}, {\"id\": 15, \"prompt\": \"Digital display of oil price charts, stock market data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital display of oil price charts, stock market data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Este movimiento táctico afecta precios de crudo global.\", \"pexels_query\": \"oil price chart\"}, {\"id\": 16, \"prompt\": \"BRICS nations flags digitally overlaid on a global trade map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"BRICS nations flags digitally overlaid on a global trade map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los países BRICS redefinen sus cadenas de suministro.\", \"pexels_query\": \"BRICS trade map\"}, {\"id\": 17, \"prompt\": \"Digital representation of a yuan symbol replacing dollar, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital representation of a yuan symbol replacing dollar, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La desdolarización real busca alternativas al Golfo.\", \"pexels_query\": \"yuan vs dollar symbol\"}, {\"id\": 18, \"prompt\": \"Overhead view of a narrow, strategic waterway, historical maps overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a narrow, strategic waterway, historical maps overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó: Yemen, pivote crucial marítimo.\", \"pexels_query\": \"strategic waterway historical\"}, {\"id\": 19, \"prompt\": \"Diplomatic meeting table with empty chairs, dark wood, solemn atmosphere, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Diplomatic meeting table with empty chairs, dark wood, solemn atmosphere, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La diplomacia en sombra no detiene la escalada.\", \"pexels_query\": \"empty diplomatic table\"}, {\"id\": 20, \"prompt\": \"Aircraft carrier on the horizon, F-18 fighter jets on deck, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aircraft carrier on the horizon, F-18 fighter jets on deck, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un portaaviones estadounidense patrulla la zona activamente.\", \"pexels_query\": \"aircraft carrier jets\"}, {\"id\": 21, \"prompt\": \"Executive handshake over a table with energy contracts, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Executive handshake over a table with energy contracts, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Mientras, acuerdos energéticos se negocian en secreto.\", \"pexels_query\": \"energy contracts handshake\"}, {\"id\": 22, \"prompt\": \"Global shipping routes map, arrows diverting around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global shipping routes map, arrows diverting around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los datos muestran un flujo redirigido vía Sudáfrica.\", \"pexels_query\": \"global shipping routes africa\"}, {\"id\": 23, \"prompt\": \"Cargo port at night, long lines of trucks waiting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Cargo port at night, long lines of trucks waiting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto aumenta costos y tiempos para Europa y Asia.\", \"pexels_query\": \"night cargo port\"}, {\"id\": 24, \"prompt\": \"Digital representation of global trade network, specific nodes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital representation of global trade network, specific nodes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Este cambio en rutas altera el poder comercial.\", \"pexels_query\": \"global trade network\"}, {\"id\": 25, \"prompt\": \"European energy infrastructure map, focus on gas pipelines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"European energy infrastructure map, focus on gas pipelines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Europa busca desesperadamente nuevas rutas energía.\", \"pexels_query\": \"european energy map\"}, {\"id\": 26, \"prompt\": \"World map with arrows indicating shifts in power and alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"World map with arrows indicating shifts in power and alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real de la energía se redibuja.\", \"pexels_query\": \"world power shift map\"}, {\"id\": 27, \"prompt\": \"Digital timeline with geopolitical events, future projections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital timeline with geopolitical events, future projections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero geopolítico para décadas.\", \"pexels_query\": \"geopolitical timeline future\"}, {\"id\": 28, \"prompt\": \"Globe showing strategic shipping lanes, flickering energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Globe showing strategic shipping lanes, flickering energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La estabilidad energética define el futuro de naciones.\", \"pexels_query\": \"global energy shipping lanes\"}, {\"id\": 29, \"prompt\": \"Complex network of global trade routes, dynamic data visualization, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Complex network of global trade routes, dynamic data visualization, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real cambia: ¿quién controlará el flujo global?\", \"pexels_query\": \"global trade network visualization\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Dos tensiones separadas revelan un movimiento táctico coordinado. El misil Houthi y el ataque sirio no son aislados. Fuentes verificadas confirman reconfiguración del tablero regional. El estrecho Bab el-Mandeb, foco de tensión naval global. Más de 100 buques evitaron ya esta ruta crítica. Esto eleva costos de transporte y seguros mundiales. El 12% del comercio mundial transita por allí. Lo que no te dicen: el interés detrás. Te conectamos la estrategia de control energético. El mapa real muestra cerco geopolítico creciente. Ataques aéreos recientes en Yemen son respuesta visible. Pero el objetivo es asegurar rutas de petróleo. Arabia Saudita observa su economía ligada al mar. Irán y sus aliados buscan influir en el flujo. Este movimiento táctico afecta precios de crudo global. Los países BRICS redefinen sus cadenas de suministro. La desdolarización real busca alternativas al Golfo. Nadie lo conectó: Yemen, pivote crucial marítimo. La diplomacia en sombra no detiene la escalada. Un portaaviones estadounidense patrulla la zona activamente. Mientras, acuerdos energéticos se negocian en secreto. Los datos muestran un flujo redirigido vía Sudáfrica. Esto aumenta costos y tiempos para Europa y Asia. Este cambio en rutas altera el poder comercial. Europa busca desesperadamente nuevas rutas energía. El mapa real de la energía se redibuja. Esto cambia el tablero geopolítico para décadas. La estabilidad energética define el futuro de naciones. El mapa real cambia: ¿quién controlará el flujo global?",
+    "titulo_sugerido": "Ataques en el Mar Rojo: ¿Quién Gana con la Nueva Ruta del Petróleo?",
+    "escenas_texto": [
+      "Dos tensiones separadas revelan un movimiento táctico coordinado.",
+      "El misil Houthi y el ataque sirio no son aislados.",
+      "Fuentes verificadas confirman reconfiguración del tablero regional.",
+      "El estrecho Bab el-Mandeb, foco de tensión naval global.",
+      "Más de 100 buques evitaron ya esta ruta crítica.",
+      "Esto eleva costos de transporte y seguros mundiales.",
+      "El 12% del comercio mundial transita por allí.",
+      "Lo que no te dicen: el interés detrás.",
+      "Te conectamos la estrategia de control energético.",
+      "El mapa real muestra cerco geopolítico creciente.",
+      "Ataques aéreos recientes en Yemen son respuesta visible.",
+      "Pero el objetivo es asegurar rutas de petróleo.",
+      "Arabia Saudita observa su economía ligada al mar.",
+      "Irán y sus aliados buscan influir en el flujo.",
+      "Este movimiento táctico afecta precios de crudo global.",
+      "Los países BRICS redefinen sus cadenas de suministro.",
+      "La desdolarización real busca alternativas al Golfo.",
+      "Nadie lo conectó: Yemen, pivote crucial marítimo.",
+      "La diplomacia en sombra no detiene la escalada.",
+      "Un portaaviones estadounidense patrulla la zona activamente.",
+      "Mientras, acuerdos energéticos se negocian en secreto.",
+      "Los datos muestran un flujo redirigido vía Sudáfrica.",
+      "Esto aumenta costos y tiempos para Europa y Asia.",
+      "Este cambio en rutas altera el poder comercial.",
+      "Europa busca desesperadamente nuevas rutas energía.",
+      "El mapa real de la energía se redibuja.",
+      "Esto cambia el tablero geopolítico para décadas.",
+      "La estabilidad energética define el futuro de naciones.",
+      "El mapa real cambia: ¿quién controlará el flujo global?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Cargo ship navigating a narrow strait at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Cargo ship navigating a narrow strait at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Dos tensiones separadas revelan un movimiento táctico coordinado.",
+        "pexels_query": "cargo ship strait"
+      },
+      {
+        "id": 2,
+        "prompt": "Missile launch from a coastal area at night, long exposure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Missile launch from a coastal area at night, long exposure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El misil Houthi y el ataque sirio no son aislados.",
+        "pexels_query": "missile launch coast"
+      },
+      {
+        "id": 3,
+        "prompt": "War room map showing Middle East, tactical overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "War room map showing Middle East, tactical overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas confirman reconfiguración del tablero regional.",
+        "pexels_query": "middle east tactical map"
+      },
+      {
+        "id": 4,
+        "prompt": "Satellite view of Bab el-Mandeb Strait, shipping lanes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite view of Bab el-Mandeb Strait, shipping lanes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El estrecho Bab el-Mandeb, foco de tensión naval global.",
+        "pexels_query": "bab el-mandeb strait satellite"
+      },
+      {
+        "id": 5,
+        "prompt": "Container ship making a wide turn in open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Container ship making a wide turn in open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Más de 100 buques evitaron ya esta ruta crítica.",
+        "pexels_query": "container ship redirection"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty shipping containers stacked at a port, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty shipping containers stacked at a port, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto eleva costos de transporte y seguros mundiales.",
+        "pexels_query": "empty shipping containers"
+      },
+      {
+        "id": 7,
+        "prompt": "Oil tankers in a convoy, calm seas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil tankers in a convoy, calm seas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El 12% del comercio mundial transita por allí.",
+        "pexels_query": "oil tanker convoy"
+      },
+      {
+        "id": 8,
+        "prompt": "Refinery complex at night, smoke stacks, industrial lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Refinery complex at night, smoke stacks, industrial lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen: el interés detrás.",
+        "pexels_query": "oil refinery night"
+      },
+      {
+        "id": 9,
+        "prompt": "Gas pipelines crisscrossing a desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Gas pipelines crisscrossing a desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Te conectamos la estrategia de control energético.",
+        "pexels_query": "gas pipelines desert"
+      },
+      {
+        "id": 10,
+        "prompt": "Geopolitical map of Middle East with influence zones, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map of Middle East with influence zones, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real muestra cerco geopolítico creciente.",
+        "pexels_query": "geopolitical middle east map"
+      },
+      {
+        "id": 11,
+        "prompt": "Destroyed military bunker in a desert, drone view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Destroyed military bunker in a desert, drone view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Ataques aéreos recientes en Yemen son respuesta visible.",
+        "pexels_query": "destroyed military bunker"
+      },
+      {
+        "id": 12,
+        "prompt": "Oil storage tanks at a port terminal, sunset, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil storage tanks at a port terminal, sunset, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Pero el objetivo es asegurar rutas de petróleo.",
+        "pexels_query": "oil storage terminal"
+      },
+      {
+        "id": 13,
+        "prompt": "Modern port facility with cranes loading containers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern port facility with cranes loading containers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Arabia Saudita observa su economía ligada al mar.",
+        "pexels_query": "modern port facility"
+      },
+      {
+        "id": 14,
+        "prompt": "Naval patrol vessel on open water, cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval patrol vessel on open water, cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Irán y sus aliados buscan influir en el flujo.",
+        "pexels_query": "naval patrol vessel"
+      },
+      {
+        "id": 15,
+        "prompt": "Digital display of oil price charts, stock market data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital display of oil price charts, stock market data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Este movimiento táctico afecta precios de crudo global.",
+        "pexels_query": "oil price chart"
+      },
+      {
+        "id": 16,
+        "prompt": "BRICS nations flags digitally overlaid on a global trade map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "BRICS nations flags digitally overlaid on a global trade map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los países BRICS redefinen sus cadenas de suministro.",
+        "pexels_query": "BRICS trade map"
+      },
+      {
+        "id": 17,
+        "prompt": "Digital representation of a yuan symbol replacing dollar, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital representation of a yuan symbol replacing dollar, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La desdolarización real busca alternativas al Golfo.",
+        "pexels_query": "yuan vs dollar symbol"
+      },
+      {
+        "id": 18,
+        "prompt": "Overhead view of a narrow, strategic waterway, historical maps overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a narrow, strategic waterway, historical maps overlay, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó: Yemen, pivote crucial marítimo.",
+        "pexels_query": "strategic waterway historical"
+      },
+      {
+        "id": 19,
+        "prompt": "Diplomatic meeting table with empty chairs, dark wood, solemn atmosphere, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Diplomatic meeting table with empty chairs, dark wood, solemn atmosphere, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La diplomacia en sombra no detiene la escalada.",
+        "pexels_query": "empty diplomatic table"
+      },
+      {
+        "id": 20,
+        "prompt": "Aircraft carrier on the horizon, F-18 fighter jets on deck, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aircraft carrier on the horizon, F-18 fighter jets on deck, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un portaaviones estadounidense patrulla la zona activamente.",
+        "pexels_query": "aircraft carrier jets"
+      },
+      {
+        "id": 21,
+        "prompt": "Executive handshake over a table with energy contracts, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Executive handshake over a table with energy contracts, blurred background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Mientras, acuerdos energéticos se negocian en secreto.",
+        "pexels_query": "energy contracts handshake"
+      },
+      {
+        "id": 22,
+        "prompt": "Global shipping routes map, arrows diverting around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global shipping routes map, arrows diverting around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los datos muestran un flujo redirigido vía Sudáfrica.",
+        "pexels_query": "global shipping routes africa"
+      },
+      {
+        "id": 23,
+        "prompt": "Cargo port at night, long lines of trucks waiting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Cargo port at night, long lines of trucks waiting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto aumenta costos y tiempos para Europa y Asia.",
+        "pexels_query": "night cargo port"
+      },
+      {
+        "id": 24,
+        "prompt": "Digital representation of global trade network, specific nodes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital representation of global trade network, specific nodes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Este cambio en rutas altera el poder comercial.",
+        "pexels_query": "global trade network"
+      },
+      {
+        "id": 25,
+        "prompt": "European energy infrastructure map, focus on gas pipelines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "European energy infrastructure map, focus on gas pipelines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Europa busca desesperadamente nuevas rutas energía.",
+        "pexels_query": "european energy map"
+      },
+      {
+        "id": 26,
+        "prompt": "World map with arrows indicating shifts in power and alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "World map with arrows indicating shifts in power and alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real de la energía se redibuja.",
+        "pexels_query": "world power shift map"
+      },
+      {
+        "id": 27,
+        "prompt": "Digital timeline with geopolitical events, future projections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital timeline with geopolitical events, future projections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero geopolítico para décadas.",
+        "pexels_query": "geopolitical timeline future"
+      },
+      {
+        "id": 28,
+        "prompt": "Globe showing strategic shipping lanes, flickering energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Globe showing strategic shipping lanes, flickering energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La estabilidad energética define el futuro de naciones.",
+        "pexels_query": "global energy shipping lanes"
+      },
+      {
+        "id": 29,
+        "prompt": "Complex network of global trade routes, dynamic data visualization, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Complex network of global trade routes, dynamic data visualization, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real cambia: ¿quién controlará el flujo global?",
+        "pexels_query": "global trade network visualization"
+      }
+    ],
+    "hooks": [
+      "Estrecho vital Bab el-Mandeb",
+      "Costos globales disparados",
+      "El mapa energético cambia"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
