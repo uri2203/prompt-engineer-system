@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 25,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 7,
+  "trabajo_actual": "Generando video 8/25 (Monkygraff 9:16)",
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": "La Viuda: 5s+0L | Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
+  "historial": []
 }
