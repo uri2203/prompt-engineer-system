@@ -2153,5 +2153,248 @@
       "Ella aún te busca."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "b303a422-c59c-46a8-aee4-9fed7d556610",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Old, worn notebook, slightly open, on a dimly lit wooden table, grainy texture, chiaroscuro\", \"prompt_visual\": \"Old, worn notebook, slightly open, on a dimly lit wooden table, grainy texture, chiaroscuro\", \"texto_locucion\": \"Esa vieja libreta. Apareció anoche en tu mesa.\", \"pexels_query\": \"old notebook table\"}, {\"id\": 2, \"prompt\": \"Close-up on open notebook, blurred handwritten text, faded ink, desaturated colors\", \"prompt_visual\": \"Close-up on open notebook, blurred handwritten text, faded ink, desaturated colors\", \"texto_locucion\": \"No recuerdas haberla comprado. No es tuya.\", \"pexels_query\": \"open notebook text\"}, {\"id\": 3, \"prompt\": \"Shadowy hand almost touching the cold surface of an old notebook, subtle blue tint\", \"prompt_visual\": \"Shadowy hand almost touching the cold surface of an old notebook, subtle blue tint\", \"texto_locucion\": \"Su tacto frío te erizó la piel.\", \"pexels_query\": \"shadow hand notebook\"}, {\"id\": 4, \"prompt\": \"Notebook page with sparse, faded names and dates, unsettling emptiness, dark background\", \"prompt_visual\": \"Notebook page with sparse, faded names and dates, unsettling emptiness, dark background\", \"texto_locucion\": \"Adentro, solo nombres. Y fechas imprecisas.\", \"pexels_query\": \"notebook names dates\"}, {\"id\": 5, \"prompt\": \"Single page with slightly bolder, abstract, disturbing text, ancient paper texture\", \"prompt_visual\": \"Single page with slightly bolder, abstract, disturbing text, ancient paper texture\", \"texto_locucion\": \"Son historias que nadie quiere escuchar.\", \"pexels_query\": \"disturbing text page\"}, {\"id\": 6, \"prompt\": \"Blurred reflection on a dark window pane, suggesting indistinct human-like movement outside\", \"prompt_visual\": \"Blurred reflection on a dark window pane, suggesting indistinct human-like movement outside\", \"texto_locucion\": \"Relatos de aquello que no fue resuelto.\", \"pexels_query\": \"blurred window reflection\"}, {\"id\": 7, \"prompt\": \"Empty, dark hallway, single door slightly ajar, sliver of eerie light from inside\", \"prompt_visual\": \"Empty, dark hallway, single door slightly ajar, sliver of eerie light from inside\", \"texto_locucion\": \"Tú sabes que algo no está bien.\", \"pexels_query\": \"dark hallway ajar\"}, {\"id\": 8, \"prompt\": \"Close-up of overlapping, faded newspaper clippings, obscured unsettling words, deep shadows\", \"prompt_visual\": \"Close-up of overlapping, faded newspaper clippings, obscured unsettling words, deep shadows\", \"texto_locucion\": \"Cada nombre, una herida abierta en el tiempo.\", \"pexels_query\": \"faded newspaper clippings\"}, {\"id\": 9, \"prompt\": \"Empty space on a table where an object clearly was, unsettling void, low light\", \"prompt_visual\": \"Empty space on a table where an object clearly was, unsettling void, low light\", \"texto_locucion\": \"Pronto, la libreta ya no estaba ahí.\", \"pexels_query\": \"empty table space\"}, {\"id\": 10, \"prompt\": \"Blurred silhouette by a dark window, looking out into an indistinguishable dark landscape\", \"prompt_visual\": \"Blurred silhouette by a dark window, looking out into an indistinguishable dark landscape\", \"texto_locucion\": \"Pero el primer relato lo sentiste antes.\", \"pexels_query\": \"blurred silhouette window\"}, {\"id\": 11, \"prompt\": \"Dark living room, single chair slightly askew, deep shadows filling the room\", \"prompt_visual\": \"Dark living room, single chair slightly askew, deep shadows filling the room\", \"texto_locucion\": \"Esa noche, no estabas solo en casa.\", \"pexels_query\": \"dark living room chair\"}, {\"id\": 12, \"prompt\": \"Dark corner, subtle light revealing indistinct, swirling shadow forms, unsettling shapes\", \"prompt_visual\": \"Dark corner, subtle light revealing indistinct, swirling shadow forms, unsettling shapes\", \"texto_locucion\": \"Los susurros llegaron con la oscuridad.\", \"pexels_query\": \"dark corner shadows\"}, {\"id\": 13, \"prompt\": \"Old, textured wall with faint, unnatural scratches or marks, barely visible, green tint\", \"prompt_visual\": \"Old, textured wall with faint, unnatural scratches or marks, barely visible, green tint\", \"texto_locucion\": \"Voces que tú no pudiste entender.\", \"pexels_query\": \"old wall scratches\"}, {\"id\": 14, \"prompt\": \"Shadowy hand pressed against a closed, dark wooden door, as if listening intently\", \"prompt_visual\": \"Shadowy hand pressed against a closed, dark wooden door, as if listening intently\", \"texto_locucion\": \"Intentaste ignorarlos. No puedes ignorarlo ahora.\", \"pexels_query\": \"hand on door listening\"}, {\"id\": 15, \"prompt\": \"Dark, old-fashioned telephone receiver lying off the hook, dead silence, grainy\", \"prompt_visual\": \"Dark, old-fashioned telephone receiver lying off the hook, dead silence, grainy\", \"texto_locucion\": \"¿Cómo supiste esos nombres ya existían?\", \"pexels_query\": \"telephone off hook\"}, {\"id\": 16, \"prompt\": \"Empty street at night, distant, single streetlight, fog, deep blue desaturated tones\", \"prompt_visual\": \"Empty street at night, distant, single streetlight, fog, deep blue desaturated tones\", \"texto_locucion\": \"Nadie los había dicho en voz alta.\", \"pexels_query\": \"empty street night\"}, {\"id\": 17, \"prompt\": \"Cracked mirror reflecting a distorted, empty room, unsettling perspective, low light\", \"prompt_visual\": \"Cracked mirror reflecting a distorted, empty room, unsettling perspective, low light\", \"texto_locucion\": \"La disonancia cognitiva es un cruel juego.\", \"pexels_query\": \"cracked mirror room\"}, {\"id\": 18, \"prompt\": \"Blurred, familiar street scene, but with subtle, unsettling anomalies in the background\", \"prompt_visual\": \"Blurred, familiar street scene, but with subtle, unsettling anomalies in the background\", \"texto_locucion\": \"Lo que creías, ahora no es real.\", \"pexels_query\": \"blurred street anomaly\"}, {\"id\": 19, \"prompt\": \"Deep, consuming shadow under a bed, hinting at a hidden, amorphous presence\", \"prompt_visual\": \"Deep, consuming shadow under a bed, hinting at a hidden, amorphous presence\", \"texto_locucion\": \"Te persigue la idea de su origen.\", \"pexels_query\": \"shadow under bed\"}, {\"id\": 20, \"prompt\": \"Single, bare lightbulb swinging gently in a vast, dark, empty room, extreme contrast\", \"prompt_visual\": \"Single, bare lightbulb swinging gently in a vast, dark, empty room, extreme contrast\", \"texto_locucion\": \"¿Quién más conocía estas historias contigo?\", \"pexels_query\": \"swinging lightbulb dark\"}, {\"id\": 21, \"prompt\": \"Long, empty corridor, the far end completely shrouded in impenetrable darkness, deep perspective\", \"prompt_visual\": \"Long, empty corridor, the far end completely shrouded in impenetrable darkness, deep perspective\", \"texto_locucion\": \"El silencio absoluto es su peor cómplice.\", \"pexels_query\": \"empty corridor darkness\"}, {\"id\": 22, \"prompt\": \"Close-up on a shadowed cheek, a single tear tracing a path, no identifiable facial features\", \"prompt_visual\": \"Close-up on a shadowed cheek, a single tear tracing a path, no identifiable facial features\", \"texto_locucion\": \"Pero tú las leíste. Tú las creíste.\", \"pexels_query\": \"shadowed tear cheek\"}, {\"id\": 23, \"prompt\": \"Entwined, shadowy forms resembling hands or tendrils in a dark corner, cold palette\", \"prompt_visual\": \"Entwined, shadowy forms resembling hands or tendrils in a dark corner, cold palette\", \"texto_locucion\": \"Y ahora, estás conectado para siempre.\", \"pexels_query\": \"shadowy entwined forms\"}, {\"id\": 24, \"prompt\": \"Closed, dark wooden door, faint, unnatural glow emanating from beneath it, eerie light\", \"prompt_visual\": \"Closed, dark wooden door, faint, unnatural glow emanating from beneath it, eerie light\", \"texto_locucion\": \"El miedo a lo desconocido ya no es.\", \"pexels_query\": \"glowing door gap\"}, {\"id\": 25, \"prompt\": \"Old, faded, sepia-toned photograph of a generic, unsettling, empty landscape, blurred details\", \"prompt_visual\": \"Old, faded, sepia-toned photograph of a generic, unsettling, empty landscape, blurred details\", \"texto_locucion\": \"Ahora es la verdad que te consume.\", \"pexels_query\": \"unsettling faded landscape\"}, {\"id\": 26, \"prompt\": \"Shadowy, indistinct figure standing just outside a window, barely visible through the glass\", \"prompt_visual\": \"Shadowy, indistinct figure standing just outside a window, barely visible through the glass\", \"texto_locucion\": \"Mira de nuevo a tu alrededor con cuidado.\", \"pexels_query\": \"shadow figure window\"}, {\"id\": 27, \"prompt\": \"Unmade bed with rumpled sheets in a deep, dark room, no one visible, oppressive atmosphere\", \"prompt_visual\": \"Unmade bed with rumpled sheets in a deep, dark room, no one visible, oppressive atmosphere\", \"texto_locucion\": \"¿Estás seguro de que estás despierto ahora?\", \"pexels_query\": \"rumpled bed dark\"}, {\"id\": 28, \"prompt\": \"Dark reflection in a still pool of water, heavily distorted, barely resembling a human form\", \"prompt_visual\": \"Dark reflection in a still pool of water, heavily distorted, barely resembling a human form\", \"texto_locucion\": \"¿O eres tú, una historia prohibida más?\", \"pexels_query\": \"distorted water reflection\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Esa vieja libreta. Apareció anoche en tu mesa. No recuerdas haberla comprado. No es tuya. Su tacto frío te erizó la piel. Adentro, solo nombres. Y fechas imprecisas. Son historias que nadie quiere escuchar. Relatos de aquello que no fue resuelto. Tú sabes que algo no está bien. Cada nombre, una herida abierta en el tiempo. Pronto, la libreta ya no estaba ahí. Pero el primer relato lo sentiste antes. Esa noche, no estabas solo en casa. Los susurros llegaron con la oscuridad. Voces que tú no pudiste entender. Intentaste ignorarlos. No puedes ignorarlo ahora. ¿Cómo supiste esos nombres ya existían? Nadie los había dicho en voz alta. La disonancia cognitiva es un cruel juego. Lo que creías, ahora no es real. Te persigue la idea de su origen. ¿Quién más conocía estas historias contigo? El silencio absoluto es su peor cómplice. Pero tú las leíste. Tú las creíste. Y ahora, estás conectado para siempre. El miedo a lo desconocido ya no es. Ahora es la verdad que te consume. Mira de nuevo a tu alrededor con cuidado. ¿Estás seguro de que estás despierto ahora? ¿O eres tú, una historia prohibida más?",
+    "titulo_sugerido": "La libreta de las historias prohibidas",
+    "escenas_texto": [
+      "Esa vieja libreta. Apareció anoche en tu mesa.",
+      "No recuerdas haberla comprado. No es tuya.",
+      "Su tacto frío te erizó la piel.",
+      "Adentro, solo nombres. Y fechas imprecisas.",
+      "Son historias que nadie quiere escuchar.",
+      "Relatos de aquello que no fue resuelto.",
+      "Tú sabes que algo no está bien.",
+      "Cada nombre, una herida abierta en el tiempo.",
+      "Pronto, la libreta ya no estaba ahí.",
+      "Pero el primer relato lo sentiste antes.",
+      "Esa noche, no estabas solo en casa.",
+      "Los susurros llegaron con la oscuridad.",
+      "Voces que tú no pudiste entender.",
+      "Intentaste ignorarlos. No puedes ignorarlo ahora.",
+      "¿Cómo supiste esos nombres ya existían?",
+      "Nadie los había dicho en voz alta.",
+      "La disonancia cognitiva es un cruel juego.",
+      "Lo que creías, ahora no es real.",
+      "Te persigue la idea de su origen.",
+      "¿Quién más conocía estas historias contigo?",
+      "El silencio absoluto es su peor cómplice.",
+      "Pero tú las leíste. Tú las creíste.",
+      "Y ahora, estás conectado para siempre.",
+      "El miedo a lo desconocido ya no es.",
+      "Ahora es la verdad que te consume.",
+      "Mira de nuevo a tu alrededor con cuidado.",
+      "¿Estás seguro de que estás despierto ahora?",
+      "¿O eres tú, una historia prohibida más?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Old, worn notebook, slightly open, on a dimly lit wooden table, grainy texture, chiaroscuro",
+        "prompt_visual": "Old, worn notebook, slightly open, on a dimly lit wooden table, grainy texture, chiaroscuro",
+        "texto_locucion": "Esa vieja libreta. Apareció anoche en tu mesa.",
+        "pexels_query": "old notebook table"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up on open notebook, blurred handwritten text, faded ink, desaturated colors",
+        "prompt_visual": "Close-up on open notebook, blurred handwritten text, faded ink, desaturated colors",
+        "texto_locucion": "No recuerdas haberla comprado. No es tuya.",
+        "pexels_query": "open notebook text"
+      },
+      {
+        "id": 3,
+        "prompt": "Shadowy hand almost touching the cold surface of an old notebook, subtle blue tint",
+        "prompt_visual": "Shadowy hand almost touching the cold surface of an old notebook, subtle blue tint",
+        "texto_locucion": "Su tacto frío te erizó la piel.",
+        "pexels_query": "shadow hand notebook"
+      },
+      {
+        "id": 4,
+        "prompt": "Notebook page with sparse, faded names and dates, unsettling emptiness, dark background",
+        "prompt_visual": "Notebook page with sparse, faded names and dates, unsettling emptiness, dark background",
+        "texto_locucion": "Adentro, solo nombres. Y fechas imprecisas.",
+        "pexels_query": "notebook names dates"
+      },
+      {
+        "id": 5,
+        "prompt": "Single page with slightly bolder, abstract, disturbing text, ancient paper texture",
+        "prompt_visual": "Single page with slightly bolder, abstract, disturbing text, ancient paper texture",
+        "texto_locucion": "Son historias que nadie quiere escuchar.",
+        "pexels_query": "disturbing text page"
+      },
+      {
+        "id": 6,
+        "prompt": "Blurred reflection on a dark window pane, suggesting indistinct human-like movement outside",
+        "prompt_visual": "Blurred reflection on a dark window pane, suggesting indistinct human-like movement outside",
+        "texto_locucion": "Relatos de aquello que no fue resuelto.",
+        "pexels_query": "blurred window reflection"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty, dark hallway, single door slightly ajar, sliver of eerie light from inside",
+        "prompt_visual": "Empty, dark hallway, single door slightly ajar, sliver of eerie light from inside",
+        "texto_locucion": "Tú sabes que algo no está bien.",
+        "pexels_query": "dark hallway ajar"
+      },
+      {
+        "id": 8,
+        "prompt": "Close-up of overlapping, faded newspaper clippings, obscured unsettling words, deep shadows",
+        "prompt_visual": "Close-up of overlapping, faded newspaper clippings, obscured unsettling words, deep shadows",
+        "texto_locucion": "Cada nombre, una herida abierta en el tiempo.",
+        "pexels_query": "faded newspaper clippings"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty space on a table where an object clearly was, unsettling void, low light",
+        "prompt_visual": "Empty space on a table where an object clearly was, unsettling void, low light",
+        "texto_locucion": "Pronto, la libreta ya no estaba ahí.",
+        "pexels_query": "empty table space"
+      },
+      {
+        "id": 10,
+        "prompt": "Blurred silhouette by a dark window, looking out into an indistinguishable dark landscape",
+        "prompt_visual": "Blurred silhouette by a dark window, looking out into an indistinguishable dark landscape",
+        "texto_locucion": "Pero el primer relato lo sentiste antes.",
+        "pexels_query": "blurred silhouette window"
+      },
+      {
+        "id": 11,
+        "prompt": "Dark living room, single chair slightly askew, deep shadows filling the room",
+        "prompt_visual": "Dark living room, single chair slightly askew, deep shadows filling the room",
+        "texto_locucion": "Esa noche, no estabas solo en casa.",
+        "pexels_query": "dark living room chair"
+      },
+      {
+        "id": 12,
+        "prompt": "Dark corner, subtle light revealing indistinct, swirling shadow forms, unsettling shapes",
+        "prompt_visual": "Dark corner, subtle light revealing indistinct, swirling shadow forms, unsettling shapes",
+        "texto_locucion": "Los susurros llegaron con la oscuridad.",
+        "pexels_query": "dark corner shadows"
+      },
+      {
+        "id": 13,
+        "prompt": "Old, textured wall with faint, unnatural scratches or marks, barely visible, green tint",
+        "prompt_visual": "Old, textured wall with faint, unnatural scratches or marks, barely visible, green tint",
+        "texto_locucion": "Voces que tú no pudiste entender.",
+        "pexels_query": "old wall scratches"
+      },
+      {
+        "id": 14,
+        "prompt": "Shadowy hand pressed against a closed, dark wooden door, as if listening intently",
+        "prompt_visual": "Shadowy hand pressed against a closed, dark wooden door, as if listening intently",
+        "texto_locucion": "Intentaste ignorarlos. No puedes ignorarlo ahora.",
+        "pexels_query": "hand on door listening"
+      },
+      {
+        "id": 15,
+        "prompt": "Dark, old-fashioned telephone receiver lying off the hook, dead silence, grainy",
+        "prompt_visual": "Dark, old-fashioned telephone receiver lying off the hook, dead silence, grainy",
+        "texto_locucion": "¿Cómo supiste esos nombres ya existían?",
+        "pexels_query": "telephone off hook"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty street at night, distant, single streetlight, fog, deep blue desaturated tones",
+        "prompt_visual": "Empty street at night, distant, single streetlight, fog, deep blue desaturated tones",
+        "texto_locucion": "Nadie los había dicho en voz alta.",
+        "pexels_query": "empty street night"
+      },
+      {
+        "id": 17,
+        "prompt": "Cracked mirror reflecting a distorted, empty room, unsettling perspective, low light",
+        "prompt_visual": "Cracked mirror reflecting a distorted, empty room, unsettling perspective, low light",
+        "texto_locucion": "La disonancia cognitiva es un cruel juego.",
+        "pexels_query": "cracked mirror room"
+      },
+      {
+        "id": 18,
+        "prompt": "Blurred, familiar street scene, but with subtle, unsettling anomalies in the background",
+        "prompt_visual": "Blurred, familiar street scene, but with subtle, unsettling anomalies in the background",
+        "texto_locucion": "Lo que creías, ahora no es real.",
+        "pexels_query": "blurred street anomaly"
+      },
+      {
+        "id": 19,
+        "prompt": "Deep, consuming shadow under a bed, hinting at a hidden, amorphous presence",
+        "prompt_visual": "Deep, consuming shadow under a bed, hinting at a hidden, amorphous presence",
+        "texto_locucion": "Te persigue la idea de su origen.",
+        "pexels_query": "shadow under bed"
+      },
+      {
+        "id": 20,
+        "prompt": "Single, bare lightbulb swinging gently in a vast, dark, empty room, extreme contrast",
+        "prompt_visual": "Single, bare lightbulb swinging gently in a vast, dark, empty room, extreme contrast",
+        "texto_locucion": "¿Quién más conocía estas historias contigo?",
+        "pexels_query": "swinging lightbulb dark"
+      },
+      {
+        "id": 21,
+        "prompt": "Long, empty corridor, the far end completely shrouded in impenetrable darkness, deep perspective",
+        "prompt_visual": "Long, empty corridor, the far end completely shrouded in impenetrable darkness, deep perspective",
+        "texto_locucion": "El silencio absoluto es su peor cómplice.",
+        "pexels_query": "empty corridor darkness"
+      },
+      {
+        "id": 22,
+        "prompt": "Close-up on a shadowed cheek, a single tear tracing a path, no identifiable facial features",
+        "prompt_visual": "Close-up on a shadowed cheek, a single tear tracing a path, no identifiable facial features",
+        "texto_locucion": "Pero tú las leíste. Tú las creíste.",
+        "pexels_query": "shadowed tear cheek"
+      },
+      {
+        "id": 23,
+        "prompt": "Entwined, shadowy forms resembling hands or tendrils in a dark corner, cold palette",
+        "prompt_visual": "Entwined, shadowy forms resembling hands or tendrils in a dark corner, cold palette",
+        "texto_locucion": "Y ahora, estás conectado para siempre.",
+        "pexels_query": "shadowy entwined forms"
+      },
+      {
+        "id": 24,
+        "prompt": "Closed, dark wooden door, faint, unnatural glow emanating from beneath it, eerie light",
+        "prompt_visual": "Closed, dark wooden door, faint, unnatural glow emanating from beneath it, eerie light",
+        "texto_locucion": "El miedo a lo desconocido ya no es.",
+        "pexels_query": "glowing door gap"
+      },
+      {
+        "id": 25,
+        "prompt": "Old, faded, sepia-toned photograph of a generic, unsettling, empty landscape, blurred details",
+        "prompt_visual": "Old, faded, sepia-toned photograph of a generic, unsettling, empty landscape, blurred details",
+        "texto_locucion": "Ahora es la verdad que te consume.",
+        "pexels_query": "unsettling faded landscape"
+      },
+      {
+        "id": 26,
+        "prompt": "Shadowy, indistinct figure standing just outside a window, barely visible through the glass",
+        "prompt_visual": "Shadowy, indistinct figure standing just outside a window, barely visible through the glass",
+        "texto_locucion": "Mira de nuevo a tu alrededor con cuidado.",
+        "pexels_query": "shadow figure window"
+      },
+      {
+        "id": 27,
+        "prompt": "Unmade bed with rumpled sheets in a deep, dark room, no one visible, oppressive atmosphere",
+        "prompt_visual": "Unmade bed with rumpled sheets in a deep, dark room, no one visible, oppressive atmosphere",
+        "texto_locucion": "¿Estás seguro de que estás despierto ahora?",
+        "pexels_query": "rumpled bed dark"
+      },
+      {
+        "id": 28,
+        "prompt": "Dark reflection in a still pool of water, heavily distorted, barely resembling a human form",
+        "prompt_visual": "Dark reflection in a still pool of water, heavily distorted, barely resembling a human form",
+        "texto_locucion": "¿O eres tú, una historia prohibida más?",
+        "pexels_query": "distorted water reflection"
+      }
+    ],
+    "hooks": [
+      "Historias que no se cuentan.",
+      "El relato te eligió.",
+      "Ahora, eres tú."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
