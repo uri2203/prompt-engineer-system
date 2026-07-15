@@ -241,5 +241,264 @@
       "Nueva arquitectura energética."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "c3acc10f-d4fd-4442-9068-b449cac54180",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Overhead view of a vast, complex oil refinery with flare stacks in operation at dusk, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a vast, complex oil refinery with flare stacks in operation at dusk, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"oil refinery sunset\"}, {\"id\": 2, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"El mapa de poder ya cambió. La mayoría aún no se entera.\", \"pexels_query\": null}, {\"id\": 3, \"prompt\": \"Satellite map showing gas pipeline networks across Eurasia, highlighting routes between Russia and Europe, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite map showing gas pipeline networks across Eurasia, highlighting routes between Russia and Europe, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"eurasia gas pipelines map\"}, {\"id\": 4, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Te explico el giro estratégico Rusia-Irán.\", \"pexels_query\": null}, {\"id\": 5, \"prompt\": \"Exterior shot of the Kremlin walls, imposing architecture, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Exterior shot of the Kremlin walls, imposing architecture, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"kremlin exterior\"}, {\"id\": 6, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Dmitri Medvédev visitó Teherán con una misión clara.\", \"pexels_query\": null}, {\"id\": 7, \"prompt\": \"Exterior shot of the Iranian Parliament building (Majlis) in Tehran, detailed architecture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Exterior shot of the Iranian Parliament building (Majlis) in Tehran, detailed architecture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"iranian parliament building\"}, {\"id\": 8, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Busca una nueva arquitectura energética frente a Europa.\", \"pexels_query\": null}, {\"id\": 9, \"prompt\": \"Large LNG (Liquefied Natural Gas) tanker ship in port, industrial setting, no visible crew, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Large LNG (Liquefied Natural Gas) tanker ship in port, industrial setting, no visible crew, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"LNG tanker ship\"}, {\"id\": 10, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Lo que no te dicen: el gas es el arma principal.\", \"pexels_query\": null}, {\"id\": 11, \"prompt\": \"Industrial gas compression station in a desolate landscape, pipelines converging, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial gas compression station in a desolate landscape, pipelines converging, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"gas compression station\"}, {\"id\": 12, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Rusia y Irán controlan vastas reservas de gas natural.\", \"pexels_query\": null}, {\"id\": 13, \"prompt\": \"German industrial complex, factory smokestacks with steam, focus on heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"German industrial complex, factory smokestacks with steam, focus on heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"german industrial factory\"}, {\"id\": 14, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Esto afecta directamente la estabilidad energética alemana.\", \"pexels_query\": null}, {\"id\": 15, \"prompt\": \"Map of the Middle East and Caspian Sea region, highlighting gas fields and potential pipeline routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map of the Middle East and Caspian Sea region, highlighting gas fields and potential pipeline routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"middle east gas map\"}, {\"id\": 16, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Ambos buscan redirigir flujos lejos del mercado europeo.\", \"pexels_query\": null}, {\"id\": 17, \"prompt\": \"Empty control room of a power plant, screens displaying schematics and data, no operators, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty control room of a power plant, screens displaying schematics and data, no operators, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"power plant control room\"}, {\"id\": 18, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"El mapa real muestra una dependencia crítica no resuelta.\", \"pexels_query\": null}, {\"id\": 19, \"prompt\": \"Currency exchange board with blurred numbers, focus on dollar and ruble symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Currency exchange board with blurred numbers, focus on dollar and ruble symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"currency exchange symbols\"}, {\"id\": 20, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Este movimiento táctico fortalece el bloque BRICS.\", \"pexels_query\": null}, {\"id\": 21, \"prompt\": \"Financial district skyscrapers from a low angle, reflecting cloudy sky, no street level activity visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Financial district skyscrapers from a low angle, reflecting cloudy sky, no street level activity visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"financial district buildings\"}, {\"id\": 22, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Buscan desdolarizar transacciones energéticas globales.\", \"pexels_query\": null}, {\"id\": 23, \"prompt\": \"Cargo ships waiting at a busy port, containers stacked high, focus on logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Cargo ships waiting at a busy port, containers stacked high, focus on logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"busy cargo port\"}, {\"id\": 24, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Las fuentes verificadas confirman la aceleración de esta estrategia.\", \"pexels_query\": null}, {\"id\": 25, \"prompt\": \"Global map highlighting Russia, Iran, and Europe, showing energy flows with subtle lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global map highlighting Russia, Iran, and Europe, showing energy flows with subtle lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"geopolitical energy map\"}, {\"id\": 26, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Nadie lo conectó: es una jugada maestra de ajedrez geopolítico.\", \"pexels_query\": null}, {\"id\": 27, \"prompt\": \"Empty European energy infrastructure, a large power transformer station, no workers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty European energy infrastructure, a large power transformer station, no workers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"european power station\"}, {\"id\": 28, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Europa deberá redefinir su aprovisionamiento en los próximos años.\", \"pexels_query\": null}, {\"id\": 29, \"prompt\": \"Close-up of a complex industrial pipeline junction, intricate network of pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a complex industrial pipeline junction, intricate network of pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"industrial pipeline junction\"}, {\"id\": 30, \"prompt\": \"\", \"prompt_visual\": \"\", \"texto_locucion\": \"Para entender el próximo movimiento, suscríbete a Monkygraff ahora.\", \"pexels_query\": null}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "El mapa de poder ya cambió. La mayoría aún no se entera. Te explico el giro estratégico Rusia-Irán. Dmitri Medvédev visitó Teherán con una misión clara. Busca una nueva arquitectura energética frente a Europa. Lo que no te dicen: el gas es el arma principal. Rusia y Irán controlan vastas reservas de gas natural. Esto afecta directamente la estabilidad energética alemana. Ambos buscan redirigir flujos lejos del mercado europeo. El mapa real muestra una dependencia crítica no resuelta. Este movimiento táctico fortalece el bloque BRICS. Buscan desdolarizar transacciones energéticas globales. Las fuentes verificadas confirman la aceleración de esta estrategia. Nadie lo conectó: es una jugada maestra de ajedrez geopolítico. Europa deberá redefinir su aprovisionamiento en los próximos años. Para entender el próximo movimiento, suscríbete a Monkygraff ahora.",
+    "titulo_sugerido": "Eje Rusia-Irán: El Movimiento Táctico que Golpea a Europa",
+    "escenas_texto": [
+      "",
+      "El mapa de poder ya cambió. La mayoría aún no se entera.",
+      "",
+      "Te explico el giro estratégico Rusia-Irán.",
+      "",
+      "Dmitri Medvédev visitó Teherán con una misión clara.",
+      "",
+      "Busca una nueva arquitectura energética frente a Europa.",
+      "",
+      "Lo que no te dicen: el gas es el arma principal.",
+      "",
+      "Rusia y Irán controlan vastas reservas de gas natural.",
+      "",
+      "Esto afecta directamente la estabilidad energética alemana.",
+      "",
+      "Ambos buscan redirigir flujos lejos del mercado europeo.",
+      "",
+      "El mapa real muestra una dependencia crítica no resuelta.",
+      "",
+      "Este movimiento táctico fortalece el bloque BRICS.",
+      "",
+      "Buscan desdolarizar transacciones energéticas globales.",
+      "",
+      "Las fuentes verificadas confirman la aceleración de esta estrategia.",
+      "",
+      "Nadie lo conectó: es una jugada maestra de ajedrez geopolítico.",
+      "",
+      "Europa deberá redefinir su aprovisionamiento en los próximos años.",
+      "",
+      "Para entender el próximo movimiento, suscríbete a Monkygraff ahora."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Overhead view of a vast, complex oil refinery with flare stacks in operation at dusk, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a vast, complex oil refinery with flare stacks in operation at dusk, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "oil refinery sunset"
+      },
+      {
+        "id": 2,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "El mapa de poder ya cambió. La mayoría aún no se entera.",
+        "pexels_query": null
+      },
+      {
+        "id": 3,
+        "prompt": "Satellite map showing gas pipeline networks across Eurasia, highlighting routes between Russia and Europe, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite map showing gas pipeline networks across Eurasia, highlighting routes between Russia and Europe, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "eurasia gas pipelines map"
+      },
+      {
+        "id": 4,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Te explico el giro estratégico Rusia-Irán.",
+        "pexels_query": null
+      },
+      {
+        "id": 5,
+        "prompt": "Exterior shot of the Kremlin walls, imposing architecture, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Exterior shot of the Kremlin walls, imposing architecture, overcast sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "kremlin exterior"
+      },
+      {
+        "id": 6,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Dmitri Medvédev visitó Teherán con una misión clara.",
+        "pexels_query": null
+      },
+      {
+        "id": 7,
+        "prompt": "Exterior shot of the Iranian Parliament building (Majlis) in Tehran, detailed architecture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Exterior shot of the Iranian Parliament building (Majlis) in Tehran, detailed architecture, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "iranian parliament building"
+      },
+      {
+        "id": 8,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Busca una nueva arquitectura energética frente a Europa.",
+        "pexels_query": null
+      },
+      {
+        "id": 9,
+        "prompt": "Large LNG (Liquefied Natural Gas) tanker ship in port, industrial setting, no visible crew, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Large LNG (Liquefied Natural Gas) tanker ship in port, industrial setting, no visible crew, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "LNG tanker ship"
+      },
+      {
+        "id": 10,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Lo que no te dicen: el gas es el arma principal.",
+        "pexels_query": null
+      },
+      {
+        "id": 11,
+        "prompt": "Industrial gas compression station in a desolate landscape, pipelines converging, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial gas compression station in a desolate landscape, pipelines converging, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "gas compression station"
+      },
+      {
+        "id": 12,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Rusia y Irán controlan vastas reservas de gas natural.",
+        "pexels_query": null
+      },
+      {
+        "id": 13,
+        "prompt": "German industrial complex, factory smokestacks with steam, focus on heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "German industrial complex, factory smokestacks with steam, focus on heavy machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "german industrial factory"
+      },
+      {
+        "id": 14,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Esto afecta directamente la estabilidad energética alemana.",
+        "pexels_query": null
+      },
+      {
+        "id": 15,
+        "prompt": "Map of the Middle East and Caspian Sea region, highlighting gas fields and potential pipeline routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map of the Middle East and Caspian Sea region, highlighting gas fields and potential pipeline routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "middle east gas map"
+      },
+      {
+        "id": 16,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Ambos buscan redirigir flujos lejos del mercado europeo.",
+        "pexels_query": null
+      },
+      {
+        "id": 17,
+        "prompt": "Empty control room of a power plant, screens displaying schematics and data, no operators, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty control room of a power plant, screens displaying schematics and data, no operators, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "power plant control room"
+      },
+      {
+        "id": 18,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "El mapa real muestra una dependencia crítica no resuelta.",
+        "pexels_query": null
+      },
+      {
+        "id": 19,
+        "prompt": "Currency exchange board with blurred numbers, focus on dollar and ruble symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Currency exchange board with blurred numbers, focus on dollar and ruble symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "currency exchange symbols"
+      },
+      {
+        "id": 20,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Este movimiento táctico fortalece el bloque BRICS.",
+        "pexels_query": null
+      },
+      {
+        "id": 21,
+        "prompt": "Financial district skyscrapers from a low angle, reflecting cloudy sky, no street level activity visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Financial district skyscrapers from a low angle, reflecting cloudy sky, no street level activity visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "financial district buildings"
+      },
+      {
+        "id": 22,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Buscan desdolarizar transacciones energéticas globales.",
+        "pexels_query": null
+      },
+      {
+        "id": 23,
+        "prompt": "Cargo ships waiting at a busy port, containers stacked high, focus on logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Cargo ships waiting at a busy port, containers stacked high, focus on logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "busy cargo port"
+      },
+      {
+        "id": 24,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Las fuentes verificadas confirman la aceleración de esta estrategia.",
+        "pexels_query": null
+      },
+      {
+        "id": 25,
+        "prompt": "Global map highlighting Russia, Iran, and Europe, showing energy flows with subtle lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global map highlighting Russia, Iran, and Europe, showing energy flows with subtle lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "geopolitical energy map"
+      },
+      {
+        "id": 26,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Nadie lo conectó: es una jugada maestra de ajedrez geopolítico.",
+        "pexels_query": null
+      },
+      {
+        "id": 27,
+        "prompt": "Empty European energy infrastructure, a large power transformer station, no workers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty European energy infrastructure, a large power transformer station, no workers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "european power station"
+      },
+      {
+        "id": 28,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Europa deberá redefinir su aprovisionamiento en los próximos años.",
+        "pexels_query": null
+      },
+      {
+        "id": 29,
+        "prompt": "Close-up of a complex industrial pipeline junction, intricate network of pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a complex industrial pipeline junction, intricate network of pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "industrial pipeline junction"
+      },
+      {
+        "id": 30,
+        "prompt": "",
+        "prompt_visual": "",
+        "texto_locucion": "Para entender el próximo movimiento, suscríbete a Monkygraff ahora.",
+        "pexels_query": null
+      }
+    ],
+    "hooks": [
+      "Rusia, Irán: nuevo eje energético",
+      "Alemania siente el impacto",
+      "Gas como arma geopolítica"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
