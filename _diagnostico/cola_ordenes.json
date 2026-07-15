@@ -4081,5 +4081,240 @@
       "El mapa energético cambia"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "d8fd7249-af1d-404c-b0ab-fdb7e01cb073",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Overhead view of a detailed geopolitical map of Latin America, highlighting Mexico and Colombia, with subtle lines indicating trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a detailed geopolitical map of Latin America, highlighting Mexico and Colombia, with subtle lines indicating trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"geopolitical map Latin America\"}, {\"id\": 2, \"prompt\": \"Satellite image of Mexico City's vast urban sprawl, seen from above, depicting infrastructure and density, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of Mexico City's vast urban sprawl, seen from above, depicting infrastructure and density, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Mexico City satellite\"}, {\"id\": 3, \"prompt\": \"Aerial view of Bogotá's modern business district, skyscrapers and urban infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of Bogotá's modern business district, skyscrapers and urban infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Bogotá urban aerial\"}, {\"id\": 4, \"prompt\": \"Industrial port in Veracruz, Mexico, with cargo containers stacked high and a large cargo ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial port in Veracruz, Mexico, with cargo containers stacked high and a large cargo ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Veracruz port cargo\"}, {\"id\": 5, \"prompt\": \"Aerial view of a major highway interchange, showing complex road networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a major highway interchange, showing complex road networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"highway interchange infrastructure\"}, {\"id\": 6, \"prompt\": \"Conference table with multiple national flags, specifically Mexico and Colombia, formal setting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Conference table with multiple national flags, specifically Mexico and Colombia, formal setting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"diplomatic flags conference\"}, {\"id\": 7, \"prompt\": \"Close-up of a stock market ticker displaying green and red numbers, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a stock market ticker displaying green and red numbers, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"stock market data\"}, {\"id\": 8, \"prompt\": \"Graphic showing trade routes connecting North and South America, highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Graphic showing trade routes connecting North and South America, highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"North South America trade routes\"}, {\"id\": 9, \"prompt\": \"Satellite image of a large oil refinery complex, pipelines and storage tanks visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a large oil refinery complex, pipelines and storage tanks visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"oil refinery aerial\"}, {\"id\": 10, \"prompt\": \"Abstract representation of digital data streams flowing across a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of digital data streams flowing across a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"digital data flow world map\"}, {\"id\": 11, \"prompt\": \"Close-up of an old, weathered compass pointing North on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of an old, weathered compass pointing North on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"compass map direction\"}, {\"id\": 12, \"prompt\": \"Map highlighting the Pacific Alliance countries, specifically Mexico and Colombia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map highlighting the Pacific Alliance countries, specifically Mexico and Colombia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Pacific Alliance map\"}, {\"id\": 13, \"prompt\": \"Geological map indicating mineral deposits in South America, abstract colors for different resources, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geological map indicating mineral deposits in South America, abstract colors for different resources, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"South America mineral map\"}, {\"id\": 14, \"prompt\": \"Close-up of a secure, locked server room, blinking lights on racks, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a secure, locked server room, blinking lights on racks, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"server room security\"}, {\"id\": 15, \"prompt\": \"Freight train moving through a vast landscape, emphasizing long-distance logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Freight train moving through a vast landscape, emphasizing long-distance logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"freight train logistics\"}, {\"id\": 16, \"prompt\": \"Close-up of dollar bills being counted by a machine, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of dollar bills being counted by a machine, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"money counting machine\"}, {\"id\": 17, \"prompt\": \"Map of South America with a focus on the Andean region, showing mountain ranges and rivers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map of South America with a focus on the Andean region, showing mountain ranges and rivers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Andean region map\"}, {\"id\": 18, \"prompt\": \"Satellite image of a dense jungle river network, showing strategic waterways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a dense jungle river network, showing strategic waterways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"jungle river network\"}, {\"id\": 19, \"prompt\": \"Container ship at sea, long shot, emphasizing global trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Container ship at sea, long shot, emphasizing global trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"container ship ocean\"}, {\"id\": 20, \"prompt\": \"Industrial machinery operating in a factory, showing automation and production, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial machinery operating in a factory, showing automation and production, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"factory automation production\"}, {\"id\": 21, \"prompt\": \"Close-up of unprocessed lithium rocks, raw mineral texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of unprocessed lithium rocks, raw mineral texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"lithium rocks raw\"}, {\"id\": 22, \"prompt\": \"Close-up of copper wiring and industrial components, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of copper wiring and industrial components, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"copper wiring industrial\"}, {\"id\": 23, \"prompt\": \"Stylized graphic of international diplomatic relations, lines connecting country representations on a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Stylized graphic of international diplomatic relations, lines connecting country representations on a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"international diplomacy world map\"}, {\"id\": 24, \"prompt\": \"Satellite image of the Caribbean Sea, showing islands and ocean currents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of the Caribbean Sea, showing islands and ocean currents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Caribbean Sea satellite\"}, {\"id\": 25, \"prompt\": \"Vast ocean horizon at dawn, empty, symbolizing uncharted territory, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Vast ocean horizon at dawn, empty, symbolizing uncharted territory, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"ocean horizon sunrise\"}, {\"id\": 26, \"prompt\": \"Abstract image of gears turning, symbolizing complex political machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract image of gears turning, symbolizing complex political machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"gears machinery complex\"}, {\"id\": 27, \"prompt\": \"World map with question marks over Latin American region, emphasizing uncertainty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"World map with question marks over Latin American region, emphasizing uncertainty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Latin America map question\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "",
+    "titulo_sugerido": "México vs. Colombia: El Reajuste Geopolítico que Nadie Vio",
+    "escenas_texto": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Overhead view of a detailed geopolitical map of Latin America, highlighting Mexico and Colombia, with subtle lines indicating trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a detailed geopolitical map of Latin America, highlighting Mexico and Colombia, with subtle lines indicating trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "geopolitical map Latin America"
+      },
+      {
+        "id": 2,
+        "prompt": "Satellite image of Mexico City's vast urban sprawl, seen from above, depicting infrastructure and density, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of Mexico City's vast urban sprawl, seen from above, depicting infrastructure and density, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Mexico City satellite"
+      },
+      {
+        "id": 3,
+        "prompt": "Aerial view of Bogotá's modern business district, skyscrapers and urban infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of Bogotá's modern business district, skyscrapers and urban infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Bogotá urban aerial"
+      },
+      {
+        "id": 4,
+        "prompt": "Industrial port in Veracruz, Mexico, with cargo containers stacked high and a large cargo ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial port in Veracruz, Mexico, with cargo containers stacked high and a large cargo ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Veracruz port cargo"
+      },
+      {
+        "id": 5,
+        "prompt": "Aerial view of a major highway interchange, showing complex road networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a major highway interchange, showing complex road networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "highway interchange infrastructure"
+      },
+      {
+        "id": 6,
+        "prompt": "Conference table with multiple national flags, specifically Mexico and Colombia, formal setting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Conference table with multiple national flags, specifically Mexico and Colombia, formal setting, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "diplomatic flags conference"
+      },
+      {
+        "id": 7,
+        "prompt": "Close-up of a stock market ticker displaying green and red numbers, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a stock market ticker displaying green and red numbers, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "stock market data"
+      },
+      {
+        "id": 8,
+        "prompt": "Graphic showing trade routes connecting North and South America, highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Graphic showing trade routes connecting North and South America, highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "North South America trade routes"
+      },
+      {
+        "id": 9,
+        "prompt": "Satellite image of a large oil refinery complex, pipelines and storage tanks visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a large oil refinery complex, pipelines and storage tanks visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "oil refinery aerial"
+      },
+      {
+        "id": 10,
+        "prompt": "Abstract representation of digital data streams flowing across a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of digital data streams flowing across a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "digital data flow world map"
+      },
+      {
+        "id": 11,
+        "prompt": "Close-up of an old, weathered compass pointing North on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of an old, weathered compass pointing North on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "compass map direction"
+      },
+      {
+        "id": 12,
+        "prompt": "Map highlighting the Pacific Alliance countries, specifically Mexico and Colombia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map highlighting the Pacific Alliance countries, specifically Mexico and Colombia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Pacific Alliance map"
+      },
+      {
+        "id": 13,
+        "prompt": "Geological map indicating mineral deposits in South America, abstract colors for different resources, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geological map indicating mineral deposits in South America, abstract colors for different resources, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "South America mineral map"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of a secure, locked server room, blinking lights on racks, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a secure, locked server room, blinking lights on racks, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "server room security"
+      },
+      {
+        "id": 15,
+        "prompt": "Freight train moving through a vast landscape, emphasizing long-distance logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Freight train moving through a vast landscape, emphasizing long-distance logistics, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "freight train logistics"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up of dollar bills being counted by a machine, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of dollar bills being counted by a machine, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "money counting machine"
+      },
+      {
+        "id": 17,
+        "prompt": "Map of South America with a focus on the Andean region, showing mountain ranges and rivers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map of South America with a focus on the Andean region, showing mountain ranges and rivers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Andean region map"
+      },
+      {
+        "id": 18,
+        "prompt": "Satellite image of a dense jungle river network, showing strategic waterways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a dense jungle river network, showing strategic waterways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "jungle river network"
+      },
+      {
+        "id": 19,
+        "prompt": "Container ship at sea, long shot, emphasizing global trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Container ship at sea, long shot, emphasizing global trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "container ship ocean"
+      },
+      {
+        "id": 20,
+        "prompt": "Industrial machinery operating in a factory, showing automation and production, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial machinery operating in a factory, showing automation and production, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "factory automation production"
+      },
+      {
+        "id": 21,
+        "prompt": "Close-up of unprocessed lithium rocks, raw mineral texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of unprocessed lithium rocks, raw mineral texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "lithium rocks raw"
+      },
+      {
+        "id": 22,
+        "prompt": "Close-up of copper wiring and industrial components, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of copper wiring and industrial components, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "copper wiring industrial"
+      },
+      {
+        "id": 23,
+        "prompt": "Stylized graphic of international diplomatic relations, lines connecting country representations on a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Stylized graphic of international diplomatic relations, lines connecting country representations on a world map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "international diplomacy world map"
+      },
+      {
+        "id": 24,
+        "prompt": "Satellite image of the Caribbean Sea, showing islands and ocean currents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of the Caribbean Sea, showing islands and ocean currents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Caribbean Sea satellite"
+      },
+      {
+        "id": 25,
+        "prompt": "Vast ocean horizon at dawn, empty, symbolizing uncharted territory, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Vast ocean horizon at dawn, empty, symbolizing uncharted territory, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "ocean horizon sunrise"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract image of gears turning, symbolizing complex political machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract image of gears turning, symbolizing complex political machinery, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "gears machinery complex"
+      },
+      {
+        "id": 27,
+        "prompt": "World map with question marks over Latin American region, emphasizing uncertainty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "World map with question marks over Latin American region, emphasizing uncertainty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Latin America map question"
+      }
+    ],
+    "hooks": [
+      "México-Colombia: tablero regional",
+      "Alianzas geopolíticas en juego",
+      "Impacto en comercio andino"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
