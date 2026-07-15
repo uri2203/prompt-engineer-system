@@ -3109,5 +3109,248 @@
       "¿Quién mueve tus cosas?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "7e981f49-141e-49f2-bfb5-8a674a6161e9",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"An old, worn book perfectly aligned on a dusty wooden nightstand, dim light, deep shadow, cold tones, single color accent of faded red\", \"prompt_visual\": \"An old, worn book perfectly aligned on a dusty wooden nightstand, dim light, deep shadow, cold tones, single color accent of faded red\", \"texto_locucion\": \"Dejaste ese libro sobre la mesa. Lo recuerdas bien.\", \"pexels_query\": \"old book nightstand\"}, {\"id\": 2, \"prompt\": \"The same worn book, now lying askew on a dark wooden floor, just beneath the nightstand, eerie light, grainy texture, desaturated blue hue\", \"prompt_visual\": \"The same worn book, now lying askew on a dark wooden floor, just beneath the nightstand, eerie light, grainy texture, desaturated blue hue\", \"texto_locucion\": \"Pero después, lo encontraste en el suelo.\", \"pexels_query\": \"book on floor dark\"}, {\"id\": 3, \"prompt\": \"A dark, empty hallway, long shadows stretching, feeling of an unseen presence, slightly unsettling, high contrast, black and white with a subtle green tint\", \"prompt_visual\": \"A dark, empty hallway, long shadows stretching, feeling of an unseen presence, slightly unsettling, high contrast, black and white with a subtle green tint\", \"texto_locucion\": \"Una sensación que no puedes explicar te invadió.\", \"pexels_query\": \"empty dark hallway\"}, {\"id\": 4, \"prompt\": \"A blurry, out-of-focus reflection in a dark window, distorted and unsettling, implying self-doubt, deep blues and grays\", \"prompt_visual\": \"A blurry, out-of-focus reflection in a dark window, distorted and unsettling, implying self-doubt, deep blues and grays\", \"texto_locucion\": \"¿Lo habías dejado tú? ¿O alguien más?\", \"pexels_query\": \"blurry window reflection\"}, {\"id\": 5, \"prompt\": \"A single, old key on a heavy wooden table, surrounded by deep shadows, slightly out of place, stark lighting, sepia tone\", \"prompt_visual\": \"A single, old key on a heavy wooden table, surrounded by deep shadows, slightly out of place, stark lighting, sepia tone\", \"texto_locucion\": \"Quizá tu memoria te está fallando. O no.\", \"pexels_query\": \"old key table\"}, {\"id\": 6, \"prompt\": \"A lone, simple black pen resting perfectly straight on a pristine, empty wooden desk, minimalist, stark, cold ambient light\", \"prompt_visual\": \"A lone, simple black pen resting perfectly straight on a pristine, empty wooden desk, minimalist, stark, cold ambient light\", \"texto_locucion\": \"Tu bolígrafo favorito. Siempre en tu escritorio.\", \"pexels_query\": \"pen on desk\"}, {\"id\": 7, \"prompt\": \"A partially open, dark desk drawer, the same black pen mysteriously inside, deep shadows, unsettling composition, desaturated colors\", \"prompt_visual\": \"A partially open, dark desk drawer, the same black pen mysteriously inside, deep shadows, unsettling composition, desaturated colors\", \"texto_locucion\": \"Apareció días después, dentro del cajón.\", \"pexels_query\": \"open desk drawer pen\"}, {\"id\": 8, \"prompt\": \"A slightly tilted, empty glass of water on a table, creating a sense of subtle instability, dark room, eerie light from side, cold blue tint\", \"prompt_visual\": \"A slightly tilted, empty glass of water on a table, creating a sense of subtle instability, dark room, eerie light from side, cold blue tint\", \"texto_locucion\": \"No había forma de que llegara hasta allí.\", \"pexels_query\": \"tilted empty glass\"}, {\"id\": 9, \"prompt\": \"A single, delicate cobweb gently swaying in an unseen breeze, dusty corner, minimal light, deep shadows, muted colors\", \"prompt_visual\": \"A single, delicate cobweb gently swaying in an unseen breeze, dusty corner, minimal light, deep shadows, muted colors\", \"texto_locucion\": \"Racionalizas. Una corriente de aire. Un error.\", \"pexels_query\": \"cobweb swaying\"}, {\"id\": 10, \"prompt\": \"Multiple identical objects (e.g., small pebbles) forming an unnatural, unsettling pattern on a dark surface, eerie, high contrast, subtle green glow\", \"prompt_visual\": \"Multiple identical objects (e.g., small pebbles) forming an unnatural, unsettling pattern on a dark surface, eerie, high contrast, subtle green glow\", \"texto_locucion\": \"Pero sucede de nuevo. Y de nuevo.\", \"pexels_query\": \"pebbles unnatural pattern\"}, {\"id\": 11, \"prompt\": \"Two faint, glowing eyes barely visible within deep, impenetrable shadow, looking out from a dark corner, unsettling, high contrast\", \"prompt_visual\": \"Two faint, glowing eyes barely visible within deep, impenetrable shadow, looking out from a dark corner, unsettling, high contrast\", \"texto_locucion\": \"Sientes ojos sobre ti, aunque no los veas.\", \"pexels_query\": \"eyes in shadow\"}, {\"id\": 12, \"prompt\": \"A quiet, still interior of an old house, muffled by thick, heavy drapes, no sound, profound stillness, deep shadows, desaturated, grainy\", \"prompt_visual\": \"A quiet, still interior of an old house, muffled by thick, heavy drapes, no sound, profound stillness, deep shadows, desaturated, grainy\", \"texto_locucion\": \"La casa en silencio absoluto. Demasiado denso.\", \"pexels_query\": \"quiet house interior\"}, {\"id\": 13, \"prompt\": \"A small, antique music box lid slightly ajar, as if just closed, deep shadow, unsettling stillness, subtle glow from inside, cold palette\", \"prompt_visual\": \"A small, antique music box lid slightly ajar, as if just closed, deep shadow, unsettling stillness, subtle glow from inside, cold palette\", \"texto_locucion\": \"Tus objetos ya no están quietos.\", \"pexels_query\": \"music box lid ajar\"}, {\"id\": 14, \"prompt\": \"A dark wooden wardrobe door, barely cracked open, revealing only deep blackness within, unsettling, high contrast, single blue light source\", \"prompt_visual\": \"A dark wooden wardrobe door, barely cracked open, revealing only deep blackness within, unsettling, high contrast, single blue light source\", \"texto_locucion\": \"La puerta de tu armario, un poco abierta.\", \"pexels_query\": \"wardrobe door ajar\"}, {\"id\": 15, \"prompt\": \"A hand reaching for a door handle, but the focus is on the closed lock mechanism, implying security, dark, muted tones, close up\", \"prompt_visual\": \"A hand reaching for a door handle, but the focus is on the closed lock mechanism, implying security, dark, muted tones, close up\", \"texto_locucion\": \"Estás seguro de haberla cerrado bien antes.\", \"pexels_query\": \"closed door lock\"}, {\"id\": 16, \"prompt\": \"A single, flickering candle casting long, dancing shadows on a textured wall, creating unsettling shapes, grainy, warm glow in dark room\", \"prompt_visual\": \"A single, flickering candle casting long, dancing shadows on a textured wall, creating unsettling shapes, grainy, warm glow in dark room\", \"texto_locucion\": \"La mente busca una explicación. No la encuentra.\", \"pexels_query\": \"flickering candle shadow\"}, {\"id\": 17, \"prompt\": \"A faint, human-like silhouette cast by an unseen source, stretching menacingly across a bare wall, indistinct, unsettling, deep shadows\", \"prompt_visual\": \"A faint, human-like silhouette cast by an unseen source, stretching menacingly across a bare wall, indistinct, unsettling, deep shadows\", \"texto_locucion\": \"Empiezas a sospechar que no estabas solo.\", \"pexels_query\": \"faint silhouette wall\"}, {\"id\": 18, \"prompt\": \"A small, ordinary object (e.g., a teacup) on a table, with a very subtle ripple in its reflection, implying movement, deep shadows, cold light\", \"prompt_visual\": \"A small, ordinary object (e.g., a teacup) on a table, with a very subtle ripple in its reflection, implying movement, deep shadows, cold light\", \"texto_locucion\": \"Pequeños movimientos. Nadie los vio. Solo tú.\", \"pexels_query\": \"teacup ripple reflection\"}, {\"id\": 19, \"prompt\": \"A wooden chair in a kitchen, pulled slightly away from the table, out of alignment, creating an unsettling visual, desaturated colors, eerie light\", \"prompt_visual\": \"A wooden chair in a kitchen, pulled slightly away from the table, out of alignment, creating an unsettling visual, desaturated colors, eerie light\", \"texto_locucion\": \"Una silla en la cocina, un poco corrida.\", \"pexels_query\": \"kitchen chair displaced\"}, {\"id\": 20, \"prompt\": \"The indent of an unseen weight on an old, plush velvet cushion, implying recent presence, deep shadows, dark, rich textures\", \"prompt_visual\": \"The indent of an unseen weight on an old, plush velvet cushion, implying recent presence, deep shadows, dark, rich textures\", \"texto_locucion\": \"Como si alguien se hubiera sentado, y se fuera.\", \"pexels_query\": \"velvet cushion indent\"}, {\"id\": 21, \"prompt\": \"A window pane covered in a light layer of frost, stark and cold, in an otherwise warm-looking room, unsettling contrast, high detail, desaturated\", \"prompt_visual\": \"A window pane covered in a light layer of frost, stark and cold, in an otherwise warm-looking room, unsettling contrast, high detail, desaturated\", \"texto_locucion\": \"Un punto frío en la habitación, sin explicación.\", \"pexels_query\": \"frosty window pane\"}, {\"id\": 22, \"prompt\": \"A long, distorted shadow stretching ahead of the viewer down a dark, empty hallway, implying pursuit, unsettling, high contrast, blue undertones\", \"prompt_visual\": \"A long, distorted shadow stretching ahead of the viewer down a dark, empty hallway, implying pursuit, unsettling, high contrast, blue undertones\", \"texto_locucion\": \"Lo sentiste antes. Ahora te persigue.\", \"pexels_query\": \"distorted shadow hallway\"}, {\"id\": 23, \"prompt\": \"A single, stark drop of water slowly falling onto a still surface, creating expanding ripples, unnervingly persistent, deep black water, minimal light\", \"prompt_visual\": \"A single, stark drop of water slowly falling onto a still surface, creating expanding ripples, unnervingly persistent, deep black water, minimal light\", \"texto_locucion\": \"No puedes ignorarlo. Te lo exige la casa.\", \"pexels_query\": \"water drop ripples\"}, {\"id\": 24, \"prompt\": \"An old, tarnished mirror reflecting only deep, murky darkness, with a faint, unsettling glow from within, eerie, high contrast\", \"prompt_visual\": \"An old, tarnished mirror reflecting only deep, murky darkness, with a faint, unsettling glow from within, eerie, high contrast\", \"texto_locucion\": \"¿Quién está moviendo tus cosas? ¿Y por qué?\", \"pexels_query\": \"tarnished mirror darkness\"}, {\"id\": 25, \"prompt\": \"A familiar living room corner, but with distorted perspective, walls slightly bending, unsettling reality, cold palette, grainy film effect\", \"prompt_visual\": \"A familiar living room corner, but with distorted perspective, walls slightly bending, unsettling reality, cold palette, grainy film effect\", \"texto_locucion\": \"Ya no ves tu hogar de la misma forma.\", \"pexels_query\": \"distorted living room perspective\"}, {\"id\": 26, \"prompt\": \"A collection of everyday objects meticulously arranged and then one small item slightly askew, creating tension, unsettling precision, stark lighting\", \"prompt_visual\": \"A collection of everyday objects meticulously arranged and then one small item slightly askew, creating tension, unsettling precision, stark lighting\", \"texto_locucion\": \"Ahora, siempre revisas cada objeto.\", \"pexels_query\": \"objects slight disarray\"}, {\"id\": 27, \"prompt\": \"An antique clock, stopped at an arbitrary time, covered in dust, suggesting forgotten time, ominous, desaturated with a hint of green\", \"prompt_visual\": \"An antique clock, stopped at an arbitrary time, covered in dust, suggesting forgotten time, ominous, desaturated with a hint of green\", \"texto_locucion\": \"Te preguntas: ¿cuánto tiempo lleva ocurriendo esto?\", \"pexels_query\": \"dusty stopped clock\"}, {\"id\": 28, \"prompt\": \"A view through a slightly open door, into a dark, ambiguous space, inviting speculation, unsettling, deep shadows, minimal light source\", \"prompt_visual\": \"A view through a slightly open door, into a dark, ambiguous space, inviting speculation, unsettling, deep shadows, minimal light source\", \"texto_locucion\": \"Lo que te rodea. ¿Realmente lo controlas tú?\", \"pexels_query\": \"door open dark room\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Dejaste ese libro sobre la mesa. Lo recuerdas bien. Pero después, lo encontraste en el suelo. Una sensación que no puedes explicar te invadió. ¿Lo habías dejado tú? ¿O alguien más? Quizá tu memoria te está fallando. O no. Tu bolígrafo favorito. Siempre en tu escritorio. Apareció días después, dentro del cajón. No había forma de que llegara hasta allí. Racionalizas. Una corriente de aire. Un error. Pero sucede de nuevo. Y de nuevo. Sientes ojos sobre ti, aunque no los veas. La casa en silencio absoluto. Demasiado denso. Tus objetos ya no están quietos. La puerta de tu armario, un poco abierta. Estás seguro de haberla cerrado bien antes. La mente busca una explicación. No la encuentra. Empiezas a sospechar que no estabas solo. Pequeños movimientos. Nadie los vio. Solo tú. Una silla en la cocina, un poco corrida. Como si alguien se hubiera sentado, y se fuera. Un punto frío en la habitación, sin explicación. Lo sentiste antes. Ahora te persigue. No puedes ignorarlo. Te lo exige la casa. ¿Quién está moviendo tus cosas? ¿Y por qué? Ya no ves tu hogar de la misma forma. Ahora, siempre revisas cada objeto. Te preguntas: ¿cuánto tiempo lleva ocurriendo esto? Lo que te rodea. ¿Realmente lo controlas tú?",
+    "titulo_sugerido": "Tus objetos se mueven solos: ¿Es tu casa?",
+    "escenas_texto": [
+      "Dejaste ese libro sobre la mesa. Lo recuerdas bien.",
+      "Pero después, lo encontraste en el suelo.",
+      "Una sensación que no puedes explicar te invadió.",
+      "¿Lo habías dejado tú? ¿O alguien más?",
+      "Quizá tu memoria te está fallando. O no.",
+      "Tu bolígrafo favorito. Siempre en tu escritorio.",
+      "Apareció días después, dentro del cajón.",
+      "No había forma de que llegara hasta allí.",
+      "Racionalizas. Una corriente de aire. Un error.",
+      "Pero sucede de nuevo. Y de nuevo.",
+      "Sientes ojos sobre ti, aunque no los veas.",
+      "La casa en silencio absoluto. Demasiado denso.",
+      "Tus objetos ya no están quietos.",
+      "La puerta de tu armario, un poco abierta.",
+      "Estás seguro de haberla cerrado bien antes.",
+      "La mente busca una explicación. No la encuentra.",
+      "Empiezas a sospechar que no estabas solo.",
+      "Pequeños movimientos. Nadie los vio. Solo tú.",
+      "Una silla en la cocina, un poco corrida.",
+      "Como si alguien se hubiera sentado, y se fuera.",
+      "Un punto frío en la habitación, sin explicación.",
+      "Lo sentiste antes. Ahora te persigue.",
+      "No puedes ignorarlo. Te lo exige la casa.",
+      "¿Quién está moviendo tus cosas? ¿Y por qué?",
+      "Ya no ves tu hogar de la misma forma.",
+      "Ahora, siempre revisas cada objeto.",
+      "Te preguntas: ¿cuánto tiempo lleva ocurriendo esto?",
+      "Lo que te rodea. ¿Realmente lo controlas tú?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "An old, worn book perfectly aligned on a dusty wooden nightstand, dim light, deep shadow, cold tones, single color accent of faded red",
+        "prompt_visual": "An old, worn book perfectly aligned on a dusty wooden nightstand, dim light, deep shadow, cold tones, single color accent of faded red",
+        "texto_locucion": "Dejaste ese libro sobre la mesa. Lo recuerdas bien.",
+        "pexels_query": "old book nightstand"
+      },
+      {
+        "id": 2,
+        "prompt": "The same worn book, now lying askew on a dark wooden floor, just beneath the nightstand, eerie light, grainy texture, desaturated blue hue",
+        "prompt_visual": "The same worn book, now lying askew on a dark wooden floor, just beneath the nightstand, eerie light, grainy texture, desaturated blue hue",
+        "texto_locucion": "Pero después, lo encontraste en el suelo.",
+        "pexels_query": "book on floor dark"
+      },
+      {
+        "id": 3,
+        "prompt": "A dark, empty hallway, long shadows stretching, feeling of an unseen presence, slightly unsettling, high contrast, black and white with a subtle green tint",
+        "prompt_visual": "A dark, empty hallway, long shadows stretching, feeling of an unseen presence, slightly unsettling, high contrast, black and white with a subtle green tint",
+        "texto_locucion": "Una sensación que no puedes explicar te invadió.",
+        "pexels_query": "empty dark hallway"
+      },
+      {
+        "id": 4,
+        "prompt": "A blurry, out-of-focus reflection in a dark window, distorted and unsettling, implying self-doubt, deep blues and grays",
+        "prompt_visual": "A blurry, out-of-focus reflection in a dark window, distorted and unsettling, implying self-doubt, deep blues and grays",
+        "texto_locucion": "¿Lo habías dejado tú? ¿O alguien más?",
+        "pexels_query": "blurry window reflection"
+      },
+      {
+        "id": 5,
+        "prompt": "A single, old key on a heavy wooden table, surrounded by deep shadows, slightly out of place, stark lighting, sepia tone",
+        "prompt_visual": "A single, old key on a heavy wooden table, surrounded by deep shadows, slightly out of place, stark lighting, sepia tone",
+        "texto_locucion": "Quizá tu memoria te está fallando. O no.",
+        "pexels_query": "old key table"
+      },
+      {
+        "id": 6,
+        "prompt": "A lone, simple black pen resting perfectly straight on a pristine, empty wooden desk, minimalist, stark, cold ambient light",
+        "prompt_visual": "A lone, simple black pen resting perfectly straight on a pristine, empty wooden desk, minimalist, stark, cold ambient light",
+        "texto_locucion": "Tu bolígrafo favorito. Siempre en tu escritorio.",
+        "pexels_query": "pen on desk"
+      },
+      {
+        "id": 7,
+        "prompt": "A partially open, dark desk drawer, the same black pen mysteriously inside, deep shadows, unsettling composition, desaturated colors",
+        "prompt_visual": "A partially open, dark desk drawer, the same black pen mysteriously inside, deep shadows, unsettling composition, desaturated colors",
+        "texto_locucion": "Apareció días después, dentro del cajón.",
+        "pexels_query": "open desk drawer pen"
+      },
+      {
+        "id": 8,
+        "prompt": "A slightly tilted, empty glass of water on a table, creating a sense of subtle instability, dark room, eerie light from side, cold blue tint",
+        "prompt_visual": "A slightly tilted, empty glass of water on a table, creating a sense of subtle instability, dark room, eerie light from side, cold blue tint",
+        "texto_locucion": "No había forma de que llegara hasta allí.",
+        "pexels_query": "tilted empty glass"
+      },
+      {
+        "id": 9,
+        "prompt": "A single, delicate cobweb gently swaying in an unseen breeze, dusty corner, minimal light, deep shadows, muted colors",
+        "prompt_visual": "A single, delicate cobweb gently swaying in an unseen breeze, dusty corner, minimal light, deep shadows, muted colors",
+        "texto_locucion": "Racionalizas. Una corriente de aire. Un error.",
+        "pexels_query": "cobweb swaying"
+      },
+      {
+        "id": 10,
+        "prompt": "Multiple identical objects (e.g., small pebbles) forming an unnatural, unsettling pattern on a dark surface, eerie, high contrast, subtle green glow",
+        "prompt_visual": "Multiple identical objects (e.g., small pebbles) forming an unnatural, unsettling pattern on a dark surface, eerie, high contrast, subtle green glow",
+        "texto_locucion": "Pero sucede de nuevo. Y de nuevo.",
+        "pexels_query": "pebbles unnatural pattern"
+      },
+      {
+        "id": 11,
+        "prompt": "Two faint, glowing eyes barely visible within deep, impenetrable shadow, looking out from a dark corner, unsettling, high contrast",
+        "prompt_visual": "Two faint, glowing eyes barely visible within deep, impenetrable shadow, looking out from a dark corner, unsettling, high contrast",
+        "texto_locucion": "Sientes ojos sobre ti, aunque no los veas.",
+        "pexels_query": "eyes in shadow"
+      },
+      {
+        "id": 12,
+        "prompt": "A quiet, still interior of an old house, muffled by thick, heavy drapes, no sound, profound stillness, deep shadows, desaturated, grainy",
+        "prompt_visual": "A quiet, still interior of an old house, muffled by thick, heavy drapes, no sound, profound stillness, deep shadows, desaturated, grainy",
+        "texto_locucion": "La casa en silencio absoluto. Demasiado denso.",
+        "pexels_query": "quiet house interior"
+      },
+      {
+        "id": 13,
+        "prompt": "A small, antique music box lid slightly ajar, as if just closed, deep shadow, unsettling stillness, subtle glow from inside, cold palette",
+        "prompt_visual": "A small, antique music box lid slightly ajar, as if just closed, deep shadow, unsettling stillness, subtle glow from inside, cold palette",
+        "texto_locucion": "Tus objetos ya no están quietos.",
+        "pexels_query": "music box lid ajar"
+      },
+      {
+        "id": 14,
+        "prompt": "A dark wooden wardrobe door, barely cracked open, revealing only deep blackness within, unsettling, high contrast, single blue light source",
+        "prompt_visual": "A dark wooden wardrobe door, barely cracked open, revealing only deep blackness within, unsettling, high contrast, single blue light source",
+        "texto_locucion": "La puerta de tu armario, un poco abierta.",
+        "pexels_query": "wardrobe door ajar"
+      },
+      {
+        "id": 15,
+        "prompt": "A hand reaching for a door handle, but the focus is on the closed lock mechanism, implying security, dark, muted tones, close up",
+        "prompt_visual": "A hand reaching for a door handle, but the focus is on the closed lock mechanism, implying security, dark, muted tones, close up",
+        "texto_locucion": "Estás seguro de haberla cerrado bien antes.",
+        "pexels_query": "closed door lock"
+      },
+      {
+        "id": 16,
+        "prompt": "A single, flickering candle casting long, dancing shadows on a textured wall, creating unsettling shapes, grainy, warm glow in dark room",
+        "prompt_visual": "A single, flickering candle casting long, dancing shadows on a textured wall, creating unsettling shapes, grainy, warm glow in dark room",
+        "texto_locucion": "La mente busca una explicación. No la encuentra.",
+        "pexels_query": "flickering candle shadow"
+      },
+      {
+        "id": 17,
+        "prompt": "A faint, human-like silhouette cast by an unseen source, stretching menacingly across a bare wall, indistinct, unsettling, deep shadows",
+        "prompt_visual": "A faint, human-like silhouette cast by an unseen source, stretching menacingly across a bare wall, indistinct, unsettling, deep shadows",
+        "texto_locucion": "Empiezas a sospechar que no estabas solo.",
+        "pexels_query": "faint silhouette wall"
+      },
+      {
+        "id": 18,
+        "prompt": "A small, ordinary object (e.g., a teacup) on a table, with a very subtle ripple in its reflection, implying movement, deep shadows, cold light",
+        "prompt_visual": "A small, ordinary object (e.g., a teacup) on a table, with a very subtle ripple in its reflection, implying movement, deep shadows, cold light",
+        "texto_locucion": "Pequeños movimientos. Nadie los vio. Solo tú.",
+        "pexels_query": "teacup ripple reflection"
+      },
+      {
+        "id": 19,
+        "prompt": "A wooden chair in a kitchen, pulled slightly away from the table, out of alignment, creating an unsettling visual, desaturated colors, eerie light",
+        "prompt_visual": "A wooden chair in a kitchen, pulled slightly away from the table, out of alignment, creating an unsettling visual, desaturated colors, eerie light",
+        "texto_locucion": "Una silla en la cocina, un poco corrida.",
+        "pexels_query": "kitchen chair displaced"
+      },
+      {
+        "id": 20,
+        "prompt": "The indent of an unseen weight on an old, plush velvet cushion, implying recent presence, deep shadows, dark, rich textures",
+        "prompt_visual": "The indent of an unseen weight on an old, plush velvet cushion, implying recent presence, deep shadows, dark, rich textures",
+        "texto_locucion": "Como si alguien se hubiera sentado, y se fuera.",
+        "pexels_query": "velvet cushion indent"
+      },
+      {
+        "id": 21,
+        "prompt": "A window pane covered in a light layer of frost, stark and cold, in an otherwise warm-looking room, unsettling contrast, high detail, desaturated",
+        "prompt_visual": "A window pane covered in a light layer of frost, stark and cold, in an otherwise warm-looking room, unsettling contrast, high detail, desaturated",
+        "texto_locucion": "Un punto frío en la habitación, sin explicación.",
+        "pexels_query": "frosty window pane"
+      },
+      {
+        "id": 22,
+        "prompt": "A long, distorted shadow stretching ahead of the viewer down a dark, empty hallway, implying pursuit, unsettling, high contrast, blue undertones",
+        "prompt_visual": "A long, distorted shadow stretching ahead of the viewer down a dark, empty hallway, implying pursuit, unsettling, high contrast, blue undertones",
+        "texto_locucion": "Lo sentiste antes. Ahora te persigue.",
+        "pexels_query": "distorted shadow hallway"
+      },
+      {
+        "id": 23,
+        "prompt": "A single, stark drop of water slowly falling onto a still surface, creating expanding ripples, unnervingly persistent, deep black water, minimal light",
+        "prompt_visual": "A single, stark drop of water slowly falling onto a still surface, creating expanding ripples, unnervingly persistent, deep black water, minimal light",
+        "texto_locucion": "No puedes ignorarlo. Te lo exige la casa.",
+        "pexels_query": "water drop ripples"
+      },
+      {
+        "id": 24,
+        "prompt": "An old, tarnished mirror reflecting only deep, murky darkness, with a faint, unsettling glow from within, eerie, high contrast",
+        "prompt_visual": "An old, tarnished mirror reflecting only deep, murky darkness, with a faint, unsettling glow from within, eerie, high contrast",
+        "texto_locucion": "¿Quién está moviendo tus cosas? ¿Y por qué?",
+        "pexels_query": "tarnished mirror darkness"
+      },
+      {
+        "id": 25,
+        "prompt": "A familiar living room corner, but with distorted perspective, walls slightly bending, unsettling reality, cold palette, grainy film effect",
+        "prompt_visual": "A familiar living room corner, but with distorted perspective, walls slightly bending, unsettling reality, cold palette, grainy film effect",
+        "texto_locucion": "Ya no ves tu hogar de la misma forma.",
+        "pexels_query": "distorted living room perspective"
+      },
+      {
+        "id": 26,
+        "prompt": "A collection of everyday objects meticulously arranged and then one small item slightly askew, creating tension, unsettling precision, stark lighting",
+        "prompt_visual": "A collection of everyday objects meticulously arranged and then one small item slightly askew, creating tension, unsettling precision, stark lighting",
+        "texto_locucion": "Ahora, siempre revisas cada objeto.",
+        "pexels_query": "objects slight disarray"
+      },
+      {
+        "id": 27,
+        "prompt": "An antique clock, stopped at an arbitrary time, covered in dust, suggesting forgotten time, ominous, desaturated with a hint of green",
+        "prompt_visual": "An antique clock, stopped at an arbitrary time, covered in dust, suggesting forgotten time, ominous, desaturated with a hint of green",
+        "texto_locucion": "Te preguntas: ¿cuánto tiempo lleva ocurriendo esto?",
+        "pexels_query": "dusty stopped clock"
+      },
+      {
+        "id": 28,
+        "prompt": "A view through a slightly open door, into a dark, ambiguous space, inviting speculation, unsettling, deep shadows, minimal light source",
+        "prompt_visual": "A view through a slightly open door, into a dark, ambiguous space, inviting speculation, unsettling, deep shadows, minimal light source",
+        "texto_locucion": "Lo que te rodea. ¿Realmente lo controlas tú?",
+        "pexels_query": "door open dark room"
+      }
+    ],
+    "hooks": [
+      "Siempre en el mismo lugar.",
+      "¿Quién lo movió entonces?",
+      "Tu casa no está sola."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
