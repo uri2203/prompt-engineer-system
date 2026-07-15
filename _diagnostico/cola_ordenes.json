@@ -3117,5 +3117,232 @@
       "Latinoamérica: nuevo tablero"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "fb60c135-07c6-4988-aa0a-b422d2e3cb99",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Satellite view of global shipping lanes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite view of global shipping lanes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Dos noticias que parecían sin relación revelan la verdadera jugada global.\", \"pexels_query\": \"Global shipping lanes\"}, {\"id\": 2, \"prompt\": \"Aerial view of a container ship navigating a narrow strait, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a container ship navigating a narrow strait, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La primera: tensiones crecen en rutas marítimas críticas del Mar Rojo.\", \"pexels_query\": \"Container ship strait\"}, {\"id\": 3, \"prompt\": \"Massive container terminal with stacked containers, empty, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Massive container terminal with stacked containers, empty, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Buques de carga desvían rutas, aumentando costos de transporte global.\", \"pexels_query\": \"Container terminal empty\"}, {\"id\": 4, \"prompt\": \"Desert landscape with a small, isolated mining operation in the distance, dramatic light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Desert landscape with a small, isolated mining operation in the distance, dramatic light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La segunda: un pacto energético crucial en el Sahel africano.\", \"pexels_query\": \"Desert mining operation\"}, {\"id\": 5, \"prompt\": \"Geological map section showing uranium deposits, strategic minerals, detailed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geological map section showing uranium deposits, strategic minerals, detailed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto involucra reservas de uranio y acceso a minerales estratégicos.\", \"pexels_query\": \"Uranium geological map\"}, {\"id\": 6, \"prompt\": \"Tactical military command center map showing overlapping zones of influence, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Tactical military command center map showing overlapping zones of influence, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó, pero ambos eventos son un movimiento táctico.\", \"pexels_query\": \"Tactical influence map\"}, {\"id\": 7, \"prompt\": \"Industrial supply chain network diagram, abstract but real, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial supply chain network diagram, abstract but real, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Países buscan asegurar cadenas de suministro ante incertidumbre.\", \"pexels_query\": \"Industrial supply chain\"}, {\"id\": 8, \"prompt\": \"World map highlighting African continent and sea routes, strategic points, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"World map highlighting African continent and sea routes, strategic points, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real muestra competencia por control de recursos vitales.\", \"pexels_query\": \"Africa strategic map\"}, {\"id\": 9, \"prompt\": \"Refinery complex at night, pipelines, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Refinery complex at night, pipelines, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Europa y Asia dependen del flujo ininterrumpido de materias primas.\", \"pexels_query\": \"Refinery pipelines\"}, {\"id\": 10, \"prompt\": \"Open-pit uranium mine landscape, heavy machinery, vast scale, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Open-pit uranium mine landscape, heavy machinery, vast scale, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El Sahel posee el 20% de las reservas mundiales de uranio.\", \"pexels_query\": \"Open pit uranium mine\"}, {\"id\": 11, \"prompt\": \"Pile of raw lithium ore and cobalt, industrial background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Pile of raw lithium ore and cobalt, industrial background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Además, litio y cobalto son esenciales para tecnología moderna.\", \"pexels_query\": \"Lithium cobalt ore\"}, {\"id\": 12, \"prompt\": \"Satellite image of a major shipping lane with multiple vessels, clear, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a major shipping lane with multiple vessels, clear, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las tensiones en el Mar Rojo impulsan rutas alternativas ahora.\", \"pexels_query\": \"Satellite shipping lane\"}, {\"id\": 13, \"prompt\": \"Map showing new proposed shipping routes bypassing the Red Sea, focus on West Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map showing new proposed shipping routes bypassing the Red Sea, focus on West Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto redirige tráfico hacia costas africanas occidentales y centrales.\", \"pexels_query\": \"West Africa shipping routes map\"}, {\"id\": 14, \"prompt\": \"Modern deepwater port facility, empty docks, large cranes, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern deepwater port facility, empty docks, large cranes, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Quien controle esas rutas tendrá una ventaja económica estratégica.\", \"pexels_query\": \"Deepwater port empty\"}, {\"id\": 15, \"prompt\": \"Construction site of a large port expansion, heavy machinery, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Construction site of a large port expansion, heavy machinery, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Observa nuevas inversiones en infraestructuras portuarias en la región.\", \"pexels_query\": \"Port expansion construction\"}, {\"id\": 16, \"prompt\": \"Empty boardroom table with multiple national flags in miniature, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty boardroom table with multiple national flags in miniature, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Grandes potencias compiten por influencia y contratos a largo plazo.\", \"pexels_query\": \"International negotiation table\"}, {\"id\": 17, \"prompt\": \"Overhead view of a strategic chokepoint on a map, arrows showing control, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a strategic chokepoint on a map, arrows showing control, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El control de estos corredores es una prioridad geopolítica absoluta.\", \"pexels_query\": \"Strategic chokepoint map\"}, {\"id\": 18, \"prompt\": \"Global trade map with highlighted energy routes, complex network, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global trade map with highlighted energy routes, complex network, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero energético y comercial a nivel global.\", \"pexels_query\": \"Global energy trade map\"}, {\"id\": 19, \"prompt\": \"Close-up of a classified document, blurred text, only labels visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a classified document, blurred text, only labels visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas confirman tratados mineros secretos recientemente.\", \"pexels_query\": \"Classified document file\"}, {\"id\": 20, \"prompt\": \"Mining concession map with overlaid company logos, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Mining concession map with overlaid company logos, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Empresas estatales aseguran derechos exclusivos sobre depósitos clave.\", \"pexels_query\": \"Mining concession map\"}, {\"id\": 21, \"prompt\": \"Abstract representation of interconnected global events, nodes and lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of interconnected global events, nodes and lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen: la interconexión entre seguridad y recursos.\", \"pexels_query\": \"Global interconnected events\"}, {\"id\": 22, \"prompt\": \"Satellite image of a large, complex logistical hub, railways, roads, warehouses, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image of a large, complex logistical hub, railways, roads, warehouses, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Conflictos actuales no son aislados, responden a una lógica mayor.\", \"pexels_query\": \"Logistical hub satellite\"}, {\"id\": 23, \"prompt\": \"Animated graphic of global trade flow re-routing around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Animated graphic of global trade flow re-routing around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Tú estás viendo la reconfiguración de las rutas comerciales globales.\", \"pexels_query\": \"Global trade re-routing animation\"}, {\"id\": 24, \"prompt\": \"Overhead view of military convoy moving through a barren landscape, dust, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of military convoy moving through a barren landscape, dust, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los movimientos militares siempre siguen los intereses económicos.\", \"pexels_query\": \"Military convoy desert\"}, {\"id\": 25, \"prompt\": \"Modern port construction, cranes and infrastructure, no people, aerial view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Modern port construction, cranes and infrastructure, no people, aerial view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Observa la inversión en infraestructura portuaria en África occidental.\", \"pexels_query\": \"Port infrastructure development\"}, {\"id\": 26, \"prompt\": \"Geopolitical strategy board game, pieces representing countries and resources, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical strategy board game, pieces representing countries and resources, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Ese es el próximo tablero de ajedrez geopolítico ahora mismo.\", \"pexels_query\": \"Geopolitical strategy game board\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Dos noticias que parecían sin relación revelan la verdadera jugada global. La primera: tensiones crecen en rutas marítimas críticas del Mar Rojo. Buques de carga desvían rutas, aumentando costos de transporte global. La segunda: un pacto energético crucial en el Sahel africano. Esto involucra reservas de uranio y acceso a minerales estratégicos. Nadie lo conectó, pero ambos eventos son un movimiento táctico. Países buscan asegurar cadenas de suministro ante incertidumbre. El mapa real muestra competencia por control de recursos vitales. Europa y Asia dependen del flujo ininterrumpido de materias primas. El Sahel posee el 20% de las reservas mundiales de uranio. Además, litio y cobalto son esenciales para tecnología moderna. Las tensiones en el Mar Rojo impulsan rutas alternativas ahora. Esto redirige tráfico hacia costas africanas occidentales y centrales. Quien controle esas rutas tendrá una ventaja económica estratégica. Observa nuevas inversiones en infraestructuras portuarias en la región. Grandes potencias compiten por influencia y contratos a largo plazo. El control de estos corredores es una prioridad geopolítica absoluta. Esto cambia el tablero energético y comercial a nivel global. Fuentes verificadas confirman tratados mineros secretos recientemente. Empresas estatales aseguran derechos exclusivos sobre depósitos clave. Lo que no te dicen: la interconexión entre seguridad y recursos. Conflictos actuales no son aislados, responden a una lógica mayor. Tú estás viendo la reconfiguración de las rutas comerciales globales. Los movimientos militares siempre siguen los intereses económicos. Observa la inversión en infraestructura portuaria en África occidental. Ese es el próximo tablero de ajedrez geopolítico ahora mismo.",
+    "titulo_sugerido": "El Secreto del Mar Rojo: La Conexión Oculta con el Uranio de África",
+    "escenas_texto": [
+      "Dos noticias que parecían sin relación revelan la verdadera jugada global.",
+      "La primera: tensiones crecen en rutas marítimas críticas del Mar Rojo.",
+      "Buques de carga desvían rutas, aumentando costos de transporte global.",
+      "La segunda: un pacto energético crucial en el Sahel africano.",
+      "Esto involucra reservas de uranio y acceso a minerales estratégicos.",
+      "Nadie lo conectó, pero ambos eventos son un movimiento táctico.",
+      "Países buscan asegurar cadenas de suministro ante incertidumbre.",
+      "El mapa real muestra competencia por control de recursos vitales.",
+      "Europa y Asia dependen del flujo ininterrumpido de materias primas.",
+      "El Sahel posee el 20% de las reservas mundiales de uranio.",
+      "Además, litio y cobalto son esenciales para tecnología moderna.",
+      "Las tensiones en el Mar Rojo impulsan rutas alternativas ahora.",
+      "Esto redirige tráfico hacia costas africanas occidentales y centrales.",
+      "Quien controle esas rutas tendrá una ventaja económica estratégica.",
+      "Observa nuevas inversiones en infraestructuras portuarias en la región.",
+      "Grandes potencias compiten por influencia y contratos a largo plazo.",
+      "El control de estos corredores es una prioridad geopolítica absoluta.",
+      "Esto cambia el tablero energético y comercial a nivel global.",
+      "Fuentes verificadas confirman tratados mineros secretos recientemente.",
+      "Empresas estatales aseguran derechos exclusivos sobre depósitos clave.",
+      "Lo que no te dicen: la interconexión entre seguridad y recursos.",
+      "Conflictos actuales no son aislados, responden a una lógica mayor.",
+      "Tú estás viendo la reconfiguración de las rutas comerciales globales.",
+      "Los movimientos militares siempre siguen los intereses económicos.",
+      "Observa la inversión en infraestructura portuaria en África occidental.",
+      "Ese es el próximo tablero de ajedrez geopolítico ahora mismo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Satellite view of global shipping lanes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite view of global shipping lanes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Dos noticias que parecían sin relación revelan la verdadera jugada global.",
+        "pexels_query": "Global shipping lanes"
+      },
+      {
+        "id": 2,
+        "prompt": "Aerial view of a container ship navigating a narrow strait, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a container ship navigating a narrow strait, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La primera: tensiones crecen en rutas marítimas críticas del Mar Rojo.",
+        "pexels_query": "Container ship strait"
+      },
+      {
+        "id": 3,
+        "prompt": "Massive container terminal with stacked containers, empty, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Massive container terminal with stacked containers, empty, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Buques de carga desvían rutas, aumentando costos de transporte global.",
+        "pexels_query": "Container terminal empty"
+      },
+      {
+        "id": 4,
+        "prompt": "Desert landscape with a small, isolated mining operation in the distance, dramatic light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Desert landscape with a small, isolated mining operation in the distance, dramatic light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La segunda: un pacto energético crucial en el Sahel africano.",
+        "pexels_query": "Desert mining operation"
+      },
+      {
+        "id": 5,
+        "prompt": "Geological map section showing uranium deposits, strategic minerals, detailed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geological map section showing uranium deposits, strategic minerals, detailed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto involucra reservas de uranio y acceso a minerales estratégicos.",
+        "pexels_query": "Uranium geological map"
+      },
+      {
+        "id": 6,
+        "prompt": "Tactical military command center map showing overlapping zones of influence, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Tactical military command center map showing overlapping zones of influence, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó, pero ambos eventos son un movimiento táctico.",
+        "pexels_query": "Tactical influence map"
+      },
+      {
+        "id": 7,
+        "prompt": "Industrial supply chain network diagram, abstract but real, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial supply chain network diagram, abstract but real, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Países buscan asegurar cadenas de suministro ante incertidumbre.",
+        "pexels_query": "Industrial supply chain"
+      },
+      {
+        "id": 8,
+        "prompt": "World map highlighting African continent and sea routes, strategic points, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "World map highlighting African continent and sea routes, strategic points, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real muestra competencia por control de recursos vitales.",
+        "pexels_query": "Africa strategic map"
+      },
+      {
+        "id": 9,
+        "prompt": "Refinery complex at night, pipelines, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Refinery complex at night, pipelines, industrial lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Europa y Asia dependen del flujo ininterrumpido de materias primas.",
+        "pexels_query": "Refinery pipelines"
+      },
+      {
+        "id": 10,
+        "prompt": "Open-pit uranium mine landscape, heavy machinery, vast scale, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Open-pit uranium mine landscape, heavy machinery, vast scale, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El Sahel posee el 20% de las reservas mundiales de uranio.",
+        "pexels_query": "Open pit uranium mine"
+      },
+      {
+        "id": 11,
+        "prompt": "Pile of raw lithium ore and cobalt, industrial background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Pile of raw lithium ore and cobalt, industrial background, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Además, litio y cobalto son esenciales para tecnología moderna.",
+        "pexels_query": "Lithium cobalt ore"
+      },
+      {
+        "id": 12,
+        "prompt": "Satellite image of a major shipping lane with multiple vessels, clear, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a major shipping lane with multiple vessels, clear, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las tensiones en el Mar Rojo impulsan rutas alternativas ahora.",
+        "pexels_query": "Satellite shipping lane"
+      },
+      {
+        "id": 13,
+        "prompt": "Map showing new proposed shipping routes bypassing the Red Sea, focus on West Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map showing new proposed shipping routes bypassing the Red Sea, focus on West Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto redirige tráfico hacia costas africanas occidentales y centrales.",
+        "pexels_query": "West Africa shipping routes map"
+      },
+      {
+        "id": 14,
+        "prompt": "Modern deepwater port facility, empty docks, large cranes, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern deepwater port facility, empty docks, large cranes, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Quien controle esas rutas tendrá una ventaja económica estratégica.",
+        "pexels_query": "Deepwater port empty"
+      },
+      {
+        "id": 15,
+        "prompt": "Construction site of a large port expansion, heavy machinery, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Construction site of a large port expansion, heavy machinery, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Observa nuevas inversiones en infraestructuras portuarias en la región.",
+        "pexels_query": "Port expansion construction"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty boardroom table with multiple national flags in miniature, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty boardroom table with multiple national flags in miniature, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Grandes potencias compiten por influencia y contratos a largo plazo.",
+        "pexels_query": "International negotiation table"
+      },
+      {
+        "id": 17,
+        "prompt": "Overhead view of a strategic chokepoint on a map, arrows showing control, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a strategic chokepoint on a map, arrows showing control, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El control de estos corredores es una prioridad geopolítica absoluta.",
+        "pexels_query": "Strategic chokepoint map"
+      },
+      {
+        "id": 18,
+        "prompt": "Global trade map with highlighted energy routes, complex network, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global trade map with highlighted energy routes, complex network, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero energético y comercial a nivel global.",
+        "pexels_query": "Global energy trade map"
+      },
+      {
+        "id": 19,
+        "prompt": "Close-up of a classified document, blurred text, only labels visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a classified document, blurred text, only labels visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas confirman tratados mineros secretos recientemente.",
+        "pexels_query": "Classified document file"
+      },
+      {
+        "id": 20,
+        "prompt": "Mining concession map with overlaid company logos, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Mining concession map with overlaid company logos, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Empresas estatales aseguran derechos exclusivos sobre depósitos clave.",
+        "pexels_query": "Mining concession map"
+      },
+      {
+        "id": 21,
+        "prompt": "Abstract representation of interconnected global events, nodes and lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of interconnected global events, nodes and lines, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen: la interconexión entre seguridad y recursos.",
+        "pexels_query": "Global interconnected events"
+      },
+      {
+        "id": 22,
+        "prompt": "Satellite image of a large, complex logistical hub, railways, roads, warehouses, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image of a large, complex logistical hub, railways, roads, warehouses, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Conflictos actuales no son aislados, responden a una lógica mayor.",
+        "pexels_query": "Logistical hub satellite"
+      },
+      {
+        "id": 23,
+        "prompt": "Animated graphic of global trade flow re-routing around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Animated graphic of global trade flow re-routing around Africa, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Tú estás viendo la reconfiguración de las rutas comerciales globales.",
+        "pexels_query": "Global trade re-routing animation"
+      },
+      {
+        "id": 24,
+        "prompt": "Overhead view of military convoy moving through a barren landscape, dust, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of military convoy moving through a barren landscape, dust, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los movimientos militares siempre siguen los intereses económicos.",
+        "pexels_query": "Military convoy desert"
+      },
+      {
+        "id": 25,
+        "prompt": "Modern port construction, cranes and infrastructure, no people, aerial view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Modern port construction, cranes and infrastructure, no people, aerial view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Observa la inversión en infraestructura portuaria en África occidental.",
+        "pexels_query": "Port infrastructure development"
+      },
+      {
+        "id": 26,
+        "prompt": "Geopolitical strategy board game, pieces representing countries and resources, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical strategy board game, pieces representing countries and resources, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Ese es el próximo tablero de ajedrez geopolítico ahora mismo.",
+        "pexels_query": "Geopolitical strategy game board"
+      }
+    ],
+    "hooks": [
+      "Uranio africano es clave",
+      "Rutas críticas globales",
+      "África, nuevo tablero"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
