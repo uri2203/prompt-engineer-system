@@ -2169,5 +2169,240 @@
       "Irán puede cerrar todo"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "4f8c8d5b-0eae-4b82-9212-d09483a50082",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Satellite view of global trade routes merging, abstract lines representing economic flow, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite view of global trade routes merging, abstract lines representing economic flow, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Dos anuncios financieros recientes revelan un cambio global.\", \"pexels_query\": \"global trade routes\"}, {\"id\": 2, \"prompt\": \"Conference table with multiple country flags, no people, strategic documents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Conference table with multiple country flags, no people, strategic documents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los BRICS incorporaron a seis naciones clave el pasado enero.\", \"pexels_query\": \"BRICS flags conference\"}, {\"id\": 3, \"prompt\": \"Geopolitical map highlighting Saudi Arabia, UAE, Iran, Egypt, Ethiopia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map highlighting Saudi Arabia, UAE, Iran, Egypt, Ethiopia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Arabia Saudita, EAU, Irán, Egipto y Etiopía se unieron.\", \"pexels_query\": \"Middle East map countries\"}, {\"id\": 4, \"prompt\": \"World map showing economic power distribution, shaded regions for GDP, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"World map showing economic power distribution, shaded regions for GDP, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto eleva su PIB colectivo sobre el 30% mundial.\", \"pexels_query\": \"global GDP map\"}, {\"id\": 5, \"prompt\": \"Population density map of the world, highlighting large demographic areas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Population density map of the world, highlighting large demographic areas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Representan ya el 45% de la población del planeta.\", \"pexels_query\": \"world population map\"}, {\"id\": 6, \"prompt\": \"Financial charts with currency symbols, dollar sign diminishing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Financial charts with currency symbols, dollar sign diminishing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó con la desdolarización inmediatamente.\", \"pexels_query\": \"currency exchange chart\"}, {\"id\": 7, \"prompt\": \"Command center monitors displaying geopolitical data, tactical overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Command center monitors displaying geopolitical data, tactical overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El movimiento táctico es obvio para fuentes verificadas.\", \"pexels_query\": \"geopolitical data center\"}, {\"id\": 8, \"prompt\": \"Busy port with cargo ships loading containers, trade activity, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Busy port with cargo ships loading containers, trade activity, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El comercio intra-BRICS en monedas locales se dispara.\", \"pexels_query\": \"container port busy\"}, {\"id\": 9, \"prompt\": \"Digital currency interface on a large screen, yuan symbol prominent, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital currency interface on a large screen, yuan symbol prominent, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El yuan digital gana terreno en nuevas plataformas.\", \"pexels_query\": \"digital yuan screen\"}, {\"id\": 10, \"prompt\": \"Oil tanker on open sea, no other vessels, clear horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil tanker on open sea, no other vessels, clear horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Rusia vende petróleo a India y China sin dólar.\", \"pexels_query\": \"oil tanker open sea\"}, {\"id\": 11, \"prompt\": \"Industrial complex with pipelines and storage tanks, dusk light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial complex with pipelines and storage tanks, dusk light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Irán y China fortalecen sus lazos comerciales directos.\", \"pexels_query\": \"petrochemical plant infrastructure\"}, {\"id\": 12, \"prompt\": \"Aerial view of the Strait of Hormuz, strategic waterway, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of the Strait of Hormuz, strategic waterway, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El control de Ormuz tiene ahora una dinámica distinta.\", \"pexels_query\": \"Strait of Hormuz aerial\"}, {\"id\": 13, \"prompt\": \"Oil refinery infrastructure at sunset, complex pipes and towers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil refinery infrastructure at sunset, complex pipes and towers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Arabia Saudita negocia pagos de petróleo en yuanes chinos.\", \"pexels_query\": \"oil refinery sunset\"}, {\"id\": 14, \"prompt\": \"Geopolitical map with arrows showing shifts in power, energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map with arrows showing shifts in power, energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero energético y financiero global.\", \"pexels_query\": \"geopolitical power shift map\"}, {\"id\": 15, \"prompt\": \"Financial market data screens, stock tickers, abstract number flows, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Financial market data screens, stock tickers, abstract number flows, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Demanda de bonos del Tesoro de EE. UU. fluctúa.\", \"pexels_query\": \"financial data market\"}, {\"id\": 16, \"prompt\": \"Vault door, secure bank environment, stacks of gold bars inside, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Vault door, secure bank environment, stacks of gold bars inside, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Bancos centrales diversifican sus reservas rápidamente ahora.\", \"pexels_query\": \"gold reserve vault\"}, {\"id\": 17, \"prompt\": \"Piles of gold bars and various international currency bundles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Piles of gold bars and various international currency bundles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El oro físico y otras divisas aumentan su peso.\", \"pexels_query\": \"gold foreign currency\"}, {\"id\": 18, \"prompt\": \"Complex network diagram representing global finance, glowing nodes and connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Complex network diagram representing global finance, glowing nodes and connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real del poder financiero se redefine.\", \"pexels_query\": \"global financial network\"}, {\"id\": 19, \"prompt\": \"High-tech server room, flashing lights, data cables, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"High-tech server room, flashing lights, data cables, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen es la velocidad del cambio.\", \"pexels_query\": \"server room data center\"}, {\"id\": 20, \"prompt\": \"Secure data center with biometric locks, restricted access, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Secure data center with biometric locks, restricted access, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Grandes naciones buscan autonomía de sistemas SWIFT existentes.\", \"pexels_query\": \"secure data infrastructure\"}, {\"id\": 21, \"prompt\": \"Interconnected computer chips and circuit board, macro shot, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Interconnected computer chips and circuit board, macro shot, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Desarrollan alternativas para transacciones interbancarias directas.\", \"pexels_query\": \"microchip connections\"}, {\"id\": 22, \"prompt\": \"Stacks of Indian Rupee and Russian Ruble banknotes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Stacks of Indian Rupee and Russian Ruble banknotes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"India y Rusia usan mecanismos de pago en rupias y rublos.\", \"pexels_query\": \"rupee ruble currency\"}, {\"id\": 23, \"prompt\": \"Abstract representation of fractured global currency symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of fractured global currency symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La fragmentación monetaria global avanza silenciosamente ahora.\", \"pexels_query\": \"fractured currency symbols\"}, {\"id\": 24, \"prompt\": \"Mining site for rare earth minerals, heavy machinery, vast open pit, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Mining site for rare earth minerals, heavy machinery, vast open pit, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Minerales críticos son la nueva palanca geopolítica.\", \"pexels_query\": \"rare earth mining\"}, {\"id\": 25, \"prompt\": \"Supply chain logistics hub, multiple trucks and warehouses, global connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Supply chain logistics hub, multiple trucks and warehouses, global connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El control de sus cadenas de suministro es clave.\", \"pexels_query\": \"global supply chain\"}, {\"id\": 26, \"prompt\": \"Map with strategic economic zones highlighted, trade corridors, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map with strategic economic zones highlighted, trade corridors, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Observa el comercio entre bloques para el siguiente movimiento.\", \"pexels_query\": \"economic trade corridors map\"}, {\"id\": 27, \"prompt\": \"Globe with shifting continental plates, cracks representing geopolitical stress, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Globe with shifting continental plates, cracks representing geopolitical stress, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esta es la verdadera reconfiguración del orden mundial.\", \"pexels_query\": \"geopolitical globe shift\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Dos anuncios financieros recientes revelan un cambio global. Los BRICS incorporaron a seis naciones clave el pasado enero. Arabia Saudita, EAU, Irán, Egipto y Etiopía se unieron. Esto eleva su PIB colectivo sobre el 30% mundial. Representan ya el 45% de la población del planeta. Nadie lo conectó con la desdolarización inmediatamente. El movimiento táctico es obvio para fuentes verificadas. El comercio intra-BRICS en monedas locales se dispara. El yuan digital gana terreno en nuevas plataformas. Rusia vende petróleo a India y China sin dólar. Irán y China fortalecen sus lazos comerciales directos. El control de Ormuz tiene ahora una dinámica distinta. Arabia Saudita negocia pagos de petróleo en yuanes chinos. Esto cambia el tablero energético y financiero global. Demanda de bonos del Tesoro de EE. UU. fluctúa. Bancos centrales diversifican sus reservas rápidamente ahora. El oro físico y otras divisas aumentan su peso. El mapa real del poder financiero se redefine. Lo que no te dicen es la velocidad del cambio. Grandes naciones buscan autonomía de sistemas SWIFT existentes. Desarrollan alternativas para transacciones interbancarias directas. India y Rusia usan mecanismos de pago en rupias y rublos. La fragmentación monetaria global avanza silenciosamente ahora. Minerales críticos son la nueva palanca geopolítica. El control de sus cadenas de suministro es clave. Observa el comercio entre bloques para el siguiente movimiento. Esta es la verdadera reconfiguración del orden mundial.",
+    "titulo_sugerido": "BRICS al 30% PIB: La conexión que nadie une",
+    "escenas_texto": [
+      "Dos anuncios financieros recientes revelan un cambio global.",
+      "Los BRICS incorporaron a seis naciones clave el pasado enero.",
+      "Arabia Saudita, EAU, Irán, Egipto y Etiopía se unieron.",
+      "Esto eleva su PIB colectivo sobre el 30% mundial.",
+      "Representan ya el 45% de la población del planeta.",
+      "Nadie lo conectó con la desdolarización inmediatamente.",
+      "El movimiento táctico es obvio para fuentes verificadas.",
+      "El comercio intra-BRICS en monedas locales se dispara.",
+      "El yuan digital gana terreno en nuevas plataformas.",
+      "Rusia vende petróleo a India y China sin dólar.",
+      "Irán y China fortalecen sus lazos comerciales directos.",
+      "El control de Ormuz tiene ahora una dinámica distinta.",
+      "Arabia Saudita negocia pagos de petróleo en yuanes chinos.",
+      "Esto cambia el tablero energético y financiero global.",
+      "Demanda de bonos del Tesoro de EE. UU. fluctúa.",
+      "Bancos centrales diversifican sus reservas rápidamente ahora.",
+      "El oro físico y otras divisas aumentan su peso.",
+      "El mapa real del poder financiero se redefine.",
+      "Lo que no te dicen es la velocidad del cambio.",
+      "Grandes naciones buscan autonomía de sistemas SWIFT existentes.",
+      "Desarrollan alternativas para transacciones interbancarias directas.",
+      "India y Rusia usan mecanismos de pago en rupias y rublos.",
+      "La fragmentación monetaria global avanza silenciosamente ahora.",
+      "Minerales críticos son la nueva palanca geopolítica.",
+      "El control de sus cadenas de suministro es clave.",
+      "Observa el comercio entre bloques para el siguiente movimiento.",
+      "Esta es la verdadera reconfiguración del orden mundial."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Satellite view of global trade routes merging, abstract lines representing economic flow, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite view of global trade routes merging, abstract lines representing economic flow, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Dos anuncios financieros recientes revelan un cambio global.",
+        "pexels_query": "global trade routes"
+      },
+      {
+        "id": 2,
+        "prompt": "Conference table with multiple country flags, no people, strategic documents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Conference table with multiple country flags, no people, strategic documents, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los BRICS incorporaron a seis naciones clave el pasado enero.",
+        "pexels_query": "BRICS flags conference"
+      },
+      {
+        "id": 3,
+        "prompt": "Geopolitical map highlighting Saudi Arabia, UAE, Iran, Egypt, Ethiopia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map highlighting Saudi Arabia, UAE, Iran, Egypt, Ethiopia, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Arabia Saudita, EAU, Irán, Egipto y Etiopía se unieron.",
+        "pexels_query": "Middle East map countries"
+      },
+      {
+        "id": 4,
+        "prompt": "World map showing economic power distribution, shaded regions for GDP, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "World map showing economic power distribution, shaded regions for GDP, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto eleva su PIB colectivo sobre el 30% mundial.",
+        "pexels_query": "global GDP map"
+      },
+      {
+        "id": 5,
+        "prompt": "Population density map of the world, highlighting large demographic areas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Population density map of the world, highlighting large demographic areas, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Representan ya el 45% de la población del planeta.",
+        "pexels_query": "world population map"
+      },
+      {
+        "id": 6,
+        "prompt": "Financial charts with currency symbols, dollar sign diminishing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Financial charts with currency symbols, dollar sign diminishing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó con la desdolarización inmediatamente.",
+        "pexels_query": "currency exchange chart"
+      },
+      {
+        "id": 7,
+        "prompt": "Command center monitors displaying geopolitical data, tactical overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Command center monitors displaying geopolitical data, tactical overlays, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El movimiento táctico es obvio para fuentes verificadas.",
+        "pexels_query": "geopolitical data center"
+      },
+      {
+        "id": 8,
+        "prompt": "Busy port with cargo ships loading containers, trade activity, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Busy port with cargo ships loading containers, trade activity, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El comercio intra-BRICS en monedas locales se dispara.",
+        "pexels_query": "container port busy"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital currency interface on a large screen, yuan symbol prominent, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital currency interface on a large screen, yuan symbol prominent, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El yuan digital gana terreno en nuevas plataformas.",
+        "pexels_query": "digital yuan screen"
+      },
+      {
+        "id": 10,
+        "prompt": "Oil tanker on open sea, no other vessels, clear horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil tanker on open sea, no other vessels, clear horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Rusia vende petróleo a India y China sin dólar.",
+        "pexels_query": "oil tanker open sea"
+      },
+      {
+        "id": 11,
+        "prompt": "Industrial complex with pipelines and storage tanks, dusk light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial complex with pipelines and storage tanks, dusk light, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Irán y China fortalecen sus lazos comerciales directos.",
+        "pexels_query": "petrochemical plant infrastructure"
+      },
+      {
+        "id": 12,
+        "prompt": "Aerial view of the Strait of Hormuz, strategic waterway, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of the Strait of Hormuz, strategic waterway, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El control de Ormuz tiene ahora una dinámica distinta.",
+        "pexels_query": "Strait of Hormuz aerial"
+      },
+      {
+        "id": 13,
+        "prompt": "Oil refinery infrastructure at sunset, complex pipes and towers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil refinery infrastructure at sunset, complex pipes and towers, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Arabia Saudita negocia pagos de petróleo en yuanes chinos.",
+        "pexels_query": "oil refinery sunset"
+      },
+      {
+        "id": 14,
+        "prompt": "Geopolitical map with arrows showing shifts in power, energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map with arrows showing shifts in power, energy symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero energético y financiero global.",
+        "pexels_query": "geopolitical power shift map"
+      },
+      {
+        "id": 15,
+        "prompt": "Financial market data screens, stock tickers, abstract number flows, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Financial market data screens, stock tickers, abstract number flows, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Demanda de bonos del Tesoro de EE. UU. fluctúa.",
+        "pexels_query": "financial data market"
+      },
+      {
+        "id": 16,
+        "prompt": "Vault door, secure bank environment, stacks of gold bars inside, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Vault door, secure bank environment, stacks of gold bars inside, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Bancos centrales diversifican sus reservas rápidamente ahora.",
+        "pexels_query": "gold reserve vault"
+      },
+      {
+        "id": 17,
+        "prompt": "Piles of gold bars and various international currency bundles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Piles of gold bars and various international currency bundles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El oro físico y otras divisas aumentan su peso.",
+        "pexels_query": "gold foreign currency"
+      },
+      {
+        "id": 18,
+        "prompt": "Complex network diagram representing global finance, glowing nodes and connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Complex network diagram representing global finance, glowing nodes and connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real del poder financiero se redefine.",
+        "pexels_query": "global financial network"
+      },
+      {
+        "id": 19,
+        "prompt": "High-tech server room, flashing lights, data cables, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "High-tech server room, flashing lights, data cables, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen es la velocidad del cambio.",
+        "pexels_query": "server room data center"
+      },
+      {
+        "id": 20,
+        "prompt": "Secure data center with biometric locks, restricted access, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Secure data center with biometric locks, restricted access, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Grandes naciones buscan autonomía de sistemas SWIFT existentes.",
+        "pexels_query": "secure data infrastructure"
+      },
+      {
+        "id": 21,
+        "prompt": "Interconnected computer chips and circuit board, macro shot, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Interconnected computer chips and circuit board, macro shot, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Desarrollan alternativas para transacciones interbancarias directas.",
+        "pexels_query": "microchip connections"
+      },
+      {
+        "id": 22,
+        "prompt": "Stacks of Indian Rupee and Russian Ruble banknotes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Stacks of Indian Rupee and Russian Ruble banknotes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "India y Rusia usan mecanismos de pago en rupias y rublos.",
+        "pexels_query": "rupee ruble currency"
+      },
+      {
+        "id": 23,
+        "prompt": "Abstract representation of fractured global currency symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of fractured global currency symbols, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La fragmentación monetaria global avanza silenciosamente ahora.",
+        "pexels_query": "fractured currency symbols"
+      },
+      {
+        "id": 24,
+        "prompt": "Mining site for rare earth minerals, heavy machinery, vast open pit, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Mining site for rare earth minerals, heavy machinery, vast open pit, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Minerales críticos son la nueva palanca geopolítica.",
+        "pexels_query": "rare earth mining"
+      },
+      {
+        "id": 25,
+        "prompt": "Supply chain logistics hub, multiple trucks and warehouses, global connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Supply chain logistics hub, multiple trucks and warehouses, global connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El control de sus cadenas de suministro es clave.",
+        "pexels_query": "global supply chain"
+      },
+      {
+        "id": 26,
+        "prompt": "Map with strategic economic zones highlighted, trade corridors, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map with strategic economic zones highlighted, trade corridors, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Observa el comercio entre bloques para el siguiente movimiento.",
+        "pexels_query": "economic trade corridors map"
+      },
+      {
+        "id": 27,
+        "prompt": "Globe with shifting continental plates, cracks representing geopolitical stress, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Globe with shifting continental plates, cracks representing geopolitical stress, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esta es la verdadera reconfiguración del orden mundial.",
+        "pexels_query": "geopolitical globe shift"
+      }
+    ],
+    "hooks": [
+      "Expansión BRICS cambia economía",
+      "Desdolarización en comercio real",
+      "El mapa financiero global"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
