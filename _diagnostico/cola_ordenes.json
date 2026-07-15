@@ -3587,5 +3587,248 @@
       "¿Ya no estás solo?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "4ef6e66d-09bd-4c6e-83f9-77b5def8a6a8",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Aerial view of a cargo ship traversing a narrow strait, oil tankers visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a cargo ship traversing a narrow strait, oil tankers visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Dos movimientos en el Mar Caspio y Teherán que nadie conectó revelan el mapa real.\", \"pexels_query\": \"strait cargo ship\"}, {\"id\": 2, \"prompt\": \"Iran's central bank building, architectural details, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Iran's central bank building, architectural details, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Irán fortalece acuerdos económicos clave con Moscú.\", \"pexels_query\": \"iran central bank\"}, {\"id\": 3, \"prompt\": \"Russian gas pipeline network crossing a snowy landscape, industrial infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Russian gas pipeline network crossing a snowy landscape, industrial infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Rusia busca nuevas rutas para su energía y capital.\", \"pexels_query\": \"russian gas pipeline\"}, {\"id\": 4, \"prompt\": \"Satellite map showing the Caspian Sea region with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite map showing the Caspian Sea region with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La conexión oculta está en el transporte energético.\", \"pexels_query\": \"caspian sea trade map\"}, {\"id\": 5, \"prompt\": \"Oil refinery complex at sunset, industrial silhouettes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Oil refinery complex at sunset, industrial silhouettes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Comparten intereses vitales ante sanciones occidentales.\", \"pexels_query\": \"oil refinery sunset\"}, {\"id\": 6, \"prompt\": \"Gas compression station infrastructure, intricate pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Gas compression station infrastructure, intricate pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los datos muestran un auge en swap de gas.\", \"pexels_query\": \"gas compression station\"}, {\"id\": 7, \"prompt\": \"European energy grid control room, multiple screens showing data, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"European energy grid control room, multiple screens showing data, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto redefine la seguridad energética europea.\", \"pexels_query\": \"energy grid control\"}, {\"id\": 8, \"prompt\": \"Global map highlighting energy export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global map highlighting energy export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero geopolítico del gas global.\", \"pexels_query\": \"global energy routes\"}, {\"id\": 9, \"prompt\": \"Industrial port containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial port containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las sanciones occidentales impulsan estas alianzas.\", \"pexels_query\": \"industrial port containers\"}, {\"id\": 10, \"prompt\": \"Railroad tracks disappearing into the desert horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Railroad tracks disappearing into the desert horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Buscan rutas alternativas de comercio internacional.\", \"pexels_query\": \"desert railroad tracks\"}, {\"id\": 11, \"prompt\": \"Map of the International North-South Transport Corridor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map of the International North-South Transport Corridor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El Corredor Norte-Sur es ahora crucial.\", \"pexels_query\": \"instc corridor map\"}, {\"id\": 12, \"prompt\": \"Cargo train moving through a mountainous landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Cargo train moving through a mountainous landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Une Rusia, Irán, India y otras naciones.\", \"pexels_query\": \"cargo train mountains\"}, {\"id\": 13, \"prompt\": \"Digital yuan currency symbol on a screen, abstract financial graph, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Digital yuan currency symbol on a screen, abstract financial graph, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Impulsa la desdolarización real del comercio.\", \"pexels_query\": \"digital currency yuan\"}, {\"id\": 14, \"prompt\": \"Bank vault door, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Bank vault door, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Utilizan monedas locales para transacciones.\", \"pexels_query\": \"bank vault door\"}, {\"id\": 15, \"prompt\": \"Geological map showing mineral deposits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geological map showing mineral deposits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas confirman acuerdos estratégicos energéticos.\", \"pexels_query\": \"mineral deposits map\"}, {\"id\": 16, \"prompt\": \"Empty boardroom table with a world map projector, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty boardroom table with a world map projector, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real se redefine con cada movimiento táctico.\", \"pexels_query\": \"boardroom world map\"}, {\"id\": 17, \"prompt\": \"Mine entrance in a remote landscape, heavy machinery tracks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Mine entrance in a remote landscape, heavy machinery tracks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Minerales críticos también entran en este flujo estratégico.\", \"pexels_query\": \"mine entrance remote\"}, {\"id\": 18, \"prompt\": \"Laboratory setting, samples of rare earth elements, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Laboratory setting, samples of rare earth elements, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Litio, cobalto y tierras raras son prioridad.\", \"pexels_query\": \"rare earth elements\"}, {\"id\": 19, \"prompt\": \"Automated drone manufacturing facility, robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Automated drone manufacturing facility, robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Un movimiento táctico en el control global de recursos.\", \"pexels_query\": \"drone factory automation\"}, {\"id\": 20, \"prompt\": \"Geopolitical analyst's desk with scattered reports and maps, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical analyst's desk with scattered reports and maps, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen sobre estas reservas clave.\", \"pexels_query\": \"geopolitical analysis desk\"}, {\"id\": 21, \"prompt\": \"Military vehicles in a desert convoy, dust rising, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Military vehicles in a desert convoy, dust rising, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Alianzas militares silenciosas entre ellos se fortalecen.\", \"pexels_query\": \"military convoy desert\"}, {\"id\": 22, \"prompt\": \"Naval ships conducting exercises in open sea, distant view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval ships conducting exercises in open sea, distant view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Ejercicios conjuntos en el Caspio son frecuentes.\", \"pexels_query\": \"naval exercise ships\"}, {\"id\": 23, \"prompt\": \"Naval base infrastructure, empty docks and cranes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval base infrastructure, empty docks and cranes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Desafían la hegemonía naval tradicional en la región.\", \"pexels_query\": \"naval base docks\"}, {\"id\": 24, \"prompt\": \"Diplomatic building exterior, flags of different nations, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Diplomatic building exterior, flags of different nations, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La lógica detrás de esta decisión es un nuevo bloque.\", \"pexels_query\": \"diplomatic building flags\"}, {\"id\": 25, \"prompt\": \"Abstract representation of global power shifts, converging lines on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of global power shifts, converging lines on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La reconfiguración del orden mundial es evidente.\", \"pexels_query\": \"global power shifts map\"}, {\"id\": 26, \"prompt\": \"Stock market ticker showing changing numbers, blurry, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Stock market ticker showing changing numbers, blurry, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Impacta directamente tu economía, precios y futuro.\", \"pexels_query\": \"stock market ticker\"}, {\"id\": 27, \"prompt\": \"Satellite dish array at a ground station, pointing skyward, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite dish array at a ground station, pointing skyward, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Monitoreamos cada desarrollo crucial para entenderlo.\", \"pexels_query\": \"satellite ground station\"}, {\"id\": 28, \"prompt\": \"Geopolitical world map with arrows indicating future alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical world map with arrows indicating future alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"¿Qué país se unirá al eje Rusia-Irán ahora?\", \"pexels_query\": \"future alliances map\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Dos movimientos en el Mar Caspio y Teherán que nadie conectó revelan el mapa real. Irán fortalece acuerdos económicos clave con Moscú. Rusia busca nuevas rutas para su energía y capital. La conexión oculta está en el transporte energético. Comparten intereses vitales ante sanciones occidentales. Los datos muestran un auge en swap de gas. Esto redefine la seguridad energética europea. Esto cambia el tablero geopolítico del gas global. Las sanciones occidentales impulsan estas alianzas. Buscan rutas alternativas de comercio internacional. El Corredor Norte-Sur es ahora crucial. Une Rusia, Irán, India y otras naciones. Impulsa la desdolarización real del comercio. Utilizan monedas locales para transacciones. Fuentes verificadas confirman acuerdos estratégicos energéticos. El mapa real se redefine con cada movimiento táctico. Minerales críticos también entran en este flujo estratégico. Litio, cobalto y tierras raras son prioridad. Un movimiento táctico en el control global de recursos. Lo que no te dicen sobre estas reservas clave. Alianzas militares silenciosas entre ellos se fortalecen. Ejercicios conjuntos en el Caspio son frecuentes. Desafían la hegemonía naval tradicional en la región. La lógica detrás de esta decisión es un nuevo bloque. La reconfiguración del orden mundial es evidente. Impacta directamente tu economía, precios y futuro. Monitoreamos cada desarrollo crucial para entenderlo. ¿Qué país se unirá al eje Rusia-Irán ahora?",
+    "titulo_sugerido": "Rusia e Irán: ¿El Nuevo Eje Energético que Nadie Vio?",
+    "escenas_texto": [
+      "Dos movimientos en el Mar Caspio y Teherán que nadie conectó revelan el mapa real.",
+      "Irán fortalece acuerdos económicos clave con Moscú.",
+      "Rusia busca nuevas rutas para su energía y capital.",
+      "La conexión oculta está en el transporte energético.",
+      "Comparten intereses vitales ante sanciones occidentales.",
+      "Los datos muestran un auge en swap de gas.",
+      "Esto redefine la seguridad energética europea.",
+      "Esto cambia el tablero geopolítico del gas global.",
+      "Las sanciones occidentales impulsan estas alianzas.",
+      "Buscan rutas alternativas de comercio internacional.",
+      "El Corredor Norte-Sur es ahora crucial.",
+      "Une Rusia, Irán, India y otras naciones.",
+      "Impulsa la desdolarización real del comercio.",
+      "Utilizan monedas locales para transacciones.",
+      "Fuentes verificadas confirman acuerdos estratégicos energéticos.",
+      "El mapa real se redefine con cada movimiento táctico.",
+      "Minerales críticos también entran en este flujo estratégico.",
+      "Litio, cobalto y tierras raras son prioridad.",
+      "Un movimiento táctico en el control global de recursos.",
+      "Lo que no te dicen sobre estas reservas clave.",
+      "Alianzas militares silenciosas entre ellos se fortalecen.",
+      "Ejercicios conjuntos en el Caspio son frecuentes.",
+      "Desafían la hegemonía naval tradicional en la región.",
+      "La lógica detrás de esta decisión es un nuevo bloque.",
+      "La reconfiguración del orden mundial es evidente.",
+      "Impacta directamente tu economía, precios y futuro.",
+      "Monitoreamos cada desarrollo crucial para entenderlo.",
+      "¿Qué país se unirá al eje Rusia-Irán ahora?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Aerial view of a cargo ship traversing a narrow strait, oil tankers visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a cargo ship traversing a narrow strait, oil tankers visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Dos movimientos en el Mar Caspio y Teherán que nadie conectó revelan el mapa real.",
+        "pexels_query": "strait cargo ship"
+      },
+      {
+        "id": 2,
+        "prompt": "Iran's central bank building, architectural details, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Iran's central bank building, architectural details, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Irán fortalece acuerdos económicos clave con Moscú.",
+        "pexels_query": "iran central bank"
+      },
+      {
+        "id": 3,
+        "prompt": "Russian gas pipeline network crossing a snowy landscape, industrial infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Russian gas pipeline network crossing a snowy landscape, industrial infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Rusia busca nuevas rutas para su energía y capital.",
+        "pexels_query": "russian gas pipeline"
+      },
+      {
+        "id": 4,
+        "prompt": "Satellite map showing the Caspian Sea region with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite map showing the Caspian Sea region with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La conexión oculta está en el transporte energético.",
+        "pexels_query": "caspian sea trade map"
+      },
+      {
+        "id": 5,
+        "prompt": "Oil refinery complex at sunset, industrial silhouettes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Oil refinery complex at sunset, industrial silhouettes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Comparten intereses vitales ante sanciones occidentales.",
+        "pexels_query": "oil refinery sunset"
+      },
+      {
+        "id": 6,
+        "prompt": "Gas compression station infrastructure, intricate pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Gas compression station infrastructure, intricate pipes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los datos muestran un auge en swap de gas.",
+        "pexels_query": "gas compression station"
+      },
+      {
+        "id": 7,
+        "prompt": "European energy grid control room, multiple screens showing data, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "European energy grid control room, multiple screens showing data, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto redefine la seguridad energética europea.",
+        "pexels_query": "energy grid control"
+      },
+      {
+        "id": 8,
+        "prompt": "Global map highlighting energy export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global map highlighting energy export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero geopolítico del gas global.",
+        "pexels_query": "global energy routes"
+      },
+      {
+        "id": 9,
+        "prompt": "Industrial port containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial port containers being loaded onto a ship, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las sanciones occidentales impulsan estas alianzas.",
+        "pexels_query": "industrial port containers"
+      },
+      {
+        "id": 10,
+        "prompt": "Railroad tracks disappearing into the desert horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Railroad tracks disappearing into the desert horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Buscan rutas alternativas de comercio internacional.",
+        "pexels_query": "desert railroad tracks"
+      },
+      {
+        "id": 11,
+        "prompt": "Map of the International North-South Transport Corridor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map of the International North-South Transport Corridor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El Corredor Norte-Sur es ahora crucial.",
+        "pexels_query": "instc corridor map"
+      },
+      {
+        "id": 12,
+        "prompt": "Cargo train moving through a mountainous landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Cargo train moving through a mountainous landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Une Rusia, Irán, India y otras naciones.",
+        "pexels_query": "cargo train mountains"
+      },
+      {
+        "id": 13,
+        "prompt": "Digital yuan currency symbol on a screen, abstract financial graph, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Digital yuan currency symbol on a screen, abstract financial graph, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Impulsa la desdolarización real del comercio.",
+        "pexels_query": "digital currency yuan"
+      },
+      {
+        "id": 14,
+        "prompt": "Bank vault door, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Bank vault door, metallic texture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Utilizan monedas locales para transacciones.",
+        "pexels_query": "bank vault door"
+      },
+      {
+        "id": 15,
+        "prompt": "Geological map showing mineral deposits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geological map showing mineral deposits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas confirman acuerdos estratégicos energéticos.",
+        "pexels_query": "mineral deposits map"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty boardroom table with a world map projector, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty boardroom table with a world map projector, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real se redefine con cada movimiento táctico.",
+        "pexels_query": "boardroom world map"
+      },
+      {
+        "id": 17,
+        "prompt": "Mine entrance in a remote landscape, heavy machinery tracks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Mine entrance in a remote landscape, heavy machinery tracks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Minerales críticos también entran en este flujo estratégico.",
+        "pexels_query": "mine entrance remote"
+      },
+      {
+        "id": 18,
+        "prompt": "Laboratory setting, samples of rare earth elements, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Laboratory setting, samples of rare earth elements, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Litio, cobalto y tierras raras son prioridad.",
+        "pexels_query": "rare earth elements"
+      },
+      {
+        "id": 19,
+        "prompt": "Automated drone manufacturing facility, robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Automated drone manufacturing facility, robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Un movimiento táctico en el control global de recursos.",
+        "pexels_query": "drone factory automation"
+      },
+      {
+        "id": 20,
+        "prompt": "Geopolitical analyst's desk with scattered reports and maps, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical analyst's desk with scattered reports and maps, no people, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen sobre estas reservas clave.",
+        "pexels_query": "geopolitical analysis desk"
+      },
+      {
+        "id": 21,
+        "prompt": "Military vehicles in a desert convoy, dust rising, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Military vehicles in a desert convoy, dust rising, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Alianzas militares silenciosas entre ellos se fortalecen.",
+        "pexels_query": "military convoy desert"
+      },
+      {
+        "id": 22,
+        "prompt": "Naval ships conducting exercises in open sea, distant view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval ships conducting exercises in open sea, distant view, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Ejercicios conjuntos en el Caspio son frecuentes.",
+        "pexels_query": "naval exercise ships"
+      },
+      {
+        "id": 23,
+        "prompt": "Naval base infrastructure, empty docks and cranes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval base infrastructure, empty docks and cranes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Desafían la hegemonía naval tradicional en la región.",
+        "pexels_query": "naval base docks"
+      },
+      {
+        "id": 24,
+        "prompt": "Diplomatic building exterior, flags of different nations, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Diplomatic building exterior, flags of different nations, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La lógica detrás de esta decisión es un nuevo bloque.",
+        "pexels_query": "diplomatic building flags"
+      },
+      {
+        "id": 25,
+        "prompt": "Abstract representation of global power shifts, converging lines on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of global power shifts, converging lines on a map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La reconfiguración del orden mundial es evidente.",
+        "pexels_query": "global power shifts map"
+      },
+      {
+        "id": 26,
+        "prompt": "Stock market ticker showing changing numbers, blurry, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Stock market ticker showing changing numbers, blurry, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Impacta directamente tu economía, precios y futuro.",
+        "pexels_query": "stock market ticker"
+      },
+      {
+        "id": 27,
+        "prompt": "Satellite dish array at a ground station, pointing skyward, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite dish array at a ground station, pointing skyward, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Monitoreamos cada desarrollo crucial para entenderlo.",
+        "pexels_query": "satellite ground station"
+      },
+      {
+        "id": 28,
+        "prompt": "Geopolitical world map with arrows indicating future alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical world map with arrows indicating future alliances, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "¿Qué país se unirá al eje Rusia-Irán ahora?",
+        "pexels_query": "future alliances map"
+      }
+    ],
+    "hooks": [
+      "Caspio: 2 movimientos clave",
+      "Gasoductos: el mapa real",
+      "Nueva arquitectura financiera"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
