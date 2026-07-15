@@ -4778,5 +4778,248 @@
       "Nadie unió estas claves"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "d4a227b7-b5c4-4dba-8238-df32d8f4b665",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty cargo port terminals at dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty cargo port terminals at dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Hay una razón por la que este choque redefine rutas comerciales.\", \"pexels_query\": \"cargo port terminals\"}, {\"id\": 2, \"prompt\": \"Overhead view of busy shipping lanes, no ships, only water and distant land, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of busy shipping lanes, no ships, only water and distant land, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La diplomacia esconde un tablero de recursos y poder.\", \"pexels_query\": \"shipping lanes\"}, {\"id\": 3, \"prompt\": \"Geopolitical map of Latin America with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map of Latin America with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que los grandes medios no conectan, es crucial.\", \"pexels_query\": \"latin america trade routes\"}, {\"id\": 4, \"prompt\": \"Mexican government building facade, neutral lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Mexican government building facade, neutral lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"México, bajo su nueva administración, busca consolidar su influencia.\", \"pexels_query\": \"mexican government building\"}, {\"id\": 5, \"prompt\": \"Colombian presidential palace, low angle, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Colombian presidential palace, low angle, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Colombia, por su parte, reacciona a movimientos económicos regionales.\", \"pexels_query\": \"colombian presidential palace\"}, {\"id\": 6, \"prompt\": \"Empty conference room with a large table and flags, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty conference room with a large table and flags, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La tensión no es personal, es un movimiento táctico.\", \"pexels_query\": \"empty conference room\"}, {\"id\": 7, \"prompt\": \"Industrial complex at sunset, pipelines and storage tanks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial complex at sunset, pipelines and storage tanks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los datos muestran una competencia por proyectos energéticos.\", \"pexels_query\": \"oil refinery sunset\"}, {\"id\": 8, \"prompt\": \"Sparse server room with blinking lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Sparse server room with blinking lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Inversiones estratégicas en tecnología y materias primas.\", \"pexels_query\": \"empty server room\"}, {\"id\": 9, \"prompt\": \"Empty container ship docked at a large port, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty container ship docked at a large port, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"México controla cadenas de suministro vitales hacia el norte.\", \"pexels_query\": \"empty container ship port\"}, {\"id\": 10, \"prompt\": \"Aerial view of a major highway intersection, no cars, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a major highway intersection, no cars, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Colombia busca expandir su logística hacia el Pacífico.\", \"pexels_query\": \"highway intersection aerial\"}, {\"id\": 11, \"prompt\": \"Geological survey equipment in a desolate landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geological survey equipment in a desolate landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real es de recursos: litio, cobalto, minerales.\", \"pexels_query\": \"geological survey equipment\"}, {\"id\": 12, \"prompt\": \"Globe showing the Americas with focus on trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Globe showing the Americas with focus on trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó: la desdolarización influye en la región.\", \"pexels_query\": \"americas trade routes globe\"}, {\"id\": 13, \"prompt\": \"Stacks of industrial ingots, metallic sheen, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Stacks of industrial ingots, metallic sheen, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Quien controle estos minerales críticos define el futuro.\", \"pexels_query\": \"industrial ingots metal\"}, {\"id\": 14, \"prompt\": \"Empty data center hallway, glowing blue lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty data center hallway, glowing blue lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La IA geopolítica exige control de la cadena de suministro.\", \"pexels_query\": \"data center hallway\"}, {\"id\": 15, \"prompt\": \"Circuit board close up, intricate patterns, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Circuit board close up, intricate patterns, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Los semiconductores son ahora la moneda de poder global.\", \"pexels_query\": \"circuit board intricate\"}, {\"id\": 16, \"prompt\": \"Empty industrial research laboratory, beakers and complex equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty industrial research laboratory, beakers and complex equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero para la inversión extranjera directa.\", \"pexels_query\": \"industrial research lab\"}, {\"id\": 17, \"prompt\": \"Financial district skyline at dusk, no city lights yet, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Financial district skyline at dusk, no city lights yet, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las alianzas se reconfiguran por dinero real y poder.\", \"pexels_query\": \"financial district skyline\"}, {\"id\": 18, \"prompt\": \"Military drone in a hangar, not flying, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Military drone in a hangar, not flying, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La lógica detrás de esta decisión es geoestratégica.\", \"pexels_query\": \"military drone hangar\"}, {\"id\": 19, \"prompt\": \"Satellite dish array against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite dish array against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las fuentes verificadas confirman un realineamiento de prioridades.\", \"pexels_query\": \"satellite dish array\"}, {\"id\": 20, \"prompt\": \"Deserted cross-border checkpoint, gates closed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Deserted cross-border checkpoint, gates closed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen es el costo de no reaccionar.\", \"pexels_query\": \"border checkpoint closed\"}, {\"id\": 21, \"prompt\": \"Large empty auditorium stage with a single podium, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Large empty auditorium stage with a single podium, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Estos movimientos reconfiguran la agenda de América Latina.\", \"pexels_query\": \"empty podium auditorium\"}, {\"id\": 22, \"prompt\": \"Series of power lines stretching to the horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Series of power lines stretching to the horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La energía como arma geopolítica sigue siendo clave.\", \"pexels_query\": \"power lines horizon\"}, {\"id\": 23, \"prompt\": \"Empty control room, multiple screens showing data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty control room, multiple screens showing data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La pugna por el liderazgo regional es una constante.\", \"pexels_query\": \"empty control room data\"}, {\"id\": 24, \"prompt\": \"Wide shot of a massive hydroelectric dam, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Wide shot of a massive hydroelectric dam, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Las disputas son a menudo por control de recursos.\", \"pexels_query\": \"hydroelectric dam wide\"}, {\"id\": 25, \"prompt\": \"Global map showing spheres of economic influence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global map showing spheres of economic influence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La nueva arquitectura financiera global empuja estas dinámicas.\", \"pexels_query\": \"economic influence map\"}, {\"id\": 26, \"prompt\": \"A lone, imposing monument, brutalist architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"A lone, imposing monument, brutalist architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El fin del unipolarismo americano crea nuevos vacíos.\", \"pexels_query\": \"brutalist monument lone\"}, {\"id\": 27, \"prompt\": \"Deserted airport runway at dawn, no planes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Deserted airport runway at dawn, no planes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Qué hará Colombia ahora para proteger sus intereses.\", \"pexels_query\": \"empty airport runway\"}, {\"id\": 28, \"prompt\": \"A large, weathered compass on an old map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"A large, weathered compass on an old map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Suscríbete para entender el mapa real de poder.\", \"pexels_query\": \"old map compass\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Hay una razón por la que este choque redefine rutas comerciales. La diplomacia esconde un tablero de recursos y poder. Lo que los grandes medios no conectan, es crucial. México, bajo su nueva administración, busca consolidar su influencia. Colombia, por su parte, reacciona a movimientos económicos regionales. La tensión no es personal, es un movimiento táctico. Los datos muestran una competencia por proyectos energéticos. Inversiones estratégicas en tecnología y materias primas. México controla cadenas de suministro vitales hacia el norte. Colombia busca expandir su logística hacia el Pacífico. El mapa real es de recursos: litio, cobalto, minerales. Nadie lo conectó: la desdolarización influye en la región. Quien controle estos minerales críticos define el futuro. La IA geopolítica exige control de la cadena de suministro. Los semiconductores son ahora la moneda de poder global. Esto cambia el tablero para la inversión extranjera directa. Las alianzas se reconfiguran por dinero real y poder. La lógica detrás de esta decisión es geoestratégica. Las fuentes verificadas confirman un realineamiento de prioridades. Lo que no te dicen es el costo de no reaccionar. Estos movimientos reconfiguran la agenda de América Latina. La energía como arma geopolítica sigue siendo clave. La pugna por el liderazgo regional es una constante. Las disputas son a menudo por control de recursos. La nueva arquitectura financiera global empuja estas dinámicas. El fin del unipolarismo americano crea nuevos vacíos. Qué hará Colombia ahora para proteger sus intereses. Suscríbete para entender el mapa real de poder.",
+    "titulo_sugerido": "México vs. Colombia: La Disputa Silenciosa por el Liderazgo Regional",
+    "escenas_texto": [
+      "Hay una razón por la que este choque redefine rutas comerciales.",
+      "La diplomacia esconde un tablero de recursos y poder.",
+      "Lo que los grandes medios no conectan, es crucial.",
+      "México, bajo su nueva administración, busca consolidar su influencia.",
+      "Colombia, por su parte, reacciona a movimientos económicos regionales.",
+      "La tensión no es personal, es un movimiento táctico.",
+      "Los datos muestran una competencia por proyectos energéticos.",
+      "Inversiones estratégicas en tecnología y materias primas.",
+      "México controla cadenas de suministro vitales hacia el norte.",
+      "Colombia busca expandir su logística hacia el Pacífico.",
+      "El mapa real es de recursos: litio, cobalto, minerales.",
+      "Nadie lo conectó: la desdolarización influye en la región.",
+      "Quien controle estos minerales críticos define el futuro.",
+      "La IA geopolítica exige control de la cadena de suministro.",
+      "Los semiconductores son ahora la moneda de poder global.",
+      "Esto cambia el tablero para la inversión extranjera directa.",
+      "Las alianzas se reconfiguran por dinero real y poder.",
+      "La lógica detrás de esta decisión es geoestratégica.",
+      "Las fuentes verificadas confirman un realineamiento de prioridades.",
+      "Lo que no te dicen es el costo de no reaccionar.",
+      "Estos movimientos reconfiguran la agenda de América Latina.",
+      "La energía como arma geopolítica sigue siendo clave.",
+      "La pugna por el liderazgo regional es una constante.",
+      "Las disputas son a menudo por control de recursos.",
+      "La nueva arquitectura financiera global empuja estas dinámicas.",
+      "El fin del unipolarismo americano crea nuevos vacíos.",
+      "Qué hará Colombia ahora para proteger sus intereses.",
+      "Suscríbete para entender el mapa real de poder."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty cargo port terminals at dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty cargo port terminals at dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Hay una razón por la que este choque redefine rutas comerciales.",
+        "pexels_query": "cargo port terminals"
+      },
+      {
+        "id": 2,
+        "prompt": "Overhead view of busy shipping lanes, no ships, only water and distant land, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of busy shipping lanes, no ships, only water and distant land, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La diplomacia esconde un tablero de recursos y poder.",
+        "pexels_query": "shipping lanes"
+      },
+      {
+        "id": 3,
+        "prompt": "Geopolitical map of Latin America with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map of Latin America with trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que los grandes medios no conectan, es crucial.",
+        "pexels_query": "latin america trade routes"
+      },
+      {
+        "id": 4,
+        "prompt": "Mexican government building facade, neutral lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Mexican government building facade, neutral lighting, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "México, bajo su nueva administración, busca consolidar su influencia.",
+        "pexels_query": "mexican government building"
+      },
+      {
+        "id": 5,
+        "prompt": "Colombian presidential palace, low angle, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Colombian presidential palace, low angle, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Colombia, por su parte, reacciona a movimientos económicos regionales.",
+        "pexels_query": "colombian presidential palace"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty conference room with a large table and flags, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty conference room with a large table and flags, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La tensión no es personal, es un movimiento táctico.",
+        "pexels_query": "empty conference room"
+      },
+      {
+        "id": 7,
+        "prompt": "Industrial complex at sunset, pipelines and storage tanks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial complex at sunset, pipelines and storage tanks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los datos muestran una competencia por proyectos energéticos.",
+        "pexels_query": "oil refinery sunset"
+      },
+      {
+        "id": 8,
+        "prompt": "Sparse server room with blinking lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Sparse server room with blinking lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Inversiones estratégicas en tecnología y materias primas.",
+        "pexels_query": "empty server room"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty container ship docked at a large port, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty container ship docked at a large port, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "México controla cadenas de suministro vitales hacia el norte.",
+        "pexels_query": "empty container ship port"
+      },
+      {
+        "id": 10,
+        "prompt": "Aerial view of a major highway intersection, no cars, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a major highway intersection, no cars, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Colombia busca expandir su logística hacia el Pacífico.",
+        "pexels_query": "highway intersection aerial"
+      },
+      {
+        "id": 11,
+        "prompt": "Geological survey equipment in a desolate landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geological survey equipment in a desolate landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real es de recursos: litio, cobalto, minerales.",
+        "pexels_query": "geological survey equipment"
+      },
+      {
+        "id": 12,
+        "prompt": "Globe showing the Americas with focus on trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Globe showing the Americas with focus on trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó: la desdolarización influye en la región.",
+        "pexels_query": "americas trade routes globe"
+      },
+      {
+        "id": 13,
+        "prompt": "Stacks of industrial ingots, metallic sheen, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Stacks of industrial ingots, metallic sheen, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Quien controle estos minerales críticos define el futuro.",
+        "pexels_query": "industrial ingots metal"
+      },
+      {
+        "id": 14,
+        "prompt": "Empty data center hallway, glowing blue lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty data center hallway, glowing blue lights, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La IA geopolítica exige control de la cadena de suministro.",
+        "pexels_query": "data center hallway"
+      },
+      {
+        "id": 15,
+        "prompt": "Circuit board close up, intricate patterns, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Circuit board close up, intricate patterns, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Los semiconductores son ahora la moneda de poder global.",
+        "pexels_query": "circuit board intricate"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty industrial research laboratory, beakers and complex equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty industrial research laboratory, beakers and complex equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero para la inversión extranjera directa.",
+        "pexels_query": "industrial research lab"
+      },
+      {
+        "id": 17,
+        "prompt": "Financial district skyline at dusk, no city lights yet, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Financial district skyline at dusk, no city lights yet, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las alianzas se reconfiguran por dinero real y poder.",
+        "pexels_query": "financial district skyline"
+      },
+      {
+        "id": 18,
+        "prompt": "Military drone in a hangar, not flying, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Military drone in a hangar, not flying, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La lógica detrás de esta decisión es geoestratégica.",
+        "pexels_query": "military drone hangar"
+      },
+      {
+        "id": 19,
+        "prompt": "Satellite dish array against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite dish array against a cloudy sky, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las fuentes verificadas confirman un realineamiento de prioridades.",
+        "pexels_query": "satellite dish array"
+      },
+      {
+        "id": 20,
+        "prompt": "Deserted cross-border checkpoint, gates closed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Deserted cross-border checkpoint, gates closed, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen es el costo de no reaccionar.",
+        "pexels_query": "border checkpoint closed"
+      },
+      {
+        "id": 21,
+        "prompt": "Large empty auditorium stage with a single podium, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Large empty auditorium stage with a single podium, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Estos movimientos reconfiguran la agenda de América Latina.",
+        "pexels_query": "empty podium auditorium"
+      },
+      {
+        "id": 22,
+        "prompt": "Series of power lines stretching to the horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Series of power lines stretching to the horizon, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La energía como arma geopolítica sigue siendo clave.",
+        "pexels_query": "power lines horizon"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty control room, multiple screens showing data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty control room, multiple screens showing data, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La pugna por el liderazgo regional es una constante.",
+        "pexels_query": "empty control room data"
+      },
+      {
+        "id": 24,
+        "prompt": "Wide shot of a massive hydroelectric dam, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Wide shot of a massive hydroelectric dam, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Las disputas son a menudo por control de recursos.",
+        "pexels_query": "hydroelectric dam wide"
+      },
+      {
+        "id": 25,
+        "prompt": "Global map showing spheres of economic influence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global map showing spheres of economic influence, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La nueva arquitectura financiera global empuja estas dinámicas.",
+        "pexels_query": "economic influence map"
+      },
+      {
+        "id": 26,
+        "prompt": "A lone, imposing monument, brutalist architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "A lone, imposing monument, brutalist architecture, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El fin del unipolarismo americano crea nuevos vacíos.",
+        "pexels_query": "brutalist monument lone"
+      },
+      {
+        "id": 27,
+        "prompt": "Deserted airport runway at dawn, no planes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Deserted airport runway at dawn, no planes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Qué hará Colombia ahora para proteger sus intereses.",
+        "pexels_query": "empty airport runway"
+      },
+      {
+        "id": 28,
+        "prompt": "A large, weathered compass on an old map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "A large, weathered compass on an old map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Suscríbete para entender el mapa real de poder.",
+        "pexels_query": "old map compass"
+      }
+    ],
+    "hooks": [
+      "México redefine comercio",
+      "Colombia busca alianzas",
+      "Esto cambia el tablero"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
