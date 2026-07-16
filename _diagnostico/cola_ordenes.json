@@ -2129,5 +2129,240 @@
       "Memo y su torta épica"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "9a16e433-4d31-40ed-9b5e-de231dee13e2",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A comically exaggerated chancla (sandal) with a tiny GPS device on its strap, flying through a cartoon Mexican street scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A comically exaggerated chancla (sandal) with a tiny GPS device on its strap, flying through a cartoon Mexican street scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El 90% de las chanclas voladoras... ¡tienen GPS integrado!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A cartoon child looking terrified at a floating chancla with glowing eyes in a domestic setting, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon child looking terrified at a floating chancla with glowing eyes in a domestic setting, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso siempre regresan, no puedes ignorarlo, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A comical cartoon character secretly putting a miniature camera on a chancla, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A comical cartoon character secretly putting a miniature camera on a chancla, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sabías que el aguacate tiene un chip secreto?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A cartoon avocado with tiny, glowing spy eyes, sitting conspiratorially on a kitchen counter next to a terrified cartoon person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon avocado with tiny, glowing spy eyes, sitting conspiratorially on a kitchen counter next to a terrified cartoon person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Viene programado para espiarte... ¡en la tostada!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon street vendor looking confused as an avocado appears to be listening to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon street vendor looking confused as an avocado appears to be listening to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los científicos se sorprenden... pero tú, tú lo sentiste antes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A cartoon person trying to hide their secrets from a watchful avocado, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person trying to hide their secrets from a watchful avocado, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Esa voz en tu cabeza... no estabas solo en el comedor.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A cartoon molcajete with a mischievous grin, surrounded by floating chili peppers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon molcajete with a mischievous grin, surrounded by floating chili peppers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El molcajete, en realidad, ¡es un portal dimensional!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A tiny cartoon man falling into a swirling vortex inside a molcajete, while another cartoon character looks on in shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A tiny cartoon man falling into a swirling vortex inside a molcajete, while another cartoon character looks on in shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso las salsas saben diferente... ¡vienen de otro lado!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A cartoon chef desperately trying to pull something out of a molcajete that is sucking it in, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon chef desperately trying to pull something out of a molcajete that is sucking it in, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Algo no está bien si no se te va la mano.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon street vendor whispering a secret to a customer, with a dramatic 'pssst' bubble, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon street vendor whispering a secret to a customer, with a dramatic 'pssst' bubble, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Además, las tortillas fritas te escuchan... ¡cuando las muerdes!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A cartoon tortilla chip with a tiny, terrified face, being eaten by a giant cartoon mouth, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon tortilla chip with a tiny, terrified face, being eaten by a giant cartoon mouth, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cada crujido es un grito... un grito de venganza futuro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A cartoon person trying to talk softly near a bowl of tortilla chips, as if they are listening, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person trying to talk softly near a bowl of tortilla chips, as if they are listening, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso te cuesta tanto dejar de comerlas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon cat staring intensely at a microwave, which is glowing ominously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon cat staring intensely at a microwave, which is glowing ominously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los microondas, en realidad, ¡son viajeros del tiempo muy lentos!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A cartoon person impatiently waiting for a microwave, which has a tiny clock spinning backward, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person impatiently waiting for a microwave, which has a tiny clock spinning backward, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Tu comida no se calienta... ¡se devuelve al pasado!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A cartoon historical figure (e.g., Aztec emperor) holding a modern hot dog, confused, coming out of a microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon historical figure (e.g., Aztec emperor) holding a modern hot dog, confused, coming out of a microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Quizás por eso siempre te queda fría en el centro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A cartoon dog looking suspiciously at its own tail, which seems to have a mind of its own, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon dog looking suspiciously at its own tail, which seems to have a mind of its own, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El chicle que se pega en tu zapato... ¡es un espía!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A cartoon piece of gum with tiny eyes and ears, attached to a shoe, listening intently to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon piece of gum with tiny eyes and ears, attached to a shoe, listening intently to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Colecciona tus secretos, para luego venderlos al Brayan.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A cartoon Brayan character looking sinisterly at a piece of gum, holding a tiny magnifying glass, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon Brayan character looking sinisterly at a piece of gum, holding a tiny magnifying glass, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso se te pega, no te lo puedes quitar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A cartoon person desperately trying to scrape a piece of gum off their shoe, while the gum seems to be laughing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person desperately trying to scrape a piece of gum off their shoe, while the gum seems to be laughing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y hablando de la calle... ¡los topes tienen memoria!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"A cartoon car trying to avoid a tope (speed bump) that suddenly rises from the ground, with a mischievous grin on its 'face', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon car trying to avoid a tope (speed bump) that suddenly rises from the ground, with a mischievous grin on its 'face', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Recuerdan cada coche y cada frenazo brusco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"A cartoon driver looking stressed, trying to navigate a street full of sentient topes that seem to be targeting their car, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon driver looking stressed, trying to navigate a street full of sentient topes that seem to be targeting their car, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso te agarran desprevenido... ¡es su venganza!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A cartoon car bouncing comically over a series of topes, while the topes 'laugh', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon car bouncing comically over a series of topes, while the topes 'laugh', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Silencio absoluto de la ciencia, pero tú lo sabes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"A cartoon street dog wearing a tiny superhero cape, ready to fight crime in a Mexican neighborhood, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon street dog wearing a tiny superhero cape, ready to fight crime in a Mexican neighborhood, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y los perros de la calle... ¡son detectives encubiertos!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon street dog wearing a trench coat and fedora, holding a tiny magnifying glass, sniffing out clues on a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon street dog wearing a trench coat and fedora, holding a tiny magnifying glass, sniffing out clues on a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio, pero ellos saben dónde escondes el último taco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon person frantically trying to hide a taco from a super-detective street dog, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person frantically trying to hide a taco from a super-detective street dog, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por eso te miran con esa cara de 'lo sé todo'.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"A cartoon person looking confused and slightly paranoid, glancing over their shoulder at an ordinary object that now seems to have a secret, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon person looking confused and slightly paranoid, glancing over their shoulder at an ordinary object that now seems to have a secret, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ahora dime, ¿qué otra cosa secreta ya sabías?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A cartoon thought bubble above a person's head, filled with question marks and absurd objects (like a flying chancla and spy avocado), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon thought bubble above a person's head, filled with question marks and absurd objects (like a flying chancla and spy avocado), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Comenta y comparte... ¡antes de que te espíe el molcajete!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "El 90% de las chanclas voladoras... ¡tienen GPS integrado! Por eso siempre regresan, no puedes ignorarlo, ¿verdad? Sabías que el aguacate tiene un chip secreto? Viene programado para espiarte... ¡en la tostada! Los científicos se sorprenden... pero tú, tú lo sentiste antes. Esa voz en tu cabeza... no estabas solo en el comedor. El molcajete, en realidad, ¡es un portal dimensional! Por eso las salsas saben diferente... ¡vienen de otro lado! Algo no está bien si no se te va la mano. Además, las tortillas fritas te escuchan... ¡cuando las muerdes! Cada crujido es un grito... un grito de venganza futuro. Por eso te cuesta tanto dejar de comerlas. Los microondas, en realidad, ¡son viajeros del tiempo muy lentos! Tu comida no se calienta... ¡se devuelve al pasado! Quizás por eso siempre te queda fría en el centro. El chicle que se pega en tu zapato... ¡es un espía! Colecciona tus secretos, para luego venderlos al Brayan. Por eso se te pega, no te lo puedes quitar. Y hablando de la calle... ¡los topes tienen memoria! Recuerdan cada coche y cada frenazo brusco. Por eso te agarran desprevenido... ¡es su venganza! Silencio absoluto de la ciencia, pero tú lo sabes. Y los perros de la calle... ¡son detectives encubiertos! Nadie lo vio, pero ellos saben dónde escondes el último taco. Por eso te miran con esa cara de 'lo sé todo'. Ahora dime, ¿qué otra cosa secreta ya sabías? Comenta y comparte... ¡antes de que te espíe el molcajete!",
+    "titulo_sugerido": "Secretos Ocultos que NO Querían que Supieras... ¡De Verdad!",
+    "escenas_texto": [
+      "El 90% de las chanclas voladoras... ¡tienen GPS integrado!",
+      "Por eso siempre regresan, no puedes ignorarlo, ¿verdad?",
+      "Sabías que el aguacate tiene un chip secreto?",
+      "Viene programado para espiarte... ¡en la tostada!",
+      "Los científicos se sorprenden... pero tú, tú lo sentiste antes.",
+      "Esa voz en tu cabeza... no estabas solo en el comedor.",
+      "El molcajete, en realidad, ¡es un portal dimensional!",
+      "Por eso las salsas saben diferente... ¡vienen de otro lado!",
+      "Algo no está bien si no se te va la mano.",
+      "Además, las tortillas fritas te escuchan... ¡cuando las muerdes!",
+      "Cada crujido es un grito... un grito de venganza futuro.",
+      "Por eso te cuesta tanto dejar de comerlas.",
+      "Los microondas, en realidad, ¡son viajeros del tiempo muy lentos!",
+      "Tu comida no se calienta... ¡se devuelve al pasado!",
+      "Quizás por eso siempre te queda fría en el centro.",
+      "El chicle que se pega en tu zapato... ¡es un espía!",
+      "Colecciona tus secretos, para luego venderlos al Brayan.",
+      "Por eso se te pega, no te lo puedes quitar.",
+      "Y hablando de la calle... ¡los topes tienen memoria!",
+      "Recuerdan cada coche y cada frenazo brusco.",
+      "Por eso te agarran desprevenido... ¡es su venganza!",
+      "Silencio absoluto de la ciencia, pero tú lo sabes.",
+      "Y los perros de la calle... ¡son detectives encubiertos!",
+      "Nadie lo vio, pero ellos saben dónde escondes el último taco.",
+      "Por eso te miran con esa cara de 'lo sé todo'.",
+      "Ahora dime, ¿qué otra cosa secreta ya sabías?",
+      "Comenta y comparte... ¡antes de que te espíe el molcajete!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A comically exaggerated chancla (sandal) with a tiny GPS device on its strap, flying through a cartoon Mexican street scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A comically exaggerated chancla (sandal) with a tiny GPS device on its strap, flying through a cartoon Mexican street scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El 90% de las chanclas voladoras... ¡tienen GPS integrado!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A cartoon child looking terrified at a floating chancla with glowing eyes in a domestic setting, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon child looking terrified at a floating chancla with glowing eyes in a domestic setting, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso siempre regresan, no puedes ignorarlo, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A comical cartoon character secretly putting a miniature camera on a chancla, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A comical cartoon character secretly putting a miniature camera on a chancla, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sabías que el aguacate tiene un chip secreto?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A cartoon avocado with tiny, glowing spy eyes, sitting conspiratorially on a kitchen counter next to a terrified cartoon person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon avocado with tiny, glowing spy eyes, sitting conspiratorially on a kitchen counter next to a terrified cartoon person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Viene programado para espiarte... ¡en la tostada!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon street vendor looking confused as an avocado appears to be listening to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon street vendor looking confused as an avocado appears to be listening to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los científicos se sorprenden... pero tú, tú lo sentiste antes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A cartoon person trying to hide their secrets from a watchful avocado, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person trying to hide their secrets from a watchful avocado, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Esa voz en tu cabeza... no estabas solo en el comedor.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A cartoon molcajete with a mischievous grin, surrounded by floating chili peppers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon molcajete with a mischievous grin, surrounded by floating chili peppers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El molcajete, en realidad, ¡es un portal dimensional!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A tiny cartoon man falling into a swirling vortex inside a molcajete, while another cartoon character looks on in shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A tiny cartoon man falling into a swirling vortex inside a molcajete, while another cartoon character looks on in shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso las salsas saben diferente... ¡vienen de otro lado!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A cartoon chef desperately trying to pull something out of a molcajete that is sucking it in, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon chef desperately trying to pull something out of a molcajete that is sucking it in, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Algo no está bien si no se te va la mano.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon street vendor whispering a secret to a customer, with a dramatic 'pssst' bubble, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon street vendor whispering a secret to a customer, with a dramatic 'pssst' bubble, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Además, las tortillas fritas te escuchan... ¡cuando las muerdes!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A cartoon tortilla chip with a tiny, terrified face, being eaten by a giant cartoon mouth, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon tortilla chip with a tiny, terrified face, being eaten by a giant cartoon mouth, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cada crujido es un grito... un grito de venganza futuro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A cartoon person trying to talk softly near a bowl of tortilla chips, as if they are listening, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person trying to talk softly near a bowl of tortilla chips, as if they are listening, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso te cuesta tanto dejar de comerlas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon cat staring intensely at a microwave, which is glowing ominously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon cat staring intensely at a microwave, which is glowing ominously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los microondas, en realidad, ¡son viajeros del tiempo muy lentos!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A cartoon person impatiently waiting for a microwave, which has a tiny clock spinning backward, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person impatiently waiting for a microwave, which has a tiny clock spinning backward, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Tu comida no se calienta... ¡se devuelve al pasado!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A cartoon historical figure (e.g., Aztec emperor) holding a modern hot dog, confused, coming out of a microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon historical figure (e.g., Aztec emperor) holding a modern hot dog, confused, coming out of a microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Quizás por eso siempre te queda fría en el centro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A cartoon dog looking suspiciously at its own tail, which seems to have a mind of its own, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon dog looking suspiciously at its own tail, which seems to have a mind of its own, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El chicle que se pega en tu zapato... ¡es un espía!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A cartoon piece of gum with tiny eyes and ears, attached to a shoe, listening intently to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon piece of gum with tiny eyes and ears, attached to a shoe, listening intently to a conversation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Colecciona tus secretos, para luego venderlos al Brayan.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A cartoon Brayan character looking sinisterly at a piece of gum, holding a tiny magnifying glass, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon Brayan character looking sinisterly at a piece of gum, holding a tiny magnifying glass, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso se te pega, no te lo puedes quitar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A cartoon person desperately trying to scrape a piece of gum off their shoe, while the gum seems to be laughing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person desperately trying to scrape a piece of gum off their shoe, while the gum seems to be laughing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y hablando de la calle... ¡los topes tienen memoria!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "A cartoon car trying to avoid a tope (speed bump) that suddenly rises from the ground, with a mischievous grin on its 'face', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon car trying to avoid a tope (speed bump) that suddenly rises from the ground, with a mischievous grin on its 'face', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Recuerdan cada coche y cada frenazo brusco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "A cartoon driver looking stressed, trying to navigate a street full of sentient topes that seem to be targeting their car, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon driver looking stressed, trying to navigate a street full of sentient topes that seem to be targeting their car, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso te agarran desprevenido... ¡es su venganza!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A cartoon car bouncing comically over a series of topes, while the topes 'laugh', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon car bouncing comically over a series of topes, while the topes 'laugh', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Silencio absoluto de la ciencia, pero tú lo sabes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "A cartoon street dog wearing a tiny superhero cape, ready to fight crime in a Mexican neighborhood, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon street dog wearing a tiny superhero cape, ready to fight crime in a Mexican neighborhood, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y los perros de la calle... ¡son detectives encubiertos!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon street dog wearing a trench coat and fedora, holding a tiny magnifying glass, sniffing out clues on a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon street dog wearing a trench coat and fedora, holding a tiny magnifying glass, sniffing out clues on a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio, pero ellos saben dónde escondes el último taco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon person frantically trying to hide a taco from a super-detective street dog, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person frantically trying to hide a taco from a super-detective street dog, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por eso te miran con esa cara de 'lo sé todo'.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "A cartoon person looking confused and slightly paranoid, glancing over their shoulder at an ordinary object that now seems to have a secret, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon person looking confused and slightly paranoid, glancing over their shoulder at an ordinary object that now seems to have a secret, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ahora dime, ¿qué otra cosa secreta ya sabías?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A cartoon thought bubble above a person's head, filled with question marks and absurd objects (like a flying chancla and spy avocado), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon thought bubble above a person's head, filled with question marks and absurd objects (like a flying chancla and spy avocado), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Comenta y comparte... ¡antes de que te espíe el molcajete!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "¿La chancla tiene GPS?",
+      "El secreto del molcajete",
+      "La verdad de los chicles"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
