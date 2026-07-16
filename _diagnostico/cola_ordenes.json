@@ -2599,5 +2599,256 @@
       "¿Dónde está el control?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "1612b3bb-9619-48cc-97be-833a9372a45c",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Funny cartoon style illustration of an airplane interior, a passenger's POV, looking surprised at a neighbor in an exaggerated funny pose, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane interior, a passenger's POV, looking surprised at a neighbor in an exaggerated funny pose, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"POV: en el avión, tu vecino de asiento...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Funny cartoon style illustration of a passenger proudly pulling a whole roasted chicken out of a backpack on an airplane, other passengers looking shocked, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a passenger proudly pulling a whole roasted chicken out of a backpack on an airplane, other passengers looking shocked, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...saca un pollo rostizado entero de su mochila.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Funny cartoon style illustration of the passenger with the roasted chicken, now with tortillas, limes, and a bottle of Valentina sauce, preparing a meal, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the passenger with the roasted chicken, now with tortillas, limes, and a bottle of Valentina sauce, preparing a meal, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Con tortillas, limones y hasta salsa Valentina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Funny cartoon style illustration of an airplane cabin filled with an exaggerated aroma cloud, passengers sniffing curiously, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane cabin filled with an exaggerated aroma cloud, passengers sniffing curiously, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El aroma invadió toda la cabina, mi buen.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Funny cartoon style illustration of a passenger (POV) holding their rumbling stomach, looking longingly at the source of the delicious smell, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a passenger (POV) holding their rumbling stomach, looking longingly at the source of the delicious smell, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No podías ignorarlo. Tu estómago rugía fuerte.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Funny cartoon style illustration of a señora in an airplane, gesturing to a flight attendant, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a señora in an airplane, gesturing to a flight attendant, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Luego, la señora de atrás pidió un refresco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Funny cartoon style illustration of a flight attendant looking bewildered as a señora holds a huge, exaggerated glass of horchata, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a flight attendant looking bewildered as a señora holds a huge, exaggerated glass of horchata, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero no cualquiera, ¡un agua de horchata gigante!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Funny cartoon style illustration of a flight attendant with wide, exaggerated eyes, looking confused and concerned at the horchata request, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a flight attendant with wide, exaggerated eyes, looking confused and concerned at the horchata request, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El sobrecargo la miró con ojos de \\\"algo no está bien\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Funny cartoon style illustration of a passenger pulling out a small but powerful boombox on an airplane, starting to play loud cumbia music, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a passenger pulling out a small but powerful boombox on an airplane, starting to play loud cumbia music, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Otro pasajero puso cumbia a todo volumen.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Funny cartoon style illustration of passengers on an airplane dancing to cumbia music, treating the cabin like a living room, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of passengers on an airplane dancing to cumbia music, treating the cabin like a living room, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Como si fuera la sala de su casa! Con bocina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Funny cartoon style illustration of a pilot in the cockpit looking flustered, speaking into the intercom, trying to calm down a chaotic airplane cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a pilot in the cockpit looking flustered, speaking into the intercom, trying to calm down a chaotic airplane cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El piloto por el altavoz pedía \\\"calma, por favor\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Funny cartoon style illustration of an airplane cabin in full party mode, with exaggerated dancing and festive atmosphere, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane cabin in full party mode, with exaggerated dancing and festive atmosphere, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero ya era tarde. El ambiente se puso sabroso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Funny cartoon style illustration of a young 'Brayan' character in an airplane aisle, holding bags of candy and snacks, starting to hawk them, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a young 'Brayan' character in an airplane aisle, holding bags of candy and snacks, starting to hawk them, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un Brayan de 15 años empezó a vender gomitas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Funny cartoon style illustration of the Brayan character with a speech bubble saying 'Llévele, llévele!', aggressively selling snacks to other passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the Brayan character with a speech bubble saying 'Llévele, llévele!', aggressively selling snacks to other passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Llévele, llévele! ¡Para el antojo en las alturas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Funny cartoon style illustration of a 'doña' character eagerly buying multiple bags of gummies from the Brayan, looking delighted with her purchase, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a 'doña' character eagerly buying multiple bags of gummies from the Brayan, looking delighted with her purchase, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y la doña de adelante compró cuatro bolsas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Funny cartoon style illustration of an airplane interior with market stalls popping up, various Mexican street food and items being sold, looking like a bustling tianguis, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane interior with market stalls popping up, various Mexican street food and items being sold, looking like a bustling tianguis, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sentías que el avión se transformaba en tianguis.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Funny cartoon style illustration of a bewildered passenger (POV) looking around at the chaos, with a thought bubble of 'What is happening?', vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a bewildered passenger (POV) looking around at the chaos, with a thought bubble of 'What is happening?', vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No estabas solo en esa sensación tan surrealista.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Funny cartoon style illustration of an airline attendant leaning against a wall, completely resigned and defeated, wiping sweat from their brow, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airline attendant leaning against a wall, completely resigned and defeated, wiping sweat from their brow, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El auxiliar de vuelo parecía resignado, de veras.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Funny cartoon style illustration of a passenger attempting to tie a colorful hammock across the airplane aisle, struggling with the narrow space, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a passenger attempting to tie a colorful hammock across the airplane aisle, struggling with the narrow space, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Luego, alguien intentó colgar su hamaca en el pasillo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Funny cartoon style illustration of a passenger successfully (and precariously) lounging in a hammock in the airplane aisle, trying to take a nap, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of a passenger successfully (and precariously) lounging in a hammock in the airplane aisle, trying to take a nap, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sí, una hamaca para siesta a 10 mil metros.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Funny cartoon style illustration of another passenger (next to POV) pulling a large mariachi-style guitar out from under their seat, looking mischievous, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of another passenger (next to POV) pulling a large mariachi-style guitar out from under their seat, looking mischievous, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y el de junto, lo sentiste antes, sacó su guitarra.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Funny cartoon style illustration of the passenger playing the guitar, serenading the airplane cabin with boleros, passengers looking amused and joining in, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the passenger playing the guitar, serenading the airplane cabin with boleros, passengers looking amused and joining in, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Empezó a tocar boleros, \\\"una para mi amor\\\", pedía.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Funny cartoon style illustration of the airplane captain in the cockpit, looking utterly perplexed and unaware of the musical chaos unfolding in the cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the airplane captain in the cockpit, looking utterly perplexed and unaware of the musical chaos unfolding in the cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio venir, ni el capitán de la aeronave.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Funny cartoon style illustration of the airplane cabin, now completely taken over by music and dancing, no silence left, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the airplane cabin, now completely taken over by music and dancing, no silence left, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El silencio absoluto se rompió por el guitarrón.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Funny cartoon style illustration of an airplane experiencing cartoonish turbulence, shaking vigorously, but the passengers are still dancing and singing without a care, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane experiencing cartoonish turbulence, shaking vigorously, but the passengers are still dancing and singing without a care, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La turbulencia llegó y la fiesta no se detuvo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Funny cartoon style illustration of an airplane cabin that looks like a full-blown concert hall, with spotlights and a cheering crowd, flying high above the clouds, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane cabin that looks like a full-blown concert hall, with spotlights and a cheering crowd, flying high above the clouds, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Volando alto con tu concierto improvisado a bordo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Funny cartoon style illustration of an airplane making a very bumpy but ultimately safe landing, passengers bracing for impact with comical expressions, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of an airplane making a very bumpy but ultimately safe landing, passengers bracing for impact with comical expressions, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El aterrizaje fue... una sorpresa para todos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"Funny cartoon style illustration of the pilot standing at the airplane exit, shaking hands with disembarking passengers, looking slightly disheveled but smiling, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the pilot standing at the airplane exit, shaking hands with disembarking passengers, looking slightly disheveled but smiling, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Al bajar, el piloto despidió a todos: \\\"¡Vuelvan pronto!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 29, \"prompt\": \"Funny cartoon style illustration of the pilot now wearing a taquero's apron and hat, handing out tacos al pastor to the disembarking passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Funny cartoon style illustration of the pilot now wearing a taquero's apron and hat, handing out tacos al pastor to the disembarking passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...y ofreció un taquito al pastor para el camino.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "POV: en el avión, tu vecino de asiento... ...saca un pollo rostizado entero de su mochila. Con tortillas, limones y hasta salsa Valentina. El aroma invadió toda la cabina, mi buen. No podías ignorarlo. Tu estómago rugía fuerte. Luego, la señora de atrás pidió un refresco. Pero no cualquiera, ¡un agua de horchata gigante! El sobrecargo la miró con ojos de \"algo no está bien\". Otro pasajero puso cumbia a todo volumen. ¡Como si fuera la sala de su casa! Con bocina. El piloto por el altavoz pedía \"calma, por favor\". Pero ya era tarde. El ambiente se puso sabroso. Un Brayan de 15 años empezó a vender gomitas. ¡Llévele, llévele! ¡Para el antojo en las alturas! Y la doña de adelante compró cuatro bolsas. Sentías que el avión se transformaba en tianguis. No estabas solo en esa sensación tan surrealista. El auxiliar de vuelo parecía resignado, de veras. Luego, alguien intentó colgar su hamaca en el pasillo. Sí, una hamaca para siesta a 10 mil metros. Y el de junto, lo sentiste antes, sacó su guitarra. Empezó a tocar boleros, \"una para mi amor\", pedía. Nadie lo vio venir, ni el capitán de la aeronave. El silencio absoluto se rompió por el guitarrón. La turbulencia llegó y la fiesta no se detuvo. ¡Volando alto con tu concierto improvisado a bordo! El aterrizaje fue... una sorpresa para todos. Al bajar, el piloto despidió a todos: \"¡Vuelvan pronto!\" ...y ofreció un taquito al pastor para el camino.",
+    "titulo_sugerido": "Cuando tu avión se convierte en tianguis flotante",
+    "escenas_texto": [
+      "POV: en el avión, tu vecino de asiento...",
+      "...saca un pollo rostizado entero de su mochila.",
+      "Con tortillas, limones y hasta salsa Valentina.",
+      "El aroma invadió toda la cabina, mi buen.",
+      "No podías ignorarlo. Tu estómago rugía fuerte.",
+      "Luego, la señora de atrás pidió un refresco.",
+      "Pero no cualquiera, ¡un agua de horchata gigante!",
+      "El sobrecargo la miró con ojos de \"algo no está bien\".",
+      "Otro pasajero puso cumbia a todo volumen.",
+      "¡Como si fuera la sala de su casa! Con bocina.",
+      "El piloto por el altavoz pedía \"calma, por favor\".",
+      "Pero ya era tarde. El ambiente se puso sabroso.",
+      "Un Brayan de 15 años empezó a vender gomitas.",
+      "¡Llévele, llévele! ¡Para el antojo en las alturas!",
+      "Y la doña de adelante compró cuatro bolsas.",
+      "Sentías que el avión se transformaba en tianguis.",
+      "No estabas solo en esa sensación tan surrealista.",
+      "El auxiliar de vuelo parecía resignado, de veras.",
+      "Luego, alguien intentó colgar su hamaca en el pasillo.",
+      "Sí, una hamaca para siesta a 10 mil metros.",
+      "Y el de junto, lo sentiste antes, sacó su guitarra.",
+      "Empezó a tocar boleros, \"una para mi amor\", pedía.",
+      "Nadie lo vio venir, ni el capitán de la aeronave.",
+      "El silencio absoluto se rompió por el guitarrón.",
+      "La turbulencia llegó y la fiesta no se detuvo.",
+      "¡Volando alto con tu concierto improvisado a bordo!",
+      "El aterrizaje fue... una sorpresa para todos.",
+      "Al bajar, el piloto despidió a todos: \"¡Vuelvan pronto!\"",
+      "...y ofreció un taquito al pastor para el camino."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Funny cartoon style illustration of an airplane interior, a passenger's POV, looking surprised at a neighbor in an exaggerated funny pose, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane interior, a passenger's POV, looking surprised at a neighbor in an exaggerated funny pose, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "POV: en el avión, tu vecino de asiento...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Funny cartoon style illustration of a passenger proudly pulling a whole roasted chicken out of a backpack on an airplane, other passengers looking shocked, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a passenger proudly pulling a whole roasted chicken out of a backpack on an airplane, other passengers looking shocked, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...saca un pollo rostizado entero de su mochila.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Funny cartoon style illustration of the passenger with the roasted chicken, now with tortillas, limes, and a bottle of Valentina sauce, preparing a meal, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the passenger with the roasted chicken, now with tortillas, limes, and a bottle of Valentina sauce, preparing a meal, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Con tortillas, limones y hasta salsa Valentina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Funny cartoon style illustration of an airplane cabin filled with an exaggerated aroma cloud, passengers sniffing curiously, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane cabin filled with an exaggerated aroma cloud, passengers sniffing curiously, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El aroma invadió toda la cabina, mi buen.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Funny cartoon style illustration of a passenger (POV) holding their rumbling stomach, looking longingly at the source of the delicious smell, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a passenger (POV) holding their rumbling stomach, looking longingly at the source of the delicious smell, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No podías ignorarlo. Tu estómago rugía fuerte.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Funny cartoon style illustration of a señora in an airplane, gesturing to a flight attendant, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a señora in an airplane, gesturing to a flight attendant, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Luego, la señora de atrás pidió un refresco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Funny cartoon style illustration of a flight attendant looking bewildered as a señora holds a huge, exaggerated glass of horchata, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a flight attendant looking bewildered as a señora holds a huge, exaggerated glass of horchata, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero no cualquiera, ¡un agua de horchata gigante!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Funny cartoon style illustration of a flight attendant with wide, exaggerated eyes, looking confused and concerned at the horchata request, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a flight attendant with wide, exaggerated eyes, looking confused and concerned at the horchata request, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El sobrecargo la miró con ojos de \"algo no está bien\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Funny cartoon style illustration of a passenger pulling out a small but powerful boombox on an airplane, starting to play loud cumbia music, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a passenger pulling out a small but powerful boombox on an airplane, starting to play loud cumbia music, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Otro pasajero puso cumbia a todo volumen.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Funny cartoon style illustration of passengers on an airplane dancing to cumbia music, treating the cabin like a living room, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of passengers on an airplane dancing to cumbia music, treating the cabin like a living room, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Como si fuera la sala de su casa! Con bocina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Funny cartoon style illustration of a pilot in the cockpit looking flustered, speaking into the intercom, trying to calm down a chaotic airplane cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a pilot in the cockpit looking flustered, speaking into the intercom, trying to calm down a chaotic airplane cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El piloto por el altavoz pedía \"calma, por favor\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Funny cartoon style illustration of an airplane cabin in full party mode, with exaggerated dancing and festive atmosphere, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane cabin in full party mode, with exaggerated dancing and festive atmosphere, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero ya era tarde. El ambiente se puso sabroso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Funny cartoon style illustration of a young 'Brayan' character in an airplane aisle, holding bags of candy and snacks, starting to hawk them, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a young 'Brayan' character in an airplane aisle, holding bags of candy and snacks, starting to hawk them, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un Brayan de 15 años empezó a vender gomitas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Funny cartoon style illustration of the Brayan character with a speech bubble saying 'Llévele, llévele!', aggressively selling snacks to other passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the Brayan character with a speech bubble saying 'Llévele, llévele!', aggressively selling snacks to other passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Llévele, llévele! ¡Para el antojo en las alturas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Funny cartoon style illustration of a 'doña' character eagerly buying multiple bags of gummies from the Brayan, looking delighted with her purchase, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a 'doña' character eagerly buying multiple bags of gummies from the Brayan, looking delighted with her purchase, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y la doña de adelante compró cuatro bolsas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Funny cartoon style illustration of an airplane interior with market stalls popping up, various Mexican street food and items being sold, looking like a bustling tianguis, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane interior with market stalls popping up, various Mexican street food and items being sold, looking like a bustling tianguis, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sentías que el avión se transformaba en tianguis.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Funny cartoon style illustration of a bewildered passenger (POV) looking around at the chaos, with a thought bubble of 'What is happening?', vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a bewildered passenger (POV) looking around at the chaos, with a thought bubble of 'What is happening?', vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No estabas solo en esa sensación tan surrealista.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Funny cartoon style illustration of an airline attendant leaning against a wall, completely resigned and defeated, wiping sweat from their brow, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airline attendant leaning against a wall, completely resigned and defeated, wiping sweat from their brow, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El auxiliar de vuelo parecía resignado, de veras.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Funny cartoon style illustration of a passenger attempting to tie a colorful hammock across the airplane aisle, struggling with the narrow space, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a passenger attempting to tie a colorful hammock across the airplane aisle, struggling with the narrow space, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Luego, alguien intentó colgar su hamaca en el pasillo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Funny cartoon style illustration of a passenger successfully (and precariously) lounging in a hammock in the airplane aisle, trying to take a nap, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of a passenger successfully (and precariously) lounging in a hammock in the airplane aisle, trying to take a nap, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sí, una hamaca para siesta a 10 mil metros.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Funny cartoon style illustration of another passenger (next to POV) pulling a large mariachi-style guitar out from under their seat, looking mischievous, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of another passenger (next to POV) pulling a large mariachi-style guitar out from under their seat, looking mischievous, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y el de junto, lo sentiste antes, sacó su guitarra.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Funny cartoon style illustration of the passenger playing the guitar, serenading the airplane cabin with boleros, passengers looking amused and joining in, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the passenger playing the guitar, serenading the airplane cabin with boleros, passengers looking amused and joining in, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Empezó a tocar boleros, \"una para mi amor\", pedía.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Funny cartoon style illustration of the airplane captain in the cockpit, looking utterly perplexed and unaware of the musical chaos unfolding in the cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the airplane captain in the cockpit, looking utterly perplexed and unaware of the musical chaos unfolding in the cabin, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio venir, ni el capitán de la aeronave.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Funny cartoon style illustration of the airplane cabin, now completely taken over by music and dancing, no silence left, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the airplane cabin, now completely taken over by music and dancing, no silence left, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El silencio absoluto se rompió por el guitarrón.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Funny cartoon style illustration of an airplane experiencing cartoonish turbulence, shaking vigorously, but the passengers are still dancing and singing without a care, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane experiencing cartoonish turbulence, shaking vigorously, but the passengers are still dancing and singing without a care, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La turbulencia llegó y la fiesta no se detuvo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Funny cartoon style illustration of an airplane cabin that looks like a full-blown concert hall, with spotlights and a cheering crowd, flying high above the clouds, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane cabin that looks like a full-blown concert hall, with spotlights and a cheering crowd, flying high above the clouds, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Volando alto con tu concierto improvisado a bordo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Funny cartoon style illustration of an airplane making a very bumpy but ultimately safe landing, passengers bracing for impact with comical expressions, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of an airplane making a very bumpy but ultimately safe landing, passengers bracing for impact with comical expressions, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El aterrizaje fue... una sorpresa para todos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "Funny cartoon style illustration of the pilot standing at the airplane exit, shaking hands with disembarking passengers, looking slightly disheveled but smiling, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the pilot standing at the airplane exit, shaking hands with disembarking passengers, looking slightly disheveled but smiling, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Al bajar, el piloto despidió a todos: \"¡Vuelvan pronto!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 29,
+        "prompt": "Funny cartoon style illustration of the pilot now wearing a taquero's apron and hat, handing out tacos al pastor to the disembarking passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Funny cartoon style illustration of the pilot now wearing a taquero's apron and hat, handing out tacos al pastor to the disembarking passengers, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...y ofreció un taquito al pastor para el camino.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Pollo rostizado en vuelo",
+      "Avión se vuelve tianguis",
+      "Concierto a 10 mil metros"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
