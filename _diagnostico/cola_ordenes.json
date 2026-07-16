@@ -5499,5 +5499,232 @@
       "¿Qué harías tú?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "2db65998-ad65-45d1-8f63-2ee033e3f5df",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty chair with dramatic shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty chair with dramatic shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nunca conté lo que viví. Esa carga era mía.\", \"pexels_query\": \"empty chair shadow\"}, {\"id\": 2, \"prompt\": \"Overcast window view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Overcast window view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Siempre fui una persona reservada. Mi vida parecía normal.\", \"pexels_query\": \"overcast window view\"}, {\"id\": 3, \"prompt\": \"Old rotary phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old rotary phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hasta que una llamada cambió todo. Debí haber colgado.\", \"pexels_query\": \"old rotary phone\"}, {\"id\": 4, \"prompt\": \"Blurred documents on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred documents on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Me obligaron a guardar secretos. Sin opción, por mi familia.\", \"pexels_query\": \"blurred documents table\"}, {\"id\": 5, \"prompt\": \"Dark hallway end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark hallway end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Vi cosas que nadie debe ver. Cosas muy oscuras.\", \"pexels_query\": \"dark hallway end\"}, {\"id\": 6, \"prompt\": \"Locked heavy door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Locked heavy door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio era mi única arma. Y mi peor cárcel.\", \"pexels_query\": \"locked heavy door\"}, {\"id\": 7, \"prompt\": \"Shadowy map with pins, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shadowy map with pins, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sabía demasiado de ellos. De sus movimientos clandestinos.\", \"pexels_query\": \"shadowy map pins\"}, {\"id\": 8, \"prompt\": \"Empty living room at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty living room at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi casa fue su punto ciego. Lugar seguro.\", \"pexels_query\": \"empty living room\"}, {\"id\": 9, \"prompt\": \"Phone with unread message notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Phone with unread message notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No podía hablar con nadie. Sentía que no estabas solo.\", \"pexels_query\": \"phone unread message\"}, {\"id\": 10, \"prompt\": \"Long, dark shadow on floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Long, dark shadow on floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Cada sombra era una amenaza. Cada noche, el terror.\", \"pexels_query\": \"long dark shadow\"}, {\"id\": 11, \"prompt\": \"Open empty notebook on desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Open empty notebook on desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Algo no está bien, lo sentía. No podía ignorarlo.\", \"pexels_query\": \"open empty notebook\"}, {\"id\": 12, \"prompt\": \"Pile of old, faded identification cards, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Pile of old, faded identification cards, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pasaba facturas, documentos falsos. Ayudaba a cambiar identidades.\", \"pexels_query\": \"old identification cards\"}, {\"id\": 13, \"prompt\": \"Reflection in a dark mirror, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Reflection in a dark mirror, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una vida normal, por fuera. Por dentro, un infierno.\", \"pexels_query\": \"reflection dark mirror\"}, {\"id\": 14, \"prompt\": \"Gloomy empty corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Gloomy empty corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi papel era el de la sombra. Invisible, sin rastro.\", \"pexels_query\": \"gloomy empty corridor\"}, {\"id\": 15, \"prompt\": \"Recorder on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Recorder on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Escuchaba conversaciones terribles. Planes que helaban la sangre.\", \"pexels_query\": \"recorder table\"}, {\"id\": 16, \"prompt\": \"Messy desk, papers scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Messy desk, papers scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pensaba que solo hacía favores. Que no era tan grave.\", \"pexels_query\": \"messy desk papers\"}, {\"id\": 17, \"prompt\": \"Dark figure walking away down a street, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark figure walking away down a street, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero ellos me usaban. Para borrar vidas enteras.\", \"pexels_query\": \"dark figure street\"}, {\"id\": 18, \"prompt\": \"Blurred photo on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred photo on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las caras que ayudaba a ocultar... eran de sus víctimas.\", \"pexels_query\": \"blurred photo desk\"}, {\"id\": 19, \"prompt\": \"Newspaper clipping with a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Newspaper clipping with a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo supe cuando vi una foto. Un rostro muy conocido.\", \"pexels_query\": \"newspaper clipping blurred\"}, {\"id\": 20, \"prompt\": \"Empty dinner table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty dinner table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era de la esposa de un policía. Que había desaparecido.\", \"pexels_query\": \"empty dinner table\"}, {\"id\": 21, \"prompt\": \"Discarded burner phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Discarded burner phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No eran solo documentos... era complicidad. Era terror puro.\", \"pexels_query\": \"burner phone discarded\"}, {\"id\": 22, \"prompt\": \"Dark and empty apartment entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark and empty apartment entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi silencio era su protección. Yo era parte del horror.\", \"pexels_query\": \"empty apartment entrance\"}, {\"id\": 23, \"prompt\": \"Open safe with nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Open safe with nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie lo vio venir. Ni siquiera yo misma.\", \"pexels_query\": \"open empty safe\"}, {\"id\": 24, \"prompt\": \"Rusty chains on a concrete floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Rusty chains on a concrete floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El miedo me paralizó por años. Un silencio absoluto.\", \"pexels_query\": \"rusty chains floor\"}, {\"id\": 25, \"prompt\": \"Light at end of dark tunnel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Light at end of dark tunnel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ahora, el peso es insoportable. Necesito liberarme, por fin.\", \"pexels_query\": \"light dark tunnel\"}, {\"id\": 26, \"prompt\": \"Hands loosely tied with a thin rope, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hands loosely tied with a thin rope, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Tú qué harías si tu amor te ata?\", \"pexels_query\": \"hands loosely tied\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Nunca conté lo que viví. Esa carga era mía. Siempre fui una persona reservada. Mi vida parecía normal. Hasta que una llamada cambió todo. Debí haber colgado. Me obligaron a guardar secretos. Sin opción, por mi familia. Vi cosas que nadie debe ver. Cosas muy oscuras. El silencio era mi única arma. Y mi peor cárcel. Sabía demasiado de ellos. De sus movimientos clandestinos. Mi casa fue su punto ciego. Lugar seguro. No podía hablar con nadie. Sentía que no estabas solo. Cada sombra era una amenaza. Cada noche, el terror. Algo no está bien, lo sentía. No podía ignorarlo. Pasaba facturas, documentos falsos. Ayudaba a cambiar identidades. Una vida normal, por fuera. Por dentro, un infierno. Mi papel era el de la sombra. Invisible, sin rastro. Escuchaba conversaciones terribles. Planes que helaban la sangre. Pensaba que solo hacía favores. Que no era tan grave. Pero ellos me usaban. Para borrar vidas enteras. Las caras que ayudaba a ocultar... eran de sus víctimas. Lo supe cuando vi una foto. Un rostro muy conocido. Era de la esposa de un policía. Que había desaparecido. No eran solo documentos... era complicidad. Era terror puro. Mi silencio era su protección. Yo era parte del horror. Nadie lo vio venir. Ni siquiera yo misma. El miedo me paralizó por años. Un silencio absoluto. Ahora, el peso es insoportable. Necesito liberarme, por fin. ¿Tú qué harías si tu amor te ata?",
+    "titulo_sugerido": "Mi silencio construyó su Imperio Criminal",
+    "escenas_texto": [
+      "Nunca conté lo que viví. Esa carga era mía.",
+      "Siempre fui una persona reservada. Mi vida parecía normal.",
+      "Hasta que una llamada cambió todo. Debí haber colgado.",
+      "Me obligaron a guardar secretos. Sin opción, por mi familia.",
+      "Vi cosas que nadie debe ver. Cosas muy oscuras.",
+      "El silencio era mi única arma. Y mi peor cárcel.",
+      "Sabía demasiado de ellos. De sus movimientos clandestinos.",
+      "Mi casa fue su punto ciego. Lugar seguro.",
+      "No podía hablar con nadie. Sentía que no estabas solo.",
+      "Cada sombra era una amenaza. Cada noche, el terror.",
+      "Algo no está bien, lo sentía. No podía ignorarlo.",
+      "Pasaba facturas, documentos falsos. Ayudaba a cambiar identidades.",
+      "Una vida normal, por fuera. Por dentro, un infierno.",
+      "Mi papel era el de la sombra. Invisible, sin rastro.",
+      "Escuchaba conversaciones terribles. Planes que helaban la sangre.",
+      "Pensaba que solo hacía favores. Que no era tan grave.",
+      "Pero ellos me usaban. Para borrar vidas enteras.",
+      "Las caras que ayudaba a ocultar... eran de sus víctimas.",
+      "Lo supe cuando vi una foto. Un rostro muy conocido.",
+      "Era de la esposa de un policía. Que había desaparecido.",
+      "No eran solo documentos... era complicidad. Era terror puro.",
+      "Mi silencio era su protección. Yo era parte del horror.",
+      "Nadie lo vio venir. Ni siquiera yo misma.",
+      "El miedo me paralizó por años. Un silencio absoluto.",
+      "Ahora, el peso es insoportable. Necesito liberarme, por fin.",
+      "¿Tú qué harías si tu amor te ata?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty chair with dramatic shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty chair with dramatic shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nunca conté lo que viví. Esa carga era mía.",
+        "pexels_query": "empty chair shadow"
+      },
+      {
+        "id": 2,
+        "prompt": "Overcast window view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Overcast window view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Siempre fui una persona reservada. Mi vida parecía normal.",
+        "pexels_query": "overcast window view"
+      },
+      {
+        "id": 3,
+        "prompt": "Old rotary phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old rotary phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hasta que una llamada cambió todo. Debí haber colgado.",
+        "pexels_query": "old rotary phone"
+      },
+      {
+        "id": 4,
+        "prompt": "Blurred documents on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred documents on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Me obligaron a guardar secretos. Sin opción, por mi familia.",
+        "pexels_query": "blurred documents table"
+      },
+      {
+        "id": 5,
+        "prompt": "Dark hallway end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark hallway end, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Vi cosas que nadie debe ver. Cosas muy oscuras.",
+        "pexels_query": "dark hallway end"
+      },
+      {
+        "id": 6,
+        "prompt": "Locked heavy door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Locked heavy door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio era mi única arma. Y mi peor cárcel.",
+        "pexels_query": "locked heavy door"
+      },
+      {
+        "id": 7,
+        "prompt": "Shadowy map with pins, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shadowy map with pins, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sabía demasiado de ellos. De sus movimientos clandestinos.",
+        "pexels_query": "shadowy map pins"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty living room at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty living room at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi casa fue su punto ciego. Lugar seguro.",
+        "pexels_query": "empty living room"
+      },
+      {
+        "id": 9,
+        "prompt": "Phone with unread message notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Phone with unread message notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No podía hablar con nadie. Sentía que no estabas solo.",
+        "pexels_query": "phone unread message"
+      },
+      {
+        "id": 10,
+        "prompt": "Long, dark shadow on floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Long, dark shadow on floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Cada sombra era una amenaza. Cada noche, el terror.",
+        "pexels_query": "long dark shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "Open empty notebook on desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Open empty notebook on desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Algo no está bien, lo sentía. No podía ignorarlo.",
+        "pexels_query": "open empty notebook"
+      },
+      {
+        "id": 12,
+        "prompt": "Pile of old, faded identification cards, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Pile of old, faded identification cards, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pasaba facturas, documentos falsos. Ayudaba a cambiar identidades.",
+        "pexels_query": "old identification cards"
+      },
+      {
+        "id": 13,
+        "prompt": "Reflection in a dark mirror, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Reflection in a dark mirror, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una vida normal, por fuera. Por dentro, un infierno.",
+        "pexels_query": "reflection dark mirror"
+      },
+      {
+        "id": 14,
+        "prompt": "Gloomy empty corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Gloomy empty corridor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi papel era el de la sombra. Invisible, sin rastro.",
+        "pexels_query": "gloomy empty corridor"
+      },
+      {
+        "id": 15,
+        "prompt": "Recorder on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Recorder on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Escuchaba conversaciones terribles. Planes que helaban la sangre.",
+        "pexels_query": "recorder table"
+      },
+      {
+        "id": 16,
+        "prompt": "Messy desk, papers scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Messy desk, papers scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pensaba que solo hacía favores. Que no era tan grave.",
+        "pexels_query": "messy desk papers"
+      },
+      {
+        "id": 17,
+        "prompt": "Dark figure walking away down a street, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark figure walking away down a street, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero ellos me usaban. Para borrar vidas enteras.",
+        "pexels_query": "dark figure street"
+      },
+      {
+        "id": 18,
+        "prompt": "Blurred photo on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred photo on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las caras que ayudaba a ocultar... eran de sus víctimas.",
+        "pexels_query": "blurred photo desk"
+      },
+      {
+        "id": 19,
+        "prompt": "Newspaper clipping with a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Newspaper clipping with a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo supe cuando vi una foto. Un rostro muy conocido.",
+        "pexels_query": "newspaper clipping blurred"
+      },
+      {
+        "id": 20,
+        "prompt": "Empty dinner table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty dinner table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era de la esposa de un policía. Que había desaparecido.",
+        "pexels_query": "empty dinner table"
+      },
+      {
+        "id": 21,
+        "prompt": "Discarded burner phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Discarded burner phone, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No eran solo documentos... era complicidad. Era terror puro.",
+        "pexels_query": "burner phone discarded"
+      },
+      {
+        "id": 22,
+        "prompt": "Dark and empty apartment entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark and empty apartment entrance, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi silencio era su protección. Yo era parte del horror.",
+        "pexels_query": "empty apartment entrance"
+      },
+      {
+        "id": 23,
+        "prompt": "Open safe with nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Open safe with nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie lo vio venir. Ni siquiera yo misma.",
+        "pexels_query": "open empty safe"
+      },
+      {
+        "id": 24,
+        "prompt": "Rusty chains on a concrete floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Rusty chains on a concrete floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El miedo me paralizó por años. Un silencio absoluto.",
+        "pexels_query": "rusty chains floor"
+      },
+      {
+        "id": 25,
+        "prompt": "Light at end of dark tunnel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Light at end of dark tunnel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ahora, el peso es insoportable. Necesito liberarme, por fin.",
+        "pexels_query": "light dark tunnel"
+      },
+      {
+        "id": 26,
+        "prompt": "Hands loosely tied with a thin rope, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hands loosely tied with a thin rope, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Tú qué harías si tu amor te ata?",
+        "pexels_query": "hands loosely tied"
+      }
+    ],
+    "hooks": [
+      "Mantener secretos oscuros.",
+      "La verdad tras identidades.",
+      "¿Quién era la víctima?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
