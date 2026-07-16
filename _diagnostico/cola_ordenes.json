@@ -460,5 +460,224 @@
       "¿Confiar en la traición?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "7d07e900-976b-4cf0-9e82-cf00bc06fe26",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A young man, Brayan-like character, proudly holding a rusty metal bucket, standing next to a muddy ditch, with an exaggerated expression of triumph, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A young man, Brayan-like character, proudly holding a rusty metal bucket, standing next to a muddy ditch, with an exaggerated expression of triumph, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El Brayan capturó un \\\"monstruo de la barranca\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A rusty metal bucket, typical for construction, with something strange and blob-like inside, next to a street curb, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A rusty metal bucket, typical for construction, with something strange and blob-like inside, next to a street curb, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Lo trajo en una cubeta de albañil usada.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Exaggerated cartoon steam and stink lines rising from a bucket, showing a terrible smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Exaggerated cartoon steam and stink lines rising from a bucket, showing a terrible smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Olía a drenaje, tamal de mole olvidado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Close-up of a gelatinous, grey-ish blob in a bucket, with two small, glowing, suspicious eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Close-up of a gelatinous, grey-ish blob in a bucket, with two small, glowing, suspicious eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Era gelatinoso, con ojos que brillaban feo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"An elderly woman (Doña Chona) with a dramatic, fainting expression, hand on her chest, looking horrified at a bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An elderly woman (Doña Chona) with a dramatic, fainting expression, hand on her chest, looking horrified at a bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La doña Chona casi se desmaya del asco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A group of cartoon neighbors whispering and pointing at the bucket, wide-eyed with fear and wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A group of cartoon neighbors whispering and pointing at the bucket, wide-eyed with fear and wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Todos pensaron que era criatura prehistórica oculta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A middle-aged man (Compadre Pepe) secretly talking on an old cell phone, making shifty eyes, looking at the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A middle-aged man (Compadre Pepe) secretly talking on an old cell phone, making shifty eyes, looking at the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El compadre Pepe ya buscaba comprador misterioso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A homemade sign with a ridiculous, long, pseudo-scientific name for the creature, next to the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A homemade sign with a ridiculous, long, pseudo-scientific name for the creature, next to the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Le pusieron nombre científico: \\\"Pez-chupacabras-lodoso\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A crowded Mexican street scene with many cartoon people gathered around a central point, all pointing and exclaiming, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A crowded Mexican street scene with many cartoon people gathered around a central point, all pointing and exclaiming, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Se armó el relajo en toda la vecindad.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon news reporter with a microphone standing in front of the crowd, looking bewildered, with a camera person next to them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon news reporter with a microphone standing in front of the crowd, looking bewildered, with a camera person next to them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Hasta el noticiero local vino a grabar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Scientists in cartoon lab coats looking hesitant and scared, holding long tools, cautiously approaching the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Scientists in cartoon lab coats looking hesitant and scared, holding long tools, cautiously approaching the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Querían analizarlo, pero nadie se acercaba.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A bucket with the blob inside, showing cartoon sound waves emanating from it, indicating a consistent vibration, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A bucket with the blob inside, showing cartoon sound waves emanating from it, indicating a consistent vibration, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Emitía un sonido raro, como vibración constante.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon crowd with wide, fearful eyes, shadows under their chins, expressing a mix of terror and fascination, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon crowd with wide, fearful eyes, shadows under their chins, expressing a mix of terror and fascination, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El miedo a lo desconocido invadió el ambiente.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A close-up of a cartoon person's head, with a thought bubble showing a question mark and unsettling shadows, implying unease, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A close-up of a cartoon person's head, with a thought bubble showing a question mark and unsettling shadows, implying unease, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Algo no está bien, lo sentiste antes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Brayan's face in close-up, turning pale, eyes wide open in sudden realization and embarrassment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Brayan's face in close-up, turning pale, eyes wide open in sudden realization and embarrassment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"De repente, el Brayan se puso muy blanco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A cartoon thought bubble above Brayan's head, showing a blurry, confusing flashback of a party scene with a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon thought bubble above Brayan's head, showing a blurry, confusing flashback of a party scene with a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Recordó algo importante de anoche, muy confuso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Close-up on the gelatinous blob in the bucket, showing a tiny electrical cord sticking out of it, subtle and almost hidden, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Close-up on the gelatinous blob in the bucket, showing a tiny electrical cord sticking out of it, subtle and almost hidden, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El \\\"monstruo\\\" tenía un cablecito saliendo de un lado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Even closer shot, revealing a tiny, almost unnoticeable sticker on the side of the blob that says 'Made in China', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Even closer shot, revealing a tiny, almost unnoticeable sticker on the side of the blob that says 'Made in China', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y una etiqueta pequeña: \\\"Hecho en China\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A cartoon crowd with hands over their mouths, eyes wide in disbelief and belated realization, a collective 'oops' expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon crowd with hands over their mouths, eyes wide in disbelief and belated realization, a collective 'oops' expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Nadíe lo vio al principio, era muy obvio.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"An extreme close-up on the faces of the cartoon crowd, all silent, with dropped jaws and wide, astonished eyes, showing complete silence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An extreme close-up on the faces of the cartoon crowd, all silent, with dropped jaws and wide, astonished eyes, showing complete silence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El silencio absoluto se apoderó de todos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"A cartoon brain icon with gears turning erratically, showing confusion and conflicting thoughts, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon brain icon with gears turning erratically, showing confusion and conflicting thoughts, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La disonancia cognitiva invadió las mentes curiosas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A montage of various cartoon faces showing priceless, exaggerated expressions of shock, embarrassment, and dawning comprehension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A montage of various cartoon faces showing priceless, exaggerated expressions of shock, embarrassment, and dawning comprehension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Las caras de sorpresa no tenían precio alguno.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"The bucket with the blob, now clearly vibrating cheerfully and innocently, with cartoon musical notes floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The bucket with the blob, now clearly vibrating cheerfully and innocently, with cartoon musical notes floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El \\\"monstruo\\\" vibraba alegremente en la cubeta...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon hand quickly reaching into the bucket to grab the vibrating object, showing embarrassment, with the blob now clearly identifiable as an electric massager, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon hand quickly reaching into the bucket to grab the vibrating object, showing embarrassment, with the blob now clearly identifiable as an electric massager, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"...era el masajeador acuático de la tía Chofi.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon scene of a Mexican street at sunset, with a sense of lingering mystery and people still looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon scene of a Mexican street at sunset, with a sense of lingering mystery and people still looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Y colorín colorado, este misterio no ha terminado!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "El Brayan capturó un \"monstruo de la barranca\". Lo trajo en una cubeta de albañil usada. Olía a drenaje, tamal de mole olvidado. Era gelatinoso, con ojos que brillaban feo. La doña Chona casi se desmaya del asco. Todos pensaron que era criatura prehistórica oculta. El compadre Pepe ya buscaba comprador misterioso. Le pusieron nombre científico: \"Pez-chupacabras-lodoso\". Se armó el relajo en toda la vecindad. Hasta el noticiero local vino a grabar. Querían analizarlo, pero nadie se acercaba. Emitía un sonido raro, como vibración constante. El miedo a lo desconocido invadió el ambiente. Algo no está bien, lo sentiste antes. De repente, el Brayan se puso muy blanco. Recordó algo importante de anoche, muy confuso. El \"monstruo\" tenía un cablecito saliendo de un lado. Y una etiqueta pequeña: \"Hecho en China\". Nadíe lo vio al principio, era muy obvio. El silencio absoluto se apoderó de todos. La disonancia cognitiva invadió las mentes curiosas. Las caras de sorpresa no tenían precio alguno. El \"monstruo\" vibraba alegremente en la cubeta... ...era el masajeador acuático de la tía Chofi. ¡Y colorín colorado, este misterio no ha terminado!",
+    "titulo_sugerido": "El día que el Brayan 'atrapó' al Monstruo de la Barranca",
+    "escenas_texto": [
+      "El Brayan capturó un \"monstruo de la barranca\".",
+      "Lo trajo en una cubeta de albañil usada.",
+      "Olía a drenaje, tamal de mole olvidado.",
+      "Era gelatinoso, con ojos que brillaban feo.",
+      "La doña Chona casi se desmaya del asco.",
+      "Todos pensaron que era criatura prehistórica oculta.",
+      "El compadre Pepe ya buscaba comprador misterioso.",
+      "Le pusieron nombre científico: \"Pez-chupacabras-lodoso\".",
+      "Se armó el relajo en toda la vecindad.",
+      "Hasta el noticiero local vino a grabar.",
+      "Querían analizarlo, pero nadie se acercaba.",
+      "Emitía un sonido raro, como vibración constante.",
+      "El miedo a lo desconocido invadió el ambiente.",
+      "Algo no está bien, lo sentiste antes.",
+      "De repente, el Brayan se puso muy blanco.",
+      "Recordó algo importante de anoche, muy confuso.",
+      "El \"monstruo\" tenía un cablecito saliendo de un lado.",
+      "Y una etiqueta pequeña: \"Hecho en China\".",
+      "Nadíe lo vio al principio, era muy obvio.",
+      "El silencio absoluto se apoderó de todos.",
+      "La disonancia cognitiva invadió las mentes curiosas.",
+      "Las caras de sorpresa no tenían precio alguno.",
+      "El \"monstruo\" vibraba alegremente en la cubeta...",
+      "...era el masajeador acuático de la tía Chofi.",
+      "¡Y colorín colorado, este misterio no ha terminado!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A young man, Brayan-like character, proudly holding a rusty metal bucket, standing next to a muddy ditch, with an exaggerated expression of triumph, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A young man, Brayan-like character, proudly holding a rusty metal bucket, standing next to a muddy ditch, with an exaggerated expression of triumph, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El Brayan capturó un \"monstruo de la barranca\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A rusty metal bucket, typical for construction, with something strange and blob-like inside, next to a street curb, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A rusty metal bucket, typical for construction, with something strange and blob-like inside, next to a street curb, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Lo trajo en una cubeta de albañil usada.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Exaggerated cartoon steam and stink lines rising from a bucket, showing a terrible smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Exaggerated cartoon steam and stink lines rising from a bucket, showing a terrible smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Olía a drenaje, tamal de mole olvidado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Close-up of a gelatinous, grey-ish blob in a bucket, with two small, glowing, suspicious eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Close-up of a gelatinous, grey-ish blob in a bucket, with two small, glowing, suspicious eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Era gelatinoso, con ojos que brillaban feo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "An elderly woman (Doña Chona) with a dramatic, fainting expression, hand on her chest, looking horrified at a bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An elderly woman (Doña Chona) with a dramatic, fainting expression, hand on her chest, looking horrified at a bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La doña Chona casi se desmaya del asco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A group of cartoon neighbors whispering and pointing at the bucket, wide-eyed with fear and wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A group of cartoon neighbors whispering and pointing at the bucket, wide-eyed with fear and wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Todos pensaron que era criatura prehistórica oculta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A middle-aged man (Compadre Pepe) secretly talking on an old cell phone, making shifty eyes, looking at the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A middle-aged man (Compadre Pepe) secretly talking on an old cell phone, making shifty eyes, looking at the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El compadre Pepe ya buscaba comprador misterioso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A homemade sign with a ridiculous, long, pseudo-scientific name for the creature, next to the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A homemade sign with a ridiculous, long, pseudo-scientific name for the creature, next to the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Le pusieron nombre científico: \"Pez-chupacabras-lodoso\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A crowded Mexican street scene with many cartoon people gathered around a central point, all pointing and exclaiming, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A crowded Mexican street scene with many cartoon people gathered around a central point, all pointing and exclaiming, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Se armó el relajo en toda la vecindad.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon news reporter with a microphone standing in front of the crowd, looking bewildered, with a camera person next to them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon news reporter with a microphone standing in front of the crowd, looking bewildered, with a camera person next to them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Hasta el noticiero local vino a grabar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Scientists in cartoon lab coats looking hesitant and scared, holding long tools, cautiously approaching the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Scientists in cartoon lab coats looking hesitant and scared, holding long tools, cautiously approaching the bucket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Querían analizarlo, pero nadie se acercaba.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A bucket with the blob inside, showing cartoon sound waves emanating from it, indicating a consistent vibration, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A bucket with the blob inside, showing cartoon sound waves emanating from it, indicating a consistent vibration, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Emitía un sonido raro, como vibración constante.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon crowd with wide, fearful eyes, shadows under their chins, expressing a mix of terror and fascination, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon crowd with wide, fearful eyes, shadows under their chins, expressing a mix of terror and fascination, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El miedo a lo desconocido invadió el ambiente.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A close-up of a cartoon person's head, with a thought bubble showing a question mark and unsettling shadows, implying unease, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A close-up of a cartoon person's head, with a thought bubble showing a question mark and unsettling shadows, implying unease, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Algo no está bien, lo sentiste antes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Brayan's face in close-up, turning pale, eyes wide open in sudden realization and embarrassment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Brayan's face in close-up, turning pale, eyes wide open in sudden realization and embarrassment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "De repente, el Brayan se puso muy blanco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A cartoon thought bubble above Brayan's head, showing a blurry, confusing flashback of a party scene with a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon thought bubble above Brayan's head, showing a blurry, confusing flashback of a party scene with a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Recordó algo importante de anoche, muy confuso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Close-up on the gelatinous blob in the bucket, showing a tiny electrical cord sticking out of it, subtle and almost hidden, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Close-up on the gelatinous blob in the bucket, showing a tiny electrical cord sticking out of it, subtle and almost hidden, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El \"monstruo\" tenía un cablecito saliendo de un lado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Even closer shot, revealing a tiny, almost unnoticeable sticker on the side of the blob that says 'Made in China', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Even closer shot, revealing a tiny, almost unnoticeable sticker on the side of the blob that says 'Made in China', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y una etiqueta pequeña: \"Hecho en China\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A cartoon crowd with hands over their mouths, eyes wide in disbelief and belated realization, a collective 'oops' expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon crowd with hands over their mouths, eyes wide in disbelief and belated realization, a collective 'oops' expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Nadíe lo vio al principio, era muy obvio.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "An extreme close-up on the faces of the cartoon crowd, all silent, with dropped jaws and wide, astonished eyes, showing complete silence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An extreme close-up on the faces of the cartoon crowd, all silent, with dropped jaws and wide, astonished eyes, showing complete silence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El silencio absoluto se apoderó de todos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "A cartoon brain icon with gears turning erratically, showing confusion and conflicting thoughts, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon brain icon with gears turning erratically, showing confusion and conflicting thoughts, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La disonancia cognitiva invadió las mentes curiosas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A montage of various cartoon faces showing priceless, exaggerated expressions of shock, embarrassment, and dawning comprehension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A montage of various cartoon faces showing priceless, exaggerated expressions of shock, embarrassment, and dawning comprehension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Las caras de sorpresa no tenían precio alguno.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "The bucket with the blob, now clearly vibrating cheerfully and innocently, with cartoon musical notes floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The bucket with the blob, now clearly vibrating cheerfully and innocently, with cartoon musical notes floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El \"monstruo\" vibraba alegremente en la cubeta...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon hand quickly reaching into the bucket to grab the vibrating object, showing embarrassment, with the blob now clearly identifiable as an electric massager, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon hand quickly reaching into the bucket to grab the vibrating object, showing embarrassment, with the blob now clearly identifiable as an electric massager, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "...era el masajeador acuático de la tía Chofi.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon scene of a Mexican street at sunset, with a sense of lingering mystery and people still looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon scene of a Mexican street at sunset, with a sense of lingering mystery and people still looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Y colorín colorado, este misterio no ha terminado!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Monstruo de la barranca",
+      "Vibración misteriosa",
+      "Etiqueta 'China'"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
