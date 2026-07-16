@@ -4997,5 +4997,248 @@
       "¿Cómo vivir así?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "be2d6a15-22ee-4243-9eb2-949c421c08e0",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Smartphone screen with an unread notification, on a dark wooden surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Smartphone screen with an unread notification, on a dark wooden surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sentiste un escalofrío al revisar la notificación equivocada.\", \"pexels_query\": \"phone notification\"}, {\"id\": 2, \"prompt\": \"Empty chair pulled slightly away from a dining table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty chair pulled slightly away from a dining table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tu pareja cambiaba mucho su rutina diaria.\", \"pexels_query\": \"empty chair table\"}, {\"id\": 3, \"prompt\": \"Digital clock displaying late-night hours on a bedside table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Digital clock displaying late-night hours on a bedside table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Siempre estaba \\\"ocupado\\\" o llegaba muy tarde.\", \"pexels_query\": \"digital clock night\"}, {\"id\": 4, \"prompt\": \"Half-empty coffee cup on a messy desk, blurred background, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Half-empty coffee cup on a messy desk, blurred background, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sus explicaciones nunca terminaban de cuadrar.\", \"pexels_query\": \"coffee cup desk\"}, {\"id\": 5, \"prompt\": \"Blurred image of a family gathering from a distance, focusing on a table with food, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred image of a family gathering from a distance, focusing on a table with food, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Notaste miradas raras en reuniones familiares.\", \"pexels_query\": \"family gathering background\"}, {\"id\": 6, \"prompt\": \"A slightly ajar door revealing a dark hallway, with a sliver of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A slightly ajar door revealing a dark hallway, with a sliver of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Algo no estaba bien en el ambiente familiar.\", \"pexels_query\": \"ajar door dark\"}, {\"id\": 7, \"prompt\": \"A rumpled duvet and pillows on a bed, with a faint light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A rumpled duvet and pillows on a bed, with a faint light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una noche, se levantó a buscar agua.\", \"pexels_query\": \"rumpled bed sheets\"}, {\"id\": 8, \"prompt\": \"Smartphone lying face up on a pillow, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Smartphone lying face up on a pillow, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Dejó su teléfono desbloqueado en la cama.\", \"pexels_query\": \"phone on pillow\"}, {\"id\": 9, \"prompt\": \"Close-up of a vibrating phone screen with a blurred notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a vibrating phone screen with a blurred notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Vibró y apareció un mensaje muy extraño.\", \"pexels_query\": \"vibrating phone screen\"}, {\"id\": 10, \"prompt\": \"A close-up of a generic chat app interface, blurred text, with an unknown contact, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A close-up of a generic chat app interface, blurred text, with an unknown contact, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era de un número desconocido, muy peculiar.\", \"pexels_query\": \"blurred chat unknown\"}, {\"id\": 11, \"prompt\": \"Hand slightly hovering over a phone screen, hesitation, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand slightly hovering over a phone screen, hesitation, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sentiste que esto iba a cambiarlo todo.\", \"pexels_query\": \"hesitating hand phone\"}, {\"id\": 12, \"prompt\": \"Finger tapping a phone screen, close-up, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Finger tapping a phone screen, close-up, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Con nervios, decidiste abrir el mensaje.\", \"pexels_query\": \"finger tap screen\"}, {\"id\": 13, \"prompt\": \"Close-up of chat bubbles with ambiguous text, not clearly readable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of chat bubbles with ambiguous text, not clearly readable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La conversación no era sobre infidelidad.\", \"pexels_query\": \"ambiguous chat bubbles\"}, {\"id\": 14, \"prompt\": \"Opened ancient-looking journal or book with faded writing, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Opened ancient-looking journal or book with faded writing, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hablaban de un secreto familiar muy grande.\", \"pexels_query\": \"old journal faded\"}, {\"id\": 15, \"prompt\": \"A blurred picture frame on a shelf, suggesting a family photo without details, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurred picture frame on a shelf, suggesting a family photo without details, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mencionaban a tu primo, el más reservado.\", \"pexels_query\": \"blurred picture frame\"}, {\"id\": 16, \"prompt\": \"A teacup with steam rising, on a cozy table, suggesting domesticity, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A teacup with steam rising, on a cozy table, suggesting domesticity, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y a su esposa, siempre tan dulce y amable.\", \"pexels_query\": \"steaming teacup cozy\"}, {\"id\": 17, \"prompt\": \"A hand partially covering a mouth, expressing worry or holding back a secret, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A hand partially covering a mouth, expressing worry or holding back a secret, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Parecía que tu pareja encubría una mentira.\", \"pexels_query\": \"hand covering mouth\"}, {\"id\": 18, \"prompt\": \"Two intertwined rings, slightly out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two intertwined rings, slightly out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una doble vida que involucraba a ambos.\", \"pexels_query\": \"intertwined rings\"}, {\"id\": 19, \"prompt\": \"A single, isolated key on a dark table, reflecting light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, isolated key on a dark table, reflecting light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo sentiste antes, una verdad oculta.\", \"pexels_query\": \"isolated key dark\"}, {\"id\": 20, \"prompt\": \"A wall calendar with a specific date circled, but without context, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A wall calendar with a specific date circled, but without context, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No podías ignorarlo, la tensión crecía.\", \"pexels_query\": \"circled date calendar\"}, {\"id\": 21, \"prompt\": \"A stack of old, dusty letters tied with a ribbon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A stack of old, dusty letters tied with a ribbon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Leíste cómo protegían un secreto oscuro.\", \"pexels_query\": \"old letters ribbon\"}, {\"id\": 22, \"prompt\": \"Phone screen displaying a blurred image, a crucial detail obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Phone screen displaying a blurred image, a crucial detail obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El giro fue cuando viste una foto adjunta.\", \"pexels_query\": \"blurred image screen\"}, {\"id\": 23, \"prompt\": \"Two identical, antique pocket watches side-by-side, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two identical, antique pocket watches side-by-side, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No era tu primo, sino alguien idéntico a él.\", \"pexels_query\": \"identical pocket watches\"}, {\"id\": 24, \"prompt\": \"A handwritten note with a cryptic message on an aged paper, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A handwritten note with a cryptic message on an aged paper, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y un pie de foto: \\\"El otro gemelo, en secreto\\\".\", \"pexels_query\": \"cryptic handwritten note\"}, {\"id\": 25, \"prompt\": \"Two identical teacups, one slightly behind the other, suggesting a hidden presence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two identical teacups, one slightly behind the other, suggesting a hidden presence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tu primo tenía un hermano, un gemelo oculto.\", \"pexels_query\": \"two identical teacups\"}, {\"id\": 26, \"prompt\": \"A blurry group photo on a mantelpiece, with one figure slightly obscured or less visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurry group photo on a mantelpiece, with one figure slightly obscured or less visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Toda la familia lo sabía, excepto tú.\", \"pexels_query\": \"blurry group photo\"}, {\"id\": 27, \"prompt\": \"A wedding band on a finger, slightly out of focus, in a solemn setting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A wedding band on a finger, slightly out of focus, in a solemn setting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tu pareja era cómplice de este gran engaño.\", \"pexels_query\": \"wedding band solemn\"}, {\"id\": 28, \"prompt\": \"A closed, locked diary or journal on a nightstand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A closed, locked diary or journal on a nightstand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un secreto que nadie debió guardar contigo.\", \"pexels_query\": \"locked diary nightstand\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Sentiste un escalofrío al revisar la notificación equivocada. Tu pareja cambiaba mucho su rutina diaria. Siempre estaba \"ocupado\" o llegaba muy tarde. Sus explicaciones nunca terminaban de cuadrar. Notaste miradas raras en reuniones familiares. Algo no estaba bien en el ambiente familiar. Una noche, se levantó a buscar agua. Dejó su teléfono desbloqueado en la cama. Vibró y apareció un mensaje muy extraño. Era de un número desconocido, muy peculiar. Sentiste que esto iba a cambiarlo todo. Con nervios, decidiste abrir el mensaje. La conversación no era sobre infidelidad. Hablaban de un secreto familiar muy grande. Mencionaban a tu primo, el más reservado. Y a su esposa, siempre tan dulce y amable. Parecía que tu pareja encubría una mentira. Una doble vida que involucraba a ambos. Lo sentiste antes, una verdad oculta. No podías ignorarlo, la tensión crecía. Leíste cómo protegían un secreto oscuro. El giro fue cuando viste una foto adjunta. No era tu primo, sino alguien idéntico a él. Y un pie de foto: \"El otro gemelo, en secreto\". Tu primo tenía un hermano, un gemelo oculto. Toda la familia lo sabía, excepto tú. Tu pareja era cómplice de este gran engaño. Un secreto que nadie debió guardar contigo.",
+    "titulo_sugerido": "Mi pareja ocultaba que tenía un gemelo secreto",
+    "escenas_texto": [
+      "Sentiste un escalofrío al revisar la notificación equivocada.",
+      "Tu pareja cambiaba mucho su rutina diaria.",
+      "Siempre estaba \"ocupado\" o llegaba muy tarde.",
+      "Sus explicaciones nunca terminaban de cuadrar.",
+      "Notaste miradas raras en reuniones familiares.",
+      "Algo no estaba bien en el ambiente familiar.",
+      "Una noche, se levantó a buscar agua.",
+      "Dejó su teléfono desbloqueado en la cama.",
+      "Vibró y apareció un mensaje muy extraño.",
+      "Era de un número desconocido, muy peculiar.",
+      "Sentiste que esto iba a cambiarlo todo.",
+      "Con nervios, decidiste abrir el mensaje.",
+      "La conversación no era sobre infidelidad.",
+      "Hablaban de un secreto familiar muy grande.",
+      "Mencionaban a tu primo, el más reservado.",
+      "Y a su esposa, siempre tan dulce y amable.",
+      "Parecía que tu pareja encubría una mentira.",
+      "Una doble vida que involucraba a ambos.",
+      "Lo sentiste antes, una verdad oculta.",
+      "No podías ignorarlo, la tensión crecía.",
+      "Leíste cómo protegían un secreto oscuro.",
+      "El giro fue cuando viste una foto adjunta.",
+      "No era tu primo, sino alguien idéntico a él.",
+      "Y un pie de foto: \"El otro gemelo, en secreto\".",
+      "Tu primo tenía un hermano, un gemelo oculto.",
+      "Toda la familia lo sabía, excepto tú.",
+      "Tu pareja era cómplice de este gran engaño.",
+      "Un secreto que nadie debió guardar contigo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Smartphone screen with an unread notification, on a dark wooden surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Smartphone screen with an unread notification, on a dark wooden surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sentiste un escalofrío al revisar la notificación equivocada.",
+        "pexels_query": "phone notification"
+      },
+      {
+        "id": 2,
+        "prompt": "Empty chair pulled slightly away from a dining table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty chair pulled slightly away from a dining table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tu pareja cambiaba mucho su rutina diaria.",
+        "pexels_query": "empty chair table"
+      },
+      {
+        "id": 3,
+        "prompt": "Digital clock displaying late-night hours on a bedside table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Digital clock displaying late-night hours on a bedside table, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Siempre estaba \"ocupado\" o llegaba muy tarde.",
+        "pexels_query": "digital clock night"
+      },
+      {
+        "id": 4,
+        "prompt": "Half-empty coffee cup on a messy desk, blurred background, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Half-empty coffee cup on a messy desk, blurred background, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sus explicaciones nunca terminaban de cuadrar.",
+        "pexels_query": "coffee cup desk"
+      },
+      {
+        "id": 5,
+        "prompt": "Blurred image of a family gathering from a distance, focusing on a table with food, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred image of a family gathering from a distance, focusing on a table with food, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Notaste miradas raras en reuniones familiares.",
+        "pexels_query": "family gathering background"
+      },
+      {
+        "id": 6,
+        "prompt": "A slightly ajar door revealing a dark hallway, with a sliver of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A slightly ajar door revealing a dark hallway, with a sliver of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Algo no estaba bien en el ambiente familiar.",
+        "pexels_query": "ajar door dark"
+      },
+      {
+        "id": 7,
+        "prompt": "A rumpled duvet and pillows on a bed, with a faint light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A rumpled duvet and pillows on a bed, with a faint light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una noche, se levantó a buscar agua.",
+        "pexels_query": "rumpled bed sheets"
+      },
+      {
+        "id": 8,
+        "prompt": "Smartphone lying face up on a pillow, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Smartphone lying face up on a pillow, screen slightly glowing, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Dejó su teléfono desbloqueado en la cama.",
+        "pexels_query": "phone on pillow"
+      },
+      {
+        "id": 9,
+        "prompt": "Close-up of a vibrating phone screen with a blurred notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a vibrating phone screen with a blurred notification, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Vibró y apareció un mensaje muy extraño.",
+        "pexels_query": "vibrating phone screen"
+      },
+      {
+        "id": 10,
+        "prompt": "A close-up of a generic chat app interface, blurred text, with an unknown contact, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A close-up of a generic chat app interface, blurred text, with an unknown contact, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era de un número desconocido, muy peculiar.",
+        "pexels_query": "blurred chat unknown"
+      },
+      {
+        "id": 11,
+        "prompt": "Hand slightly hovering over a phone screen, hesitation, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand slightly hovering over a phone screen, hesitation, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sentiste que esto iba a cambiarlo todo.",
+        "pexels_query": "hesitating hand phone"
+      },
+      {
+        "id": 12,
+        "prompt": "Finger tapping a phone screen, close-up, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Finger tapping a phone screen, close-up, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Con nervios, decidiste abrir el mensaje.",
+        "pexels_query": "finger tap screen"
+      },
+      {
+        "id": 13,
+        "prompt": "Close-up of chat bubbles with ambiguous text, not clearly readable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of chat bubbles with ambiguous text, not clearly readable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La conversación no era sobre infidelidad.",
+        "pexels_query": "ambiguous chat bubbles"
+      },
+      {
+        "id": 14,
+        "prompt": "Opened ancient-looking journal or book with faded writing, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Opened ancient-looking journal or book with faded writing, warm natural lighting, RAW photo, candid photography, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hablaban de un secreto familiar muy grande.",
+        "pexels_query": "old journal faded"
+      },
+      {
+        "id": 15,
+        "prompt": "A blurred picture frame on a shelf, suggesting a family photo without details, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurred picture frame on a shelf, suggesting a family photo without details, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mencionaban a tu primo, el más reservado.",
+        "pexels_query": "blurred picture frame"
+      },
+      {
+        "id": 16,
+        "prompt": "A teacup with steam rising, on a cozy table, suggesting domesticity, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A teacup with steam rising, on a cozy table, suggesting domesticity, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y a su esposa, siempre tan dulce y amable.",
+        "pexels_query": "steaming teacup cozy"
+      },
+      {
+        "id": 17,
+        "prompt": "A hand partially covering a mouth, expressing worry or holding back a secret, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A hand partially covering a mouth, expressing worry or holding back a secret, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Parecía que tu pareja encubría una mentira.",
+        "pexels_query": "hand covering mouth"
+      },
+      {
+        "id": 18,
+        "prompt": "Two intertwined rings, slightly out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two intertwined rings, slightly out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una doble vida que involucraba a ambos.",
+        "pexels_query": "intertwined rings"
+      },
+      {
+        "id": 19,
+        "prompt": "A single, isolated key on a dark table, reflecting light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, isolated key on a dark table, reflecting light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo sentiste antes, una verdad oculta.",
+        "pexels_query": "isolated key dark"
+      },
+      {
+        "id": 20,
+        "prompt": "A wall calendar with a specific date circled, but without context, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A wall calendar with a specific date circled, but without context, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No podías ignorarlo, la tensión crecía.",
+        "pexels_query": "circled date calendar"
+      },
+      {
+        "id": 21,
+        "prompt": "A stack of old, dusty letters tied with a ribbon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A stack of old, dusty letters tied with a ribbon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Leíste cómo protegían un secreto oscuro.",
+        "pexels_query": "old letters ribbon"
+      },
+      {
+        "id": 22,
+        "prompt": "Phone screen displaying a blurred image, a crucial detail obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Phone screen displaying a blurred image, a crucial detail obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El giro fue cuando viste una foto adjunta.",
+        "pexels_query": "blurred image screen"
+      },
+      {
+        "id": 23,
+        "prompt": "Two identical, antique pocket watches side-by-side, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two identical, antique pocket watches side-by-side, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No era tu primo, sino alguien idéntico a él.",
+        "pexels_query": "identical pocket watches"
+      },
+      {
+        "id": 24,
+        "prompt": "A handwritten note with a cryptic message on an aged paper, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A handwritten note with a cryptic message on an aged paper, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y un pie de foto: \"El otro gemelo, en secreto\".",
+        "pexels_query": "cryptic handwritten note"
+      },
+      {
+        "id": 25,
+        "prompt": "Two identical teacups, one slightly behind the other, suggesting a hidden presence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two identical teacups, one slightly behind the other, suggesting a hidden presence, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tu primo tenía un hermano, un gemelo oculto.",
+        "pexels_query": "two identical teacups"
+      },
+      {
+        "id": 26,
+        "prompt": "A blurry group photo on a mantelpiece, with one figure slightly obscured or less visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurry group photo on a mantelpiece, with one figure slightly obscured or less visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Toda la familia lo sabía, excepto tú.",
+        "pexels_query": "blurry group photo"
+      },
+      {
+        "id": 27,
+        "prompt": "A wedding band on a finger, slightly out of focus, in a solemn setting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A wedding band on a finger, slightly out of focus, in a solemn setting, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tu pareja era cómplice de este gran engaño.",
+        "pexels_query": "wedding band solemn"
+      },
+      {
+        "id": 28,
+        "prompt": "A closed, locked diary or journal on a nightstand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A closed, locked diary or journal on a nightstand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un secreto que nadie debió guardar contigo.",
+        "pexels_query": "locked diary nightstand"
+      }
+    ],
+    "hooks": [
+      "Notificación equivocada.",
+      "El otro gemelo.",
+      "¿Tú qué hubieras hecho?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
