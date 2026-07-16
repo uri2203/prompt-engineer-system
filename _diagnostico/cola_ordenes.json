@@ -3344,5 +3344,232 @@
       "África, nuevo tablero"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "2643b366-062a-4bee-84e4-f4f0c7909c67",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Aerial view, Suez Canal, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view, Suez Canal, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Lo que no te dicen es que el 30% del comercio global depende de tres rutas.\", \"pexels_query\": \"Suez Canal ships\"}, {\"id\": 2, \"prompt\": \"Panama Canal locks, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Panama Canal locks, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Estas rutas son el Suez, Panamá y Estrecho de Malaca.\", \"pexels_query\": \"Panama Canal infrastructure\"}, {\"id\": 3, \"prompt\": \"Strait of Malacca, busy shipping lane, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Strait of Malacca, busy shipping lane, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Son cuellos de botella vitales para cadenas de suministro.\", \"pexels_query\": \"Malacca Strait cargo\"}, {\"id\": 4, \"prompt\": \"Global shipping map, overlaid with red lines for chokepoints, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global shipping map, overlaid with red lines for chokepoints, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Controlarlas es control del flujo económico mundial.\", \"pexels_query\": \"world shipping routes\"}, {\"id\": 5, \"prompt\": \"Container ships, Red Sea, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Container ships, Red Sea, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Hoy, la tensión geopolítica las afecta directamente.\", \"pexels_query\": \"Red Sea shipping\"}, {\"id\": 6, \"prompt\": \"Naval vessel on patrol, calm sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval vessel on patrol, calm sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El Mar Rojo ha visto un movimiento táctico sin precedentes.\", \"pexels_query\": \"patrol vessel sea\"}, {\"id\": 7, \"prompt\": \"Port cranes, loading containers, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Port cranes, loading containers, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto eleva costos de flete, impactando cada producto.\", \"pexels_query\": \"port loading containers\"}, {\"id\": 8, \"prompt\": \"Logistics hub, large empty warehouse, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Logistics hub, large empty warehouse, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Países con rutas alternativas ganan ventaja competitiva.\", \"pexels_query\": \"empty logistics warehouse\"}, {\"id\": 9, \"prompt\": \"Deserted port, container stack, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Deserted port, container stack, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Regiones dependientes de estas rutas sufren inflación.\", \"pexels_query\": \"abandoned container port\"}, {\"id\": 10, \"prompt\": \"Dry riverbed, cracked earth, distant ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Dry riverbed, cracked earth, distant ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El Canal de Panamá enfrenta sequía, reduciendo tráfico.\", \"pexels_query\": \"dry canal bed\"}, {\"id\": 11, \"prompt\": \"Container ship making a long turn, open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Container ship making a long turn, open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Obliga a buscar caminos más largos, con más gasto.\", \"pexels_query\": \"long route ship\"}, {\"id\": 12, \"prompt\": \"Geopolitical map, trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Geopolitical map, trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Grandes potencias compiten por influencia logística.\", \"pexels_query\": \"global trade map\"}, {\"id\": 13, \"prompt\": \"Heavy shipping traffic at sunset, narrow channel, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Heavy shipping traffic at sunset, narrow channel, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El Estrecho de Malaca es crucial para Asia Oriental.\", \"pexels_query\": \"narrow shipping channel\"}, {\"id\": 14, \"prompt\": \"Naval fleet formation, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval fleet formation, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Fuentes verificadas muestran creciente presencia naval allí.\", \"pexels_query\": \"naval fleet formation\"}, {\"id\": 15, \"prompt\": \"Ship's bow, heavy waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Ship's bow, heavy waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Cualquier bloqueo podría paralizar el comercio asiático.\", \"pexels_query\": \"ship rough seas\"}, {\"id\": 16, \"prompt\": \"Global economic graph, downward trend, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global economic graph, downward trend, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"El mapa real de la economía global está cambiando.\", \"pexels_query\": \"economic recession graph\"}, {\"id\": 17, \"prompt\": \"Maritime radar screen, ship targets, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Maritime radar screen, ship targets, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La guerra económica se libra en estas vías marítimas.\", \"pexels_query\": \"maritime radar screen\"}, {\"id\": 18, \"prompt\": \"Control room, large screens, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Control room, large screens, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Quien domina estos accesos, define el poder comercial.\", \"pexels_query\": \"empty control room\"}, {\"id\": 19, \"prompt\": \"Supermarket aisle, empty shelves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Supermarket aisle, empty shelves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Nadie lo conectó, pero tu bolsillo siente el impacto.\", \"pexels_query\": \"empty supermarket shelves\"}, {\"id\": 20, \"prompt\": \"Global supply chain network diagram, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global supply chain network diagram, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Esto cambia el tablero, alterando precios globales.\", \"pexels_query\": \"global supply chain\"}, {\"id\": 21, \"prompt\": \"Naval base, empty pier, warships at anchor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Naval base, empty pier, warships at anchor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Flotas enteras vigilan estos puntos estratégicos.\", \"pexels_query\": \"warships naval base\"}, {\"id\": 22, \"prompt\": \"Long winding road, cargo trucks, desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Long winding road, cargo trucks, desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Se buscan nuevas rutas, pero son costosas y lentas.\", \"pexels_query\": \"trucks desert road\"}, {\"id\": 23, \"prompt\": \"Chessboard, mid-game, strategic pieces, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Chessboard, mid-game, strategic pieces, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Cada decisión allí es un movimiento táctico global.\", \"pexels_query\": \"geopolitical chessboard\"}, {\"id\": 24, \"prompt\": \"Satellite image, global network connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Satellite image, global network connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"La seguridad de estas rutas define la prosperidad futura.\", \"pexels_query\": \"global network satellite\"}, {\"id\": 25, \"prompt\": \"Old nautical chart, compass, strategic markings, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Old nautical chart, compass, strategic markings, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Entender esto es clave para anticipar el futuro.\", \"pexels_query\": \"nautical chart strategy\"}, {\"id\": 26, \"prompt\": \"Ship's bridge, radar screen, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Ship's bridge, radar screen, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"Vigilemos los movimientos navales. El próximo puede ser decisivo.\", \"pexels_query\": \"ship bridge view\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "Lo que no te dicen es que el 30% del comercio global depende de tres rutas. Estas rutas son el Suez, Panamá y Estrecho de Malaca. Son cuellos de botella vitales para cadenas de suministro. Controlarlas es control del flujo económico mundial. Hoy, la tensión geopolítica las afecta directamente. El Mar Rojo ha visto un movimiento táctico sin precedentes. Esto eleva costos de flete, impactando cada producto. Países con rutas alternativas ganan ventaja competitiva. Regiones dependientes de estas rutas sufren inflación. El Canal de Panamá enfrenta sequía, reduciendo tráfico. Obliga a buscar caminos más largos, con más gasto. Grandes potencias compiten por influencia logística. El Estrecho de Malaca es crucial para Asia Oriental. Fuentes verificadas muestran creciente presencia naval allí. Cualquier bloqueo podría paralizar el comercio asiático. El mapa real de la economía global está cambiando. La guerra económica se libra en estas vías marítimas. Quien domina estos accesos, define el poder comercial. Nadie lo conectó, pero tu bolsillo siente el impacto. Esto cambia el tablero, alterando precios globales. Flotas enteras vigilan estos puntos estratégicos. Se buscan nuevas rutas, pero son costosas y lentas. Cada decisión allí es un movimiento táctico global. La seguridad de estas rutas define la prosperidad futura. Entender esto es clave para anticipar el futuro. Vigilemos los movimientos navales. El próximo puede ser decisivo.",
+    "titulo_sugerido": "Las Tres Rutas que Definen el Precio de TODO",
+    "escenas_texto": [
+      "Lo que no te dicen es que el 30% del comercio global depende de tres rutas.",
+      "Estas rutas son el Suez, Panamá y Estrecho de Malaca.",
+      "Son cuellos de botella vitales para cadenas de suministro.",
+      "Controlarlas es control del flujo económico mundial.",
+      "Hoy, la tensión geopolítica las afecta directamente.",
+      "El Mar Rojo ha visto un movimiento táctico sin precedentes.",
+      "Esto eleva costos de flete, impactando cada producto.",
+      "Países con rutas alternativas ganan ventaja competitiva.",
+      "Regiones dependientes de estas rutas sufren inflación.",
+      "El Canal de Panamá enfrenta sequía, reduciendo tráfico.",
+      "Obliga a buscar caminos más largos, con más gasto.",
+      "Grandes potencias compiten por influencia logística.",
+      "El Estrecho de Malaca es crucial para Asia Oriental.",
+      "Fuentes verificadas muestran creciente presencia naval allí.",
+      "Cualquier bloqueo podría paralizar el comercio asiático.",
+      "El mapa real de la economía global está cambiando.",
+      "La guerra económica se libra en estas vías marítimas.",
+      "Quien domina estos accesos, define el poder comercial.",
+      "Nadie lo conectó, pero tu bolsillo siente el impacto.",
+      "Esto cambia el tablero, alterando precios globales.",
+      "Flotas enteras vigilan estos puntos estratégicos.",
+      "Se buscan nuevas rutas, pero son costosas y lentas.",
+      "Cada decisión allí es un movimiento táctico global.",
+      "La seguridad de estas rutas define la prosperidad futura.",
+      "Entender esto es clave para anticipar el futuro.",
+      "Vigilemos los movimientos navales. El próximo puede ser decisivo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Aerial view, Suez Canal, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view, Suez Canal, cargo ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Lo que no te dicen es que el 30% del comercio global depende de tres rutas.",
+        "pexels_query": "Suez Canal ships"
+      },
+      {
+        "id": 2,
+        "prompt": "Panama Canal locks, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Panama Canal locks, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Estas rutas son el Suez, Panamá y Estrecho de Malaca.",
+        "pexels_query": "Panama Canal infrastructure"
+      },
+      {
+        "id": 3,
+        "prompt": "Strait of Malacca, busy shipping lane, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Strait of Malacca, busy shipping lane, sunrise, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Son cuellos de botella vitales para cadenas de suministro.",
+        "pexels_query": "Malacca Strait cargo"
+      },
+      {
+        "id": 4,
+        "prompt": "Global shipping map, overlaid with red lines for chokepoints, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global shipping map, overlaid with red lines for chokepoints, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Controlarlas es control del flujo económico mundial.",
+        "pexels_query": "world shipping routes"
+      },
+      {
+        "id": 5,
+        "prompt": "Container ships, Red Sea, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Container ships, Red Sea, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Hoy, la tensión geopolítica las afecta directamente.",
+        "pexels_query": "Red Sea shipping"
+      },
+      {
+        "id": 6,
+        "prompt": "Naval vessel on patrol, calm sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval vessel on patrol, calm sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El Mar Rojo ha visto un movimiento táctico sin precedentes.",
+        "pexels_query": "patrol vessel sea"
+      },
+      {
+        "id": 7,
+        "prompt": "Port cranes, loading containers, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Port cranes, loading containers, dawn, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto eleva costos de flete, impactando cada producto.",
+        "pexels_query": "port loading containers"
+      },
+      {
+        "id": 8,
+        "prompt": "Logistics hub, large empty warehouse, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Logistics hub, large empty warehouse, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Países con rutas alternativas ganan ventaja competitiva.",
+        "pexels_query": "empty logistics warehouse"
+      },
+      {
+        "id": 9,
+        "prompt": "Deserted port, container stack, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Deserted port, container stack, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Regiones dependientes de estas rutas sufren inflación.",
+        "pexels_query": "abandoned container port"
+      },
+      {
+        "id": 10,
+        "prompt": "Dry riverbed, cracked earth, distant ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Dry riverbed, cracked earth, distant ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El Canal de Panamá enfrenta sequía, reduciendo tráfico.",
+        "pexels_query": "dry canal bed"
+      },
+      {
+        "id": 11,
+        "prompt": "Container ship making a long turn, open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Container ship making a long turn, open ocean, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Obliga a buscar caminos más largos, con más gasto.",
+        "pexels_query": "long route ship"
+      },
+      {
+        "id": 12,
+        "prompt": "Geopolitical map, trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Geopolitical map, trade routes highlighted, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Grandes potencias compiten por influencia logística.",
+        "pexels_query": "global trade map"
+      },
+      {
+        "id": 13,
+        "prompt": "Heavy shipping traffic at sunset, narrow channel, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Heavy shipping traffic at sunset, narrow channel, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El Estrecho de Malaca es crucial para Asia Oriental.",
+        "pexels_query": "narrow shipping channel"
+      },
+      {
+        "id": 14,
+        "prompt": "Naval fleet formation, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval fleet formation, distant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Fuentes verificadas muestran creciente presencia naval allí.",
+        "pexels_query": "naval fleet formation"
+      },
+      {
+        "id": 15,
+        "prompt": "Ship's bow, heavy waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Ship's bow, heavy waves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Cualquier bloqueo podría paralizar el comercio asiático.",
+        "pexels_query": "ship rough seas"
+      },
+      {
+        "id": 16,
+        "prompt": "Global economic graph, downward trend, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global economic graph, downward trend, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "El mapa real de la economía global está cambiando.",
+        "pexels_query": "economic recession graph"
+      },
+      {
+        "id": 17,
+        "prompt": "Maritime radar screen, ship targets, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Maritime radar screen, ship targets, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La guerra económica se libra en estas vías marítimas.",
+        "pexels_query": "maritime radar screen"
+      },
+      {
+        "id": 18,
+        "prompt": "Control room, large screens, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Control room, large screens, empty, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Quien domina estos accesos, define el poder comercial.",
+        "pexels_query": "empty control room"
+      },
+      {
+        "id": 19,
+        "prompt": "Supermarket aisle, empty shelves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Supermarket aisle, empty shelves, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Nadie lo conectó, pero tu bolsillo siente el impacto.",
+        "pexels_query": "empty supermarket shelves"
+      },
+      {
+        "id": 20,
+        "prompt": "Global supply chain network diagram, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global supply chain network diagram, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Esto cambia el tablero, alterando precios globales.",
+        "pexels_query": "global supply chain"
+      },
+      {
+        "id": 21,
+        "prompt": "Naval base, empty pier, warships at anchor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Naval base, empty pier, warships at anchor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Flotas enteras vigilan estos puntos estratégicos.",
+        "pexels_query": "warships naval base"
+      },
+      {
+        "id": 22,
+        "prompt": "Long winding road, cargo trucks, desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Long winding road, cargo trucks, desert landscape, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Se buscan nuevas rutas, pero son costosas y lentas.",
+        "pexels_query": "trucks desert road"
+      },
+      {
+        "id": 23,
+        "prompt": "Chessboard, mid-game, strategic pieces, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Chessboard, mid-game, strategic pieces, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Cada decisión allí es un movimiento táctico global.",
+        "pexels_query": "geopolitical chessboard"
+      },
+      {
+        "id": 24,
+        "prompt": "Satellite image, global network connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Satellite image, global network connections, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "La seguridad de estas rutas define la prosperidad futura.",
+        "pexels_query": "global network satellite"
+      },
+      {
+        "id": 25,
+        "prompt": "Old nautical chart, compass, strategic markings, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Old nautical chart, compass, strategic markings, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Entender esto es clave para anticipar el futuro.",
+        "pexels_query": "nautical chart strategy"
+      },
+      {
+        "id": 26,
+        "prompt": "Ship's bridge, radar screen, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Ship's bridge, radar screen, open sea, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "Vigilemos los movimientos navales. El próximo puede ser decisivo.",
+        "pexels_query": "ship bridge view"
+      }
+    ],
+    "hooks": [
+      "Rutas cruciales globales",
+      "Flujo económico mundial",
+      "Tu bolsillo afectado"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
