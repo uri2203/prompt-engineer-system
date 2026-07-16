@@ -147,7 +147,9 @@
     "4f1381cd-307d-4939-b6a1-606244872961",
     "4f1381cd-307d-4939-b6a1-606244872961_asm",
     "7d07e900-976b-4cf0-9e82-cf00bc06fe26",
-    "7d07e900-976b-4cf0-9e82-cf00bc06fe26_asm"
+    "7d07e900-976b-4cf0-9e82-cf00bc06fe26_asm",
+    "ad0c48c2-7245-4f32-804c-5b81f8ff84cd",
+    "ad0c48c2-7245-4f32-804c-5b81f8ff84cd_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -513,6 +515,11 @@
     },
     "7d07e900-976b-4cf0-9e82-cf00bc06fe26": {
       "duracion_real_seg": 100.8,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16"
+    },
+    "ad0c48c2-7245-4f32-804c-5b81f8ff84cd": {
+      "duracion_real_seg": 112.2,
       "marca": "LaesquinaRandom",
       "formato": "9:16"
     }
