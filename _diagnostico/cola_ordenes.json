@@ -3328,5 +3328,248 @@
       "Los secretos del refri"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "84b2a58f-2cdf-4dbf-8fbb-a37002c317ed",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Mexican compadre looking shocked at something in a street ditch, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Mexican compadre looking shocked at something in a street ditch, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Esa mañana, un compadre encontró algo jamás visto...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A small, absurd fish-like creature with chicken legs in a muddy street ditch, next to a taco stand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A small, absurd fish-like creature with chicken legs in a muddy street ditch, next to a taco stand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"En la zanja de la calle, junto al puesto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Close-up of a cartoon fish-like creature with tiny chicken legs, looking surprised, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of a cartoon fish-like creature with tiny chicken legs, looking surprised, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Parecía pez, pero con patitas de pollito güero.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Exaggerated cartoon fish-like creature with chicken legs and long, comical cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Exaggerated cartoon fish-like creature with chicken legs and long, comical cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sí, patitas. Y bigotes así, como de gato.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Mexican doña with a rebozo, wide-eyed and making a sign of the cross, looking at the creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Mexican doña with a rebozo, wide-eyed and making a sign of the cross, looking at the creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La doña, con su rebozo, se persignó tres veces.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A young Mexican man ('Brayan' type) pointing excitedly at the creature in the ditch, claiming it's a mutant ajolote, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A young Mexican man ('Brayan' type) pointing excitedly at the creature in the ditch, claiming it's a mutant ajolote, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El Brayan juró que era un ajolote mutante escapado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon people in a Mexican street scene looking confused and slightly disturbed, with an air of mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon people in a Mexican street scene looking confused and slightly disturbed, with an air of mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Algo no está bien, tú lo sentiste en el aire.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"The creature making a comical, off-key sound, with musical notes and 'hiccup' symbols floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The creature making a comical, off-key sound, with musical notes and 'hiccup' symbols floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El bicho hacía ruidos, mariachi con hipo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"People trying to catch the creature with a large, greasy net typically used for carnitas (fried pork), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"People trying to catch the creature with a large, greasy net typically used for carnitas (fried pork), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Intentaron atraparlo con la red de carnitas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"The fish-like creature comically dancing and evading the net, showing agile movements, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The fish-like creature comically dancing and evading the net, showing agile movements, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero el animalito bailaba cumbia y escapaba.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A large crowd of exaggerated cartoon Mexican townspeople, all looking wide-eyed and amazed at something in the center, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A large crowd of exaggerated cartoon Mexican townspeople, all looking wide-eyed and amazed at something in the center, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La gente del barrio, ¡todos estaban ahí asombrados!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A sudden quiet moment in the street, then startled faces reacting to a loud, comical noise off-screen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A sudden quiet moment in the street, then startled faces reacting to a loud, comical noise off-screen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El silencio absoluto se rompió con gritos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A street dog, with a comical expression of respect and confusion, barking softly at the strange creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A street dog, with a comical expression of respect and confusion, barking softly at the strange creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Hasta el perro del vecino le ladraba con respeto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A cartoon character with a thought bubble showing contradictory images (fish + chicken), expressing extreme confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character with a thought bubble showing contradictory images (fish + chicken), expressing extreme confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Disonancia cognitiva: ¿qué rayos era esa cosa?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"People looking dumbfounded, as if something completely unexpected just happened, with a sense of wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"People looking dumbfounded, as if something completely unexpected just happened, with a sense of wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio venir, parecía de otro mundo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A hand holding a glass of hibiscus water (agua de jamaica) pouring it towards the creature, which looks unamused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A hand holding a glass of hibiscus water (agua de jamaica) pouring it towards the creature, which looks unamused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Le echaron agua de jamaica, para reaccionar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Brayan making an exaggerated pose, holding an imaginary pokeball, confidently declaring the creature a forgotten Pokémon, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Brayan making an exaggerated pose, holding an imaginary pokeball, confidently declaring the creature a forgotten Pokémon, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Brayan: '¡Es un Pokémon olvidado por la ciencia!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"The compadre from scene 1, now completely frozen in a comical state of shock, eyes wide open, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The compadre from scene 1, now completely frozen in a comical state of shock, eyes wide open, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El compadre del hallazgo, ¡estaba en shock!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon speech bubbles with exaggerated 'chismecito' flying across a Mexican street, indicating fast-spreading news, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon speech bubbles with exaggerated 'chismecito' flying across a Mexican street, indicating fast-spreading news, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La noticia corrió más rápido que un chismecito.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Serious-looking cartoon scientists with lab coats and tiny notebooks arriving at the chaotic street scene, looking out of place, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Serious-looking cartoon scientists with lab coats and tiny notebooks arriving at the chaotic street scene, looking out of place, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Científicos de la UNAM llegaron, con libretitas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"The scientists intently observing the creature with magnifying glasses, making notes, while the creature looks mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The scientists intently observing the creature with magnifying glasses, making notes, while the creature looks mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Querían estudiar la criatura, su extraño comportamiento.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"The fish-like creature with chicken legs and cat whiskers, winking comically at the camera, implying it has a secret agenda, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The fish-like creature with chicken legs and cat whiskers, winking comically at the camera, implying it has a secret agenda, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero el pez con patitas, ¡tenía otros planes!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"The creature suddenly sprouts tiny, comical bird wings and starts lifting off the ground, shocking the onlookers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The creature suddenly sprouts tiny, comical bird wings and starts lifting off the ground, shocking the onlookers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"De repente, sacó alitas diminutas y voló.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"The creature flying gracefully like a hummingbird, but still maintaining its fish-like body, chicken legs, and cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The creature flying gracefully like a hummingbird, but still maintaining its fish-like body, chicken legs, and cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Voló! Como colibrí, pero con bigotes de gato.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"All the cartoon characters (Brayan, doña, compadre, scientists) standing with their mouths agape, eyes wide, showing extreme disbelief and shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"All the cartoon characters (Brayan, doña, compadre, scientists) standing with their mouths agape, eyes wide, showing extreme disbelief and shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Todos se quedaron con la boca abierta. Increíble.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"The scientists looking at their notebooks, which now only have a huge question mark and the words 'Fenómeno inexplicable' written in bold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The scientists looking at their notebooks, which now only have a huge question mark and the words 'Fenómeno inexplicable' written in bold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los científicos solo anotaron: 'Fenómeno inexplicable'.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A tamal comically floating in the air near the street ditch, defying gravity, with confused cartoon onlookers below, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A tamal comically floating in the air near the street ditch, defying gravity, with confused cartoon onlookers below, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y desde ese día, los tamales flotan a veces...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"A group of cartoon characters scratching their heads, looking at a floating tamal and a slightly glowing street ditch, indicating a lingering, unexplained mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A group of cartoon characters scratching their heads, looking at a floating tamal and a slightly glowing street ditch, indicating a lingering, unexplained mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...cerca de la zanja, ¡nadie sabe por qué!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Esa mañana, un compadre encontró algo jamás visto... En la zanja de la calle, junto al puesto. Parecía pez, pero con patitas de pollito güero. Sí, patitas. Y bigotes así, como de gato. La doña, con su rebozo, se persignó tres veces. El Brayan juró que era un ajolote mutante escapado. Algo no está bien, tú lo sentiste en el aire. El bicho hacía ruidos, mariachi con hipo. Intentaron atraparlo con la red de carnitas. Pero el animalito bailaba cumbia y escapaba. La gente del barrio, ¡todos estaban ahí asombrados! El silencio absoluto se rompió con gritos. Hasta el perro del vecino le ladraba con respeto. Disonancia cognitiva: ¿qué rayos era esa cosa? Nadie lo vio venir, parecía de otro mundo. Le echaron agua de jamaica, para reaccionar. Brayan: '¡Es un Pokémon olvidado por la ciencia!' El compadre del hallazgo, ¡estaba en shock! La noticia corrió más rápido que un chismecito. Científicos de la UNAM llegaron, con libretitas. Querían estudiar la criatura, su extraño comportamiento. Pero el pez con patitas, ¡tenía otros planes! De repente, sacó alitas diminutas y voló. ¡Voló! Como colibrí, pero con bigotes de gato. Todos se quedaron con la boca abierta. Increíble. Los científicos solo anotaron: 'Fenómeno inexplicable'. Y desde ese día, los tamales flotan a veces... ...cerca de la zanja, ¡nadie sabe por qué!",
+    "titulo_sugerido": "El día que el Brayan encontró un ajolote con bigote de gato y voló",
+    "escenas_texto": [
+      "Esa mañana, un compadre encontró algo jamás visto...",
+      "En la zanja de la calle, junto al puesto.",
+      "Parecía pez, pero con patitas de pollito güero.",
+      "Sí, patitas. Y bigotes así, como de gato.",
+      "La doña, con su rebozo, se persignó tres veces.",
+      "El Brayan juró que era un ajolote mutante escapado.",
+      "Algo no está bien, tú lo sentiste en el aire.",
+      "El bicho hacía ruidos, mariachi con hipo.",
+      "Intentaron atraparlo con la red de carnitas.",
+      "Pero el animalito bailaba cumbia y escapaba.",
+      "La gente del barrio, ¡todos estaban ahí asombrados!",
+      "El silencio absoluto se rompió con gritos.",
+      "Hasta el perro del vecino le ladraba con respeto.",
+      "Disonancia cognitiva: ¿qué rayos era esa cosa?",
+      "Nadie lo vio venir, parecía de otro mundo.",
+      "Le echaron agua de jamaica, para reaccionar.",
+      "Brayan: '¡Es un Pokémon olvidado por la ciencia!'",
+      "El compadre del hallazgo, ¡estaba en shock!",
+      "La noticia corrió más rápido que un chismecito.",
+      "Científicos de la UNAM llegaron, con libretitas.",
+      "Querían estudiar la criatura, su extraño comportamiento.",
+      "Pero el pez con patitas, ¡tenía otros planes!",
+      "De repente, sacó alitas diminutas y voló.",
+      "¡Voló! Como colibrí, pero con bigotes de gato.",
+      "Todos se quedaron con la boca abierta. Increíble.",
+      "Los científicos solo anotaron: 'Fenómeno inexplicable'.",
+      "Y desde ese día, los tamales flotan a veces...",
+      "...cerca de la zanja, ¡nadie sabe por qué!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Mexican compadre looking shocked at something in a street ditch, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Mexican compadre looking shocked at something in a street ditch, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Esa mañana, un compadre encontró algo jamás visto...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A small, absurd fish-like creature with chicken legs in a muddy street ditch, next to a taco stand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A small, absurd fish-like creature with chicken legs in a muddy street ditch, next to a taco stand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "En la zanja de la calle, junto al puesto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Close-up of a cartoon fish-like creature with tiny chicken legs, looking surprised, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of a cartoon fish-like creature with tiny chicken legs, looking surprised, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Parecía pez, pero con patitas de pollito güero.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Exaggerated cartoon fish-like creature with chicken legs and long, comical cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Exaggerated cartoon fish-like creature with chicken legs and long, comical cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sí, patitas. Y bigotes así, como de gato.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Mexican doña with a rebozo, wide-eyed and making a sign of the cross, looking at the creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Mexican doña with a rebozo, wide-eyed and making a sign of the cross, looking at the creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La doña, con su rebozo, se persignó tres veces.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A young Mexican man ('Brayan' type) pointing excitedly at the creature in the ditch, claiming it's a mutant ajolote, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A young Mexican man ('Brayan' type) pointing excitedly at the creature in the ditch, claiming it's a mutant ajolote, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El Brayan juró que era un ajolote mutante escapado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon people in a Mexican street scene looking confused and slightly disturbed, with an air of mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon people in a Mexican street scene looking confused and slightly disturbed, with an air of mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Algo no está bien, tú lo sentiste en el aire.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "The creature making a comical, off-key sound, with musical notes and 'hiccup' symbols floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The creature making a comical, off-key sound, with musical notes and 'hiccup' symbols floating around it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El bicho hacía ruidos, mariachi con hipo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "People trying to catch the creature with a large, greasy net typically used for carnitas (fried pork), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "People trying to catch the creature with a large, greasy net typically used for carnitas (fried pork), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Intentaron atraparlo con la red de carnitas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "The fish-like creature comically dancing and evading the net, showing agile movements, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The fish-like creature comically dancing and evading the net, showing agile movements, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero el animalito bailaba cumbia y escapaba.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A large crowd of exaggerated cartoon Mexican townspeople, all looking wide-eyed and amazed at something in the center, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A large crowd of exaggerated cartoon Mexican townspeople, all looking wide-eyed and amazed at something in the center, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La gente del barrio, ¡todos estaban ahí asombrados!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A sudden quiet moment in the street, then startled faces reacting to a loud, comical noise off-screen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A sudden quiet moment in the street, then startled faces reacting to a loud, comical noise off-screen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El silencio absoluto se rompió con gritos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A street dog, with a comical expression of respect and confusion, barking softly at the strange creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A street dog, with a comical expression of respect and confusion, barking softly at the strange creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Hasta el perro del vecino le ladraba con respeto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A cartoon character with a thought bubble showing contradictory images (fish + chicken), expressing extreme confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character with a thought bubble showing contradictory images (fish + chicken), expressing extreme confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Disonancia cognitiva: ¿qué rayos era esa cosa?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "People looking dumbfounded, as if something completely unexpected just happened, with a sense of wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "People looking dumbfounded, as if something completely unexpected just happened, with a sense of wonder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio venir, parecía de otro mundo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A hand holding a glass of hibiscus water (agua de jamaica) pouring it towards the creature, which looks unamused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A hand holding a glass of hibiscus water (agua de jamaica) pouring it towards the creature, which looks unamused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Le echaron agua de jamaica, para reaccionar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Brayan making an exaggerated pose, holding an imaginary pokeball, confidently declaring the creature a forgotten Pokémon, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Brayan making an exaggerated pose, holding an imaginary pokeball, confidently declaring the creature a forgotten Pokémon, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Brayan: '¡Es un Pokémon olvidado por la ciencia!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "The compadre from scene 1, now completely frozen in a comical state of shock, eyes wide open, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The compadre from scene 1, now completely frozen in a comical state of shock, eyes wide open, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El compadre del hallazgo, ¡estaba en shock!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon speech bubbles with exaggerated 'chismecito' flying across a Mexican street, indicating fast-spreading news, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon speech bubbles with exaggerated 'chismecito' flying across a Mexican street, indicating fast-spreading news, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La noticia corrió más rápido que un chismecito.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Serious-looking cartoon scientists with lab coats and tiny notebooks arriving at the chaotic street scene, looking out of place, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Serious-looking cartoon scientists with lab coats and tiny notebooks arriving at the chaotic street scene, looking out of place, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Científicos de la UNAM llegaron, con libretitas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "The scientists intently observing the creature with magnifying glasses, making notes, while the creature looks mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The scientists intently observing the creature with magnifying glasses, making notes, while the creature looks mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Querían estudiar la criatura, su extraño comportamiento.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "The fish-like creature with chicken legs and cat whiskers, winking comically at the camera, implying it has a secret agenda, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The fish-like creature with chicken legs and cat whiskers, winking comically at the camera, implying it has a secret agenda, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero el pez con patitas, ¡tenía otros planes!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "The creature suddenly sprouts tiny, comical bird wings and starts lifting off the ground, shocking the onlookers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The creature suddenly sprouts tiny, comical bird wings and starts lifting off the ground, shocking the onlookers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "De repente, sacó alitas diminutas y voló.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "The creature flying gracefully like a hummingbird, but still maintaining its fish-like body, chicken legs, and cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The creature flying gracefully like a hummingbird, but still maintaining its fish-like body, chicken legs, and cat whiskers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Voló! Como colibrí, pero con bigotes de gato.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "All the cartoon characters (Brayan, doña, compadre, scientists) standing with their mouths agape, eyes wide, showing extreme disbelief and shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "All the cartoon characters (Brayan, doña, compadre, scientists) standing with their mouths agape, eyes wide, showing extreme disbelief and shock, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Todos se quedaron con la boca abierta. Increíble.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "The scientists looking at their notebooks, which now only have a huge question mark and the words 'Fenómeno inexplicable' written in bold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The scientists looking at their notebooks, which now only have a huge question mark and the words 'Fenómeno inexplicable' written in bold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los científicos solo anotaron: 'Fenómeno inexplicable'.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A tamal comically floating in the air near the street ditch, defying gravity, with confused cartoon onlookers below, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A tamal comically floating in the air near the street ditch, defying gravity, with confused cartoon onlookers below, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y desde ese día, los tamales flotan a veces...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "A group of cartoon characters scratching their heads, looking at a floating tamal and a slightly glowing street ditch, indicating a lingering, unexplained mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A group of cartoon characters scratching their heads, looking at a floating tamal and a slightly glowing street ditch, indicating a lingering, unexplained mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...cerca de la zanja, ¡nadie sabe por qué!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Pez con patitas",
+      "Ajolote volador",
+      "Tamales flotantes"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
