@@ -1149,5 +1149,240 @@
       "¿Maniquí o monstruo?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "0b766c93-e53e-40d0-bbca-8a6b223e6e56",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Cartoon POV of a laundry basket overflowing with single socks, humorous and puzzled expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon POV of a laundry basket overflowing with single socks, humorous and puzzled expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"POV: Eres el último en creer que las calcetas desaparecen.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon doña with a puzzled face looking at a single sock, in a typical Mexican laundry room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon doña with a puzzled face looking at a single sock, in a typical Mexican laundry room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ese misterio que la doña no puede explicar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Cartoon washing machine with two socks going in, and only one coming out, exaggerated humor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon washing machine with two socks going in, and only one coming out, exaggerated humor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cuando pones dos, y sale ¡sólo una!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Cartoon man shaking head next to a washing machine, looking conspiratorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man shaking head next to a washing machine, looking conspiratorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No es la lavadora, mi buen, te lo juro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Cartoon dusty closet interior, a small shadowy figure barely visible, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon dusty closet interior, a small shadowy figure barely visible, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Algo diminuto habita en tu clóset, créeme.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Cartoon person feeling a subtle tremor on the floor, puzzled expression, at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon person feeling a subtle tremor on the floor, puzzled expression, at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Lo sentiste antes, esa extraña vibración nocturna.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon close-up of a tiny, barely visible crack in the wall, with an ear straining to hear a faint sound, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon close-up of a tiny, barely visible crack in the wall, with an ear straining to hear a faint sound, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un crujido leve, un suspiro casi imperceptible...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Cartoon empty, silent hallway at night, a single, lonely sock on the floor, creating an eerie, humorous atmosphere, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon empty, silent hallway at night, a single, lonely sock on the floor, creating an eerie, humorous atmosphere, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ese silencio absoluto que te hace cuestionar todo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Cartoon tiny mischievous creature, stylized like a mini 'Brayan' character, holding a single sock, peeking from behind a laundry basket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon tiny mischievous creature, stylized like a mini 'Brayan' character, holding a single sock, peeking from behind a laundry basket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Es el Brayan de las calcetas, pero en miniatura.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Cartoon a discarded sock on the floor, with tiny, almost invisible footprints leading away, humorous and mysterious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a discarded sock on the floor, with tiny, almost invisible footprints leading away, humorous and mysterious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio, pero sus huellas están en tu ropa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon pair of socks, one left leg sock with an arrow pointing away, and the right leg sock looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon pair of socks, one left leg sock with an arrow pointing away, and the right leg sock looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Solo toma la izquierda, o la derecha, ¡jamás ambas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Cartoon a lonely single sock looking dejected, while another sock pair happily walks away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a lonely single sock looking dejected, while another sock pair happily walks away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Así te deja con una, buscando su gemela perdida.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Cartoon tiny, hidden party scene inside a drawer, with miniature socks dancing and having fun, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon tiny, hidden party scene inside a drawer, with miniature socks dancing and having fun, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Se rumora que las usa para sus pequeñas fiestas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Cartoon socks with tiny arms and legs doing a cheerful dance in a drawer, confetti around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon socks with tiny arms and legs doing a cheerful dance in a drawer, confetti around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Imagínate, un bailongo de calcetines en tu cajón.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon miniature city built from rolled-up socks and other tiny clothing items, inside a dresser drawer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon miniature city built from rolled-up socks and other tiny clothing items, inside a dresser drawer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"O para construir su propia ciudad secreta ahí mismo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Cartoon a tiny creature sniffing a bottle of fabric softener with a delighted expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a tiny creature sniffing a bottle of fabric softener with a delighted expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Dicen que el olor a suavizante les encanta, eh.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon person looking distressed at an empty spot in a sock drawer, emphasizing the missing socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon person looking distressed at an empty spot in a sock drawer, emphasizing the missing socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No puedes ignorarlo, el vacío en el cesto es real.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Cartoon sunrise over a messy bedroom, with a single sock prominently displayed, creating a sense of ongoing mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon sunrise over a messy bedroom, with a single sock prominently displayed, creating a sense of ongoing mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cada mañana, una nueva intriga en tu habitación.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon wise old compadre character winking knowingly, implying a secret knowledge about socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon wise old compadre character winking knowingly, implying a secret knowledge about socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La verdad es más rara de lo que imaginas, compadre.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Cartoon exaggerated depiction of a tiny creature pulling on a single sock, with a person's soul (represented comically) being stretched with it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon exaggerated depiction of a tiny creature pulling on a single sock, with a person's soul (represented comically) being stretched with it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ese pequeño ser se lleva una parte de tu alma.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon person looking frustrated while trying to get dressed, holding up a single sock, humorous exasperation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon person looking frustrated while trying to get dressed, holding up a single sock, humorous exasperation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"O al menos, de tu atuendo diario, ¡qué coraje!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Cartoon tiny, elaborate museum interior, with single socks displayed like priceless artifacts, humorous and absurd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon tiny, elaborate museum interior, with single socks displayed like priceless artifacts, humorous and absurd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Quizá las colecciona, tiene un museo privado, ¿quién sabe?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Cartoon person sleeping soundly in bed, while a tiny shadow of the sock-stealing creature is visible near the laundry basket, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon person sleeping soundly in bed, while a tiny shadow of the sock-stealing creature is visible near the laundry basket, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y por eso, amigo mío, no estabas solo en la noche...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Cartoon a washing machine making suspicious, muffled sounds at night, with a person listening intently from a dark hallway, humorous suspense, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a washing machine making suspicious, muffled sounds at night, with a person listening intently from a dark hallway, humorous suspense, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...cuando escuchabas ruiditos raros en la lavandería.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Cartoon a single sock floating mysteriously in the air, surrounded by question marks, conveying an unresolved enigma, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a single sock floating mysteriously in the air, surrounded by question marks, conveying an unresolved enigma, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El misterio de la calceta sin par persiste, amigo mío.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Cartoon person looking suspiciously at a washing machine before loading it, thinking twice, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon person looking suspiciously at a washing machine before loading it, thinking twice, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Así que, piénsalo bien la próxima vez que laves.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Cartoon a single, questioning sock floating in front of the screen, looking directly at the viewer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a single, questioning sock floating in front of the screen, looking directly at the viewer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ahora dime, ¿dónde está tu otra calceta ahorita?\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "POV: Eres el último en creer que las calcetas desaparecen. Ese misterio que la doña no puede explicar. Cuando pones dos, y sale ¡sólo una! No es la lavadora, mi buen, te lo juro. Algo diminuto habita en tu clóset, créeme. Lo sentiste antes, esa extraña vibración nocturna. Un crujido leve, un suspiro casi imperceptible... Ese silencio absoluto que te hace cuestionar todo. Es el Brayan de las calcetas, pero en miniatura. Nadie lo vio, pero sus huellas están en tu ropa. Solo toma la izquierda, o la derecha, ¡jamás ambas! Así te deja con una, buscando su gemela perdida. Se rumora que las usa para sus pequeñas fiestas. Imagínate, un bailongo de calcetines en tu cajón. O para construir su propia ciudad secreta ahí mismo. Dicen que el olor a suavizante les encanta, eh. No puedes ignorarlo, el vacío en el cesto es real. Cada mañana, una nueva intriga en tu habitación. La verdad es más rara de lo que imaginas, compadre. Ese pequeño ser se lleva una parte de tu alma. O al menos, de tu atuendo diario, ¡qué coraje! Quizá las colecciona, tiene un museo privado, ¿quién sabe? Y por eso, amigo mío, no estabas solo en la noche... ...cuando escuchabas ruiditos raros en la lavandería. El misterio de la calceta sin par persiste, amigo mío. Así que, piénsalo bien la próxima vez que laves. Ahora dime, ¿dónde está tu otra calceta ahorita?",
+    "titulo_sugerido": "El Misterio Oculto de las Calcetas Desaparecidas",
+    "escenas_texto": [
+      "POV: Eres el último en creer que las calcetas desaparecen.",
+      "Ese misterio que la doña no puede explicar.",
+      "Cuando pones dos, y sale ¡sólo una!",
+      "No es la lavadora, mi buen, te lo juro.",
+      "Algo diminuto habita en tu clóset, créeme.",
+      "Lo sentiste antes, esa extraña vibración nocturna.",
+      "Un crujido leve, un suspiro casi imperceptible...",
+      "Ese silencio absoluto que te hace cuestionar todo.",
+      "Es el Brayan de las calcetas, pero en miniatura.",
+      "Nadie lo vio, pero sus huellas están en tu ropa.",
+      "Solo toma la izquierda, o la derecha, ¡jamás ambas!",
+      "Así te deja con una, buscando su gemela perdida.",
+      "Se rumora que las usa para sus pequeñas fiestas.",
+      "Imagínate, un bailongo de calcetines en tu cajón.",
+      "O para construir su propia ciudad secreta ahí mismo.",
+      "Dicen que el olor a suavizante les encanta, eh.",
+      "No puedes ignorarlo, el vacío en el cesto es real.",
+      "Cada mañana, una nueva intriga en tu habitación.",
+      "La verdad es más rara de lo que imaginas, compadre.",
+      "Ese pequeño ser se lleva una parte de tu alma.",
+      "O al menos, de tu atuendo diario, ¡qué coraje!",
+      "Quizá las colecciona, tiene un museo privado, ¿quién sabe?",
+      "Y por eso, amigo mío, no estabas solo en la noche...",
+      "...cuando escuchabas ruiditos raros en la lavandería.",
+      "El misterio de la calceta sin par persiste, amigo mío.",
+      "Así que, piénsalo bien la próxima vez que laves.",
+      "Ahora dime, ¿dónde está tu otra calceta ahorita?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Cartoon POV of a laundry basket overflowing with single socks, humorous and puzzled expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon POV of a laundry basket overflowing with single socks, humorous and puzzled expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "POV: Eres el último en creer que las calcetas desaparecen.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon doña with a puzzled face looking at a single sock, in a typical Mexican laundry room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon doña with a puzzled face looking at a single sock, in a typical Mexican laundry room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ese misterio que la doña no puede explicar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Cartoon washing machine with two socks going in, and only one coming out, exaggerated humor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon washing machine with two socks going in, and only one coming out, exaggerated humor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cuando pones dos, y sale ¡sólo una!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Cartoon man shaking head next to a washing machine, looking conspiratorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man shaking head next to a washing machine, looking conspiratorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No es la lavadora, mi buen, te lo juro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Cartoon dusty closet interior, a small shadowy figure barely visible, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon dusty closet interior, a small shadowy figure barely visible, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Algo diminuto habita en tu clóset, créeme.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Cartoon person feeling a subtle tremor on the floor, puzzled expression, at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon person feeling a subtle tremor on the floor, puzzled expression, at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Lo sentiste antes, esa extraña vibración nocturna.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon close-up of a tiny, barely visible crack in the wall, with an ear straining to hear a faint sound, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon close-up of a tiny, barely visible crack in the wall, with an ear straining to hear a faint sound, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un crujido leve, un suspiro casi imperceptible...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Cartoon empty, silent hallway at night, a single, lonely sock on the floor, creating an eerie, humorous atmosphere, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon empty, silent hallway at night, a single, lonely sock on the floor, creating an eerie, humorous atmosphere, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ese silencio absoluto que te hace cuestionar todo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Cartoon tiny mischievous creature, stylized like a mini 'Brayan' character, holding a single sock, peeking from behind a laundry basket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon tiny mischievous creature, stylized like a mini 'Brayan' character, holding a single sock, peeking from behind a laundry basket, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Es el Brayan de las calcetas, pero en miniatura.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Cartoon a discarded sock on the floor, with tiny, almost invisible footprints leading away, humorous and mysterious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a discarded sock on the floor, with tiny, almost invisible footprints leading away, humorous and mysterious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio, pero sus huellas están en tu ropa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon pair of socks, one left leg sock with an arrow pointing away, and the right leg sock looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon pair of socks, one left leg sock with an arrow pointing away, and the right leg sock looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Solo toma la izquierda, o la derecha, ¡jamás ambas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Cartoon a lonely single sock looking dejected, while another sock pair happily walks away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a lonely single sock looking dejected, while another sock pair happily walks away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Así te deja con una, buscando su gemela perdida.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Cartoon tiny, hidden party scene inside a drawer, with miniature socks dancing and having fun, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon tiny, hidden party scene inside a drawer, with miniature socks dancing and having fun, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Se rumora que las usa para sus pequeñas fiestas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Cartoon socks with tiny arms and legs doing a cheerful dance in a drawer, confetti around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon socks with tiny arms and legs doing a cheerful dance in a drawer, confetti around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Imagínate, un bailongo de calcetines en tu cajón.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon miniature city built from rolled-up socks and other tiny clothing items, inside a dresser drawer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon miniature city built from rolled-up socks and other tiny clothing items, inside a dresser drawer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "O para construir su propia ciudad secreta ahí mismo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Cartoon a tiny creature sniffing a bottle of fabric softener with a delighted expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a tiny creature sniffing a bottle of fabric softener with a delighted expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Dicen que el olor a suavizante les encanta, eh.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon person looking distressed at an empty spot in a sock drawer, emphasizing the missing socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon person looking distressed at an empty spot in a sock drawer, emphasizing the missing socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No puedes ignorarlo, el vacío en el cesto es real.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Cartoon sunrise over a messy bedroom, with a single sock prominently displayed, creating a sense of ongoing mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon sunrise over a messy bedroom, with a single sock prominently displayed, creating a sense of ongoing mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cada mañana, una nueva intriga en tu habitación.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon wise old compadre character winking knowingly, implying a secret knowledge about socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon wise old compadre character winking knowingly, implying a secret knowledge about socks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La verdad es más rara de lo que imaginas, compadre.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Cartoon exaggerated depiction of a tiny creature pulling on a single sock, with a person's soul (represented comically) being stretched with it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon exaggerated depiction of a tiny creature pulling on a single sock, with a person's soul (represented comically) being stretched with it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ese pequeño ser se lleva una parte de tu alma.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon person looking frustrated while trying to get dressed, holding up a single sock, humorous exasperation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon person looking frustrated while trying to get dressed, holding up a single sock, humorous exasperation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "O al menos, de tu atuendo diario, ¡qué coraje!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Cartoon tiny, elaborate museum interior, with single socks displayed like priceless artifacts, humorous and absurd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon tiny, elaborate museum interior, with single socks displayed like priceless artifacts, humorous and absurd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Quizá las colecciona, tiene un museo privado, ¿quién sabe?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Cartoon person sleeping soundly in bed, while a tiny shadow of the sock-stealing creature is visible near the laundry basket, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon person sleeping soundly in bed, while a tiny shadow of the sock-stealing creature is visible near the laundry basket, implying a hidden presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y por eso, amigo mío, no estabas solo en la noche...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Cartoon a washing machine making suspicious, muffled sounds at night, with a person listening intently from a dark hallway, humorous suspense, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a washing machine making suspicious, muffled sounds at night, with a person listening intently from a dark hallway, humorous suspense, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...cuando escuchabas ruiditos raros en la lavandería.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Cartoon a single sock floating mysteriously in the air, surrounded by question marks, conveying an unresolved enigma, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a single sock floating mysteriously in the air, surrounded by question marks, conveying an unresolved enigma, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El misterio de la calceta sin par persiste, amigo mío.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Cartoon person looking suspiciously at a washing machine before loading it, thinking twice, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon person looking suspiciously at a washing machine before loading it, thinking twice, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Así que, piénsalo bien la próxima vez que laves.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Cartoon a single, questioning sock floating in front of the screen, looking directly at the viewer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a single, questioning sock floating in front of the screen, looking directly at the viewer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ahora dime, ¿dónde está tu otra calceta ahorita?",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "¿Dónde están tus calcetas?",
+      "El misterio sin resolver",
+      "Tu lavadora lo sabe"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
