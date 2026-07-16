@@ -1384,5 +1384,248 @@
       "Tu lavadora lo sabe"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "f907c583-a218-4682-89cb-2a4c14f7937f",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Cartoon ancient football match, players confused by a giant jicama rolling as the ball, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon ancient football match, players confused by a giant jicama rolling as the ball, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Dicen que el primer gol mundialista lo anotaron con una jícama.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon footballer kicking a huge jicama instead of a ball, surprised expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon footballer kicking a huge jicama instead of a ball, surprised expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sí, una jícama grande, dicen que era la de Don Pepe.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Cartoon referee with an oversized sombrero blowing a whistle, pointing at a jicama as a goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon referee with an oversized sombrero blowing a whistle, pointing at a jicama as a goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y el árbitro, un señor con sombrero, validó el tanto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Cartoon football field where players are kicking flip-flops for throw-ins, chaotic and funny, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football field where players are kicking flip-flops for throw-ins, chaotic and funny, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"También hubo un tiempo donde los saques eran con chanclas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Cartoon players ducking and running as multiple flip-flops fly across the football field, funny and exaggerated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon players ducking and running as multiple flip-flops fly across the football field, funny and exaggerated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Imagínate el campo, las chanclas volando por doquier, ¡qué locura!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Cartoon footballer with a giant red flip-flop on his head looking dizzy, referee giving a penalty, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon footballer with a giant red flip-flop on his head looking dizzy, referee giving a penalty, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y si te caía una en la cabeza, era falta grave.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon rulebook open to a page with drawings of flip-flops and jicamas, a confused player scratching his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon rulebook open to a page with drawings of flip-flops and jicamas, a confused player scratching his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No puedes ignorarlo, el reglamento era algo único.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Cartoon elderly Mexican woman, 'La Doña', in a referee uniform yelling at players from the sideline, exaggerated expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon elderly Mexican woman, 'La Doña', in a referee uniform yelling at players from the sideline, exaggerated expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La Doña de la FIFA gritaba: '¡No se pasen de lanza!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Cartoon football exploding into a shower of colorful confetti over surprised players, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football exploding into a shower of colorful confetti over surprised players, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"También se rumora que los balones traían confeti adentro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Cartoon football pitch covered in confetti, players dancing and celebrating amidst the explosion of colors, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football pitch covered in confetti, players dancing and celebrating amidst the explosion of colors, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cuando reventaban, ¡fiesta de colores en pleno partido!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon football players intensely playing dominoes on a table in the middle of a football pitch, referee watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football players intensely playing dominoes on a table in the middle of a football pitch, referee watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y si había empate, se decidía con una partida de dominó.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Cartoon sweaty football players with serious faces placing domino tiles, focused and stressed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon sweaty football players with serious faces placing domino tiles, focused and stressed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los jugadores, sudando, moviendo sus fichas, ¡qué estrés!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Cartoon empty stadium with a single spotlight on the dominoes table, silence implied, players concentrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon empty stadium with a single spotlight on the dominoes table, silence implied, players concentrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un silencio absoluto invadía el estadio en cada jugada.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Cartoon goalkeeper attempting to block a shot with a plastic soda crate, confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon goalkeeper attempting to block a shot with a plastic soda crate, confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El portero podía usar una reja de refrescos para atajar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon goalkeeper with a soda crate in one hand and a football in the other, struggling to balance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon goalkeeper with a soda crate in one hand and a football in the other, struggling to balance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Con una mano el balón, con la otra la reja, ¡ay nanita!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Cartoon close-up of a Coca-Cola soda crate, specifically highlighting the logo, used as a goalkeeper's glove, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon close-up of a Coca-Cola soda crate, specifically highlighting the logo, used as a goalkeeper's glove, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La reja tenía que ser de Coca-Cola, ¡especificaciones claras!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon player looking perplexed at the absurd rules displayed on a scoreboard, question marks floating around his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon player looking perplexed at the absurd rules displayed on a scoreboard, question marks floating around his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero algo no está bien... ¿esto realmente pasó o no?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Cartoon football player celebrating a goal, but the ball is a giant green tamal, other players looking shocked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football player celebrating a goal, but the ball is a giant green tamal, other players looking shocked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Se dice que un jugador metió gol con un tamal de verde.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon referee frantically flipping through a very old, dusty rulebook, sweat dripping, looking confused about the tamal-goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon referee frantically flipping through a very old, dusty rulebook, sweat dripping, looking confused about the tamal-goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El árbitro, confundido, buscó en su manual de reglas antiguas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Cartoon referee with a megaphone, pointing at the tamal-ball and then at a rival player who looks terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon referee with a megaphone, pointing at the tamal-ball and then at a rival player who looks terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y dictaminó: '¡Es gol, pero el tamal se lo come el rival!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon player holding his stomach, feeling sick after eating a tamal, a subtle shiver running down his spine, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon player holding his stomach, feeling sick after eating a tamal, a subtle shiver running down his spine, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Lo sentiste antes, un escalofrío al pensar en eso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Cartoon character 'Compadre Brayan' in a goalkeeper's uniform, mouth full of tamal, looking disgusted, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon character 'Compadre Brayan' in a goalkeeper's uniform, mouth full of tamal, looking disgusted, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El compadre Brayan, de portero, comiéndose el tamal ¡qué asco!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Cartoon 'Compadre Brayan' with puffed cheeks, trying to shout with his mouth full, arm raised in protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon 'Compadre Brayan' with puffed cheeks, trying to shout with his mouth full, arm raised in protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Con la boca llena, intentaba gritar: '¡Es fuera de lugar!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Cartoon football pitch in utter chaos, players running in all directions, a sense of uncontrolled mayhem, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football pitch in utter chaos, players running in all directions, a sense of uncontrolled mayhem, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio venir, el descontrol era total, ¡imagínate!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Cartoon mariachi band marching onto a football field in the middle of a game, players looking surprised and confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon mariachi band marching onto a football field in the middle of a game, players looking surprised and confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un día, un delantero se metió a la cancha con mariachis.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Cartoon referee with a microphone, singing 'Cielito Lindo' with the mariachi band, players watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon referee with a microphone, singing 'Cielito Lindo' with the mariachi band, players watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El árbitro pausó el juego, para cantarles 'Cielito Lindo'.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Cartoon football players performing elaborate cumbia dance moves on the field, a boombox blasting music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon football players performing elaborate cumbia dance moves on the field, a boombox blasting music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y el partido se decidió al ritmo de una cumbia sonidera...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"Cartoon goalkeeper and striker facing off for a penalty shootout, but they are doing exaggerated cumbia dance moves instead of kicking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon goalkeeper and striker facing off for a penalty shootout, but they are doing exaggerated cumbia dance moves instead of kicking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...¡en una tanda de penales bailados con los jugadores!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Dicen que el primer gol mundialista lo anotaron con una jícama. Sí, una jícama grande, dicen que era la de Don Pepe. Y el árbitro, un señor con sombrero, validó el tanto. También hubo un tiempo donde los saques eran con chanclas. Imagínate el campo, las chanclas volando por doquier, ¡qué locura! Y si te caía una en la cabeza, era falta grave. No puedes ignorarlo, el reglamento era algo único. La Doña de la FIFA gritaba: '¡No se pasen de lanza!' También se rumora que los balones traían confeti adentro. Cuando reventaban, ¡fiesta de colores en pleno partido! Y si había empate, se decidía con una partida de dominó. Los jugadores, sudando, moviendo sus fichas, ¡qué estrés! Un silencio absoluto invadía el estadio en cada jugada. El portero podía usar una reja de refrescos para atajar. Con una mano el balón, con la otra la reja, ¡ay nanita! La reja tenía que ser de Coca-Cola, ¡especificaciones claras! Pero algo no está bien... ¿esto realmente pasó o no? Se dice que un jugador metió gol con un tamal de verde. El árbitro, confundido, buscó en su manual de reglas antiguas. Y dictaminó: '¡Es gol, pero el tamal se lo come el rival!' Lo sentiste antes, un escalofrío al pensar en eso. El compadre Brayan, de portero, comiéndose el tamal ¡qué asco! Con la boca llena, intentaba gritar: '¡Es fuera de lugar!' Nadie lo vio venir, el descontrol era total, ¡imagínate! Un día, un delantero se metió a la cancha con mariachis. El árbitro pausó el juego, para cantarles 'Cielito Lindo'. Y el partido se decidió al ritmo de una cumbia sonidera... ...¡en una tanda de penales bailados con los jugadores!",
+    "titulo_sugerido": "¡Los Secretos Más Ridículos del Fútbol Mundial que Nadie te Contó!",
+    "escenas_texto": [
+      "Dicen que el primer gol mundialista lo anotaron con una jícama.",
+      "Sí, una jícama grande, dicen que era la de Don Pepe.",
+      "Y el árbitro, un señor con sombrero, validó el tanto.",
+      "También hubo un tiempo donde los saques eran con chanclas.",
+      "Imagínate el campo, las chanclas volando por doquier, ¡qué locura!",
+      "Y si te caía una en la cabeza, era falta grave.",
+      "No puedes ignorarlo, el reglamento era algo único.",
+      "La Doña de la FIFA gritaba: '¡No se pasen de lanza!'",
+      "También se rumora que los balones traían confeti adentro.",
+      "Cuando reventaban, ¡fiesta de colores en pleno partido!",
+      "Y si había empate, se decidía con una partida de dominó.",
+      "Los jugadores, sudando, moviendo sus fichas, ¡qué estrés!",
+      "Un silencio absoluto invadía el estadio en cada jugada.",
+      "El portero podía usar una reja de refrescos para atajar.",
+      "Con una mano el balón, con la otra la reja, ¡ay nanita!",
+      "La reja tenía que ser de Coca-Cola, ¡especificaciones claras!",
+      "Pero algo no está bien... ¿esto realmente pasó o no?",
+      "Se dice que un jugador metió gol con un tamal de verde.",
+      "El árbitro, confundido, buscó en su manual de reglas antiguas.",
+      "Y dictaminó: '¡Es gol, pero el tamal se lo come el rival!'",
+      "Lo sentiste antes, un escalofrío al pensar en eso.",
+      "El compadre Brayan, de portero, comiéndose el tamal ¡qué asco!",
+      "Con la boca llena, intentaba gritar: '¡Es fuera de lugar!'",
+      "Nadie lo vio venir, el descontrol era total, ¡imagínate!",
+      "Un día, un delantero se metió a la cancha con mariachis.",
+      "El árbitro pausó el juego, para cantarles 'Cielito Lindo'.",
+      "Y el partido se decidió al ritmo de una cumbia sonidera...",
+      "...¡en una tanda de penales bailados con los jugadores!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Cartoon ancient football match, players confused by a giant jicama rolling as the ball, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon ancient football match, players confused by a giant jicama rolling as the ball, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Dicen que el primer gol mundialista lo anotaron con una jícama.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon footballer kicking a huge jicama instead of a ball, surprised expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon footballer kicking a huge jicama instead of a ball, surprised expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sí, una jícama grande, dicen que era la de Don Pepe.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Cartoon referee with an oversized sombrero blowing a whistle, pointing at a jicama as a goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon referee with an oversized sombrero blowing a whistle, pointing at a jicama as a goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y el árbitro, un señor con sombrero, validó el tanto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Cartoon football field where players are kicking flip-flops for throw-ins, chaotic and funny, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football field where players are kicking flip-flops for throw-ins, chaotic and funny, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "También hubo un tiempo donde los saques eran con chanclas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Cartoon players ducking and running as multiple flip-flops fly across the football field, funny and exaggerated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon players ducking and running as multiple flip-flops fly across the football field, funny and exaggerated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Imagínate el campo, las chanclas volando por doquier, ¡qué locura!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Cartoon footballer with a giant red flip-flop on his head looking dizzy, referee giving a penalty, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon footballer with a giant red flip-flop on his head looking dizzy, referee giving a penalty, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y si te caía una en la cabeza, era falta grave.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon rulebook open to a page with drawings of flip-flops and jicamas, a confused player scratching his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon rulebook open to a page with drawings of flip-flops and jicamas, a confused player scratching his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No puedes ignorarlo, el reglamento era algo único.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Cartoon elderly Mexican woman, 'La Doña', in a referee uniform yelling at players from the sideline, exaggerated expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon elderly Mexican woman, 'La Doña', in a referee uniform yelling at players from the sideline, exaggerated expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La Doña de la FIFA gritaba: '¡No se pasen de lanza!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Cartoon football exploding into a shower of colorful confetti over surprised players, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football exploding into a shower of colorful confetti over surprised players, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "También se rumora que los balones traían confeti adentro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Cartoon football pitch covered in confetti, players dancing and celebrating amidst the explosion of colors, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football pitch covered in confetti, players dancing and celebrating amidst the explosion of colors, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cuando reventaban, ¡fiesta de colores en pleno partido!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon football players intensely playing dominoes on a table in the middle of a football pitch, referee watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football players intensely playing dominoes on a table in the middle of a football pitch, referee watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y si había empate, se decidía con una partida de dominó.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Cartoon sweaty football players with serious faces placing domino tiles, focused and stressed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon sweaty football players with serious faces placing domino tiles, focused and stressed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los jugadores, sudando, moviendo sus fichas, ¡qué estrés!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Cartoon empty stadium with a single spotlight on the dominoes table, silence implied, players concentrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon empty stadium with a single spotlight on the dominoes table, silence implied, players concentrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un silencio absoluto invadía el estadio en cada jugada.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Cartoon goalkeeper attempting to block a shot with a plastic soda crate, confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon goalkeeper attempting to block a shot with a plastic soda crate, confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El portero podía usar una reja de refrescos para atajar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon goalkeeper with a soda crate in one hand and a football in the other, struggling to balance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon goalkeeper with a soda crate in one hand and a football in the other, struggling to balance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Con una mano el balón, con la otra la reja, ¡ay nanita!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Cartoon close-up of a Coca-Cola soda crate, specifically highlighting the logo, used as a goalkeeper's glove, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon close-up of a Coca-Cola soda crate, specifically highlighting the logo, used as a goalkeeper's glove, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La reja tenía que ser de Coca-Cola, ¡especificaciones claras!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon player looking perplexed at the absurd rules displayed on a scoreboard, question marks floating around his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon player looking perplexed at the absurd rules displayed on a scoreboard, question marks floating around his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero algo no está bien... ¿esto realmente pasó o no?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Cartoon football player celebrating a goal, but the ball is a giant green tamal, other players looking shocked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football player celebrating a goal, but the ball is a giant green tamal, other players looking shocked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Se dice que un jugador metió gol con un tamal de verde.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon referee frantically flipping through a very old, dusty rulebook, sweat dripping, looking confused about the tamal-goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon referee frantically flipping through a very old, dusty rulebook, sweat dripping, looking confused about the tamal-goal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El árbitro, confundido, buscó en su manual de reglas antiguas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Cartoon referee with a megaphone, pointing at the tamal-ball and then at a rival player who looks terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon referee with a megaphone, pointing at the tamal-ball and then at a rival player who looks terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y dictaminó: '¡Es gol, pero el tamal se lo come el rival!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon player holding his stomach, feeling sick after eating a tamal, a subtle shiver running down his spine, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon player holding his stomach, feeling sick after eating a tamal, a subtle shiver running down his spine, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Lo sentiste antes, un escalofrío al pensar en eso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Cartoon character 'Compadre Brayan' in a goalkeeper's uniform, mouth full of tamal, looking disgusted, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon character 'Compadre Brayan' in a goalkeeper's uniform, mouth full of tamal, looking disgusted, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El compadre Brayan, de portero, comiéndose el tamal ¡qué asco!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Cartoon 'Compadre Brayan' with puffed cheeks, trying to shout with his mouth full, arm raised in protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon 'Compadre Brayan' with puffed cheeks, trying to shout with his mouth full, arm raised in protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Con la boca llena, intentaba gritar: '¡Es fuera de lugar!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Cartoon football pitch in utter chaos, players running in all directions, a sense of uncontrolled mayhem, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football pitch in utter chaos, players running in all directions, a sense of uncontrolled mayhem, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio venir, el descontrol era total, ¡imagínate!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Cartoon mariachi band marching onto a football field in the middle of a game, players looking surprised and confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon mariachi band marching onto a football field in the middle of a game, players looking surprised and confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un día, un delantero se metió a la cancha con mariachis.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Cartoon referee with a microphone, singing 'Cielito Lindo' with the mariachi band, players watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon referee with a microphone, singing 'Cielito Lindo' with the mariachi band, players watching, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El árbitro pausó el juego, para cantarles 'Cielito Lindo'.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Cartoon football players performing elaborate cumbia dance moves on the field, a boombox blasting music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon football players performing elaborate cumbia dance moves on the field, a boombox blasting music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y el partido se decidió al ritmo de una cumbia sonidera...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "Cartoon goalkeeper and striker facing off for a penalty shootout, but they are doing exaggerated cumbia dance moves instead of kicking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon goalkeeper and striker facing off for a penalty shootout, but they are doing exaggerated cumbia dance moves instead of kicking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...¡en una tanda de penales bailados con los jugadores!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Jícama, ¿el primer gol?",
+      "Chanclas volando en juego.",
+      "¿Tamal de verde, gol?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
