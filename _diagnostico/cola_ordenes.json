@@ -5726,5 +5726,240 @@
       "¿Quién era la víctima?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "a050cdb1-c7f5-4e8b-9592-4370355b9c46",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Two childhood toys, slightly worn, facing each other on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two childhood toys, slightly worn, facing each other on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su rivalidad secreta... destruyó todo a su paso al final.\", \"pexels_query\": \"childhood toys\"}, {\"id\": 2, \"prompt\": \"Old family photo album open to a blank page, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old family photo album open to a blank page, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ana y Vero, primas, parecían inseparables desde niñas.\", \"pexels_query\": \"photo album\"}, {\"id\": 3, \"prompt\": \"Two slightly different colored ribbons tied together, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two slightly different colored ribbons tied together, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero entre ellas siempre existió una extraña competencia.\", \"pexels_query\": \"tied ribbons\"}, {\"id\": 4, \"prompt\": \"Award ribbon on a dusty shelf next to a forgotten trophy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Award ribbon on a dusty shelf next to a forgotten trophy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Vero siempre ganaba, Ana se quedaba con migajas.\", \"pexels_query\": \"trophy ribbon\"}, {\"id\": 5, \"prompt\": \"A single old, slightly faded school report card, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single old, slightly faded school report card, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ana se acostumbró a su sombra, lo sentiste antes.\", \"pexels_query\": \"school report\"}, {\"id\": 6, \"prompt\": \"Two coffee cups on a table, one slightly further away, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two coffee cups on a table, one slightly further away, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La dinámica continuó, incluso en la vida adulta.\", \"pexels_query\": \"coffee cups\"}, {\"id\": 7, \"prompt\": \"A rejected job application letter on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A rejected job application letter on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Trabajos, ascensos, incluso amores... Vero siempre triunfaba.\", \"pexels_query\": \"rejection letter\"}, {\"id\": 8, \"prompt\": \"A half-eaten dessert plate, a single spoon abandoned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-eaten dessert plate, a single spoon abandoned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ana sentía una extraña punzada cada vez, algo no está bien.\", \"pexels_query\": \"dessert plate\"}, {\"id\": 9, \"prompt\": \"A dim hallway with a slightly open door, light spilling from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dim hallway with a slightly open door, light spilling from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un día, Ana escuchó una conversación a escondidas.\", \"pexels_query\": \"open door\"}, {\"id\": 10, \"prompt\": \"An old, dusty landline phone receiver slightly off the hook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An old, dusty landline phone receiver slightly off the hook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era Vero, hablando con una tía sobre el pasado.\", \"pexels_query\": \"phone receiver\"}, {\"id\": 11, \"prompt\": \"A stack of old, forgotten letters tied with string, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A stack of old, forgotten letters tied with string, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mencionaron una beca que Ana casi había obtenido.\", \"pexels_query\": \"old letters\"}, {\"id\": 12, \"prompt\": \"A crumpled official-looking envelope on the floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A crumpled official-looking envelope on the floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Años atrás, para estudiar en el extranjero, su gran sueño.\", \"pexels_query\": \"crumpled envelope\"}, {\"id\": 13, \"prompt\": \"A pair of reading glasses resting on an open diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A pair of reading glasses resting on an open diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Vero, con voz tranquila, admitía haberla interceptado.\", \"pexels_query\": \"open diary\"}, {\"id\": 14, \"prompt\": \"A torn document, partially readable words like 'acceptance' or 'scholarship', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A torn document, partially readable words like 'acceptance' or 'scholarship', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Escondió la carta de aceptación, el documento crucial.\", \"pexels_query\": \"torn document\"}, {\"id\": 15, \"prompt\": \"A small, hidden key under a mat, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, hidden key under a mat, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Así, Ana nunca supo que la había conseguido.\", \"pexels_query\": \"hidden key\"}, {\"id\": 16, \"prompt\": \"A dusty old photo of two girls playing, one's face slightly obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dusty old photo of two girls playing, one's face slightly obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Vero temía que Ana destacara más que ella.\", \"pexels_query\": \"old girls photo\"}, {\"id\": 17, \"prompt\": \"A single tear drop on a faded letter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single tear drop on a faded letter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esa beca... la había cambiado todo en la vida.\", \"pexels_query\": \"tear on letter\"}, {\"id\": 18, \"prompt\": \"A phone screen displaying an empty message inbox, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A phone screen displaying an empty message inbox, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ana sintió un escalofrío, no puedes ignorarlo ahora.\", \"pexels_query\": \"empty inbox\"}, {\"id\": 19, \"prompt\": \"A cold, distant-looking window pane, rain streaks, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A cold, distant-looking window pane, rain streaks, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Todas las victorias de Vero, las de Ana, perdidas.\", \"pexels_query\": \"rainy window\"}, {\"id\": 20, \"prompt\": \"A shattered mirror reflecting only fragments of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A shattered mirror reflecting only fragments of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su relación, basada en una mentira gigante, explotó.\", \"pexels_query\": \"shattered mirror\"}, {\"id\": 21, \"prompt\": \"A closed, locked diary on a bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A closed, locked diary on a bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio absoluto se instaló entre las primas.\", \"pexels_query\": \"locked diary\"}, {\"id\": 22, \"prompt\": \"A single, isolated forgotten object on a vast, empty table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, isolated forgotten object on a vast, empty table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie lo vio venir, ni siquiera la propia Ana.\", \"pexels_query\": \"isolated object\"}, {\"id\": 23, \"prompt\": \"A path diverging into two different directions, overgrown and unused, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A path diverging into two different directions, overgrown and unused, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sus vidas tomaron rumbos completamente distintos, separados.\", \"pexels_query\": \"diverging path\"}, {\"id\": 24, \"prompt\": \"A cold, empty swing set, swaying slightly in the wind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A cold, empty swing set, swaying slightly in the wind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La beca no fue la única oportunidad perdida.\", \"pexels_query\": \"empty swing\"}, {\"id\": 25, \"prompt\": \"A single, discarded doll in a shadowy corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, discarded doll in a shadowy corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una traición que definió toda la existencia de ambas.\", \"pexels_query\": \"discarded doll\"}, {\"id\": 26, \"prompt\": \"A lone, flickering candle in a dark room, casting long shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A lone, flickering candle in a dark room, casting long shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Cuántas vidas cambiarán por un solo secreto cruel?\", \"pexels_query\": \"flickering candle\"}, {\"id\": 27, \"prompt\": \"An old, worn-out photograph of a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An old, worn-out photograph of a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Tú te lo hubieras imaginado en esa 'amistad'?\", \"pexels_query\": \"blurred photo\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Su rivalidad secreta... destruyó todo a su paso al final. Ana y Vero, primas, parecían inseparables desde niñas. Pero entre ellas siempre existió una extraña competencia. Vero siempre ganaba, Ana se quedaba con migajas. Ana se acostumbró a su sombra, lo sentiste antes. La dinámica continuó, incluso en la vida adulta. Trabajos, ascensos, incluso amores... Vero siempre triunfaba. Ana sentía una extraña punzada cada vez, algo no está bien. Un día, Ana escuchó una conversación a escondidas. Era Vero, hablando con una tía sobre el pasado. Mencionaron una beca que Ana casi había obtenido. Años atrás, para estudiar en el extranjero, su gran sueño. Vero, con voz tranquila, admitía haberla interceptado. Escondió la carta de aceptación, el documento crucial. Así, Ana nunca supo que la había conseguido. Vero temía que Ana destacara más que ella. Esa beca... la había cambiado todo en la vida. Ana sintió un escalofrío, no puedes ignorarlo ahora. Todas las victorias de Vero, las de Ana, perdidas. Su relación, basada en una mentira gigante, explotó. El silencio absoluto se instaló entre las primas. Nadie lo vio venir, ni siquiera la propia Ana. Sus vidas tomaron rumbos completamente distintos, separados. La beca no fue la única oportunidad perdida. Una traición que definió toda la existencia de ambas. ¿Cuántas vidas cambiarán por un solo secreto cruel? ¿Tú te lo hubieras imaginado en esa 'amistad'?",
+    "titulo_sugerido": "La rivalidad secreta que lo arruinó todo",
+    "escenas_texto": [
+      "Su rivalidad secreta... destruyó todo a su paso al final.",
+      "Ana y Vero, primas, parecían inseparables desde niñas.",
+      "Pero entre ellas siempre existió una extraña competencia.",
+      "Vero siempre ganaba, Ana se quedaba con migajas.",
+      "Ana se acostumbró a su sombra, lo sentiste antes.",
+      "La dinámica continuó, incluso en la vida adulta.",
+      "Trabajos, ascensos, incluso amores... Vero siempre triunfaba.",
+      "Ana sentía una extraña punzada cada vez, algo no está bien.",
+      "Un día, Ana escuchó una conversación a escondidas.",
+      "Era Vero, hablando con una tía sobre el pasado.",
+      "Mencionaron una beca que Ana casi había obtenido.",
+      "Años atrás, para estudiar en el extranjero, su gran sueño.",
+      "Vero, con voz tranquila, admitía haberla interceptado.",
+      "Escondió la carta de aceptación, el documento crucial.",
+      "Así, Ana nunca supo que la había conseguido.",
+      "Vero temía que Ana destacara más que ella.",
+      "Esa beca... la había cambiado todo en la vida.",
+      "Ana sintió un escalofrío, no puedes ignorarlo ahora.",
+      "Todas las victorias de Vero, las de Ana, perdidas.",
+      "Su relación, basada en una mentira gigante, explotó.",
+      "El silencio absoluto se instaló entre las primas.",
+      "Nadie lo vio venir, ni siquiera la propia Ana.",
+      "Sus vidas tomaron rumbos completamente distintos, separados.",
+      "La beca no fue la única oportunidad perdida.",
+      "Una traición que definió toda la existencia de ambas.",
+      "¿Cuántas vidas cambiarán por un solo secreto cruel?",
+      "¿Tú te lo hubieras imaginado en esa 'amistad'?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Two childhood toys, slightly worn, facing each other on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two childhood toys, slightly worn, facing each other on a shelf, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su rivalidad secreta... destruyó todo a su paso al final.",
+        "pexels_query": "childhood toys"
+      },
+      {
+        "id": 2,
+        "prompt": "Old family photo album open to a blank page, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old family photo album open to a blank page, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ana y Vero, primas, parecían inseparables desde niñas.",
+        "pexels_query": "photo album"
+      },
+      {
+        "id": 3,
+        "prompt": "Two slightly different colored ribbons tied together, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two slightly different colored ribbons tied together, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero entre ellas siempre existió una extraña competencia.",
+        "pexels_query": "tied ribbons"
+      },
+      {
+        "id": 4,
+        "prompt": "Award ribbon on a dusty shelf next to a forgotten trophy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Award ribbon on a dusty shelf next to a forgotten trophy, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Vero siempre ganaba, Ana se quedaba con migajas.",
+        "pexels_query": "trophy ribbon"
+      },
+      {
+        "id": 5,
+        "prompt": "A single old, slightly faded school report card, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single old, slightly faded school report card, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ana se acostumbró a su sombra, lo sentiste antes.",
+        "pexels_query": "school report"
+      },
+      {
+        "id": 6,
+        "prompt": "Two coffee cups on a table, one slightly further away, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two coffee cups on a table, one slightly further away, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La dinámica continuó, incluso en la vida adulta.",
+        "pexels_query": "coffee cups"
+      },
+      {
+        "id": 7,
+        "prompt": "A rejected job application letter on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A rejected job application letter on a desk, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Trabajos, ascensos, incluso amores... Vero siempre triunfaba.",
+        "pexels_query": "rejection letter"
+      },
+      {
+        "id": 8,
+        "prompt": "A half-eaten dessert plate, a single spoon abandoned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-eaten dessert plate, a single spoon abandoned, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ana sentía una extraña punzada cada vez, algo no está bien.",
+        "pexels_query": "dessert plate"
+      },
+      {
+        "id": 9,
+        "prompt": "A dim hallway with a slightly open door, light spilling from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dim hallway with a slightly open door, light spilling from inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un día, Ana escuchó una conversación a escondidas.",
+        "pexels_query": "open door"
+      },
+      {
+        "id": 10,
+        "prompt": "An old, dusty landline phone receiver slightly off the hook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An old, dusty landline phone receiver slightly off the hook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era Vero, hablando con una tía sobre el pasado.",
+        "pexels_query": "phone receiver"
+      },
+      {
+        "id": 11,
+        "prompt": "A stack of old, forgotten letters tied with string, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A stack of old, forgotten letters tied with string, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mencionaron una beca que Ana casi había obtenido.",
+        "pexels_query": "old letters"
+      },
+      {
+        "id": 12,
+        "prompt": "A crumpled official-looking envelope on the floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A crumpled official-looking envelope on the floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Años atrás, para estudiar en el extranjero, su gran sueño.",
+        "pexels_query": "crumpled envelope"
+      },
+      {
+        "id": 13,
+        "prompt": "A pair of reading glasses resting on an open diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A pair of reading glasses resting on an open diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Vero, con voz tranquila, admitía haberla interceptado.",
+        "pexels_query": "open diary"
+      },
+      {
+        "id": 14,
+        "prompt": "A torn document, partially readable words like 'acceptance' or 'scholarship', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A torn document, partially readable words like 'acceptance' or 'scholarship', RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Escondió la carta de aceptación, el documento crucial.",
+        "pexels_query": "torn document"
+      },
+      {
+        "id": 15,
+        "prompt": "A small, hidden key under a mat, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, hidden key under a mat, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Así, Ana nunca supo que la había conseguido.",
+        "pexels_query": "hidden key"
+      },
+      {
+        "id": 16,
+        "prompt": "A dusty old photo of two girls playing, one's face slightly obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dusty old photo of two girls playing, one's face slightly obscured, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Vero temía que Ana destacara más que ella.",
+        "pexels_query": "old girls photo"
+      },
+      {
+        "id": 17,
+        "prompt": "A single tear drop on a faded letter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single tear drop on a faded letter, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esa beca... la había cambiado todo en la vida.",
+        "pexels_query": "tear on letter"
+      },
+      {
+        "id": 18,
+        "prompt": "A phone screen displaying an empty message inbox, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A phone screen displaying an empty message inbox, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ana sintió un escalofrío, no puedes ignorarlo ahora.",
+        "pexels_query": "empty inbox"
+      },
+      {
+        "id": 19,
+        "prompt": "A cold, distant-looking window pane, rain streaks, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A cold, distant-looking window pane, rain streaks, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Todas las victorias de Vero, las de Ana, perdidas.",
+        "pexels_query": "rainy window"
+      },
+      {
+        "id": 20,
+        "prompt": "A shattered mirror reflecting only fragments of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A shattered mirror reflecting only fragments of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su relación, basada en una mentira gigante, explotó.",
+        "pexels_query": "shattered mirror"
+      },
+      {
+        "id": 21,
+        "prompt": "A closed, locked diary on a bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A closed, locked diary on a bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio absoluto se instaló entre las primas.",
+        "pexels_query": "locked diary"
+      },
+      {
+        "id": 22,
+        "prompt": "A single, isolated forgotten object on a vast, empty table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, isolated forgotten object on a vast, empty table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie lo vio venir, ni siquiera la propia Ana.",
+        "pexels_query": "isolated object"
+      },
+      {
+        "id": 23,
+        "prompt": "A path diverging into two different directions, overgrown and unused, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A path diverging into two different directions, overgrown and unused, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sus vidas tomaron rumbos completamente distintos, separados.",
+        "pexels_query": "diverging path"
+      },
+      {
+        "id": 24,
+        "prompt": "A cold, empty swing set, swaying slightly in the wind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A cold, empty swing set, swaying slightly in the wind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La beca no fue la única oportunidad perdida.",
+        "pexels_query": "empty swing"
+      },
+      {
+        "id": 25,
+        "prompt": "A single, discarded doll in a shadowy corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, discarded doll in a shadowy corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una traición que definió toda la existencia de ambas.",
+        "pexels_query": "discarded doll"
+      },
+      {
+        "id": 26,
+        "prompt": "A lone, flickering candle in a dark room, casting long shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A lone, flickering candle in a dark room, casting long shadows, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Cuántas vidas cambiarán por un solo secreto cruel?",
+        "pexels_query": "flickering candle"
+      },
+      {
+        "id": 27,
+        "prompt": "An old, worn-out photograph of a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An old, worn-out photograph of a blurred face, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Tú te lo hubieras imaginado en esa 'amistad'?",
+        "pexels_query": "blurred photo"
+      }
+    ],
+    "hooks": [
+      "La beca que nunca llegó",
+      "Su prima lo hizo a propósito",
+      "¿Quién era la verdadera rival?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
