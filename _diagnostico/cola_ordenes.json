@@ -6244,5 +6244,256 @@
       "Ella sabe antes que tú"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "4303f1e4-17d2-42a1-86ff-749463ea32a7",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"futuristic facial interface, data overlay, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic facial interface, data overlay, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Llevas creyendo que tu rostro es privado. Pero no.\", \"pexels_query\": \"facial interface data\"}, {\"id\": 2, \"prompt\": \"micro AI chip on a neural network diagram, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"micro AI chip on a neural network diagram, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"China desarrolló computador IA que cabe en tu rostro.\", \"pexels_query\": \"micro AI chip\"}, {\"id\": 3, \"prompt\": \"invisible data streams around a head silhouette, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"invisible data streams around a head silhouette, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No es solo un gadget, es un sensor constante.\", \"pexels_query\": \"invisible data streams\"}, {\"id\": 4, \"prompt\": \"POV of data collection through an AI lens, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"POV of data collection through an AI lens, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algo no está bien, no puedes ignorarlo.\", \"pexels_query\": \"AI data collection POV\"}, {\"id\": 5, \"prompt\": \"digital surveillance grid over a city, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital surveillance grid over a city, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Recopila tu estado de ánimo, atención, y mucho más.\", \"pexels_query\": \"digital surveillance city\"}, {\"id\": 6, \"prompt\": \"data flowing from an abstract face to a server rack, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"data flowing from an abstract face to a server rack, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus microexpresiones son ahora datos procesables.\", \"pexels_query\": \"face data server\"}, {\"id\": 7, \"prompt\": \"circuit board with glowing neural pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"circuit board with glowing neural pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto permite a la IA decidir sobre ti.\", \"pexels_query\": \"glowing neural pathways\"}, {\"id\": 8, \"prompt\": \"abstract data analysis screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract data analysis screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Quién aprueba tu crédito? ¿Tu seguro de vida?\", \"pexels_query\": \"abstract data analysis\"}, {\"id\": 9, \"prompt\": \"server racks in a dark, cold data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"server racks in a dark, cold data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA facial alimenta estos grandes sistemas.\", \"pexels_query\": \"data center cold\"}, {\"id\": 10, \"prompt\": \"digital footprints leaving a trace, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital footprints leaving a trace, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cada movimiento facial deja una huella digital.\", \"pexels_query\": \"digital footprints trace\"}, {\"id\": 11, \"prompt\": \"encrypted data streams on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"encrypted data streams on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Se usa para marketing, pero también para vigilancia.\", \"pexels_query\": \"encrypted data streams\"}, {\"id\": 12, \"prompt\": \"glowing red eye on a dark circuit board, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing red eye on a dark circuit board, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio, el silencio absoluto fue clave.\", \"pexels_query\": \"glowing AI eye\"}, {\"id\": 13, \"prompt\": \"abstract representation of a biased algorithm, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract representation of a biased algorithm, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Estos algoritmos pueden tener sesgos, ¿lo sabías?\", \"pexels_query\": \"biased algorithm abstract\"}, {\"id\": 14, \"prompt\": \"digital decision points on a neural network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital decision points on a neural network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Podrían influir en tus decisiones sin que notes.\", \"pexels_query\": \"digital decision points\"}, {\"id\": 15, \"prompt\": \"holographic display with privacy settings, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"holographic display with privacy settings, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La batalla por la privacidad facial ya comenzó.\", \"pexels_query\": \"holographic privacy settings\"}, {\"id\": 16, \"prompt\": \"data network glowing in a dark server room, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"data network glowing in a dark server room, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Este dispositivo es un paso más en control.\", \"pexels_query\": \"glowing data network\"}, {\"id\": 17, \"prompt\": \"abstract data points connecting to a central node, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract data points connecting to a central node, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Imagina que tu expresión cambia la publicidad que ves.\", \"pexels_query\": \"data points central\"}, {\"id\": 18, \"prompt\": \"futuristic data stream flowing through a tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic data stream flowing through a tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"O que tu atención dicta el contenido que recibes.\", \"pexels_query\": \"futuristic data tunnel\"}, {\"id\": 19, \"prompt\": \"abstract representation of facial recognition data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract representation of facial recognition data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El monitoreo facial 24/7. No es ciencia ficción.\", \"pexels_query\": \"facial recognition data\"}, {\"id\": 20, \"prompt\": \"glowing cybersecurity shield over data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing cybersecurity shield over data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hay regulaciones intentando poner límites claros.\", \"pexels_query\": \"cybersecurity shield data\"}, {\"id\": 21, \"prompt\": \"digital blueprint of a regulatory framework, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital blueprint of a regulatory framework, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Europa ya tiene leyes estrictas sobre biometría.\", \"pexels_query\": \"regulatory framework digital\"}, {\"id\": 22, \"prompt\": \"abstract neural network with warning symbols, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract neural network with warning symbols, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Conocer riesgos te hace más consciente y capaz.\", \"pexels_query\": \"neural network warning\"}, {\"id\": 23, \"prompt\": \"futuristic control panel with data options, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic control panel with data options, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No todo es vigilancia; puede detectar enfermedades.\", \"pexels_query\": \"control panel data\"}, {\"id\": 24, \"prompt\": \"medical AI interface showing diagnostics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"medical AI interface showing diagnostics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ayuda a personas con discapacidades severas también.\", \"pexels_query\": \"medical AI diagnostics\"}, {\"id\": 25, \"prompt\": \"futuristic digital privacy lock, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic digital privacy lock, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El poder reside en quién controla esos datos.\", \"pexels_query\": \"digital privacy lock\"}, {\"id\": 26, \"prompt\": \"abstract data flow through a secure tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract data flow through a secure tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La diferencia entre arma o herramienta es el uso.\", \"pexels_query\": \"secure data tunnel\"}, {\"id\": 27, \"prompt\": \"glowing brain diagram connected to a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing brain diagram connected to a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tuialista te da la verdad sin alarmismo.\", \"pexels_query\": \"brain network diagram\"}, {\"id\": 28, \"prompt\": \"abstract digital scales balancing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract digital scales balancing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo que ignoras puede usarse contra ti siempre.\", \"pexels_query\": \"digital scales data\"}, {\"id\": 29, \"prompt\": \"futuristic abstract network globe, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic abstract network globe, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Infórmate; tu privacidad empieza en comprender estas tecnologías.\", \"pexels_query\": \"network globe abstract\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Llevas creyendo que tu rostro es privado. Pero no. China desarrolló computador IA que cabe en tu rostro. No es solo un gadget, es un sensor constante. Algo no está bien, no puedes ignorarlo. Recopila tu estado de ánimo, atención, y mucho más. Tus microexpresiones son ahora datos procesables. Esto permite a la IA decidir sobre ti. ¿Quién aprueba tu crédito? ¿Tu seguro de vida? La IA facial alimenta estos grandes sistemas. Cada movimiento facial deja una huella digital. Se usa para marketing, pero también para vigilancia. Nadie lo vio, el silencio absoluto fue clave. Estos algoritmos pueden tener sesgos, ¿lo sabías? Podrían influir en tus decisiones sin que notes. La batalla por la privacidad facial ya comenzó. Este dispositivo es un paso más en control. Imagina que tu expresión cambia la publicidad que ves. O que tu atención dicta el contenido que recibes. El monitoreo facial 24/7. No es ciencia ficción. Hay regulaciones intentando poner límites claros. Europa ya tiene leyes estrictas sobre biometría. Conocer riesgos te hace más consciente y capaz. No todo es vigilancia; puede detectar enfermedades. Ayuda a personas con discapacidades severas también. El poder reside en quién controla esos datos. La diferencia entre arma o herramienta es el uso. Tuialista te da la verdad sin alarmismo. Lo que ignoras puede usarse contra ti siempre. Infórmate; tu privacidad empieza en comprender estas tecnologías.",
+    "titulo_sugerido": "La IA en tu Rostro: Lo Que China Oculta Sobre tu Privacidad",
+    "escenas_texto": [
+      "Llevas creyendo que tu rostro es privado. Pero no.",
+      "China desarrolló computador IA que cabe en tu rostro.",
+      "No es solo un gadget, es un sensor constante.",
+      "Algo no está bien, no puedes ignorarlo.",
+      "Recopila tu estado de ánimo, atención, y mucho más.",
+      "Tus microexpresiones son ahora datos procesables.",
+      "Esto permite a la IA decidir sobre ti.",
+      "¿Quién aprueba tu crédito? ¿Tu seguro de vida?",
+      "La IA facial alimenta estos grandes sistemas.",
+      "Cada movimiento facial deja una huella digital.",
+      "Se usa para marketing, pero también para vigilancia.",
+      "Nadie lo vio, el silencio absoluto fue clave.",
+      "Estos algoritmos pueden tener sesgos, ¿lo sabías?",
+      "Podrían influir en tus decisiones sin que notes.",
+      "La batalla por la privacidad facial ya comenzó.",
+      "Este dispositivo es un paso más en control.",
+      "Imagina que tu expresión cambia la publicidad que ves.",
+      "O que tu atención dicta el contenido que recibes.",
+      "El monitoreo facial 24/7. No es ciencia ficción.",
+      "Hay regulaciones intentando poner límites claros.",
+      "Europa ya tiene leyes estrictas sobre biometría.",
+      "Conocer riesgos te hace más consciente y capaz.",
+      "No todo es vigilancia; puede detectar enfermedades.",
+      "Ayuda a personas con discapacidades severas también.",
+      "El poder reside en quién controla esos datos.",
+      "La diferencia entre arma o herramienta es el uso.",
+      "Tuialista te da la verdad sin alarmismo.",
+      "Lo que ignoras puede usarse contra ti siempre.",
+      "Infórmate; tu privacidad empieza en comprender estas tecnologías."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "futuristic facial interface, data overlay, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic facial interface, data overlay, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Llevas creyendo que tu rostro es privado. Pero no.",
+        "pexels_query": "facial interface data"
+      },
+      {
+        "id": 2,
+        "prompt": "micro AI chip on a neural network diagram, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "micro AI chip on a neural network diagram, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "China desarrolló computador IA que cabe en tu rostro.",
+        "pexels_query": "micro AI chip"
+      },
+      {
+        "id": 3,
+        "prompt": "invisible data streams around a head silhouette, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "invisible data streams around a head silhouette, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No es solo un gadget, es un sensor constante.",
+        "pexels_query": "invisible data streams"
+      },
+      {
+        "id": 4,
+        "prompt": "POV of data collection through an AI lens, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "POV of data collection through an AI lens, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algo no está bien, no puedes ignorarlo.",
+        "pexels_query": "AI data collection POV"
+      },
+      {
+        "id": 5,
+        "prompt": "digital surveillance grid over a city, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital surveillance grid over a city, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Recopila tu estado de ánimo, atención, y mucho más.",
+        "pexels_query": "digital surveillance city"
+      },
+      {
+        "id": 6,
+        "prompt": "data flowing from an abstract face to a server rack, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "data flowing from an abstract face to a server rack, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus microexpresiones son ahora datos procesables.",
+        "pexels_query": "face data server"
+      },
+      {
+        "id": 7,
+        "prompt": "circuit board with glowing neural pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "circuit board with glowing neural pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto permite a la IA decidir sobre ti.",
+        "pexels_query": "glowing neural pathways"
+      },
+      {
+        "id": 8,
+        "prompt": "abstract data analysis screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract data analysis screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Quién aprueba tu crédito? ¿Tu seguro de vida?",
+        "pexels_query": "abstract data analysis"
+      },
+      {
+        "id": 9,
+        "prompt": "server racks in a dark, cold data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "server racks in a dark, cold data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA facial alimenta estos grandes sistemas.",
+        "pexels_query": "data center cold"
+      },
+      {
+        "id": 10,
+        "prompt": "digital footprints leaving a trace, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital footprints leaving a trace, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cada movimiento facial deja una huella digital.",
+        "pexels_query": "digital footprints trace"
+      },
+      {
+        "id": 11,
+        "prompt": "encrypted data streams on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "encrypted data streams on a screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Se usa para marketing, pero también para vigilancia.",
+        "pexels_query": "encrypted data streams"
+      },
+      {
+        "id": 12,
+        "prompt": "glowing red eye on a dark circuit board, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing red eye on a dark circuit board, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio, el silencio absoluto fue clave.",
+        "pexels_query": "glowing AI eye"
+      },
+      {
+        "id": 13,
+        "prompt": "abstract representation of a biased algorithm, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract representation of a biased algorithm, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Estos algoritmos pueden tener sesgos, ¿lo sabías?",
+        "pexels_query": "biased algorithm abstract"
+      },
+      {
+        "id": 14,
+        "prompt": "digital decision points on a neural network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital decision points on a neural network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Podrían influir en tus decisiones sin que notes.",
+        "pexels_query": "digital decision points"
+      },
+      {
+        "id": 15,
+        "prompt": "holographic display with privacy settings, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "holographic display with privacy settings, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La batalla por la privacidad facial ya comenzó.",
+        "pexels_query": "holographic privacy settings"
+      },
+      {
+        "id": 16,
+        "prompt": "data network glowing in a dark server room, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "data network glowing in a dark server room, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Este dispositivo es un paso más en control.",
+        "pexels_query": "glowing data network"
+      },
+      {
+        "id": 17,
+        "prompt": "abstract data points connecting to a central node, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract data points connecting to a central node, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Imagina que tu expresión cambia la publicidad que ves.",
+        "pexels_query": "data points central"
+      },
+      {
+        "id": 18,
+        "prompt": "futuristic data stream flowing through a tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic data stream flowing through a tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "O que tu atención dicta el contenido que recibes.",
+        "pexels_query": "futuristic data tunnel"
+      },
+      {
+        "id": 19,
+        "prompt": "abstract representation of facial recognition data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract representation of facial recognition data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El monitoreo facial 24/7. No es ciencia ficción.",
+        "pexels_query": "facial recognition data"
+      },
+      {
+        "id": 20,
+        "prompt": "glowing cybersecurity shield over data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing cybersecurity shield over data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hay regulaciones intentando poner límites claros.",
+        "pexels_query": "cybersecurity shield data"
+      },
+      {
+        "id": 21,
+        "prompt": "digital blueprint of a regulatory framework, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital blueprint of a regulatory framework, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Europa ya tiene leyes estrictas sobre biometría.",
+        "pexels_query": "regulatory framework digital"
+      },
+      {
+        "id": 22,
+        "prompt": "abstract neural network with warning symbols, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract neural network with warning symbols, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Conocer riesgos te hace más consciente y capaz.",
+        "pexels_query": "neural network warning"
+      },
+      {
+        "id": 23,
+        "prompt": "futuristic control panel with data options, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic control panel with data options, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No todo es vigilancia; puede detectar enfermedades.",
+        "pexels_query": "control panel data"
+      },
+      {
+        "id": 24,
+        "prompt": "medical AI interface showing diagnostics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "medical AI interface showing diagnostics, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ayuda a personas con discapacidades severas también.",
+        "pexels_query": "medical AI diagnostics"
+      },
+      {
+        "id": 25,
+        "prompt": "futuristic digital privacy lock, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic digital privacy lock, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El poder reside en quién controla esos datos.",
+        "pexels_query": "digital privacy lock"
+      },
+      {
+        "id": 26,
+        "prompt": "abstract data flow through a secure tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract data flow through a secure tunnel, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La diferencia entre arma o herramienta es el uso.",
+        "pexels_query": "secure data tunnel"
+      },
+      {
+        "id": 27,
+        "prompt": "glowing brain diagram connected to a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing brain diagram connected to a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tuialista te da la verdad sin alarmismo.",
+        "pexels_query": "brain network diagram"
+      },
+      {
+        "id": 28,
+        "prompt": "abstract digital scales balancing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract digital scales balancing data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo que ignoras puede usarse contra ti siempre.",
+        "pexels_query": "digital scales data"
+      },
+      {
+        "id": 29,
+        "prompt": "futuristic abstract network globe, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic abstract network globe, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Infórmate; tu privacidad empieza en comprender estas tecnologías.",
+        "pexels_query": "network globe abstract"
+      }
+    ],
+    "hooks": [
+      "Tu cara es ahora un sensor",
+      "La IA te ve sin tú saberlo",
+      "Microchips deciden por ti"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
