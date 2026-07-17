@@ -4065,5 +4065,248 @@
       "Fontanero espía"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "5cfb11cc-a750-4a18-8b2c-72dad3bd4fa3",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Conspiracy theory, digital interface, hidden data streams, server racks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Conspiracy theory, digital interface, hidden data streams, server racks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La élite sabe algo de la IA que te ocultan.\", \"pexels_query\": \"hidden data streams\"}, {\"id\": 2, \"prompt\": \"Data collection, abstract neural network, glowing circuits, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data collection, abstract neural network, glowing circuits, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Las nuevas herramientas recopilan datos que nadie esperaba.\", \"pexels_query\": \"neural network circuits\"}, {\"id\": 3, \"prompt\": \"AI training data, abstract information flow, digital matrix, server room, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"AI training data, abstract information flow, digital matrix, server room, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu información entrena modelos complejos ahora mismo.\", \"pexels_query\": \"ai data training\"}, {\"id\": 4, \"prompt\": \"Surveillance concept, glowing eye-like sensor, dark room, digital reflection, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Surveillance concept, glowing eye-like sensor, dark room, digital reflection, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Crees estar solo, pero algo no está bien.\", \"pexels_query\": \"digital surveillance\"}, {\"id\": 5, \"prompt\": \"User interaction data points, abstract digital fingerprints, glowing screen, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"User interaction data points, abstract digital fingerprints, glowing screen, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cada clic es un punto clave de aprendizaje.\", \"pexels_query\": \"data fingerprints\"}, {\"id\": 6, \"prompt\": \"Feeling of being watched, abstract digital shadow, dark alley, faint light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Feeling of being watched, abstract digital shadow, dark alley, faint light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes: esa sensación de vigilancia constante.\", \"pexels_query\": \"digital shadow\"}, {\"id\": 7, \"prompt\": \"Hidden clauses, blurred legal text, magnifying glass, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hidden clauses, blurred legal text, magnifying glass, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Los términos de servicio ocultan verdades incómodas siempre.\", \"pexels_query\": \"hidden legal text\"}, {\"id\": 8, \"prompt\": \"Eroding privacy, shattered glass effect over digital data, dark theme, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Eroding privacy, shattered glass effect over digital data, dark theme, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio: tu privacidad se erosionaba sin fin.\", \"pexels_query\": \"data erosion\"}, {\"id\": 9, \"prompt\": \"Corporate silence, vast empty data center, dramatic side lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Corporate silence, vast empty data center, dramatic side lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio de las empresas era intencional.\", \"pexels_query\": \"empty data center\"}, {\"id\": 10, \"prompt\": \"Data feeding AI, abstract pipelines, glowing data packets, large server, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data feeding AI, abstract pipelines, glowing data packets, large server, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus datos alimentan una inteligencia artificial imparable.\", \"pexels_query\": \"data pipelines\"}, {\"id\": 11, \"prompt\": \"Invisible profiles, abstract data silhouette of a person, glowing points, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Invisible profiles, abstract data silhouette of a person, glowing points, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Decisiones críticas se basan en perfiles invisibles.\", \"pexels_query\": \"abstract data profile\"}, {\"id\": 12, \"prompt\": \"Financial decisions, glowing algorithms on a bank screen, credit card interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Financial decisions, glowing algorithms on a bank screen, credit card interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Desde créditos bancarios hasta ofertas de empleo futuras.\", \"pexels_query\": \"ai finance algorithms\"}, {\"id\": 13, \"prompt\": \"Unjust AI, broken algorithm symbols, distorted code, red error lights, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Unjust AI, broken algorithm symbols, distorted code, red error lights, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Estos sistemas no siempre son justos.\", \"pexels_query\": \"broken algorithm\"}, {\"id\": 14, \"prompt\": \"AI bias, skewed data visualization, unequal bars, digital graph, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"AI bias, skewed data visualization, unequal bars, digital graph, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Existen sesgos ocultos documentados por investigadores.\", \"pexels_query\": \"ai bias graph\"}, {\"id\": 15, \"prompt\": \"Social injustice, abstract digital chains, dark digital figures, glowing lines, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Social injustice, abstract digital chains, dark digital figures, glowing lines, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Afectan a minorías, reproduciendo injusticias sociales ya vividas.\", \"pexels_query\": \"digital injustice\"}, {\"id\": 16, \"prompt\": \"Serious consequences, digital cracked earth, data flowing through cracks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Serious consequences, digital cracked earth, data flowing through cracks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Es más grave de lo que crees.\", \"pexels_query\": \"digital consequence\"}, {\"id\": 17, \"prompt\": \"Digital control, glowing hand over abstract data, secure interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital control, glowing hand over abstract data, secure interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tú puedes controlar tu huella digital.\", \"pexels_query\": \"digital control hand\"}, {\"id\": 18, \"prompt\": \"Privacy settings, abstract shield over app icons, secure browser, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Privacy settings, abstract shield over app icons, secure browser, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Revisa permisos de apps; usa navegadores privados.\", \"pexels_query\": \"privacy app settings\"}, {\"id\": 19, \"prompt\": \"Reading privacy policy, digital document scroll, glowing text, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Reading privacy policy, digital document scroll, glowing text, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lee políticas de privacidad, aunque sea el resumen.\", \"pexels_query\": \"digital privacy policy\"}, {\"id\": 20, \"prompt\": \"Disable telemetry, abstract switch turning off data flow, glowing network, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Disable telemetry, abstract switch turning off data flow, glowing network, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Desactiva telemetría en tus dispositivos, si puedes.\", \"pexels_query\": \"telemetry disable\"}, {\"id\": 21, \"prompt\": \"Free privacy tools, abstract digital padlock, glowing secure icon, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Free privacy tools, abstract digital padlock, glowing secure icon, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Existen herramientas gratuitas que protegen tu información sensible.\", \"pexels_query\": \"privacy software lock\"}, {\"id\": 22, \"prompt\": \"AI understanding, glowing brain network, abstract data synapses, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"AI understanding, glowing brain network, abstract data synapses, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Entender cómo funciona la IA te da poder.\", \"pexels_query\": \"ai understanding brain\"}, {\"id\": 23, \"prompt\": \"Digital future, complex data pathways converging, glowing digital city, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital future, complex data pathways converging, glowing digital city, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo; tu futuro digital depende.\", \"pexels_query\": \"digital future pathways\"}, {\"id\": 24, \"prompt\": \"Informed choice, balanced scales with data and facts, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Informed choice, balanced scales with data and facts, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Infórmate: conoce riesgos reales, no falsos.\", \"pexels_query\": \"informed choice scales\"}, {\"id\": 25, \"prompt\": \"Fact-checking AI, magnifying glass over data points, glowing information, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Fact-checking AI, magnifying glass over data points, glowing information, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aquí desmentimos mitos con datos concretos y actuales.\", \"pexels_query\": \"ai fact check\"}, {\"id\": 26, \"prompt\": \"Tuialista channel, abstract digital logo, secure interface, clean design, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Tuialista channel, abstract digital logo, secure interface, clean design, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tuialista es tu canal para entender IA.\", \"pexels_query\": \"tuialista logo concept\"}, {\"id\": 27, \"prompt\": \"Subscribe for knowledge, glowing subscribe button, abstract data flow, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Subscribe for knowledge, glowing subscribe button, abstract data flow, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Para seguir empoderándote con conocimiento, suscríbete ya.\", \"pexels_query\": \"subscribe button ai\"}, {\"id\": 28, \"prompt\": \"Informed digital future, hands building abstract data structure, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Informed digital future, hands building abstract data structure, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Construyamos juntos un futuro digital informado.\", \"pexels_query\": \"digital future building\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "La élite sabe algo de la IA que te ocultan. Las nuevas herramientas recopilan datos que nadie esperaba. Tu información entrena modelos complejos ahora mismo. Crees estar solo, pero algo no está bien. Cada clic es un punto clave de aprendizaje. Lo sentiste antes: esa sensación de vigilancia constante. Los términos de servicio ocultan verdades incómodas siempre. Nadie lo vio: tu privacidad se erosionaba sin fin. El silencio de las empresas era intencional. Tus datos alimentan una inteligencia artificial imparable. Decisiones críticas se basan en perfiles invisibles. Desde créditos bancarios hasta ofertas de empleo futuras. Estos sistemas no siempre son justos. Existen sesgos ocultos documentados por investigadores. Afectan a minorías, reproduciendo injusticias sociales ya vividas. Es más grave de lo que crees. Tú puedes controlar tu huella digital. Revisa permisos de apps; usa navegadores privados. Lee políticas de privacidad, aunque sea el resumen. Desactiva telemetría en tus dispositivos, si puedes. Existen herramientas gratuitas que protegen tu información sensible. Entender cómo funciona la IA te da poder. No puedes ignorarlo; tu futuro digital depende. Infórmate: conoce riesgos reales, no falsos. Aquí desmentimos mitos con datos concretos y actuales. Tuialista es tu canal para entender IA. Para seguir empoderándote con conocimiento, suscríbete ya. Construyamos juntos un futuro digital informado.",
+    "titulo_sugerido": "IA Nuevas: Lo Que REALMENTE Ocultan y Cómo Protegerte",
+    "escenas_texto": [
+      "La élite sabe algo de la IA que te ocultan.",
+      "Las nuevas herramientas recopilan datos que nadie esperaba.",
+      "Tu información entrena modelos complejos ahora mismo.",
+      "Crees estar solo, pero algo no está bien.",
+      "Cada clic es un punto clave de aprendizaje.",
+      "Lo sentiste antes: esa sensación de vigilancia constante.",
+      "Los términos de servicio ocultan verdades incómodas siempre.",
+      "Nadie lo vio: tu privacidad se erosionaba sin fin.",
+      "El silencio de las empresas era intencional.",
+      "Tus datos alimentan una inteligencia artificial imparable.",
+      "Decisiones críticas se basan en perfiles invisibles.",
+      "Desde créditos bancarios hasta ofertas de empleo futuras.",
+      "Estos sistemas no siempre son justos.",
+      "Existen sesgos ocultos documentados por investigadores.",
+      "Afectan a minorías, reproduciendo injusticias sociales ya vividas.",
+      "Es más grave de lo que crees.",
+      "Tú puedes controlar tu huella digital.",
+      "Revisa permisos de apps; usa navegadores privados.",
+      "Lee políticas de privacidad, aunque sea el resumen.",
+      "Desactiva telemetría en tus dispositivos, si puedes.",
+      "Existen herramientas gratuitas que protegen tu información sensible.",
+      "Entender cómo funciona la IA te da poder.",
+      "No puedes ignorarlo; tu futuro digital depende.",
+      "Infórmate: conoce riesgos reales, no falsos.",
+      "Aquí desmentimos mitos con datos concretos y actuales.",
+      "Tuialista es tu canal para entender IA.",
+      "Para seguir empoderándote con conocimiento, suscríbete ya.",
+      "Construyamos juntos un futuro digital informado."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Conspiracy theory, digital interface, hidden data streams, server racks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Conspiracy theory, digital interface, hidden data streams, server racks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La élite sabe algo de la IA que te ocultan.",
+        "pexels_query": "hidden data streams"
+      },
+      {
+        "id": 2,
+        "prompt": "Data collection, abstract neural network, glowing circuits, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data collection, abstract neural network, glowing circuits, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Las nuevas herramientas recopilan datos que nadie esperaba.",
+        "pexels_query": "neural network circuits"
+      },
+      {
+        "id": 3,
+        "prompt": "AI training data, abstract information flow, digital matrix, server room, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "AI training data, abstract information flow, digital matrix, server room, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu información entrena modelos complejos ahora mismo.",
+        "pexels_query": "ai data training"
+      },
+      {
+        "id": 4,
+        "prompt": "Surveillance concept, glowing eye-like sensor, dark room, digital reflection, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Surveillance concept, glowing eye-like sensor, dark room, digital reflection, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Crees estar solo, pero algo no está bien.",
+        "pexels_query": "digital surveillance"
+      },
+      {
+        "id": 5,
+        "prompt": "User interaction data points, abstract digital fingerprints, glowing screen, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "User interaction data points, abstract digital fingerprints, glowing screen, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cada clic es un punto clave de aprendizaje.",
+        "pexels_query": "data fingerprints"
+      },
+      {
+        "id": 6,
+        "prompt": "Feeling of being watched, abstract digital shadow, dark alley, faint light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Feeling of being watched, abstract digital shadow, dark alley, faint light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes: esa sensación de vigilancia constante.",
+        "pexels_query": "digital shadow"
+      },
+      {
+        "id": 7,
+        "prompt": "Hidden clauses, blurred legal text, magnifying glass, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hidden clauses, blurred legal text, magnifying glass, dark background, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Los términos de servicio ocultan verdades incómodas siempre.",
+        "pexels_query": "hidden legal text"
+      },
+      {
+        "id": 8,
+        "prompt": "Eroding privacy, shattered glass effect over digital data, dark theme, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Eroding privacy, shattered glass effect over digital data, dark theme, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio: tu privacidad se erosionaba sin fin.",
+        "pexels_query": "data erosion"
+      },
+      {
+        "id": 9,
+        "prompt": "Corporate silence, vast empty data center, dramatic side lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Corporate silence, vast empty data center, dramatic side lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio de las empresas era intencional.",
+        "pexels_query": "empty data center"
+      },
+      {
+        "id": 10,
+        "prompt": "Data feeding AI, abstract pipelines, glowing data packets, large server, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data feeding AI, abstract pipelines, glowing data packets, large server, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus datos alimentan una inteligencia artificial imparable.",
+        "pexels_query": "data pipelines"
+      },
+      {
+        "id": 11,
+        "prompt": "Invisible profiles, abstract data silhouette of a person, glowing points, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Invisible profiles, abstract data silhouette of a person, glowing points, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Decisiones críticas se basan en perfiles invisibles.",
+        "pexels_query": "abstract data profile"
+      },
+      {
+        "id": 12,
+        "prompt": "Financial decisions, glowing algorithms on a bank screen, credit card interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Financial decisions, glowing algorithms on a bank screen, credit card interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Desde créditos bancarios hasta ofertas de empleo futuras.",
+        "pexels_query": "ai finance algorithms"
+      },
+      {
+        "id": 13,
+        "prompt": "Unjust AI, broken algorithm symbols, distorted code, red error lights, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Unjust AI, broken algorithm symbols, distorted code, red error lights, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Estos sistemas no siempre son justos.",
+        "pexels_query": "broken algorithm"
+      },
+      {
+        "id": 14,
+        "prompt": "AI bias, skewed data visualization, unequal bars, digital graph, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "AI bias, skewed data visualization, unequal bars, digital graph, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Existen sesgos ocultos documentados por investigadores.",
+        "pexels_query": "ai bias graph"
+      },
+      {
+        "id": 15,
+        "prompt": "Social injustice, abstract digital chains, dark digital figures, glowing lines, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Social injustice, abstract digital chains, dark digital figures, glowing lines, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Afectan a minorías, reproduciendo injusticias sociales ya vividas.",
+        "pexels_query": "digital injustice"
+      },
+      {
+        "id": 16,
+        "prompt": "Serious consequences, digital cracked earth, data flowing through cracks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Serious consequences, digital cracked earth, data flowing through cracks, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Es más grave de lo que crees.",
+        "pexels_query": "digital consequence"
+      },
+      {
+        "id": 17,
+        "prompt": "Digital control, glowing hand over abstract data, secure interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital control, glowing hand over abstract data, secure interface, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tú puedes controlar tu huella digital.",
+        "pexels_query": "digital control hand"
+      },
+      {
+        "id": 18,
+        "prompt": "Privacy settings, abstract shield over app icons, secure browser, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Privacy settings, abstract shield over app icons, secure browser, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Revisa permisos de apps; usa navegadores privados.",
+        "pexels_query": "privacy app settings"
+      },
+      {
+        "id": 19,
+        "prompt": "Reading privacy policy, digital document scroll, glowing text, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Reading privacy policy, digital document scroll, glowing text, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lee políticas de privacidad, aunque sea el resumen.",
+        "pexels_query": "digital privacy policy"
+      },
+      {
+        "id": 20,
+        "prompt": "Disable telemetry, abstract switch turning off data flow, glowing network, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Disable telemetry, abstract switch turning off data flow, glowing network, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Desactiva telemetría en tus dispositivos, si puedes.",
+        "pexels_query": "telemetry disable"
+      },
+      {
+        "id": 21,
+        "prompt": "Free privacy tools, abstract digital padlock, glowing secure icon, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Free privacy tools, abstract digital padlock, glowing secure icon, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Existen herramientas gratuitas que protegen tu información sensible.",
+        "pexels_query": "privacy software lock"
+      },
+      {
+        "id": 22,
+        "prompt": "AI understanding, glowing brain network, abstract data synapses, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "AI understanding, glowing brain network, abstract data synapses, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Entender cómo funciona la IA te da poder.",
+        "pexels_query": "ai understanding brain"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital future, complex data pathways converging, glowing digital city, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital future, complex data pathways converging, glowing digital city, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo; tu futuro digital depende.",
+        "pexels_query": "digital future pathways"
+      },
+      {
+        "id": 24,
+        "prompt": "Informed choice, balanced scales with data and facts, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Informed choice, balanced scales with data and facts, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Infórmate: conoce riesgos reales, no falsos.",
+        "pexels_query": "informed choice scales"
+      },
+      {
+        "id": 25,
+        "prompt": "Fact-checking AI, magnifying glass over data points, glowing information, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Fact-checking AI, magnifying glass over data points, glowing information, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aquí desmentimos mitos con datos concretos y actuales.",
+        "pexels_query": "ai fact check"
+      },
+      {
+        "id": 26,
+        "prompt": "Tuialista channel, abstract digital logo, secure interface, clean design, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Tuialista channel, abstract digital logo, secure interface, clean design, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tuialista es tu canal para entender IA.",
+        "pexels_query": "tuialista logo concept"
+      },
+      {
+        "id": 27,
+        "prompt": "Subscribe for knowledge, glowing subscribe button, abstract data flow, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Subscribe for knowledge, glowing subscribe button, abstract data flow, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Para seguir empoderándote con conocimiento, suscríbete ya.",
+        "pexels_query": "subscribe button ai"
+      },
+      {
+        "id": 28,
+        "prompt": "Informed digital future, hands building abstract data structure, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Informed digital future, hands building abstract data structure, glowing light, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Construyamos juntos un futuro digital informado.",
+        "pexels_query": "digital future building"
+      }
+    ],
+    "hooks": [
+      "IA nuevas ocultan tu información",
+      "Tus datos entrenan modelos ahora",
+      "Hay sesgos documentados"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
