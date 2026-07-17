@@ -5758,5 +5758,248 @@
       "Rompe tu burbuja digital"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "40bd9666-9abf-4410-884e-2e18a7eb377f",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Digital network node connections, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital network node connections, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Creíste entender las nuevas IA. Te equivocabas.\", \"pexels_query\": \"network connections data\"}, {\"id\": 2, \"prompt\": \"Abstract data flow visualization, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data flow visualization, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Un secreto oculto define estas herramientas IA.\", \"pexels_query\": \"abstract data stream\"}, {\"id\": 3, \"prompt\": \"Circuit board microchips closeup, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Circuit board microchips closeup, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No son simples asistentes, sino algo más.\", \"pexels_query\": \"microchip circuit board\"}, {\"id\": 4, \"prompt\": \"Satellite view of complex urban patterns, night, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Satellite view of complex urban patterns, night, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA ve patrones donde nadie más puede.\", \"pexels_query\": \"urban patterns satellite\"}, {\"id\": 5, \"prompt\": \"Heatmap overlay on a digital map, showing hidden trends, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Heatmap overlay on a digital map, showing hidden trends, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Descubre datos invisibles para el ojo humano.\", \"pexels_query\": \"heatmap data visualization\"}, {\"id\": 6, \"prompt\": \"Glitching digital screen displaying fragmented code, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glitching digital screen displaying fragmented code, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algo no está bien con tu percepción de ellas.\", \"pexels_query\": \"glitching code screen\"}, {\"id\": 7, \"prompt\": \"Futuristic user interface showing advanced analytics, holographic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Futuristic user interface showing advanced analytics, holographic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Herramientas nuevas que te empoderan extrañamente.\", \"pexels_query\": \"holographic user interface\"}, {\"id\": 8, \"prompt\": \"Rows of server racks in a dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Rows of server racks in a dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Analizan millones de puntos de datos, al instante.\", \"pexels_query\": \"data center servers\"}, {\"id\": 9, \"prompt\": \"Abstract neural network representation, glowing synapses, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract neural network representation, glowing synapses, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes: esta tecnología es diferente.\", \"pexels_query\": \"neural network abstract\"}, {\"id\": 10, \"prompt\": \"Robotic arm performing delicate assembly, factory floor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Robotic arm performing delicate assembly, factory floor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Permiten automatizar tareas que creías imposibles.\", \"pexels_query\": \"robotic assembly arm\"}, {\"id\": 11, \"prompt\": \"Digital text emerging from glowing lines, creative writing AI, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital text emerging from glowing lines, creative writing AI, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Generan contenido que parece humano, sorprendentemente.\", \"pexels_query\": \"digital text generation\"}, {\"id\": 12, \"prompt\": \"Digital stock charts with upward trends, complex analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital stock charts with upward trends, complex analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Te dan una ventaja competitiva brutal, si las usas.\", \"pexels_query\": \"stock market data\"}, {\"id\": 13, \"prompt\": \"Time-lapse of evolving digital landscapes, algorithmic growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Time-lapse of evolving digital landscapes, algorithmic growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio venir con esta velocidad.\", \"pexels_query\": \"algorithmic growth digital\"}, {\"id\": 14, \"prompt\": \"Predictive analytics dashboard with future graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Predictive analytics dashboard with future graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA anticipa tendencias antes de que ocurran.\", \"pexels_query\": \"predictive analytics screen\"}, {\"id\": 15, \"prompt\": \"Infinite loop of data flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Infinite loop of data flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Su secreto: aprender de forma continua e ilimitada.\", \"pexels_query\": \"data processing loop\"}, {\"id\": 16, \"prompt\": \"Globe with glowing data points, global information access, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Globe with glowing data points, global information access, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Accede a información que antes era imposible obtener.\", \"pexels_query\": \"global data points\"}, {\"id\": 17, \"prompt\": \"Force field visualization, digital barrier, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Force field visualization, digital barrier, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo más. Su impacto es real.\", \"pexels_query\": \"digital force field\"}, {\"id\": 18, \"prompt\": \"Digital ledger with unusual transaction highlights, fraud detection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital ledger with unusual transaction highlights, fraud detection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algunas herramientas detectan anomalías financieras precisas.\", \"pexels_query\": \"financial anomaly detection\"}, {\"id\": 19, \"prompt\": \"Complex simulation model of city growth, predictive, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Complex simulation model of city growth, predictive, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Otras simulan escenarios futuros con asombrosa exactitud.\", \"pexels_query\": \"city simulation model\"}, {\"id\": 20, \"prompt\": \"Empty, sterile lab with advanced AI equipment, no sound, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty, sterile lab with advanced AI equipment, no sound, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio absoluto de su trabajo es perturbador.\", \"pexels_query\": \"AI lab sterile\"}, {\"id\": 21, \"prompt\": \"Hand reaching for a holographic interface, digital control, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hand reaching for a holographic interface, digital control, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tú también puedes dominar este poder oculto.\", \"pexels_query\": \"holographic control interface\"}, {\"id\": 22, \"prompt\": \"Flowchart of different AI models and their applications, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Flowchart of different AI models and their applications, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Entiende qué IA usar para cada objetivo.\", \"pexels_query\": \"AI model flowchart\"}, {\"id\": 23, \"prompt\": \"Screen displaying effective prompt engineering examples, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Screen displaying effective prompt engineering examples, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aprende los prompts que maximizan su verdadero potencial.\", \"pexels_query\": \"prompt engineering examples\"}, {\"id\": 24, \"prompt\": \"Close-up of a high-performance GPU, glowing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Close-up of a high-performance GPU, glowing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Estas herramientas no son ciencia ficción, son hoy.\", \"pexels_query\": \"high performance GPU\"}, {\"id\": 25, \"prompt\": \"Vast, abstract digital landscape, feeling of scale, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Vast, abstract digital landscape, feeling of scale, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No estabas solo al sentir su magnitud.\", \"pexels_query\": \"abstract digital landscape\"}, {\"id\": 26, \"prompt\": \"Gears interlocking perfectly in a digital mechanism, precision, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Gears interlocking perfectly in a digital mechanism, precision, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo importante es saber aplicarlas sabiamente.\", \"pexels_query\": \"digital gears precision\"}, {\"id\": 27, \"prompt\": \"Glowing upward arrow on a complex digital graph, growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glowing upward arrow on a complex digital graph, growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Así podrás crecer en este nuevo ecosistema.\", \"pexels_query\": \"digital growth graph\"}, {\"id\": 28, \"prompt\": \"Empty futuristic workstation, ready for interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty futuristic workstation, ready for interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Prueba tú mismo su poder oculto. Comenta resultados.\", \"pexels_query\": \"futuristic workstation empty\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Creíste entender las nuevas IA. Te equivocabas. Un secreto oculto define estas herramientas IA. No son simples asistentes, sino algo más. La IA ve patrones donde nadie más puede. Descubre datos invisibles para el ojo humano. Algo no está bien con tu percepción de ellas. Herramientas nuevas que te empoderan extrañamente. Analizan millones de puntos de datos, al instante. Lo sentiste antes: esta tecnología es diferente. Permiten automatizar tareas que creías imposibles. Generan contenido que parece humano, sorprendentemente. Te dan una ventaja competitiva brutal, si las usas. Nadie lo vio venir con esta velocidad. La IA anticipa tendencias antes de que ocurran. Su secreto: aprender de forma continua e ilimitada. Accede a información que antes era imposible obtener. No puedes ignorarlo más. Su impacto es real. Algunas herramientas detectan anomalías financieras precisas. Otras simulan escenarios futuros con asombrosa exactitud. El silencio absoluto de su trabajo es perturbador. Tú también puedes dominar este poder oculto. Entiende qué IA usar para cada objetivo. Aprende los prompts que maximizan su verdadero potencial. Estas herramientas no son ciencia ficción, son hoy. No estabas solo al sentir su magnitud. Lo importante es saber aplicarlas sabiamente. Así podrás crecer en este nuevo ecosistema. Prueba tú mismo su poder oculto. Comenta resultados.",
+    "titulo_sugerido": "El SECRETO Oculto de las Nuevas IA (Te dejará HELADO)",
+    "escenas_texto": [
+      "Creíste entender las nuevas IA. Te equivocabas.",
+      "Un secreto oculto define estas herramientas IA.",
+      "No son simples asistentes, sino algo más.",
+      "La IA ve patrones donde nadie más puede.",
+      "Descubre datos invisibles para el ojo humano.",
+      "Algo no está bien con tu percepción de ellas.",
+      "Herramientas nuevas que te empoderan extrañamente.",
+      "Analizan millones de puntos de datos, al instante.",
+      "Lo sentiste antes: esta tecnología es diferente.",
+      "Permiten automatizar tareas que creías imposibles.",
+      "Generan contenido que parece humano, sorprendentemente.",
+      "Te dan una ventaja competitiva brutal, si las usas.",
+      "Nadie lo vio venir con esta velocidad.",
+      "La IA anticipa tendencias antes de que ocurran.",
+      "Su secreto: aprender de forma continua e ilimitada.",
+      "Accede a información que antes era imposible obtener.",
+      "No puedes ignorarlo más. Su impacto es real.",
+      "Algunas herramientas detectan anomalías financieras precisas.",
+      "Otras simulan escenarios futuros con asombrosa exactitud.",
+      "El silencio absoluto de su trabajo es perturbador.",
+      "Tú también puedes dominar este poder oculto.",
+      "Entiende qué IA usar para cada objetivo.",
+      "Aprende los prompts que maximizan su verdadero potencial.",
+      "Estas herramientas no son ciencia ficción, son hoy.",
+      "No estabas solo al sentir su magnitud.",
+      "Lo importante es saber aplicarlas sabiamente.",
+      "Así podrás crecer en este nuevo ecosistema.",
+      "Prueba tú mismo su poder oculto. Comenta resultados."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Digital network node connections, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital network node connections, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Creíste entender las nuevas IA. Te equivocabas.",
+        "pexels_query": "network connections data"
+      },
+      {
+        "id": 2,
+        "prompt": "Abstract data flow visualization, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data flow visualization, dark background, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Un secreto oculto define estas herramientas IA.",
+        "pexels_query": "abstract data stream"
+      },
+      {
+        "id": 3,
+        "prompt": "Circuit board microchips closeup, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Circuit board microchips closeup, intricate details, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No son simples asistentes, sino algo más.",
+        "pexels_query": "microchip circuit board"
+      },
+      {
+        "id": 4,
+        "prompt": "Satellite view of complex urban patterns, night, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Satellite view of complex urban patterns, night, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA ve patrones donde nadie más puede.",
+        "pexels_query": "urban patterns satellite"
+      },
+      {
+        "id": 5,
+        "prompt": "Heatmap overlay on a digital map, showing hidden trends, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Heatmap overlay on a digital map, showing hidden trends, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Descubre datos invisibles para el ojo humano.",
+        "pexels_query": "heatmap data visualization"
+      },
+      {
+        "id": 6,
+        "prompt": "Glitching digital screen displaying fragmented code, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glitching digital screen displaying fragmented code, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algo no está bien con tu percepción de ellas.",
+        "pexels_query": "glitching code screen"
+      },
+      {
+        "id": 7,
+        "prompt": "Futuristic user interface showing advanced analytics, holographic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Futuristic user interface showing advanced analytics, holographic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Herramientas nuevas que te empoderan extrañamente.",
+        "pexels_query": "holographic user interface"
+      },
+      {
+        "id": 8,
+        "prompt": "Rows of server racks in a dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Rows of server racks in a dimly lit data center, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Analizan millones de puntos de datos, al instante.",
+        "pexels_query": "data center servers"
+      },
+      {
+        "id": 9,
+        "prompt": "Abstract neural network representation, glowing synapses, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract neural network representation, glowing synapses, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes: esta tecnología es diferente.",
+        "pexels_query": "neural network abstract"
+      },
+      {
+        "id": 10,
+        "prompt": "Robotic arm performing delicate assembly, factory floor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Robotic arm performing delicate assembly, factory floor, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Permiten automatizar tareas que creías imposibles.",
+        "pexels_query": "robotic assembly arm"
+      },
+      {
+        "id": 11,
+        "prompt": "Digital text emerging from glowing lines, creative writing AI, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital text emerging from glowing lines, creative writing AI, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Generan contenido que parece humano, sorprendentemente.",
+        "pexels_query": "digital text generation"
+      },
+      {
+        "id": 12,
+        "prompt": "Digital stock charts with upward trends, complex analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital stock charts with upward trends, complex analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Te dan una ventaja competitiva brutal, si las usas.",
+        "pexels_query": "stock market data"
+      },
+      {
+        "id": 13,
+        "prompt": "Time-lapse of evolving digital landscapes, algorithmic growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Time-lapse of evolving digital landscapes, algorithmic growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio venir con esta velocidad.",
+        "pexels_query": "algorithmic growth digital"
+      },
+      {
+        "id": 14,
+        "prompt": "Predictive analytics dashboard with future graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Predictive analytics dashboard with future graphs, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA anticipa tendencias antes de que ocurran.",
+        "pexels_query": "predictive analytics screen"
+      },
+      {
+        "id": 15,
+        "prompt": "Infinite loop of data flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Infinite loop of data flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Su secreto: aprender de forma continua e ilimitada.",
+        "pexels_query": "data processing loop"
+      },
+      {
+        "id": 16,
+        "prompt": "Globe with glowing data points, global information access, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Globe with glowing data points, global information access, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Accede a información que antes era imposible obtener.",
+        "pexels_query": "global data points"
+      },
+      {
+        "id": 17,
+        "prompt": "Force field visualization, digital barrier, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Force field visualization, digital barrier, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo más. Su impacto es real.",
+        "pexels_query": "digital force field"
+      },
+      {
+        "id": 18,
+        "prompt": "Digital ledger with unusual transaction highlights, fraud detection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital ledger with unusual transaction highlights, fraud detection, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algunas herramientas detectan anomalías financieras precisas.",
+        "pexels_query": "financial anomaly detection"
+      },
+      {
+        "id": 19,
+        "prompt": "Complex simulation model of city growth, predictive, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Complex simulation model of city growth, predictive, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Otras simulan escenarios futuros con asombrosa exactitud.",
+        "pexels_query": "city simulation model"
+      },
+      {
+        "id": 20,
+        "prompt": "Empty, sterile lab with advanced AI equipment, no sound, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty, sterile lab with advanced AI equipment, no sound, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio absoluto de su trabajo es perturbador.",
+        "pexels_query": "AI lab sterile"
+      },
+      {
+        "id": 21,
+        "prompt": "Hand reaching for a holographic interface, digital control, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hand reaching for a holographic interface, digital control, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tú también puedes dominar este poder oculto.",
+        "pexels_query": "holographic control interface"
+      },
+      {
+        "id": 22,
+        "prompt": "Flowchart of different AI models and their applications, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Flowchart of different AI models and their applications, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Entiende qué IA usar para cada objetivo.",
+        "pexels_query": "AI model flowchart"
+      },
+      {
+        "id": 23,
+        "prompt": "Screen displaying effective prompt engineering examples, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Screen displaying effective prompt engineering examples, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aprende los prompts que maximizan su verdadero potencial.",
+        "pexels_query": "prompt engineering examples"
+      },
+      {
+        "id": 24,
+        "prompt": "Close-up of a high-performance GPU, glowing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Close-up of a high-performance GPU, glowing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Estas herramientas no son ciencia ficción, son hoy.",
+        "pexels_query": "high performance GPU"
+      },
+      {
+        "id": 25,
+        "prompt": "Vast, abstract digital landscape, feeling of scale, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Vast, abstract digital landscape, feeling of scale, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No estabas solo al sentir su magnitud.",
+        "pexels_query": "abstract digital landscape"
+      },
+      {
+        "id": 26,
+        "prompt": "Gears interlocking perfectly in a digital mechanism, precision, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Gears interlocking perfectly in a digital mechanism, precision, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo importante es saber aplicarlas sabiamente.",
+        "pexels_query": "digital gears precision"
+      },
+      {
+        "id": 27,
+        "prompt": "Glowing upward arrow on a complex digital graph, growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glowing upward arrow on a complex digital graph, growth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Así podrás crecer en este nuevo ecosistema.",
+        "pexels_query": "digital growth graph"
+      },
+      {
+        "id": 28,
+        "prompt": "Empty futuristic workstation, ready for interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty futuristic workstation, ready for interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Prueba tú mismo su poder oculto. Comenta resultados.",
+        "pexels_query": "futuristic workstation empty"
+      }
+    ],
+    "hooks": [
+      "IA predice tus intenciones",
+      "Herramientas ven lo oculto",
+      "Tu futuro ya se escribe"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
