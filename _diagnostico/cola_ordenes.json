@@ -5515,5 +5515,248 @@
       "Deepfakes son indetectables."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "f0230e78-89e4-4760-a2b9-bf0ef3751ef4",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"digital matrix flowing code on screens, cyber security, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital matrix flowing code on screens, cyber security, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Crees elegir tu noticia. La IA ya la filtró.\", \"pexels_query\": \"digital matrix code\"}, {\"id\": 2, \"prompt\": \"Abstract neural network glowing, data connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract neural network glowing, data connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algoritmos no son neutrales. Tienen sesgo programado.\", \"pexels_query\": \"neural network abstract\"}, {\"id\": 3, \"prompt\": \"Data center servers with blue glow, complex cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Data center servers with blue glow, complex cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Moldean lo que ves, formando tu realidad digital.\", \"pexels_query\": \"data center blue\"}, {\"id\": 4, \"prompt\": \"Screen displaying news feed, blurred, digital filter effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Screen displaying news feed, blurred, digital filter effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Noticias que lees: ya fueron filtradas por IA.\", \"pexels_query\": \"digital news filter\"}, {\"id\": 5, \"prompt\": \"Microchip with intricate circuits, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Microchip with intricate circuits, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No es conspiración, es efecto de personalización extrema.\", \"pexels_query\": \"microchip circuits\"}, {\"id\": 6, \"prompt\": \"Empty corridor with digital lines, unsettling atmosphere, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty corridor with digital lines, unsettling atmosphere, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes: solo ves un lado.\", \"pexels_query\": \"empty digital corridor\"}, {\"id\": 7, \"prompt\": \"Abstract representation of data bubble, glowing spheres, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data bubble, glowing spheres, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu burbuja de información se crea con cada clic.\", \"pexels_query\": \"data bubble concept\"}, {\"id\": 8, \"prompt\": \"Blurred figures in a vast data hall, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Blurred figures in a vast data hall, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Omiten perspectivas cruciales sin que tú lo sepas.\", \"pexels_query\": \"vast data hall\"}, {\"id\": 9, \"prompt\": \"Screen showing conflicting news headlines, unsettling design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Screen showing conflicting news headlines, unsettling design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algo no está bien: tus feeds dicen lo mismo.\", \"pexels_query\": \"conflicting news screen\"}, {\"id\": 10, \"prompt\": \"Massive network connections glowing, abstract data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Massive network connections glowing, abstract data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No estabas solo; millones experimentan esta manipulación.\", \"pexels_query\": \"massive network glow\"}, {\"id\": 11, \"prompt\": \"Digital newspaper headlines morphing, AI generation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital newspaper headlines morphing, AI generation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"IA redacta titulares buscando tu reacción emocional.\", \"pexels_query\": \"digital headlines morphing\"}, {\"id\": 12, \"prompt\": \"Automated assembly line, robotic arms, industrial setting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Automated assembly line, robotic arms, industrial setting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Reportajes enteros se generan. ¿Quién los audita?\", \"pexels_query\": \"robotic assembly line\"}, {\"id\": 13, \"prompt\": \"Dark room with single, glowing server rack, eerie light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Dark room with single, glowing server rack, eerie light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio: el algoritmo decide qué es viral.\", \"pexels_query\": \"glowing server rack\"}, {\"id\": 14, \"prompt\": \"Abstract data streams converging, powerful digital vortex, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data streams converging, powerful digital vortex, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Plataformas no quieren que sepas su control.\", \"pexels_query\": \"data streams converging\"}, {\"id\": 15, \"prompt\": \"Empty control room, dark screens, faint digital light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty control room, dark screens, faint digital light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio absoluto sobre sesgos algorítmicos ensordece.\", \"pexels_query\": \"empty control room\"}, {\"id\": 16, \"prompt\": \"Circuit board with glowing pathways, intricate design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Circuit board with glowing pathways, intricate design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo; afecta tu percepción.\", \"pexels_query\": \"glowing circuit pathways\"}, {\"id\": 17, \"prompt\": \"Digital data flowing into a brain outline, abstract concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital data flowing into a brain outline, abstract concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El 'secreto oculto': la IA cura tu realidad.\", \"pexels_query\": \"data brain outline\"}, {\"id\": 18, \"prompt\": \"Server rack with blinking lights, high-tech aesthetic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Server rack with blinking lights, high-tech aesthetic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cada noticia de IA es susceptible a su filtro.\", \"pexels_query\": \"blinking server rack\"}, {\"id\": 19, \"prompt\": \"Abstract digital world map, data points connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital world map, data points connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hoy un rumor, mañana 'verdad' en tu feed.\", \"pexels_query\": \"digital world map data\"}, {\"id\": 20, \"prompt\": \"Hand holding magnifying glass over digital screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hand holding magnifying glass over digital screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Verifica siempre la fuente, no confíes ciego.\", \"pexels_query\": \"magnifying glass screen\"}, {\"id\": 21, \"prompt\": \"Multiple screens showing different news sources, diverse content, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Multiple screens showing different news sources, diverse content, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Diversifica tus fuentes, sal de tu burbuja digital.\", \"pexels_query\": \"multiple news screens\"}, {\"id\": 22, \"prompt\": \"Abstract representation of diverging paths, decision points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of diverging paths, decision points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Busca opiniones diferentes, reta tu algoritmo.\", \"pexels_query\": \"diverging data paths\"}, {\"id\": 23, \"prompt\": \"Digital forensics interface, text analysis tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital forensics interface, text analysis tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Usa herramientas: detecta texto generado por IA.\", \"pexels_query\": \"digital forensics tools\"}, {\"id\": 24, \"prompt\": \"Question mark over a digital newspaper, critical thinking concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Question mark over a digital newspaper, critical thinking concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cuestiona el titular, ángulo y su sesgo.\", \"pexels_query\": \"question mark newspaper\"}, {\"id\": 25, \"prompt\": \"Human brain illuminated by digital light, abstract knowledge, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Human brain illuminated by digital light, abstract knowledge, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu pensamiento crítico es la defensa más poderosa.\", \"pexels_query\": \"digital brain knowledge\"}, {\"id\": 26, \"prompt\": \"Control panel with glowing buttons, user interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Control panel with glowing buttons, user interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Activa tu filtro personal, no el del algoritmo.\", \"pexels_query\": \"control panel buttons\"}, {\"id\": 27, \"prompt\": \"Abstract representation of data organization, structured blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data organization, structured blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La IA no reemplaza la verdad, solo organiza.\", \"pexels_query\": \"data organization blocks\"}, {\"id\": 28, \"prompt\": \"Hand interacting with a holographic interface, making informed choices, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Hand interacting with a holographic interface, making informed choices, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Úsala para buscar, no para decidir lo real.\", \"pexels_query\": \"holographic informed choice\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Crees elegir tu noticia. La IA ya la filtró. Algoritmos no son neutrales. Tienen sesgo programado. Moldean lo que ves, formando tu realidad digital. Noticias que lees: ya fueron filtradas por IA. No es conspiración, es efecto de personalización extrema. Lo sentiste antes: solo ves un lado. Tu burbuja de información se crea con cada clic. Omiten perspectivas cruciales sin que tú lo sepas. Algo no está bien: tus feeds dicen lo mismo. No estabas solo; millones experimentan esta manipulación. IA redacta titulares buscando tu reacción emocional. Reportajes enteros se generan. ¿Quién los audita? Nadie lo vio: el algoritmo decide qué es viral. Plataformas no quieren que sepas su control. El silencio absoluto sobre sesgos algorítmicos ensordece. No puedes ignorarlo; afecta tu percepción. El 'secreto oculto': la IA cura tu realidad. Cada noticia de IA es susceptible a su filtro. Hoy un rumor, mañana 'verdad' en tu feed. Verifica siempre la fuente, no confíes ciego. Diversifica tus fuentes, sal de tu burbuja digital. Busca opiniones diferentes, reta tu algoritmo. Usa herramientas: detecta texto generado por IA. Cuestiona el titular, ángulo y su sesgo. Tu pensamiento crítico es la defensa más poderosa. Activa tu filtro personal, no el del algoritmo. La IA no reemplaza la verdad, solo organiza. Úsala para buscar, no para decidir lo real.",
+    "titulo_sugerido": "El SECRETO Oculto de las Noticias de IA que Nadie Quiere que Sepas",
+    "escenas_texto": [
+      "Crees elegir tu noticia. La IA ya la filtró.",
+      "Algoritmos no son neutrales. Tienen sesgo programado.",
+      "Moldean lo que ves, formando tu realidad digital.",
+      "Noticias que lees: ya fueron filtradas por IA.",
+      "No es conspiración, es efecto de personalización extrema.",
+      "Lo sentiste antes: solo ves un lado.",
+      "Tu burbuja de información se crea con cada clic.",
+      "Omiten perspectivas cruciales sin que tú lo sepas.",
+      "Algo no está bien: tus feeds dicen lo mismo.",
+      "No estabas solo; millones experimentan esta manipulación.",
+      "IA redacta titulares buscando tu reacción emocional.",
+      "Reportajes enteros se generan. ¿Quién los audita?",
+      "Nadie lo vio: el algoritmo decide qué es viral.",
+      "Plataformas no quieren que sepas su control.",
+      "El silencio absoluto sobre sesgos algorítmicos ensordece.",
+      "No puedes ignorarlo; afecta tu percepción.",
+      "El 'secreto oculto': la IA cura tu realidad.",
+      "Cada noticia de IA es susceptible a su filtro.",
+      "Hoy un rumor, mañana 'verdad' en tu feed.",
+      "Verifica siempre la fuente, no confíes ciego.",
+      "Diversifica tus fuentes, sal de tu burbuja digital.",
+      "Busca opiniones diferentes, reta tu algoritmo.",
+      "Usa herramientas: detecta texto generado por IA.",
+      "Cuestiona el titular, ángulo y su sesgo.",
+      "Tu pensamiento crítico es la defensa más poderosa.",
+      "Activa tu filtro personal, no el del algoritmo.",
+      "La IA no reemplaza la verdad, solo organiza.",
+      "Úsala para buscar, no para decidir lo real."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "digital matrix flowing code on screens, cyber security, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital matrix flowing code on screens, cyber security, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Crees elegir tu noticia. La IA ya la filtró.",
+        "pexels_query": "digital matrix code"
+      },
+      {
+        "id": 2,
+        "prompt": "Abstract neural network glowing, data connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract neural network glowing, data connections, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algoritmos no son neutrales. Tienen sesgo programado.",
+        "pexels_query": "neural network abstract"
+      },
+      {
+        "id": 3,
+        "prompt": "Data center servers with blue glow, complex cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Data center servers with blue glow, complex cables, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Moldean lo que ves, formando tu realidad digital.",
+        "pexels_query": "data center blue"
+      },
+      {
+        "id": 4,
+        "prompt": "Screen displaying news feed, blurred, digital filter effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Screen displaying news feed, blurred, digital filter effect, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Noticias que lees: ya fueron filtradas por IA.",
+        "pexels_query": "digital news filter"
+      },
+      {
+        "id": 5,
+        "prompt": "Microchip with intricate circuits, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Microchip with intricate circuits, macro shot, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No es conspiración, es efecto de personalización extrema.",
+        "pexels_query": "microchip circuits"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty corridor with digital lines, unsettling atmosphere, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty corridor with digital lines, unsettling atmosphere, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes: solo ves un lado.",
+        "pexels_query": "empty digital corridor"
+      },
+      {
+        "id": 7,
+        "prompt": "Abstract representation of data bubble, glowing spheres, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data bubble, glowing spheres, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu burbuja de información se crea con cada clic.",
+        "pexels_query": "data bubble concept"
+      },
+      {
+        "id": 8,
+        "prompt": "Blurred figures in a vast data hall, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Blurred figures in a vast data hall, dramatic lighting, RAW photo, technology editorial, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Omiten perspectivas cruciales sin que tú lo sepas.",
+        "pexels_query": "vast data hall"
+      },
+      {
+        "id": 9,
+        "prompt": "Screen showing conflicting news headlines, unsettling design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Screen showing conflicting news headlines, unsettling design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algo no está bien: tus feeds dicen lo mismo.",
+        "pexels_query": "conflicting news screen"
+      },
+      {
+        "id": 10,
+        "prompt": "Massive network connections glowing, abstract data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Massive network connections glowing, abstract data flow, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No estabas solo; millones experimentan esta manipulación.",
+        "pexels_query": "massive network glow"
+      },
+      {
+        "id": 11,
+        "prompt": "Digital newspaper headlines morphing, AI generation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital newspaper headlines morphing, AI generation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "IA redacta titulares buscando tu reacción emocional.",
+        "pexels_query": "digital headlines morphing"
+      },
+      {
+        "id": 12,
+        "prompt": "Automated assembly line, robotic arms, industrial setting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Automated assembly line, robotic arms, industrial setting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Reportajes enteros se generan. ¿Quién los audita?",
+        "pexels_query": "robotic assembly line"
+      },
+      {
+        "id": 13,
+        "prompt": "Dark room with single, glowing server rack, eerie light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Dark room with single, glowing server rack, eerie light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio: el algoritmo decide qué es viral.",
+        "pexels_query": "glowing server rack"
+      },
+      {
+        "id": 14,
+        "prompt": "Abstract data streams converging, powerful digital vortex, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data streams converging, powerful digital vortex, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Plataformas no quieren que sepas su control.",
+        "pexels_query": "data streams converging"
+      },
+      {
+        "id": 15,
+        "prompt": "Empty control room, dark screens, faint digital light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty control room, dark screens, faint digital light, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio absoluto sobre sesgos algorítmicos ensordece.",
+        "pexels_query": "empty control room"
+      },
+      {
+        "id": 16,
+        "prompt": "Circuit board with glowing pathways, intricate design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Circuit board with glowing pathways, intricate design, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo; afecta tu percepción.",
+        "pexels_query": "glowing circuit pathways"
+      },
+      {
+        "id": 17,
+        "prompt": "Digital data flowing into a brain outline, abstract concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital data flowing into a brain outline, abstract concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El 'secreto oculto': la IA cura tu realidad.",
+        "pexels_query": "data brain outline"
+      },
+      {
+        "id": 18,
+        "prompt": "Server rack with blinking lights, high-tech aesthetic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Server rack with blinking lights, high-tech aesthetic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cada noticia de IA es susceptible a su filtro.",
+        "pexels_query": "blinking server rack"
+      },
+      {
+        "id": 19,
+        "prompt": "Abstract digital world map, data points connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital world map, data points connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hoy un rumor, mañana 'verdad' en tu feed.",
+        "pexels_query": "digital world map data"
+      },
+      {
+        "id": 20,
+        "prompt": "Hand holding magnifying glass over digital screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hand holding magnifying glass over digital screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Verifica siempre la fuente, no confíes ciego.",
+        "pexels_query": "magnifying glass screen"
+      },
+      {
+        "id": 21,
+        "prompt": "Multiple screens showing different news sources, diverse content, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Multiple screens showing different news sources, diverse content, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Diversifica tus fuentes, sal de tu burbuja digital.",
+        "pexels_query": "multiple news screens"
+      },
+      {
+        "id": 22,
+        "prompt": "Abstract representation of diverging paths, decision points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of diverging paths, decision points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Busca opiniones diferentes, reta tu algoritmo.",
+        "pexels_query": "diverging data paths"
+      },
+      {
+        "id": 23,
+        "prompt": "Digital forensics interface, text analysis tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital forensics interface, text analysis tools, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Usa herramientas: detecta texto generado por IA.",
+        "pexels_query": "digital forensics tools"
+      },
+      {
+        "id": 24,
+        "prompt": "Question mark over a digital newspaper, critical thinking concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Question mark over a digital newspaper, critical thinking concept, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cuestiona el titular, ángulo y su sesgo.",
+        "pexels_query": "question mark newspaper"
+      },
+      {
+        "id": 25,
+        "prompt": "Human brain illuminated by digital light, abstract knowledge, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Human brain illuminated by digital light, abstract knowledge, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu pensamiento crítico es la defensa más poderosa.",
+        "pexels_query": "digital brain knowledge"
+      },
+      {
+        "id": 26,
+        "prompt": "Control panel with glowing buttons, user interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Control panel with glowing buttons, user interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Activa tu filtro personal, no el del algoritmo.",
+        "pexels_query": "control panel buttons"
+      },
+      {
+        "id": 27,
+        "prompt": "Abstract representation of data organization, structured blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data organization, structured blocks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La IA no reemplaza la verdad, solo organiza.",
+        "pexels_query": "data organization blocks"
+      },
+      {
+        "id": 28,
+        "prompt": "Hand interacting with a holographic interface, making informed choices, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Hand interacting with a holographic interface, making informed choices, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Úsala para buscar, no para decidir lo real.",
+        "pexels_query": "holographic informed choice"
+      }
+    ],
+    "hooks": [
+      "Tu IA filtra tus noticias",
+      "Los algoritmos tienen sesgo",
+      "Rompe tu burbuja digital"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
