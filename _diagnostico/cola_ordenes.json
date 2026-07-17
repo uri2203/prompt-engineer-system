@@ -4308,5 +4308,240 @@
       "Hay sesgos documentados"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "bac71253-fd0d-4f64-a422-010fb3aeabc9",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Abstract digital network over a person's silhouette, neural network pattern, data flows, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Abstract digital network over a person's silhouette, neural network pattern, data flows, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"¿Y si un algoritmo silencioso ya decidió tu destino?\", \"pexels_query\": \"neural network silhouette\"}, {\"id\": 2, \"prompt\": \"Subtle biometric scan over an everyday scene, data processing in background, hidden cameras, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Subtle biometric scan over an everyday scene, data processing in background, hidden cameras, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"No lo ves, pero sus implicaciones afectan tu vida diaria.\", \"pexels_query\": \"biometric data scan\"}, {\"id\": 3, \"prompt\": \"Abstract credit score interface on a dark screen, financial data points, algorithm decision, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Abstract credit score interface on a dark screen, financial data points, algorithm decision, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Tu préstamo, tu seguro, aprobados o rechazados al instante.\", \"pexels_query\": \"financial algorithm screen\"}, {\"id\": 4, \"prompt\": \"Dark server room, blinking lights, data cables, sense of an unseen process, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Dark server room, blinking lights, data cables, sense of an unseen process, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Una decisión de IA, sin explicación clara, lo sentiste antes.\", \"pexels_query\": \"data center server\"}, {\"id\": 5, \"prompt\": \"Digital filtering interface, resumes passing through a virtual sieve, binary code, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Digital filtering interface, resumes passing through a virtual sieve, binary code, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"¿Tu currículum llegó? Un filtro de IA lo bloqueó.\", \"pexels_query\": \"AI resume filter\"}, {\"id\": 6, \"prompt\": \"Empty digital void, disappearing data packets, a sense of loss and unseen deletion, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Empty digital void, disappearing data packets, a sense of loss and unseen deletion, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Silencio absoluto; nadie lo vio, tu aplicación desapareció.\", \"pexels_query\": \"digital data disappearing\"}, {\"id\": 7, \"prompt\": \"AI medical interface, diagnostic scan results, abstract health data visualization, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"AI medical interface, diagnostic scan results, abstract health data visualization, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Diagnósticos médicos, tratamientos: la IA también interviene.\", \"pexels_query\": \"AI medical diagnostic\"}, {\"id\": 8, \"prompt\": \"Distorted data visualization, biased algorithm diagram, skewed graph, glitch effect, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Distorted data visualization, biased algorithm diagram, skewed graph, glitch effect, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Pero sus datos arrastran sesgos, podría perjudicarte.\", \"pexels_query\": \"biased data algorithm\"}, {\"id\": 9, \"prompt\": \"Overhead view of city streets with superimposed facial recognition grids, surveillance camera lens, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Overhead view of city streets with superimposed facial recognition grids, surveillance camera lens, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Imágenes de vigilancia te identifican, cada paso tuyo.\", \"pexels_query\": \"city surveillance camera\"}, {\"id\": 10, \"prompt\": \"Abstract digital fingerprint dissolving, data streams flowing away, privacy breach, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Abstract digital fingerprint dissolving, data streams flowing away, privacy breach, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Tu privacidad se desvanece; la IA te conoce.\", \"pexels_query\": \"digital privacy dissolving\"}, {\"id\": 11, \"prompt\": \"Military drone silhouette against a dark sky, target acquisition interface, abstract conflict zone, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Military drone silhouette against a dark sky, target acquisition interface, abstract conflict zone, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"A nivel global, la IA militar ya decide ataques.\", \"pexels_query\": \"military drone targeting\"}, {\"id\": 12, \"prompt\": \"Autonomous weapon system concept, robotic arm, abstract battlefield data, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Autonomous weapon system concept, robotic arm, abstract battlefield data, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Armas que atacan solas, sin intervención humana directa.\", \"pexels_query\": \"autonomous weapon system\"}, {\"id\": 13, \"prompt\": \"Distorted digital face mosaic, deepfake generation interface, glitch effect, misinformation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Distorted digital face mosaic, deepfake generation interface, glitch effect, misinformation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Deepfakes son reales, manipulan nuestra percepción ya.\", \"pexels_query\": \"deepfake generation software\"}, {\"id\": 14, \"prompt\": \"Political propaganda on digital screens, fake news spreading, election data manipulation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Political propaganda on digital screens, fake news spreading, election data manipulation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Influyen elecciones, creando realidades falsas convincentes.\", \"pexels_query\": \"digital election manipulation\"}, {\"id\": 15, \"prompt\": \"Fractured digital display, text fragments, reality vs illusion, algorithms, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Fractured digital display, text fragments, reality vs illusion, algorithms, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Lo que creías cierto, podría ser creación algorítmica.\", \"pexels_query\": \"fractured digital reality\"}, {\"id\": 16, \"prompt\": \"Dark abstract data streams, hidden patterns, invisible influence, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Dark abstract data streams, hidden patterns, invisible influence, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Esta manipulación es invisible, nadie la detectó.\", \"pexels_query\": \"invisible data patterns\"}, {\"id\": 17, \"prompt\": \"Clock gears stuck, while digital circuits rapidly expand, contrast of slow law vs fast tech, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Clock gears stuck, while digital circuits rapidly expand, contrast of slow law vs fast tech, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"La regulación va lenta, tecnología avanza sin freno.\", \"pexels_query\": \"slow regulation fast tech\"}, {\"id\": 18, \"prompt\": \"Broken circuit board, sparks flying, ethical AI dilemma symbol, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Broken circuit board, sparks flying, ethical AI dilemma symbol, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Escándalos éticos revelan fallos con consecuencias graves.\", \"pexels_query\": \"broken AI circuit\"}, {\"id\": 19, \"prompt\": \"Complex lines of code scrolling on a screen, abstract representation of life's decisions, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Complex lines of code scrolling on a screen, abstract representation of life's decisions, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Tu vida se rige por códigos que no entiendes.\", \"pexels_query\": \"abstract code lines\"}, {\"id\": 20, \"prompt\": \"Distorted digital landscape, unsettling glitch aesthetic, a sense of unease, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Distorted digital landscape, unsettling glitch aesthetic, a sense of unease, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Algo no está bien, sientes el cambio, es inasible.\", \"pexels_query\": \"glitch digital landscape\"}, {\"id\": 21, \"prompt\": \"Blueprint overlay on a digital brain, understanding AI mechanics, diagram of neural network, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Blueprint overlay on a digital brain, understanding AI mechanics, diagram of neural network, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Conocer estos mecanismos es protegerte del impacto.\", \"pexels_query\": \"AI brain blueprint\"}, {\"id\": 22, \"prompt\": \"Digital magnifying glass over complex AI code, revealing hidden layers, insight, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Digital magnifying glass over complex AI code, revealing hidden layers, insight, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"En Tuialista, desvelamos verdades incómodas de la IA.\", \"pexels_query\": \"AI code magnifying\"}, {\"id\": 23, \"prompt\": \"Abstract digital toolkit, AI tools on a glowing interface, empowering, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Abstract digital toolkit, AI tools on a glowing interface, empowering, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Desmontamos el pánico y damos herramientas para el futuro.\", \"pexels_query\": \"AI digital toolkit\"}, {\"id\": 24, \"prompt\": \"Open digital book with glowing AI symbols, knowledge and empowerment, learning interface, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Open digital book with glowing AI symbols, knowledge and empowerment, learning interface, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Aquí aprenderás qué hacer, no solo qué temer.\", \"pexels_query\": \"AI knowledge book\"}, {\"id\": 25, \"prompt\": \"Future city skyline with integrated AI elements, smart technology, sense of impending change, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Future city skyline with integrated AI elements, smart technology, sense of impending change, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"No puedes ignorarlo más; el futuro ya está aquí.\", \"pexels_query\": \"future AI city\"}, {\"id\": 26, \"prompt\": \"Human-centric AI interface, controlling algorithms, empowerment, clean digital lines, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Human-centric AI interface, controlling algorithms, empowerment, clean digital lines, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"Entiende cómo funciona, para que la IA trabaje para ti.\", \"pexels_query\": \"human control AI\"}, {\"id\": 27, \"prompt\": \"Abstract light bulb made of data points and circuits, symbolizing knowledge and power in AI, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"prompt_visual\": \"Abstract light bulb made of data points and circuits, symbolizing knowledge and power in AI, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism\", \"texto_locucion\": \"El conocimiento es poder en la era algorítmica.\", \"pexels_query\": \"AI knowledge power\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "¿Y si un algoritmo silencioso ya decidió tu destino? No lo ves, pero sus implicaciones afectan tu vida diaria. Tu préstamo, tu seguro, aprobados o rechazados al instante. Una decisión de IA, sin explicación clara, lo sentiste antes. ¿Tu currículum llegó? Un filtro de IA lo bloqueó. Silencio absoluto; nadie lo vio, tu aplicación desapareció. Diagnósticos médicos, tratamientos: la IA también interviene. Pero sus datos arrastran sesgos, podría perjudicarte. Imágenes de vigilancia te identifican, cada paso tuyo. Tu privacidad se desvanece; la IA te conoce. A nivel global, la IA militar ya decide ataques. Armas que atacan solas, sin intervención humana directa. Deepfakes son reales, manipulan nuestra percepción ya. Influyen elecciones, creando realidades falsas convincentes. Lo que creías cierto, podría ser creación algorítmica. Esta manipulación es invisible, nadie la detectó. La regulación va lenta, tecnología avanza sin freno. Escándalos éticos revelan fallos con consecuencias graves. Tu vida se rige por códigos que no entiendes. Algo no está bien, sientes el cambio, es inasible. Conocer estos mecanismos es protegerte del impacto. En Tuialista, desvelamos verdades incómodas de la IA. Desmontamos el pánico y damos herramientas para el futuro. Aquí aprenderás qué hacer, no solo qué temer. No puedes ignorarlo más; el futuro ya está aquí. Entiende cómo funciona, para que la IA trabaje para ti. El conocimiento es poder en la era algorítmica.",
+    "titulo_sugerido": "ALGORITMO OCULTO: Cómo la IA Ya Decide TU Vida (Sin que lo sepas)",
+    "escenas_texto": [
+      "¿Y si un algoritmo silencioso ya decidió tu destino?",
+      "No lo ves, pero sus implicaciones afectan tu vida diaria.",
+      "Tu préstamo, tu seguro, aprobados o rechazados al instante.",
+      "Una decisión de IA, sin explicación clara, lo sentiste antes.",
+      "¿Tu currículum llegó? Un filtro de IA lo bloqueó.",
+      "Silencio absoluto; nadie lo vio, tu aplicación desapareció.",
+      "Diagnósticos médicos, tratamientos: la IA también interviene.",
+      "Pero sus datos arrastran sesgos, podría perjudicarte.",
+      "Imágenes de vigilancia te identifican, cada paso tuyo.",
+      "Tu privacidad se desvanece; la IA te conoce.",
+      "A nivel global, la IA militar ya decide ataques.",
+      "Armas que atacan solas, sin intervención humana directa.",
+      "Deepfakes son reales, manipulan nuestra percepción ya.",
+      "Influyen elecciones, creando realidades falsas convincentes.",
+      "Lo que creías cierto, podría ser creación algorítmica.",
+      "Esta manipulación es invisible, nadie la detectó.",
+      "La regulación va lenta, tecnología avanza sin freno.",
+      "Escándalos éticos revelan fallos con consecuencias graves.",
+      "Tu vida se rige por códigos que no entiendes.",
+      "Algo no está bien, sientes el cambio, es inasible.",
+      "Conocer estos mecanismos es protegerte del impacto.",
+      "En Tuialista, desvelamos verdades incómodas de la IA.",
+      "Desmontamos el pánico y damos herramientas para el futuro.",
+      "Aquí aprenderás qué hacer, no solo qué temer.",
+      "No puedes ignorarlo más; el futuro ya está aquí.",
+      "Entiende cómo funciona, para que la IA trabaje para ti.",
+      "El conocimiento es poder en la era algorítmica."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Abstract digital network over a person's silhouette, neural network pattern, data flows, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Abstract digital network over a person's silhouette, neural network pattern, data flows, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "¿Y si un algoritmo silencioso ya decidió tu destino?",
+        "pexels_query": "neural network silhouette"
+      },
+      {
+        "id": 2,
+        "prompt": "Subtle biometric scan over an everyday scene, data processing in background, hidden cameras, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Subtle biometric scan over an everyday scene, data processing in background, hidden cameras, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "No lo ves, pero sus implicaciones afectan tu vida diaria.",
+        "pexels_query": "biometric data scan"
+      },
+      {
+        "id": 3,
+        "prompt": "Abstract credit score interface on a dark screen, financial data points, algorithm decision, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Abstract credit score interface on a dark screen, financial data points, algorithm decision, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Tu préstamo, tu seguro, aprobados o rechazados al instante.",
+        "pexels_query": "financial algorithm screen"
+      },
+      {
+        "id": 4,
+        "prompt": "Dark server room, blinking lights, data cables, sense of an unseen process, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Dark server room, blinking lights, data cables, sense of an unseen process, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Una decisión de IA, sin explicación clara, lo sentiste antes.",
+        "pexels_query": "data center server"
+      },
+      {
+        "id": 5,
+        "prompt": "Digital filtering interface, resumes passing through a virtual sieve, binary code, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Digital filtering interface, resumes passing through a virtual sieve, binary code, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "¿Tu currículum llegó? Un filtro de IA lo bloqueó.",
+        "pexels_query": "AI resume filter"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty digital void, disappearing data packets, a sense of loss and unseen deletion, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Empty digital void, disappearing data packets, a sense of loss and unseen deletion, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Silencio absoluto; nadie lo vio, tu aplicación desapareció.",
+        "pexels_query": "digital data disappearing"
+      },
+      {
+        "id": 7,
+        "prompt": "AI medical interface, diagnostic scan results, abstract health data visualization, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "AI medical interface, diagnostic scan results, abstract health data visualization, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Diagnósticos médicos, tratamientos: la IA también interviene.",
+        "pexels_query": "AI medical diagnostic"
+      },
+      {
+        "id": 8,
+        "prompt": "Distorted data visualization, biased algorithm diagram, skewed graph, glitch effect, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Distorted data visualization, biased algorithm diagram, skewed graph, glitch effect, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Pero sus datos arrastran sesgos, podría perjudicarte.",
+        "pexels_query": "biased data algorithm"
+      },
+      {
+        "id": 9,
+        "prompt": "Overhead view of city streets with superimposed facial recognition grids, surveillance camera lens, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Overhead view of city streets with superimposed facial recognition grids, surveillance camera lens, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Imágenes de vigilancia te identifican, cada paso tuyo.",
+        "pexels_query": "city surveillance camera"
+      },
+      {
+        "id": 10,
+        "prompt": "Abstract digital fingerprint dissolving, data streams flowing away, privacy breach, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Abstract digital fingerprint dissolving, data streams flowing away, privacy breach, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Tu privacidad se desvanece; la IA te conoce.",
+        "pexels_query": "digital privacy dissolving"
+      },
+      {
+        "id": 11,
+        "prompt": "Military drone silhouette against a dark sky, target acquisition interface, abstract conflict zone, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Military drone silhouette against a dark sky, target acquisition interface, abstract conflict zone, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "A nivel global, la IA militar ya decide ataques.",
+        "pexels_query": "military drone targeting"
+      },
+      {
+        "id": 12,
+        "prompt": "Autonomous weapon system concept, robotic arm, abstract battlefield data, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Autonomous weapon system concept, robotic arm, abstract battlefield data, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Armas que atacan solas, sin intervención humana directa.",
+        "pexels_query": "autonomous weapon system"
+      },
+      {
+        "id": 13,
+        "prompt": "Distorted digital face mosaic, deepfake generation interface, glitch effect, misinformation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Distorted digital face mosaic, deepfake generation interface, glitch effect, misinformation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Deepfakes son reales, manipulan nuestra percepción ya.",
+        "pexels_query": "deepfake generation software"
+      },
+      {
+        "id": 14,
+        "prompt": "Political propaganda on digital screens, fake news spreading, election data manipulation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Political propaganda on digital screens, fake news spreading, election data manipulation, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Influyen elecciones, creando realidades falsas convincentes.",
+        "pexels_query": "digital election manipulation"
+      },
+      {
+        "id": 15,
+        "prompt": "Fractured digital display, text fragments, reality vs illusion, algorithms, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Fractured digital display, text fragments, reality vs illusion, algorithms, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Lo que creías cierto, podría ser creación algorítmica.",
+        "pexels_query": "fractured digital reality"
+      },
+      {
+        "id": 16,
+        "prompt": "Dark abstract data streams, hidden patterns, invisible influence, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Dark abstract data streams, hidden patterns, invisible influence, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Esta manipulación es invisible, nadie la detectó.",
+        "pexels_query": "invisible data patterns"
+      },
+      {
+        "id": 17,
+        "prompt": "Clock gears stuck, while digital circuits rapidly expand, contrast of slow law vs fast tech, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Clock gears stuck, while digital circuits rapidly expand, contrast of slow law vs fast tech, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "La regulación va lenta, tecnología avanza sin freno.",
+        "pexels_query": "slow regulation fast tech"
+      },
+      {
+        "id": 18,
+        "prompt": "Broken circuit board, sparks flying, ethical AI dilemma symbol, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Broken circuit board, sparks flying, ethical AI dilemma symbol, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Escándalos éticos revelan fallos con consecuencias graves.",
+        "pexels_query": "broken AI circuit"
+      },
+      {
+        "id": 19,
+        "prompt": "Complex lines of code scrolling on a screen, abstract representation of life's decisions, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Complex lines of code scrolling on a screen, abstract representation of life's decisions, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Tu vida se rige por códigos que no entiendes.",
+        "pexels_query": "abstract code lines"
+      },
+      {
+        "id": 20,
+        "prompt": "Distorted digital landscape, unsettling glitch aesthetic, a sense of unease, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Distorted digital landscape, unsettling glitch aesthetic, a sense of unease, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Algo no está bien, sientes el cambio, es inasible.",
+        "pexels_query": "glitch digital landscape"
+      },
+      {
+        "id": 21,
+        "prompt": "Blueprint overlay on a digital brain, understanding AI mechanics, diagram of neural network, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Blueprint overlay on a digital brain, understanding AI mechanics, diagram of neural network, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Conocer estos mecanismos es protegerte del impacto.",
+        "pexels_query": "AI brain blueprint"
+      },
+      {
+        "id": 22,
+        "prompt": "Digital magnifying glass over complex AI code, revealing hidden layers, insight, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Digital magnifying glass over complex AI code, revealing hidden layers, insight, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "En Tuialista, desvelamos verdades incómodas de la IA.",
+        "pexels_query": "AI code magnifying"
+      },
+      {
+        "id": 23,
+        "prompt": "Abstract digital toolkit, AI tools on a glowing interface, empowering, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Abstract digital toolkit, AI tools on a glowing interface, empowering, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Desmontamos el pánico y damos herramientas para el futuro.",
+        "pexels_query": "AI digital toolkit"
+      },
+      {
+        "id": 24,
+        "prompt": "Open digital book with glowing AI symbols, knowledge and empowerment, learning interface, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Open digital book with glowing AI symbols, knowledge and empowerment, learning interface, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Aquí aprenderás qué hacer, no solo qué temer.",
+        "pexels_query": "AI knowledge book"
+      },
+      {
+        "id": 25,
+        "prompt": "Future city skyline with integrated AI elements, smart technology, sense of impending change, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Future city skyline with integrated AI elements, smart technology, sense of impending change, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "No puedes ignorarlo más; el futuro ya está aquí.",
+        "pexels_query": "future AI city"
+      },
+      {
+        "id": 26,
+        "prompt": "Human-centric AI interface, controlling algorithms, empowerment, clean digital lines, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Human-centric AI interface, controlling algorithms, empowerment, clean digital lines, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "Entiende cómo funciona, para que la IA trabaje para ti.",
+        "pexels_query": "human control AI"
+      },
+      {
+        "id": 27,
+        "prompt": "Abstract light bulb made of data points and circuits, symbolizing knowledge and power in AI, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "prompt_visual": "Abstract light bulb made of data points and circuits, symbolizing knowledge and power in AI, no people, no faces, RAW photo, technology editorial, dramatic lighting, photorealism",
+        "texto_locucion": "El conocimiento es poder en la era algorítmica.",
+        "pexels_query": "AI knowledge power"
+      }
+    ],
+    "hooks": [
+      "Un algoritmo silencioso decide tu destino",
+      "La IA controla tu crédito y empleo",
+      "Decisiones sin explicación afectan tu vida"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
