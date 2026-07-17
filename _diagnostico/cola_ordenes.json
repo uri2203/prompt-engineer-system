@@ -4786,5 +4786,256 @@
       "Recupera tu poder"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "0db8c412-5e28-44b9-b116-cc010f44714e",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"digital interface financial data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital interface financial data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Apuesto a que nunca investigaste quién aprueba tu crédito.\", \"pexels_query\": \"financial data interface\"}, {\"id\": 2, \"prompt\": \"abstract server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No es un humano; son algoritmos decidiendo por ti.\", \"pexels_query\": \"server racks abstract\"}, {\"id\": 3, \"prompt\": \"data streams flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"data streams flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Evalúan cada aspecto de tu vida digital, ¡sin que sepas!\", \"pexels_query\": \"data streams cpu\"}, {\"id\": 4, \"prompt\": \"glowing microchip labyrinth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing microchip labyrinth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Deciden tu seguro, tu préstamo, tu próxima hipoteca.\", \"pexels_query\": \"microchip labyrinth glowing\"}, {\"id\": 5, \"prompt\": \"abstract network cables connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract network cables connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No estabas solo en esa sala de espera digital, ¿verdad?\", \"pexels_query\": \"network cables connecting\"}, {\"id\": 6, \"prompt\": \"complex data visualization lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"complex data visualization lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Miles de variables te juzgan, ¡sin que te enteres!\", \"pexels_query\": \"complex data visualization\"}, {\"id\": 7, \"prompt\": \"shadowed circuit board pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"shadowed circuit board pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algo no está bien en cómo se toman estas decisiones.\", \"pexels_query\": \"circuit board shadow\"}, {\"id\": 8, \"prompt\": \"encrypted data flow on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"encrypted data flow on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus datos alimentan estos sistemas complejos, día tras día.\", \"pexels_query\": \"encrypted data screen\"}, {\"id\": 9, \"prompt\": \"dark server room, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"dark server room, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Deciden tu futuro sin rostro, sin explicación alguna.\", \"pexels_query\": \"dark server room\"}, {\"id\": 10, \"prompt\": \"abstract digital brain pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract digital brain pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Quién construyó esos criterios de evaluación tan importantes?\", \"pexels_query\": \"digital brain pathways\"}, {\"id\": 11, \"prompt\": \"distorted data grid, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"distorted data grid, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Sesgos ocultos podrían estar afectándote en este instante.\", \"pexels_query\": \"distorted data grid\"}, {\"id\": 12, \"prompt\": \"glowing lines connecting data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing lines connecting data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes, esa extraña e injusta denegación.\", \"pexels_query\": \"glowing data points\"}, {\"id\": 13, \"prompt\": \"abstract geometric patterns digital, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract geometric patterns digital, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio, el algoritmo es completamente opaco.\", \"pexels_query\": \"geometric patterns digital\"}, {\"id\": 14, \"prompt\": \"empty data center aisle, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"empty data center aisle, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio absoluto rodea cada decisión automatizada.\", \"pexels_query\": \"empty data center\"}, {\"id\": 15, \"prompt\": \"digital padlock on abstract data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital padlock on abstract data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero no puedes ignorarlo por más tiempo, ¡es crucial!\", \"pexels_query\": \"digital padlock data\"}, {\"id\": 16, \"prompt\": \"server racks glowing blue, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"server racks glowing blue, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Es vital entender cómo esto funciona realmente hoy.\", \"pexels_query\": \"server racks blue\"}, {\"id\": 17, \"prompt\": \"charts and graphs on abstract screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"charts and graphs on abstract screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Conoce los factores que impulsan estas decisiones invisibles.\", \"pexels_query\": \"charts graphs screen\"}, {\"id\": 18, \"prompt\": \"abstract data protection shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract data protection shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Protege tu información; entiende tu huella digital completa.\", \"pexels_query\": \"data protection shield\"}, {\"id\": 19, \"prompt\": \"code lines on a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"code lines on a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Exige transparencia en cada evaluación financiera relevante.\", \"pexels_query\": \"code lines interface\"}, {\"id\": 20, \"prompt\": \"magnifying glass over data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"magnifying glass over data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hay herramientas para verificar tu score crediticio ahora.\", \"pexels_query\": \"magnifying glass data\"}, {\"id\": 21, \"prompt\": \"hand interacting with holographic interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"hand interacting with holographic interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¡Utiliza la inteligencia artificial a tu favor, no en contra!\", \"pexels_query\": \"holographic interface hand\"}, {\"id\": 22, \"prompt\": \"futuristic data center hallway, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"futuristic data center hallway, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Prepárate para las decisiones algorítmicas del mañana.\", \"pexels_query\": \"futuristic data center\"}, {\"id\": 23, \"prompt\": \"digital shield protecting a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"digital shield protecting a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El conocimiento es tu mejor escudo contra lo invisible.\", \"pexels_query\": \"digital shield network\"}, {\"id\": 24, \"prompt\": \"complex server architecture, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"complex server architecture, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No dejes tu vida financiera al azar cibernético.\", \"pexels_query\": \"server architecture complex\"}, {\"id\": 25, \"prompt\": \"abstract code breaking animation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract code breaking animation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Aprende a descifrar el código detrás de todo esto.\", \"pexels_query\": \"code breaking animation\"}, {\"id\": 26, \"prompt\": \"glowing digital pathways connecting nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"glowing digital pathways connecting nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El poder reside en entender estos sistemas ahora.\", \"pexels_query\": \"digital pathways nodes\"}, {\"id\": 27, \"prompt\": \"abstract representation of financial data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"abstract representation of financial data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Desafía lo que crees saber sobre finanzas personales.\", \"pexels_query\": \"financial data analysis abstract\"}, {\"id\": 28, \"prompt\": \"secure data vault interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"secure data vault interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No temas, infórmate y actúa con verdadera inteligencia.\", \"pexels_query\": \"secure data vault\"}, {\"id\": 29, \"prompt\": \"modern data center interior, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"modern data center interior, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Suscríbete ahora para más revelaciones útiles sobre IA.\", \"pexels_query\": \"modern data center\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Apuesto a que nunca investigaste quién aprueba tu crédito. No es un humano; son algoritmos decidiendo por ti. Evalúan cada aspecto de tu vida digital, ¡sin que sepas! Deciden tu seguro, tu préstamo, tu próxima hipoteca. No estabas solo en esa sala de espera digital, ¿verdad? Miles de variables te juzgan, ¡sin que te enteres! Algo no está bien en cómo se toman estas decisiones. Tus datos alimentan estos sistemas complejos, día tras día. Deciden tu futuro sin rostro, sin explicación alguna. ¿Quién construyó esos criterios de evaluación tan importantes? Sesgos ocultos podrían estar afectándote en este instante. Lo sentiste antes, esa extraña e injusta denegación. Nadie lo vio, el algoritmo es completamente opaco. El silencio absoluto rodea cada decisión automatizada. Pero no puedes ignorarlo por más tiempo, ¡es crucial! Es vital entender cómo esto funciona realmente hoy. Conoce los factores que impulsan estas decisiones invisibles. Protege tu información; entiende tu huella digital completa. Exige transparencia en cada evaluación financiera relevante. Hay herramientas para verificar tu score crediticio ahora. ¡Utiliza la inteligencia artificial a tu favor, no en contra! Prepárate para las decisiones algorítmicas del mañana. El conocimiento es tu mejor escudo contra lo invisible. No dejes tu vida financiera al azar cibernético. Aprende a descifrar el código detrás de todo esto. El poder reside en entender estos sistemas ahora. Desafía lo que crees saber sobre finanzas personales. No temas, infórmate y actúa con verdadera inteligencia. Suscríbete ahora para más revelaciones útiles sobre IA.",
+    "titulo_sugerido": "¿Quién decide tu futuro financiero? La IA lo sabe",
+    "escenas_texto": [
+      "Apuesto a que nunca investigaste quién aprueba tu crédito.",
+      "No es un humano; son algoritmos decidiendo por ti.",
+      "Evalúan cada aspecto de tu vida digital, ¡sin que sepas!",
+      "Deciden tu seguro, tu préstamo, tu próxima hipoteca.",
+      "No estabas solo en esa sala de espera digital, ¿verdad?",
+      "Miles de variables te juzgan, ¡sin que te enteres!",
+      "Algo no está bien en cómo se toman estas decisiones.",
+      "Tus datos alimentan estos sistemas complejos, día tras día.",
+      "Deciden tu futuro sin rostro, sin explicación alguna.",
+      "¿Quién construyó esos criterios de evaluación tan importantes?",
+      "Sesgos ocultos podrían estar afectándote en este instante.",
+      "Lo sentiste antes, esa extraña e injusta denegación.",
+      "Nadie lo vio, el algoritmo es completamente opaco.",
+      "El silencio absoluto rodea cada decisión automatizada.",
+      "Pero no puedes ignorarlo por más tiempo, ¡es crucial!",
+      "Es vital entender cómo esto funciona realmente hoy.",
+      "Conoce los factores que impulsan estas decisiones invisibles.",
+      "Protege tu información; entiende tu huella digital completa.",
+      "Exige transparencia en cada evaluación financiera relevante.",
+      "Hay herramientas para verificar tu score crediticio ahora.",
+      "¡Utiliza la inteligencia artificial a tu favor, no en contra!",
+      "Prepárate para las decisiones algorítmicas del mañana.",
+      "El conocimiento es tu mejor escudo contra lo invisible.",
+      "No dejes tu vida financiera al azar cibernético.",
+      "Aprende a descifrar el código detrás de todo esto.",
+      "El poder reside en entender estos sistemas ahora.",
+      "Desafía lo que crees saber sobre finanzas personales.",
+      "No temas, infórmate y actúa con verdadera inteligencia.",
+      "Suscríbete ahora para más revelaciones útiles sobre IA."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "digital interface financial data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital interface financial data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Apuesto a que nunca investigaste quién aprueba tu crédito.",
+        "pexels_query": "financial data interface"
+      },
+      {
+        "id": 2,
+        "prompt": "abstract server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract server racks, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No es un humano; son algoritmos decidiendo por ti.",
+        "pexels_query": "server racks abstract"
+      },
+      {
+        "id": 3,
+        "prompt": "data streams flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "data streams flowing into a central processing unit, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Evalúan cada aspecto de tu vida digital, ¡sin que sepas!",
+        "pexels_query": "data streams cpu"
+      },
+      {
+        "id": 4,
+        "prompt": "glowing microchip labyrinth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing microchip labyrinth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Deciden tu seguro, tu préstamo, tu próxima hipoteca.",
+        "pexels_query": "microchip labyrinth glowing"
+      },
+      {
+        "id": 5,
+        "prompt": "abstract network cables connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract network cables connecting, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No estabas solo en esa sala de espera digital, ¿verdad?",
+        "pexels_query": "network cables connecting"
+      },
+      {
+        "id": 6,
+        "prompt": "complex data visualization lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "complex data visualization lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Miles de variables te juzgan, ¡sin que te enteres!",
+        "pexels_query": "complex data visualization"
+      },
+      {
+        "id": 7,
+        "prompt": "shadowed circuit board pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "shadowed circuit board pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algo no está bien en cómo se toman estas decisiones.",
+        "pexels_query": "circuit board shadow"
+      },
+      {
+        "id": 8,
+        "prompt": "encrypted data flow on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "encrypted data flow on screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus datos alimentan estos sistemas complejos, día tras día.",
+        "pexels_query": "encrypted data screen"
+      },
+      {
+        "id": 9,
+        "prompt": "dark server room, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "dark server room, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Deciden tu futuro sin rostro, sin explicación alguna.",
+        "pexels_query": "dark server room"
+      },
+      {
+        "id": 10,
+        "prompt": "abstract digital brain pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract digital brain pathways, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Quién construyó esos criterios de evaluación tan importantes?",
+        "pexels_query": "digital brain pathways"
+      },
+      {
+        "id": 11,
+        "prompt": "distorted data grid, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "distorted data grid, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Sesgos ocultos podrían estar afectándote en este instante.",
+        "pexels_query": "distorted data grid"
+      },
+      {
+        "id": 12,
+        "prompt": "glowing lines connecting data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing lines connecting data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes, esa extraña e injusta denegación.",
+        "pexels_query": "glowing data points"
+      },
+      {
+        "id": 13,
+        "prompt": "abstract geometric patterns digital, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract geometric patterns digital, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio, el algoritmo es completamente opaco.",
+        "pexels_query": "geometric patterns digital"
+      },
+      {
+        "id": 14,
+        "prompt": "empty data center aisle, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "empty data center aisle, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio absoluto rodea cada decisión automatizada.",
+        "pexels_query": "empty data center"
+      },
+      {
+        "id": 15,
+        "prompt": "digital padlock on abstract data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital padlock on abstract data, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero no puedes ignorarlo por más tiempo, ¡es crucial!",
+        "pexels_query": "digital padlock data"
+      },
+      {
+        "id": 16,
+        "prompt": "server racks glowing blue, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "server racks glowing blue, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Es vital entender cómo esto funciona realmente hoy.",
+        "pexels_query": "server racks blue"
+      },
+      {
+        "id": 17,
+        "prompt": "charts and graphs on abstract screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "charts and graphs on abstract screen, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Conoce los factores que impulsan estas decisiones invisibles.",
+        "pexels_query": "charts graphs screen"
+      },
+      {
+        "id": 18,
+        "prompt": "abstract data protection shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract data protection shield, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Protege tu información; entiende tu huella digital completa.",
+        "pexels_query": "data protection shield"
+      },
+      {
+        "id": 19,
+        "prompt": "code lines on a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "code lines on a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Exige transparencia en cada evaluación financiera relevante.",
+        "pexels_query": "code lines interface"
+      },
+      {
+        "id": 20,
+        "prompt": "magnifying glass over data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "magnifying glass over data points, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hay herramientas para verificar tu score crediticio ahora.",
+        "pexels_query": "magnifying glass data"
+      },
+      {
+        "id": 21,
+        "prompt": "hand interacting with holographic interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "hand interacting with holographic interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¡Utiliza la inteligencia artificial a tu favor, no en contra!",
+        "pexels_query": "holographic interface hand"
+      },
+      {
+        "id": 22,
+        "prompt": "futuristic data center hallway, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "futuristic data center hallway, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Prepárate para las decisiones algorítmicas del mañana.",
+        "pexels_query": "futuristic data center"
+      },
+      {
+        "id": 23,
+        "prompt": "digital shield protecting a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "digital shield protecting a network, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El conocimiento es tu mejor escudo contra lo invisible.",
+        "pexels_query": "digital shield network"
+      },
+      {
+        "id": 24,
+        "prompt": "complex server architecture, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "complex server architecture, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No dejes tu vida financiera al azar cibernético.",
+        "pexels_query": "server architecture complex"
+      },
+      {
+        "id": 25,
+        "prompt": "abstract code breaking animation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract code breaking animation, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Aprende a descifrar el código detrás de todo esto.",
+        "pexels_query": "code breaking animation"
+      },
+      {
+        "id": 26,
+        "prompt": "glowing digital pathways connecting nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "glowing digital pathways connecting nodes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El poder reside en entender estos sistemas ahora.",
+        "pexels_query": "digital pathways nodes"
+      },
+      {
+        "id": 27,
+        "prompt": "abstract representation of financial data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "abstract representation of financial data analysis, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Desafía lo que crees saber sobre finanzas personales.",
+        "pexels_query": "financial data analysis abstract"
+      },
+      {
+        "id": 28,
+        "prompt": "secure data vault interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "secure data vault interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No temas, infórmate y actúa con verdadera inteligencia.",
+        "pexels_query": "secure data vault"
+      },
+      {
+        "id": 29,
+        "prompt": "modern data center interior, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "modern data center interior, RAW photo, technology editorial, dramatic lighting, GPU servers data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Suscríbete ahora para más revelaciones útiles sobre IA.",
+        "pexels_query": "modern data center"
+      }
+    ],
+    "hooks": [
+      "IA decide tus finanzas",
+      "Crédito negado sin razón",
+      "Algoritmos ocultos te juzgan"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
