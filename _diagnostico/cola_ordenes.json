@@ -5272,5 +5272,248 @@
       "Tus decisiones, ¿son tuyas?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "5e58ac51-34a7-47a2-9fdd-2b6ddaa1cbf4",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Facial recognition technology, data flowing on screen, surveillance cameras, server racks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Facial recognition technology, data flowing on screen, surveillance cameras, server racks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu rostro fue escaneado millones de veces hoy.\", \"pexels_query\": \"facial recognition data\"}, {\"id\": 2, \"prompt\": \"Abstract digital network, dark data streams, server infrastructure, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital network, dark data streams, server infrastructure, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Los avances de IA son más graves de lo que crees.\", \"pexels_query\": \"dark digital network\"}, {\"id\": 3, \"prompt\": \"City surveillance cameras, blurred street, multiple camera feeds, dark urban environment, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"City surveillance cameras, blurred street, multiple camera feeds, dark urban environment, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Gobiernos usan IA para vigilarte constantemente.\", \"pexels_query\": \"city surveillance cameras\"}, {\"id\": 4, \"prompt\": \"Overhead view of a smart city, glowing data lines connecting buildings, dark, futuristic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Overhead view of a smart city, glowing data lines connecting buildings, dark, futuristic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Millones de cámaras te siguen en tiempo real.\", \"pexels_query\": \"smart city surveillance\"}, {\"id\": 5, \"prompt\": \"Abstract data analysis interface, graphs and patterns on screen, algorithmic processing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data analysis interface, graphs and patterns on screen, algorithmic processing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Analizan tus movimientos, tu rostro, tus patrones.\", \"pexels_query\": \"data analysis patterns\"}, {\"id\": 6, \"prompt\": \"Predictive analytics dashboard, future timeline, data points, forecasting algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Predictive analytics dashboard, future timeline, data points, forecasting algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Incluso, predicen tus acciones futuras ahora mismo.\", \"pexels_query\": \"predictive analytics\"}, {\"id\": 7, \"prompt\": \"Financial data interface, credit score visualization, algorithmic decision tree, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Financial data interface, credit score visualization, algorithmic decision tree, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algoritmos deciden tu crédito, empleo, hasta seguros.\", \"pexels_query\": \"credit score algorithm\"}, {\"id\": 8, \"prompt\": \"Fragmented code on screen, glitch effect, broken circuit board, abstract error, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Fragmented code on screen, glitch effect, broken circuit board, abstract error, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Un fallo en su código puede arruinar tu vida.\", \"pexels_query\": \"code error glitch\"}, {\"id\": 9, \"prompt\": \"Medical scan with overlaid data, diagnostic algorithms, abstract health interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Medical scan with overlaid data, diagnostic algorithms, abstract health interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Imagina un diagnóstico médico basado en datos sesgados.\", \"pexels_query\": \"medical AI diagnosis\"}, {\"id\": 10, \"prompt\": \"Abstract representation of data bias, skewed graphs, uneven distribution, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data bias, skewed graphs, uneven distribution, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ya ocurre, afectando a grupos vulnerables sin saberlo.\", \"pexels_query\": \"data bias representation\"}, {\"id\": 11, \"prompt\": \"Glowing data streams entering a large server farm, abstract data intake, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Glowing data streams entering a large server farm, abstract data intake, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus datos personales son el alimento de la IA.\", \"pexels_query\": \"data server farm\"}, {\"id\": 12, \"prompt\": \"Digital gold coins flowing into a data funnel, abstract representation of data value, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital gold coins flowing into a data funnel, abstract representation of data value, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Cada clic, cada compra, cada mensaje, es oro.\", \"pexels_query\": \"digital data value\"}, {\"id\": 13, \"prompt\": \"Neural network visualization, complex interconnections, learning algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Neural network visualization, complex interconnections, learning algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Se entrenan modelos que te conocen íntimamente.\", \"pexels_query\": \"neural network learning\"}, {\"id\": 14, \"prompt\": \"Abstract shield made of light, dissolving into data points, representing lost privacy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract shield made of light, dissolving into data points, representing lost privacy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu privacidad está bajo asedio constante e invisible.\", \"pexels_query\": \"privacy shield dissolving\"}, {\"id\": 15, \"prompt\": \"Deepfake interface, distorted face mesh, digital manipulation tools, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Deepfake interface, distorted face mesh, digital manipulation tools, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Deepfakes: el arma más potente para manipular la realidad.\", \"pexels_query\": \"deepfake digital manipulation\"}, {\"id\": 16, \"prompt\": \"Political debate with distorted, glitching images of speakers, subtle deepfake hints, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Political debate with distorted, glitching images of speakers, subtle deepfake hints, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Discursos falsos en elecciones ya cambiaron resultados.\", \"pexels_query\": \"political deepfake glitch\"}, {\"id\": 17, \"prompt\": \"Abstract generative art, realistic but unsettling images, AI-created landscapes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract generative art, realistic but unsettling images, AI-created landscapes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Imágenes y videos creados desde cero parecen reales.\", \"pexels_query\": \"generative AI art\"}, {\"id\": 18, \"prompt\": \"Human eye looking at a screen with ambiguous, shifting patterns, inability to discern truth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Human eye looking at a screen with ambiguous, shifting patterns, inability to discern truth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Detectarlos es casi imposible para el ojo humano.\", \"pexels_query\": \"human eye ambiguity\"}, {\"id\": 19, \"prompt\": \"Empty room with a single flickering light, unsettling atmosphere, subtle digital interference, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty room with a single flickering light, unsettling atmosphere, subtle digital interference, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes, esa extraña sensación de duda.\", \"pexels_query\": \"flickering light room\"}, {\"id\": 20, \"prompt\": \"Abstract representation of disruption, shattered glass effect over a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of disruption, shattered glass effect over a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algo no está bien, sabes que las cosas cambiaron.\", \"pexels_query\": \"digital disruption effect\"}, {\"id\": 21, \"prompt\": \"Dark server room, subtle light on glowing racks, sense of scale and hidden power, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Dark server room, subtle light on glowing racks, sense of scale and hidden power, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Ya no es ciencia ficción, es tu realidad diaria.\", \"pexels_query\": \"dark server room power\"}, {\"id\": 22, \"prompt\": \"Abstract data clouds, swirling, unseen forces, complex algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data clouds, swirling, unseen forces, complex algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio venir en su magnitud inicial.\", \"pexels_query\": \"abstract data clouds\"}, {\"id\": 23, \"prompt\": \"Empty, stark boardroom table, single chair, dramatic light from window, sense of absence of decision-makers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty, stark boardroom table, single chair, dramatic light from window, sense of absence of decision-makers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El silencio absoluto de la élite es ensordecedor.\", \"pexels_query\": \"empty boardroom table\"}, {\"id\": 24, \"prompt\": \"Digital interface displaying clear, decipherable data, understanding complex systems, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface displaying clear, decipherable data, understanding complex systems, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero tú puedes entenderlo, puedes prepararte mejor.\", \"pexels_query\": \"clear data interface\"}, {\"id\": 25, \"prompt\": \"Person's hands (POV, no face) interacting with a tablet, learning about AI risks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Person's hands (POV, no face) interacting with a tablet, learning about AI risks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Conoce los riesgos reales, no el pánico absurdo.\", \"pexels_query\": \"learning AI risks\"}, {\"id\": 26, \"prompt\": \"Abstract data flow towards a central point, symbolizing informed action, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract data flow towards a central point, symbolizing informed action, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No puedes ignorarlo, la información te empodera.\", \"pexels_query\": \"informed action data\"}, {\"id\": 27, \"prompt\": \"Question mark made of digital particles, floating above a keyboard, encouraging interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Question mark made of digital particles, floating above a keyboard, encouraging interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"¿Qué tema de la IA te gustaría que desmintamos?\", \"pexels_query\": \"digital question mark\"}, {\"id\": 28, \"prompt\": \"Comments section on a screen, glowing cursors, engagement on a digital platform, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Comments section on a screen, glowing cursors, engagement on a digital platform, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Déjalo en los comentarios, te leo atentamente.\", \"pexels_query\": \"digital comments section\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Tu rostro fue escaneado millones de veces hoy. Los avances de IA son más graves de lo que crees. Gobiernos usan IA para vigilarte constantemente. Millones de cámaras te siguen en tiempo real. Analizan tus movimientos, tu rostro, tus patrones. Incluso, predicen tus acciones futuras ahora mismo. Algoritmos deciden tu crédito, empleo, hasta seguros. Un fallo en su código puede arruinar tu vida. Imagina un diagnóstico médico basado en datos sesgados. Ya ocurre, afectando a grupos vulnerables sin saberlo. Tus datos personales son el alimento de la IA. Cada clic, cada compra, cada mensaje, es oro. Se entrenan modelos que te conocen íntimamente. Tu privacidad está bajo asedio constante e invisible. Deepfakes: el arma más potente para manipular la realidad. Discursos falsos en elecciones ya cambiaron resultados. Imágenes y videos creados desde cero parecen reales. Detectarlos es casi imposible para el ojo humano. Lo sentiste antes, esa extraña sensación de duda. Algo no está bien, sabes que las cosas cambiaron. Ya no es ciencia ficción, es tu realidad diaria. Nadie lo vio venir en su magnitud inicial. El silencio absoluto de la élite es ensordecedor. Pero tú puedes entenderlo, puedes prepararte mejor. Conoce los riesgos reales, no el pánico absurdo. No puedes ignorarlo, la información te empodera. ¿Qué tema de la IA te gustaría que desmintamos? Déjalo en los comentarios, te leo atentamente.",
+    "titulo_sugerido": "IA te vigila: Lo que escanea tu rostro cada día sin que lo sepas",
+    "escenas_texto": [
+      "Tu rostro fue escaneado millones de veces hoy.",
+      "Los avances de IA son más graves de lo que crees.",
+      "Gobiernos usan IA para vigilarte constantemente.",
+      "Millones de cámaras te siguen en tiempo real.",
+      "Analizan tus movimientos, tu rostro, tus patrones.",
+      "Incluso, predicen tus acciones futuras ahora mismo.",
+      "Algoritmos deciden tu crédito, empleo, hasta seguros.",
+      "Un fallo en su código puede arruinar tu vida.",
+      "Imagina un diagnóstico médico basado en datos sesgados.",
+      "Ya ocurre, afectando a grupos vulnerables sin saberlo.",
+      "Tus datos personales son el alimento de la IA.",
+      "Cada clic, cada compra, cada mensaje, es oro.",
+      "Se entrenan modelos que te conocen íntimamente.",
+      "Tu privacidad está bajo asedio constante e invisible.",
+      "Deepfakes: el arma más potente para manipular la realidad.",
+      "Discursos falsos en elecciones ya cambiaron resultados.",
+      "Imágenes y videos creados desde cero parecen reales.",
+      "Detectarlos es casi imposible para el ojo humano.",
+      "Lo sentiste antes, esa extraña sensación de duda.",
+      "Algo no está bien, sabes que las cosas cambiaron.",
+      "Ya no es ciencia ficción, es tu realidad diaria.",
+      "Nadie lo vio venir en su magnitud inicial.",
+      "El silencio absoluto de la élite es ensordecedor.",
+      "Pero tú puedes entenderlo, puedes prepararte mejor.",
+      "Conoce los riesgos reales, no el pánico absurdo.",
+      "No puedes ignorarlo, la información te empodera.",
+      "¿Qué tema de la IA te gustaría que desmintamos?",
+      "Déjalo en los comentarios, te leo atentamente."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Facial recognition technology, data flowing on screen, surveillance cameras, server racks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Facial recognition technology, data flowing on screen, surveillance cameras, server racks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu rostro fue escaneado millones de veces hoy.",
+        "pexels_query": "facial recognition data"
+      },
+      {
+        "id": 2,
+        "prompt": "Abstract digital network, dark data streams, server infrastructure, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital network, dark data streams, server infrastructure, glowing lines, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Los avances de IA son más graves de lo que crees.",
+        "pexels_query": "dark digital network"
+      },
+      {
+        "id": 3,
+        "prompt": "City surveillance cameras, blurred street, multiple camera feeds, dark urban environment, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "City surveillance cameras, blurred street, multiple camera feeds, dark urban environment, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Gobiernos usan IA para vigilarte constantemente.",
+        "pexels_query": "city surveillance cameras"
+      },
+      {
+        "id": 4,
+        "prompt": "Overhead view of a smart city, glowing data lines connecting buildings, dark, futuristic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Overhead view of a smart city, glowing data lines connecting buildings, dark, futuristic, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Millones de cámaras te siguen en tiempo real.",
+        "pexels_query": "smart city surveillance"
+      },
+      {
+        "id": 5,
+        "prompt": "Abstract data analysis interface, graphs and patterns on screen, algorithmic processing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data analysis interface, graphs and patterns on screen, algorithmic processing, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Analizan tus movimientos, tu rostro, tus patrones.",
+        "pexels_query": "data analysis patterns"
+      },
+      {
+        "id": 6,
+        "prompt": "Predictive analytics dashboard, future timeline, data points, forecasting algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Predictive analytics dashboard, future timeline, data points, forecasting algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Incluso, predicen tus acciones futuras ahora mismo.",
+        "pexels_query": "predictive analytics"
+      },
+      {
+        "id": 7,
+        "prompt": "Financial data interface, credit score visualization, algorithmic decision tree, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Financial data interface, credit score visualization, algorithmic decision tree, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algoritmos deciden tu crédito, empleo, hasta seguros.",
+        "pexels_query": "credit score algorithm"
+      },
+      {
+        "id": 8,
+        "prompt": "Fragmented code on screen, glitch effect, broken circuit board, abstract error, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Fragmented code on screen, glitch effect, broken circuit board, abstract error, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Un fallo en su código puede arruinar tu vida.",
+        "pexels_query": "code error glitch"
+      },
+      {
+        "id": 9,
+        "prompt": "Medical scan with overlaid data, diagnostic algorithms, abstract health interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Medical scan with overlaid data, diagnostic algorithms, abstract health interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Imagina un diagnóstico médico basado en datos sesgados.",
+        "pexels_query": "medical AI diagnosis"
+      },
+      {
+        "id": 10,
+        "prompt": "Abstract representation of data bias, skewed graphs, uneven distribution, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data bias, skewed graphs, uneven distribution, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ya ocurre, afectando a grupos vulnerables sin saberlo.",
+        "pexels_query": "data bias representation"
+      },
+      {
+        "id": 11,
+        "prompt": "Glowing data streams entering a large server farm, abstract data intake, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Glowing data streams entering a large server farm, abstract data intake, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus datos personales son el alimento de la IA.",
+        "pexels_query": "data server farm"
+      },
+      {
+        "id": 12,
+        "prompt": "Digital gold coins flowing into a data funnel, abstract representation of data value, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital gold coins flowing into a data funnel, abstract representation of data value, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Cada clic, cada compra, cada mensaje, es oro.",
+        "pexels_query": "digital data value"
+      },
+      {
+        "id": 13,
+        "prompt": "Neural network visualization, complex interconnections, learning algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Neural network visualization, complex interconnections, learning algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Se entrenan modelos que te conocen íntimamente.",
+        "pexels_query": "neural network learning"
+      },
+      {
+        "id": 14,
+        "prompt": "Abstract shield made of light, dissolving into data points, representing lost privacy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract shield made of light, dissolving into data points, representing lost privacy, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu privacidad está bajo asedio constante e invisible.",
+        "pexels_query": "privacy shield dissolving"
+      },
+      {
+        "id": 15,
+        "prompt": "Deepfake interface, distorted face mesh, digital manipulation tools, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Deepfake interface, distorted face mesh, digital manipulation tools, dark, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Deepfakes: el arma más potente para manipular la realidad.",
+        "pexels_query": "deepfake digital manipulation"
+      },
+      {
+        "id": 16,
+        "prompt": "Political debate with distorted, glitching images of speakers, subtle deepfake hints, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Political debate with distorted, glitching images of speakers, subtle deepfake hints, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Discursos falsos en elecciones ya cambiaron resultados.",
+        "pexels_query": "political deepfake glitch"
+      },
+      {
+        "id": 17,
+        "prompt": "Abstract generative art, realistic but unsettling images, AI-created landscapes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract generative art, realistic but unsettling images, AI-created landscapes, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Imágenes y videos creados desde cero parecen reales.",
+        "pexels_query": "generative AI art"
+      },
+      {
+        "id": 18,
+        "prompt": "Human eye looking at a screen with ambiguous, shifting patterns, inability to discern truth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Human eye looking at a screen with ambiguous, shifting patterns, inability to discern truth, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Detectarlos es casi imposible para el ojo humano.",
+        "pexels_query": "human eye ambiguity"
+      },
+      {
+        "id": 19,
+        "prompt": "Empty room with a single flickering light, unsettling atmosphere, subtle digital interference, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty room with a single flickering light, unsettling atmosphere, subtle digital interference, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes, esa extraña sensación de duda.",
+        "pexels_query": "flickering light room"
+      },
+      {
+        "id": 20,
+        "prompt": "Abstract representation of disruption, shattered glass effect over a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of disruption, shattered glass effect over a digital interface, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algo no está bien, sabes que las cosas cambiaron.",
+        "pexels_query": "digital disruption effect"
+      },
+      {
+        "id": 21,
+        "prompt": "Dark server room, subtle light on glowing racks, sense of scale and hidden power, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Dark server room, subtle light on glowing racks, sense of scale and hidden power, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Ya no es ciencia ficción, es tu realidad diaria.",
+        "pexels_query": "dark server room power"
+      },
+      {
+        "id": 22,
+        "prompt": "Abstract data clouds, swirling, unseen forces, complex algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data clouds, swirling, unseen forces, complex algorithms, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio venir en su magnitud inicial.",
+        "pexels_query": "abstract data clouds"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty, stark boardroom table, single chair, dramatic light from window, sense of absence of decision-makers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty, stark boardroom table, single chair, dramatic light from window, sense of absence of decision-makers, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El silencio absoluto de la élite es ensordecedor.",
+        "pexels_query": "empty boardroom table"
+      },
+      {
+        "id": 24,
+        "prompt": "Digital interface displaying clear, decipherable data, understanding complex systems, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface displaying clear, decipherable data, understanding complex systems, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero tú puedes entenderlo, puedes prepararte mejor.",
+        "pexels_query": "clear data interface"
+      },
+      {
+        "id": 25,
+        "prompt": "Person's hands (POV, no face) interacting with a tablet, learning about AI risks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Person's hands (POV, no face) interacting with a tablet, learning about AI risks, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Conoce los riesgos reales, no el pánico absurdo.",
+        "pexels_query": "learning AI risks"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract data flow towards a central point, symbolizing informed action, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract data flow towards a central point, symbolizing informed action, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No puedes ignorarlo, la información te empodera.",
+        "pexels_query": "informed action data"
+      },
+      {
+        "id": 27,
+        "prompt": "Question mark made of digital particles, floating above a keyboard, encouraging interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Question mark made of digital particles, floating above a keyboard, encouraging interaction, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "¿Qué tema de la IA te gustaría que desmintamos?",
+        "pexels_query": "digital question mark"
+      },
+      {
+        "id": 28,
+        "prompt": "Comments section on a screen, glowing cursors, engagement on a digital platform, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Comments section on a screen, glowing cursors, engagement on a digital platform, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Déjalo en los comentarios, te leo atentamente.",
+        "pexels_query": "digital comments section"
+      }
+    ],
+    "hooks": [
+      "Tu rostro escaneado sin permiso.",
+      "Algoritmos deciden tu destino.",
+      "Deepfakes son indetectables."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
