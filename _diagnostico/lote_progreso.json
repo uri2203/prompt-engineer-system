@@ -1,10 +1,7 @@
 {
-  "estado_lote": "completado",
-  "total": 20,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 20,
-  "trabajo_actual": "Generando video 20/20 (TuIALista 9:16)",
-  "mensaje": "Lote terminado: 0 completados, 20 fallidos (omitidos).",
-  "resumen": "Monkygraff: 5s+0L | FiltradoMX: 5s+0L | LaesquinaRandom: 5s+0L | TuIALista: 5s+0L",
-  "historial": []
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
