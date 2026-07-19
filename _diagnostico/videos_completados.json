@@ -173,7 +173,9 @@
     "5befd961-5f2b-4e54-988a-fe666d320ca2",
     "5befd961-5f2b-4e54-988a-fe666d320ca2_asm",
     "dbd4ceb9-4dc0-42f1-bd74-f4227c1c3b3c",
-    "dbd4ceb9-4dc0-42f1-bd74-f4227c1c3b3c_asm"
+    "dbd4ceb9-4dc0-42f1-bd74-f4227c1c3b3c_asm",
+    "66c5b60d-1da2-4c76-a63d-7f9631e1a0af",
+    "66c5b60d-1da2-4c76-a63d-7f9631e1a0af_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -604,6 +606,11 @@
     },
     "dbd4ceb9-4dc0-42f1-bd74-f4227c1c3b3c": {
       "duracion_real_seg": 1395.3,
+      "marca": "La Viuda",
+      "formato": "16:9"
+    },
+    "66c5b60d-1da2-4c76-a63d-7f9631e1a0af": {
+      "duracion_real_seg": 1389.6,
       "marca": "La Viuda",
       "formato": "16:9"
     }
