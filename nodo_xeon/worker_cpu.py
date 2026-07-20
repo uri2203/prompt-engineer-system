@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_Q"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_R"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_Q"
+VERSION_WORKER = "2026-06-23_R"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -378,94 +378,184 @@ def _guardar_historial_musica(historial):
     with open(HISTORIAL_MUSICA_PATH, "w", encoding="utf-8") as f:
         json.dump(historial, f, indent=2, ensure_ascii=False)
 
-def _elegir_musica_fondo(carpeta_marca, marca):
+def _listar_musica_fondo(carpeta_marca):
+    """Todas las pistas de fondo disponibles (musica_fondo1..4)."""
     pistas = [f"musica_fondo{i}.mp3" for i in range(1, 5)]
-    disponibles = [p for p in pistas if os.path.exists(os.path.join(carpeta_marca, p))]
-    if not disponibles:
+    return [os.path.join(carpeta_marca, p) for p in pistas
+            if os.path.exists(os.path.join(carpeta_marca, p))]
+
+def _listar_musica_tension(carpeta_marca):
+    """Todas las pistas de tensión disponibles (musica_tension1..2)."""
+    pistas = [f"musica_tension{i}.mp3" for i in range(1, 3)]
+    return [os.path.join(carpeta_marca, p) for p in pistas
+            if os.path.exists(os.path.join(carpeta_marca, p))]
+
+def _dur_audio(ruta):
+    try:
+        r = subprocess.run(['ffprobe','-v','quiet','-show_entries','format=duration',
+                            '-of','csv=p=0', ruta], capture_output=True, text=True, timeout=60)
+        return float(r.stdout.strip())
+    except Exception:
+        return 0.0
+
+def _elegir_musica_fondo(carpeta_marca, marca):
+    # (se mantiene por compatibilidad; ya no es el camino principal)
+    pistas = _listar_musica_fondo(carpeta_marca)
+    if not pistas:
         return None
-    historial = _cargar_historial_musica()
-    ultima = historial.get(marca, {}).get("ultimo_fondo", "")
-    candidatas = [p for p in disponibles if p != ultima]
-    if not candidatas:
-        candidatas = disponibles
-    elegida = random.choice(candidatas)
-    historial.setdefault(marca, {})["ultimo_fondo"] = elegida
-    _guardar_historial_musica(historial)
-    print(f"   [MUSICA] Fondo: {elegida} (anterior: {ultima or 'ninguno'})")
-    return os.path.join(carpeta_marca, elegida)
+    return random.choice(pistas)
 
 def _elegir_musica_tension(carpeta_marca, marca):
-    pistas = [f"musica_tension{i}.mp3" for i in range(1, 3)]
-    disponibles = [p for p in pistas if os.path.exists(os.path.join(carpeta_marca, p))]
-    if not disponibles:
+    pistas = _listar_musica_tension(carpeta_marca)
+    if not pistas:
         return None
-    historial = _cargar_historial_musica()
-    ultima = historial.get(marca, {}).get("ultima_tension", "")
-    candidatas = [p for p in disponibles if p != ultima]
-    if not candidatas:
-        candidatas = disponibles
-    elegida = random.choice(candidatas)
-    historial.setdefault(marca, {})["ultima_tension"] = elegida
-    _guardar_historial_musica(historial)
-    print(f"   [MUSICA] Tension: {elegida}")
-    return os.path.join(carpeta_marca, elegida)
+    return random.choice(pistas)
 
 def _mezclar_musica_dinamica(ruta_video, carpeta_marca, marca, duracion_total):
-    ruta_fondo   = _elegir_musica_fondo(carpeta_marca, marca)
-    ruta_tension = _elegir_musica_tension(carpeta_marca, marca)
-    if not ruta_fondo:
-        print(f"   [MUSICA] Sin pistas para {marca}.")
+    """Construye una BANDA SONORA que recorre TODO el video:
+    - Encadena las 4 pistas de fondo una tras otra (fondo1->fondo2->fondo3->fondo4->
+      y vuelve a empezar) hasta cubrir toda la duración, con crossfades suaves.
+    - Inserta la música de TENSIÓN en momentos puntuales (mezclada por encima del
+      fondo en esos tramos), sin cortar el fondo.
+    Aprovecha TODO el material musical, especialmente en videos largos."""
+    fondos = _listar_musica_fondo(carpeta_marca)
+    tensiones = _listar_musica_tension(carpeta_marca)
+    if not fondos:
+        print(f"   [MUSICA] Sin pistas de fondo para {marca}.")
         return ruta_video
-    # Verificar si el video de entrada tiene pista de audio (la narración).
-    # Si NO la tiene (bug previo), el amix con [0:a] fallaría y quedaría mudo.
+
+    # Verificar que el video tenga narración (si no, no mezclar para no romper)
     _video_tiene_audio = False
     try:
         _chk = subprocess.run(
-            ['ffprobe', '-v', 'error', '-select_streams', 'a',
-             '-show_entries', 'stream=codec_type', '-of', 'csv=p=0', ruta_video],
+            ['ffprobe','-v','error','-select_streams','a',
+             '-show_entries','stream=codec_type','-of','csv=p=0', ruta_video],
             capture_output=True, text=True)
         _video_tiene_audio = 'audio' in _chk.stdout
     except Exception:
         pass
     if not _video_tiene_audio:
-        print(f"   [⚠️ MUSICA] El video NO tiene narración — el problema es anterior. Omito mezcla para no romper.")
+        print(f"   [⚠️ MUSICA] El video NO tiene narración — omito mezcla para no romper.")
         return ruta_video
-    carpeta_temp  = os.path.dirname(ruta_video)
-    ruta_salida   = os.path.join(carpeta_temp, "paso2_musica.mp4")
-    # Shorts (<= 90s): tensión al 40% — activa atención en escalada
-    # Largos (> 90s):  tensión al 60% — punto de giro natural
+
+    carpeta_temp = os.path.dirname(ruta_video)
+    ruta_salida  = os.path.join(carpeta_temp, "paso2_musica.mp4")
     es_short = duracion_total <= 90
-    punto_tension = duracion_total * (0.40 if es_short else 0.60)
-    crossfade_dur = 1.5 if es_short else 3.0
-    print(f"   [MUSICA] {'SHORT' if es_short else 'LARGO'} — tension al {int(punto_tension)}s de {int(duracion_total)}s")
-    if ruta_tension and os.path.exists(ruta_tension):
-        print(f"   [MUSICA] Fondo hasta {punto_tension:.1f}s -> tension con crossfade {crossfade_dur}s")
-        filter_complex = (
-            f"[1:a]volume={VOLUMEN_MUSICA},aloop=loop=-1:size=2e+09[bg];"
-            f"[2:a]volume={VOLUMEN_MUSICA},aloop=loop=-1:size=2e+09[ten];"
-            f"[bg]atrim=0:{punto_tension + crossfade_dur},asetpts=PTS-STARTPTS[bg_trim];"
-            f"[ten]atrim=0:{duracion_total - punto_tension + crossfade_dur},asetpts=PTS-STARTPTS[ten_trim];"
-            f"[bg_trim][ten_trim]acrossfade=d={crossfade_dur}:c1=exp:c2=exp[music];"
-            f"[0:a][music]amix=inputs=2:duration=first:dropout_transition=2[aout]"
-        )
-        cmd = [
-            'ffmpeg', '-y',
-            '-i', ruta_video.replace("\\", "/"),
-            '-stream_loop', '-1', '-i', ruta_fondo.replace("\\", "/"),
-            '-stream_loop', '-1', '-i', ruta_tension.replace("\\", "/"),
-            '-filter_complex', filter_complex,
-            '-map', '0:v', '-map', '[aout]',
-            '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', ruta_salida
-        ]
+
+    # ── 1. Construir la CADENA DE FONDO que cubre todo el video ──
+    # Se barajan las 4 pistas y se encadenan; si no alcanzan, se repite la secuencia.
+    orden_fondo = fondos[:]
+    random.shuffle(orden_fondo)
+    secuencia = []
+    dur_acumulada = 0.0
+    idx = 0
+    xf = 2.0  # crossfade entre pistas de fondo
+    while dur_acumulada < duracion_total + 5:
+        pista = orden_fondo[idx % len(orden_fondo)]
+        d = _dur_audio(pista)
+        if d <= 0:
+            idx += 1
+            if idx > 40: break
+            continue
+        secuencia.append((pista, d))
+        dur_acumulada += d - xf
+        idx += 1
+        if idx > 40:
+            break
+    print(f"   [MUSICA] {'SHORT' if es_short else 'LARGO'} — encadenando {len(secuencia)} tramos de fondo "
+          f"para cubrir {int(duracion_total)}s (pistas: {len(fondos)} fondo, {len(tensiones)} tensión)")
+
+    # ── 2. Construir el filtro FFmpeg ──
+    # Entradas: [0]=video, [1..N]=pistas de fondo en orden de la secuencia,
+    #           [N+1..]=pistas de tensión.
+    inputs = ['-i', ruta_video.replace("\\", "/")]
+    filtros = []
+    # fondos encadenados con acrossfade
+    labels_fondo = []
+    for i, (pista, d) in enumerate(secuencia):
+        inputs += ['-i', pista.replace("\\", "/")]
+        filtros.append(f"[{i+1}:a]volume={VOLUMEN_MUSICA}[bf{i}]")
+        labels_fondo.append(f"[bf{i}]")
+    # encadenar los fondos uno tras otro
+    if len(labels_fondo) == 1:
+        filtros.append(f"{labels_fondo[0]}aresample=44100[fondo_full]")
     else:
-        cmd = [
-            'ffmpeg', '-y',
-            '-i', ruta_video.replace("\\", "/"),
-            '-stream_loop', '-1', '-i', ruta_fondo.replace("\\", "/"),
-            '-filter_complex', f"[1:a]volume={VOLUMEN_MUSICA}[bgm];[0:a][bgm]amix=inputs=2:duration=first[aout]",
-            '-map', '0:v', '-map', '[aout]',
-            '-c:v', 'copy', '-c:a', 'aac', ruta_salida
-        ]
+        prev = labels_fondo[0]
+        for i in range(1, len(labels_fondo)):
+            out = f"[fc{i}]" if i < len(labels_fondo)-1 else "[fondo_full]"
+            filtros.append(f"{prev}{labels_fondo[i]}acrossfade=d={xf}:c1=tri:c2=tri{out}")
+            prev = out
+
+    idx_input = len(secuencia) + 1  # siguiente índice de entrada (para tensión)
+
+    # ── 3. Insertar TENSIÓN en momentos puntuales ──
+    # Short: 1 momento (~40%). Largo: 2-3 momentos repartidos.
+    momentos = []
+    if tensiones:
+        if es_short:
+            momentos = [duracion_total * 0.40]
+        else:
+            # largos: repartir 2 o 3 momentos de tensión
+            n_mom = 3 if duracion_total > 480 else 2
+            for k in range(1, n_mom+1):
+                momentos.append(duracion_total * (k / (n_mom + 1)))
+
+    tension_labels = []
+    for j, t_pos in enumerate(momentos):
+        pista_t = random.choice(tensiones)
+        d_t = _dur_audio(pista_t)
+        if d_t <= 0:
+            continue
+        inputs += ['-i', pista_t.replace("\\", "/")]
+        # la tensión suena un poco más fuerte que el fondo, con fade in/out, y
+        # empieza en su momento (adelay en milisegundos)
+        delay_ms = int(max(0, t_pos) * 1000)
+        vol_t = min(0.9, VOLUMEN_MUSICA * 1.6)
+        fade = 2.0
+        filtros.append(
+            f"[{idx_input}:a]volume={vol_t},"
+            f"afade=t=in:st=0:d={fade},afade=t=out:st={max(0.1,d_t-fade):.2f}:d={fade},"
+            f"adelay={delay_ms}|{delay_ms}[ten{j}]"
+        )
+        tension_labels.append(f"[ten{j}]")
+        idx_input += 1
+
+    # ── 4. Mezclar: narración + fondo_full + tensiones ──
+    entradas_mix = ["[0:a]", "[fondo_full]"] + tension_labels
+    n_mix = len(entradas_mix)
+    filtros.append(
+        f"{''.join(entradas_mix)}amix=inputs={n_mix}:duration=first:dropout_transition=0:normalize=0[aout]"
+    )
+
+    filter_complex = ";".join(filtros)
+    cmd = ['ffmpeg', '-y'] + inputs + [
+        '-filter_complex', filter_complex,
+        '-map', '0:v', '-map', '[aout]',
+        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', ruta_salida
+    ]
+    resultado = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+    if resultado.returncode == 0 and os.path.exists(ruta_salida) and os.path.getsize(ruta_salida) > 10000:
+        print(f"   [MUSICA] ✓ Banda sonora completa: {len(secuencia)} tramos de fondo + {len(tension_labels)} de tensión")
+        try: os.remove(ruta_video)
+        except: pass
+        return ruta_salida
+    # Si algo falla, intentar el modo simple (una pista) para no quedar sin música
+    print(f"   [MUSICA] La banda sonora encadenada falló, intento modo simple...")
+    err = (resultado.stderr.decode()[-300:] if resultado.stderr else "")
+    if err: print(f"   [MUSICA] {err}")
+    return _mezclar_musica_simple(ruta_video, fondos[0], tensiones[0] if tensiones else None,
+                                   duracion_total, ruta_salida)
+
+def _mezclar_musica_simple(ruta_video, ruta_fondo, ruta_tension, duracion_total, ruta_salida):
+    """Respaldo: una sola pista de fondo en loop (por si la banda encadenada falla)."""
+    cmd = [
+        'ffmpeg', '-y',
+        '-i', ruta_video.replace("\\", "/"),
+        '-stream_loop', '-1', '-i', ruta_fondo.replace("\\", "/"),
+        '-filter_complex', f"[1:a]volume={VOLUMEN_MUSICA}[bgm];[0:a][bgm]amix=inputs=2:duration=first[aout]",
+        '-map', '0:v', '-map', '[aout]',
+        '-c:v', 'copy', '-c:a', 'aac', ruta_salida
+    ]
     resultado = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     if resultado.returncode == 0 and os.path.exists(ruta_salida):
         try: os.remove(ruta_video)
