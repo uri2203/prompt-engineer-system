@@ -2953,5 +2953,248 @@
       "Bolillo desafía gravedad"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "504be13e-b1d5-4354-8b8e-06cbbcfc0a89",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"An absurdly luxurious airplane interior, with a giant question mark floating, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An absurdly luxurious airplane interior, with a giant question mark floating, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Prepárense, porque lo que pasa en los aviones...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A scientist scratching his head in front of a whiteboard with complex, nonsensical equations about airplanes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A scientist scratching his head in front of a whiteboard with complex, nonsensical equations about airplanes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"...a veces ni la ciencia lo entiende.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A passenger relaxed in an airplane seat, smiling, looking out a window at clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A passenger relaxed in an airplane seat, smiling, looking out a window at clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Imagina esto: vas en tu vuelo tranquilamente.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Passenger's exaggerated eyes wide open, looking at the back of an airplane seat, with a shadow of something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Passenger's exaggerated eyes wide open, looking at the back of an airplane seat, with a shadow of something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"De repente, miras el asiento de adelante...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A single, brightly colored chancla (sandal) sitting alone on an empty airplane seat, mysterious aura, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A single, brightly colored chancla (sandal) sitting alone on an empty airplane seat, mysterious aura, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"...y hay una chancla, ¡solita y misteriosa!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Passenger with a confused expression, pointing at the chancla, a thought bubble with a question mark, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Passenger with a confused expression, pointing at the chancla, a thought bubble with a question mark, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿De quién será?, piensas, algo no está bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A smiling flight attendant casually picking up the chancla from a seat, looking unconcerned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A smiling flight attendant casually picking up the chancla from a seat, looking unconcerned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La azafata la quita, ¡parece normal!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A clock on an airplane wall showing a few minutes passing, with a mischievous little chancla silhouette flying past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A clock on an airplane wall showing a few minutes passing, with a mischievous little chancla silhouette flying past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero diez minutos después, ¿adivina dónde?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"The chancla now appearing on a different, adjacent airplane seat, with a passenger's bewildered expression in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The chancla now appearing on a different, adjacent airplane seat, with a passenger's bewildered expression in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡En el asiento de al lado! Lo juro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A stern-looking man in a suit, with a monocle, carefully picking up the chancla with two fingers, looking suspicious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A stern-looking man in a suit, with a monocle, carefully picking up the chancla with two fingers, looking suspicious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un señor, muy serio, la vuelve a quitar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Two passengers whispering conspiratorially, one making a 'shh' gesture, with a drawing of a chancla with feet moving around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Two passengers whispering conspiratorially, one making a 'shh' gesture, with a drawing of a chancla with feet moving around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Esto ya lo sentiste antes, murmura alguien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"The chancla inexplicably sitting on top of an airplane toilet lid in the lavatory, light coming from under the door, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The chancla inexplicably sitting on top of an airplane toilet lid in the lavatory, light coming from under the door, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La chancla de nuevo, ahora en el baño.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A shadowy figure of the chancla darting quickly through an airplane aisle, nobody's eyes seem to follow it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A shadowy figure of the chancla darting quickly through an airplane aisle, nobody's eyes seem to follow it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Cómo llegó ahí? Nadie lo vio moverse.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Group of passengers looking around with bewildered and slightly scared expressions, their eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Group of passengers looking around with bewildered and slightly scared expressions, their eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ya la gente se empieza a mirar raro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A young boy with wide, innocent eyes pointing excitedly towards the ceiling of an airplane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A young boy with wide, innocent eyes pointing excitedly towards the ceiling of an airplane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un niño apunta: '¡Ahí va otra vez!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"The chancla floating majestically in the middle of the airplane aisle, defying gravity, light rays illuminating it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The chancla floating majestically in the middle of the airplane aisle, defying gravity, light rays illuminating it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Estaba flotando por el pasillo central!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A pilot's hand on a microphone in the cockpit, with a 'SILENCE' icon above the microphone, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A pilot's hand on a microphone in the cockpit, with a 'SILENCE' icon above the microphone, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El piloto pide silencio absoluto por el altavoz.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"An old-fashioned radar screen showing a small, unidentifiable blip labeled 'OVNI?' (UFO), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An old-fashioned radar screen showing a small, unidentifiable blip labeled 'OVNI?' (UFO), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Tenemos un... 'objeto volador no identificado'.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"The chancla with a smug face floating in front of a terrified pilot in the cockpit, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The chancla with a smug face floating in front of a terrified pilot in the cockpit, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero no era un ovni, ¡era la chancla!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"The chancla balanced upside down on the pilot's control panel, like a trophy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The chancla balanced upside down on the pilot's control panel, like a trophy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Aparece de cabeza ¡en el asiento del piloto!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Passengers in an airplane cabin screaming in comical terror, eyes wide, hands thrown up, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Passengers in an airplane cabin screaming in comical terror, eyes wide, hands thrown up, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡No puede ser!, gritan algunos pasajeros ya asustados.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A close-up of the pilot's extremely pale, sweaty face, eyes wide with fear, gripping the steering wheel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A close-up of the pilot's extremely pale, sweaty face, eyes wide with fear, gripping the steering wheel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El comandante, pálido, no puedes ignorarlo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"An elderly 'doña' passenger waking up with a start, rubbing her eyes, one foot visibly without a sandal, looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An elderly 'doña' passenger waking up with a start, rubbing her eyes, one foot visibly without a sandal, looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"De pronto, una viejita dice, '¡Ay, mi pie!'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A single bare foot (cartoon style) peeking out from under a blanket in an airplane seat, with a little speech bubble saying 'Oops!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A single bare foot (cartoon style) peeking out from under a blanket in an airplane seat, with a little speech bubble saying 'Oops!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Siempre se me sale mi chanclita cuando duermo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon foot with a chancla reunited, looking relieved, as if the chancla found its way home, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon foot with a chancla reunited, looking relieved, as if the chancla found its way home, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y ahí estaba, ¡su pie descalzo y libre!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Multiple passengers pointing and laughing good-naturedly at the doña and her chancla, with speech bubbles of 'Haha!' and 'It was her!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Multiple passengers pointing and laughing good-naturedly at the doña and her chancla, with speech bubbles of 'Haha!' and 'It was her!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡No estabas solo, era la chancla de la doña!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"An airplane full of passengers looking exhausted but relieved, some fanning themselves, a single chancla in the foreground, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An airplane full of passengers looking exhausted but relieved, some fanning themselves, a single chancla in the foreground, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Todo el vuelo por culpa de un pie!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"A cartoon foot wearing a chancla, wiggling its toes playfully, with a thought bubble about not losing it again, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon foot wearing a chancla, wiggling its toes playfully, with a thought bubble about not losing it again, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Así que ya saben, ¡cuidado con los pies dormilones!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Prepárense, porque lo que pasa en los aviones... ...a veces ni la ciencia lo entiende. Imagina esto: vas en tu vuelo tranquilamente. De repente, miras el asiento de adelante... ...y hay una chancla, ¡solita y misteriosa! ¿De quién será?, piensas, algo no está bien. La azafata la quita, ¡parece normal! Pero diez minutos después, ¿adivina dónde? ¡En el asiento de al lado! Lo juro. Un señor, muy serio, la vuelve a quitar. Esto ya lo sentiste antes, murmura alguien. La chancla de nuevo, ahora en el baño. ¿Cómo llegó ahí? Nadie lo vio moverse. Ya la gente se empieza a mirar raro. Un niño apunta: '¡Ahí va otra vez!' ¡Estaba flotando por el pasillo central! El piloto pide silencio absoluto por el altavoz. Tenemos un... 'objeto volador no identificado'. Pero no era un ovni, ¡era la chancla! Aparece de cabeza ¡en el asiento del piloto! ¡No puede ser!, gritan algunos pasajeros ya asustados. El comandante, pálido, no puedes ignorarlo. De pronto, una viejita dice, '¡Ay, mi pie!' Siempre se me sale mi chanclita cuando duermo. Y ahí estaba, ¡su pie descalzo y libre! ¡No estabas solo, era la chancla de la doña! ¡Todo el vuelo por culpa de un pie! Así que ya saben, ¡cuidado con los pies dormilones!",
+    "titulo_sugerido": "La Chancla Misteriosa que Viaja en Avión",
+    "escenas_texto": [
+      "Prepárense, porque lo que pasa en los aviones...",
+      "...a veces ni la ciencia lo entiende.",
+      "Imagina esto: vas en tu vuelo tranquilamente.",
+      "De repente, miras el asiento de adelante...",
+      "...y hay una chancla, ¡solita y misteriosa!",
+      "¿De quién será?, piensas, algo no está bien.",
+      "La azafata la quita, ¡parece normal!",
+      "Pero diez minutos después, ¿adivina dónde?",
+      "¡En el asiento de al lado! Lo juro.",
+      "Un señor, muy serio, la vuelve a quitar.",
+      "Esto ya lo sentiste antes, murmura alguien.",
+      "La chancla de nuevo, ahora en el baño.",
+      "¿Cómo llegó ahí? Nadie lo vio moverse.",
+      "Ya la gente se empieza a mirar raro.",
+      "Un niño apunta: '¡Ahí va otra vez!'",
+      "¡Estaba flotando por el pasillo central!",
+      "El piloto pide silencio absoluto por el altavoz.",
+      "Tenemos un... 'objeto volador no identificado'.",
+      "Pero no era un ovni, ¡era la chancla!",
+      "Aparece de cabeza ¡en el asiento del piloto!",
+      "¡No puede ser!, gritan algunos pasajeros ya asustados.",
+      "El comandante, pálido, no puedes ignorarlo.",
+      "De pronto, una viejita dice, '¡Ay, mi pie!'",
+      "Siempre se me sale mi chanclita cuando duermo.",
+      "Y ahí estaba, ¡su pie descalzo y libre!",
+      "¡No estabas solo, era la chancla de la doña!",
+      "¡Todo el vuelo por culpa de un pie!",
+      "Así que ya saben, ¡cuidado con los pies dormilones!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "An absurdly luxurious airplane interior, with a giant question mark floating, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An absurdly luxurious airplane interior, with a giant question mark floating, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Prepárense, porque lo que pasa en los aviones...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A scientist scratching his head in front of a whiteboard with complex, nonsensical equations about airplanes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A scientist scratching his head in front of a whiteboard with complex, nonsensical equations about airplanes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "...a veces ni la ciencia lo entiende.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A passenger relaxed in an airplane seat, smiling, looking out a window at clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A passenger relaxed in an airplane seat, smiling, looking out a window at clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Imagina esto: vas en tu vuelo tranquilamente.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Passenger's exaggerated eyes wide open, looking at the back of an airplane seat, with a shadow of something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Passenger's exaggerated eyes wide open, looking at the back of an airplane seat, with a shadow of something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "De repente, miras el asiento de adelante...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A single, brightly colored chancla (sandal) sitting alone on an empty airplane seat, mysterious aura, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A single, brightly colored chancla (sandal) sitting alone on an empty airplane seat, mysterious aura, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "...y hay una chancla, ¡solita y misteriosa!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Passenger with a confused expression, pointing at the chancla, a thought bubble with a question mark, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Passenger with a confused expression, pointing at the chancla, a thought bubble with a question mark, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿De quién será?, piensas, algo no está bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A smiling flight attendant casually picking up the chancla from a seat, looking unconcerned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A smiling flight attendant casually picking up the chancla from a seat, looking unconcerned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La azafata la quita, ¡parece normal!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A clock on an airplane wall showing a few minutes passing, with a mischievous little chancla silhouette flying past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A clock on an airplane wall showing a few minutes passing, with a mischievous little chancla silhouette flying past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero diez minutos después, ¿adivina dónde?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "The chancla now appearing on a different, adjacent airplane seat, with a passenger's bewildered expression in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The chancla now appearing on a different, adjacent airplane seat, with a passenger's bewildered expression in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡En el asiento de al lado! Lo juro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A stern-looking man in a suit, with a monocle, carefully picking up the chancla with two fingers, looking suspicious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A stern-looking man in a suit, with a monocle, carefully picking up the chancla with two fingers, looking suspicious, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un señor, muy serio, la vuelve a quitar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Two passengers whispering conspiratorially, one making a 'shh' gesture, with a drawing of a chancla with feet moving around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Two passengers whispering conspiratorially, one making a 'shh' gesture, with a drawing of a chancla with feet moving around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Esto ya lo sentiste antes, murmura alguien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "The chancla inexplicably sitting on top of an airplane toilet lid in the lavatory, light coming from under the door, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The chancla inexplicably sitting on top of an airplane toilet lid in the lavatory, light coming from under the door, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La chancla de nuevo, ahora en el baño.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A shadowy figure of the chancla darting quickly through an airplane aisle, nobody's eyes seem to follow it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A shadowy figure of the chancla darting quickly through an airplane aisle, nobody's eyes seem to follow it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Cómo llegó ahí? Nadie lo vio moverse.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Group of passengers looking around with bewildered and slightly scared expressions, their eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Group of passengers looking around with bewildered and slightly scared expressions, their eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ya la gente se empieza a mirar raro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A young boy with wide, innocent eyes pointing excitedly towards the ceiling of an airplane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A young boy with wide, innocent eyes pointing excitedly towards the ceiling of an airplane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un niño apunta: '¡Ahí va otra vez!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "The chancla floating majestically in the middle of the airplane aisle, defying gravity, light rays illuminating it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The chancla floating majestically in the middle of the airplane aisle, defying gravity, light rays illuminating it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Estaba flotando por el pasillo central!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A pilot's hand on a microphone in the cockpit, with a 'SILENCE' icon above the microphone, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A pilot's hand on a microphone in the cockpit, with a 'SILENCE' icon above the microphone, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El piloto pide silencio absoluto por el altavoz.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "An old-fashioned radar screen showing a small, unidentifiable blip labeled 'OVNI?' (UFO), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An old-fashioned radar screen showing a small, unidentifiable blip labeled 'OVNI?' (UFO), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Tenemos un... 'objeto volador no identificado'.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "The chancla with a smug face floating in front of a terrified pilot in the cockpit, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The chancla with a smug face floating in front of a terrified pilot in the cockpit, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero no era un ovni, ¡era la chancla!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "The chancla balanced upside down on the pilot's control panel, like a trophy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The chancla balanced upside down on the pilot's control panel, like a trophy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Aparece de cabeza ¡en el asiento del piloto!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Passengers in an airplane cabin screaming in comical terror, eyes wide, hands thrown up, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Passengers in an airplane cabin screaming in comical terror, eyes wide, hands thrown up, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡No puede ser!, gritan algunos pasajeros ya asustados.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A close-up of the pilot's extremely pale, sweaty face, eyes wide with fear, gripping the steering wheel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A close-up of the pilot's extremely pale, sweaty face, eyes wide with fear, gripping the steering wheel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El comandante, pálido, no puedes ignorarlo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "An elderly 'doña' passenger waking up with a start, rubbing her eyes, one foot visibly without a sandal, looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An elderly 'doña' passenger waking up with a start, rubbing her eyes, one foot visibly without a sandal, looking confused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "De pronto, una viejita dice, '¡Ay, mi pie!'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A single bare foot (cartoon style) peeking out from under a blanket in an airplane seat, with a little speech bubble saying 'Oops!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A single bare foot (cartoon style) peeking out from under a blanket in an airplane seat, with a little speech bubble saying 'Oops!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Siempre se me sale mi chanclita cuando duermo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon foot with a chancla reunited, looking relieved, as if the chancla found its way home, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon foot with a chancla reunited, looking relieved, as if the chancla found its way home, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y ahí estaba, ¡su pie descalzo y libre!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Multiple passengers pointing and laughing good-naturedly at the doña and her chancla, with speech bubbles of 'Haha!' and 'It was her!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Multiple passengers pointing and laughing good-naturedly at the doña and her chancla, with speech bubbles of 'Haha!' and 'It was her!', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡No estabas solo, era la chancla de la doña!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "An airplane full of passengers looking exhausted but relieved, some fanning themselves, a single chancla in the foreground, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An airplane full of passengers looking exhausted but relieved, some fanning themselves, a single chancla in the foreground, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Todo el vuelo por culpa de un pie!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "A cartoon foot wearing a chancla, wiggling its toes playfully, with a thought bubble about not losing it again, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon foot wearing a chancla, wiggling its toes playfully, with a thought bubble about not losing it again, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Así que ya saben, ¡cuidado con los pies dormilones!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Chancla misteriosa en vuelo",
+      "Vuelo tranquilo, ¡chancla voladora!",
+      "Piloto pálido, chancla cósmica"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
