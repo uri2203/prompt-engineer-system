@@ -225,5 +225,232 @@
       "El escape del día"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "0aa2de70-77ad-4511-b28b-487f102384a3",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A person looking suspiciously at an old Mexican house at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A person looking suspiciously at an old Mexican house at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La ciencia, fíjate, esconde un dato crucial sobre tu casa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon character feeling chills in a dimly lit hallway, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon character feeling chills in a dimly lit hallway, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Esa sensación extraña, de que no estabas solo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A person waking up startled in bed, looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A person waking up startled in bed, looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¿Lo sentiste antes? En medio de la noche.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A cartoon character with goosebumps, shivering slightly, in a warm room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character with goosebumps, shivering slightly, in a warm room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un frío que recorre la espalda, sin ventana abierta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon kitchen at night, a faint 'creak' sound wave illustrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon kitchen at night, a faint 'creak' sound wave illustrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Escuchas un crujido donde solo hay silencio absoluto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A cartoon character with a puzzled, slightly scared expression looking at a kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character with a puzzled, slightly scared expression looking at a kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Jurarías que algo no está bien en tu cocina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A cartoon character quickly turning their head, a blurred shadow in the periphery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character quickly turning their head, a blurred shadow in the periphery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ves una sombra por el rabillo del ojo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"An empty corner of a room, implying something was just there, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"An empty corner of a room, implying something was just there, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero cuando volteas, nadie lo vio ahí.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A cartoon kitchen with a spoon mysteriously moving across the counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon kitchen with a spoon mysteriously moving across the counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los objetos cambian de lugar, ¿quién movió la cuchara?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A keyring hanging from an unexpected place, like a curtain rod, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A keyring hanging from an unexpected place, like a curtain rod, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Tus llaves aparecen donde jamás las dejaste.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A cartoon character trying to sleep but with wide, worried eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character trying to sleep but with wide, worried eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Tratas de ignorarlo, pero no puedes ignorarlo más.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A cartoon character feeling observed, with exaggerated paranoid eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character feeling observed, with exaggerated paranoid eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Esa sensación de ser observado, incluso en tu cama.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon character with a determined, slightly scared expression, getting out of bed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character with a determined, slightly scared expression, getting out of bed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Decides que ya basta, que vas a confrontar eso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A dimly lit hallway, cartoon character tiptoeing slowly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A dimly lit hallway, cartoon character tiptoeing slowly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Te levantas en la oscuridad, corazón acelerado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A cartoon character peering around a corner, hand on wall, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character peering around a corner, hand on wall, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Caminas despacio hacia donde sientes la presencia.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A cartoon kitchen with an old wooden alacena (pantry) door slightly ajar, a sliver of light inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon kitchen with an old wooden alacena (pantry) door slightly ajar, a sliver of light inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La puerta de la alacena, ligeramente abierta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A cartoon character's face with wide, scared, but determined eyes, looking towards the alacena, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character's face with wide, scared, but determined eyes, looking towards the alacena, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Te asomas, preparando para lo inexplicable, lo terrorífico.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Interior of a cartoon alacena, dark, with a silhouette of a person bent over, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Interior of a cartoon alacena, dark, with a silhouette of a person bent over, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y ahí, en medio de tu cocina, agachado...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A surprised, slightly embarrassed cartoon 'compadre' character, holding an open jar of mole, caught red-handed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A surprised, slightly embarrassed cartoon 'compadre' character, holding an open jar of mole, caught red-handed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡El compadre, abriendo un envase de mole doña María!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"The compadre character, with crumbs on his face, shrugging comically, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The compadre character, with crumbs on his face, shrugging comically, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Dijo que tenía un antojo horrible a medianoche.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"The compadre looking indignant, pointing at himself, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The compadre looking indignant, pointing at himself, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Que le dio la \\\"mala de puerco\\\", compadre!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"The compadre holding an empty jar of chiles in vinegar, looking innocent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The compadre holding an empty jar of chiles in vinegar, looking innocent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Y que el bote de chiles en vinagre estaba solo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"The original cartoon character looking exasperated and amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The original cartoon character looking exasperated and amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No era un fantasma, era pura hambre, ¡qué barbaridad!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon illustration of a ghost figure with a compadre's face, holding a fork, fading away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon illustration of a ghost figure with a compadre's face, holding a fork, fading away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Tu fantasma glotón resultó ser el compadre.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon alacena with a giant padlock on it, a person shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon alacena with a giant padlock on it, a person shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Deberíamos ponerle un candado a la alacena, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"A cartoon compadre character looking trapped or confused, with question marks around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon compadre character looking trapped or confused, with question marks around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¿O a tu compadre? Déjalo en los comentarios.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "La ciencia, fíjate, esconde un dato crucial sobre tu casa. Esa sensación extraña, de que no estabas solo. ¿Lo sentiste antes? En medio de la noche. Un frío que recorre la espalda, sin ventana abierta. Escuchas un crujido donde solo hay silencio absoluto. Jurarías que algo no está bien en tu cocina. Ves una sombra por el rabillo del ojo. Pero cuando volteas, nadie lo vio ahí. Los objetos cambian de lugar, ¿quién movió la cuchara? Tus llaves aparecen donde jamás las dejaste. Tratas de ignorarlo, pero no puedes ignorarlo más. Esa sensación de ser observado, incluso en tu cama. Decides que ya basta, que vas a confrontar eso. Te levantas en la oscuridad, corazón acelerado. Caminas despacio hacia donde sientes la presencia. La puerta de la alacena, ligeramente abierta. Te asomas, preparando para lo inexplicable, lo terrorífico. Y ahí, en medio de tu cocina, agachado... ¡El compadre, abriendo un envase de mole doña María! Dijo que tenía un antojo horrible a medianoche. ¡Que le dio la \"mala de puerco\", compadre! ¡Y que el bote de chiles en vinagre estaba solo! No era un fantasma, era pura hambre, ¡qué barbaridad! Tu fantasma glotón resultó ser el compadre. Deberíamos ponerle un candado a la alacena, ¿verdad? ¿O a tu compadre? Déjalo en los comentarios.",
+    "titulo_sugerido": "El Misterio del Compadre en la Alacena",
+    "escenas_texto": [
+      "La ciencia, fíjate, esconde un dato crucial sobre tu casa.",
+      "Esa sensación extraña, de que no estabas solo.",
+      "¿Lo sentiste antes? En medio de la noche.",
+      "Un frío que recorre la espalda, sin ventana abierta.",
+      "Escuchas un crujido donde solo hay silencio absoluto.",
+      "Jurarías que algo no está bien en tu cocina.",
+      "Ves una sombra por el rabillo del ojo.",
+      "Pero cuando volteas, nadie lo vio ahí.",
+      "Los objetos cambian de lugar, ¿quién movió la cuchara?",
+      "Tus llaves aparecen donde jamás las dejaste.",
+      "Tratas de ignorarlo, pero no puedes ignorarlo más.",
+      "Esa sensación de ser observado, incluso en tu cama.",
+      "Decides que ya basta, que vas a confrontar eso.",
+      "Te levantas en la oscuridad, corazón acelerado.",
+      "Caminas despacio hacia donde sientes la presencia.",
+      "La puerta de la alacena, ligeramente abierta.",
+      "Te asomas, preparando para lo inexplicable, lo terrorífico.",
+      "Y ahí, en medio de tu cocina, agachado...",
+      "¡El compadre, abriendo un envase de mole doña María!",
+      "Dijo que tenía un antojo horrible a medianoche.",
+      "¡Que le dio la \"mala de puerco\", compadre!",
+      "¡Y que el bote de chiles en vinagre estaba solo!",
+      "No era un fantasma, era pura hambre, ¡qué barbaridad!",
+      "Tu fantasma glotón resultó ser el compadre.",
+      "Deberíamos ponerle un candado a la alacena, ¿verdad?",
+      "¿O a tu compadre? Déjalo en los comentarios."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A person looking suspiciously at an old Mexican house at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A person looking suspiciously at an old Mexican house at night, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La ciencia, fíjate, esconde un dato crucial sobre tu casa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon character feeling chills in a dimly lit hallway, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon character feeling chills in a dimly lit hallway, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Esa sensación extraña, de que no estabas solo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A person waking up startled in bed, looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A person waking up startled in bed, looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¿Lo sentiste antes? En medio de la noche.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A cartoon character with goosebumps, shivering slightly, in a warm room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character with goosebumps, shivering slightly, in a warm room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un frío que recorre la espalda, sin ventana abierta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon kitchen at night, a faint 'creak' sound wave illustrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon kitchen at night, a faint 'creak' sound wave illustrated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Escuchas un crujido donde solo hay silencio absoluto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A cartoon character with a puzzled, slightly scared expression looking at a kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character with a puzzled, slightly scared expression looking at a kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Jurarías que algo no está bien en tu cocina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A cartoon character quickly turning their head, a blurred shadow in the periphery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character quickly turning their head, a blurred shadow in the periphery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ves una sombra por el rabillo del ojo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "An empty corner of a room, implying something was just there, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "An empty corner of a room, implying something was just there, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero cuando volteas, nadie lo vio ahí.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A cartoon kitchen with a spoon mysteriously moving across the counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon kitchen with a spoon mysteriously moving across the counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los objetos cambian de lugar, ¿quién movió la cuchara?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A keyring hanging from an unexpected place, like a curtain rod, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A keyring hanging from an unexpected place, like a curtain rod, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Tus llaves aparecen donde jamás las dejaste.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A cartoon character trying to sleep but with wide, worried eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character trying to sleep but with wide, worried eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Tratas de ignorarlo, pero no puedes ignorarlo más.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A cartoon character feeling observed, with exaggerated paranoid eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character feeling observed, with exaggerated paranoid eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Esa sensación de ser observado, incluso en tu cama.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon character with a determined, slightly scared expression, getting out of bed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character with a determined, slightly scared expression, getting out of bed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Decides que ya basta, que vas a confrontar eso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A dimly lit hallway, cartoon character tiptoeing slowly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A dimly lit hallway, cartoon character tiptoeing slowly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Te levantas en la oscuridad, corazón acelerado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A cartoon character peering around a corner, hand on wall, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character peering around a corner, hand on wall, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Caminas despacio hacia donde sientes la presencia.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A cartoon kitchen with an old wooden alacena (pantry) door slightly ajar, a sliver of light inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon kitchen with an old wooden alacena (pantry) door slightly ajar, a sliver of light inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La puerta de la alacena, ligeramente abierta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A cartoon character's face with wide, scared, but determined eyes, looking towards the alacena, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character's face with wide, scared, but determined eyes, looking towards the alacena, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Te asomas, preparando para lo inexplicable, lo terrorífico.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Interior of a cartoon alacena, dark, with a silhouette of a person bent over, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Interior of a cartoon alacena, dark, with a silhouette of a person bent over, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y ahí, en medio de tu cocina, agachado...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A surprised, slightly embarrassed cartoon 'compadre' character, holding an open jar of mole, caught red-handed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A surprised, slightly embarrassed cartoon 'compadre' character, holding an open jar of mole, caught red-handed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡El compadre, abriendo un envase de mole doña María!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "The compadre character, with crumbs on his face, shrugging comically, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The compadre character, with crumbs on his face, shrugging comically, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Dijo que tenía un antojo horrible a medianoche.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "The compadre looking indignant, pointing at himself, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The compadre looking indignant, pointing at himself, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Que le dio la \"mala de puerco\", compadre!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "The compadre holding an empty jar of chiles in vinegar, looking innocent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The compadre holding an empty jar of chiles in vinegar, looking innocent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Y que el bote de chiles en vinagre estaba solo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "The original cartoon character looking exasperated and amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The original cartoon character looking exasperated and amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No era un fantasma, era pura hambre, ¡qué barbaridad!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon illustration of a ghost figure with a compadre's face, holding a fork, fading away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon illustration of a ghost figure with a compadre's face, holding a fork, fading away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Tu fantasma glotón resultó ser el compadre.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon alacena with a giant padlock on it, a person shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon alacena with a giant padlock on it, a person shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Deberíamos ponerle un candado a la alacena, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "A cartoon compadre character looking trapped or confused, with question marks around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon compadre character looking trapped or confused, with question marks around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¿O a tu compadre? Déjalo en los comentarios.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "No estabas solo...",
+      "Silencio absoluto...",
+      "¡Antojo de mole!"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
