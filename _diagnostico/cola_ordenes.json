@@ -1181,5 +1181,232 @@
       "Tu casa no está sola"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "70379286-6ea7-4bd3-8a2f-991b1f54399d",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A cartoon microwave on a kitchen counter, with a tiny, suspicious eye peeking from behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon microwave on a kitchen counter, with a tiny, suspicious eye peeking from behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¿Sabías que tu microondas apagado... no está solo?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A person sleeping soundly in a bed, while a faint, mysterious glow emanates from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A person sleeping soundly in a bed, while a faint, mysterious glow emanates from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"De noche, en el silencio absoluto, ¿lo escuchas?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A cartoon kitchen, with a single spoon slowly sliding off the counter, unaided, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon kitchen, with a single spoon slowly sliding off the counter, unaided, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cucharitas se caen solas. Algo no está bien, eh.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A cartoon hand reaching to touch the microwave, which slightly vibrates and emits a tiny, almost imperceptible \\\"buzz\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon hand reaching to touch the microwave, which slightly vibrates and emits a tiny, almost imperceptible \\\"buzz\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Sentiste un vibrar extraño. Lo sentiste antes, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon character looking bewildered at the microwave, while a tiny, almost invisible shadow flits past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character looking bewildered at the microwave, while a tiny, almost invisible shadow flits past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Tu café amaneció tibio. Nadie lo vio.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A cartoon character pointing an accusatory finger at the microwave, which has a tiny, almost imperceptible smirk, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character pointing an accusatory finger at the microwave, which has a tiny, almost imperceptible smirk, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡No puedes ignorarlo más! ¡Te está vigilando!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A cartoon family gathered around the microwave, looking confused and a bit scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon family gathered around the microwave, looking confused and a bit scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La doña dijo: \\\"¡Mis tamales se mueven solos!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A cartoon Brayan trying to \\\"fix\\\" the microwave with a wrench, sparks flying humorously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon Brayan trying to \\\"fix\\\" the microwave with a wrench, sparks flying humorously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El Brayan intentó repararlo, ¡sólo hizo más ruido!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A cartoon cat hissing at the microwave, its fur standing on end, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon cat hissing at the microwave, its fur standing on end, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Hasta el gato le soplaba, ¡sentía la vibra!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon character trying to unplug the microwave, but the plug seems stuck and glows faintly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character trying to unplug the microwave, but the plug seems stuck and glows faintly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Desenchufarlo fue imposible. Se aferraba a la luz.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A cartoon neighbor peeking through a window, looking concerned at the house, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon neighbor peeking through a window, looking concerned at the house, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los vecinos murmuraban. Algo raro pasaba aquí.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A cartoon character putting a blanket over the microwave, trying to \\\"silence\\\" it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character putting a blanket over the microwave, trying to \\\"silence\\\" it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Lo tapaste con una cobija, ¡seguía zumbando!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon character in bed, eyes wide open, listening to faint, mysterious whispers from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character in bed, eyes wide open, listening to faint, mysterious whispers from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Susurros en la oscuridad... o era tu imaginación.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A cartoon calendar showing \\\"Día de la Cuaresma\\\", with a humorous fish drawing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon calendar showing \\\"Día de la Cuaresma\\\", with a humorous fish drawing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Llegó Cuaresma, ¡y el microondas quería pescado!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A cartoon character trying to talk to the microwave, as if it were a pet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character trying to talk to the microwave, as if it were a pet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Le hablaste bonito, \\\"por favor, ya no asustes\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A cartoon character putting garlic and an upside-down horseshoe near the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character putting garlic and an upside-down horseshoe near the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Le pusiste ajo, herraduras. ¡Nada funcionaba, nada!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A cartoon character running out of the kitchen in panic, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character running out of the kitchen in panic, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Hasta pensaste en huir! Esa cosa te vencía.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A cartoon character calling a \\\"ghostbuster\\\" type of service, which is a local plomero, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character calling a \\\"ghostbuster\\\" type of service, which is a local plomero, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Llamaste al compadre: \\\"¡Señales extrañas en casa!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A cartoon compadre arriving with a toolbox, looking equally confused by the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon compadre arriving with a toolbox, looking equally confused by the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El compadre llegó, ¡pero tampoco encontró lógica!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"A cartoon character trying to give away the microwave at a tianguis, but nobody wants it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character trying to give away the microwave at a tianguis, but nobody wants it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Intentaste regalarlo en el tianguis. ¡Nadie lo quiso!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"A cartoon character trying to sell the microwave to a junk collector, who runs away scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character trying to sell the microwave to a junk collector, who runs away scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El de la chatarra huyó. Dijo que vibraba raro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A cartoon character sitting dejectedly on a chair, while the microwave glows ominously in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character sitting dejectedly on a chair, while the microwave glows ominously in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ya te diste por vencido, ¿qué más podías hacer?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"A cartoon character having a sudden realization, lightbulb moment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character having a sudden realization, lightbulb moment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Entonces, recordaste las instrucciones... ¡ese pequeño detalle!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon microwave with a small \\\"DEMO\\\" sticker on it, humorously winking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon microwave with a small \\\"DEMO\\\" sticker on it, humorously winking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...¡tenía activado el modo \\\"demostración\\\" de fábrica!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon character face-palming, looking utterly embarrassed and relieved, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon character face-palming, looking utterly embarrassed and relieved, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El microondas solo hacía ruido, ¡no espiaba nada!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"A cartoon family laughing hysterically, pointing at the microwave and the embarrassed character, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon family laughing hysterically, pointing at the microwave and the embarrassed character, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y hasta hoy, ese fue el misterio sin resolver.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "¿Sabías que tu microondas apagado... no está solo? De noche, en el silencio absoluto, ¿lo escuchas? Cucharitas se caen solas. Algo no está bien, eh. Sentiste un vibrar extraño. Lo sentiste antes, ¿verdad? Tu café amaneció tibio. Nadie lo vio. ¡No puedes ignorarlo más! ¡Te está vigilando! La doña dijo: \"¡Mis tamales se mueven solos!\" El Brayan intentó repararlo, ¡sólo hizo más ruido! Hasta el gato le soplaba, ¡sentía la vibra! Desenchufarlo fue imposible. Se aferraba a la luz. Los vecinos murmuraban. Algo raro pasaba aquí. Lo tapaste con una cobija, ¡seguía zumbando! Susurros en la oscuridad... o era tu imaginación. Llegó Cuaresma, ¡y el microondas quería pescado! Le hablaste bonito, \"por favor, ya no asustes\". Le pusiste ajo, herraduras. ¡Nada funcionaba, nada! ¡Hasta pensaste en huir! Esa cosa te vencía. Llamaste al compadre: \"¡Señales extrañas en casa!\" El compadre llegó, ¡pero tampoco encontró lógica! Intentaste regalarlo en el tianguis. ¡Nadie lo quiso! El de la chatarra huyó. Dijo que vibraba raro. Ya te diste por vencido, ¿qué más podías hacer? Entonces, recordaste las instrucciones... ¡ese pequeño detalle! ...¡tenía activado el modo \"demostración\" de fábrica! El microondas solo hacía ruido, ¡no espiaba nada! Y hasta hoy, ese fue el misterio sin resolver.",
+    "titulo_sugerido": "El Microondas Espía y el Misterio del Botón Escondido",
+    "escenas_texto": [
+      "¿Sabías que tu microondas apagado... no está solo?",
+      "De noche, en el silencio absoluto, ¿lo escuchas?",
+      "Cucharitas se caen solas. Algo no está bien, eh.",
+      "Sentiste un vibrar extraño. Lo sentiste antes, ¿verdad?",
+      "Tu café amaneció tibio. Nadie lo vio.",
+      "¡No puedes ignorarlo más! ¡Te está vigilando!",
+      "La doña dijo: \"¡Mis tamales se mueven solos!\"",
+      "El Brayan intentó repararlo, ¡sólo hizo más ruido!",
+      "Hasta el gato le soplaba, ¡sentía la vibra!",
+      "Desenchufarlo fue imposible. Se aferraba a la luz.",
+      "Los vecinos murmuraban. Algo raro pasaba aquí.",
+      "Lo tapaste con una cobija, ¡seguía zumbando!",
+      "Susurros en la oscuridad... o era tu imaginación.",
+      "Llegó Cuaresma, ¡y el microondas quería pescado!",
+      "Le hablaste bonito, \"por favor, ya no asustes\".",
+      "Le pusiste ajo, herraduras. ¡Nada funcionaba, nada!",
+      "¡Hasta pensaste en huir! Esa cosa te vencía.",
+      "Llamaste al compadre: \"¡Señales extrañas en casa!\"",
+      "El compadre llegó, ¡pero tampoco encontró lógica!",
+      "Intentaste regalarlo en el tianguis. ¡Nadie lo quiso!",
+      "El de la chatarra huyó. Dijo que vibraba raro.",
+      "Ya te diste por vencido, ¿qué más podías hacer?",
+      "Entonces, recordaste las instrucciones... ¡ese pequeño detalle!",
+      "...¡tenía activado el modo \"demostración\" de fábrica!",
+      "El microondas solo hacía ruido, ¡no espiaba nada!",
+      "Y hasta hoy, ese fue el misterio sin resolver."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A cartoon microwave on a kitchen counter, with a tiny, suspicious eye peeking from behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon microwave on a kitchen counter, with a tiny, suspicious eye peeking from behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¿Sabías que tu microondas apagado... no está solo?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A person sleeping soundly in a bed, while a faint, mysterious glow emanates from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A person sleeping soundly in a bed, while a faint, mysterious glow emanates from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "De noche, en el silencio absoluto, ¿lo escuchas?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A cartoon kitchen, with a single spoon slowly sliding off the counter, unaided, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon kitchen, with a single spoon slowly sliding off the counter, unaided, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cucharitas se caen solas. Algo no está bien, eh.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A cartoon hand reaching to touch the microwave, which slightly vibrates and emits a tiny, almost imperceptible \"buzz\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon hand reaching to touch the microwave, which slightly vibrates and emits a tiny, almost imperceptible \"buzz\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Sentiste un vibrar extraño. Lo sentiste antes, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon character looking bewildered at the microwave, while a tiny, almost invisible shadow flits past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character looking bewildered at the microwave, while a tiny, almost invisible shadow flits past, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Tu café amaneció tibio. Nadie lo vio.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A cartoon character pointing an accusatory finger at the microwave, which has a tiny, almost imperceptible smirk, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character pointing an accusatory finger at the microwave, which has a tiny, almost imperceptible smirk, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡No puedes ignorarlo más! ¡Te está vigilando!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A cartoon family gathered around the microwave, looking confused and a bit scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon family gathered around the microwave, looking confused and a bit scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La doña dijo: \"¡Mis tamales se mueven solos!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A cartoon Brayan trying to \"fix\" the microwave with a wrench, sparks flying humorously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon Brayan trying to \"fix\" the microwave with a wrench, sparks flying humorously, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El Brayan intentó repararlo, ¡sólo hizo más ruido!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A cartoon cat hissing at the microwave, its fur standing on end, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon cat hissing at the microwave, its fur standing on end, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Hasta el gato le soplaba, ¡sentía la vibra!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon character trying to unplug the microwave, but the plug seems stuck and glows faintly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character trying to unplug the microwave, but the plug seems stuck and glows faintly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Desenchufarlo fue imposible. Se aferraba a la luz.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A cartoon neighbor peeking through a window, looking concerned at the house, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon neighbor peeking through a window, looking concerned at the house, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los vecinos murmuraban. Algo raro pasaba aquí.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A cartoon character putting a blanket over the microwave, trying to \"silence\" it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character putting a blanket over the microwave, trying to \"silence\" it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Lo tapaste con una cobija, ¡seguía zumbando!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon character in bed, eyes wide open, listening to faint, mysterious whispers from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character in bed, eyes wide open, listening to faint, mysterious whispers from the kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Susurros en la oscuridad... o era tu imaginación.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A cartoon calendar showing \"Día de la Cuaresma\", with a humorous fish drawing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon calendar showing \"Día de la Cuaresma\", with a humorous fish drawing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Llegó Cuaresma, ¡y el microondas quería pescado!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A cartoon character trying to talk to the microwave, as if it were a pet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character trying to talk to the microwave, as if it were a pet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Le hablaste bonito, \"por favor, ya no asustes\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A cartoon character putting garlic and an upside-down horseshoe near the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character putting garlic and an upside-down horseshoe near the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Le pusiste ajo, herraduras. ¡Nada funcionaba, nada!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A cartoon character running out of the kitchen in panic, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character running out of the kitchen in panic, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Hasta pensaste en huir! Esa cosa te vencía.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A cartoon character calling a \"ghostbuster\" type of service, which is a local plomero, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character calling a \"ghostbuster\" type of service, which is a local plomero, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Llamaste al compadre: \"¡Señales extrañas en casa!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A cartoon compadre arriving with a toolbox, looking equally confused by the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon compadre arriving with a toolbox, looking equally confused by the microwave, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El compadre llegó, ¡pero tampoco encontró lógica!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "A cartoon character trying to give away the microwave at a tianguis, but nobody wants it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character trying to give away the microwave at a tianguis, but nobody wants it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Intentaste regalarlo en el tianguis. ¡Nadie lo quiso!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "A cartoon character trying to sell the microwave to a junk collector, who runs away scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character trying to sell the microwave to a junk collector, who runs away scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El de la chatarra huyó. Dijo que vibraba raro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A cartoon character sitting dejectedly on a chair, while the microwave glows ominously in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character sitting dejectedly on a chair, while the microwave glows ominously in the background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ya te diste por vencido, ¿qué más podías hacer?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "A cartoon character having a sudden realization, lightbulb moment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character having a sudden realization, lightbulb moment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Entonces, recordaste las instrucciones... ¡ese pequeño detalle!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon microwave with a small \"DEMO\" sticker on it, humorously winking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon microwave with a small \"DEMO\" sticker on it, humorously winking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...¡tenía activado el modo \"demostración\" de fábrica!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon character face-palming, looking utterly embarrassed and relieved, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon character face-palming, looking utterly embarrassed and relieved, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El microondas solo hacía ruido, ¡no espiaba nada!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "A cartoon family laughing hysterically, pointing at the microwave and the embarrassed character, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon family laughing hysterically, pointing at the microwave and the embarrassed character, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y hasta hoy, ese fue el misterio sin resolver.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Microondas que espía",
+      "Ruidos en la noche",
+      "Modo demostración"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
