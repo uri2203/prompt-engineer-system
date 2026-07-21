@@ -1,10 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 13,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 3,
-  "trabajo_actual": "Generando video 4/13 (LaesquinaRandom 9:16)",
-  "mensaje": "Produccion del video 4 iniciada.",
-  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 2s+2L",
-  "historial": []
+  "mensaje": "Cola reseteada desde el panel.",
+  "resumen": ""
 }
