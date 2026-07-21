@@ -492,5 +492,264 @@
       "¡Tu mamá los tiene!"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "d06f676a-d623-4198-b05b-acc4b17427a7",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A person looking confused at an empty spot on a coffee table where a remote control should be, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A person looking confused at an empty spot on a coffee table where a remote control should be, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Te prometo que hoy descubrirás el secreto más perturbador de tu hogar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A cartoon remote control with tiny legs running away from a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon remote control with tiny legs running away from a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ese control remoto que se pierde, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A hand pointing to an empty coffee table, with a confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A hand pointing to an empty coffee table, with a confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Lo dejaste ahí, justo sobre la mesita.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A small puff of smoke where a remote control used to be, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A small puff of smoke where a remote control used to be, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y de pronto, ¡puf!, ya no estaba.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon mom and a mischievous boy shrugging innocently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon mom and a mischievous boy shrugging innocently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"No, no lo movió tu mamá ni el Brayan.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A living room with a subtle, shimmering, invisible outline of a tiny mischievous creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A living room with a subtle, shimmering, invisible outline of a tiny mischievous creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Hay una fuerza invisible en tu sala.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A tiny, impish creature with a sly grin holding a remote control, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A tiny, impish creature with a sly grin holding a remote control, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Una pequeñita, astuta y muy traviesa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A chalkboard with a silly diagram and the name 'El Roba-Pilotos' written on it, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A chalkboard with a silly diagram and the name 'El Roba-Pilotos' written on it, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Los científicos lo han llamado \\\"El Roba-Pilotos\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"The impish creature from before, surrounded by many remote controls, laughing maniacally, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The impish creature from before, surrounded by many remote controls, laughing maniacally, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Su misión: desaparecer todos los controles.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A person comically struggling to get up from a couch to change a TV channel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A person comically struggling to get up from a couch to change a TV channel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Para que te levantes por cada canal.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A stack of various plastic food containers (tuppers) with missing lids, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A stack of various plastic food containers (tuppers) with missing lids, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Y la tapa del tupper que no aparece?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"The mischievous creature peeking out from behind a stack of tuppers, holding a lid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The mischievous creature peeking out from behind a stack of tuppers, holding a lid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Sí, también es obra de este travieso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A person looking around nervously, sensing an unseen presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A person looking around nervously, sensing an unseen presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Lo sentiste antes, esa extraña ausencia.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A single, lonely sock in a laundry basket, looking sad, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A single, lonely sock in a laundry basket, looking sad, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ese calcetín solito que se esfumó.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A person looking directly at the camera with wide, slightly scared eyes, indicating something unseen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A person looking directly at the camera with wide, slightly scared eyes, indicating something unseen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Nadie lo vio, pero algo no está bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A quiet, still living room, with the only movement being a subtle ripple in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A quiet, still living room, with the only movement being a subtle ripple in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Se esconde en el silencio absoluto de tu casa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"The mischievous creature quickly darting past a person who is blinking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The mischievous creature quickly darting past a person who is blinking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Aprovecha cuando parpadeas o te distraes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A key hook on a wall, completely empty, with a puzzled person staring at it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A key hook on a wall, completely empty, with a puzzled person staring at it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Se lleva las llaves que dejaste colgadas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A phone with a low battery symbol and a person frantically searching for a charger, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A phone with a low battery symbol and a person frantically searching for a charger, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"O el cargador del celular, ¿ya lo notaste?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Multiple cartoon people in different houses, all looking for missing items, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Multiple cartoon people in different houses, all looking for missing items, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"No estabas solo en esa búsqueda frenética.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"A globe with tiny arrows pointing to many houses, all experiencing the same mysterious disappearances, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A globe with tiny arrows pointing to many houses, all experiencing the same mysterious disappearances, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Millones de hogares viven este mismo drama.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A cartoon 'doña' character, with a knowing look and an apron, gossiping over a fence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon 'doña' character, with a knowing look and an apron, gossiping over a fence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La doña de la esquina ya lo sabe.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Tiny duendes (gnomes) with old-fashioned clothes holding modern gadgets, looking mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Tiny duendes (gnomes) with old-fashioned clothes holding modern gadgets, looking mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Dice que son duendes con mañas modernas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A shadowy, sophisticated silhouette of 'El Roba-Pilotos' with glowing eyes, looking menacing but still cartoonish, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A shadowy, sophisticated silhouette of 'El Roba-Pilotos' with glowing eyes, looking menacing but still cartoonish, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero el \\\"Roba-Pilotos\\\" es más sofisticado...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A tiny message written in Morse code on a remote control, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A tiny message written in Morse code on a remote control, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Dejó un mensaje en código morse ayer...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"The mischievous creature pointing towards a refrigerator, with a can of soda in hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The mischievous creature pointing towards a refrigerator, with a can of soda in hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Decía: \\\"Vayan por sus propios chescos\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A spotlight revealing the mischievous creature holding a remote, standing triumphantly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A spotlight revealing the mischievous creature holding a remote, standing triumphantly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y así, la verdad clasificada fue revelada.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"An old television set with static, emanating a strange, hypnotic light, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An old television set with static, emanating a strange, hypnotic light, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La tele abierta es su arma secreta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 29, \"prompt\": \"A person looking at a drawer full of incomplete remote controls and missing items, counting them with a perplexed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A person looking at a drawer full of incomplete remote controls and missing items, counting them with a perplexed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Así que... ¿cuántos controles te faltan ahora?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 30, \"prompt\": \"The mischievous creature winking at the camera, leaving a question mark in the air behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The mischievous creature winking at the camera, leaving a question mark in the air behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El misterio sigue sin resolverse completamente.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Te prometo que hoy descubrirás el secreto más perturbador de tu hogar. Ese control remoto que se pierde, ¿verdad? Lo dejaste ahí, justo sobre la mesita. Y de pronto, ¡puf!, ya no estaba. No, no lo movió tu mamá ni el Brayan. Hay una fuerza invisible en tu sala. Una pequeñita, astuta y muy traviesa. Los científicos lo han llamado \"El Roba-Pilotos\". Su misión: desaparecer todos los controles. Para que te levantes por cada canal. ¿Y la tapa del tupper que no aparece? Sí, también es obra de este travieso. Lo sentiste antes, esa extraña ausencia. Ese calcetín solito que se esfumó. Nadie lo vio, pero algo no está bien. Se esconde en el silencio absoluto de tu casa. Aprovecha cuando parpadeas o te distraes. Se lleva las llaves que dejaste colgadas. O el cargador del celular, ¿ya lo notaste? No estabas solo en esa búsqueda frenética. Millones de hogares viven este mismo drama. La doña de la esquina ya lo sabe. Dice que son duendes con mañas modernas. Pero el \"Roba-Pilotos\" es más sofisticado... Dejó un mensaje en código morse ayer... Decía: \"Vayan por sus propios chescos\". Y así, la verdad clasificada fue revelada. La tele abierta es su arma secreta. Así que... ¿cuántos controles te faltan ahora? El misterio sigue sin resolverse completamente.",
+    "titulo_sugerido": "¿Quién se roba tus controles remotos? ¡La verdad clasificada!",
+    "escenas_texto": [
+      "Te prometo que hoy descubrirás el secreto más perturbador de tu hogar.",
+      "Ese control remoto que se pierde, ¿verdad?",
+      "Lo dejaste ahí, justo sobre la mesita.",
+      "Y de pronto, ¡puf!, ya no estaba.",
+      "No, no lo movió tu mamá ni el Brayan.",
+      "Hay una fuerza invisible en tu sala.",
+      "Una pequeñita, astuta y muy traviesa.",
+      "Los científicos lo han llamado \"El Roba-Pilotos\".",
+      "Su misión: desaparecer todos los controles.",
+      "Para que te levantes por cada canal.",
+      "¿Y la tapa del tupper que no aparece?",
+      "Sí, también es obra de este travieso.",
+      "Lo sentiste antes, esa extraña ausencia.",
+      "Ese calcetín solito que se esfumó.",
+      "Nadie lo vio, pero algo no está bien.",
+      "Se esconde en el silencio absoluto de tu casa.",
+      "Aprovecha cuando parpadeas o te distraes.",
+      "Se lleva las llaves que dejaste colgadas.",
+      "O el cargador del celular, ¿ya lo notaste?",
+      "No estabas solo en esa búsqueda frenética.",
+      "Millones de hogares viven este mismo drama.",
+      "La doña de la esquina ya lo sabe.",
+      "Dice que son duendes con mañas modernas.",
+      "Pero el \"Roba-Pilotos\" es más sofisticado...",
+      "Dejó un mensaje en código morse ayer...",
+      "Decía: \"Vayan por sus propios chescos\".",
+      "Y así, la verdad clasificada fue revelada.",
+      "La tele abierta es su arma secreta.",
+      "Así que... ¿cuántos controles te faltan ahora?",
+      "El misterio sigue sin resolverse completamente."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A person looking confused at an empty spot on a coffee table where a remote control should be, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A person looking confused at an empty spot on a coffee table where a remote control should be, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Te prometo que hoy descubrirás el secreto más perturbador de tu hogar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A cartoon remote control with tiny legs running away from a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon remote control with tiny legs running away from a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ese control remoto que se pierde, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A hand pointing to an empty coffee table, with a confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A hand pointing to an empty coffee table, with a confused expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Lo dejaste ahí, justo sobre la mesita.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A small puff of smoke where a remote control used to be, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A small puff of smoke where a remote control used to be, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y de pronto, ¡puf!, ya no estaba.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon mom and a mischievous boy shrugging innocently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon mom and a mischievous boy shrugging innocently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "No, no lo movió tu mamá ni el Brayan.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A living room with a subtle, shimmering, invisible outline of a tiny mischievous creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A living room with a subtle, shimmering, invisible outline of a tiny mischievous creature, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Hay una fuerza invisible en tu sala.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A tiny, impish creature with a sly grin holding a remote control, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A tiny, impish creature with a sly grin holding a remote control, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Una pequeñita, astuta y muy traviesa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A chalkboard with a silly diagram and the name 'El Roba-Pilotos' written on it, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A chalkboard with a silly diagram and the name 'El Roba-Pilotos' written on it, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Los científicos lo han llamado \"El Roba-Pilotos\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "The impish creature from before, surrounded by many remote controls, laughing maniacally, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The impish creature from before, surrounded by many remote controls, laughing maniacally, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Su misión: desaparecer todos los controles.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A person comically struggling to get up from a couch to change a TV channel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A person comically struggling to get up from a couch to change a TV channel, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Para que te levantes por cada canal.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A stack of various plastic food containers (tuppers) with missing lids, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A stack of various plastic food containers (tuppers) with missing lids, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Y la tapa del tupper que no aparece?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "The mischievous creature peeking out from behind a stack of tuppers, holding a lid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The mischievous creature peeking out from behind a stack of tuppers, holding a lid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Sí, también es obra de este travieso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A person looking around nervously, sensing an unseen presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A person looking around nervously, sensing an unseen presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Lo sentiste antes, esa extraña ausencia.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A single, lonely sock in a laundry basket, looking sad, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A single, lonely sock in a laundry basket, looking sad, cartoon style, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ese calcetín solito que se esfumó.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A person looking directly at the camera with wide, slightly scared eyes, indicating something unseen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A person looking directly at the camera with wide, slightly scared eyes, indicating something unseen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Nadie lo vio, pero algo no está bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A quiet, still living room, with the only movement being a subtle ripple in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A quiet, still living room, with the only movement being a subtle ripple in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Se esconde en el silencio absoluto de tu casa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "The mischievous creature quickly darting past a person who is blinking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The mischievous creature quickly darting past a person who is blinking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Aprovecha cuando parpadeas o te distraes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A key hook on a wall, completely empty, with a puzzled person staring at it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A key hook on a wall, completely empty, with a puzzled person staring at it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Se lleva las llaves que dejaste colgadas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A phone with a low battery symbol and a person frantically searching for a charger, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A phone with a low battery symbol and a person frantically searching for a charger, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "O el cargador del celular, ¿ya lo notaste?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Multiple cartoon people in different houses, all looking for missing items, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Multiple cartoon people in different houses, all looking for missing items, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "No estabas solo en esa búsqueda frenética.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "A globe with tiny arrows pointing to many houses, all experiencing the same mysterious disappearances, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A globe with tiny arrows pointing to many houses, all experiencing the same mysterious disappearances, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Millones de hogares viven este mismo drama.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A cartoon 'doña' character, with a knowing look and an apron, gossiping over a fence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon 'doña' character, with a knowing look and an apron, gossiping over a fence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La doña de la esquina ya lo sabe.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Tiny duendes (gnomes) with old-fashioned clothes holding modern gadgets, looking mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Tiny duendes (gnomes) with old-fashioned clothes holding modern gadgets, looking mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Dice que son duendes con mañas modernas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A shadowy, sophisticated silhouette of 'El Roba-Pilotos' with glowing eyes, looking menacing but still cartoonish, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A shadowy, sophisticated silhouette of 'El Roba-Pilotos' with glowing eyes, looking menacing but still cartoonish, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero el \"Roba-Pilotos\" es más sofisticado...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A tiny message written in Morse code on a remote control, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A tiny message written in Morse code on a remote control, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Dejó un mensaje en código morse ayer...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "The mischievous creature pointing towards a refrigerator, with a can of soda in hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The mischievous creature pointing towards a refrigerator, with a can of soda in hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Decía: \"Vayan por sus propios chescos\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A spotlight revealing the mischievous creature holding a remote, standing triumphantly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A spotlight revealing the mischievous creature holding a remote, standing triumphantly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y así, la verdad clasificada fue revelada.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "An old television set with static, emanating a strange, hypnotic light, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An old television set with static, emanating a strange, hypnotic light, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La tele abierta es su arma secreta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 29,
+        "prompt": "A person looking at a drawer full of incomplete remote controls and missing items, counting them with a perplexed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A person looking at a drawer full of incomplete remote controls and missing items, counting them with a perplexed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Así que... ¿cuántos controles te faltan ahora?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 30,
+        "prompt": "The mischievous creature winking at the camera, leaving a question mark in the air behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The mischievous creature winking at the camera, leaving a question mark in the air behind it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El misterio sigue sin resolverse completamente.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Control remoto perdido",
+      "El Roba-Pilotos",
+      "Tupper sin tapa"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
