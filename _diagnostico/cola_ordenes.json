@@ -703,5 +703,248 @@
       "Objetos cambian de dueño"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "88025f0d-7ad6-44c7-8314-583ede9a8985",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Cartoon professor with a serious face presenting a chalkboard, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon professor with a serious face presenting a chalkboard, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La UNAM ocultó por décadas este dato perturbador.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon alarm clock ringing at 3:33 AM, no photorealism\", \"prompt_visual\": \"Cartoon alarm clock ringing at 3:33 AM, no photorealism\", \"texto_locucion\": \"Sabías que el 70% de los gallos canta a las 3:33 AM...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Cartoon sleepy person looking confused at a window, no photorealism\", \"prompt_visual\": \"Cartoon sleepy person looking confused at a window, no photorealism\", \"texto_locucion\": \"...solo para que sientas que algo no está bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Cartoon missing tortilla from a stack, no photorealism\", \"prompt_visual\": \"Cartoon missing tortilla from a stack, no photorealism\", \"texto_locucion\": \"Una tortilla en el refri nunca se pierde sola.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Cartoon mischievous 'Nahual' like creature hiding with a tortilla, no photorealism\", \"prompt_visual\": \"Cartoon mischievous 'Nahual' like creature hiding with a tortilla, no photorealism\", \"texto_locucion\": \"Un pequeño ser se la lleva. Tú lo sentiste antes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Cartoon empty salsa bottle, a sad person looking at it, no photorealism\", \"prompt_visual\": \"Cartoon empty salsa bottle, a sad person looking at it, no photorealism\", \"texto_locucion\": \"La botella de salsa se acaba cuando más la necesitas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon person desperately shaking an empty salsa bottle, no photorealism\", \"prompt_visual\": \"Cartoon person desperately shaking an empty salsa bottle, no photorealism\", \"texto_locucion\": \"Es una ley cósmica. No puedes ignorarlo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Cartoon remote control hidden under a couch cushion, no photorealism\", \"prompt_visual\": \"Cartoon remote control hidden under a couch cushion, no photorealism\", \"texto_locucion\": \"El control remoto siempre aparece donde ya buscaste.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Cartoon surprised person finding the remote under their arm, no photorealism\", \"prompt_visual\": \"Cartoon surprised person finding the remote under their arm, no photorealism\", \"texto_locucion\": \"Nunca estaba lejos. Nadie lo vio antes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Cartoon child pointing at something invisible, adults confused, no photorealism\", \"prompt_visual\": \"Cartoon child pointing at something invisible, adults confused, no photorealism\", \"texto_locucion\": \"Los niños saben dónde está tu dinero perdido.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon child with a mischievous smile, no photorealism\", \"prompt_visual\": \"Cartoon child with a mischievous smile, no photorealism\", \"texto_locucion\": \"Pero jamás te lo dirán. Silencio absoluto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Cartoon a car parked perfectly, but another car struggles, no photorealism\", \"prompt_visual\": \"Cartoon a car parked perfectly, but another car struggles, no photorealism\", \"texto_locucion\": \"El tráfico pesado es provocado por una mariposa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Cartoon a tiny butterfly causing chaos on a highway, no photorealism\", \"prompt_visual\": \"Cartoon a tiny butterfly causing chaos on a highway, no photorealism\", \"texto_locucion\": \"Sí, el efecto mariposa en su máximo esplendor.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Cartoon a taco stand with an invisible force making tacos disappear, no photorealism\", \"prompt_visual\": \"Cartoon a taco stand with an invisible force making tacos disappear, no photorealism\", \"texto_locucion\": \"Los tacos al pastor tienen vida propia al comerlos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon a person looking confused, just ate a taco but still hungry, no photorealism\", \"prompt_visual\": \"Cartoon a person looking confused, just ate a taco but still hungry, no photorealism\", \"texto_locucion\": \"Parece que siempre cabe uno más en tu estómago.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Cartoon a lone chancla on the floor, ominous shadow, no photorealism\", \"prompt_visual\": \"Cartoon a lone chancla on the floor, ominous shadow, no photorealism\", \"texto_locucion\": \"La chancla de tu mamá tiene su propia conciencia.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon a chancla flying with precision, no photorealism\", \"prompt_visual\": \"Cartoon a chancla flying with precision, no photorealism\", \"texto_locucion\": \"Siempre llega a su destino. Nunca falla un blanco.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Cartoon a person trying to sleep, but a neighbor's dog barks, no photorealism\", \"prompt_visual\": \"Cartoon a person trying to sleep, but a neighbor's dog barks, no photorealism\", \"texto_locucion\": \"El perro del vecino ladra cuando tú estás dormido.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon a dog happily barking, a sleeping person with eye bags, no photorealism\", \"prompt_visual\": \"Cartoon a dog happily barking, a sleeping person with eye bags, no photorealism\", \"texto_locucion\": \"Sabe exactamente cuándo interrumpir tu dulce sueño.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Cartoon a light switch that doesn't work, frustrated person, no photorealism\", \"prompt_visual\": \"Cartoon a light switch that doesn't work, frustrated person, no photorealism\", \"texto_locucion\": \"La luz del baño se funde cuando más la necesitas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon a person in a dark bathroom, scared face, no photorealism\", \"prompt_visual\": \"Cartoon a person in a dark bathroom, scared face, no photorealism\", \"texto_locucion\": \"Y en ese momento, no estabas solo en la oscuridad.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Cartoon a person looking for their keys, checking pockets, no photorealism\", \"prompt_visual\": \"Cartoon a person looking for their keys, checking pockets, no photorealism\", \"texto_locucion\": \"Tus llaves siempre están en el último lugar buscado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Cartoon keys magically appearing in an obvious spot, no photorealism\", \"prompt_visual\": \"Cartoon keys magically appearing in an obvious spot, no photorealism\", \"texto_locucion\": \"Un misterio universal que sigue sin resolverse.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Cartoon a person surprised by a sudden cold draft indoors, no photorealism\", \"prompt_visual\": \"Cartoon a person surprised by a sudden cold draft indoors, no photorealism\", \"texto_locucion\": \"Los escalofríos aleatorios son por una araña invisible.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Cartoon a tiny, almost invisible spider walking on a wall, no photorealism\", \"prompt_visual\": \"Cartoon a tiny, almost invisible spider walking on a wall, no photorealism\", \"texto_locucion\": \"Ojo, no siempre la vas a ver.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Cartoon a coffee mug with steam, but it's cold, no photorealism\", \"prompt_visual\": \"Cartoon a coffee mug with steam, but it's cold, no photorealism\", \"texto_locucion\": \"El café siempre se enfría cuando te distraes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Cartoon a surprised person with a cold coffee, no photorealism\", \"prompt_visual\": \"Cartoon a surprised person with a cold coffee, no photorealism\", \"texto_locucion\": \"Es como si tuviera un temporizador oculto...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"Cartoon a person in deep thought, questioning reality, no photorealism\", \"prompt_visual\": \"Cartoon a person in deep thought, questioning reality, no photorealism\", \"texto_locucion\": \"Y con esto, tu vida ya no será la misma... ¿o sí?\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "La UNAM ocultó por décadas este dato perturbador. Sabías que el 70% de los gallos canta a las 3:33 AM... ...solo para que sientas que algo no está bien. Una tortilla en el refri nunca se pierde sola. Un pequeño ser se la lleva. Tú lo sentiste antes. La botella de salsa se acaba cuando más la necesitas. Es una ley cósmica. No puedes ignorarlo. El control remoto siempre aparece donde ya buscaste. Nunca estaba lejos. Nadie lo vio antes. Los niños saben dónde está tu dinero perdido. Pero jamás te lo dirán. Silencio absoluto. El tráfico pesado es provocado por una mariposa. Sí, el efecto mariposa en su máximo esplendor. Los tacos al pastor tienen vida propia al comerlos. Parece que siempre cabe uno más en tu estómago. La chancla de tu mamá tiene su propia conciencia. Siempre llega a su destino. Nunca falla un blanco. El perro del vecino ladra cuando tú estás dormido. Sabe exactamente cuándo interrumpir tu dulce sueño. La luz del baño se funde cuando más la necesitas. Y en ese momento, no estabas solo en la oscuridad. Tus llaves siempre están en el último lugar buscado. Un misterio universal que sigue sin resolverse. Los escalofríos aleatorios son por una araña invisible. Ojo, no siempre la vas a ver. El café siempre se enfría cuando te distraes. Es como si tuviera un temporizador oculto... Y con esto, tu vida ya no será la misma... ¿o sí?",
+    "titulo_sugerido": "Misterios Cotidianos que la UNAM Ocultó por Décadas",
+    "escenas_texto": [
+      "La UNAM ocultó por décadas este dato perturbador.",
+      "Sabías que el 70% de los gallos canta a las 3:33 AM...",
+      "...solo para que sientas que algo no está bien.",
+      "Una tortilla en el refri nunca se pierde sola.",
+      "Un pequeño ser se la lleva. Tú lo sentiste antes.",
+      "La botella de salsa se acaba cuando más la necesitas.",
+      "Es una ley cósmica. No puedes ignorarlo.",
+      "El control remoto siempre aparece donde ya buscaste.",
+      "Nunca estaba lejos. Nadie lo vio antes.",
+      "Los niños saben dónde está tu dinero perdido.",
+      "Pero jamás te lo dirán. Silencio absoluto.",
+      "El tráfico pesado es provocado por una mariposa.",
+      "Sí, el efecto mariposa en su máximo esplendor.",
+      "Los tacos al pastor tienen vida propia al comerlos.",
+      "Parece que siempre cabe uno más en tu estómago.",
+      "La chancla de tu mamá tiene su propia conciencia.",
+      "Siempre llega a su destino. Nunca falla un blanco.",
+      "El perro del vecino ladra cuando tú estás dormido.",
+      "Sabe exactamente cuándo interrumpir tu dulce sueño.",
+      "La luz del baño se funde cuando más la necesitas.",
+      "Y en ese momento, no estabas solo en la oscuridad.",
+      "Tus llaves siempre están en el último lugar buscado.",
+      "Un misterio universal que sigue sin resolverse.",
+      "Los escalofríos aleatorios son por una araña invisible.",
+      "Ojo, no siempre la vas a ver.",
+      "El café siempre se enfría cuando te distraes.",
+      "Es como si tuviera un temporizador oculto...",
+      "Y con esto, tu vida ya no será la misma... ¿o sí?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Cartoon professor with a serious face presenting a chalkboard, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon professor with a serious face presenting a chalkboard, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La UNAM ocultó por décadas este dato perturbador.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon alarm clock ringing at 3:33 AM, no photorealism",
+        "prompt_visual": "Cartoon alarm clock ringing at 3:33 AM, no photorealism",
+        "texto_locucion": "Sabías que el 70% de los gallos canta a las 3:33 AM...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Cartoon sleepy person looking confused at a window, no photorealism",
+        "prompt_visual": "Cartoon sleepy person looking confused at a window, no photorealism",
+        "texto_locucion": "...solo para que sientas que algo no está bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Cartoon missing tortilla from a stack, no photorealism",
+        "prompt_visual": "Cartoon missing tortilla from a stack, no photorealism",
+        "texto_locucion": "Una tortilla en el refri nunca se pierde sola.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Cartoon mischievous 'Nahual' like creature hiding with a tortilla, no photorealism",
+        "prompt_visual": "Cartoon mischievous 'Nahual' like creature hiding with a tortilla, no photorealism",
+        "texto_locucion": "Un pequeño ser se la lleva. Tú lo sentiste antes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Cartoon empty salsa bottle, a sad person looking at it, no photorealism",
+        "prompt_visual": "Cartoon empty salsa bottle, a sad person looking at it, no photorealism",
+        "texto_locucion": "La botella de salsa se acaba cuando más la necesitas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon person desperately shaking an empty salsa bottle, no photorealism",
+        "prompt_visual": "Cartoon person desperately shaking an empty salsa bottle, no photorealism",
+        "texto_locucion": "Es una ley cósmica. No puedes ignorarlo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Cartoon remote control hidden under a couch cushion, no photorealism",
+        "prompt_visual": "Cartoon remote control hidden under a couch cushion, no photorealism",
+        "texto_locucion": "El control remoto siempre aparece donde ya buscaste.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Cartoon surprised person finding the remote under their arm, no photorealism",
+        "prompt_visual": "Cartoon surprised person finding the remote under their arm, no photorealism",
+        "texto_locucion": "Nunca estaba lejos. Nadie lo vio antes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Cartoon child pointing at something invisible, adults confused, no photorealism",
+        "prompt_visual": "Cartoon child pointing at something invisible, adults confused, no photorealism",
+        "texto_locucion": "Los niños saben dónde está tu dinero perdido.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon child with a mischievous smile, no photorealism",
+        "prompt_visual": "Cartoon child with a mischievous smile, no photorealism",
+        "texto_locucion": "Pero jamás te lo dirán. Silencio absoluto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Cartoon a car parked perfectly, but another car struggles, no photorealism",
+        "prompt_visual": "Cartoon a car parked perfectly, but another car struggles, no photorealism",
+        "texto_locucion": "El tráfico pesado es provocado por una mariposa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Cartoon a tiny butterfly causing chaos on a highway, no photorealism",
+        "prompt_visual": "Cartoon a tiny butterfly causing chaos on a highway, no photorealism",
+        "texto_locucion": "Sí, el efecto mariposa en su máximo esplendor.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Cartoon a taco stand with an invisible force making tacos disappear, no photorealism",
+        "prompt_visual": "Cartoon a taco stand with an invisible force making tacos disappear, no photorealism",
+        "texto_locucion": "Los tacos al pastor tienen vida propia al comerlos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon a person looking confused, just ate a taco but still hungry, no photorealism",
+        "prompt_visual": "Cartoon a person looking confused, just ate a taco but still hungry, no photorealism",
+        "texto_locucion": "Parece que siempre cabe uno más en tu estómago.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Cartoon a lone chancla on the floor, ominous shadow, no photorealism",
+        "prompt_visual": "Cartoon a lone chancla on the floor, ominous shadow, no photorealism",
+        "texto_locucion": "La chancla de tu mamá tiene su propia conciencia.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon a chancla flying with precision, no photorealism",
+        "prompt_visual": "Cartoon a chancla flying with precision, no photorealism",
+        "texto_locucion": "Siempre llega a su destino. Nunca falla un blanco.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Cartoon a person trying to sleep, but a neighbor's dog barks, no photorealism",
+        "prompt_visual": "Cartoon a person trying to sleep, but a neighbor's dog barks, no photorealism",
+        "texto_locucion": "El perro del vecino ladra cuando tú estás dormido.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon a dog happily barking, a sleeping person with eye bags, no photorealism",
+        "prompt_visual": "Cartoon a dog happily barking, a sleeping person with eye bags, no photorealism",
+        "texto_locucion": "Sabe exactamente cuándo interrumpir tu dulce sueño.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Cartoon a light switch that doesn't work, frustrated person, no photorealism",
+        "prompt_visual": "Cartoon a light switch that doesn't work, frustrated person, no photorealism",
+        "texto_locucion": "La luz del baño se funde cuando más la necesitas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon a person in a dark bathroom, scared face, no photorealism",
+        "prompt_visual": "Cartoon a person in a dark bathroom, scared face, no photorealism",
+        "texto_locucion": "Y en ese momento, no estabas solo en la oscuridad.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Cartoon a person looking for their keys, checking pockets, no photorealism",
+        "prompt_visual": "Cartoon a person looking for their keys, checking pockets, no photorealism",
+        "texto_locucion": "Tus llaves siempre están en el último lugar buscado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Cartoon keys magically appearing in an obvious spot, no photorealism",
+        "prompt_visual": "Cartoon keys magically appearing in an obvious spot, no photorealism",
+        "texto_locucion": "Un misterio universal que sigue sin resolverse.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Cartoon a person surprised by a sudden cold draft indoors, no photorealism",
+        "prompt_visual": "Cartoon a person surprised by a sudden cold draft indoors, no photorealism",
+        "texto_locucion": "Los escalofríos aleatorios son por una araña invisible.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Cartoon a tiny, almost invisible spider walking on a wall, no photorealism",
+        "prompt_visual": "Cartoon a tiny, almost invisible spider walking on a wall, no photorealism",
+        "texto_locucion": "Ojo, no siempre la vas a ver.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Cartoon a coffee mug with steam, but it's cold, no photorealism",
+        "prompt_visual": "Cartoon a coffee mug with steam, but it's cold, no photorealism",
+        "texto_locucion": "El café siempre se enfría cuando te distraes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Cartoon a surprised person with a cold coffee, no photorealism",
+        "prompt_visual": "Cartoon a surprised person with a cold coffee, no photorealism",
+        "texto_locucion": "Es como si tuviera un temporizador oculto...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "Cartoon a person in deep thought, questioning reality, no photorealism",
+        "prompt_visual": "Cartoon a person in deep thought, questioning reality, no photorealism",
+        "texto_locucion": "Y con esto, tu vida ya no será la misma... ¿o sí?",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Hechos que no sabías",
+      "Misterios del día a día",
+      "Tu cerebro lo ignoraba"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
