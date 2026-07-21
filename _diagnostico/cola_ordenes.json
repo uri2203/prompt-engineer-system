@@ -946,5 +946,240 @@
       "Tu cerebro lo ignoraba"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "6c903560-4c82-41c8-bfb9-f28ed66ddd92",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A worn plastic bucket with a suspicious, cartoonish eye peeking over its rim, in a messy Mexican kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A worn plastic bucket with a suspicious, cartoonish eye peeking over its rim, in a messy Mexican kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"¿Sabías que tu cubeta sabe más de ti?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A cartoon bucket secretly moving across a tiled floor at night, casting a long shadow, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket secretly moving across a tiled floor at night, casting a long shadow, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Mientras duermes, algo no está bien en casa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A person looking confusedly at a bucket that has slightly shifted position, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A person looking confusedly at a bucket that has slightly shifted position, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Lo sentiste antes, un escalofrío inexplicable en la nuca.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A group of animated buckets whispering conspiratorially in a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A group of animated buckets whispering conspiratorially in a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Dicen que las cubetas forman un consejo secreto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon bucket filled with dirty water, observing a family argument from a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket filled with dirty water, observing a family argument from a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Ellas son testigos silenciosos de todas tus dramas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A cartoon bucket with a small sombrero, looking like a spy, peeking around a doorframe, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a small sombrero, looking like a spy, peeking around a doorframe, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Observan cada movimiento, cada chismecito del barrio.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"A cartoon person trying to sneak a late-night snack, unaware a bucket is watching from under the table, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person trying to sneak a late-night snack, unaware a bucket is watching from under the table, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Nadie lo vio, solo tu fiel cubeta, claro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A family gathered around a table, and a bucket is positioned in the center, almost like a family member, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A family gathered around a table, and a bucket is positioned in the center, almost like a family member, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Están presentes en tus fiestas, en tus corajes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A cartoon old lady (doña) scolding a naughty child, with a bucket sitting nearby looking amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon old lady (doña) scolding a naughty child, with a bucket sitting nearby looking amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"La doña regañando al Brayan... ellas saben la verdad.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon dog looking guilty next to a tipped-over trash can, with a bucket nearby, looking like it knows exactly what happened, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon dog looking guilty next to a tipped-over trash can, with a bucket nearby, looking like it knows exactly what happened, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Hasta el perro travieso no puede escapar de su juicio.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A cartoon bucket standing on a porch with a small 'Se Vende' sign, looking melancholy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket standing on a porch with a small 'Se Vende' sign, looking melancholy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Cuando la vendes, se lleva todos tus secretos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A worried cartoon person checking under their bed, but a bucket is peeking from the closet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A worried cartoon person checking under their bed, but a bucket is peeking from the closet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Te sientes observado, no puedes ignorarlo, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon bucket wearing a tiny detective hat and magnifying glass, inspecting footprints on the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket wearing a tiny detective hat and magnifying glass, inspecting footprints on the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Son los guardianes del silencio absoluto hogareño.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A cartoon person trying to hide something in a closet, with a bucket strategically placed to block their view, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person trying to hide something in a closet, with a bucket strategically placed to block their view, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Intentas esconder algo... pero ellas ya lo saben.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A cartoon bucket with a small halo, looking innocently at a person cleaning the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a small halo, looking innocently at a person cleaning the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Crees que solo sirve para trapear el piso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A cartoon bucket is positioned behind a person reading a letter, trying to peek over their shoulder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket is positioned behind a person reading a letter, trying to peek over their shoulder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Pero la verdad es que te espían a diario.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A cartoon bucket with a mischievous grin, holding a small toy broom, ready for action, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a mischievous grin, holding a small toy broom, ready for action, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Esperan el momento justo para hacer su movimiento.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A cartoon person trying to catch a bucket that seems to be floating away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person trying to catch a bucket that seems to be floating away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"De repente, tu cubeta no está donde la dejaste.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A cartoon bucket filled with various small items, acting like a secret stash for a kid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket filled with various small items, acting like a secret stash for a kid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Quizá Brayan usa la suya para esconder tesoros.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"A cartoon person frantically searching for a missing item, while a bucket sits innocently nearby, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person frantically searching for a missing item, while a bucket sits innocently nearby, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Y tú buscando tu celular... la cubeta sabe todo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"A cartoon old lady (doña) standing next to a bucket that seems to be leading her, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon old lady (doña) standing next to a bucket that seems to be leading her, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Hasta la doña le pide consejos a su balde.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"A cartoon bucket with a thoughtful expression, surrounded by tiny thought bubbles, one showing a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a thoughtful expression, surrounded by tiny thought bubbles, one showing a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Piensan, sienten y hasta tienen sus propias opiniones.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"A cartoon bucket rolling its 'eyes' at a messy person, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket rolling its 'eyes' at a messy person, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Te juzgan por no lavar los trastes a tiempo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon bucket with a victorious smirk, watching a person trip over a rug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a victorious smirk, watching a person trip over a rug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Y celebran tus caídas con una discreta risita.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A cartoon person looking directly at a bucket with a suspicious, knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person looking directly at a bucket with a suspicious, knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"¿Alguna vez tu cubeta te ha guiñado el ojo?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"A cartoon bucket with a very elaborate, tiny crown, sitting regally on a pedestal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon bucket with a very elaborate, tiny crown, sitting regally on a pedestal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"Son las verdaderas reinas secretas de tu hogar...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A cartoon person slowly backing away from a bucket that has grown tiny, menacing eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"prompt_visual\": \"A cartoon person slowly backing away from a bucket that has grown tiny, menacing eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful\", \"texto_locucion\": \"...o al menos, eso es lo que dicen por ahí.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "¿Sabías que tu cubeta sabe más de ti? Mientras duermes, algo no está bien en casa. Lo sentiste antes, un escalofrío inexplicable en la nuca. Dicen que las cubetas forman un consejo secreto. Ellas son testigos silenciosos de todas tus dramas. Observan cada movimiento, cada chismecito del barrio. Nadie lo vio, solo tu fiel cubeta, claro. Están presentes en tus fiestas, en tus corajes. La doña regañando al Brayan... ellas saben la verdad. Hasta el perro travieso no puede escapar de su juicio. Cuando la vendes, se lleva todos tus secretos. Te sientes observado, no puedes ignorarlo, ¿verdad? Son los guardianes del silencio absoluto hogareño. Intentas esconder algo... pero ellas ya lo saben. Crees que solo sirve para trapear el piso. Pero la verdad es que te espían a diario. Esperan el momento justo para hacer su movimiento. De repente, tu cubeta no está donde la dejaste. Quizá Brayan usa la suya para esconder tesoros. Y tú buscando tu celular... la cubeta sabe todo. Hasta la doña le pide consejos a su balde. Piensan, sienten y hasta tienen sus propias opiniones. Te juzgan por no lavar los trastes a tiempo. Y celebran tus caídas con una discreta risita. ¿Alguna vez tu cubeta te ha guiñado el ojo? Son las verdaderas reinas secretas de tu hogar... ...o al menos, eso es lo que dicen por ahí.",
+    "titulo_sugerido": "Tu Cubeta Esconde UN SECRETO ¡Y TE OBSERVA!",
+    "escenas_texto": [
+      "¿Sabías que tu cubeta sabe más de ti?",
+      "Mientras duermes, algo no está bien en casa.",
+      "Lo sentiste antes, un escalofrío inexplicable en la nuca.",
+      "Dicen que las cubetas forman un consejo secreto.",
+      "Ellas son testigos silenciosos de todas tus dramas.",
+      "Observan cada movimiento, cada chismecito del barrio.",
+      "Nadie lo vio, solo tu fiel cubeta, claro.",
+      "Están presentes en tus fiestas, en tus corajes.",
+      "La doña regañando al Brayan... ellas saben la verdad.",
+      "Hasta el perro travieso no puede escapar de su juicio.",
+      "Cuando la vendes, se lleva todos tus secretos.",
+      "Te sientes observado, no puedes ignorarlo, ¿verdad?",
+      "Son los guardianes del silencio absoluto hogareño.",
+      "Intentas esconder algo... pero ellas ya lo saben.",
+      "Crees que solo sirve para trapear el piso.",
+      "Pero la verdad es que te espían a diario.",
+      "Esperan el momento justo para hacer su movimiento.",
+      "De repente, tu cubeta no está donde la dejaste.",
+      "Quizá Brayan usa la suya para esconder tesoros.",
+      "Y tú buscando tu celular... la cubeta sabe todo.",
+      "Hasta la doña le pide consejos a su balde.",
+      "Piensan, sienten y hasta tienen sus propias opiniones.",
+      "Te juzgan por no lavar los trastes a tiempo.",
+      "Y celebran tus caídas con una discreta risita.",
+      "¿Alguna vez tu cubeta te ha guiñado el ojo?",
+      "Son las verdaderas reinas secretas de tu hogar...",
+      "...o al menos, eso es lo que dicen por ahí."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A worn plastic bucket with a suspicious, cartoonish eye peeking over its rim, in a messy Mexican kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A worn plastic bucket with a suspicious, cartoonish eye peeking over its rim, in a messy Mexican kitchen, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "¿Sabías que tu cubeta sabe más de ti?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A cartoon bucket secretly moving across a tiled floor at night, casting a long shadow, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket secretly moving across a tiled floor at night, casting a long shadow, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Mientras duermes, algo no está bien en casa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A person looking confusedly at a bucket that has slightly shifted position, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A person looking confusedly at a bucket that has slightly shifted position, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Lo sentiste antes, un escalofrío inexplicable en la nuca.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A group of animated buckets whispering conspiratorially in a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A group of animated buckets whispering conspiratorially in a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Dicen que las cubetas forman un consejo secreto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon bucket filled with dirty water, observing a family argument from a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket filled with dirty water, observing a family argument from a corner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Ellas son testigos silenciosos de todas tus dramas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A cartoon bucket with a small sombrero, looking like a spy, peeking around a doorframe, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a small sombrero, looking like a spy, peeking around a doorframe, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Observan cada movimiento, cada chismecito del barrio.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "A cartoon person trying to sneak a late-night snack, unaware a bucket is watching from under the table, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person trying to sneak a late-night snack, unaware a bucket is watching from under the table, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Nadie lo vio, solo tu fiel cubeta, claro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A family gathered around a table, and a bucket is positioned in the center, almost like a family member, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A family gathered around a table, and a bucket is positioned in the center, almost like a family member, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Están presentes en tus fiestas, en tus corajes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A cartoon old lady (doña) scolding a naughty child, with a bucket sitting nearby looking amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon old lady (doña) scolding a naughty child, with a bucket sitting nearby looking amused, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "La doña regañando al Brayan... ellas saben la verdad.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon dog looking guilty next to a tipped-over trash can, with a bucket nearby, looking like it knows exactly what happened, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon dog looking guilty next to a tipped-over trash can, with a bucket nearby, looking like it knows exactly what happened, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Hasta el perro travieso no puede escapar de su juicio.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A cartoon bucket standing on a porch with a small 'Se Vende' sign, looking melancholy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket standing on a porch with a small 'Se Vende' sign, looking melancholy, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Cuando la vendes, se lleva todos tus secretos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A worried cartoon person checking under their bed, but a bucket is peeking from the closet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A worried cartoon person checking under their bed, but a bucket is peeking from the closet, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Te sientes observado, no puedes ignorarlo, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon bucket wearing a tiny detective hat and magnifying glass, inspecting footprints on the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket wearing a tiny detective hat and magnifying glass, inspecting footprints on the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Son los guardianes del silencio absoluto hogareño.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A cartoon person trying to hide something in a closet, with a bucket strategically placed to block their view, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person trying to hide something in a closet, with a bucket strategically placed to block their view, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Intentas esconder algo... pero ellas ya lo saben.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A cartoon bucket with a small halo, looking innocently at a person cleaning the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a small halo, looking innocently at a person cleaning the floor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Crees que solo sirve para trapear el piso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A cartoon bucket is positioned behind a person reading a letter, trying to peek over their shoulder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket is positioned behind a person reading a letter, trying to peek over their shoulder, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Pero la verdad es que te espían a diario.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A cartoon bucket with a mischievous grin, holding a small toy broom, ready for action, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a mischievous grin, holding a small toy broom, ready for action, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Esperan el momento justo para hacer su movimiento.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A cartoon person trying to catch a bucket that seems to be floating away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person trying to catch a bucket that seems to be floating away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "De repente, tu cubeta no está donde la dejaste.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A cartoon bucket filled with various small items, acting like a secret stash for a kid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket filled with various small items, acting like a secret stash for a kid, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Quizá Brayan usa la suya para esconder tesoros.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "A cartoon person frantically searching for a missing item, while a bucket sits innocently nearby, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person frantically searching for a missing item, while a bucket sits innocently nearby, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Y tú buscando tu celular... la cubeta sabe todo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "A cartoon old lady (doña) standing next to a bucket that seems to be leading her, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon old lady (doña) standing next to a bucket that seems to be leading her, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Hasta la doña le pide consejos a su balde.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "A cartoon bucket with a thoughtful expression, surrounded by tiny thought bubbles, one showing a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a thoughtful expression, surrounded by tiny thought bubbles, one showing a person, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Piensan, sienten y hasta tienen sus propias opiniones.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "A cartoon bucket rolling its 'eyes' at a messy person, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket rolling its 'eyes' at a messy person, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Te juzgan por no lavar los trastes a tiempo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon bucket with a victorious smirk, watching a person trip over a rug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a victorious smirk, watching a person trip over a rug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Y celebran tus caídas con una discreta risita.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A cartoon person looking directly at a bucket with a suspicious, knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person looking directly at a bucket with a suspicious, knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "¿Alguna vez tu cubeta te ha guiñado el ojo?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "A cartoon bucket with a very elaborate, tiny crown, sitting regally on a pedestal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon bucket with a very elaborate, tiny crown, sitting regally on a pedestal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "Son las verdaderas reinas secretas de tu hogar...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A cartoon person slowly backing away from a bucket that has grown tiny, menacing eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "prompt_visual": "A cartoon person slowly backing away from a bucket that has grown tiny, menacing eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, colorful",
+        "texto_locucion": "...o al menos, eso es lo que dicen por ahí.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Cubetas con vida propia",
+      "El misterio del balde",
+      "Tu casa no está sola"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
