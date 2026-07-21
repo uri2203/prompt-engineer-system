@@ -3093,5 +3093,248 @@
       "Pura desesperación"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "30df271b-e1fb-41aa-a1ec-46a8776dbd41",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A bewildered man in a quiet room, eyes wide with a question mark over his head, an invisible \\\"absolute silence\\\" sign breaking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A bewildered man in a quiet room, eyes wide with a question mark over his head, an invisible \\\"absolute silence\\\" sign breaking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Te han mentido: el silencio absoluto no existe.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"A man relaxing on a couch in a peaceful living room, eyes closed, thinking he's alone and calm, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A man relaxing on a couch in a peaceful living room, eyes closed, thinking he's alone and calm, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Crees que estás solo, en total calma.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"The man from scene 2, now with one ear perked up, a tiny question mark and a minuscule sound wave near his ear, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man from scene 2, now with one ear perked up, a tiny question mark and a minuscule sound wave near his ear, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero un ruidito empieza a molestarte.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A cartoon thought bubble above the man's head, showing a worried expression and text \\\"algo no está bien\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon thought bubble above the man's head, showing a worried expression and text \\\"algo no está bien\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Esa vocecita en tu cabeza dice: \\\"algo no está bien\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"The man's body subtly vibrating, a confused expression, with small wavy lines emanating from him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man's body subtly vibrating, a confused expression, with small wavy lines emanating from him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Lo sentiste antes, esa extraña vibración.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A shadowy, distant sound wave shape barely visible in a dark corner of a room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A shadowy, distant sound wave shape barely visible in a dark corner of a room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un eco lejano, casi imperceptible, ahí.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"The man with hands over his ears, exaggeratedly annoyed, larger sound waves coming from an unknown source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man with hands over his ears, exaggeratedly annoyed, larger sound waves coming from an unknown source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"No puedes ignorarlo; se vuelve más fuerte.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A cartoon heart rapidly beating inside the man's chest, visible through his shirt, with a detective's magnifying glass in his hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon heart rapidly beating inside the man's chest, visible through his shirt, with a detective's magnifying glass in his hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Tu corazón acelera, buscando el origen.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A comical, oversized blender aggressively mixing a colorful licuado in a neighbor's kitchen, visible through a window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A comical, oversized blender aggressively mixing a colorful licuado in a neighbor's kitchen, visible through a window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Es la vecina preparando su licuado gigante?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A vintage television set blasting loud, distorted music in a messy living room, an old man (Don Chuy) sleeping soundly beside it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A vintage television set blasting loud, distorted music in a messy living room, an old man (Don Chuy) sleeping soundly beside it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿O la televisión de Don Chuy a todo volumen?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"The man pointing dramatically to his own house wall, with an alarmed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man pointing dramatically to his own house wall, with an alarmed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero no, este sonido viene de adentro...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A rhythmic, pulsating sound wave coming from behind a closed door, the man listening intently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A rhythmic, pulsating sound wave coming from behind a closed door, the man listening intently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un ritmo constante, como un latido extraño.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"The man peeking through curtains, seeing an empty, quiet street scene, reinforcing the internal source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man peeking through curtains, seeing an empty, quiet street scene, reinforcing the internal source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Miras por la ventana, no hay nadie.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A broken \\\"Silence\\\" sign, with jagged sound waves bursting out from behind it, shocking the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A broken \\\"Silence\\\" sign, with jagged sound waves bursting out from behind it, shocking the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El silencio absoluto se rompe sin aviso.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon feet making thumping sounds on the ceiling, while the man below looks up in terror and confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon feet making thumping sounds on the ceiling, while the man below looks up in terror and confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Sientes pasos arriba, pero vives solo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"A tiny cricket wearing tap shoes, comically dancing on a wooden floor, creating loud thumping sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A tiny cricket wearing tap shoes, comically dancing on a wooden floor, creating loud thumping sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Será un grillo que aprendió a zapatear muy bien?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"A shadowy figure (el Brayan) with a mischievous grin peeking from around a corner, holding a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A shadowy figure (el Brayan) with a mischievous grin peeking from around a corner, holding a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"O quizá el Brayan otra vez con sus planes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"The man looking around his room, realizing he's not alone, with surprised eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man looking around his room, realizing he's not alone, with surprised eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡No estabas solo en esa tranquila habitación!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A wall with exaggerated sound waves vibrating through it, the man pressing his ear to it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A wall with exaggerated sound waves vibrating through it, the man pressing his ear to it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ese murmullo crece, ya no es imaginación.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"A giant, shiny tuba comically bursting out of a closet door, playing music notes of \\\"La Chona\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A giant, shiny tuba comically bursting out of a closet door, playing music notes of \\\"La Chona\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"De repente, una tuba comienza a tocar \\\"La Chona\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"The closet door flung open, revealing the bell of a tuba, vibrating with strong sound waves, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The closet door flung open, revealing the bell of a tuba, vibrating with strong sound waves, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Desde el armario... con un ritmo imparable.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"The man cautiously opening a slightly ajar closet door, peering inside with trepidation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man cautiously opening a slightly ajar closet door, peering inside with trepidation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Abres despacio, ¿quién podría estar ahí?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Inside the closet, El Compadre, sweaty and focused, playing a huge tuba with great effort, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Inside the closet, El Compadre, sweaty and focused, playing a huge tuba with great effort, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y ves al compadre, bien metido, ensayando.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"El Compadre, still in the closet, with a party hat on, a festive banner for \\\"La Doña's Fiesta\\\" behind him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"El Compadre, still in the closet, with a party hat on, a festive banner for \\\"La Doña's Fiesta\\\" behind him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Con su tuba, ¡para la fiesta de la Doña!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"El Compadre winking conspiratorially from the closet, holding a finger to his lips, with musical notes around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"El Compadre winking conspiratorially from the closet, holding a finger to his lips, with musical notes around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Su silencio era parte de su ensayo secreto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"The man laughing hysterically, pointing at El Compadre, realizing the absurdity of \\\"silence\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man laughing hysterically, pointing at El Compadre, realizing the absurdity of \\\"silence\\\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Ahora sabes que el silencio es solo una farsa!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"El Compadre, now outside the closet, taking a bow with his tuba, spotlights on him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"El Compadre, now outside the closet, taking a bow with his tuba, spotlights on him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y el compadre, el director de la orquesta oculta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"The man looking directly at the viewer with a knowing, comical expression, a thought bubble with a question mark over his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The man looking directly at the viewer with a knowing, comical expression, a thought bubble with a question mark over his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Qué otro \\\"silencio\\\" te ha engañado así?\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Te han mentido: el silencio absoluto no existe. Crees que estás solo, en total calma. Pero un ruidito empieza a molestarte. Esa vocecita en tu cabeza dice: \"algo no está bien\". Lo sentiste antes, esa extraña vibración. Un eco lejano, casi imperceptible, ahí. No puedes ignorarlo; se vuelve más fuerte. Tu corazón acelera, buscando el origen. ¿Es la vecina preparando su licuado gigante? ¿O la televisión de Don Chuy a todo volumen? Pero no, este sonido viene de adentro... Un ritmo constante, como un latido extraño. Miras por la ventana, no hay nadie. El silencio absoluto se rompe sin aviso. Sientes pasos arriba, pero vives solo. ¿Será un grillo que aprendió a zapatear muy bien? O quizá el Brayan otra vez con sus planes. ¡No estabas solo en esa tranquila habitación! Ese murmullo crece, ya no es imaginación. De repente, una tuba comienza a tocar \"La Chona\". Desde el armario... con un ritmo imparable. Abres despacio, ¿quién podría estar ahí? Y ves al compadre, bien metido, ensayando. Con su tuba, ¡para la fiesta de la Doña! Su silencio era parte de su ensayo secreto. ¡Ahora sabes que el silencio es solo una farsa! Y el compadre, el director de la orquesta oculta. ¿Qué otro \"silencio\" te ha engañado así?",
+    "titulo_sugerido": "¡El Secreto detrás del \"Silencio Absoluto\"!",
+    "escenas_texto": [
+      "Te han mentido: el silencio absoluto no existe.",
+      "Crees que estás solo, en total calma.",
+      "Pero un ruidito empieza a molestarte.",
+      "Esa vocecita en tu cabeza dice: \"algo no está bien\".",
+      "Lo sentiste antes, esa extraña vibración.",
+      "Un eco lejano, casi imperceptible, ahí.",
+      "No puedes ignorarlo; se vuelve más fuerte.",
+      "Tu corazón acelera, buscando el origen.",
+      "¿Es la vecina preparando su licuado gigante?",
+      "¿O la televisión de Don Chuy a todo volumen?",
+      "Pero no, este sonido viene de adentro...",
+      "Un ritmo constante, como un latido extraño.",
+      "Miras por la ventana, no hay nadie.",
+      "El silencio absoluto se rompe sin aviso.",
+      "Sientes pasos arriba, pero vives solo.",
+      "¿Será un grillo que aprendió a zapatear muy bien?",
+      "O quizá el Brayan otra vez con sus planes.",
+      "¡No estabas solo en esa tranquila habitación!",
+      "Ese murmullo crece, ya no es imaginación.",
+      "De repente, una tuba comienza a tocar \"La Chona\".",
+      "Desde el armario... con un ritmo imparable.",
+      "Abres despacio, ¿quién podría estar ahí?",
+      "Y ves al compadre, bien metido, ensayando.",
+      "Con su tuba, ¡para la fiesta de la Doña!",
+      "Su silencio era parte de su ensayo secreto.",
+      "¡Ahora sabes que el silencio es solo una farsa!",
+      "Y el compadre, el director de la orquesta oculta.",
+      "¿Qué otro \"silencio\" te ha engañado así?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A bewildered man in a quiet room, eyes wide with a question mark over his head, an invisible \"absolute silence\" sign breaking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A bewildered man in a quiet room, eyes wide with a question mark over his head, an invisible \"absolute silence\" sign breaking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Te han mentido: el silencio absoluto no existe.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "A man relaxing on a couch in a peaceful living room, eyes closed, thinking he's alone and calm, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A man relaxing on a couch in a peaceful living room, eyes closed, thinking he's alone and calm, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Crees que estás solo, en total calma.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "The man from scene 2, now with one ear perked up, a tiny question mark and a minuscule sound wave near his ear, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man from scene 2, now with one ear perked up, a tiny question mark and a minuscule sound wave near his ear, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero un ruidito empieza a molestarte.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A cartoon thought bubble above the man's head, showing a worried expression and text \"algo no está bien\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon thought bubble above the man's head, showing a worried expression and text \"algo no está bien\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Esa vocecita en tu cabeza dice: \"algo no está bien\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "The man's body subtly vibrating, a confused expression, with small wavy lines emanating from him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man's body subtly vibrating, a confused expression, with small wavy lines emanating from him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Lo sentiste antes, esa extraña vibración.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A shadowy, distant sound wave shape barely visible in a dark corner of a room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A shadowy, distant sound wave shape barely visible in a dark corner of a room, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un eco lejano, casi imperceptible, ahí.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "The man with hands over his ears, exaggeratedly annoyed, larger sound waves coming from an unknown source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man with hands over his ears, exaggeratedly annoyed, larger sound waves coming from an unknown source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "No puedes ignorarlo; se vuelve más fuerte.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A cartoon heart rapidly beating inside the man's chest, visible through his shirt, with a detective's magnifying glass in his hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon heart rapidly beating inside the man's chest, visible through his shirt, with a detective's magnifying glass in his hand, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Tu corazón acelera, buscando el origen.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A comical, oversized blender aggressively mixing a colorful licuado in a neighbor's kitchen, visible through a window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A comical, oversized blender aggressively mixing a colorful licuado in a neighbor's kitchen, visible through a window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Es la vecina preparando su licuado gigante?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A vintage television set blasting loud, distorted music in a messy living room, an old man (Don Chuy) sleeping soundly beside it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A vintage television set blasting loud, distorted music in a messy living room, an old man (Don Chuy) sleeping soundly beside it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿O la televisión de Don Chuy a todo volumen?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "The man pointing dramatically to his own house wall, with an alarmed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man pointing dramatically to his own house wall, with an alarmed expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero no, este sonido viene de adentro...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A rhythmic, pulsating sound wave coming from behind a closed door, the man listening intently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A rhythmic, pulsating sound wave coming from behind a closed door, the man listening intently, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un ritmo constante, como un latido extraño.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "The man peeking through curtains, seeing an empty, quiet street scene, reinforcing the internal source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man peeking through curtains, seeing an empty, quiet street scene, reinforcing the internal source, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Miras por la ventana, no hay nadie.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A broken \"Silence\" sign, with jagged sound waves bursting out from behind it, shocking the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A broken \"Silence\" sign, with jagged sound waves bursting out from behind it, shocking the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El silencio absoluto se rompe sin aviso.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon feet making thumping sounds on the ceiling, while the man below looks up in terror and confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon feet making thumping sounds on the ceiling, while the man below looks up in terror and confusion, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Sientes pasos arriba, pero vives solo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "A tiny cricket wearing tap shoes, comically dancing on a wooden floor, creating loud thumping sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A tiny cricket wearing tap shoes, comically dancing on a wooden floor, creating loud thumping sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Será un grillo que aprendió a zapatear muy bien?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "A shadowy figure (el Brayan) with a mischievous grin peeking from around a corner, holding a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A shadowy figure (el Brayan) with a mischievous grin peeking from around a corner, holding a mysterious object, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "O quizá el Brayan otra vez con sus planes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "The man looking around his room, realizing he's not alone, with surprised eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man looking around his room, realizing he's not alone, with surprised eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡No estabas solo en esa tranquila habitación!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A wall with exaggerated sound waves vibrating through it, the man pressing his ear to it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A wall with exaggerated sound waves vibrating through it, the man pressing his ear to it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ese murmullo crece, ya no es imaginación.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "A giant, shiny tuba comically bursting out of a closet door, playing music notes of \"La Chona\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A giant, shiny tuba comically bursting out of a closet door, playing music notes of \"La Chona\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "De repente, una tuba comienza a tocar \"La Chona\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "The closet door flung open, revealing the bell of a tuba, vibrating with strong sound waves, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The closet door flung open, revealing the bell of a tuba, vibrating with strong sound waves, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Desde el armario... con un ritmo imparable.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "The man cautiously opening a slightly ajar closet door, peering inside with trepidation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man cautiously opening a slightly ajar closet door, peering inside with trepidation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Abres despacio, ¿quién podría estar ahí?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Inside the closet, El Compadre, sweaty and focused, playing a huge tuba with great effort, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Inside the closet, El Compadre, sweaty and focused, playing a huge tuba with great effort, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y ves al compadre, bien metido, ensayando.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "El Compadre, still in the closet, with a party hat on, a festive banner for \"La Doña's Fiesta\" behind him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "El Compadre, still in the closet, with a party hat on, a festive banner for \"La Doña's Fiesta\" behind him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Con su tuba, ¡para la fiesta de la Doña!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "El Compadre winking conspiratorially from the closet, holding a finger to his lips, with musical notes around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "El Compadre winking conspiratorially from the closet, holding a finger to his lips, with musical notes around him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Su silencio era parte de su ensayo secreto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "The man laughing hysterically, pointing at El Compadre, realizing the absurdity of \"silence\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man laughing hysterically, pointing at El Compadre, realizing the absurdity of \"silence\", funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Ahora sabes que el silencio es solo una farsa!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "El Compadre, now outside the closet, taking a bow with his tuba, spotlights on him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "El Compadre, now outside the closet, taking a bow with his tuba, spotlights on him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y el compadre, el director de la orquesta oculta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "The man looking directly at the viewer with a knowing, comical expression, a thought bubble with a question mark over his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The man looking directly at the viewer with a knowing, comical expression, a thought bubble with a question mark over his head, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Qué otro \"silencio\" te ha engañado así?",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Ruido en la quietud",
+      "Silencio, ¿existe?",
+      "Compadre y tuba"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
