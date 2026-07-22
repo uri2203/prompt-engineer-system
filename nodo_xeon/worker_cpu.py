@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_R"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_R2"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_R"
+VERSION_WORKER = "2026-06-23_R2"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -2137,7 +2137,7 @@ def procesar():
                     "filtradomx":      "Filtradomx",
                     "laviuda":         "La Viuda",
                     "monkygraff":      "Monkygraff",
-                    "umbralalterno":   "Umbral Alterno",
+                    "umbralalterno":   "UmbralAlterno",
                     "tuialista":       "Tuialista",
                 }
                 _nombre_carpeta = _MAPA_CARPETA_ASSETS.get(marca_audio.lower().replace(" ", ""), marca_audio)
