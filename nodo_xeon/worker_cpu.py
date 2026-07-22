@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_R2"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_R3"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_R2"
+VERSION_WORKER = "2026-06-23_R3"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -510,7 +510,7 @@ def _mezclar_musica_dinamica(ruta_video, carpeta_marca, marca, duracion_total):
         # la tensión suena un poco más fuerte que el fondo, con fade in/out, y
         # empieza en su momento (adelay en milisegundos)
         delay_ms = int(max(0, t_pos) * 1000)
-        vol_t = min(0.9, VOLUMEN_MUSICA * 1.6)
+        vol_t = min(0.9, float(VOLUMEN_MUSICA) * 1.6)
         fade = 2.0
         filtros.append(
             f"[{idx_input}:a]volume={vol_t},"
