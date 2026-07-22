@@ -4778,5 +4778,248 @@
       "¿Dónde están mis pares?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "e289368d-dca8-4e7a-971c-6c2944416734",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark alley at night, old street lamps, an eerie shadow moving to an unheard beat, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Dark alley at night, old street lamps, an eerie shadow moving to an unheard beat, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cuentan que en el callejón de la Mantequilla...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Wide-eyed cartoon old woman peeking from window, looking scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Wide-eyed cartoon old woman peeking from window, looking scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...una sombra bailaba cumbia cada madrugada a las tres.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Cartoon man with a flashlight nervously looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man with a flashlight nervously looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Vecinos juraban que el fantasma era el alma en pena.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Cartoon man in bed with eyes wide open, covered by blanket, hearing strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man in bed with eyes wide open, covered by blanket, hearing strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Lo sentiste antes, un ritmo que no era de este mundo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Cartoon hand clutching a rosary, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon hand clutching a rosary, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Doña Chona santiguaba todo, hasta la televisión.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Cartoon man trying to sleep, but a faint cumbia sound wave is visible, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man trying to sleep, but a faint cumbia sound wave is visible, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El silencio absoluto de la noche se rompía con cumbia.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon man nervously closing his window, hearing distant cumbia, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man nervously closing his window, hearing distant cumbia, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie podía ignorar ese ritmo pegajoso y fantasmal.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Cartoon elderly couple whispering conspiratorially, pointing towards a dark alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon elderly couple whispering conspiratorially, pointing towards a dark alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Don Lupe y su esposa planeaban poner trampas fantasma.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Cartoon traps (bucket, rope, net) laid out in an alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon traps (bucket, rope, net) laid out in an alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pusieron cubetas, redes, hasta una escoba.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Eerie shadow dancing gracefully over the traps, untouched, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Eerie shadow dancing gracefully over the traps, untouched, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero la sombra bailarina siempre esquivaba todo sin fallar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon neighbors looking bewildered, shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon neighbors looking bewildered, shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Algo no está bien, pensaban, esto es del otro lado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Cartoon Brayan yawning widely, looking extremely tired, in a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan yawning widely, looking extremely tired, in a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Por las mañanas, el Brayan estaba siempre agotadísimo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Cartoon Brayan rubbing his eyes, explaining something with hand gestures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan rubbing his eyes, explaining something with hand gestures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Decía que estaba 'entrenando para un maratón de risa'.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Cartoon Brayan drinking an energy drink, looking determined, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan drinking an energy drink, looking determined, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y tomaba mucho café, claro, para no fallar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon dark alley with a single, very bright light suddenly turning on, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon dark alley with a single, very bright light suddenly turning on, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Una noche, un vecino valiente prendió la luz fuerte.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Close-up of the shadow, now revealed to be Brayan, frozen mid-dance, with a Bluetooth speaker, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of the shadow, now revealed to be Brayan, frozen mid-dance, with a Bluetooth speaker, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No estabas solo... la sombra no era un fantasma.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon Brayan mid-dance pose, looking sheepish, holding a smartphone with a cumbia tutorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan mid-dance pose, looking sheepish, holding a smartphone with a cumbia tutorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Era el Brayan con su celular y unos audífonos medio rotos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Cartoon Brayan sweating, doing a vigorous cumbia step, in front of a mirror (imaginary), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan sweating, doing a vigorous cumbia step, in front of a mirror (imaginary), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Practicaba pasos de cumbia para su nuevo emprendimiento.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon sign that says 'Tamales Fit del Brayan', with a picture of a tamal doing jumping jacks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon sign that says 'Tamales Fit del Brayan', with a picture of a tamal doing jumping jacks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Quería vender “tamales fit”, necesitando un buen cardio.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Cartoon Brayan doing a silly dance, with a thought bubble of 'fitness', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan doing a silly dance, with a thought bubble of 'fitness', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Así que bailaba cumbia para activar la energía.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon neighbors with confused expressions, some laughing, looking at Brayan dancing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon neighbors with confused expressions, some laughing, looking at Brayan dancing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Todos se quedaron callados, nadie lo vio venir.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Cartoon Brayan looking proud, wiping sweat from his brow, offering an imaginary tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan looking proud, wiping sweat from his brow, offering an imaginary tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El Brayan saludó: '¿Quieren tamales post-entrenamiento?'\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Cartoon old woman fanning herself, laughing, pointing at Brayan, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon old woman fanning herself, laughing, pointing at Brayan, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Doña Chona casi se desmaya... ¡de la risa, claro!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Cartoon alley with a small sign 'Clases de Cumbia Fit con Brayan', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon alley with a small sign 'Clases de Cumbia Fit con Brayan', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y así la cumbia fantasmal se volvió clase de baile.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Cartoon Brayan, now with a small group of neighbors, all dancing cumbia awkwardly in the alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan, now with a small group of neighbors, all dancing cumbia awkwardly in the alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ahora todos bailan en el callejón de la Mantequilla.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Cartoon neighbors happily eating tamales, Brayan looking proud, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon neighbors happily eating tamales, Brayan looking proud, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y comen tamales, ¡para recuperar esas calorías perdidas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Cartoon a neon sign 'Tamales Fit' with a dancing tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon a neon sign 'Tamales Fit' with a dancing tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Quién diría que un misterio terminaría en un gym de cumbia...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"Cartoon Brayan winking, holding a tamal and a dumbbell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon Brayan winking, holding a tamal and a dumbbell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...¡y con los tamales más fitness de todo México!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Cuentan que en el callejón de la Mantequilla... ...una sombra bailaba cumbia cada madrugada a las tres. Vecinos juraban que el fantasma era el alma en pena. Lo sentiste antes, un ritmo que no era de este mundo. Doña Chona santiguaba todo, hasta la televisión. El silencio absoluto de la noche se rompía con cumbia. Nadie podía ignorar ese ritmo pegajoso y fantasmal. Don Lupe y su esposa planeaban poner trampas fantasma. Pusieron cubetas, redes, hasta una escoba. Pero la sombra bailarina siempre esquivaba todo sin fallar. Algo no está bien, pensaban, esto es del otro lado. Por las mañanas, el Brayan estaba siempre agotadísimo. Decía que estaba 'entrenando para un maratón de risa'. Y tomaba mucho café, claro, para no fallar. Una noche, un vecino valiente prendió la luz fuerte. No estabas solo... la sombra no era un fantasma. Era el Brayan con su celular y unos audífonos medio rotos. Practicaba pasos de cumbia para su nuevo emprendimiento. Quería vender “tamales fit”, necesitando un buen cardio. Así que bailaba cumbia para activar la energía. Todos se quedaron callados, nadie lo vio venir. El Brayan saludó: '¿Quieren tamales post-entrenamiento?' Doña Chona casi se desmaya... ¡de la risa, claro! Y así la cumbia fantasmal se volvió clase de baile. Ahora todos bailan en el callejón de la Mantequilla. Y comen tamales, ¡para recuperar esas calorías perdidas! Quién diría que un misterio terminaría en un gym de cumbia... ...¡y con los tamales más fitness de todo México!",
+    "titulo_sugerido": "El misterio de la cumbia fantasmal del Brayan",
+    "escenas_texto": [
+      "Cuentan que en el callejón de la Mantequilla...",
+      "...una sombra bailaba cumbia cada madrugada a las tres.",
+      "Vecinos juraban que el fantasma era el alma en pena.",
+      "Lo sentiste antes, un ritmo que no era de este mundo.",
+      "Doña Chona santiguaba todo, hasta la televisión.",
+      "El silencio absoluto de la noche se rompía con cumbia.",
+      "Nadie podía ignorar ese ritmo pegajoso y fantasmal.",
+      "Don Lupe y su esposa planeaban poner trampas fantasma.",
+      "Pusieron cubetas, redes, hasta una escoba.",
+      "Pero la sombra bailarina siempre esquivaba todo sin fallar.",
+      "Algo no está bien, pensaban, esto es del otro lado.",
+      "Por las mañanas, el Brayan estaba siempre agotadísimo.",
+      "Decía que estaba 'entrenando para un maratón de risa'.",
+      "Y tomaba mucho café, claro, para no fallar.",
+      "Una noche, un vecino valiente prendió la luz fuerte.",
+      "No estabas solo... la sombra no era un fantasma.",
+      "Era el Brayan con su celular y unos audífonos medio rotos.",
+      "Practicaba pasos de cumbia para su nuevo emprendimiento.",
+      "Quería vender “tamales fit”, necesitando un buen cardio.",
+      "Así que bailaba cumbia para activar la energía.",
+      "Todos se quedaron callados, nadie lo vio venir.",
+      "El Brayan saludó: '¿Quieren tamales post-entrenamiento?'",
+      "Doña Chona casi se desmaya... ¡de la risa, claro!",
+      "Y así la cumbia fantasmal se volvió clase de baile.",
+      "Ahora todos bailan en el callejón de la Mantequilla.",
+      "Y comen tamales, ¡para recuperar esas calorías perdidas!",
+      "Quién diría que un misterio terminaría en un gym de cumbia...",
+      "...¡y con los tamales más fitness de todo México!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark alley at night, old street lamps, an eerie shadow moving to an unheard beat, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Dark alley at night, old street lamps, an eerie shadow moving to an unheard beat, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cuentan que en el callejón de la Mantequilla...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Wide-eyed cartoon old woman peeking from window, looking scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Wide-eyed cartoon old woman peeking from window, looking scared, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...una sombra bailaba cumbia cada madrugada a las tres.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Cartoon man with a flashlight nervously looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man with a flashlight nervously looking around, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Vecinos juraban que el fantasma era el alma en pena.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Cartoon man in bed with eyes wide open, covered by blanket, hearing strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man in bed with eyes wide open, covered by blanket, hearing strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Lo sentiste antes, un ritmo que no era de este mundo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Cartoon hand clutching a rosary, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon hand clutching a rosary, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Doña Chona santiguaba todo, hasta la televisión.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Cartoon man trying to sleep, but a faint cumbia sound wave is visible, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man trying to sleep, but a faint cumbia sound wave is visible, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El silencio absoluto de la noche se rompía con cumbia.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon man nervously closing his window, hearing distant cumbia, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man nervously closing his window, hearing distant cumbia, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie podía ignorar ese ritmo pegajoso y fantasmal.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Cartoon elderly couple whispering conspiratorially, pointing towards a dark alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon elderly couple whispering conspiratorially, pointing towards a dark alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Don Lupe y su esposa planeaban poner trampas fantasma.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Cartoon traps (bucket, rope, net) laid out in an alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon traps (bucket, rope, net) laid out in an alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pusieron cubetas, redes, hasta una escoba.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Eerie shadow dancing gracefully over the traps, untouched, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Eerie shadow dancing gracefully over the traps, untouched, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero la sombra bailarina siempre esquivaba todo sin fallar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon neighbors looking bewildered, shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon neighbors looking bewildered, shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Algo no está bien, pensaban, esto es del otro lado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Cartoon Brayan yawning widely, looking extremely tired, in a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan yawning widely, looking extremely tired, in a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Por las mañanas, el Brayan estaba siempre agotadísimo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Cartoon Brayan rubbing his eyes, explaining something with hand gestures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan rubbing his eyes, explaining something with hand gestures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Decía que estaba 'entrenando para un maratón de risa'.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Cartoon Brayan drinking an energy drink, looking determined, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan drinking an energy drink, looking determined, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y tomaba mucho café, claro, para no fallar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon dark alley with a single, very bright light suddenly turning on, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon dark alley with a single, very bright light suddenly turning on, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Una noche, un vecino valiente prendió la luz fuerte.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up of the shadow, now revealed to be Brayan, frozen mid-dance, with a Bluetooth speaker, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of the shadow, now revealed to be Brayan, frozen mid-dance, with a Bluetooth speaker, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No estabas solo... la sombra no era un fantasma.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon Brayan mid-dance pose, looking sheepish, holding a smartphone with a cumbia tutorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan mid-dance pose, looking sheepish, holding a smartphone with a cumbia tutorial, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Era el Brayan con su celular y unos audífonos medio rotos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Cartoon Brayan sweating, doing a vigorous cumbia step, in front of a mirror (imaginary), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan sweating, doing a vigorous cumbia step, in front of a mirror (imaginary), funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Practicaba pasos de cumbia para su nuevo emprendimiento.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon sign that says 'Tamales Fit del Brayan', with a picture of a tamal doing jumping jacks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon sign that says 'Tamales Fit del Brayan', with a picture of a tamal doing jumping jacks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Quería vender “tamales fit”, necesitando un buen cardio.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Cartoon Brayan doing a silly dance, with a thought bubble of 'fitness', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan doing a silly dance, with a thought bubble of 'fitness', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Así que bailaba cumbia para activar la energía.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon neighbors with confused expressions, some laughing, looking at Brayan dancing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon neighbors with confused expressions, some laughing, looking at Brayan dancing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Todos se quedaron callados, nadie lo vio venir.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Cartoon Brayan looking proud, wiping sweat from his brow, offering an imaginary tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan looking proud, wiping sweat from his brow, offering an imaginary tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El Brayan saludó: '¿Quieren tamales post-entrenamiento?'",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Cartoon old woman fanning herself, laughing, pointing at Brayan, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon old woman fanning herself, laughing, pointing at Brayan, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Doña Chona casi se desmaya... ¡de la risa, claro!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Cartoon alley with a small sign 'Clases de Cumbia Fit con Brayan', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon alley with a small sign 'Clases de Cumbia Fit con Brayan', funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y así la cumbia fantasmal se volvió clase de baile.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Cartoon Brayan, now with a small group of neighbors, all dancing cumbia awkwardly in the alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan, now with a small group of neighbors, all dancing cumbia awkwardly in the alley, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ahora todos bailan en el callejón de la Mantequilla.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Cartoon neighbors happily eating tamales, Brayan looking proud, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon neighbors happily eating tamales, Brayan looking proud, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y comen tamales, ¡para recuperar esas calorías perdidas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Cartoon a neon sign 'Tamales Fit' with a dancing tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon a neon sign 'Tamales Fit' with a dancing tamal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Quién diría que un misterio terminaría en un gym de cumbia...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "Cartoon Brayan winking, holding a tamal and a dumbbell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon Brayan winking, holding a tamal and a dumbbell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...¡y con los tamales más fitness de todo México!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Sombra bailando cumbia",
+      "El Brayan “entrenando”",
+      "Tamales fitness"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
