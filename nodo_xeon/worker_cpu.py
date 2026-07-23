@@ -1,13 +1,13 @@
 import sys
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  VERSIÓN DEL WORKER — PINPINELA                                    ║
-# ║  VERSION_WORKER = "2026-06-23_R3"                                   ║
+# ║  VERSION_WORKER = "2026-06-23_R4"                                   ║
 # ║  Incluye: video completo + orden del lote + re-hook en pausa +     ║
 # ║  pronunciacion corregida (sin asteriscos/markdown ni puntos        ║
 # ║  suspensivos en la voz) + anti-deformidad + TuIALista cinematografico ║
 # ║  Si Claude pregunta la versión, busca VERSION_WORKER aquí arriba.  ║
 # ╚══════════════════════════════════════════════════════════════════╝
-VERSION_WORKER = "2026-06-23_R3"
+VERSION_WORKER = "2026-06-23_R4"
 # FIX UTF-8: evita que los emojis (⚡🚀🎬) rompan el worker al escribir a archivo/log
 # en Windows (cp1252). Reconfigura la salida a UTF-8 con reemplazo seguro.
 try:
@@ -2077,7 +2077,10 @@ def procesar():
 
                 # PRE-FLIGHT: el ensamblaje necesita SD (imágenes) y VOZ. Si falta
                 # alguno, abortar AHORA y no perder el trabajo largo.
-                nodos_ok, motivo = verificar_nodos_criticos(necesita_sd=True, necesita_voz=True)
+                # El ENSAMBLAJE no necesita SD: las imágenes YA están generadas en disco.
+                # Solo necesita el nodo de VOZ (y FFmpeg local). Antes exigía SD y, si SD
+                # se caía, cancelaba ensamblajes que sí se podían completar.
+                nodos_ok, motivo = verificar_nodos_criticos(necesita_sd=False, necesita_voz=True)
                 if not nodos_ok:
                     print(f"🛑 [ENSAMBLAJE CANCELADO] {motivo}")
                     _diag["errores"].append(f"Pre-flight abortado: {motivo}")
