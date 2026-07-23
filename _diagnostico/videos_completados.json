@@ -197,7 +197,9 @@
     "8286bb7b-a5b4-463d-9527-3e50fadd2a1c",
     "8286bb7b-a5b4-463d-9527-3e50fadd2a1c_asm",
     "eb86e721-dc1d-4cb5-8144-45d884233eb1",
-    "eb86e721-dc1d-4cb5-8144-45d884233eb1_asm"
+    "eb86e721-dc1d-4cb5-8144-45d884233eb1_asm",
+    "ea2a1f62-483e-479a-b637-c95883154ac0",
+    "ea2a1f62-483e-479a-b637-c95883154ac0_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -690,6 +692,11 @@
       "duracion_real_seg": 1883.0,
       "marca": "Umbral Alterno",
       "formato": "16:9"
+    },
+    "ea2a1f62-483e-479a-b637-c95883154ac0": {
+      "duracion_real_seg": 116.4,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16"
     }
   }
 }
