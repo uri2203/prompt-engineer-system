@@ -3831,5 +3831,248 @@
       "La miel curativa"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "2848717d-adab-48fc-888b-da64486d445f",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Elderly Mexican woman struggling with oversized tamale pot at airport check-in counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Elderly Mexican woman struggling with oversized tamale pot at airport check-in counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La vez que Doña Chonita abordó con su tamalera gigante.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Strong aroma lines emanating from a giant tamale pot in a busy airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Strong aroma lines emanating from a giant tamale pot in a busy airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El aroma a hoja de maíz ya se sentía.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Airport check-in line with confused and sniffing passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Airport check-in line with confused and sniffing passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Desde la fila del check-in, algo no estaba bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Doña Chonita proudly carrying an enormous, industrial-sized tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita proudly carrying an enormous, industrial-sized tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ella cargaba su olla de tamales, ¡tamaño industrial!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Security agent with exaggerated look of disbelief and panic facing a huge tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Security agent with exaggerated look of disbelief and panic facing a huge tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El personal de seguridad hizo cara de \\\"ay, nanita\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Security agent gesturing 'no' to Doña Chonita and her tamale pot at the baggage scanner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Security agent gesturing 'no' to Doña Chonita and her tamale pot at the baggage scanner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"\\\"No, doña, eso no cabe en el portaequipaje.\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Doña Chonita with a determined and slightly mischievous expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita with a determined and slightly mischievous expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero Doña Chonita no iba a rendirse tan fácil.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Doña Chonita gesticulating wildly, explaining something passionately to a bewildered security agent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita gesticulating wildly, explaining something passionately to a bewildered security agent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ella argumentaba que era su \\\"kit de supervivencia\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Doña Chonita with a worried face, imagining a delayed plane with hungry passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita with a worried face, imagining a delayed plane with hungry passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¿Y si el vuelo se retrasa? ¿Qué vamos a comer?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Doña Chonita trying to hide the giant tamale pot under a festive Santa Claus rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita trying to hide the giant tamale pot under a festive Santa Claus rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Intentó disimularla bajo una rebozo de Santa Claus.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A security camera overlooking the airport hall, seemingly oblivious to Doña Chonita's trick, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A security camera overlooking the airport hall, seemingly oblivious to Doña Chonita's trick, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie lo vio venir, ni el olfato más astuto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Close-up of the tamale pot, emitting subtle steam and making quiet bubbling sounds under the rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of the tamale pot, emitting subtle steam and making quiet bubbling sounds under the rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La olla, con su vapor, hacía burbujas discretas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Airport interior filled with a strong, delicious aroma of tamales, indicated by wavy lines, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Airport interior filled with a strong, delicious aroma of tamales, indicated by wavy lines, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El aeropuerto entero empezó a oler a mole y verde.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Confused passengers sniffing the air and looking around, searching for the source of the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Confused passengers sniffing the air and looking around, searching for the source of the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pasajeros volteaban, buscando el puesto de tamales.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"A passenger looking utterly bewildered and questioning reality amidst the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A passenger looking utterly bewildered and questioning reality amidst the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡La disonancia cognitiva en su máxima expresión!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"The airport boarding gate area, suddenly quiet and tense as everyone notices something odd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The airport boarding gate area, suddenly quiet and tense as everyone notices something odd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Un silencio absoluto se hizo en la zona de embarque.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Close-up of the rebozo, with the tamale pot tilting slightly, threatening to spill, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of the rebozo, with the tamale pot tilting slightly, threatening to spill, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Cuando la olla resbaló un poquito de su escondite.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A single tamal de rajas rolling comically on the airport floor towards a startled tourist's foot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A single tamal de rajas rolling comically on the airport floor towards a startled tourist's foot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Un tamal de rajas rodó hasta el pie de un gringo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"The tourist, looking utterly shocked and overwhelmed by the tamal and its unexpected presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The tourist, looking utterly shocked and overwhelmed by the tamal and its unexpected presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El pobre casi se desmaya del susto y el sabor.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"A flight attendant with a forced smile, visibly sweating and looking stressed by the tamale situation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A flight attendant with a forced smile, visibly sweating and looking stressed by the tamale situation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"La sobrecargo, con su sonrisa, ya sudaba frío.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Flight attendant sternly addressing Doña Chonita, pointing at the tamale pot and then at a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Flight attendant sternly addressing Doña Chonita, pointing at the tamale pot and then at a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"\\\"Doña, por favor, esto es un avión, ¡no un tianguis!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Doña Chonita offering a tamal to the flight attendant with an innocent, sharing gesture, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita offering a tamal to the flight attendant with an innocent, sharing gesture, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Ella propuso compartir, \\\"para que no digan\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Imaginary scene inside an airplane cabin where passengers are happily eating tamales, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Imaginary scene inside an airplane cabin where passengers are happily eating tamales, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Imaginen ese vuelo, ¡con tamales para todos a bordo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A serious-looking sign depicting forbidden items on a plane, including a crossed-out tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A serious-looking sign depicting forbidden items on a plane, including a crossed-out tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pero la reglamentación fue más fuerte que el antojo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Doña Chonita looking a bit sad but still dignified, her giant tamale pot being taken away by airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita looking a bit sad but still dignified, her giant tamale pot being taken away by airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Le confiscaron la olla, pero no el espíritu maicero.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Doña Chonita walking out of the airport with her empty rebozo, head held high, looking slightly mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Chonita walking out of the airport with her empty rebozo, head held high, looking slightly mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Salió del aeropuerto con su rebozo vacío y altiva.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Two airport workers whispering conspiratorially, pointing towards a hidden spot, implying a secret discovery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Two airport workers whispering conspiratorially, pointing towards a hidden spot, implying a secret discovery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Dicen que al capitán lo encontraron después...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"An airplane pilot secretly eating a tamal de mole behind a closed cockpit door, with a satisfied but guilty expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"An airplane pilot secretly eating a tamal de mole behind a closed cockpit door, with a satisfied but guilty expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"...comiéndose un tamal de mole a escondidas, ¡ay, caray!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "La vez que Doña Chonita abordó con su tamalera gigante. El aroma a hoja de maíz ya se sentía. Desde la fila del check-in, algo no estaba bien. Ella cargaba su olla de tamales, ¡tamaño industrial! El personal de seguridad hizo cara de \"ay, nanita\". \"No, doña, eso no cabe en el portaequipaje.\" Pero Doña Chonita no iba a rendirse tan fácil. Ella argumentaba que era su \"kit de supervivencia\". ¿Y si el vuelo se retrasa? ¿Qué vamos a comer? Intentó disimularla bajo una rebozo de Santa Claus. Nadie lo vio venir, ni el olfato más astuto. La olla, con su vapor, hacía burbujas discretas. El aeropuerto entero empezó a oler a mole y verde. Pasajeros volteaban, buscando el puesto de tamales. ¡La disonancia cognitiva en su máxima expresión! Un silencio absoluto se hizo en la zona de embarque. Cuando la olla resbaló un poquito de su escondite. ¡Un tamal de rajas rodó hasta el pie de un gringo! El pobre casi se desmaya del susto y el sabor. La sobrecargo, con su sonrisa, ya sudaba frío. \"Doña, por favor, esto es un avión, ¡no un tianguis!\" Ella propuso compartir, \"para que no digan\". Imaginen ese vuelo, ¡con tamales para todos a bordo! Pero la reglamentación fue más fuerte que el antojo. Le confiscaron la olla, pero no el espíritu maicero. Salió del aeropuerto con su rebozo vacío y altiva. Dicen que al capitán lo encontraron después... ...comiéndose un tamal de mole a escondidas, ¡ay, caray!",
+    "titulo_sugerido": "La Doña y su Olla de Tamales en el Aeropuerto",
+    "escenas_texto": [
+      "La vez que Doña Chonita abordó con su tamalera gigante.",
+      "El aroma a hoja de maíz ya se sentía.",
+      "Desde la fila del check-in, algo no estaba bien.",
+      "Ella cargaba su olla de tamales, ¡tamaño industrial!",
+      "El personal de seguridad hizo cara de \"ay, nanita\".",
+      "\"No, doña, eso no cabe en el portaequipaje.\"",
+      "Pero Doña Chonita no iba a rendirse tan fácil.",
+      "Ella argumentaba que era su \"kit de supervivencia\".",
+      "¿Y si el vuelo se retrasa? ¿Qué vamos a comer?",
+      "Intentó disimularla bajo una rebozo de Santa Claus.",
+      "Nadie lo vio venir, ni el olfato más astuto.",
+      "La olla, con su vapor, hacía burbujas discretas.",
+      "El aeropuerto entero empezó a oler a mole y verde.",
+      "Pasajeros volteaban, buscando el puesto de tamales.",
+      "¡La disonancia cognitiva en su máxima expresión!",
+      "Un silencio absoluto se hizo en la zona de embarque.",
+      "Cuando la olla resbaló un poquito de su escondite.",
+      "¡Un tamal de rajas rodó hasta el pie de un gringo!",
+      "El pobre casi se desmaya del susto y el sabor.",
+      "La sobrecargo, con su sonrisa, ya sudaba frío.",
+      "\"Doña, por favor, esto es un avión, ¡no un tianguis!\"",
+      "Ella propuso compartir, \"para que no digan\".",
+      "Imaginen ese vuelo, ¡con tamales para todos a bordo!",
+      "Pero la reglamentación fue más fuerte que el antojo.",
+      "Le confiscaron la olla, pero no el espíritu maicero.",
+      "Salió del aeropuerto con su rebozo vacío y altiva.",
+      "Dicen que al capitán lo encontraron después...",
+      "...comiéndose un tamal de mole a escondidas, ¡ay, caray!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Elderly Mexican woman struggling with oversized tamale pot at airport check-in counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Elderly Mexican woman struggling with oversized tamale pot at airport check-in counter, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La vez que Doña Chonita abordó con su tamalera gigante.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Strong aroma lines emanating from a giant tamale pot in a busy airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Strong aroma lines emanating from a giant tamale pot in a busy airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El aroma a hoja de maíz ya se sentía.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Airport check-in line with confused and sniffing passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Airport check-in line with confused and sniffing passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Desde la fila del check-in, algo no estaba bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Doña Chonita proudly carrying an enormous, industrial-sized tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita proudly carrying an enormous, industrial-sized tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ella cargaba su olla de tamales, ¡tamaño industrial!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Security agent with exaggerated look of disbelief and panic facing a huge tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Security agent with exaggerated look of disbelief and panic facing a huge tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El personal de seguridad hizo cara de \"ay, nanita\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Security agent gesturing 'no' to Doña Chonita and her tamale pot at the baggage scanner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Security agent gesturing 'no' to Doña Chonita and her tamale pot at the baggage scanner, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "\"No, doña, eso no cabe en el portaequipaje.\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Doña Chonita with a determined and slightly mischievous expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita with a determined and slightly mischievous expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero Doña Chonita no iba a rendirse tan fácil.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Doña Chonita gesticulating wildly, explaining something passionately to a bewildered security agent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita gesticulating wildly, explaining something passionately to a bewildered security agent, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ella argumentaba que era su \"kit de supervivencia\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Doña Chonita with a worried face, imagining a delayed plane with hungry passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita with a worried face, imagining a delayed plane with hungry passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¿Y si el vuelo se retrasa? ¿Qué vamos a comer?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Doña Chonita trying to hide the giant tamale pot under a festive Santa Claus rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita trying to hide the giant tamale pot under a festive Santa Claus rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Intentó disimularla bajo una rebozo de Santa Claus.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A security camera overlooking the airport hall, seemingly oblivious to Doña Chonita's trick, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A security camera overlooking the airport hall, seemingly oblivious to Doña Chonita's trick, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie lo vio venir, ni el olfato más astuto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Close-up of the tamale pot, emitting subtle steam and making quiet bubbling sounds under the rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of the tamale pot, emitting subtle steam and making quiet bubbling sounds under the rebozo, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La olla, con su vapor, hacía burbujas discretas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Airport interior filled with a strong, delicious aroma of tamales, indicated by wavy lines, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Airport interior filled with a strong, delicious aroma of tamales, indicated by wavy lines, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El aeropuerto entero empezó a oler a mole y verde.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Confused passengers sniffing the air and looking around, searching for the source of the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Confused passengers sniffing the air and looking around, searching for the source of the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pasajeros volteaban, buscando el puesto de tamales.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "A passenger looking utterly bewildered and questioning reality amidst the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A passenger looking utterly bewildered and questioning reality amidst the tamale smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡La disonancia cognitiva en su máxima expresión!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "The airport boarding gate area, suddenly quiet and tense as everyone notices something odd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The airport boarding gate area, suddenly quiet and tense as everyone notices something odd, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Un silencio absoluto se hizo en la zona de embarque.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Close-up of the rebozo, with the tamale pot tilting slightly, threatening to spill, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of the rebozo, with the tamale pot tilting slightly, threatening to spill, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Cuando la olla resbaló un poquito de su escondite.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A single tamal de rajas rolling comically on the airport floor towards a startled tourist's foot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A single tamal de rajas rolling comically on the airport floor towards a startled tourist's foot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Un tamal de rajas rodó hasta el pie de un gringo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "The tourist, looking utterly shocked and overwhelmed by the tamal and its unexpected presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The tourist, looking utterly shocked and overwhelmed by the tamal and its unexpected presence, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El pobre casi se desmaya del susto y el sabor.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "A flight attendant with a forced smile, visibly sweating and looking stressed by the tamale situation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A flight attendant with a forced smile, visibly sweating and looking stressed by the tamale situation, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "La sobrecargo, con su sonrisa, ya sudaba frío.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Flight attendant sternly addressing Doña Chonita, pointing at the tamale pot and then at a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Flight attendant sternly addressing Doña Chonita, pointing at the tamale pot and then at a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "\"Doña, por favor, esto es un avión, ¡no un tianguis!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Doña Chonita offering a tamal to the flight attendant with an innocent, sharing gesture, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita offering a tamal to the flight attendant with an innocent, sharing gesture, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Ella propuso compartir, \"para que no digan\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Imaginary scene inside an airplane cabin where passengers are happily eating tamales, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Imaginary scene inside an airplane cabin where passengers are happily eating tamales, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Imaginen ese vuelo, ¡con tamales para todos a bordo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A serious-looking sign depicting forbidden items on a plane, including a crossed-out tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A serious-looking sign depicting forbidden items on a plane, including a crossed-out tamale pot, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pero la reglamentación fue más fuerte que el antojo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Doña Chonita looking a bit sad but still dignified, her giant tamale pot being taken away by airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita looking a bit sad but still dignified, her giant tamale pot being taken away by airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Le confiscaron la olla, pero no el espíritu maicero.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Doña Chonita walking out of the airport with her empty rebozo, head held high, looking slightly mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Chonita walking out of the airport with her empty rebozo, head held high, looking slightly mischievous, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Salió del aeropuerto con su rebozo vacío y altiva.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Two airport workers whispering conspiratorially, pointing towards a hidden spot, implying a secret discovery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Two airport workers whispering conspiratorially, pointing towards a hidden spot, implying a secret discovery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Dicen que al capitán lo encontraron después...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "An airplane pilot secretly eating a tamal de mole behind a closed cockpit door, with a satisfied but guilty expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "An airplane pilot secretly eating a tamal de mole behind a closed cockpit door, with a satisfied but guilty expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "...comiéndose un tamal de mole a escondidas, ¡ay, caray!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Tamales tamaño industrial.",
+      "La olla resbaló un poquito.",
+      "¡Tamal de mole a escondidas!"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
