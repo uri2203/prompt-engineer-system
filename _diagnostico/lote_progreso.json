@@ -1,10 +1,7 @@
 {
-  "estado_lote": "completado",
-  "total": 13,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 13,
-  "trabajo_actual": "Generando video 13/13 (Umbral Alterno 9:16)",
-  "mensaje": "Lote terminado: 0 completados, 13 fallidos (omitidos).",
-  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 2s+2L",
-  "historial": []
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
