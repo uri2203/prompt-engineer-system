@@ -2138,5 +2138,248 @@
       "¿Respirar un bosque?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "b07aa098-6f80-43fa-9de6-f068e075dd76",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Mexican street scene, a humorous bee flying menacingly near a man's face, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Mexican street scene, a humorous bee flying menacingly near a man's face, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Dicen que si te pica una abeja, ¡ya no eres el mismo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon man in a typical Mexican market setting, looking skeptical, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man in a typical Mexican market setting, looking skeptical, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El compadre Chuy no creía en esas cosas, ¿verdad?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A cartoon bee with tiny dance shoes stinging a surprised man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon bee with tiny dance shoes stinging a surprised man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Hasta que una abeja bailarina lo picó, ¡zas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Close-up of a cartoon bee with exaggerated, mischievous eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of a cartoon bee with exaggerated, mischievous eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"No era una abeja cualquiera, algo no estaba bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Cartoon man walking down a street, happily whistling a cumbia tune, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon man walking down a street, happily whistling a cumbia tune, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Primero, el compadre silbó cumbia todo el día.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"A cartoon man in a kitchen drawing tiny mustaches on surprised looking cartoon tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon man in a kitchen drawing tiny mustaches on surprised looking cartoon tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Luego, le dio por bigotes a los jitomates.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon women at a market stall looking shocked at mustachioed tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon women at a market stall looking shocked at mustachioed tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Imagínate! Las señoras del mercado, ¡impactadas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Abstract cartoon depiction of strange energy in the air over a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Abstract cartoon depiction of strange energy in the air over a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Lo sentiste, una energía rara en el aire.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"A cartoon man with a faint glow, looking bewildered, as a bee flies away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon man with a faint glow, looking bewildered, as a bee flies away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Nadie vio venir, el efecto abeja es potente.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon woman, 'Doña Cleto', with hands on hips, looking annoyed at her husband, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon woman, 'Doña Cleto', with hands on hips, looking annoyed at her husband, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Doña Cleto dijo: \\\"¡Este no es mi Chuy!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"A plump cartoon man doing an exaggerated, funny dance move ('Serruchito') in a public space, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A plump cartoon man doing an exaggerated, funny dance move ('Serruchito') in a public space, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Él, ¡todo panzón!, bailó el ‘Serruchito’.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A bustling cartoon tianguis (market) scene with people staring in amazement at a dancing man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A bustling cartoon tianguis (market) scene with people staring in amazement at a dancing man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"En pleno tianguis, la gente no podía ignorarlo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"A cartoon street scene, with a moment of strange, exaggerated quietness, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon street scene, with a moment of strange, exaggerated quietness, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"El silencio duraba menos que un suspiro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Close-up of the cartoon man's face, making a buzzing sound with exaggerated cheeks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Close-up of the cartoon man's face, making a buzzing sound with exaggerated cheeks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Porque el compadre zumbaba como abeja reina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"The cartoon man comically leading a group of tiny, determined hummingbirds in a protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The cartoon man comically leading a group of tiny, determined hummingbirds in a protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y organizaba huelgas con los colibríes.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Cartoon hummingbirds flying in formation, with determined expressions, following the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon hummingbirds flying in formation, with determined expressions, following the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Sí! Los colibríes del parque, siguiendo su ritmo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon birds on tree branches singing exaggeratedly with musical notes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Cartoon birds on tree branches singing exaggeratedly with musical notes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Los pajaritos cantaban canciones de José Alfredo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A cartoon man shrugging comically, surrounded by buzzing bees and singing birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon man shrugging comically, surrounded by buzzing bees and singing birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Todo por una simple picadura! ¡Una locura!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"A cartoon teenager, 'Brayan', on a brightly customized bicycle with loud speakers, approaching the scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon teenager, 'Brayan', on a brightly customized bicycle with loud speakers, approaching the scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Luego, llegó el Brayan con su bicicleta tuneada.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Brayan's face, with a thoughtful, slightly confused expression, watching the man and birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Brayan's face, with a thoughtful, slightly confused expression, watching the man and birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Pensó que era parte de una coreografía.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Brayan dancing energetically with the man and hummingbirds, his bicycle's stereo blaring music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Brayan dancing energetically with the man and hummingbirds, his bicycle's stereo blaring music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y se unió al baile con su estéreo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Doña Cleto burying her face in her hands in exasperation, looking away from the chaotic scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"Doña Cleto burying her face in her hands in exasperation, looking away from the chaotic scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Doña Cleto ya no sabía dónde esconder la cara.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"A cartoon woman looking directly at the viewer with a desperate, questioning expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon woman looking directly at the viewer with a desperate, questioning expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¿Cómo le explicas al mundo que tu esposo...?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"The cartoon man proudly conducting an orchestra of various birds and hummingbirds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The cartoon man proudly conducting an orchestra of various birds and hummingbirds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Que tu esposo ahora dirige orquesta aviar.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"The cartoon man in a mariachi-like pose, singing dramatically with a microphone, while dancing like a clumsy bumblebee, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"The cartoon man in a mariachi-like pose, singing dramatically with a microphone, while dancing like a clumsy bumblebee, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Que canta rancheras y baila como abejorro.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"A cartoon bee stinging a generic person in a comical way, showing them starting to zumbado (buzz) funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon bee stinging a generic person in a comical way, showing them starting to zumbado (buzz) funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Y si te pica una, ¡terminas igual de zumbado!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A cartoon man sitting at a table with a giant plate of mole poblano, looking dejected and still buzzing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A cartoon man sitting at a table with a giant plate of mole poblano, looking dejected and still buzzing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"¡Ni el mole poblano lo regresa a la normalidad!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"A chaotic cartoon Mexican street scene with bees, hummingbirds, and people dancing comically, as the 'zumbado' man leads them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"prompt_visual\": \"A chaotic cartoon Mexican street scene with bees, hummingbirds, and people dancing comically, as the 'zumbado' man leads them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism\", \"texto_locucion\": \"Es el síndrome de la abeja, ¡saca tus conclusiones!\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Dicen que si te pica una abeja, ¡ya no eres el mismo! El compadre Chuy no creía en esas cosas, ¿verdad? Hasta que una abeja bailarina lo picó, ¡zas! No era una abeja cualquiera, algo no estaba bien. Primero, el compadre silbó cumbia todo el día. Luego, le dio por bigotes a los jitomates. ¡Imagínate! Las señoras del mercado, ¡impactadas! Lo sentiste, una energía rara en el aire. Nadie vio venir, el efecto abeja es potente. Doña Cleto dijo: \"¡Este no es mi Chuy!\" Él, ¡todo panzón!, bailó el ‘Serruchito’. En pleno tianguis, la gente no podía ignorarlo. El silencio duraba menos que un suspiro. Porque el compadre zumbaba como abeja reina. Y organizaba huelgas con los colibríes. ¡Sí! Los colibríes del parque, siguiendo su ritmo. Los pajaritos cantaban canciones de José Alfredo. ¡Todo por una simple picadura! ¡Una locura! Luego, llegó el Brayan con su bicicleta tuneada. Pensó que era parte de una coreografía. Y se unió al baile con su estéreo. Doña Cleto ya no sabía dónde esconder la cara. ¿Cómo le explicas al mundo que tu esposo...? Que tu esposo ahora dirige orquesta aviar. Que canta rancheras y baila como abejorro. Y si te pica una, ¡terminas igual de zumbado! ¡Ni el mole poblano lo regresa a la normalidad! Es el síndrome de la abeja, ¡saca tus conclusiones!",
+    "titulo_sugerido": "La Picadura de Abeja más Zumbada de México",
+    "escenas_texto": [
+      "Dicen que si te pica una abeja, ¡ya no eres el mismo!",
+      "El compadre Chuy no creía en esas cosas, ¿verdad?",
+      "Hasta que una abeja bailarina lo picó, ¡zas!",
+      "No era una abeja cualquiera, algo no estaba bien.",
+      "Primero, el compadre silbó cumbia todo el día.",
+      "Luego, le dio por bigotes a los jitomates.",
+      "¡Imagínate! Las señoras del mercado, ¡impactadas!",
+      "Lo sentiste, una energía rara en el aire.",
+      "Nadie vio venir, el efecto abeja es potente.",
+      "Doña Cleto dijo: \"¡Este no es mi Chuy!\"",
+      "Él, ¡todo panzón!, bailó el ‘Serruchito’.",
+      "En pleno tianguis, la gente no podía ignorarlo.",
+      "El silencio duraba menos que un suspiro.",
+      "Porque el compadre zumbaba como abeja reina.",
+      "Y organizaba huelgas con los colibríes.",
+      "¡Sí! Los colibríes del parque, siguiendo su ritmo.",
+      "Los pajaritos cantaban canciones de José Alfredo.",
+      "¡Todo por una simple picadura! ¡Una locura!",
+      "Luego, llegó el Brayan con su bicicleta tuneada.",
+      "Pensó que era parte de una coreografía.",
+      "Y se unió al baile con su estéreo.",
+      "Doña Cleto ya no sabía dónde esconder la cara.",
+      "¿Cómo le explicas al mundo que tu esposo...?",
+      "Que tu esposo ahora dirige orquesta aviar.",
+      "Que canta rancheras y baila como abejorro.",
+      "Y si te pica una, ¡terminas igual de zumbado!",
+      "¡Ni el mole poblano lo regresa a la normalidad!",
+      "Es el síndrome de la abeja, ¡saca tus conclusiones!"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Mexican street scene, a humorous bee flying menacingly near a man's face, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Mexican street scene, a humorous bee flying menacingly near a man's face, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Dicen que si te pica una abeja, ¡ya no eres el mismo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon man in a typical Mexican market setting, looking skeptical, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man in a typical Mexican market setting, looking skeptical, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El compadre Chuy no creía en esas cosas, ¿verdad?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A cartoon bee with tiny dance shoes stinging a surprised man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon bee with tiny dance shoes stinging a surprised man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Hasta que una abeja bailarina lo picó, ¡zas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Close-up of a cartoon bee with exaggerated, mischievous eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of a cartoon bee with exaggerated, mischievous eyes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "No era una abeja cualquiera, algo no estaba bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Cartoon man walking down a street, happily whistling a cumbia tune, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon man walking down a street, happily whistling a cumbia tune, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Primero, el compadre silbó cumbia todo el día.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "A cartoon man in a kitchen drawing tiny mustaches on surprised looking cartoon tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon man in a kitchen drawing tiny mustaches on surprised looking cartoon tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Luego, le dio por bigotes a los jitomates.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon women at a market stall looking shocked at mustachioed tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon women at a market stall looking shocked at mustachioed tomatoes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Imagínate! Las señoras del mercado, ¡impactadas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Abstract cartoon depiction of strange energy in the air over a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Abstract cartoon depiction of strange energy in the air over a street, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Lo sentiste, una energía rara en el aire.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "A cartoon man with a faint glow, looking bewildered, as a bee flies away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon man with a faint glow, looking bewildered, as a bee flies away, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Nadie vio venir, el efecto abeja es potente.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon woman, 'Doña Cleto', with hands on hips, looking annoyed at her husband, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon woman, 'Doña Cleto', with hands on hips, looking annoyed at her husband, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Doña Cleto dijo: \"¡Este no es mi Chuy!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "A plump cartoon man doing an exaggerated, funny dance move ('Serruchito') in a public space, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A plump cartoon man doing an exaggerated, funny dance move ('Serruchito') in a public space, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Él, ¡todo panzón!, bailó el ‘Serruchito’.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A bustling cartoon tianguis (market) scene with people staring in amazement at a dancing man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A bustling cartoon tianguis (market) scene with people staring in amazement at a dancing man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "En pleno tianguis, la gente no podía ignorarlo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "A cartoon street scene, with a moment of strange, exaggerated quietness, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon street scene, with a moment of strange, exaggerated quietness, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "El silencio duraba menos que un suspiro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of the cartoon man's face, making a buzzing sound with exaggerated cheeks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Close-up of the cartoon man's face, making a buzzing sound with exaggerated cheeks, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Porque el compadre zumbaba como abeja reina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "The cartoon man comically leading a group of tiny, determined hummingbirds in a protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The cartoon man comically leading a group of tiny, determined hummingbirds in a protest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y organizaba huelgas con los colibríes.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Cartoon hummingbirds flying in formation, with determined expressions, following the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon hummingbirds flying in formation, with determined expressions, following the man, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Sí! Los colibríes del parque, siguiendo su ritmo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon birds on tree branches singing exaggeratedly with musical notes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Cartoon birds on tree branches singing exaggeratedly with musical notes, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Los pajaritos cantaban canciones de José Alfredo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A cartoon man shrugging comically, surrounded by buzzing bees and singing birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon man shrugging comically, surrounded by buzzing bees and singing birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Todo por una simple picadura! ¡Una locura!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "A cartoon teenager, 'Brayan', on a brightly customized bicycle with loud speakers, approaching the scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon teenager, 'Brayan', on a brightly customized bicycle with loud speakers, approaching the scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Luego, llegó el Brayan con su bicicleta tuneada.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Brayan's face, with a thoughtful, slightly confused expression, watching the man and birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Brayan's face, with a thoughtful, slightly confused expression, watching the man and birds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Pensó que era parte de una coreografía.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Brayan dancing energetically with the man and hummingbirds, his bicycle's stereo blaring music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Brayan dancing energetically with the man and hummingbirds, his bicycle's stereo blaring music, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y se unió al baile con su estéreo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Doña Cleto burying her face in her hands in exasperation, looking away from the chaotic scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "Doña Cleto burying her face in her hands in exasperation, looking away from the chaotic scene, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Doña Cleto ya no sabía dónde esconder la cara.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "A cartoon woman looking directly at the viewer with a desperate, questioning expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon woman looking directly at the viewer with a desperate, questioning expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¿Cómo le explicas al mundo que tu esposo...?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "The cartoon man proudly conducting an orchestra of various birds and hummingbirds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The cartoon man proudly conducting an orchestra of various birds and hummingbirds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Que tu esposo ahora dirige orquesta aviar.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "The cartoon man in a mariachi-like pose, singing dramatically with a microphone, while dancing like a clumsy bumblebee, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "The cartoon man in a mariachi-like pose, singing dramatically with a microphone, while dancing like a clumsy bumblebee, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Que canta rancheras y baila como abejorro.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "A cartoon bee stinging a generic person in a comical way, showing them starting to zumbado (buzz) funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon bee stinging a generic person in a comical way, showing them starting to zumbado (buzz) funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Y si te pica una, ¡terminas igual de zumbado!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A cartoon man sitting at a table with a giant plate of mole poblano, looking dejected and still buzzing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A cartoon man sitting at a table with a giant plate of mole poblano, looking dejected and still buzzing, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "¡Ni el mole poblano lo regresa a la normalidad!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "A chaotic cartoon Mexican street scene with bees, hummingbirds, and people dancing comically, as the 'zumbado' man leads them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "prompt_visual": "A chaotic cartoon Mexican street scene with bees, hummingbirds, and people dancing comically, as the 'zumbado' man leads them, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism",
+        "texto_locucion": "Es el síndrome de la abeja, ¡saca tus conclusiones!",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Picadura de abeja",
+      "Efecto dominguero",
+      "Compadre zumbado"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
