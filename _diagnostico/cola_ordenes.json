@@ -2381,5 +2381,240 @@
       "Compadre zumbado"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "ff6f44ad-4a59-4531-b8bf-66b1cc0e2018",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Old Mexican woman trying to board an airplane with a wooden crate full of live chickens at an airport gate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Old Mexican woman trying to board an airplane with a wooden crate full of live chickens at an airport gate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La doña quería volar, ¡con todo y huacal de gallinas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Line of confused passengers at airport security, a wooden crate with chicken heads poking out, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Line of confused passengers at airport security, a wooden crate with chicken heads poking out, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"En la fila, el tremendo gallinero ya armaba alboroto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Exaggerated surprised female flight attendant looking at an old woman with a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Exaggerated surprised female flight attendant looking at an old woman with a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La sobrecargo la mira, ¡con los ojos así de plato!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Flight attendant desperately gesturing 'no' to an old woman holding a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Flight attendant desperately gesturing 'no' to an old woman holding a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Señora, no puede! No son equipaje de mano, ¡no!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"Old Mexican woman smiling confidently, holding a chicken crate, arguing with airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Old Mexican woman smiling confidently, holding a chicken crate, arguing with airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero si son mis gallinitas, ¡viajan de primera!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Cartoon chickens in a crate looking nervous but quiet, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chickens in a crate looking nervous but quiet, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Son bien portadas! Ni pío hacen si les da miedo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon chicken flying wildly inside an airport terminal, startled passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chicken flying wildly inside an airport terminal, startled passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Pues una se espantó y salió volando del huacal!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Chaotic airport scene, chickens running everywhere, passengers screaming and ducking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Chaotic airport scene, chickens running everywhere, passengers screaming and ducking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡El silencio absoluto se rompió con cacareos locos!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Passengers comically fleeing from a flock of cartoon chickens inside an airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Passengers comically fleeing from a flock of cartoon chickens inside an airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Los pasajeros corrían, ¡parecía carrera de gallinas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Two airport security guards comically trying to catch a chicken with a net, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Two airport security guards comically trying to catch a chicken with a net, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"De repente, apareció seguridad, ¡con red y todo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon chickens comically dodging security guards, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chickens comically dodging security guards, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Pero las gallinas eran más astutas que todos!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Young man (Brayan-like character) in oversized clothes, looking determined, ready to catch a chicken, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Young man (Brayan-like character) in oversized clothes, looking determined, ready to catch a chicken, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ahí el Brayan vio su oportunidad de héroe ranchero.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Brayan character comically chasing a chicken, holding a net, with a thought bubble showing shrimp cocktail, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Brayan character comically chasing a chicken, holding a net, with a thought bubble showing shrimp cocktail, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Quiso atrapar una, ¡para hacerla coctel de camarón!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Cartoon chicken peeking out of a rolling suitcase, confused owner, airport baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chicken peeking out of a rolling suitcase, confused owner, airport baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Otra gallina se metió a una maleta de ruedas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Man staring at his suitcase with a chicken inside, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man staring at his suitcase with a chicken inside, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡El dueño creía que algo no está bien con su viaje!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Old Mexican woman dramatically pointing at a chicken inside a suitcase, frantic expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Old Mexican woman dramatically pointing at a chicken inside a suitcase, frantic expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La doña gritaba: \\\"¡Es la Clotilde, mi gallina preferida!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Cartoon chicken comically sitting on an airplane seat, seatbelt fastened, looking smug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chicken comically sitting on an airplane seat, seatbelt fastened, looking smug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Imaginen el vuelo, con una gallina como \\\"pasajera\\\"!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Cartoon pilot in cockpit looking confused, a single feather floating in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon pilot in cockpit looking confused, a single feather floating in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El piloto dijo: \\\"¡Juraría que vi plumas en cabina!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Passengers comically holding their noses, green odor lines floating around cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Passengers comically holding their noses, green odor lines floating around cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Incluso sentiste antes el olor a establo en la terminal!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Female passenger laughing heartily, watching the chicken chase, airport lounge, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Female passenger laughing heartily, watching the chicken chase, airport lounge, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Una señora dijo: \\\"¡Esto es más divertido que mi escala!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon chicken comically riding on a luggage cart, looking proud, airport terminal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon chicken comically riding on a luggage cart, looking proud, airport terminal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡De pronto, otra gallina se subió al carrito de maletas!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Overwhelmed passenger covering their ears, surrounded by squawking cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Overwhelmed passenger covering their ears, surrounded by squawking cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡No puedes ignorar tanto caos emplumado en tu vida!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Old Mexican woman with a mischievous grin, sketching a plane on a napkin with chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Old Mexican woman with a mischievous grin, sketching a plane on a napkin with chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La doña ya planeaba otra estrategia ¡para viajar gratis!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Security guards proudly holding nets with caught chickens, doña looking disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Security guards proudly holding nets with caught chickens, doña looking disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Finalmente, lograron atrapar a todas, ¡casi sin excepciones!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A single cartoon chicken comically riding on a baggage carousel, looking dazed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A single cartoon chicken comically riding on a baggage carousel, looking dazed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero la Clotilde... ¡esa apareció en la banda de equipaje!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Close-up of a chicken with a 'Fragile, Live Content' tag on its leg, baggage carousel background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Close-up of a chicken with a 'Fragile, Live Content' tag on its leg, baggage carousel background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¡Con una etiqueta que decía: \\\"Frágil, contenido vivo\\\"!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A suitcase with a cartoon rooster poking its head out, looking surprised, baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A suitcase with a cartoon rooster poking its head out, looking surprised, baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Imaginas tu maleta, llegando con un gallo extra?\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "La doña quería volar, ¡con todo y huacal de gallinas! En la fila, el tremendo gallinero ya armaba alboroto. La sobrecargo la mira, ¡con los ojos así de plato! ¡Señora, no puede! No son equipaje de mano, ¡no! Pero si son mis gallinitas, ¡viajan de primera! ¡Son bien portadas! Ni pío hacen si les da miedo. ¡Pues una se espantó y salió volando del huacal! ¡El silencio absoluto se rompió con cacareos locos! Los pasajeros corrían, ¡parecía carrera de gallinas! De repente, apareció seguridad, ¡con red y todo! ¡Pero las gallinas eran más astutas que todos! Ahí el Brayan vio su oportunidad de héroe ranchero. Quiso atrapar una, ¡para hacerla coctel de camarón! Otra gallina se metió a una maleta de ruedas. ¡El dueño creía que algo no está bien con su viaje! La doña gritaba: \"¡Es la Clotilde, mi gallina preferida!\" ¡Imaginen el vuelo, con una gallina como \"pasajera\"! El piloto dijo: \"¡Juraría que vi plumas en cabina!\" ¡Incluso sentiste antes el olor a establo en la terminal! Una señora dijo: \"¡Esto es más divertido que mi escala!\" ¡De pronto, otra gallina se subió al carrito de maletas! ¡No puedes ignorar tanto caos emplumado en tu vida! La doña ya planeaba otra estrategia ¡para viajar gratis! Finalmente, lograron atrapar a todas, ¡casi sin excepciones! Pero la Clotilde... ¡esa apareció en la banda de equipaje! ¡Con una etiqueta que decía: \"Frágil, contenido vivo\"! ¿Imaginas tu maleta, llegando con un gallo extra?",
+    "titulo_sugerido": "La doña que quería volar con sus gallinas... ¡en primera clase!",
+    "escenas_texto": [
+      "La doña quería volar, ¡con todo y huacal de gallinas!",
+      "En la fila, el tremendo gallinero ya armaba alboroto.",
+      "La sobrecargo la mira, ¡con los ojos así de plato!",
+      "¡Señora, no puede! No son equipaje de mano, ¡no!",
+      "Pero si son mis gallinitas, ¡viajan de primera!",
+      "¡Son bien portadas! Ni pío hacen si les da miedo.",
+      "¡Pues una se espantó y salió volando del huacal!",
+      "¡El silencio absoluto se rompió con cacareos locos!",
+      "Los pasajeros corrían, ¡parecía carrera de gallinas!",
+      "De repente, apareció seguridad, ¡con red y todo!",
+      "¡Pero las gallinas eran más astutas que todos!",
+      "Ahí el Brayan vio su oportunidad de héroe ranchero.",
+      "Quiso atrapar una, ¡para hacerla coctel de camarón!",
+      "Otra gallina se metió a una maleta de ruedas.",
+      "¡El dueño creía que algo no está bien con su viaje!",
+      "La doña gritaba: \"¡Es la Clotilde, mi gallina preferida!\"",
+      "¡Imaginen el vuelo, con una gallina como \"pasajera\"!",
+      "El piloto dijo: \"¡Juraría que vi plumas en cabina!\"",
+      "¡Incluso sentiste antes el olor a establo en la terminal!",
+      "Una señora dijo: \"¡Esto es más divertido que mi escala!\"",
+      "¡De pronto, otra gallina se subió al carrito de maletas!",
+      "¡No puedes ignorar tanto caos emplumado en tu vida!",
+      "La doña ya planeaba otra estrategia ¡para viajar gratis!",
+      "Finalmente, lograron atrapar a todas, ¡casi sin excepciones!",
+      "Pero la Clotilde... ¡esa apareció en la banda de equipaje!",
+      "¡Con una etiqueta que decía: \"Frágil, contenido vivo\"!",
+      "¿Imaginas tu maleta, llegando con un gallo extra?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Old Mexican woman trying to board an airplane with a wooden crate full of live chickens at an airport gate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Old Mexican woman trying to board an airplane with a wooden crate full of live chickens at an airport gate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La doña quería volar, ¡con todo y huacal de gallinas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Line of confused passengers at airport security, a wooden crate with chicken heads poking out, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Line of confused passengers at airport security, a wooden crate with chicken heads poking out, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "En la fila, el tremendo gallinero ya armaba alboroto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Exaggerated surprised female flight attendant looking at an old woman with a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Exaggerated surprised female flight attendant looking at an old woman with a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La sobrecargo la mira, ¡con los ojos así de plato!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Flight attendant desperately gesturing 'no' to an old woman holding a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Flight attendant desperately gesturing 'no' to an old woman holding a chicken crate, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Señora, no puede! No son equipaje de mano, ¡no!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "Old Mexican woman smiling confidently, holding a chicken crate, arguing with airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Old Mexican woman smiling confidently, holding a chicken crate, arguing with airport staff, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero si son mis gallinitas, ¡viajan de primera!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Cartoon chickens in a crate looking nervous but quiet, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chickens in a crate looking nervous but quiet, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Son bien portadas! Ni pío hacen si les da miedo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon chicken flying wildly inside an airport terminal, startled passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chicken flying wildly inside an airport terminal, startled passengers, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Pues una se espantó y salió volando del huacal!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Chaotic airport scene, chickens running everywhere, passengers screaming and ducking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Chaotic airport scene, chickens running everywhere, passengers screaming and ducking, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡El silencio absoluto se rompió con cacareos locos!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Passengers comically fleeing from a flock of cartoon chickens inside an airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Passengers comically fleeing from a flock of cartoon chickens inside an airport, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Los pasajeros corrían, ¡parecía carrera de gallinas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Two airport security guards comically trying to catch a chicken with a net, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Two airport security guards comically trying to catch a chicken with a net, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "De repente, apareció seguridad, ¡con red y todo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon chickens comically dodging security guards, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chickens comically dodging security guards, airport background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Pero las gallinas eran más astutas que todos!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Young man (Brayan-like character) in oversized clothes, looking determined, ready to catch a chicken, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Young man (Brayan-like character) in oversized clothes, looking determined, ready to catch a chicken, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ahí el Brayan vio su oportunidad de héroe ranchero.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Brayan character comically chasing a chicken, holding a net, with a thought bubble showing shrimp cocktail, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Brayan character comically chasing a chicken, holding a net, with a thought bubble showing shrimp cocktail, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Quiso atrapar una, ¡para hacerla coctel de camarón!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Cartoon chicken peeking out of a rolling suitcase, confused owner, airport baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chicken peeking out of a rolling suitcase, confused owner, airport baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Otra gallina se metió a una maleta de ruedas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Man staring at his suitcase with a chicken inside, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man staring at his suitcase with a chicken inside, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡El dueño creía que algo no está bien con su viaje!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Old Mexican woman dramatically pointing at a chicken inside a suitcase, frantic expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Old Mexican woman dramatically pointing at a chicken inside a suitcase, frantic expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La doña gritaba: \"¡Es la Clotilde, mi gallina preferida!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Cartoon chicken comically sitting on an airplane seat, seatbelt fastened, looking smug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chicken comically sitting on an airplane seat, seatbelt fastened, looking smug, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Imaginen el vuelo, con una gallina como \"pasajera\"!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Cartoon pilot in cockpit looking confused, a single feather floating in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon pilot in cockpit looking confused, a single feather floating in the air, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El piloto dijo: \"¡Juraría que vi plumas en cabina!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Passengers comically holding their noses, green odor lines floating around cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Passengers comically holding their noses, green odor lines floating around cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Incluso sentiste antes el olor a establo en la terminal!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Female passenger laughing heartily, watching the chicken chase, airport lounge, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Female passenger laughing heartily, watching the chicken chase, airport lounge, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Una señora dijo: \"¡Esto es más divertido que mi escala!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon chicken comically riding on a luggage cart, looking proud, airport terminal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon chicken comically riding on a luggage cart, looking proud, airport terminal, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡De pronto, otra gallina se subió al carrito de maletas!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Overwhelmed passenger covering their ears, surrounded by squawking cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Overwhelmed passenger covering their ears, surrounded by squawking cartoon chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡No puedes ignorar tanto caos emplumado en tu vida!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Old Mexican woman with a mischievous grin, sketching a plane on a napkin with chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Old Mexican woman with a mischievous grin, sketching a plane on a napkin with chickens, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La doña ya planeaba otra estrategia ¡para viajar gratis!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Security guards proudly holding nets with caught chickens, doña looking disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Security guards proudly holding nets with caught chickens, doña looking disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Finalmente, lograron atrapar a todas, ¡casi sin excepciones!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A single cartoon chicken comically riding on a baggage carousel, looking dazed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A single cartoon chicken comically riding on a baggage carousel, looking dazed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero la Clotilde... ¡esa apareció en la banda de equipaje!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Close-up of a chicken with a 'Fragile, Live Content' tag on its leg, baggage carousel background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Close-up of a chicken with a 'Fragile, Live Content' tag on its leg, baggage carousel background, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¡Con una etiqueta que decía: \"Frágil, contenido vivo\"!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A suitcase with a cartoon rooster poking its head out, looking surprised, baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A suitcase with a cartoon rooster poking its head out, looking surprised, baggage claim, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Imaginas tu maleta, llegando con un gallo extra?",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Gallinas en el avión",
+      "Caos en la terminal",
+      "¡Clotilde en equipaje!"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
