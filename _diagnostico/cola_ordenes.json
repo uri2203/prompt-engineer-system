@@ -1879,5 +1879,264 @@
       "Turbulencias y gringas."
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "8d1fa220-0b33-4df5-8f63-d543a2e3817c",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Street vendor selling 'mountain air' in cans at a bustling Mexican tianguis, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Street vendor selling 'mountain air' in cans at a bustling Mexican tianguis, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Vendían 'aire de montaña' en bote, ¡en pleno centro!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Curious man with exaggerated expression buying a 'mountain air' can, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Curious man with exaggerated expression buying a 'mountain air' can, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El compadre, bien curioso, compró su lata mágica.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"Man cautiously opening a can labeled 'mountain air' in his small apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man cautiously opening a can labeled 'mountain air' in his small apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Llegó a casa y la abrió con gran expectativa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"Man sniffing the air from the can, looking confused and disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man sniffing the air from the can, looking confused and disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Nada pasó. Puro aire, algo no está bien.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A small plant in the man's apartment suddenly growing rapidly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A small plant in the man's apartment suddenly growing rapidly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero al rato, su poto empezó a crecer velozmente.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Man looking startled at his overgrowing plant, which now has small birds perched on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man looking startled at his overgrowing plant, which now has small birds perched on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pajaritos aparecieron, trinando felices. ¡Qué locura!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Man's small apartment now having a patch of grass and a small stream, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's small apartment now having a patch of grass and a small stream, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El suelo se cubrió de pasto, ¡y hasta un riachuelo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"Man trying to push back a small, growing pine tree inside his living room, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man trying to push back a small, growing pine tree inside his living room, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Luego, un pinito brotó justo en la sala.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Neighbor knocking on the door, looking confused by the strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Neighbor knocking on the door, looking confused by the strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El vecino golpeó, preguntando por los ruidos extraños.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"Man trying to hide a small, growing waterfall behind his couch from his neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man trying to hide a small, growing waterfall behind his couch from his neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ya tenía una cascada detrás de su sillón.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Man's cat chasing a squirrel inside the apartment, which now resembles a forest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's cat chasing a squirrel inside the apartment, which now resembles a forest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Su gato ya perseguía ardillas por la cocina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"Man trying to fan away a misty fog that's filling his apartment, looking panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man trying to fan away a misty fog that's filling his apartment, looking panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Una niebla helada empezó a cubrirlo todo en casa.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"Man shivering, wrapped in a blanket, looking out his window at a cityscape that's gradually becoming covered in trees and mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man shivering, wrapped in a blanket, looking out his window at a cityscape that's gradually becoming covered in trees and mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Las ventanas parecían mostrar una montaña nevada ahora.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"Man's neighbor, confused, looking at the door of the man's apartment which now has ivy growing on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's neighbor, confused, looking at the door of the man's apartment which now has ivy growing on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El vecino oyó un oso. ¡No lo puedes ignorar!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Man desperately trying to close the 'mountain air' can, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man desperately trying to close the 'mountain air' can, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Intentó cerrar la lata, pero ya era muy tarde.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Man's small kitchen transformed into a cave with stalagmites and a small bat flying, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's small kitchen transformed into a cave with stalagmites and a small bat flying, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La cocina se volvió una cueva, con murciélagos.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"Man running through his apartment, now a full-blown mountainous forest, chased by a friendly cartoon deer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man running through his apartment, now a full-blown mountainous forest, chased by a friendly cartoon deer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un venado amigable ya estaba comiendo sus cortinas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"Man looking out his window at his car, which is now completely covered in moss and small trees, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man looking out his window at his car, which is now completely covered in moss and small trees, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Su coche, abajo, ya era parte del bosque.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Man's phone, covered in vines, receiving a call from his alarmed neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's phone, covered in vines, receiving a call from his alarmed neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Sonó el teléfono: el Brayan quería leña.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Man desperately trying to find the source of the 'mountain air' inside his now-transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man desperately trying to find the source of the 'mountain air' inside his now-transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Trató de tapar la lata, pero flotaba el aire.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Man looking up at his ceiling, which is now a vast open sky with clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man looking up at his ceiling, which is now a vast open sky with clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El techo era cielo. ¡No estabas solo!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Man's living room now featuring a small, majestic eagle perched on a branch, looking at him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man's living room now featuring a small, majestic eagle perched on a branch, looking at him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Un águila real se posó en el clóset.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"Man looking at his apartment building from the outside, which is now completely covered in lush vegetation and small mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man looking at his apartment building from the outside, which is now completely covered in lush vegetation and small mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El edificio era ya una gran montaña.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"Man, now dressed in hiking gear, looking bewildered as other residents, also dressed for hiking, pass by his transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man, now dressed in hiking gear, looking bewildered as other residents, also dressed for hiking, pass by his transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Vecinos subían con sus mochilas montañistas.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"Man sitting on a rock inside his apartment, which is now fully a mountain peak, holding the empty can of 'mountain air' and looking defeated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man sitting on a rock inside his apartment, which is now fully a mountain peak, holding the empty can of 'mountain air' and looking defeated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y el compadre... bueno, ya era el Everest.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Man shivering, holding a tiny, almost frozen cactus, looking resigned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man shivering, holding a tiny, almost frozen cactus, looking resigned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pobre compadre, hasta frío en la sala.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"A group of tourists in mountain climbing gear taking a selfie in front of what used to be the man's apartment window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A group of tourists in mountain climbing gear taking a selfie in front of what used to be the man's apartment window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Ahora los turistas buscaban la cima de su baño.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"Exaggerated cartoon image of a huge, majestic mountain peak with a tiny apartment building still visible at its base, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Exaggerated cartoon image of a huge, majestic mountain peak with a tiny apartment building still visible at its base, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y así, la ciudad tenía su propio pico nevado.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 29, \"prompt\": \"Man, now wearing a thick parka, looking at the empty 'mountain air' can and shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man, now wearing a thick parka, looking at the empty 'mountain air' can and shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Quién diría que un bote daría tal problema...\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 30, \"prompt\": \"Man, now with a small mountain goat by his side, looking directly at the camera with a comical, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Man, now with a small mountain goat by his side, looking directly at the camera with a comical, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿Ustedes qué opinan? ¿Le salió caro el aire?\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Vendían 'aire de montaña' en bote, ¡en pleno centro! El compadre, bien curioso, compró su lata mágica. Llegó a casa y la abrió con gran expectativa. Nada pasó. Puro aire, algo no está bien. Pero al rato, su poto empezó a crecer velozmente. Pajaritos aparecieron, trinando felices. ¡Qué locura! El suelo se cubrió de pasto, ¡y hasta un riachuelo! Luego, un pinito brotó justo en la sala. El vecino golpeó, preguntando por los ruidos extraños. Ya tenía una cascada detrás de su sillón. Su gato ya perseguía ardillas por la cocina. Una niebla helada empezó a cubrirlo todo en casa. Las ventanas parecían mostrar una montaña nevada ahora. El vecino oyó un oso. ¡No lo puedes ignorar! Intentó cerrar la lata, pero ya era muy tarde. La cocina se volvió una cueva, con murciélagos. Un venado amigable ya estaba comiendo sus cortinas. Su coche, abajo, ya era parte del bosque. Sonó el teléfono: el Brayan quería leña. Trató de tapar la lata, pero flotaba el aire. El techo era cielo. ¡No estabas solo! Un águila real se posó en el clóset. El edificio era ya una gran montaña. Vecinos subían con sus mochilas montañistas. Y el compadre... bueno, ya era el Everest. Pobre compadre, hasta frío en la sala. Ahora los turistas buscaban la cima de su baño. Y así, la ciudad tenía su propio pico nevado. Quién diría que un bote daría tal problema... ¿Ustedes qué opinan? ¿Le salió caro el aire?",
+    "titulo_sugerido": "Compró 'aire de montaña' en bote y su casa cambió",
+    "escenas_texto": [
+      "Vendían 'aire de montaña' en bote, ¡en pleno centro!",
+      "El compadre, bien curioso, compró su lata mágica.",
+      "Llegó a casa y la abrió con gran expectativa.",
+      "Nada pasó. Puro aire, algo no está bien.",
+      "Pero al rato, su poto empezó a crecer velozmente.",
+      "Pajaritos aparecieron, trinando felices. ¡Qué locura!",
+      "El suelo se cubrió de pasto, ¡y hasta un riachuelo!",
+      "Luego, un pinito brotó justo en la sala.",
+      "El vecino golpeó, preguntando por los ruidos extraños.",
+      "Ya tenía una cascada detrás de su sillón.",
+      "Su gato ya perseguía ardillas por la cocina.",
+      "Una niebla helada empezó a cubrirlo todo en casa.",
+      "Las ventanas parecían mostrar una montaña nevada ahora.",
+      "El vecino oyó un oso. ¡No lo puedes ignorar!",
+      "Intentó cerrar la lata, pero ya era muy tarde.",
+      "La cocina se volvió una cueva, con murciélagos.",
+      "Un venado amigable ya estaba comiendo sus cortinas.",
+      "Su coche, abajo, ya era parte del bosque.",
+      "Sonó el teléfono: el Brayan quería leña.",
+      "Trató de tapar la lata, pero flotaba el aire.",
+      "El techo era cielo. ¡No estabas solo!",
+      "Un águila real se posó en el clóset.",
+      "El edificio era ya una gran montaña.",
+      "Vecinos subían con sus mochilas montañistas.",
+      "Y el compadre... bueno, ya era el Everest.",
+      "Pobre compadre, hasta frío en la sala.",
+      "Ahora los turistas buscaban la cima de su baño.",
+      "Y así, la ciudad tenía su propio pico nevado.",
+      "Quién diría que un bote daría tal problema...",
+      "¿Ustedes qué opinan? ¿Le salió caro el aire?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Street vendor selling 'mountain air' in cans at a bustling Mexican tianguis, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Street vendor selling 'mountain air' in cans at a bustling Mexican tianguis, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Vendían 'aire de montaña' en bote, ¡en pleno centro!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Curious man with exaggerated expression buying a 'mountain air' can, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Curious man with exaggerated expression buying a 'mountain air' can, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El compadre, bien curioso, compró su lata mágica.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "Man cautiously opening a can labeled 'mountain air' in his small apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man cautiously opening a can labeled 'mountain air' in his small apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Llegó a casa y la abrió con gran expectativa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "Man sniffing the air from the can, looking confused and disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man sniffing the air from the can, looking confused and disappointed, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Nada pasó. Puro aire, algo no está bien.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A small plant in the man's apartment suddenly growing rapidly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A small plant in the man's apartment suddenly growing rapidly, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero al rato, su poto empezó a crecer velozmente.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Man looking startled at his overgrowing plant, which now has small birds perched on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man looking startled at his overgrowing plant, which now has small birds perched on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pajaritos aparecieron, trinando felices. ¡Qué locura!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Man's small apartment now having a patch of grass and a small stream, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's small apartment now having a patch of grass and a small stream, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El suelo se cubrió de pasto, ¡y hasta un riachuelo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "Man trying to push back a small, growing pine tree inside his living room, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man trying to push back a small, growing pine tree inside his living room, looking exasperated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Luego, un pinito brotó justo en la sala.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Neighbor knocking on the door, looking confused by the strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Neighbor knocking on the door, looking confused by the strange sounds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El vecino golpeó, preguntando por los ruidos extraños.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "Man trying to hide a small, growing waterfall behind his couch from his neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man trying to hide a small, growing waterfall behind his couch from his neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ya tenía una cascada detrás de su sillón.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Man's cat chasing a squirrel inside the apartment, which now resembles a forest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's cat chasing a squirrel inside the apartment, which now resembles a forest, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Su gato ya perseguía ardillas por la cocina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "Man trying to fan away a misty fog that's filling his apartment, looking panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man trying to fan away a misty fog that's filling his apartment, looking panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Una niebla helada empezó a cubrirlo todo en casa.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "Man shivering, wrapped in a blanket, looking out his window at a cityscape that's gradually becoming covered in trees and mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man shivering, wrapped in a blanket, looking out his window at a cityscape that's gradually becoming covered in trees and mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Las ventanas parecían mostrar una montaña nevada ahora.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "Man's neighbor, confused, looking at the door of the man's apartment which now has ivy growing on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's neighbor, confused, looking at the door of the man's apartment which now has ivy growing on it, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El vecino oyó un oso. ¡No lo puedes ignorar!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Man desperately trying to close the 'mountain air' can, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man desperately trying to close the 'mountain air' can, looking terrified, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Intentó cerrar la lata, pero ya era muy tarde.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Man's small kitchen transformed into a cave with stalagmites and a small bat flying, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's small kitchen transformed into a cave with stalagmites and a small bat flying, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La cocina se volvió una cueva, con murciélagos.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "Man running through his apartment, now a full-blown mountainous forest, chased by a friendly cartoon deer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man running through his apartment, now a full-blown mountainous forest, chased by a friendly cartoon deer, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un venado amigable ya estaba comiendo sus cortinas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "Man looking out his window at his car, which is now completely covered in moss and small trees, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man looking out his window at his car, which is now completely covered in moss and small trees, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Su coche, abajo, ya era parte del bosque.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Man's phone, covered in vines, receiving a call from his alarmed neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's phone, covered in vines, receiving a call from his alarmed neighbor, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Sonó el teléfono: el Brayan quería leña.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Man desperately trying to find the source of the 'mountain air' inside his now-transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man desperately trying to find the source of the 'mountain air' inside his now-transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Trató de tapar la lata, pero flotaba el aire.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Man looking up at his ceiling, which is now a vast open sky with clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man looking up at his ceiling, which is now a vast open sky with clouds, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El techo era cielo. ¡No estabas solo!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Man's living room now featuring a small, majestic eagle perched on a branch, looking at him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man's living room now featuring a small, majestic eagle perched on a branch, looking at him, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Un águila real se posó en el clóset.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "Man looking at his apartment building from the outside, which is now completely covered in lush vegetation and small mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man looking at his apartment building from the outside, which is now completely covered in lush vegetation and small mountains, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El edificio era ya una gran montaña.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "Man, now dressed in hiking gear, looking bewildered as other residents, also dressed for hiking, pass by his transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man, now dressed in hiking gear, looking bewildered as other residents, also dressed for hiking, pass by his transformed apartment, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Vecinos subían con sus mochilas montañistas.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "Man sitting on a rock inside his apartment, which is now fully a mountain peak, holding the empty can of 'mountain air' and looking defeated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man sitting on a rock inside his apartment, which is now fully a mountain peak, holding the empty can of 'mountain air' and looking defeated, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y el compadre... bueno, ya era el Everest.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Man shivering, holding a tiny, almost frozen cactus, looking resigned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man shivering, holding a tiny, almost frozen cactus, looking resigned, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pobre compadre, hasta frío en la sala.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "A group of tourists in mountain climbing gear taking a selfie in front of what used to be the man's apartment window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A group of tourists in mountain climbing gear taking a selfie in front of what used to be the man's apartment window, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Ahora los turistas buscaban la cima de su baño.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "Exaggerated cartoon image of a huge, majestic mountain peak with a tiny apartment building still visible at its base, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Exaggerated cartoon image of a huge, majestic mountain peak with a tiny apartment building still visible at its base, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y así, la ciudad tenía su propio pico nevado.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 29,
+        "prompt": "Man, now wearing a thick parka, looking at the empty 'mountain air' can and shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man, now wearing a thick parka, looking at the empty 'mountain air' can and shrugging, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Quién diría que un bote daría tal problema...",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 30,
+        "prompt": "Man, now with a small mountain goat by his side, looking directly at the camera with a comical, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Man, now with a small mountain goat by his side, looking directly at the camera with a comical, bewildered expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿Ustedes qué opinan? ¿Le salió caro el aire?",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Aire de montaña en lata",
+      "Tianguis y milagros",
+      "¿Respirar un bosque?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
