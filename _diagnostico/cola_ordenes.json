@@ -4568,5 +4568,248 @@
       "¿Sombrero del piloto?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "c5e8fb25-4bf1-4270-a236-8f1fe1fc3a1a",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"An official-looking cartoon airport expert, scratching his head nervously near a cartoon airplane, looking puzzled, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"An official-looking cartoon airport expert, scratching his head nervously near a cartoon airplane, looking puzzled, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Expertos aeroportuarios siempre ocultan un dato crucial del vuelo.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 2, \"prompt\": \"Cartoon luggage flying around chaotically in a plane's cargo hold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon luggage flying around chaotically in a plane's cargo hold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"No es sobre el equipaje perdido, ni turbulencias.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 3, \"prompt\": \"A cartoon passenger in a plane seat, looking slightly uneasy, sensing something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon passenger in a plane seat, looking slightly uneasy, sensing something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Es sobre lo que sientes que algo no está bien arriba.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 4, \"prompt\": \"A cartoon character resembling 'El Brayan' looking excited and a bit mischievous inside a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon character resembling 'El Brayan' looking excited and a bit mischievous inside a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La vez que el Brayan voló a Acapulco... ¡se armó!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 5, \"prompt\": \"A cartoon airplane cockpit, with a small, stylized 'Miau!' text bubble coming from inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon airplane cockpit, with a small, stylized 'Miau!' text bubble coming from inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Él juraba haber escuchado un \\\"¡Miau!\\\" en la cabina.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 6, \"prompt\": \"Two cartoon flight attendants in a plane aisle, exchanging nervous glances, a sense of quiet tension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Two cartoon flight attendants in a plane aisle, exchanging nervous glances, a sense of quiet tension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Los azafatos se miraban, un silencio absoluto invadió.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 7, \"prompt\": \"Cartoon stylized aroma lines of carnitas wafting through a plane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon stylized aroma lines of carnitas wafting through a plane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Después, un olor a carnitas flotó por todo el avión.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 8, \"prompt\": \"A cartoon passenger in a plane, eyes wide, mouth watering, reacting strongly to a delicious smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon passenger in a plane, eyes wide, mouth watering, reacting strongly to a delicious smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"No puedes ignorarlo, el apetito se despertó al instante.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 9, \"prompt\": \"Multiple cartoon passengers in a plane, all turning their heads to look for the source of a smell, puzzled expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Multiple cartoon passengers in a plane, all turning their heads to look for the source of a smell, puzzled expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Todos volteaban curiosos. ¿De dónde venía eso tan rico?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 10, \"prompt\": \"A cartoon pilot in the cockpit, speaking into the intercom with a hopeful and hungry expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon pilot in the cockpit, speaking into the intercom with a hopeful and hungry expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Hasta el piloto preguntó: \\\"¿Ya llegó mi orden de tacos?\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 11, \"prompt\": \"Cartoon flight attendants looking under seats and in overhead bins, searching for something, confused and slightly panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon flight attendants looking under seats and in overhead bins, searching for something, confused and slightly panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El ambiente se puso tenso, pero nadie hallaba el origen.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 12, \"prompt\": \"A wise-looking elderly cartoon man, sitting calmly in a plane seat, about to reveal something, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A wise-looking elderly cartoon man, sitting calmly in a plane seat, about to reveal something, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Luego un viejito desde el fondo, muy serio, aclaró.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 13, \"prompt\": \"The old cartoon man gesturing towards another passenger with a knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The old cartoon man gesturing towards another passenger with a knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"\\\"Disculpen, muchachos, pero es que el compadre ya no aguanta.\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 14, \"prompt\": \"A portly cartoon man, 'el compadre', proudly displaying a tiny, smoking charcoal grill on his tray table in a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A portly cartoon man, 'el compadre', proudly displaying a tiny, smoking charcoal grill on his tray table in a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y ahí estaba el compadre, ¡con su mini-asador de viaje!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 15, \"prompt\": \"Cartoon 'el compadre' carefully placing tiny meat pieces onto his mini-grill in the plane, smoke lightly rising, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon 'el compadre' carefully placing tiny meat pieces onto his mini-grill in the plane, smoke lightly rising, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Intentando preparar unos buenos suaderos para la merienda.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 16, \"prompt\": \"Cartoon 'el compadre' making a gesture of disapproval, indicating high standards for his food, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon 'el compadre' making a gesture of disapproval, indicating high standards for his food, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Decía que, si no eran frescos, no valía la pena.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 17, \"prompt\": \"The cartoon pilot looking shocked and serious, giving an urgent command into the intercom, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"The cartoon pilot looking shocked and serious, giving an urgent command into the intercom, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El capitán: \\\"¡Aterrizaje de emergencia ahora mismo!\\\"\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 18, \"prompt\": \"A cartoon airplane making a steep dive towards a bustling Mexican street scene with a prominent taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon airplane making a steep dive towards a bustling Mexican street scene with a prominent taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Pero no a un aeropuerto, ¡sino a la taquería más cercana!\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 19, \"prompt\": \"Cartoon passengers happily disembarking the plane directly into a taqueria line, smiling and excited, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon passengers happily disembarking the plane directly into a taqueria line, smiling and excited, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El vuelo se retrasó, sí. Pero nadie se quejó.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 20, \"prompt\": \"Cartoon pilot and passengers joyfully eating tacos at tables outside a taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon pilot and passengers joyfully eating tacos at tables outside a taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Todos comieron a gusto, hasta el piloto doble porción.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 21, \"prompt\": \"Cartoon 'El Brayan' enthusiastically pouring a huge amount of salsa onto his taco, eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon 'El Brayan' enthusiastically pouring a huge amount of salsa onto his taco, eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"El Brayan pidió extra de salsa, \\\"pa' que amarre\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 22, \"prompt\": \"Cartoon 'el compadre' calmly putting away his mini-grill into his carry-on bag, looking satisfied, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon 'el compadre' calmly putting away his mini-grill into his carry-on bag, looking satisfied, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Y el compadre, bien campante, guardó su parrilla intacta.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 23, \"prompt\": \"A stern-faced cartoon airline executive behind a podium, making an official announcement, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A stern-faced cartoon airline executive behind a podium, making an official announcement, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La aerolínea emitió un comunicado muy serio al respecto.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 24, \"prompt\": \"A cartoon sign with a crossed-out image of a grill inside an airplane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon sign with a crossed-out image of a grill inside an airplane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Prohibiendo explícitamente \\\"parrillas personales en cabina\\\".\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 25, \"prompt\": \"A thought bubble with a question mark hanging in the air above an airplane, leaving a humorous mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A thought bubble with a question mark hanging in the air above an airplane, leaving a humorous mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"La duda quedó flotando para siempre.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 26, \"prompt\": \"Cartoon 'el compadre' winking mischievously with a bulging carry-on bag, implying hidden treasures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon 'el compadre' winking mischievously with a bulging carry-on bag, implying hidden treasures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"¿El compadre en realidad llevaba más guisados secretos?\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 27, \"prompt\": \"Cartoon passengers whispering and looking suspiciously at the 'compadre' from a distance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"Cartoon passengers whispering and looking suspiciously at the 'compadre' from a distance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Nadie se atrevió a preguntarle, el misterio sigue.\", \"pexels_query\": \"cartoon mexican street scene\"}, {\"id\": 28, \"prompt\": \"A cartoon question mark looming over a stylized airplane, inviting the viewer to ponder the mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"prompt_visual\": \"A cartoon question mark looming over a stylized airplane, inviting the viewer to ponder the mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful\", \"texto_locucion\": \"Dejamos esa incógnita a tu criterio, mi buen.\", \"pexels_query\": \"cartoon mexican street scene\"}]",
+    "formato": "9:16",
+    "marca": "LaesquinaRandom",
+    "texto_locucion": "Expertos aeroportuarios siempre ocultan un dato crucial del vuelo. No es sobre el equipaje perdido, ni turbulencias. Es sobre lo que sientes que algo no está bien arriba. La vez que el Brayan voló a Acapulco... ¡se armó! Él juraba haber escuchado un \"¡Miau!\" en la cabina. Los azafatos se miraban, un silencio absoluto invadió. Después, un olor a carnitas flotó por todo el avión. No puedes ignorarlo, el apetito se despertó al instante. Todos volteaban curiosos. ¿De dónde venía eso tan rico? Hasta el piloto preguntó: \"¿Ya llegó mi orden de tacos?\" El ambiente se puso tenso, pero nadie hallaba el origen. Luego un viejito desde el fondo, muy serio, aclaró. \"Disculpen, muchachos, pero es que el compadre ya no aguanta.\" Y ahí estaba el compadre, ¡con su mini-asador de viaje! Intentando preparar unos buenos suaderos para la merienda. Decía que, si no eran frescos, no valía la pena. El capitán: \"¡Aterrizaje de emergencia ahora mismo!\" Pero no a un aeropuerto, ¡sino a la taquería más cercana! El vuelo se retrasó, sí. Pero nadie se quejó. Todos comieron a gusto, hasta el piloto doble porción. El Brayan pidió extra de salsa, \"pa' que amarre\". Y el compadre, bien campante, guardó su parrilla intacta. La aerolínea emitió un comunicado muy serio al respecto. Prohibiendo explícitamente \"parrillas personales en cabina\". La duda quedó flotando para siempre. ¿El compadre en realidad llevaba más guisados secretos? Nadie se atrevió a preguntarle, el misterio sigue. Dejamos esa incógnita a tu criterio, mi buen.",
+    "titulo_sugerido": "¡Carnitas En Pleno Vuelo! La Anécdota del Compadre en el Avión",
+    "escenas_texto": [
+      "Expertos aeroportuarios siempre ocultan un dato crucial del vuelo.",
+      "No es sobre el equipaje perdido, ni turbulencias.",
+      "Es sobre lo que sientes que algo no está bien arriba.",
+      "La vez que el Brayan voló a Acapulco... ¡se armó!",
+      "Él juraba haber escuchado un \"¡Miau!\" en la cabina.",
+      "Los azafatos se miraban, un silencio absoluto invadió.",
+      "Después, un olor a carnitas flotó por todo el avión.",
+      "No puedes ignorarlo, el apetito se despertó al instante.",
+      "Todos volteaban curiosos. ¿De dónde venía eso tan rico?",
+      "Hasta el piloto preguntó: \"¿Ya llegó mi orden de tacos?\"",
+      "El ambiente se puso tenso, pero nadie hallaba el origen.",
+      "Luego un viejito desde el fondo, muy serio, aclaró.",
+      "\"Disculpen, muchachos, pero es que el compadre ya no aguanta.\"",
+      "Y ahí estaba el compadre, ¡con su mini-asador de viaje!",
+      "Intentando preparar unos buenos suaderos para la merienda.",
+      "Decía que, si no eran frescos, no valía la pena.",
+      "El capitán: \"¡Aterrizaje de emergencia ahora mismo!\"",
+      "Pero no a un aeropuerto, ¡sino a la taquería más cercana!",
+      "El vuelo se retrasó, sí. Pero nadie se quejó.",
+      "Todos comieron a gusto, hasta el piloto doble porción.",
+      "El Brayan pidió extra de salsa, \"pa' que amarre\".",
+      "Y el compadre, bien campante, guardó su parrilla intacta.",
+      "La aerolínea emitió un comunicado muy serio al respecto.",
+      "Prohibiendo explícitamente \"parrillas personales en cabina\".",
+      "La duda quedó flotando para siempre.",
+      "¿El compadre en realidad llevaba más guisados secretos?",
+      "Nadie se atrevió a preguntarle, el misterio sigue.",
+      "Dejamos esa incógnita a tu criterio, mi buen."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "An official-looking cartoon airport expert, scratching his head nervously near a cartoon airplane, looking puzzled, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "An official-looking cartoon airport expert, scratching his head nervously near a cartoon airplane, looking puzzled, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Expertos aeroportuarios siempre ocultan un dato crucial del vuelo.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 2,
+        "prompt": "Cartoon luggage flying around chaotically in a plane's cargo hold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon luggage flying around chaotically in a plane's cargo hold, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "No es sobre el equipaje perdido, ni turbulencias.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 3,
+        "prompt": "A cartoon passenger in a plane seat, looking slightly uneasy, sensing something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon passenger in a plane seat, looking slightly uneasy, sensing something strange, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Es sobre lo que sientes que algo no está bien arriba.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 4,
+        "prompt": "A cartoon character resembling 'El Brayan' looking excited and a bit mischievous inside a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon character resembling 'El Brayan' looking excited and a bit mischievous inside a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La vez que el Brayan voló a Acapulco... ¡se armó!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 5,
+        "prompt": "A cartoon airplane cockpit, with a small, stylized 'Miau!' text bubble coming from inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon airplane cockpit, with a small, stylized 'Miau!' text bubble coming from inside, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Él juraba haber escuchado un \"¡Miau!\" en la cabina.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 6,
+        "prompt": "Two cartoon flight attendants in a plane aisle, exchanging nervous glances, a sense of quiet tension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Two cartoon flight attendants in a plane aisle, exchanging nervous glances, a sense of quiet tension, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Los azafatos se miraban, un silencio absoluto invadió.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 7,
+        "prompt": "Cartoon stylized aroma lines of carnitas wafting through a plane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon stylized aroma lines of carnitas wafting through a plane cabin, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Después, un olor a carnitas flotó por todo el avión.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 8,
+        "prompt": "A cartoon passenger in a plane, eyes wide, mouth watering, reacting strongly to a delicious smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon passenger in a plane, eyes wide, mouth watering, reacting strongly to a delicious smell, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "No puedes ignorarlo, el apetito se despertó al instante.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 9,
+        "prompt": "Multiple cartoon passengers in a plane, all turning their heads to look for the source of a smell, puzzled expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Multiple cartoon passengers in a plane, all turning their heads to look for the source of a smell, puzzled expressions, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Todos volteaban curiosos. ¿De dónde venía eso tan rico?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 10,
+        "prompt": "A cartoon pilot in the cockpit, speaking into the intercom with a hopeful and hungry expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon pilot in the cockpit, speaking into the intercom with a hopeful and hungry expression, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Hasta el piloto preguntó: \"¿Ya llegó mi orden de tacos?\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 11,
+        "prompt": "Cartoon flight attendants looking under seats and in overhead bins, searching for something, confused and slightly panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon flight attendants looking under seats and in overhead bins, searching for something, confused and slightly panicked, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El ambiente se puso tenso, pero nadie hallaba el origen.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 12,
+        "prompt": "A wise-looking elderly cartoon man, sitting calmly in a plane seat, about to reveal something, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A wise-looking elderly cartoon man, sitting calmly in a plane seat, about to reveal something, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Luego un viejito desde el fondo, muy serio, aclaró.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 13,
+        "prompt": "The old cartoon man gesturing towards another passenger with a knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The old cartoon man gesturing towards another passenger with a knowing look, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "\"Disculpen, muchachos, pero es que el compadre ya no aguanta.\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 14,
+        "prompt": "A portly cartoon man, 'el compadre', proudly displaying a tiny, smoking charcoal grill on his tray table in a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A portly cartoon man, 'el compadre', proudly displaying a tiny, smoking charcoal grill on his tray table in a plane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y ahí estaba el compadre, ¡con su mini-asador de viaje!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 15,
+        "prompt": "Cartoon 'el compadre' carefully placing tiny meat pieces onto his mini-grill in the plane, smoke lightly rising, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon 'el compadre' carefully placing tiny meat pieces onto his mini-grill in the plane, smoke lightly rising, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Intentando preparar unos buenos suaderos para la merienda.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 16,
+        "prompt": "Cartoon 'el compadre' making a gesture of disapproval, indicating high standards for his food, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon 'el compadre' making a gesture of disapproval, indicating high standards for his food, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Decía que, si no eran frescos, no valía la pena.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 17,
+        "prompt": "The cartoon pilot looking shocked and serious, giving an urgent command into the intercom, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "The cartoon pilot looking shocked and serious, giving an urgent command into the intercom, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El capitán: \"¡Aterrizaje de emergencia ahora mismo!\"",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 18,
+        "prompt": "A cartoon airplane making a steep dive towards a bustling Mexican street scene with a prominent taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon airplane making a steep dive towards a bustling Mexican street scene with a prominent taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Pero no a un aeropuerto, ¡sino a la taquería más cercana!",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 19,
+        "prompt": "Cartoon passengers happily disembarking the plane directly into a taqueria line, smiling and excited, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon passengers happily disembarking the plane directly into a taqueria line, smiling and excited, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El vuelo se retrasó, sí. Pero nadie se quejó.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 20,
+        "prompt": "Cartoon pilot and passengers joyfully eating tacos at tables outside a taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon pilot and passengers joyfully eating tacos at tables outside a taqueria, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Todos comieron a gusto, hasta el piloto doble porción.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 21,
+        "prompt": "Cartoon 'El Brayan' enthusiastically pouring a huge amount of salsa onto his taco, eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon 'El Brayan' enthusiastically pouring a huge amount of salsa onto his taco, eyes wide, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "El Brayan pidió extra de salsa, \"pa' que amarre\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 22,
+        "prompt": "Cartoon 'el compadre' calmly putting away his mini-grill into his carry-on bag, looking satisfied, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon 'el compadre' calmly putting away his mini-grill into his carry-on bag, looking satisfied, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Y el compadre, bien campante, guardó su parrilla intacta.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 23,
+        "prompt": "A stern-faced cartoon airline executive behind a podium, making an official announcement, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A stern-faced cartoon airline executive behind a podium, making an official announcement, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La aerolínea emitió un comunicado muy serio al respecto.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 24,
+        "prompt": "A cartoon sign with a crossed-out image of a grill inside an airplane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon sign with a crossed-out image of a grill inside an airplane, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Prohibiendo explícitamente \"parrillas personales en cabina\".",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 25,
+        "prompt": "A thought bubble with a question mark hanging in the air above an airplane, leaving a humorous mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A thought bubble with a question mark hanging in the air above an airplane, leaving a humorous mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "La duda quedó flotando para siempre.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 26,
+        "prompt": "Cartoon 'el compadre' winking mischievously with a bulging carry-on bag, implying hidden treasures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon 'el compadre' winking mischievously with a bulging carry-on bag, implying hidden treasures, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "¿El compadre en realidad llevaba más guisados secretos?",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 27,
+        "prompt": "Cartoon passengers whispering and looking suspiciously at the 'compadre' from a distance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "Cartoon passengers whispering and looking suspiciously at the 'compadre' from a distance, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Nadie se atrevió a preguntarle, el misterio sigue.",
+        "pexels_query": "cartoon mexican street scene"
+      },
+      {
+        "id": 28,
+        "prompt": "A cartoon question mark looming over a stylized airplane, inviting the viewer to ponder the mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "prompt_visual": "A cartoon question mark looming over a stylized airplane, inviting the viewer to ponder the mystery, funny cartoon style, 2D animation, vibrant flat colors, comic book aesthetic, expressive illustration, humorous situation, vibrant lighting, cel shaded, no photorealism, no dark tones, colorful",
+        "texto_locucion": "Dejamos esa incógnita a tu criterio, mi buen.",
+        "pexels_query": "cartoon mexican street scene"
+      }
+    ],
+    "hooks": [
+      "Olor a carnitas...",
+      "¡En pleno vuelo!",
+      "¿Un mini-asador?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
