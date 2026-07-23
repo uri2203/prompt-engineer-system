@@ -187,7 +187,9 @@
     "348daa88-4bab-44b3-aed0-d96513297d1a",
     "348daa88-4bab-44b3-aed0-d96513297d1a_asm",
     "fea43b65-3056-4cff-aae9-3e818ada48c0",
-    "fea43b65-3056-4cff-aae9-3e818ada48c0_asm"
+    "fea43b65-3056-4cff-aae9-3e818ada48c0_asm",
+    "bed45fb2-7c3c-4be3-96bd-f2bf37e7eea9",
+    "bed45fb2-7c3c-4be3-96bd-f2bf37e7eea9_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -654,6 +656,11 @@
     "fea43b65-3056-4cff-aae9-3e818ada48c0": {
       "duracion_real_seg": 1324.2,
       "marca": "La Viuda",
+      "formato": "16:9"
+    },
+    "bed45fb2-7c3c-4be3-96bd-f2bf37e7eea9": {
+      "duracion_real_seg": 1843.6,
+      "marca": "Umbral Alterno",
       "formato": "16:9"
     }
   }
