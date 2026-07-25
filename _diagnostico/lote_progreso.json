@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 13,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 10,
+  "trabajo_actual": "Generando video 11 (LaesquinaRandom)",
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 2s+2L",
+  "historial": []
 }
