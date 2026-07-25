@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 19,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 0,
+  "trabajo_actual": "",
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 0s+10L",
+  "historial": []
 }
