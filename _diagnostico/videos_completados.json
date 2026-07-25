@@ -1,7 +1,5 @@
 {
   "ids": [
-    "5d0137e5-72b7-4045-8239-78d4ed28e9f5",
-    "5d0137e5-72b7-4045-8239-78d4ed28e9f5_asm",
     "dae13094-8a68-4159-b5ff-4a437accd886",
     "dae13094-8a68-4159-b5ff-4a437accd886_asm",
     "ee0284f9-d9d9-4fd8-b39f-a4e3561e8f2d",
@@ -199,7 +197,9 @@
     "9333b30d-cf12-4850-88f8-14e4469c77f4",
     "9333b30d-cf12-4850-88f8-14e4469c77f4_asm",
     "09d22f17-2a26-46e1-81c2-fe9894318a17",
-    "09d22f17-2a26-46e1-81c2-fe9894318a17_asm"
+    "09d22f17-2a26-46e1-81c2-fe9894318a17_asm",
+    "203f6e23-a01a-495f-9d78-cf14f43dc57b",
+    "203f6e23-a01a-495f-9d78-cf14f43dc57b_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -775,6 +775,11 @@
     },
     "09d22f17-2a26-46e1-81c2-fe9894318a17": {
       "duracion_real_seg": 117.7,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16"
+    },
+    "203f6e23-a01a-495f-9d78-cf14f43dc57b": {
+      "duracion_real_seg": 103.0,
       "marca": "LaesquinaRandom",
       "formato": "9:16"
     }
