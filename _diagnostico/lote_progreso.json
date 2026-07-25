@@ -1,10 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 19,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 0,
-  "trabajo_actual": "",
-  "mensaje": "Lote creado, iniciando produccion.",
-  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 0s+10L",
-  "historial": []
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
