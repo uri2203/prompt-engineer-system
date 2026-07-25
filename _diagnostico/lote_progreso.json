@@ -1,10 +1,10 @@
 {
-  "estado_lote": "cancelado",
-  "total": 19,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
   "fallidos": 0,
   "trabajo_actual": "",
-  "mensaje": "Lote cancelado por el operador.",
-  "resumen": "LaesquinaRandom: 9s+0L | Umbral Alterno: 0s+10L",
+  "mensaje": "Listo para iniciar.",
+  "resumen": "",
   "historial": []
 }
