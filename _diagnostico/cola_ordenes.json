@@ -1456,5 +1456,264 @@
       "¿Qué ves realmente?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "86aea1ed-283e-49e8-9275-330cff562c42",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, abandoned cityscape, broken screens on high-rise buildings, eerie stillness, photojournalism aesthetic, overcast light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, abandoned cityscape, broken screens on high-rise buildings, eerie stillness, photojournalism aesthetic, overcast light, no people\", \"texto_locucion\": \"En este mundo, la conexión falló. Así terminó todo.\", \"pexels_query\": \"city blackout\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a single smartphone lying on a dark, dusty table, screen completely black, eerie stillness, photojournalism aesthetic, overcast light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a single smartphone lying on a dark, dusty table, screen completely black, eerie stillness, photojournalism aesthetic, overcast light, no people\", \"texto_locucion\": \"Una mañana, tu teléfono, por fin, no respondió.\", \"pexels_query\": \"dark phone\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, deep ocean floor, multiple fiber optic cables, some visibly severed, eerie stillness, photojournalism aesthetic, deep sea darkness, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, deep ocean floor, multiple fiber optic cables, some visibly severed, eerie stillness, photojournalism aesthetic, deep sea darkness, no people\", \"texto_locucion\": \"Las redes globales, en un silencio absoluto.\", \"pexels_query\": \"underwater cables\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a distant silhouette looking out a window at a dark, silent city, unsettling atmosphere, photojournalism aesthetic, dim light, very few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a distant silhouette looking out a window at a dark, silent city, unsettling atmosphere, photojournalism aesthetic, dim light, very few distant silhouettes\", \"texto_locucion\": \"Algo no está bien, lo sentiste. No podías ignorarlo.\", \"pexels_query\": \"person looking city\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a detailed world map with glowing lines representing underwater data cables, focused on their intricate network, photojournalism aesthetic, studio light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a detailed world map with glowing lines representing underwater data cables, focused on their intricate network, photojournalism aesthetic, studio light, no people\", \"texto_locucion\": \"Hoy, 500 cables unen continentes enteros.\", \"pexels_query\": \"world map cables\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, abstract visualization of data flow, light trails, ethereal glow, representing global information exchange, photojournalism aesthetic, dark background, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, abstract visualization of data flow, light trails, ethereal glow, representing global information exchange, photojournalism aesthetic, dark background, no people\", \"texto_locucion\": \"Transportan el 99% de la información global.\", \"pexels_query\": \"abstract data flow\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, an empty bank lobby, computer screens frozen, ATM machines dark, eerie stillness, photojournalism aesthetic, internal lighting, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, an empty bank lobby, computer screens frozen, ATM machines dark, eerie stillness, photojournalism aesthetic, internal lighting, no people\", \"texto_locucion\": \"Banca, comercio, comunicaciones dependen de ellos.\", \"pexels_query\": \"empty bank\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a vast, calm ocean, with a lone cargo ship silently adrift in the distance, photojournalism aesthetic, overcast light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a vast, calm ocean, with a lone cargo ship silently adrift in the distance, photojournalism aesthetic, overcast light, no people\", \"texto_locucion\": \"Un flujo constante, ininterrumpido e invisible.\", \"pexels_query\": \"cargo ship ocean\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a massive data center, server racks stretching into the distance, but all lights are off, eerie stillness, photojournalism aesthetic, dim light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a massive data center, server racks stretching into the distance, but all lights are off, eerie stillness, photojournalism aesthetic, dim light, no people\", \"texto_locucion\": \"Creemos invulnerable este complejo sistema vital.\", \"pexels_query\": \"dark server farm\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a close-up on a frayed, glowing wire, implying a delicate connection, photojournalism aesthetic, dark background, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a close-up on a frayed, glowing wire, implying a delicate connection, photojournalism aesthetic, dark background, no people\", \"texto_locucion\": \"Pero, ¿qué sucede si se rompe el hilo?\", \"pexels_query\": \"frayed cable\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual of ten red glowing points on a dark ocean map, symbolizing critical failure points, photojournalism aesthetic, dark atmosphere, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual of ten red glowing points on a dark ocean map, symbolizing critical failure points, photojournalism aesthetic, dark atmosphere, no people\", \"texto_locucion\": \"Imagina: diez puntos críticos se cortan.\", \"pexels_query\": \"red points map\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, close-up of thick, damaged submarine fiber optic cables, partially exposed, photojournalism aesthetic, deep sea light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, close-up of thick, damaged submarine fiber optic cables, partially exposed, photojournalism aesthetic, deep sea light, no people\", \"texto_locucion\": \"Cables submarinos cruciales, estratégicamente dañados.\", \"pexels_query\": \"damaged fiber optics\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual representing a global network shattering, geometric shards of light breaking apart, photojournalism aesthetic, dark background, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual representing a global network shattering, geometric shards of light breaking apart, photojournalism aesthetic, dark background, no people\", \"texto_locucion\": \"No fue un accidente; fue un ataque deliberado.\", \"pexels_query\": \"network shattering\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, a dark globe from space, with only scattered, fading lights, emphasizing disconnectedness, photojournalism aesthetic, space view, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, a dark globe from space, with only scattered, fading lights, emphasizing disconnectedness, photojournalism aesthetic, space view, no people\", \"texto_locucion\": \"La red global se fragmentó en segundos.\", \"pexels_query\": \"dark earth from space\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast office floor, computer monitors uniformly black and blank, chairs pushed aside, photojournalism aesthetic, office light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast office floor, computer monitors uniformly black and blank, chairs pushed aside, photojournalism aesthetic, office light, no people\", \"texto_locucion\": \"Primero, las pantallas se congelaron por completo.\", \"pexels_query\": \"dark office screens\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an empty supermarket aisle, rows of shopping carts abandoned, eerie stillness, photojournalism aesthetic, fluorescent light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an empty supermarket aisle, rows of shopping carts abandoned, eerie stillness, photojournalism aesthetic, fluorescent light, no people\", \"texto_locucion\": \"Pagos electrónicos imposibles en cualquier lugar.\", \"pexels_query\": \"empty supermarket\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a deserted stock exchange floor, papers scattered, large display screens dark, photojournalism aesthetic, dramatic lighting, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a deserted stock exchange floor, papers scattered, large display screens dark, photojournalism aesthetic, dramatic lighting, no people\", \"texto_locucion\": \"Los sistemas bancarios simplemente colapsaron por completo.\", \"pexels_query\": \"deserted stock exchange\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an airport tarmac, numerous planes parked, lights off, silence, photojournalism aesthetic, overcast light, very few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an airport tarmac, numerous planes parked, lights off, silence, photojournalism aesthetic, overcast light, very few distant silhouettes\", \"texto_locucion\": \"Transporte aéreo y marítimo, totalmente parado.\", \"pexels_query\": \"abandoned airport\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast highway, empty of cars, overgrown weeds on the asphalt, photojournalism aesthetic, sunlight, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast highway, empty of cars, overgrown weeds on the asphalt, photojournalism aesthetic, sunlight, no people\", \"texto_locucion\": \"Las cadenas de suministro dejaron de existir.\", \"pexels_query\": \"abandoned highway\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a hospital corridor, dimly lit, emergency lights flickering, but no staff or patients visible, photojournalism aesthetic, hospital light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a hospital corridor, dimly lit, emergency lights flickering, but no staff or patients visible, photojournalism aesthetic, hospital light, no people\", \"texto_locucion\": \"Hospitales sin datos, sin comunicación vital.\", \"pexels_query\": \"dark hospital\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a desolate city square, an old public information board frozen with static, wind blowing debris, photojournalism aesthetic, overcast sky, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a desolate city square, an old public information board frozen with static, wind blowing debris, photojournalism aesthetic, overcast sky, no people\", \"texto_locucion\": \"Nadie lo vio venir con tal magnitud.\", \"pexels_query\": \"static information board\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a broadcasting studio, microphones and cameras on, but completely dark and silent, photojournalism aesthetic, studio dark, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a broadcasting studio, microphones and cameras on, but completely dark and silent, photojournalism aesthetic, studio dark, no people\", \"texto_locucion\": \"Gobernantes intentan comunicar, pero es inútil.\", \"pexels_query\": \"silent broadcast studio\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a dark, foggy cityscape, only emergency vehicle lights flashing faintly in the distance, conveying subtle unease, photojournalism aesthetic, night fog, very few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a dark, foggy cityscape, only emergency vehicle lights flashing faintly in the distance, conveying subtle unease, photojournalism aesthetic, night fog, very few distant silhouettes\", \"texto_locucion\": \"El miedo a lo desconocido crece exponencialmente.\", \"pexels_query\": \"foggy city emergency\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a vast, dark urban landscape at night, with only a few isolated points of light from old, battery-powered lamps, photojournalism aesthetic, night city, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a vast, dark urban landscape at night, with only a few isolated points of light from old, battery-powered lamps, photojournalism aesthetic, night city, no people\", \"texto_locucion\": \"No es solo internet, es la civilización misma.\", \"pexels_query\": \"dark city few lights\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, an intricate web of glowing threads, some broken, against a dark, infinite background, symbolizing fragile dependence, photojournalism aesthetic, abstract network, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, an intricate web of glowing threads, some broken, against a dark, infinite background, symbolizing fragile dependence, photojournalism aesthetic, abstract network, no people\", \"texto_locucion\": \"Dependíamos más de lo que jamás imaginamos.\", \"pexels_query\": \"fragile glowing web\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a single, delicate spider web with dew drops, glistening in the dark, symbolizing fragility, photojournalism aesthetic, dark nature, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a single, delicate spider web with dew drops, glistening in the dark, symbolizing fragility, photojournalism aesthetic, dark nature, no people\", \"texto_locucion\": \"Un frágil equilibrio de conexiones invisibles.\", \"pexels_query\": \"delicate spider web\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a distant silhouette looking at a vast, dark horizon, contemplating, photojournalism aesthetic, dawn light, distant silhouette\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a distant silhouette looking at a vast, dark horizon, contemplating, photojournalism aesthetic, dawn light, distant silhouette\", \"texto_locucion\": \"Esta compleja telaraña nos da vida.\", \"pexels_query\": \"person horizon\"}, {\"id\": 28, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, an old, broken compass spinning aimlessly on a cracked, desolate surface, symbolizing loss of direction, photojournalism aesthetic, desert light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, an old, broken compass spinning aimlessly on a cracked, desolate surface, symbolizing loss of direction, photojournalism aesthetic, desert light, no people\", \"texto_locucion\": \"Pero, ¿qué nos dejaría si se deshace?\", \"pexels_query\": \"broken compass\"}, {\"id\": 29, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, stark, minimalist text 'SIMULACIÓN. POR AHORA.' projected onto a dark, textured wall, photojournalism aesthetic, industrial setting, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, stark, minimalist text 'SIMULACIÓN. POR AHORA.' projected onto a dark, textured wall, photojournalism aesthetic, industrial setting, no people\", \"texto_locucion\": \"Esto fue una simulación. Solo por ahora.\", \"pexels_query\": \"text simulation\"}, {\"id\": 30, \"prompt\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a single, glowing, taut thread stretching into an endless dark void, its end unseen, photojournalism aesthetic, abstract light, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a single, glowing, taut thread stretching into an endless dark void, its end unseen, photojournalism aesthetic, abstract light, no people\", \"texto_locucion\": \"El hilo invisible nos une. ¿O nos encadena?\", \"pexels_query\": \"glowing thread void\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "En este mundo, la conexión falló. Así terminó todo. Una mañana, tu teléfono, por fin, no respondió. Las redes globales, en un silencio absoluto. Algo no está bien, lo sentiste. No podías ignorarlo. Hoy, 500 cables unen continentes enteros. Transportan el 99% de la información global. Banca, comercio, comunicaciones dependen de ellos. Un flujo constante, ininterrumpido e invisible. Creemos invulnerable este complejo sistema vital. Pero, ¿qué sucede si se rompe el hilo? Imagina: diez puntos críticos se cortan. Cables submarinos cruciales, estratégicamente dañados. No fue un accidente; fue un ataque deliberado. La red global se fragmentó en segundos. Primero, las pantallas se congelaron por completo. Pagos electrónicos imposibles en cualquier lugar. Los sistemas bancarios simplemente colapsaron por completo. Transporte aéreo y marítimo, totalmente parado. Las cadenas de suministro dejaron de existir. Hospitales sin datos, sin comunicación vital. Nadie lo vio venir con tal magnitud. Gobernantes intentan comunicar, pero es inútil. El miedo a lo desconocido crece exponencialmente. No es solo internet, es la civilización misma. Dependíamos más de lo que jamás imaginamos. Un frágil equilibrio de conexiones invisibles. Esta compleja telaraña nos da vida. Pero, ¿qué nos dejaría si se deshace? Esto fue una simulación. Solo por ahora. El hilo invisible nos une. ¿O nos encadena?",
+    "titulo_sugerido": "Cuando la Red se Apaga: El Colapso Invisible",
+    "escenas_texto": [
+      "En este mundo, la conexión falló. Así terminó todo.",
+      "Una mañana, tu teléfono, por fin, no respondió.",
+      "Las redes globales, en un silencio absoluto.",
+      "Algo no está bien, lo sentiste. No podías ignorarlo.",
+      "Hoy, 500 cables unen continentes enteros.",
+      "Transportan el 99% de la información global.",
+      "Banca, comercio, comunicaciones dependen de ellos.",
+      "Un flujo constante, ininterrumpido e invisible.",
+      "Creemos invulnerable este complejo sistema vital.",
+      "Pero, ¿qué sucede si se rompe el hilo?",
+      "Imagina: diez puntos críticos se cortan.",
+      "Cables submarinos cruciales, estratégicamente dañados.",
+      "No fue un accidente; fue un ataque deliberado.",
+      "La red global se fragmentó en segundos.",
+      "Primero, las pantallas se congelaron por completo.",
+      "Pagos electrónicos imposibles en cualquier lugar.",
+      "Los sistemas bancarios simplemente colapsaron por completo.",
+      "Transporte aéreo y marítimo, totalmente parado.",
+      "Las cadenas de suministro dejaron de existir.",
+      "Hospitales sin datos, sin comunicación vital.",
+      "Nadie lo vio venir con tal magnitud.",
+      "Gobernantes intentan comunicar, pero es inútil.",
+      "El miedo a lo desconocido crece exponencialmente.",
+      "No es solo internet, es la civilización misma.",
+      "Dependíamos más de lo que jamás imaginamos.",
+      "Un frágil equilibrio de conexiones invisibles.",
+      "Esta compleja telaraña nos da vida.",
+      "Pero, ¿qué nos dejaría si se deshace?",
+      "Esto fue una simulación. Solo por ahora.",
+      "El hilo invisible nos une. ¿O nos encadena?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, abandoned cityscape, broken screens on high-rise buildings, eerie stillness, photojournalism aesthetic, overcast light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, abandoned cityscape, broken screens on high-rise buildings, eerie stillness, photojournalism aesthetic, overcast light, no people",
+        "texto_locucion": "En este mundo, la conexión falló. Así terminó todo.",
+        "pexels_query": "city blackout"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a single smartphone lying on a dark, dusty table, screen completely black, eerie stillness, photojournalism aesthetic, overcast light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a single smartphone lying on a dark, dusty table, screen completely black, eerie stillness, photojournalism aesthetic, overcast light, no people",
+        "texto_locucion": "Una mañana, tu teléfono, por fin, no respondió.",
+        "pexels_query": "dark phone"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, deep ocean floor, multiple fiber optic cables, some visibly severed, eerie stillness, photojournalism aesthetic, deep sea darkness, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, deep ocean floor, multiple fiber optic cables, some visibly severed, eerie stillness, photojournalism aesthetic, deep sea darkness, no people",
+        "texto_locucion": "Las redes globales, en un silencio absoluto.",
+        "pexels_query": "underwater cables"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a distant silhouette looking out a window at a dark, silent city, unsettling atmosphere, photojournalism aesthetic, dim light, very few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with cold blue accent, wide angle establishing shot, a distant silhouette looking out a window at a dark, silent city, unsettling atmosphere, photojournalism aesthetic, dim light, very few distant silhouettes",
+        "texto_locucion": "Algo no está bien, lo sentiste. No podías ignorarlo.",
+        "pexels_query": "person looking city"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a detailed world map with glowing lines representing underwater data cables, focused on their intricate network, photojournalism aesthetic, studio light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a detailed world map with glowing lines representing underwater data cables, focused on their intricate network, photojournalism aesthetic, studio light, no people",
+        "texto_locucion": "Hoy, 500 cables unen continentes enteros.",
+        "pexels_query": "world map cables"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, abstract visualization of data flow, light trails, ethereal glow, representing global information exchange, photojournalism aesthetic, dark background, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, abstract visualization of data flow, light trails, ethereal glow, representing global information exchange, photojournalism aesthetic, dark background, no people",
+        "texto_locucion": "Transportan el 99% de la información global.",
+        "pexels_query": "abstract data flow"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, an empty bank lobby, computer screens frozen, ATM machines dark, eerie stillness, photojournalism aesthetic, internal lighting, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, an empty bank lobby, computer screens frozen, ATM machines dark, eerie stillness, photojournalism aesthetic, internal lighting, no people",
+        "texto_locucion": "Banca, comercio, comunicaciones dependen de ellos.",
+        "pexels_query": "empty bank"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a vast, calm ocean, with a lone cargo ship silently adrift in the distance, photojournalism aesthetic, overcast light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a vast, calm ocean, with a lone cargo ship silently adrift in the distance, photojournalism aesthetic, overcast light, no people",
+        "texto_locucion": "Un flujo constante, ininterrumpido e invisible.",
+        "pexels_query": "cargo ship ocean"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a massive data center, server racks stretching into the distance, but all lights are off, eerie stillness, photojournalism aesthetic, dim light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a massive data center, server racks stretching into the distance, but all lights are off, eerie stillness, photojournalism aesthetic, dim light, no people",
+        "texto_locucion": "Creemos invulnerable este complejo sistema vital.",
+        "pexels_query": "dark server farm"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a close-up on a frayed, glowing wire, implying a delicate connection, photojournalism aesthetic, dark background, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, a close-up on a frayed, glowing wire, implying a delicate connection, photojournalism aesthetic, dark background, no people",
+        "texto_locucion": "Pero, ¿qué sucede si se rompe el hilo?",
+        "pexels_query": "frayed cable"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual of ten red glowing points on a dark ocean map, symbolizing critical failure points, photojournalism aesthetic, dark atmosphere, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual of ten red glowing points on a dark ocean map, symbolizing critical failure points, photojournalism aesthetic, dark atmosphere, no people",
+        "texto_locucion": "Imagina: diez puntos críticos se cortan.",
+        "pexels_query": "red points map"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, close-up of thick, damaged submarine fiber optic cables, partially exposed, photojournalism aesthetic, deep sea light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, close-up of thick, damaged submarine fiber optic cables, partially exposed, photojournalism aesthetic, deep sea light, no people",
+        "texto_locucion": "Cables submarinos cruciales, estratégicamente dañados.",
+        "pexels_query": "damaged fiber optics"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual representing a global network shattering, geometric shards of light breaking apart, photojournalism aesthetic, dark background, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, an abstract visual representing a global network shattering, geometric shards of light breaking apart, photojournalism aesthetic, dark background, no people",
+        "texto_locucion": "No fue un accidente; fue un ataque deliberado.",
+        "pexels_query": "network shattering"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, a dark globe from space, with only scattered, fading lights, emphasizing disconnectedness, photojournalism aesthetic, space view, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, a dark globe from space, with only scattered, fading lights, emphasizing disconnectedness, photojournalism aesthetic, space view, no people",
+        "texto_locucion": "La red global se fragmentó en segundos.",
+        "pexels_query": "dark earth from space"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast office floor, computer monitors uniformly black and blank, chairs pushed aside, photojournalism aesthetic, office light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast office floor, computer monitors uniformly black and blank, chairs pushed aside, photojournalism aesthetic, office light, no people",
+        "texto_locucion": "Primero, las pantallas se congelaron por completo.",
+        "pexels_query": "dark office screens"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an empty supermarket aisle, rows of shopping carts abandoned, eerie stillness, photojournalism aesthetic, fluorescent light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an empty supermarket aisle, rows of shopping carts abandoned, eerie stillness, photojournalism aesthetic, fluorescent light, no people",
+        "texto_locucion": "Pagos electrónicos imposibles en cualquier lugar.",
+        "pexels_query": "empty supermarket"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a deserted stock exchange floor, papers scattered, large display screens dark, photojournalism aesthetic, dramatic lighting, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a deserted stock exchange floor, papers scattered, large display screens dark, photojournalism aesthetic, dramatic lighting, no people",
+        "texto_locucion": "Los sistemas bancarios simplemente colapsaron por completo.",
+        "pexels_query": "deserted stock exchange"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an airport tarmac, numerous planes parked, lights off, silence, photojournalism aesthetic, overcast light, very few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, an airport tarmac, numerous planes parked, lights off, silence, photojournalism aesthetic, overcast light, very few distant silhouettes",
+        "texto_locucion": "Transporte aéreo y marítimo, totalmente parado.",
+        "pexels_query": "abandoned airport"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast highway, empty of cars, overgrown weeds on the asphalt, photojournalism aesthetic, sunlight, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a vast highway, empty of cars, overgrown weeds on the asphalt, photojournalism aesthetic, sunlight, no people",
+        "texto_locucion": "Las cadenas de suministro dejaron de existir.",
+        "pexels_query": "abandoned highway"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a hospital corridor, dimly lit, emergency lights flickering, but no staff or patients visible, photojournalism aesthetic, hospital light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a hospital corridor, dimly lit, emergency lights flickering, but no staff or patients visible, photojournalism aesthetic, hospital light, no people",
+        "texto_locucion": "Hospitales sin datos, sin comunicación vital.",
+        "pexels_query": "dark hospital"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a desolate city square, an old public information board frozen with static, wind blowing debris, photojournalism aesthetic, overcast sky, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a desolate city square, an old public information board frozen with static, wind blowing debris, photojournalism aesthetic, overcast sky, no people",
+        "texto_locucion": "Nadie lo vio venir con tal magnitud.",
+        "pexels_query": "static information board"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a broadcasting studio, microphones and cameras on, but completely dark and silent, photojournalism aesthetic, studio dark, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a broadcasting studio, microphones and cameras on, but completely dark and silent, photojournalism aesthetic, studio dark, no people",
+        "texto_locucion": "Gobernantes intentan comunicar, pero es inútil.",
+        "pexels_query": "silent broadcast studio"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a dark, foggy cityscape, only emergency vehicle lights flashing faintly in the distance, conveying subtle unease, photojournalism aesthetic, night fog, very few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, a dark, foggy cityscape, only emergency vehicle lights flashing faintly in the distance, conveying subtle unease, photojournalism aesthetic, night fog, very few distant silhouettes",
+        "texto_locucion": "El miedo a lo desconocido crece exponencialmente.",
+        "pexels_query": "foggy city emergency"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a vast, dark urban landscape at night, with only a few isolated points of light from old, battery-powered lamps, photojournalism aesthetic, night city, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a vast, dark urban landscape at night, with only a few isolated points of light from old, battery-powered lamps, photojournalism aesthetic, night city, no people",
+        "texto_locucion": "No es solo internet, es la civilización misma.",
+        "pexels_query": "dark city few lights"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, an intricate web of glowing threads, some broken, against a dark, infinite background, symbolizing fragile dependence, photojournalism aesthetic, abstract network, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, an intricate web of glowing threads, some broken, against a dark, infinite background, symbolizing fragile dependence, photojournalism aesthetic, abstract network, no people",
+        "texto_locucion": "Dependíamos más de lo que jamás imaginamos.",
+        "pexels_query": "fragile glowing web"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a single, delicate spider web with dew drops, glistening in the dark, symbolizing fragility, photojournalism aesthetic, dark nature, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, a single, delicate spider web with dew drops, glistening in the dark, symbolizing fragility, photojournalism aesthetic, dark nature, no people",
+        "texto_locucion": "Un frágil equilibrio de conexiones invisibles.",
+        "pexels_query": "delicate spider web"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a distant silhouette looking at a vast, dark horizon, contemplating, photojournalism aesthetic, dawn light, distant silhouette",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a distant silhouette looking at a vast, dark horizon, contemplating, photojournalism aesthetic, dawn light, distant silhouette",
+        "texto_locucion": "Esta compleja telaraña nos da vida.",
+        "pexels_query": "person horizon"
+      },
+      {
+        "id": 28,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, an old, broken compass spinning aimlessly on a cracked, desolate surface, symbolizing loss of direction, photojournalism aesthetic, desert light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, an old, broken compass spinning aimlessly on a cracked, desolate surface, symbolizing loss of direction, photojournalism aesthetic, desert light, no people",
+        "texto_locucion": "Pero, ¿qué nos dejaría si se deshace?",
+        "pexels_query": "broken compass"
+      },
+      {
+        "id": 29,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, stark, minimalist text 'SIMULACIÓN. POR AHORA.' projected onto a dark, textured wall, photojournalism aesthetic, industrial setting, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, stark, minimalist text 'SIMULACIÓN. POR AHORA.' projected onto a dark, textured wall, photojournalism aesthetic, industrial setting, no people",
+        "texto_locucion": "Esto fue una simulación. Solo por ahora.",
+        "pexels_query": "text simulation"
+      },
+      {
+        "id": 30,
+        "prompt": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a single, glowing, taut thread stretching into an endless dark void, its end unseen, photojournalism aesthetic, abstract light, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, documentary style, ultra detailed, dramatic natural lighting, desaturated palette with yellow accent, wide angle establishing shot, a single, glowing, taut thread stretching into an endless dark void, its end unseen, photojournalism aesthetic, abstract light, no people",
+        "texto_locucion": "El hilo invisible nos une. ¿O nos encadena?",
+        "pexels_query": "glowing thread void"
+      }
+    ],
+    "hooks": [
+      "Cables rotos. Mundo desconectado.",
+      "El silencio, ensordecedor.",
+      "¿Realmente terminó todo?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
