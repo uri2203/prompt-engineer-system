@@ -1715,5 +1715,240 @@
       "¿Realmente terminó todo?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "506a2aa7-a26b-4065-b61b-96034239d6bf",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"A modern urban street at dawn, abandoned, with enormous, fresh, three-toed dinosaur footprints pressed deep into the asphalt, a single distant streetlight glows faintly, steam rising from grates.\", \"prompt_visual\": \"A modern urban street at dawn, abandoned, with enormous, fresh, three-toed dinosaur footprints pressed deep into the asphalt, a single distant streetlight glows faintly, steam rising from grates.\", \"texto_locucion\": \"El rugido no era de la jungla remota.\", \"pexels_query\": \"dinosaur footprint city\"}, {\"id\": 2, \"prompt\": \"A desolate, fog-laden cityscape, a giant, indistinct shadow of a creature moving slowly between skyscrapers, creating a sense of dread and scale, no people visible.\", \"prompt_visual\": \"A desolate, fog-laden cityscape, a giant, indistinct shadow of a creature moving slowly between skyscrapers, creating a sense of dread and scale, no people visible.\", \"texto_locucion\": \"Lo sentiste antes de ver la sombra.\", \"pexels_query\": \"giant shadow city\"}, {\"id\": 3, \"prompt\": \"A close-up of cracked asphalt, deeply indented by a massive reptilian foot, a discarded human object (like a broken smartphone) lies nearby, emphasizing contrast.\", \"prompt_visual\": \"A close-up of cracked asphalt, deeply indented by a massive reptilian foot, a discarded human object (like a broken smartphone) lies nearby, emphasizing contrast.\", \"texto_locucion\": \"Una huella gigante en el asfalto. No estabas solo.\", \"pexels_query\": \"cracked asphalt footprint\"}, {\"id\": 4, \"prompt\": \"Sunrise over a deserted metropolis, but the usual city hum is replaced by an unnatural, primal silence, with distant, blurred forms suggesting large animals.\", \"prompt_visual\": \"Sunrise over a deserted metropolis, but the usual city hum is replaced by an unnatural, primal silence, with distant, blurred forms suggesting large animals.\", \"texto_locucion\": \"Algo no está bien en este nuevo amanecer.\", \"pexels_query\": \"deserted city dawn\"}, {\"id\": 5, \"prompt\": \"An intricate network of modern highways, perfectly engineered, but eerily empty of vehicles, stretching into the distance under an overcast sky.\", \"prompt_visual\": \"An intricate network of modern highways, perfectly engineered, but eerily empty of vehicles, stretching into the distance under an overcast sky.\", \"texto_locucion\": \"Nuestra infraestructura depende de la calma.\", \"pexels_query\": \"empty modern highways\"}, {\"id\": 6, \"prompt\": \"A detailed map graphic of global shipping routes, brightly lit, showing dense traffic lanes, overlayed on a dark, stylized Earth.\", \"prompt_visual\": \"A detailed map graphic of global shipping routes, brightly lit, showing dense traffic lanes, overlayed on a dark, stylized Earth.\", \"texto_locucion\": \"Ciudades conectadas, cadenas de suministro exactas.\", \"pexels_query\": \"global shipping routes\"}, {\"id\": 7, \"prompt\": \"A time-lapse view of a busy highway intersection, with countless cars moving in unison, representing the flow of modern daily life, from a high vantage point.\", \"prompt_visual\": \"A time-lapse view of a busy highway intersection, with countless cars moving in unison, representing the flow of modern daily life, from a high vantage point.\", \"texto_locucion\": \"Millones de vehículos mueven nuestra vida diaria.\", \"pexels_query\": \"busy highway time-lapse\"}, {\"id\": 8, \"prompt\": \"A close-up of a geological fault line, splitting a seemingly stable rock formation, with tiny tremors depicted through subtle dust clouds.\", \"prompt_visual\": \"A close-up of a geological fault line, splitting a seemingly stable rock formation, with tiny tremors depicted through subtle dust clouds.\", \"texto_locucion\": \"El límite de la extinción simplemente se rompió.\", \"pexels_query\": \"geological fault line\"}, {\"id\": 9, \"prompt\": \"A computer-generated image of DNA strands intertwining, but with a sudden, impossible mutation occurring, glowing with an ominous green light, no hands visible.\", \"prompt_visual\": \"A computer-generated image of DNA strands intertwining, but with a sudden, impossible mutation occurring, glowing with an ominous green light, no hands visible.\", \"texto_locucion\": \"Un fallo biológico reescribió la historia planetaria.\", \"pexels_query\": \"mutated DNA strand\"}, {\"id\": 10, \"prompt\": \"A vast, cloudy sky, with several enormous pterodactyl-like creatures soaring majestically but ominously above, casting long shadows on the ground below.\", \"prompt_visual\": \"A vast, cloudy sky, with several enormous pterodactyl-like creatures soaring majestically but ominously above, casting long shadows on the ground below.\", \"texto_locucion\": \"Los cielos pertenecen ahora a los pterodáctilos.\", \"pexels_query\": \"pterodactyls flying sky\"}, {\"id\": 11, \"prompt\": \"A once-bustling freeway, now completely overgrown with dense vegetation, a large carnivore (like a T-Rex silhouette) barely visible in the distance, walking on the asphalt.\", \"prompt_visual\": \"A once-bustling freeway, now completely overgrown with dense vegetation, a large carnivore (like a T-Rex silhouette) barely visible in the distance, walking on the asphalt.\", \"texto_locucion\": \"Autopistas vacías, dominadas por depredadores enormes.\", \"pexels_query\": \"overgrown highway dinosaur\"}, {\"id\": 12, \"prompt\": \"An expansive drone shot of agricultural fields, once neatly cultivated, now trampled and devoured, showing clear signs of immense animal destruction, viewed at dusk.\", \"prompt_visual\": \"An expansive drone shot of agricultural fields, once neatly cultivated, now trampled and devoured, showing clear signs of immense animal destruction, viewed at dusk.\", \"texto_locucion\": \"La agricultura global es la primera en caer.\", \"pexels_query\": \"destroyed agricultural fields\"}, {\"id\": 13, \"prompt\": \"A field of wheat flattened by massive footprints, with a distant, blurred image of a long-necked sauropod grazing on other crops in the background.\", \"prompt_visual\": \"A field of wheat flattened by massive footprints, with a distant, blurred image of a long-necked sauropod grazing on other crops in the background.\", \"texto_locucion\": \"Campos de cultivo son pasto de saurópodos gigantes.\", \"pexels_query\": \"saurópod crop destruction\"}, {\"id\": 14, \"prompt\": \"A deserted control room of a power grid, screens dark, a single flickering emergency light illuminating the abandoned consoles, conveying a sudden power outage.\", \"prompt_visual\": \"A deserted control room of a power grid, screens dark, a single flickering emergency light illuminating the abandoned consoles, conveying a sudden power outage.\", \"texto_locucion\": \"La energía eléctrica se interrumpe sin previo aviso.\", \"pexels_query\": \"power grid control room\"}, {\"id\": 15, \"prompt\": \"An enormous, abandoned power plant cooling tower, its base now covered in thick, primeval jungle growth, with a nest of large, unknown eggs visible inside.\", \"prompt_visual\": \"An enormous, abandoned power plant cooling tower, its base now covered in thick, primeval jungle growth, with a nest of large, unknown eggs visible inside.\", \"texto_locucion\": \"Grandes plantas son nidos para carnívoros voraces.\", \"pexels_query\": \"abandoned power plant nest\"}, {\"id\": 16, \"prompt\": \"A massive cargo ship adrift in choppy, desolate waters, an ancient marine reptile (like a Mosasaur) fin breaking the surface nearby, signifying a blockade.\", \"prompt_visual\": \"A massive cargo ship adrift in choppy, desolate waters, an ancient marine reptile (like a Mosasaur) fin breaking the surface nearby, signifying a blockade.\", \"texto_locucion\": \"Rutas marítimas bloqueadas por criaturas ancestrales.\", \"pexels_query\": \"mosasaur cargo ship\"}, {\"id\": 17, \"prompt\": \"A global trade map, showing all routes severed and dark, no movement, emphasizing the complete halt of international commerce, with a red glow on landmasses.\", \"prompt_visual\": \"A global trade map, showing all routes severed and dark, no movement, emphasizing the complete halt of international commerce, with a red glow on landmasses.\", \"texto_locucion\": \"El comercio internacional detiene por completo su pulso.\", \"pexels_query\": \"global trade stopped\"}, {\"id\": 18, \"prompt\": \"An ancient, weathered stone tablet, depicting primal hunting scenes of humans and large beasts, contrasted with a modern, broken traffic sign lying beside it.\", \"prompt_visual\": \"An ancient, weathered stone tablet, depicting primal hunting scenes of humans and large beasts, contrasted with a modern, broken traffic sign lying beside it.\", \"texto_locucion\": \"La ley humana deja de ser la única ley.\", \"pexels_query\": \"ancient law modern ruin\"}, {\"id\": 19, \"prompt\": \"A small, fortified human settlement made of salvaged materials, nestled precariously at the edge of a vast, encroaching jungle, under a dramatic, foreboding sky.\", \"prompt_visual\": \"A small, fortified human settlement made of salvaged materials, nestled precariously at the edge of a vast, encroaching jungle, under a dramatic, foreboding sky.\", \"texto_locucion\": \"Pequeñas comunidades luchan por sobrevivir al margen.\", \"pexels_query\": \"fortified jungle settlement\"}, {\"id\": 20, \"prompt\": \"A desolate communications tower, its satellite dishes overgrown and rusted, no signals transmitting, suggesting a complete breakdown of global communication, eerie stillness.\", \"prompt_visual\": \"A desolate communications tower, its satellite dishes overgrown and rusted, no signals transmitting, suggesting a complete breakdown of global communication, eerie stillness.\", \"texto_locucion\": \"Las comunicaciones globales: un silencio absoluto.\", \"pexels_query\": \"desolate communication tower\"}, {\"id\": 21, \"prompt\": \"A wide shot of a crumbling skyscraper partially swallowed by jungle, suggesting a rapid and unexpected change in the ecosystem, emphasizing human helplessness.\", \"prompt_visual\": \"A wide shot of a crumbling skyscraper partially swallowed by jungle, suggesting a rapid and unexpected change in the ecosystem, emphasizing human helplessness.\", \"texto_locucion\": \"Nadie lo vio venir tan rápido, tan drástico.\", \"pexels_query\": \"skyscraper jungle overtake\"}, {\"id\": 22, \"prompt\": \"A human hand reaching out to touch an impossibly large, textured dinosaur scale embedded in a rocky landscape, emphasizing the sheer difference in scale and the new reality.\", \"prompt_visual\": \"A human hand reaching out to touch an impossibly large, textured dinosaur scale embedded in a rocky landscape, emphasizing the sheer difference in scale and the new reality.\", \"texto_locucion\": \"No es solo adaptarse, es redefinir nuestro lugar.\", \"pexels_query\": \"human hand dinosaur scale\"}, {\"id\": 23, \"prompt\": \"A dramatic shot of a primeval predator (like a Velociraptor or a small T-Rex) stalking through a dense, foggy forest, embodying the ancient food chain's return.\", \"prompt_visual\": \"A dramatic shot of a primeval predator (like a Velociraptor or a small T-Rex) stalking through a dense, foggy forest, embodying the ancient food chain's return.\", \"texto_locucion\": \"La cadena alimenticia original se restauró brutalmente.\", \"pexels_query\": \"primeval predator forest\"}, {\"id\": 24, \"prompt\": \"A wide, majestic view of a pristine, untouched primeval landscape, dominated by massive, indistinct dinosaurian forms in the distance, no human presence.\", \"prompt_visual\": \"A wide, majestic view of a pristine, untouched primeval landscape, dominated by massive, indistinct dinosaurian forms in the distance, no human presence.\", \"texto_locucion\": \"La Tierra recupera a sus antiguos e implacables dueños.\", \"pexels_query\": \"pristine primeval landscape\"}, {\"id\": 25, \"prompt\": \"A dramatic, high-angle shot of a lone human silhouette standing on a ruined skyscraper, overlooking a world transformed into a prehistoric wilderness, at sunset.\", \"prompt_visual\": \"A dramatic, high-angle shot of a lone human silhouette standing on a ruined skyscraper, overlooking a world transformed into a prehistoric wilderness, at sunset.\", \"texto_locucion\": \"Esta es la nueva realidad, el nuevo equilibrio.\", \"pexels_query\": \"human silhouette ruined city\"}, {\"id\": 26, \"prompt\": \"A dark, intense close-up of a human eye, reflecting the image of a giant dinosaur in the distance, conveying fear and uncertainty, with no other facial features visible.\", \"prompt_visual\": \"A dark, intense close-up of a human eye, reflecting the image of a giant dinosaur in the distance, conveying fear and uncertainty, with no other facial features visible.\", \"texto_locucion\": \"¿Cómo sobrevivirías a la era de los colosos?\", \"pexels_query\": \"human eye dinosaur reflection\"}, {\"id\": 27, \"prompt\": \"The Umbral Alterno logo (a stylized, minimalist hourglass or diverging timeline symbol) against a stark, desaturated background, with subtle atmospheric effects.\", \"prompt_visual\": \"The Umbral Alterno logo (a stylized, minimalist hourglass or diverging timeline symbol) against a stark, desaturated background, with subtle atmospheric effects.\", \"texto_locucion\": \"Esto fue una simulación. Por ahora.\", \"pexels_query\": \"minimalist abstract symbol\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "El rugido no era de la jungla remota. Lo sentiste antes de ver la sombra. Una huella gigante en el asfalto. No estabas solo. Algo no está bien en este nuevo amanecer. Nuestra infraestructura depende de la calma. Ciudades conectadas, cadenas de suministro exactas. Millones de vehículos mueven nuestra vida diaria. El límite de la extinción simplemente se rompió. Un fallo biológico reescribió la historia planetaria. Los cielos pertenecen ahora a los pterodáctilos. Autopistas vacías, dominadas por depredadores enormes. La agricultura global es la primera en caer. Campos de cultivo son pasto de saurópodos gigantes. La energía eléctrica se interrumpe sin previo aviso. Grandes plantas son nidos para carnívoros voraces. Rutas marítimas bloqueadas por criaturas ancestrales. El comercio internacional detiene por completo su pulso. La ley humana deja de ser la única ley. Pequeñas comunidades luchan por sobrevivir al margen. Las comunicaciones globales: un silencio absoluto. Nadie lo vio venir tan rápido, tan drástico. No es solo adaptarse, es redefinir nuestro lugar. La cadena alimenticia original se restauró brutalmente. La Tierra recupera a sus antiguos e implacables dueños. Esta es la nueva realidad, el nuevo equilibrio. ¿Cómo sobrevivirías a la era de los colosos? Esto fue una simulación. Por ahora.",
+    "titulo_sugerido": "Cuando los Gigantes Despertaron: Un Mundo Reescrito",
+    "escenas_texto": [
+      "El rugido no era de la jungla remota.",
+      "Lo sentiste antes de ver la sombra.",
+      "Una huella gigante en el asfalto. No estabas solo.",
+      "Algo no está bien en este nuevo amanecer.",
+      "Nuestra infraestructura depende de la calma.",
+      "Ciudades conectadas, cadenas de suministro exactas.",
+      "Millones de vehículos mueven nuestra vida diaria.",
+      "El límite de la extinción simplemente se rompió.",
+      "Un fallo biológico reescribió la historia planetaria.",
+      "Los cielos pertenecen ahora a los pterodáctilos.",
+      "Autopistas vacías, dominadas por depredadores enormes.",
+      "La agricultura global es la primera en caer.",
+      "Campos de cultivo son pasto de saurópodos gigantes.",
+      "La energía eléctrica se interrumpe sin previo aviso.",
+      "Grandes plantas son nidos para carnívoros voraces.",
+      "Rutas marítimas bloqueadas por criaturas ancestrales.",
+      "El comercio internacional detiene por completo su pulso.",
+      "La ley humana deja de ser la única ley.",
+      "Pequeñas comunidades luchan por sobrevivir al margen.",
+      "Las comunicaciones globales: un silencio absoluto.",
+      "Nadie lo vio venir tan rápido, tan drástico.",
+      "No es solo adaptarse, es redefinir nuestro lugar.",
+      "La cadena alimenticia original se restauró brutalmente.",
+      "La Tierra recupera a sus antiguos e implacables dueños.",
+      "Esta es la nueva realidad, el nuevo equilibrio.",
+      "¿Cómo sobrevivirías a la era de los colosos?",
+      "Esto fue una simulación. Por ahora."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "A modern urban street at dawn, abandoned, with enormous, fresh, three-toed dinosaur footprints pressed deep into the asphalt, a single distant streetlight glows faintly, steam rising from grates.",
+        "prompt_visual": "A modern urban street at dawn, abandoned, with enormous, fresh, three-toed dinosaur footprints pressed deep into the asphalt, a single distant streetlight glows faintly, steam rising from grates.",
+        "texto_locucion": "El rugido no era de la jungla remota.",
+        "pexels_query": "dinosaur footprint city"
+      },
+      {
+        "id": 2,
+        "prompt": "A desolate, fog-laden cityscape, a giant, indistinct shadow of a creature moving slowly between skyscrapers, creating a sense of dread and scale, no people visible.",
+        "prompt_visual": "A desolate, fog-laden cityscape, a giant, indistinct shadow of a creature moving slowly between skyscrapers, creating a sense of dread and scale, no people visible.",
+        "texto_locucion": "Lo sentiste antes de ver la sombra.",
+        "pexels_query": "giant shadow city"
+      },
+      {
+        "id": 3,
+        "prompt": "A close-up of cracked asphalt, deeply indented by a massive reptilian foot, a discarded human object (like a broken smartphone) lies nearby, emphasizing contrast.",
+        "prompt_visual": "A close-up of cracked asphalt, deeply indented by a massive reptilian foot, a discarded human object (like a broken smartphone) lies nearby, emphasizing contrast.",
+        "texto_locucion": "Una huella gigante en el asfalto. No estabas solo.",
+        "pexels_query": "cracked asphalt footprint"
+      },
+      {
+        "id": 4,
+        "prompt": "Sunrise over a deserted metropolis, but the usual city hum is replaced by an unnatural, primal silence, with distant, blurred forms suggesting large animals.",
+        "prompt_visual": "Sunrise over a deserted metropolis, but the usual city hum is replaced by an unnatural, primal silence, with distant, blurred forms suggesting large animals.",
+        "texto_locucion": "Algo no está bien en este nuevo amanecer.",
+        "pexels_query": "deserted city dawn"
+      },
+      {
+        "id": 5,
+        "prompt": "An intricate network of modern highways, perfectly engineered, but eerily empty of vehicles, stretching into the distance under an overcast sky.",
+        "prompt_visual": "An intricate network of modern highways, perfectly engineered, but eerily empty of vehicles, stretching into the distance under an overcast sky.",
+        "texto_locucion": "Nuestra infraestructura depende de la calma.",
+        "pexels_query": "empty modern highways"
+      },
+      {
+        "id": 6,
+        "prompt": "A detailed map graphic of global shipping routes, brightly lit, showing dense traffic lanes, overlayed on a dark, stylized Earth.",
+        "prompt_visual": "A detailed map graphic of global shipping routes, brightly lit, showing dense traffic lanes, overlayed on a dark, stylized Earth.",
+        "texto_locucion": "Ciudades conectadas, cadenas de suministro exactas.",
+        "pexels_query": "global shipping routes"
+      },
+      {
+        "id": 7,
+        "prompt": "A time-lapse view of a busy highway intersection, with countless cars moving in unison, representing the flow of modern daily life, from a high vantage point.",
+        "prompt_visual": "A time-lapse view of a busy highway intersection, with countless cars moving in unison, representing the flow of modern daily life, from a high vantage point.",
+        "texto_locucion": "Millones de vehículos mueven nuestra vida diaria.",
+        "pexels_query": "busy highway time-lapse"
+      },
+      {
+        "id": 8,
+        "prompt": "A close-up of a geological fault line, splitting a seemingly stable rock formation, with tiny tremors depicted through subtle dust clouds.",
+        "prompt_visual": "A close-up of a geological fault line, splitting a seemingly stable rock formation, with tiny tremors depicted through subtle dust clouds.",
+        "texto_locucion": "El límite de la extinción simplemente se rompió.",
+        "pexels_query": "geological fault line"
+      },
+      {
+        "id": 9,
+        "prompt": "A computer-generated image of DNA strands intertwining, but with a sudden, impossible mutation occurring, glowing with an ominous green light, no hands visible.",
+        "prompt_visual": "A computer-generated image of DNA strands intertwining, but with a sudden, impossible mutation occurring, glowing with an ominous green light, no hands visible.",
+        "texto_locucion": "Un fallo biológico reescribió la historia planetaria.",
+        "pexels_query": "mutated DNA strand"
+      },
+      {
+        "id": 10,
+        "prompt": "A vast, cloudy sky, with several enormous pterodactyl-like creatures soaring majestically but ominously above, casting long shadows on the ground below.",
+        "prompt_visual": "A vast, cloudy sky, with several enormous pterodactyl-like creatures soaring majestically but ominously above, casting long shadows on the ground below.",
+        "texto_locucion": "Los cielos pertenecen ahora a los pterodáctilos.",
+        "pexels_query": "pterodactyls flying sky"
+      },
+      {
+        "id": 11,
+        "prompt": "A once-bustling freeway, now completely overgrown with dense vegetation, a large carnivore (like a T-Rex silhouette) barely visible in the distance, walking on the asphalt.",
+        "prompt_visual": "A once-bustling freeway, now completely overgrown with dense vegetation, a large carnivore (like a T-Rex silhouette) barely visible in the distance, walking on the asphalt.",
+        "texto_locucion": "Autopistas vacías, dominadas por depredadores enormes.",
+        "pexels_query": "overgrown highway dinosaur"
+      },
+      {
+        "id": 12,
+        "prompt": "An expansive drone shot of agricultural fields, once neatly cultivated, now trampled and devoured, showing clear signs of immense animal destruction, viewed at dusk.",
+        "prompt_visual": "An expansive drone shot of agricultural fields, once neatly cultivated, now trampled and devoured, showing clear signs of immense animal destruction, viewed at dusk.",
+        "texto_locucion": "La agricultura global es la primera en caer.",
+        "pexels_query": "destroyed agricultural fields"
+      },
+      {
+        "id": 13,
+        "prompt": "A field of wheat flattened by massive footprints, with a distant, blurred image of a long-necked sauropod grazing on other crops in the background.",
+        "prompt_visual": "A field of wheat flattened by massive footprints, with a distant, blurred image of a long-necked sauropod grazing on other crops in the background.",
+        "texto_locucion": "Campos de cultivo son pasto de saurópodos gigantes.",
+        "pexels_query": "saurópod crop destruction"
+      },
+      {
+        "id": 14,
+        "prompt": "A deserted control room of a power grid, screens dark, a single flickering emergency light illuminating the abandoned consoles, conveying a sudden power outage.",
+        "prompt_visual": "A deserted control room of a power grid, screens dark, a single flickering emergency light illuminating the abandoned consoles, conveying a sudden power outage.",
+        "texto_locucion": "La energía eléctrica se interrumpe sin previo aviso.",
+        "pexels_query": "power grid control room"
+      },
+      {
+        "id": 15,
+        "prompt": "An enormous, abandoned power plant cooling tower, its base now covered in thick, primeval jungle growth, with a nest of large, unknown eggs visible inside.",
+        "prompt_visual": "An enormous, abandoned power plant cooling tower, its base now covered in thick, primeval jungle growth, with a nest of large, unknown eggs visible inside.",
+        "texto_locucion": "Grandes plantas son nidos para carnívoros voraces.",
+        "pexels_query": "abandoned power plant nest"
+      },
+      {
+        "id": 16,
+        "prompt": "A massive cargo ship adrift in choppy, desolate waters, an ancient marine reptile (like a Mosasaur) fin breaking the surface nearby, signifying a blockade.",
+        "prompt_visual": "A massive cargo ship adrift in choppy, desolate waters, an ancient marine reptile (like a Mosasaur) fin breaking the surface nearby, signifying a blockade.",
+        "texto_locucion": "Rutas marítimas bloqueadas por criaturas ancestrales.",
+        "pexels_query": "mosasaur cargo ship"
+      },
+      {
+        "id": 17,
+        "prompt": "A global trade map, showing all routes severed and dark, no movement, emphasizing the complete halt of international commerce, with a red glow on landmasses.",
+        "prompt_visual": "A global trade map, showing all routes severed and dark, no movement, emphasizing the complete halt of international commerce, with a red glow on landmasses.",
+        "texto_locucion": "El comercio internacional detiene por completo su pulso.",
+        "pexels_query": "global trade stopped"
+      },
+      {
+        "id": 18,
+        "prompt": "An ancient, weathered stone tablet, depicting primal hunting scenes of humans and large beasts, contrasted with a modern, broken traffic sign lying beside it.",
+        "prompt_visual": "An ancient, weathered stone tablet, depicting primal hunting scenes of humans and large beasts, contrasted with a modern, broken traffic sign lying beside it.",
+        "texto_locucion": "La ley humana deja de ser la única ley.",
+        "pexels_query": "ancient law modern ruin"
+      },
+      {
+        "id": 19,
+        "prompt": "A small, fortified human settlement made of salvaged materials, nestled precariously at the edge of a vast, encroaching jungle, under a dramatic, foreboding sky.",
+        "prompt_visual": "A small, fortified human settlement made of salvaged materials, nestled precariously at the edge of a vast, encroaching jungle, under a dramatic, foreboding sky.",
+        "texto_locucion": "Pequeñas comunidades luchan por sobrevivir al margen.",
+        "pexels_query": "fortified jungle settlement"
+      },
+      {
+        "id": 20,
+        "prompt": "A desolate communications tower, its satellite dishes overgrown and rusted, no signals transmitting, suggesting a complete breakdown of global communication, eerie stillness.",
+        "prompt_visual": "A desolate communications tower, its satellite dishes overgrown and rusted, no signals transmitting, suggesting a complete breakdown of global communication, eerie stillness.",
+        "texto_locucion": "Las comunicaciones globales: un silencio absoluto.",
+        "pexels_query": "desolate communication tower"
+      },
+      {
+        "id": 21,
+        "prompt": "A wide shot of a crumbling skyscraper partially swallowed by jungle, suggesting a rapid and unexpected change in the ecosystem, emphasizing human helplessness.",
+        "prompt_visual": "A wide shot of a crumbling skyscraper partially swallowed by jungle, suggesting a rapid and unexpected change in the ecosystem, emphasizing human helplessness.",
+        "texto_locucion": "Nadie lo vio venir tan rápido, tan drástico.",
+        "pexels_query": "skyscraper jungle overtake"
+      },
+      {
+        "id": 22,
+        "prompt": "A human hand reaching out to touch an impossibly large, textured dinosaur scale embedded in a rocky landscape, emphasizing the sheer difference in scale and the new reality.",
+        "prompt_visual": "A human hand reaching out to touch an impossibly large, textured dinosaur scale embedded in a rocky landscape, emphasizing the sheer difference in scale and the new reality.",
+        "texto_locucion": "No es solo adaptarse, es redefinir nuestro lugar.",
+        "pexels_query": "human hand dinosaur scale"
+      },
+      {
+        "id": 23,
+        "prompt": "A dramatic shot of a primeval predator (like a Velociraptor or a small T-Rex) stalking through a dense, foggy forest, embodying the ancient food chain's return.",
+        "prompt_visual": "A dramatic shot of a primeval predator (like a Velociraptor or a small T-Rex) stalking through a dense, foggy forest, embodying the ancient food chain's return.",
+        "texto_locucion": "La cadena alimenticia original se restauró brutalmente.",
+        "pexels_query": "primeval predator forest"
+      },
+      {
+        "id": 24,
+        "prompt": "A wide, majestic view of a pristine, untouched primeval landscape, dominated by massive, indistinct dinosaurian forms in the distance, no human presence.",
+        "prompt_visual": "A wide, majestic view of a pristine, untouched primeval landscape, dominated by massive, indistinct dinosaurian forms in the distance, no human presence.",
+        "texto_locucion": "La Tierra recupera a sus antiguos e implacables dueños.",
+        "pexels_query": "pristine primeval landscape"
+      },
+      {
+        "id": 25,
+        "prompt": "A dramatic, high-angle shot of a lone human silhouette standing on a ruined skyscraper, overlooking a world transformed into a prehistoric wilderness, at sunset.",
+        "prompt_visual": "A dramatic, high-angle shot of a lone human silhouette standing on a ruined skyscraper, overlooking a world transformed into a prehistoric wilderness, at sunset.",
+        "texto_locucion": "Esta es la nueva realidad, el nuevo equilibrio.",
+        "pexels_query": "human silhouette ruined city"
+      },
+      {
+        "id": 26,
+        "prompt": "A dark, intense close-up of a human eye, reflecting the image of a giant dinosaur in the distance, conveying fear and uncertainty, with no other facial features visible.",
+        "prompt_visual": "A dark, intense close-up of a human eye, reflecting the image of a giant dinosaur in the distance, conveying fear and uncertainty, with no other facial features visible.",
+        "texto_locucion": "¿Cómo sobrevivirías a la era de los colosos?",
+        "pexels_query": "human eye dinosaur reflection"
+      },
+      {
+        "id": 27,
+        "prompt": "The Umbral Alterno logo (a stylized, minimalist hourglass or diverging timeline symbol) against a stark, desaturated background, with subtle atmospheric effects.",
+        "prompt_visual": "The Umbral Alterno logo (a stylized, minimalist hourglass or diverging timeline symbol) against a stark, desaturated background, with subtle atmospheric effects.",
+        "texto_locucion": "Esto fue una simulación. Por ahora.",
+        "pexels_query": "minimalist abstract symbol"
+      }
+    ],
+    "hooks": [
+      "Dinosaurios: el retorno imposible.",
+      "La civilización, paralizada.",
+      "¿Un mundo sin humanos?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
