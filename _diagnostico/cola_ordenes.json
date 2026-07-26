@@ -2962,5 +2962,264 @@
       "¿Qué harías entonces?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "75e021cb-ec57-4042-80e2-52b045d11d9c",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, pristine deserted island beach, scorching sun, footprints in sand, subtle unsettling shadow, wide angle establishing shot, desaturated palette with yellow accent, eerie stillness, photojournalism aesthetic, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, pristine deserted island beach, scorching sun, footprints in sand, subtle unsettling shadow, wide angle establishing shot, desaturated palette with yellow accent, eerie stillness, photojournalism aesthetic, no people\", \"texto_locucion\": \"La arena quemaba tus pies bajo el sol incesante.\", \"pexels_query\": \"desert island beach\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, empty tropical paradise, lush palm trees, clear blue ocean, sense of isolation, wide angle establishing shot, dramatic natural lighting, desaturated palette with turquoise accent, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty tropical paradise, lush palm trees, clear blue ocean, sense of isolation, wide angle establishing shot, dramatic natural lighting, desaturated palette with turquoise accent, no people\", \"texto_locucion\": \"Creíste que el paraíso era tuyo, solo tuyo.\", \"pexels_query\": \"tropical paradise empty\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, dense jungle foliage on a remote island, deep shadows, hint of movement between leaves, wide angle establishing shot, desaturated palette with green accent, dramatic natural lighting, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, dense jungle foliage on a remote island, deep shadows, hint of movement between leaves, wide angle establishing shot, desaturated palette with green accent, dramatic natural lighting, no people\", \"texto_locucion\": \"Pero una sombra se movía entre los cocoteros.\", \"pexels_query\": \"dense jungle island\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, remote island coastline, vast ocean, unsettling feeling of presence, wide angle establishing shot, desaturated palette with deep blue accent, dramatic natural lighting, few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, remote island coastline, vast ocean, unsettling feeling of presence, wide angle establishing shot, desaturated palette with deep blue accent, dramatic natural lighting, few distant silhouettes\", \"texto_locucion\": \"Sabías que no estabas solo en esta isla remota.\", \"pexels_query\": \"remote island unsettling\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, close-up on a person's back, looking out at a seemingly empty beach, subtle shiver running down their spine, wide angle establishing shot, desaturated palette with cool blue accent, dramatic natural lighting, single distant silhouette\", \"prompt_visual\": \"cinematic hyperrealistic photograph, close-up on a person's back, looking out at a seemingly empty beach, subtle shiver running down their spine, wide angle establishing shot, desaturated palette with cool blue accent, dramatic natural lighting, single distant silhouette\", \"texto_locucion\": \"Algo no está bien, lo sentiste antes, un escalofrío.\", \"pexels_query\": \"person back beach\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, idyllic postcard view of a deserted island, white sand, turquoise water, no trace of human activity, wide angle establishing shot, bright natural light, vibrant colors, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, idyllic postcard view of a deserted island, white sand, turquoise water, no trace of human activity, wide angle establishing shot, bright natural light, vibrant colors, no people\", \"texto_locucion\": \"Imaginamos islas desiertas como refugios, libertad absoluta.\", \"pexels_query\": \"pristine island idyllic\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, calm ocean lapping a untouched shore, coconut trees swaying gently, serene and peaceful, wide angle establishing shot, golden hour light, warm palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, calm ocean lapping a untouched shore, coconut trees swaying gently, serene and peaceful, wide angle establishing shot, golden hour light, warm palette, no people\", \"texto_locucion\": \"Playas vírgenes, cocos frescos, el mar como compañía.\", \"pexels_query\": \"calm ocean shore\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, aerial view of a small, isolated island surrounded by vast blue ocean, remote and untouched, wide angle establishing shot, bright daylight, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, aerial view of a small, isolated island surrounded by vast blue ocean, remote and untouched, wide angle establishing shot, bright daylight, no people\", \"texto_locucion\": \"Millones sueñan con esta evasión, esta fantasía perfecta.\", \"pexels_query\": \"isolated island aerial\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, backpack and survival gear neatly arranged on a sandy beach, implying preparation, wide angle establishing shot, soft morning light, muted green and brown palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, backpack and survival gear neatly arranged on a sandy beach, implying preparation, wide angle establishing shot, soft morning light, muted green and brown palette, no people\", \"texto_locucion\": \"Preparar un viaje así, exige una planificación meticulosa.\", \"pexels_query\": \"survival gear beach\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, mysterious cave entrance on a remote island, dark and foreboding, wide angle establishing shot, dramatic shadows, desaturated palette with a hint of dark green, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, mysterious cave entrance on a remote island, dark and foreboding, wide angle establishing shot, dramatic shadows, desaturated palette with a hint of dark green, no people\", \"texto_locucion\": \"¿Y si la isla misma guarda secretos?\", \"pexels_query\": \"mysterious cave island\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, sand partially covering an ancient, unidentifiable object, hinting at hidden depths, wide angle establishing shot, dim light, desaturated palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, sand partially covering an ancient, unidentifiable object, hinting at hidden depths, wide angle establishing shot, dim light, desaturated palette, no people\", \"texto_locucion\": \"Secretos ocultos bajo la arena, incomprensibles al humano.\", \"pexels_query\": \"hidden object sand\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, small raft washed ashore on a deserted island, sunset in the background, implying arrival, wide angle establishing shot, warm orange and purple hues, few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, small raft washed ashore on a deserted island, sunset in the background, implying arrival, wide angle establishing shot, warm orange and purple hues, few distant silhouettes\", \"texto_locucion\": \"Llegaste con la marea, un naufragio o una elección.\", \"pexels_query\": \"raft washed ashore\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, dramatic sunset over a tropical island, sky ablaze with red and orange, wide angle establishing shot, vibrant and intense colors, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, dramatic sunset over a tropical island, sky ablaze with red and orange, wide angle establishing shot, vibrant and intense colors, no people\", \"texto_locucion\": \"El sol se ponía, tiñendo el horizonte de rojo sangre.\", \"pexels_query\": \"dramatic island sunset\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, deep into a dark, overgrown jungle, subtle rustling of leaves, sound implication, wide angle establishing shot, deep green and brown tones, dramatic shadows, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, deep into a dark, overgrown jungle, subtle rustling of leaves, sound implication, wide angle establishing shot, deep green and brown tones, dramatic shadows, no people\", \"texto_locucion\": \"Entonces, un sonido. Un crujido lejano en la jungla.\", \"pexels_query\": \"deep jungle rustling\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, dense jungle, ancient roots, sense of something hidden, wide angle establishing shot, dark and mysterious, desaturated palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, dense jungle, ancient roots, sense of something hidden, wide angle establishing shot, dark and mysterious, desaturated palette, no people\", \"texto_locucion\": \"Demasiado profundo, demasiado rítmico para ser natural.\", \"pexels_query\": \"ancient jungle roots\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, pristine sand beach with strange, geometric patterns etched into it, unnaturally perfect, wide angle establishing shot, soft morning light, desaturated palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, pristine sand beach with strange, geometric patterns etched into it, unnaturally perfect, wide angle establishing shot, soft morning light, desaturated palette, no people\", \"texto_locucion\": \"Al día siguiente, marcas inexplicables en la arena aparecieron.\", \"pexels_query\": \"geometric patterns sand\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, close-up of intricate, unidentifiable symbols in the sand, clear and precise, wide angle establishing shot, desaturated palette, eerie stillness, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, close-up of intricate, unidentifiable symbols in the sand, clear and precise, wide angle establishing shot, desaturated palette, eerie stillness, no people\", \"texto_locucion\": \"Patrones geométricos, trazados con una precisión antinatural.\", \"pexels_query\": \"intricate sand symbols\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, a simple camp with a sleeping bag, slight disturbance in the arrangement of nearby objects, wide angle establishing shot, moonlight filtering through trees, cool blue tones, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a simple camp with a sleeping bag, slight disturbance in the arrangement of nearby objects, wide angle establishing shot, moonlight filtering through trees, cool blue tones, no people\", \"texto_locucion\": \"Los objetos se movían sutilmente mientras tú dormías.\", \"pexels_query\": \"disturbed camp night\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, a backpack lying a distance from a campfire, suggesting it was moved, wide angle establishing shot, dim light from a dying fire, desaturated palette with orange accent, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a backpack lying a distance from a campfire, suggesting it was moved, wide angle establishing shot, dim light from a dying fire, desaturated palette with orange accent, no people\", \"texto_locucion\": \"Tu mochila, encontrada a metros de donde la dejaste.\", \"pexels_query\": \"backpack moved campsite\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, small, ordinary stones arranged in a perfect circle on the ground, out of place in the wilderness, wide angle establishing shot, natural light, muted earth tones, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, small, ordinary stones arranged in a perfect circle on the ground, out of place in the wilderness, wide angle establishing shot, natural light, muted earth tones, no people\", \"texto_locucion\": \"Pequeñas piedras formaban círculos donde no deberían estar.\", \"pexels_query\": \"stones circle wilderness\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, moonlit jungle at night, almost absolute darkness, a profound, unsettling silence, wide angle establishing shot, deep blue and black palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, moonlit jungle at night, almost absolute darkness, a profound, unsettling silence, wide angle establishing shot, deep blue and black palette, no people\", \"texto_locucion\": \"El silencio absoluto de la noche no era tranquilizador.\", \"pexels_query\": \"moonlit jungle silence\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, viewpoint from deep within a jungle, looking out towards an unseen presence, sense of being watched, wide angle establishing shot, dark and mysterious, green and brown tones, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, viewpoint from deep within a jungle, looking out towards an unseen presence, sense of being watched, wide angle establishing shot, dark and mysterious, green and brown tones, no people\", \"texto_locucion\": \"Cada día, la sensación de ser observado crecía contigo.\", \"pexels_query\": \"jungle being watched\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, remote beach at dawn, footprints leading into the water, sense of desperation and loneliness, wide angle establishing shot, cool morning light, desaturated blue and grey, few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, remote beach at dawn, footprints leading into the water, sense of desperation and loneliness, wide angle establishing shot, cool morning light, desaturated blue and grey, few distant silhouettes\", \"texto_locucion\": \"Nadie lo vio, nadie te creería.\", \"pexels_query\": \"lonely beach footprints\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, close-up of a person's hand clutching their head in a moment of extreme stress or paranoia, wide angle establishing shot, dramatic shadows, desaturated palette, no visible face\", \"prompt_visual\": \"cinematic hyperrealistic photograph, close-up of a person's hand clutching their head in a moment of extreme stress or paranoia, wide angle establishing shot, dramatic shadows, desaturated palette, no visible face\", \"texto_locucion\": \"La paranoia te abraza, envolviéndote cada instante.\", \"pexels_query\": \"paranoia stress close-up\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, a massive, ancient, moss-covered stone structure partially submerged in the island's jungle, looking like part of the landscape, wide angle establishing shot, overcast light, desaturated green and grey palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a massive, ancient, moss-covered stone structure partially submerged in the island's jungle, looking like part of the landscape, wide angle establishing shot, overcast light, desaturated green and grey palette, no people\", \"texto_locucion\": \"No era un animal, ni otro náufrago. Era la isla.\", \"pexels_query\": \"ancient stone island\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, underground cavern, glowing with an otherworldly, faint light, revealing a complex, non-human mechanism or structure, wide angle establishing shot, dark blue and purple glow, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, underground cavern, glowing with an otherworldly, faint light, revealing a complex, non-human mechanism or structure, wide angle establishing shot, dark blue and purple glow, no people\", \"texto_locucion\": \"Algo milenario incrustado, pulsando con energía antigua.\", \"pexels_query\": \"underground ancient glow\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, the island's landscape viewed from a high vantage point, with the subtle suggestion of an overarching, intelligent design in its natural features, wide angle establishing shot, dramatic natural lighting, desaturated green and brown, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, the island's landscape viewed from a high vantage point, with the subtle suggestion of an overarching, intelligent design in its natural features, wide angle establishing shot, dramatic natural lighting, desaturated green and brown, no people\", \"texto_locucion\": \"La soledad era una trampa, una prueba impuesta por ella.\", \"pexels_query\": \"island intelligent design\"}, {\"id\": 28, \"prompt\": \"cinematic hyperrealistic photograph, vast ocean surrounding a tiny, distant island, emphasizing vulnerability and isolation, wide angle establishing shot, deep blue ocean, bright sky, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, vast ocean surrounding a tiny, distant island, emphasizing vulnerability and isolation, wide angle establishing shot, deep blue ocean, bright sky, no people\", \"texto_locucion\": \"¿Qué harías en un paraíso que te observa?\", \"pexels_query\": \"vast ocean island\"}, {\"id\": 29, \"prompt\": \"cinematic hyperrealistic photograph, a solitary human figure standing on a beach, looking overwhelmed by the scale of a mysterious, ancient ruin on the island, wide angle establishing shot, dramatic lighting, desaturated palette, distant silhouette\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a solitary human figure standing on a beach, looking overwhelmed by the scale of a mysterious, ancient ruin on the island, wide angle establishing shot, dramatic lighting, desaturated palette, distant silhouette\", \"texto_locucion\": \"¿Cómo sobrevivirías a una inteligencia incomprensiblemente antigua?\", \"pexels_query\": \"human overwhelmed ruins\"}, {\"id\": 30, \"prompt\": \"cinematic hyperrealistic photograph, an empty, serene beach with gentle waves, but a lingering sense of unease, wide angle establishing shot, soft daylight, desaturated palette, no people\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an empty, serene beach with gentle waves, but a lingering sense of unease, wide angle establishing shot, soft daylight, desaturated palette, no people\", \"texto_locucion\": \"Esto fue una simulación. Por ahora.\", \"pexels_query\": \"serene beach unease\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "La arena quemaba tus pies bajo el sol incesante. Creíste que el paraíso era tuyo, solo tuyo. Pero una sombra se movía entre los cocoteros. Sabías que no estabas solo en esta isla remota. Algo no está bien, lo sentiste antes, un escalofrío. Imaginamos islas desiertas como refugios, libertad absoluta. Playas vírgenes, cocos frescos, el mar como compañía. Millones sueñan con esta evasión, esta fantasía perfecta. Preparar un viaje así, exige una planificación meticulosa. ¿Y si la isla misma guarda secretos? Secretos ocultos bajo la arena, incomprensibles al humano. Llegaste con la marea, un naufragio o una elección. El sol se ponía, tiñendo el horizonte de rojo sangre. Entonces, un sonido. Un crujido lejano en la jungla. Demasiado profundo, demasiado rítmico para ser natural. Al día siguiente, marcas inexplicables en la arena aparecieron. Patrones geométricos, trazados con una precisión antinatural. Los objetos se movían sutilmente mientras tú dormías. Tu mochila, encontrada a metros de donde la dejaste. Pequeñas piedras formaban círculos donde no deberían estar. El silencio absoluto de la noche no era tranquilizador. Cada día, la sensación de ser observado crecía contigo. Nadie lo vio, nadie te creería. La paranoia te abraza, envolviéndote cada instante. No era un animal, ni otro náufrago. Era la isla. Algo milenario incrustado, pulsando con energía antigua. La soledad era una trampa, una prueba impuesta por ella. ¿Qué harías en un paraíso que te observa? ¿Cómo sobrevivirías a una inteligencia incomprensiblemente antigua? Esto fue una simulación. Por ahora.",
+    "titulo_sugerido": "Sobrevivir a la Isla: La Amenaza No es lo que Piensas",
+    "escenas_texto": [
+      "La arena quemaba tus pies bajo el sol incesante.",
+      "Creíste que el paraíso era tuyo, solo tuyo.",
+      "Pero una sombra se movía entre los cocoteros.",
+      "Sabías que no estabas solo en esta isla remota.",
+      "Algo no está bien, lo sentiste antes, un escalofrío.",
+      "Imaginamos islas desiertas como refugios, libertad absoluta.",
+      "Playas vírgenes, cocos frescos, el mar como compañía.",
+      "Millones sueñan con esta evasión, esta fantasía perfecta.",
+      "Preparar un viaje así, exige una planificación meticulosa.",
+      "¿Y si la isla misma guarda secretos?",
+      "Secretos ocultos bajo la arena, incomprensibles al humano.",
+      "Llegaste con la marea, un naufragio o una elección.",
+      "El sol se ponía, tiñendo el horizonte de rojo sangre.",
+      "Entonces, un sonido. Un crujido lejano en la jungla.",
+      "Demasiado profundo, demasiado rítmico para ser natural.",
+      "Al día siguiente, marcas inexplicables en la arena aparecieron.",
+      "Patrones geométricos, trazados con una precisión antinatural.",
+      "Los objetos se movían sutilmente mientras tú dormías.",
+      "Tu mochila, encontrada a metros de donde la dejaste.",
+      "Pequeñas piedras formaban círculos donde no deberían estar.",
+      "El silencio absoluto de la noche no era tranquilizador.",
+      "Cada día, la sensación de ser observado crecía contigo.",
+      "Nadie lo vio, nadie te creería.",
+      "La paranoia te abraza, envolviéndote cada instante.",
+      "No era un animal, ni otro náufrago. Era la isla.",
+      "Algo milenario incrustado, pulsando con energía antigua.",
+      "La soledad era una trampa, una prueba impuesta por ella.",
+      "¿Qué harías en un paraíso que te observa?",
+      "¿Cómo sobrevivirías a una inteligencia incomprensiblemente antigua?",
+      "Esto fue una simulación. Por ahora."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, pristine deserted island beach, scorching sun, footprints in sand, subtle unsettling shadow, wide angle establishing shot, desaturated palette with yellow accent, eerie stillness, photojournalism aesthetic, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, pristine deserted island beach, scorching sun, footprints in sand, subtle unsettling shadow, wide angle establishing shot, desaturated palette with yellow accent, eerie stillness, photojournalism aesthetic, no people",
+        "texto_locucion": "La arena quemaba tus pies bajo el sol incesante.",
+        "pexels_query": "desert island beach"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, empty tropical paradise, lush palm trees, clear blue ocean, sense of isolation, wide angle establishing shot, dramatic natural lighting, desaturated palette with turquoise accent, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty tropical paradise, lush palm trees, clear blue ocean, sense of isolation, wide angle establishing shot, dramatic natural lighting, desaturated palette with turquoise accent, no people",
+        "texto_locucion": "Creíste que el paraíso era tuyo, solo tuyo.",
+        "pexels_query": "tropical paradise empty"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, dense jungle foliage on a remote island, deep shadows, hint of movement between leaves, wide angle establishing shot, desaturated palette with green accent, dramatic natural lighting, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, dense jungle foliage on a remote island, deep shadows, hint of movement between leaves, wide angle establishing shot, desaturated palette with green accent, dramatic natural lighting, no people",
+        "texto_locucion": "Pero una sombra se movía entre los cocoteros.",
+        "pexels_query": "dense jungle island"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, remote island coastline, vast ocean, unsettling feeling of presence, wide angle establishing shot, desaturated palette with deep blue accent, dramatic natural lighting, few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, remote island coastline, vast ocean, unsettling feeling of presence, wide angle establishing shot, desaturated palette with deep blue accent, dramatic natural lighting, few distant silhouettes",
+        "texto_locucion": "Sabías que no estabas solo en esta isla remota.",
+        "pexels_query": "remote island unsettling"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, close-up on a person's back, looking out at a seemingly empty beach, subtle shiver running down their spine, wide angle establishing shot, desaturated palette with cool blue accent, dramatic natural lighting, single distant silhouette",
+        "prompt_visual": "cinematic hyperrealistic photograph, close-up on a person's back, looking out at a seemingly empty beach, subtle shiver running down their spine, wide angle establishing shot, desaturated palette with cool blue accent, dramatic natural lighting, single distant silhouette",
+        "texto_locucion": "Algo no está bien, lo sentiste antes, un escalofrío.",
+        "pexels_query": "person back beach"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, idyllic postcard view of a deserted island, white sand, turquoise water, no trace of human activity, wide angle establishing shot, bright natural light, vibrant colors, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, idyllic postcard view of a deserted island, white sand, turquoise water, no trace of human activity, wide angle establishing shot, bright natural light, vibrant colors, no people",
+        "texto_locucion": "Imaginamos islas desiertas como refugios, libertad absoluta.",
+        "pexels_query": "pristine island idyllic"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, calm ocean lapping a untouched shore, coconut trees swaying gently, serene and peaceful, wide angle establishing shot, golden hour light, warm palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, calm ocean lapping a untouched shore, coconut trees swaying gently, serene and peaceful, wide angle establishing shot, golden hour light, warm palette, no people",
+        "texto_locucion": "Playas vírgenes, cocos frescos, el mar como compañía.",
+        "pexels_query": "calm ocean shore"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, aerial view of a small, isolated island surrounded by vast blue ocean, remote and untouched, wide angle establishing shot, bright daylight, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, aerial view of a small, isolated island surrounded by vast blue ocean, remote and untouched, wide angle establishing shot, bright daylight, no people",
+        "texto_locucion": "Millones sueñan con esta evasión, esta fantasía perfecta.",
+        "pexels_query": "isolated island aerial"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, backpack and survival gear neatly arranged on a sandy beach, implying preparation, wide angle establishing shot, soft morning light, muted green and brown palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, backpack and survival gear neatly arranged on a sandy beach, implying preparation, wide angle establishing shot, soft morning light, muted green and brown palette, no people",
+        "texto_locucion": "Preparar un viaje así, exige una planificación meticulosa.",
+        "pexels_query": "survival gear beach"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, mysterious cave entrance on a remote island, dark and foreboding, wide angle establishing shot, dramatic shadows, desaturated palette with a hint of dark green, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, mysterious cave entrance on a remote island, dark and foreboding, wide angle establishing shot, dramatic shadows, desaturated palette with a hint of dark green, no people",
+        "texto_locucion": "¿Y si la isla misma guarda secretos?",
+        "pexels_query": "mysterious cave island"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, sand partially covering an ancient, unidentifiable object, hinting at hidden depths, wide angle establishing shot, dim light, desaturated palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, sand partially covering an ancient, unidentifiable object, hinting at hidden depths, wide angle establishing shot, dim light, desaturated palette, no people",
+        "texto_locucion": "Secretos ocultos bajo la arena, incomprensibles al humano.",
+        "pexels_query": "hidden object sand"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, small raft washed ashore on a deserted island, sunset in the background, implying arrival, wide angle establishing shot, warm orange and purple hues, few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, small raft washed ashore on a deserted island, sunset in the background, implying arrival, wide angle establishing shot, warm orange and purple hues, few distant silhouettes",
+        "texto_locucion": "Llegaste con la marea, un naufragio o una elección.",
+        "pexels_query": "raft washed ashore"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, dramatic sunset over a tropical island, sky ablaze with red and orange, wide angle establishing shot, vibrant and intense colors, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, dramatic sunset over a tropical island, sky ablaze with red and orange, wide angle establishing shot, vibrant and intense colors, no people",
+        "texto_locucion": "El sol se ponía, tiñendo el horizonte de rojo sangre.",
+        "pexels_query": "dramatic island sunset"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, deep into a dark, overgrown jungle, subtle rustling of leaves, sound implication, wide angle establishing shot, deep green and brown tones, dramatic shadows, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, deep into a dark, overgrown jungle, subtle rustling of leaves, sound implication, wide angle establishing shot, deep green and brown tones, dramatic shadows, no people",
+        "texto_locucion": "Entonces, un sonido. Un crujido lejano en la jungla.",
+        "pexels_query": "deep jungle rustling"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, dense jungle, ancient roots, sense of something hidden, wide angle establishing shot, dark and mysterious, desaturated palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, dense jungle, ancient roots, sense of something hidden, wide angle establishing shot, dark and mysterious, desaturated palette, no people",
+        "texto_locucion": "Demasiado profundo, demasiado rítmico para ser natural.",
+        "pexels_query": "ancient jungle roots"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, pristine sand beach with strange, geometric patterns etched into it, unnaturally perfect, wide angle establishing shot, soft morning light, desaturated palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, pristine sand beach with strange, geometric patterns etched into it, unnaturally perfect, wide angle establishing shot, soft morning light, desaturated palette, no people",
+        "texto_locucion": "Al día siguiente, marcas inexplicables en la arena aparecieron.",
+        "pexels_query": "geometric patterns sand"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, close-up of intricate, unidentifiable symbols in the sand, clear and precise, wide angle establishing shot, desaturated palette, eerie stillness, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, close-up of intricate, unidentifiable symbols in the sand, clear and precise, wide angle establishing shot, desaturated palette, eerie stillness, no people",
+        "texto_locucion": "Patrones geométricos, trazados con una precisión antinatural.",
+        "pexels_query": "intricate sand symbols"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, a simple camp with a sleeping bag, slight disturbance in the arrangement of nearby objects, wide angle establishing shot, moonlight filtering through trees, cool blue tones, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, a simple camp with a sleeping bag, slight disturbance in the arrangement of nearby objects, wide angle establishing shot, moonlight filtering through trees, cool blue tones, no people",
+        "texto_locucion": "Los objetos se movían sutilmente mientras tú dormías.",
+        "pexels_query": "disturbed camp night"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, a backpack lying a distance from a campfire, suggesting it was moved, wide angle establishing shot, dim light from a dying fire, desaturated palette with orange accent, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, a backpack lying a distance from a campfire, suggesting it was moved, wide angle establishing shot, dim light from a dying fire, desaturated palette with orange accent, no people",
+        "texto_locucion": "Tu mochila, encontrada a metros de donde la dejaste.",
+        "pexels_query": "backpack moved campsite"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, small, ordinary stones arranged in a perfect circle on the ground, out of place in the wilderness, wide angle establishing shot, natural light, muted earth tones, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, small, ordinary stones arranged in a perfect circle on the ground, out of place in the wilderness, wide angle establishing shot, natural light, muted earth tones, no people",
+        "texto_locucion": "Pequeñas piedras formaban círculos donde no deberían estar.",
+        "pexels_query": "stones circle wilderness"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, moonlit jungle at night, almost absolute darkness, a profound, unsettling silence, wide angle establishing shot, deep blue and black palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, moonlit jungle at night, almost absolute darkness, a profound, unsettling silence, wide angle establishing shot, deep blue and black palette, no people",
+        "texto_locucion": "El silencio absoluto de la noche no era tranquilizador.",
+        "pexels_query": "moonlit jungle silence"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, viewpoint from deep within a jungle, looking out towards an unseen presence, sense of being watched, wide angle establishing shot, dark and mysterious, green and brown tones, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, viewpoint from deep within a jungle, looking out towards an unseen presence, sense of being watched, wide angle establishing shot, dark and mysterious, green and brown tones, no people",
+        "texto_locucion": "Cada día, la sensación de ser observado crecía contigo.",
+        "pexels_query": "jungle being watched"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, remote beach at dawn, footprints leading into the water, sense of desperation and loneliness, wide angle establishing shot, cool morning light, desaturated blue and grey, few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, remote beach at dawn, footprints leading into the water, sense of desperation and loneliness, wide angle establishing shot, cool morning light, desaturated blue and grey, few distant silhouettes",
+        "texto_locucion": "Nadie lo vio, nadie te creería.",
+        "pexels_query": "lonely beach footprints"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, close-up of a person's hand clutching their head in a moment of extreme stress or paranoia, wide angle establishing shot, dramatic shadows, desaturated palette, no visible face",
+        "prompt_visual": "cinematic hyperrealistic photograph, close-up of a person's hand clutching their head in a moment of extreme stress or paranoia, wide angle establishing shot, dramatic shadows, desaturated palette, no visible face",
+        "texto_locucion": "La paranoia te abraza, envolviéndote cada instante.",
+        "pexels_query": "paranoia stress close-up"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, a massive, ancient, moss-covered stone structure partially submerged in the island's jungle, looking like part of the landscape, wide angle establishing shot, overcast light, desaturated green and grey palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, a massive, ancient, moss-covered stone structure partially submerged in the island's jungle, looking like part of the landscape, wide angle establishing shot, overcast light, desaturated green and grey palette, no people",
+        "texto_locucion": "No era un animal, ni otro náufrago. Era la isla.",
+        "pexels_query": "ancient stone island"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, underground cavern, glowing with an otherworldly, faint light, revealing a complex, non-human mechanism or structure, wide angle establishing shot, dark blue and purple glow, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, underground cavern, glowing with an otherworldly, faint light, revealing a complex, non-human mechanism or structure, wide angle establishing shot, dark blue and purple glow, no people",
+        "texto_locucion": "Algo milenario incrustado, pulsando con energía antigua.",
+        "pexels_query": "underground ancient glow"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, the island's landscape viewed from a high vantage point, with the subtle suggestion of an overarching, intelligent design in its natural features, wide angle establishing shot, dramatic natural lighting, desaturated green and brown, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, the island's landscape viewed from a high vantage point, with the subtle suggestion of an overarching, intelligent design in its natural features, wide angle establishing shot, dramatic natural lighting, desaturated green and brown, no people",
+        "texto_locucion": "La soledad era una trampa, una prueba impuesta por ella.",
+        "pexels_query": "island intelligent design"
+      },
+      {
+        "id": 28,
+        "prompt": "cinematic hyperrealistic photograph, vast ocean surrounding a tiny, distant island, emphasizing vulnerability and isolation, wide angle establishing shot, deep blue ocean, bright sky, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, vast ocean surrounding a tiny, distant island, emphasizing vulnerability and isolation, wide angle establishing shot, deep blue ocean, bright sky, no people",
+        "texto_locucion": "¿Qué harías en un paraíso que te observa?",
+        "pexels_query": "vast ocean island"
+      },
+      {
+        "id": 29,
+        "prompt": "cinematic hyperrealistic photograph, a solitary human figure standing on a beach, looking overwhelmed by the scale of a mysterious, ancient ruin on the island, wide angle establishing shot, dramatic lighting, desaturated palette, distant silhouette",
+        "prompt_visual": "cinematic hyperrealistic photograph, a solitary human figure standing on a beach, looking overwhelmed by the scale of a mysterious, ancient ruin on the island, wide angle establishing shot, dramatic lighting, desaturated palette, distant silhouette",
+        "texto_locucion": "¿Cómo sobrevivirías a una inteligencia incomprensiblemente antigua?",
+        "pexels_query": "human overwhelmed ruins"
+      },
+      {
+        "id": 30,
+        "prompt": "cinematic hyperrealistic photograph, an empty, serene beach with gentle waves, but a lingering sense of unease, wide angle establishing shot, soft daylight, desaturated palette, no people",
+        "prompt_visual": "cinematic hyperrealistic photograph, an empty, serene beach with gentle waves, but a lingering sense of unease, wide angle establishing shot, soft daylight, desaturated palette, no people",
+        "texto_locucion": "Esto fue una simulación. Por ahora.",
+        "pexels_query": "serene beach unease"
+      }
+    ],
+    "hooks": [
+      "Isla no está desierta.",
+      "Algo te observa.",
+      "La soledad es una trampa."
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
