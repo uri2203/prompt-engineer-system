@@ -3934,5 +3934,240 @@
       "¿Quién eres ahora?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "8be1d724-7fe8-45ca-8481-53f39422d49a",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, a torn world map, continents visibly shifted and merged, dramatic natural lighting, desaturated palette with blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a torn world map, continents visibly shifted and merged, dramatic natural lighting, desaturated palette with blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"El mapa mundial se reescribió, aquella madrugada.\", \"pexels_query\": \"torn world map\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, a grand, empty conference hall after an important signing, a single document on a table, dramatic natural lighting, desaturated palette with gold accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, golden hour\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a grand, empty conference hall after an important signing, a single document on a table, dramatic natural lighting, desaturated palette with gold accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, golden hour\", \"texto_locucion\": \"Un anuncio silencioso cambió la geografía del poder.\", \"pexels_query\": \"empty conference table\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, a desolate landscape where two distinct geographical features (like Siberian tundra and Indian plains) abruptly merge, a clear but unsettling horizon, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a desolate landscape where two distinct geographical features (like Siberian tundra and Indian plains) abruptly merge, a clear but unsettling horizon, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"Dos continentes parecían, de repente, uno solo.\", \"pexels_query\": \"merging landscapes\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, a solitary figure's back looking at a chaotic, flickering news screen showing a shifting world map, dark room, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, low light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a solitary figure's back looking at a chaotic, flickering news screen showing a shifting world map, dark room, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, low light\", \"texto_locucion\": \"Sentiste que algo profundo no estaba bien.\", \"pexels_query\": \"watching news in dark\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, satellite view of Earth at night highlighting India and Russia, intricate light patterns, dramatic natural lighting, desaturated palette with blue and yellow accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, cosmic light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, satellite view of Earth at night highlighting India and Russia, intricate light patterns, dramatic natural lighting, desaturated palette with blue and yellow accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, cosmic light\", \"texto_locucion\": \"Hoy, India y Rusia mantienen vínculos estratégicos firmes.\", \"pexels_query\": \"India Russia night\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, pipelines and cargo ships symbolizing energy and trade routes, misty industrial landscape, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, golden hour\", \"prompt_visual\": \"cinematic hyperrealistic photograph, pipelines and cargo ships symbolizing energy and trade routes, misty industrial landscape, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, golden hour\", \"texto_locucion\": \"Comparten intereses energéticos, comerciales y de defensa.\", \"pexels_query\": \"oil pipelines cargo\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, a globe showing multiple power blocs, abstract and interconnected lines, dramatic natural lighting, desaturated palette with silver accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, studio light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a globe showing multiple power blocs, abstract and interconnected lines, dramatic natural lighting, desaturated palette with silver accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, studio light\", \"texto_locucion\": \"Son pilares en un orden mundial multipolar complejo.\", \"pexels_query\": \"global power blocs\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, ancient Indian temples juxtaposed with modern Russian architecture, contrasting styles, dramatic natural lighting, desaturated palette with warm and cool tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, mixed light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, ancient Indian temples juxtaposed with modern Russian architecture, contrasting styles, dramatic natural lighting, desaturated palette with warm and cool tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, mixed light\", \"texto_locucion\": \"Sus sistemas culturales y políticos son muy distintos.\", \"pexels_query\": \"India Russia architecture\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, a faint, almost invisible line separating two distinct territories on a map, yet connected by glowing threads, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital glow\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a faint, almost invisible line separating two distinct territories on a map, yet connected by glowing threads, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital glow\", \"texto_locucion\": \"¿Pero, qué pasaría si un día el mapa cambiara?\", \"pexels_query\": \"geopolitical connection abstract\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, a highly secure, sterile meeting room with a single, large, illuminated screen displaying a new continental outline, dramatic natural lighting, desaturated palette with cool blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, interior light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a highly secure, sterile meeting room with a single, large, illuminated screen displaying a new continental outline, dramatic natural lighting, desaturated palette with cool blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, interior light\", \"texto_locucion\": \"Una cumbre diplomática secreta reveló la 'Unión Euroasiática-India'.\", \"pexels_query\": \"secret meeting room screen\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, an ancient scroll or treaty document with futuristic holographic projections merging two national symbols, dramatic natural lighting, desaturated palette with gold and blue accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, symbolic light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an ancient scroll or treaty document with futuristic holographic projections merging two national symbols, dramatic natural lighting, desaturated palette with gold and blue accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, symbolic light\", \"texto_locucion\": \"El tratado se firmó, creando un nuevo superestado.\", \"pexels_query\": \"futuristic treaty document\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, a TV studio with screens displaying an error message or static, abandoned equipment, dramatic natural lighting, desaturated palette with grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, emergency lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a TV studio with screens displaying an error message or static, abandoned equipment, dramatic natural lighting, desaturated palette with grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, emergency lighting\", \"texto_locucion\": \"Primero, el silencio absoluto de los grandes medios.\", \"pexels_query\": \"abandoned news studio\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, digital data streams and cryptic text flowing across cityscapes, a sense of digital unease, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, cyber light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, digital data streams and cryptic text flowing across cityscapes, a sense of digital unease, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, cyber light\", \"texto_locucion\": \"Después, los rumores se hicieron verdades incómodas.\", \"pexels_query\": \"digital rumors city\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, abstract representation of stock market crash, red lines plummeting, a fragmented digital display, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, abstract representation of stock market crash, red lines plummeting, a fragmented digital display, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital light\", \"texto_locucion\": \"Las bolsas mundiales reaccionaron con temblor inmediato.\", \"pexels_query\": \"stock market crash abstract\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, a solitary, empty governmental building under a heavy, dark sky, a sense of foreboding, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, twilight\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a solitary, empty governmental building under a heavy, dark sky, a sense of foreboding, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, twilight\", \"texto_locucion\": \"El temor a lo desconocido paralizó decisiones cruciales.\", \"pexels_query\": \"empty government building\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, a vast, imposing monument of an unknown, unified symbol, dwarfing the surroundings, dramatic natural lighting, desaturated palette with bronze accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, sunrise\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, imposing monument of an unknown, unified symbol, dwarfing the surroundings, dramatic natural lighting, desaturated palette with bronze accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, sunrise\", \"texto_locucion\": \"Una nueva superpotencia emergía en el este global.\", \"pexels_query\": \"new empire monument\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, sprawling oil fields and diamond mines meeting vast agricultural lands, viewed from above, dramatic natural lighting, desaturated palette with earthy tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, aerial view\", \"prompt_visual\": \"cinematic hyperrealistic photograph, sprawling oil fields and diamond mines meeting vast agricultural lands, viewed from above, dramatic natural lighting, desaturated palette with earthy tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, aerial view\", \"texto_locucion\": \"El control conjunto de vastas reservas energéticas mundiales.\", \"pexels_query\": \"combined resources landscape\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, glowing, intricate trade routes crisscrossing a digital map, highlighting new patterns, dramatic natural lighting, desaturated palette with electric blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, data visualization\", \"prompt_visual\": \"cinematic hyperrealistic photograph, glowing, intricate trade routes crisscrossing a digital map, highlighting new patterns, dramatic natural lighting, desaturated palette with electric blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, data visualization\", \"texto_locucion\": \"Rutas comerciales y geopolítica fueron redefinidas para siempre.\", \"pexels_query\": \"new global trade routes\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, a mosaic of diverse faces (blurred, indistinct), representing different ethnicities and cultures, merging into a single, complex image, dramatic natural lighting, desaturated palette with diverse accents, wide angle establishing shot, no identifiable people, eerie stillness, photojournalism aesthetic, abstract light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a mosaic of diverse faces (blurred, indistinct), representing different ethnicities and cultures, merging into a single, complex image, dramatic natural lighting, desaturated palette with diverse accents, wide angle establishing shot, no identifiable people, eerie stillness, photojournalism aesthetic, abstract light\", \"texto_locucion\": \"Cientos de lenguas, credos, culturas, ahora unidas forzadas.\", \"pexels_query\": \"diverse cultural mosaic\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, an impossibly complex, multi-layered governmental building, abstract and overwhelming, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, architectural light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an impossibly complex, multi-layered governmental building, abstract and overwhelming, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, architectural light\", \"texto_locucion\": \"La gobernanza de tal diversidad fue un reto enorme.\", \"pexels_query\": \"complex government structure\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, a vast, imposing military parade ground filled with indistinguishable heavy machinery and distant figures, under a heavy sky, dramatic natural lighting, desaturated palette with military green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, imposing military parade ground filled with indistinguishable heavy machinery and distant figures, under a heavy sky, dramatic natural lighting, desaturated palette with military green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"El mayor ejército y arsenal nuclear, bajo un mando.\", \"pexels_query\": \"massive military parade\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, shattered fragments of old alliance flags scattered on barren ground, dramatic natural lighting, desaturated palette with muted colors, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stark light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, shattered fragments of old alliance flags scattered on barren ground, dramatic natural lighting, desaturated palette with muted colors, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stark light\", \"texto_locucion\": \"Esto reconfiguró por completo la seguridad mundial.\", \"pexels_query\": \"shattered alliance flags\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, a colossal statue with visible cracks and fault lines running through its structure, menacing clouds in the background, dramatic natural lighting, desaturated palette with stone grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stormy light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a colossal statue with visible cracks and fault lines running through its structure, menacing clouds in the background, dramatic natural lighting, desaturated palette with stone grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stormy light\", \"texto_locucion\": \"La aparente unión escondía profundas divisiones latentes.\", \"pexels_query\": \"cracked colossal statue\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, a close-up of a fragile, interconnected structure starting to splinter, delicate balance, dramatic natural lighting, desaturated palette with subtle red hints, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, sharp focus light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a close-up of a fragile, interconnected structure starting to splinter, delicate balance, dramatic natural lighting, desaturated palette with subtle red hints, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, sharp focus light\", \"texto_locucion\": \"La cohesión interna se mostró más frágil de lo esperado.\", \"pexels_query\": \"fragile interconnected structure\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, a vast, empty city square at night, with towering, monolithic buildings swaying almost imperceptibly, a sense of instability, dramatic natural lighting, desaturated palette with blue and brown accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, city lights\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, empty city square at night, with towering, monolithic buildings swaying almost imperceptibly, a sense of instability, dramatic natural lighting, desaturated palette with blue and brown accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, city lights\", \"texto_locucion\": \"El nuevo gigante temblaba ante su propia magnitud.\", \"pexels_query\": \"unstable city monoliths\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, a winding, uncertain road leading into a thick, swirling fog, symbolic of an unknown future, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, foggy light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a winding, uncertain road leading into a thick, swirling fog, symbolic of an unknown future, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, foggy light\", \"texto_locucion\": \"¿Un mundo mejor o un caos de proporciones épicas?\", \"pexels_query\": \"uncertain future road\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, a vast, empty screen displaying the channel logo 'Umbral Alterno', with a subtle, ominous glow, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, screen glow\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, empty screen displaying the channel logo 'Umbral Alterno', with a subtle, ominous glow, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, screen glow\", \"texto_locucion\": \"Esto fue una simulación. Por ahora, imagina.\", \"pexels_query\": \"abstract digital portal\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "El mapa mundial se reescribió, aquella madrugada. Un anuncio silencioso cambió la geografía del poder. Dos continentes parecían, de repente, uno solo. Sentiste que algo profundo no estaba bien. Hoy, India y Rusia mantienen vínculos estratégicos firmes. Comparten intereses energéticos, comerciales y de defensa. Son pilares en un orden mundial multipolar complejo. Sus sistemas culturales y políticos son muy distintos. ¿Pero, qué pasaría si un día el mapa cambiara? Una cumbre diplomática secreta reveló la 'Unión Euroasiática-India'. El tratado se firmó, creando un nuevo superestado. Primero, el silencio absoluto de los grandes medios. Después, los rumores se hicieron verdades incómodas. Las bolsas mundiales reaccionaron con temblor inmediato. El temor a lo desconocido paralizó decisiones cruciales. Una nueva superpotencia emergía en el este global. El control conjunto de vastas reservas energéticas mundiales. Rutas comerciales y geopolítica fueron redefinidas para siempre. Cientos de lenguas, credos, culturas, ahora unidas forzadas. La gobernanza de tal diversidad fue un reto enorme. El mayor ejército y arsenal nuclear, bajo un mando. Esto reconfiguró por completo la seguridad mundial. La aparente unión escondía profundas divisiones latentes. La cohesión interna se mostró más frágil de lo esperado. El nuevo gigante temblaba ante su propia magnitud. ¿Un mundo mejor o un caos de proporciones épicas? Esto fue una simulación. Por ahora, imagina.",
+    "titulo_sugerido": "¿Qué pasaría si Rusia e India se unieran en un solo Estado?",
+    "escenas_texto": [
+      "El mapa mundial se reescribió, aquella madrugada.",
+      "Un anuncio silencioso cambió la geografía del poder.",
+      "Dos continentes parecían, de repente, uno solo.",
+      "Sentiste que algo profundo no estaba bien.",
+      "Hoy, India y Rusia mantienen vínculos estratégicos firmes.",
+      "Comparten intereses energéticos, comerciales y de defensa.",
+      "Son pilares en un orden mundial multipolar complejo.",
+      "Sus sistemas culturales y políticos son muy distintos.",
+      "¿Pero, qué pasaría si un día el mapa cambiara?",
+      "Una cumbre diplomática secreta reveló la 'Unión Euroasiática-India'.",
+      "El tratado se firmó, creando un nuevo superestado.",
+      "Primero, el silencio absoluto de los grandes medios.",
+      "Después, los rumores se hicieron verdades incómodas.",
+      "Las bolsas mundiales reaccionaron con temblor inmediato.",
+      "El temor a lo desconocido paralizó decisiones cruciales.",
+      "Una nueva superpotencia emergía en el este global.",
+      "El control conjunto de vastas reservas energéticas mundiales.",
+      "Rutas comerciales y geopolítica fueron redefinidas para siempre.",
+      "Cientos de lenguas, credos, culturas, ahora unidas forzadas.",
+      "La gobernanza de tal diversidad fue un reto enorme.",
+      "El mayor ejército y arsenal nuclear, bajo un mando.",
+      "Esto reconfiguró por completo la seguridad mundial.",
+      "La aparente unión escondía profundas divisiones latentes.",
+      "La cohesión interna se mostró más frágil de lo esperado.",
+      "El nuevo gigante temblaba ante su propia magnitud.",
+      "¿Un mundo mejor o un caos de proporciones épicas?",
+      "Esto fue una simulación. Por ahora, imagina."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, a torn world map, continents visibly shifted and merged, dramatic natural lighting, desaturated palette with blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a torn world map, continents visibly shifted and merged, dramatic natural lighting, desaturated palette with blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light",
+        "texto_locucion": "El mapa mundial se reescribió, aquella madrugada.",
+        "pexels_query": "torn world map"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, a grand, empty conference hall after an important signing, a single document on a table, dramatic natural lighting, desaturated palette with gold accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, golden hour",
+        "prompt_visual": "cinematic hyperrealistic photograph, a grand, empty conference hall after an important signing, a single document on a table, dramatic natural lighting, desaturated palette with gold accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, golden hour",
+        "texto_locucion": "Un anuncio silencioso cambió la geografía del poder.",
+        "pexels_query": "empty conference table"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, a desolate landscape where two distinct geographical features (like Siberian tundra and Indian plains) abruptly merge, a clear but unsettling horizon, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a desolate landscape where two distinct geographical features (like Siberian tundra and Indian plains) abruptly merge, a clear but unsettling horizon, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, overcast light",
+        "texto_locucion": "Dos continentes parecían, de repente, uno solo.",
+        "pexels_query": "merging landscapes"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, a solitary figure's back looking at a chaotic, flickering news screen showing a shifting world map, dark room, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, low light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a solitary figure's back looking at a chaotic, flickering news screen showing a shifting world map, dark room, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, low light",
+        "texto_locucion": "Sentiste que algo profundo no estaba bien.",
+        "pexels_query": "watching news in dark"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, satellite view of Earth at night highlighting India and Russia, intricate light patterns, dramatic natural lighting, desaturated palette with blue and yellow accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, cosmic light",
+        "prompt_visual": "cinematic hyperrealistic photograph, satellite view of Earth at night highlighting India and Russia, intricate light patterns, dramatic natural lighting, desaturated palette with blue and yellow accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, cosmic light",
+        "texto_locucion": "Hoy, India y Rusia mantienen vínculos estratégicos firmes.",
+        "pexels_query": "India Russia night"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, pipelines and cargo ships symbolizing energy and trade routes, misty industrial landscape, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, golden hour",
+        "prompt_visual": "cinematic hyperrealistic photograph, pipelines and cargo ships symbolizing energy and trade routes, misty industrial landscape, dramatic natural lighting, desaturated palette with orange accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, golden hour",
+        "texto_locucion": "Comparten intereses energéticos, comerciales y de defensa.",
+        "pexels_query": "oil pipelines cargo"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, a globe showing multiple power blocs, abstract and interconnected lines, dramatic natural lighting, desaturated palette with silver accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, studio light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a globe showing multiple power blocs, abstract and interconnected lines, dramatic natural lighting, desaturated palette with silver accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, studio light",
+        "texto_locucion": "Son pilares en un orden mundial multipolar complejo.",
+        "pexels_query": "global power blocs"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, ancient Indian temples juxtaposed with modern Russian architecture, contrasting styles, dramatic natural lighting, desaturated palette with warm and cool tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, mixed light",
+        "prompt_visual": "cinematic hyperrealistic photograph, ancient Indian temples juxtaposed with modern Russian architecture, contrasting styles, dramatic natural lighting, desaturated palette with warm and cool tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, mixed light",
+        "texto_locucion": "Sus sistemas culturales y políticos son muy distintos.",
+        "pexels_query": "India Russia architecture"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, a faint, almost invisible line separating two distinct territories on a map, yet connected by glowing threads, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital glow",
+        "prompt_visual": "cinematic hyperrealistic photograph, a faint, almost invisible line separating two distinct territories on a map, yet connected by glowing threads, dramatic natural lighting, desaturated palette with purple accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital glow",
+        "texto_locucion": "¿Pero, qué pasaría si un día el mapa cambiara?",
+        "pexels_query": "geopolitical connection abstract"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, a highly secure, sterile meeting room with a single, large, illuminated screen displaying a new continental outline, dramatic natural lighting, desaturated palette with cool blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, interior light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a highly secure, sterile meeting room with a single, large, illuminated screen displaying a new continental outline, dramatic natural lighting, desaturated palette with cool blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, interior light",
+        "texto_locucion": "Una cumbre diplomática secreta reveló la 'Unión Euroasiática-India'.",
+        "pexels_query": "secret meeting room screen"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, an ancient scroll or treaty document with futuristic holographic projections merging two national symbols, dramatic natural lighting, desaturated palette with gold and blue accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, symbolic light",
+        "prompt_visual": "cinematic hyperrealistic photograph, an ancient scroll or treaty document with futuristic holographic projections merging two national symbols, dramatic natural lighting, desaturated palette with gold and blue accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, symbolic light",
+        "texto_locucion": "El tratado se firmó, creando un nuevo superestado.",
+        "pexels_query": "futuristic treaty document"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, a TV studio with screens displaying an error message or static, abandoned equipment, dramatic natural lighting, desaturated palette with grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, emergency lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a TV studio with screens displaying an error message or static, abandoned equipment, dramatic natural lighting, desaturated palette with grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, emergency lighting",
+        "texto_locucion": "Primero, el silencio absoluto de los grandes medios.",
+        "pexels_query": "abandoned news studio"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, digital data streams and cryptic text flowing across cityscapes, a sense of digital unease, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, cyber light",
+        "prompt_visual": "cinematic hyperrealistic photograph, digital data streams and cryptic text flowing across cityscapes, a sense of digital unease, dramatic natural lighting, desaturated palette with green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, cyber light",
+        "texto_locucion": "Después, los rumores se hicieron verdades incómodas.",
+        "pexels_query": "digital rumors city"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, abstract representation of stock market crash, red lines plummeting, a fragmented digital display, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital light",
+        "prompt_visual": "cinematic hyperrealistic photograph, abstract representation of stock market crash, red lines plummeting, a fragmented digital display, dramatic natural lighting, desaturated palette with red accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, digital light",
+        "texto_locucion": "Las bolsas mundiales reaccionaron con temblor inmediato.",
+        "pexels_query": "stock market crash abstract"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, a solitary, empty governmental building under a heavy, dark sky, a sense of foreboding, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, twilight",
+        "prompt_visual": "cinematic hyperrealistic photograph, a solitary, empty governmental building under a heavy, dark sky, a sense of foreboding, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, twilight",
+        "texto_locucion": "El temor a lo desconocido paralizó decisiones cruciales.",
+        "pexels_query": "empty government building"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, a vast, imposing monument of an unknown, unified symbol, dwarfing the surroundings, dramatic natural lighting, desaturated palette with bronze accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, sunrise",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, imposing monument of an unknown, unified symbol, dwarfing the surroundings, dramatic natural lighting, desaturated palette with bronze accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, sunrise",
+        "texto_locucion": "Una nueva superpotencia emergía en el este global.",
+        "pexels_query": "new empire monument"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, sprawling oil fields and diamond mines meeting vast agricultural lands, viewed from above, dramatic natural lighting, desaturated palette with earthy tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, aerial view",
+        "prompt_visual": "cinematic hyperrealistic photograph, sprawling oil fields and diamond mines meeting vast agricultural lands, viewed from above, dramatic natural lighting, desaturated palette with earthy tones, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, aerial view",
+        "texto_locucion": "El control conjunto de vastas reservas energéticas mundiales.",
+        "pexels_query": "combined resources landscape"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, glowing, intricate trade routes crisscrossing a digital map, highlighting new patterns, dramatic natural lighting, desaturated palette with electric blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, data visualization",
+        "prompt_visual": "cinematic hyperrealistic photograph, glowing, intricate trade routes crisscrossing a digital map, highlighting new patterns, dramatic natural lighting, desaturated palette with electric blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, data visualization",
+        "texto_locucion": "Rutas comerciales y geopolítica fueron redefinidas para siempre.",
+        "pexels_query": "new global trade routes"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, a mosaic of diverse faces (blurred, indistinct), representing different ethnicities and cultures, merging into a single, complex image, dramatic natural lighting, desaturated palette with diverse accents, wide angle establishing shot, no identifiable people, eerie stillness, photojournalism aesthetic, abstract light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a mosaic of diverse faces (blurred, indistinct), representing different ethnicities and cultures, merging into a single, complex image, dramatic natural lighting, desaturated palette with diverse accents, wide angle establishing shot, no identifiable people, eerie stillness, photojournalism aesthetic, abstract light",
+        "texto_locucion": "Cientos de lenguas, credos, culturas, ahora unidas forzadas.",
+        "pexels_query": "diverse cultural mosaic"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, an impossibly complex, multi-layered governmental building, abstract and overwhelming, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, architectural light",
+        "prompt_visual": "cinematic hyperrealistic photograph, an impossibly complex, multi-layered governmental building, abstract and overwhelming, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, architectural light",
+        "texto_locucion": "La gobernanza de tal diversidad fue un reto enorme.",
+        "pexels_query": "complex government structure"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, a vast, imposing military parade ground filled with indistinguishable heavy machinery and distant figures, under a heavy sky, dramatic natural lighting, desaturated palette with military green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, imposing military parade ground filled with indistinguishable heavy machinery and distant figures, under a heavy sky, dramatic natural lighting, desaturated palette with military green accent, wide angle establishing shot, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light",
+        "texto_locucion": "El mayor ejército y arsenal nuclear, bajo un mando.",
+        "pexels_query": "massive military parade"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, shattered fragments of old alliance flags scattered on barren ground, dramatic natural lighting, desaturated palette with muted colors, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stark light",
+        "prompt_visual": "cinematic hyperrealistic photograph, shattered fragments of old alliance flags scattered on barren ground, dramatic natural lighting, desaturated palette with muted colors, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stark light",
+        "texto_locucion": "Esto reconfiguró por completo la seguridad mundial.",
+        "pexels_query": "shattered alliance flags"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, a colossal statue with visible cracks and fault lines running through its structure, menacing clouds in the background, dramatic natural lighting, desaturated palette with stone grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stormy light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a colossal statue with visible cracks and fault lines running through its structure, menacing clouds in the background, dramatic natural lighting, desaturated palette with stone grey accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, stormy light",
+        "texto_locucion": "La aparente unión escondía profundas divisiones latentes.",
+        "pexels_query": "cracked colossal statue"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, a close-up of a fragile, interconnected structure starting to splinter, delicate balance, dramatic natural lighting, desaturated palette with subtle red hints, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, sharp focus light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a close-up of a fragile, interconnected structure starting to splinter, delicate balance, dramatic natural lighting, desaturated palette with subtle red hints, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, sharp focus light",
+        "texto_locucion": "La cohesión interna se mostró más frágil de lo esperado.",
+        "pexels_query": "fragile interconnected structure"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, a vast, empty city square at night, with towering, monolithic buildings swaying almost imperceptibly, a sense of instability, dramatic natural lighting, desaturated palette with blue and brown accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, city lights",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, empty city square at night, with towering, monolithic buildings swaying almost imperceptibly, a sense of instability, dramatic natural lighting, desaturated palette with blue and brown accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, city lights",
+        "texto_locucion": "El nuevo gigante temblaba ante su propia magnitud.",
+        "pexels_query": "unstable city monoliths"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, a winding, uncertain road leading into a thick, swirling fog, symbolic of an unknown future, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, foggy light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a winding, uncertain road leading into a thick, swirling fog, symbolic of an unknown future, dramatic natural lighting, desaturated palette with grey and green accents, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, foggy light",
+        "texto_locucion": "¿Un mundo mejor o un caos de proporciones épicas?",
+        "pexels_query": "uncertain future road"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, a vast, empty screen displaying the channel logo 'Umbral Alterno', with a subtle, ominous glow, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, screen glow",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, empty screen displaying the channel logo 'Umbral Alterno', with a subtle, ominous glow, dramatic natural lighting, desaturated palette with deep blue accent, wide angle establishing shot, no people, eerie stillness, photojournalism aesthetic, screen glow",
+        "texto_locucion": "Esto fue una simulación. Por ahora, imagina.",
+        "pexels_query": "abstract digital portal"
+      }
+    ],
+    "hooks": [
+      "Dos continentes, una nación",
+      "El poder global redefine",
+      "¿Unión o inestabilidad futura?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
