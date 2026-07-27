@@ -41,7 +41,7 @@ MAX_INTENTOS_ENCOLADO = 3      # reintentos de encolado antes de marcar fallido
 ESPERA_REINTENTO = 45         # segundos entre reintentos de encolado
 ESPERA_CUOTA = 900            # 15 min: alineado con el enfriamiento de llaves en ai_engine
 MAX_REINTENTOS_VIDEO = 2      # reintentos si un video sale FALLIDO (vacío) o sin respuesta
-TIMEOUT_VIDEO = 2700          # 45 min: si un video no se completa en este tiempo, reintentar
+TIMEOUT_VIDEO = 10800         # 3 horas: los largos (34+ min de audio, 50 escenas) tardan mucho; no matarlos antes
 IP_GRAFICA = "192.168.0.215"
 IP_VOZ = "192.168.0.251"
 NODOS = {"sd": f"http://{IP_GRAFICA}:7861/sdapi/v1/options", "voz": f"http://{IP_VOZ}:8000"}
@@ -284,25 +284,20 @@ def procesar_lote(lote):
                 lote["mensaje"] = f"Video {en_proceso['n']} fallido tras {MAX_REINTENTOS_VIDEO} intentos (omitido)"
             guardar_lote(lote)
         else:
-            # Timeout de seguridad: si un video lleva demasiado tiempo "en proceso" sin
-            # completarse ni reportar fallo (p.ej. el worker se colgó o Render perdió el
-            # estado), tratarlo como fallido para reintentar y NO esperar para siempre.
+            # El video sigue "en proceso". Los largos tardan mucho (34+ min de audio,
+            # 50 escenas + ensamblaje), así que NO se mata por tardar: se sigue esperando.
+            # El timeout (muy amplio, 3h) solo AVISA por si el worker de verdad se colgó,
+            # pero NO relanza el video (relanzarlo genera duplicados y descuadra el lote).
+            # El reintento real solo ocurre si Render reporta el video como FALLIDO
+            # (ese caso lo maneja el bloque 'video_fallo' de arriba).
             _inicio = en_proceso.get("inicio_ts", time.time())
-            if time.time() - _inicio > TIMEOUT_VIDEO:
-                en_proceso["reintentos_video"] = en_proceso.get("reintentos_video", 0) + 1
-                if en_proceso["reintentos_video"] <= MAX_REINTENTOS_VIDEO:
-                    print(f"⏱️ Video {en_proceso['n']} ({en_proceso['marca']}) lleva más de "
-                          f"{TIMEOUT_VIDEO//60} min sin completarse — reintentando "
-                          f"({en_proceso['reintentos_video']}/{MAX_REINTENTOS_VIDEO}).")
-                    en_proceso["estado"] = "pendiente"
-                    en_proceso["tarea_id"] = None
-                    lote["mensaje"] = f"Video {en_proceso['n']} sin respuesta — reintentando"
-                else:
-                    print(f"❌ Video {en_proceso['n']} agotó reintentos por timeout — omitido.")
-                    en_proceso["estado"] = "fallido"
-                guardar_lote(lote)
+            _transcurrido = int(time.time() - _inicio)
+            dur = f" {en_proceso['duracion_min']}min" if en_proceso.get("duracion_min") else ""
+            if _transcurrido > TIMEOUT_VIDEO:
+                lote["trabajo_actual_desc"] = (f"Video {en_proceso['n']}/{len(lote['trabajos'])} "
+                    f"({en_proceso['marca']}) lleva {_transcurrido//60} min — sigue en proceso, esperando...")
+                lote["mensaje"] = f"Video {en_proceso['n']} tarda más de lo normal ({_transcurrido//60} min) — sigue esperando."
             else:
-                dur = f" {en_proceso['duracion_min']}min" if en_proceso.get("duracion_min") else ""
                 lote["trabajo_actual_desc"] = f"Generando video {en_proceso['n']}/{len(lote['trabajos'])} ({en_proceso['marca']} {en_proceso['formato']}{dur})"
         reportar_progreso(lote); return lote
     # Enfriamiento
