@@ -1,7 +1,10 @@
 {
-  "estado_lote": "inactivo",
-  "total": 0,
+  "estado_lote": "cancelado",
+  "total": 10,
   "completados": 0,
-  "mensaje": "Cola reseteada desde el panel.",
-  "resumen": ""
+  "fallidos": 6,
+  "trabajo_actual": "Generando video 7 (Umbral Alterno)",
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": "Umbral Alterno: 10s+0L",
+  "historial": []
 }
