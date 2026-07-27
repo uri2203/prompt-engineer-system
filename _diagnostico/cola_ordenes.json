@@ -3464,5 +3464,240 @@
       "El mundo no es igual"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "365bbe1d-da54-4712-abca-232d5e0c728a",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, a pitch black city skyline, flickering red emergency lights, wide angle establishing shot, no people, eerie stillness, high contrast\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a pitch black city skyline, flickering red emergency lights, wide angle establishing shot, no people, eerie stillness, high contrast\", \"texto_locucion\": \"Imagina un mundo donde toda la electricidad simplemente desaparece.\", \"pexels_query\": \"city blackout, dark city\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, a modern smartphone screen, completely black, no power, on a dark table, slight blue ambient light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a modern smartphone screen, completely black, no power, on a dark table, slight blue ambient light\", \"texto_locucion\": \"Tu teléfono se oscureció de golpe. Nada funcionaba.\", \"pexels_query\": \"dark phone, blank screen\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, a deserted intersection in a city, traffic lights dark, no cars, an eerie silence, wide angle, desaturated colors\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a deserted intersection in a city, traffic lights dark, no cars, an eerie silence, wide angle, desaturated colors\", \"texto_locucion\": \"Los semáforos se apagaron. Un silencio absoluto cayó sobre tu ciudad.\", \"pexels_query\": \"dark traffic lights, deserted intersection\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, a complex server room, all lights off, rows of dark machines, green emergency exit sign glowing dimly\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a complex server room, all lights off, rows of dark machines, green emergency exit sign glowing dimly\", \"texto_locucion\": \"Algo no está bien. El mundo entero se detuvo sin explicación.\", \"pexels_query\": \"dark server room, data center off\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, global power grid map, glowing lines, overlayed on a dark earth globe from space, ultra detailed\", \"prompt_visual\": \"cinematic hyperrealistic photograph, global power grid map, glowing lines, overlayed on a dark earth globe from space, ultra detailed\", \"texto_locucion\": \"Hoy, la red eléctrica global es una maravilla de ingeniería y fragilidad.\", \"pexels_query\": \"global power grid, earth night lights\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, a modern hospital ICU, all screens black, emergency lights barely visible, an empty room, sterile\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a modern hospital ICU, all screens black, emergency lights barely visible, an empty room, sterile\", \"texto_locucion\": \"Alimenta cada aspecto de nuestras vidas: hospitales, bancos, comunicaciones.\", \"pexels_query\": \"dark hospital room, medical emergency\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, a modern water treatment plant, pipes and machinery dark, no activity, an ominous stillness\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a modern water treatment plant, pipes and machinery dark, no activity, an ominous stillness\", \"texto_locucion\": \"También sostiene el suministro de agua, alimentos y transporte esencial.\", \"pexels_query\": \"dark water treatment, industrial silence\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, a lone, old power substation, overgrown with vegetation, damaged wires, dramatic stormy sky\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a lone, old power substation, overgrown with vegetation, damaged wires, dramatic stormy sky\", \"texto_locucion\": \"Su interconexión la hace robusta, pero también vulnerable al colapso.\", \"pexels_query\": \"abandoned power substation, broken wires\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, a flickering digital clock at 00:00:01, distorted numbers, dark background, blue glow\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a flickering digital clock at 00:00:01, distorted numbers, dark background, blue glow\", \"texto_locucion\": \"Pero eso fue antes. Ahora imagina el inicio de un ciberataque coordinado.\", \"pexels_query\": \"glitching digital clock, time stopping\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, a dark control room, multiple large screens showing error messages and static, one faint red alert\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a dark control room, multiple large screens showing error messages and static, one faint red alert\", \"texto_locucion\": \"Segundo uno: sistemas críticos de energía global caen simultáneamente.\", \"pexels_query\": \"dark control room, error messages\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, a massive power plant turbine hall, completely dark, silence, a few emergency lights barely visible\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a massive power plant turbine hall, completely dark, silence, a few emergency lights barely visible\", \"texto_locucion\": \"Millones de megavatios desaparecen. Las turbinas se detienen.\", \"pexels_query\": \"dark power plant, silent machinery\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, a dark city street, single car with headlights on, confused distant silhouettes of people, heavy fog\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a dark city street, single car with headlights on, confused distant silhouettes of people, heavy fog\", \"texto_locucion\": \"Minuto cinco: el transporte colapsa. El caos inicial se propaga.\", \"pexels_query\": \"dark city street, few cars\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, multiple old landline phones, all with dead lines, dark room, no dial tone, unsettling still life\", \"prompt_visual\": \"cinematic hyperrealistic photograph, multiple old landline phones, all with dead lines, dark room, no dial tone, unsettling still life\", \"texto_locucion\": \"Hora uno: las comunicaciones fallan. Lo sentiste antes, pánico real.\", \"pexels_query\": \"old dead phones, no signal\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, a grocery store aisle, completely dark, empty shelves, eerie silence, no people visible\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a grocery store aisle, completely dark, empty shelves, eerie silence, no people visible\", \"texto_locucion\": \"Día uno: tiendas cierran. El suministro de alimentos y agua se agota.\", \"pexels_query\": \"dark empty supermarket, abandoned grocery\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, a modern bank vault, huge steel door, open, but the interior is pitch black and empty, no lights\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a modern bank vault, huge steel door, open, but the interior is pitch black and empty, no lights\", \"texto_locucion\": \"El dinero físico carece de valor sin sistemas bancarios que lo respalden.\", \"pexels_query\": \"dark bank vault, empty safe\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, a dark, vast data center, rows of dormant servers, dust motes in faint emergency light, very few distant figures\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a dark, vast data center, rows of dormant servers, dust motes in faint emergency light, very few distant figures\", \"texto_locucion\": \"Semana uno: la infraestructura crítica falla. La sociedad se desmorona.\", \"pexels_query\": \"dark data center, server graveyard\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, a single, flickering candle in a dark, abandoned modern apartment, long shadows, a sense of desolation\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single, flickering candle in a dark, abandoned modern apartment, long shadows, a sense of desolation\", \"texto_locucion\": \"Nadie lo vio venir. La falta de energía detiene la vida moderna.\", \"pexels_query\": \"candle dark apartment, abandoned home\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, an old, hand-cranked radio, trying to find a signal, static on a dark background, a single pair of hands\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an old, hand-cranked radio, trying to find a signal, static on a dark background, a single pair of hands\", \"texto_locucion\": \"El giro: reiniciar una red eléctrica global es increíblemente difícil.\", \"pexels_query\": \"hand crank radio, static signal\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, a massive hydroelectric dam, completely still, water not flowing through turbines, no power lines visible\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a massive hydroelectric dam, completely still, water not flowing through turbines, no power lines visible\", \"texto_locucion\": \"Necesita energía para arrancar sus propios sistemas de generación.\", \"pexels_query\": \"silent dam, still water\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, a map of continents, all lights off, only natural moonlight illuminates the landmasses from space\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a map of continents, all lights off, only natural moonlight illuminates the landmasses from space\", \"texto_locucion\": \"Un efecto dominó de fallas en cascada. Podría tardar años restaurar.\", \"pexels_query\": \"dark earth from space, moonlit continents\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, an old, dusty generator, no power, in a dark, empty garage, abandoned tools nearby\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an old, dusty generator, no power, in a dark, empty garage, abandoned tools nearby\", \"texto_locucion\": \"Los generadores diésel también se agotarían por falta de combustible.\", \"pexels_query\": \"broken generator, dark garage\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, a small, isolated settlement, only campfires for light, distant mountains, starry night sky\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a small, isolated settlement, only campfires for light, distant mountains, starry night sky\", \"texto_locucion\": \"La humanidad se fragmentaría en comunidades autosuficientes y aisladas.\", \"pexels_query\": \"campfire settlement, dark wilderness\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, a vast, dark ocean, an old sailing ship on the horizon, no modern vessels, a return to simpler times\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, dark ocean, an old sailing ship on the horizon, no modern vessels, a return to simpler times\", \"texto_locucion\": \"El progreso tecnológico de siglos retrocedería en semanas o meses.\", \"pexels_query\": \"old sailing ship, dark ocean\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, a single hand holding a blank paper map, no GPS, trying to navigate in a dark, unidentifiable landscape\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single hand holding a blank paper map, no GPS, trying to navigate in a dark, unidentifiable landscape\", \"texto_locucion\": \"Sin la red, el conocimiento y la coordinación global se pierden.\", \"pexels_query\": \"paper map, lost navigation\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, a ruined cityscape, overgrown with vegetation, broken buildings, a hazy, desolate atmosphere\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a ruined cityscape, overgrown with vegetation, broken buildings, a hazy, desolate atmosphere\", \"texto_locucion\": \"Este fue un escenario donde la fragilidad es la norma oculta.\", \"pexels_query\": \"ruined cityscape, overgrown buildings\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, a lone silhouette standing before a vast, dark, silent city, looking towards the horizon, blue hour\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a lone silhouette standing before a vast, dark, silent city, looking towards the horizon, blue hour\", \"texto_locucion\": \"Esto fue una simulación. Por ahora. ¿Tú qué harías si esto ocurriera?\", \"pexels_query\": \"lone figure dark city, silent horizon\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, a close-up of a survival kit, flashlight, water bottle, basic tools, in dim, natural light, ready for use\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a close-up of a survival kit, flashlight, water bottle, basic tools, in dim, natural light, ready for use\", \"texto_locucion\": \"¿Cómo te prepararías para un mundo sin electricidad global permanente?\", \"pexels_query\": \"survival kit essentials, emergency gear\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "Imagina un mundo donde toda la electricidad simplemente desaparece. Tu teléfono se oscureció de golpe. Nada funcionaba. Los semáforos se apagaron. Un silencio absoluto cayó sobre tu ciudad. Algo no está bien. El mundo entero se detuvo sin explicación. Hoy, la red eléctrica global es una maravilla de ingeniería y fragilidad. Alimenta cada aspecto de nuestras vidas: hospitales, bancos, comunicaciones. También sostiene el suministro de agua, alimentos y transporte esencial. Su interconexión la hace robusta, pero también vulnerable al colapso. Pero eso fue antes. Ahora imagina el inicio de un ciberataque coordinado. Segundo uno: sistemas críticos de energía global caen simultáneamente. Millones de megavatios desaparecen. Las turbinas se detienen. Minuto cinco: el transporte colapsa. El caos inicial se propaga. Hora uno: las comunicaciones fallan. Lo sentiste antes, pánico real. Día uno: tiendas cierran. El suministro de alimentos y agua se agota. El dinero físico carece de valor sin sistemas bancarios que lo respalden. Semana uno: la infraestructura crítica falla. La sociedad se desmorona. Nadie lo vio venir. La falta de energía detiene la vida moderna. El giro: reiniciar una red eléctrica global es increíblemente difícil. Necesita energía para arrancar sus propios sistemas de generación. Un efecto dominó de fallas en cascada. Podría tardar años restaurar. Los generadores diésel también se agotarían por falta de combustible. La humanidad se fragmentaría en comunidades autosuficientes y aisladas. El progreso tecnológico de siglos retrocedería en semanas o meses. Sin la red, el conocimiento y la coordinación global se pierden. Este fue un escenario donde la fragilidad es la norma oculta. Esto fue una simulación. Por ahora. ¿Tú qué harías si esto ocurriera? ¿Cómo te prepararías para un mundo sin electricidad global permanente?",
+    "titulo_sugerido": "¿Qué Pasa Si TODA la Electricidad Deja de Funcionar?",
+    "escenas_texto": [
+      "Imagina un mundo donde toda la electricidad simplemente desaparece.",
+      "Tu teléfono se oscureció de golpe. Nada funcionaba.",
+      "Los semáforos se apagaron. Un silencio absoluto cayó sobre tu ciudad.",
+      "Algo no está bien. El mundo entero se detuvo sin explicación.",
+      "Hoy, la red eléctrica global es una maravilla de ingeniería y fragilidad.",
+      "Alimenta cada aspecto de nuestras vidas: hospitales, bancos, comunicaciones.",
+      "También sostiene el suministro de agua, alimentos y transporte esencial.",
+      "Su interconexión la hace robusta, pero también vulnerable al colapso.",
+      "Pero eso fue antes. Ahora imagina el inicio de un ciberataque coordinado.",
+      "Segundo uno: sistemas críticos de energía global caen simultáneamente.",
+      "Millones de megavatios desaparecen. Las turbinas se detienen.",
+      "Minuto cinco: el transporte colapsa. El caos inicial se propaga.",
+      "Hora uno: las comunicaciones fallan. Lo sentiste antes, pánico real.",
+      "Día uno: tiendas cierran. El suministro de alimentos y agua se agota.",
+      "El dinero físico carece de valor sin sistemas bancarios que lo respalden.",
+      "Semana uno: la infraestructura crítica falla. La sociedad se desmorona.",
+      "Nadie lo vio venir. La falta de energía detiene la vida moderna.",
+      "El giro: reiniciar una red eléctrica global es increíblemente difícil.",
+      "Necesita energía para arrancar sus propios sistemas de generación.",
+      "Un efecto dominó de fallas en cascada. Podría tardar años restaurar.",
+      "Los generadores diésel también se agotarían por falta de combustible.",
+      "La humanidad se fragmentaría en comunidades autosuficientes y aisladas.",
+      "El progreso tecnológico de siglos retrocedería en semanas o meses.",
+      "Sin la red, el conocimiento y la coordinación global se pierden.",
+      "Este fue un escenario donde la fragilidad es la norma oculta.",
+      "Esto fue una simulación. Por ahora. ¿Tú qué harías si esto ocurriera?",
+      "¿Cómo te prepararías para un mundo sin electricidad global permanente?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, a pitch black city skyline, flickering red emergency lights, wide angle establishing shot, no people, eerie stillness, high contrast",
+        "prompt_visual": "cinematic hyperrealistic photograph, a pitch black city skyline, flickering red emergency lights, wide angle establishing shot, no people, eerie stillness, high contrast",
+        "texto_locucion": "Imagina un mundo donde toda la electricidad simplemente desaparece.",
+        "pexels_query": "city blackout, dark city"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, a modern smartphone screen, completely black, no power, on a dark table, slight blue ambient light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a modern smartphone screen, completely black, no power, on a dark table, slight blue ambient light",
+        "texto_locucion": "Tu teléfono se oscureció de golpe. Nada funcionaba.",
+        "pexels_query": "dark phone, blank screen"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, a deserted intersection in a city, traffic lights dark, no cars, an eerie silence, wide angle, desaturated colors",
+        "prompt_visual": "cinematic hyperrealistic photograph, a deserted intersection in a city, traffic lights dark, no cars, an eerie silence, wide angle, desaturated colors",
+        "texto_locucion": "Los semáforos se apagaron. Un silencio absoluto cayó sobre tu ciudad.",
+        "pexels_query": "dark traffic lights, deserted intersection"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, a complex server room, all lights off, rows of dark machines, green emergency exit sign glowing dimly",
+        "prompt_visual": "cinematic hyperrealistic photograph, a complex server room, all lights off, rows of dark machines, green emergency exit sign glowing dimly",
+        "texto_locucion": "Algo no está bien. El mundo entero se detuvo sin explicación.",
+        "pexels_query": "dark server room, data center off"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, global power grid map, glowing lines, overlayed on a dark earth globe from space, ultra detailed",
+        "prompt_visual": "cinematic hyperrealistic photograph, global power grid map, glowing lines, overlayed on a dark earth globe from space, ultra detailed",
+        "texto_locucion": "Hoy, la red eléctrica global es una maravilla de ingeniería y fragilidad.",
+        "pexels_query": "global power grid, earth night lights"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, a modern hospital ICU, all screens black, emergency lights barely visible, an empty room, sterile",
+        "prompt_visual": "cinematic hyperrealistic photograph, a modern hospital ICU, all screens black, emergency lights barely visible, an empty room, sterile",
+        "texto_locucion": "Alimenta cada aspecto de nuestras vidas: hospitales, bancos, comunicaciones.",
+        "pexels_query": "dark hospital room, medical emergency"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, a modern water treatment plant, pipes and machinery dark, no activity, an ominous stillness",
+        "prompt_visual": "cinematic hyperrealistic photograph, a modern water treatment plant, pipes and machinery dark, no activity, an ominous stillness",
+        "texto_locucion": "También sostiene el suministro de agua, alimentos y transporte esencial.",
+        "pexels_query": "dark water treatment, industrial silence"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, a lone, old power substation, overgrown with vegetation, damaged wires, dramatic stormy sky",
+        "prompt_visual": "cinematic hyperrealistic photograph, a lone, old power substation, overgrown with vegetation, damaged wires, dramatic stormy sky",
+        "texto_locucion": "Su interconexión la hace robusta, pero también vulnerable al colapso.",
+        "pexels_query": "abandoned power substation, broken wires"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, a flickering digital clock at 00:00:01, distorted numbers, dark background, blue glow",
+        "prompt_visual": "cinematic hyperrealistic photograph, a flickering digital clock at 00:00:01, distorted numbers, dark background, blue glow",
+        "texto_locucion": "Pero eso fue antes. Ahora imagina el inicio de un ciberataque coordinado.",
+        "pexels_query": "glitching digital clock, time stopping"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, a dark control room, multiple large screens showing error messages and static, one faint red alert",
+        "prompt_visual": "cinematic hyperrealistic photograph, a dark control room, multiple large screens showing error messages and static, one faint red alert",
+        "texto_locucion": "Segundo uno: sistemas críticos de energía global caen simultáneamente.",
+        "pexels_query": "dark control room, error messages"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, a massive power plant turbine hall, completely dark, silence, a few emergency lights barely visible",
+        "prompt_visual": "cinematic hyperrealistic photograph, a massive power plant turbine hall, completely dark, silence, a few emergency lights barely visible",
+        "texto_locucion": "Millones de megavatios desaparecen. Las turbinas se detienen.",
+        "pexels_query": "dark power plant, silent machinery"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, a dark city street, single car with headlights on, confused distant silhouettes of people, heavy fog",
+        "prompt_visual": "cinematic hyperrealistic photograph, a dark city street, single car with headlights on, confused distant silhouettes of people, heavy fog",
+        "texto_locucion": "Minuto cinco: el transporte colapsa. El caos inicial se propaga.",
+        "pexels_query": "dark city street, few cars"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, multiple old landline phones, all with dead lines, dark room, no dial tone, unsettling still life",
+        "prompt_visual": "cinematic hyperrealistic photograph, multiple old landline phones, all with dead lines, dark room, no dial tone, unsettling still life",
+        "texto_locucion": "Hora uno: las comunicaciones fallan. Lo sentiste antes, pánico real.",
+        "pexels_query": "old dead phones, no signal"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, a grocery store aisle, completely dark, empty shelves, eerie silence, no people visible",
+        "prompt_visual": "cinematic hyperrealistic photograph, a grocery store aisle, completely dark, empty shelves, eerie silence, no people visible",
+        "texto_locucion": "Día uno: tiendas cierran. El suministro de alimentos y agua se agota.",
+        "pexels_query": "dark empty supermarket, abandoned grocery"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, a modern bank vault, huge steel door, open, but the interior is pitch black and empty, no lights",
+        "prompt_visual": "cinematic hyperrealistic photograph, a modern bank vault, huge steel door, open, but the interior is pitch black and empty, no lights",
+        "texto_locucion": "El dinero físico carece de valor sin sistemas bancarios que lo respalden.",
+        "pexels_query": "dark bank vault, empty safe"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, a dark, vast data center, rows of dormant servers, dust motes in faint emergency light, very few distant figures",
+        "prompt_visual": "cinematic hyperrealistic photograph, a dark, vast data center, rows of dormant servers, dust motes in faint emergency light, very few distant figures",
+        "texto_locucion": "Semana uno: la infraestructura crítica falla. La sociedad se desmorona.",
+        "pexels_query": "dark data center, server graveyard"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, a single, flickering candle in a dark, abandoned modern apartment, long shadows, a sense of desolation",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single, flickering candle in a dark, abandoned modern apartment, long shadows, a sense of desolation",
+        "texto_locucion": "Nadie lo vio venir. La falta de energía detiene la vida moderna.",
+        "pexels_query": "candle dark apartment, abandoned home"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, an old, hand-cranked radio, trying to find a signal, static on a dark background, a single pair of hands",
+        "prompt_visual": "cinematic hyperrealistic photograph, an old, hand-cranked radio, trying to find a signal, static on a dark background, a single pair of hands",
+        "texto_locucion": "El giro: reiniciar una red eléctrica global es increíblemente difícil.",
+        "pexels_query": "hand crank radio, static signal"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, a massive hydroelectric dam, completely still, water not flowing through turbines, no power lines visible",
+        "prompt_visual": "cinematic hyperrealistic photograph, a massive hydroelectric dam, completely still, water not flowing through turbines, no power lines visible",
+        "texto_locucion": "Necesita energía para arrancar sus propios sistemas de generación.",
+        "pexels_query": "silent dam, still water"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, a map of continents, all lights off, only natural moonlight illuminates the landmasses from space",
+        "prompt_visual": "cinematic hyperrealistic photograph, a map of continents, all lights off, only natural moonlight illuminates the landmasses from space",
+        "texto_locucion": "Un efecto dominó de fallas en cascada. Podría tardar años restaurar.",
+        "pexels_query": "dark earth from space, moonlit continents"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, an old, dusty generator, no power, in a dark, empty garage, abandoned tools nearby",
+        "prompt_visual": "cinematic hyperrealistic photograph, an old, dusty generator, no power, in a dark, empty garage, abandoned tools nearby",
+        "texto_locucion": "Los generadores diésel también se agotarían por falta de combustible.",
+        "pexels_query": "broken generator, dark garage"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, a small, isolated settlement, only campfires for light, distant mountains, starry night sky",
+        "prompt_visual": "cinematic hyperrealistic photograph, a small, isolated settlement, only campfires for light, distant mountains, starry night sky",
+        "texto_locucion": "La humanidad se fragmentaría en comunidades autosuficientes y aisladas.",
+        "pexels_query": "campfire settlement, dark wilderness"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, a vast, dark ocean, an old sailing ship on the horizon, no modern vessels, a return to simpler times",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, dark ocean, an old sailing ship on the horizon, no modern vessels, a return to simpler times",
+        "texto_locucion": "El progreso tecnológico de siglos retrocedería en semanas o meses.",
+        "pexels_query": "old sailing ship, dark ocean"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, a single hand holding a blank paper map, no GPS, trying to navigate in a dark, unidentifiable landscape",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single hand holding a blank paper map, no GPS, trying to navigate in a dark, unidentifiable landscape",
+        "texto_locucion": "Sin la red, el conocimiento y la coordinación global se pierden.",
+        "pexels_query": "paper map, lost navigation"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, a ruined cityscape, overgrown with vegetation, broken buildings, a hazy, desolate atmosphere",
+        "prompt_visual": "cinematic hyperrealistic photograph, a ruined cityscape, overgrown with vegetation, broken buildings, a hazy, desolate atmosphere",
+        "texto_locucion": "Este fue un escenario donde la fragilidad es la norma oculta.",
+        "pexels_query": "ruined cityscape, overgrown buildings"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, a lone silhouette standing before a vast, dark, silent city, looking towards the horizon, blue hour",
+        "prompt_visual": "cinematic hyperrealistic photograph, a lone silhouette standing before a vast, dark, silent city, looking towards the horizon, blue hour",
+        "texto_locucion": "Esto fue una simulación. Por ahora. ¿Tú qué harías si esto ocurriera?",
+        "pexels_query": "lone figure dark city, silent horizon"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, a close-up of a survival kit, flashlight, water bottle, basic tools, in dim, natural light, ready for use",
+        "prompt_visual": "cinematic hyperrealistic photograph, a close-up of a survival kit, flashlight, water bottle, basic tools, in dim, natural light, ready for use",
+        "texto_locucion": "¿Cómo te prepararías para un mundo sin electricidad global permanente?",
+        "pexels_query": "survival kit essentials, emergency gear"
+      }
+    ],
+    "hooks": [
+      "La oscuridad total.",
+      "Todo deja de funcionar.",
+      "¿Y si no regresa?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
