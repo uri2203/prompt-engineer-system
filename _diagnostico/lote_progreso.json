@@ -1,10 +1,10 @@
 {
-  "estado_lote": "esperando_nodo",
+  "estado_lote": "produciendo",
   "total": 25,
   "completados": 1,
   "fallidos": 0,
-  "trabajo_actual": "Esperando nodo: SD (imagenes)",
-  "mensaje": "Nodo(s) caido(s): SD (imagenes). Esperando que vuelvan...",
+  "trabajo_actual": "Generando video 2 (Monkygraff)",
+  "mensaje": "Produccion del video 2 iniciada.",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
