@@ -1,10 +1,20 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 0,
+  "completados": 1,
   "fallidos": 0,
   "trabajo_actual": "Video 1/25 (Monkygraff) lleva 373 min — sigue en proceso, esperando...",
-  "mensaje": "Video 1 tarda más de lo normal (373 min) — sigue esperando.",
+  "mensaje": "Video 1 completado",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
-  "historial": []
+  "historial": [
+    {
+      "n": 1,
+      "marca": "Monkygraff",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2044.9,
+      "hora": "06:38"
+    }
+  ]
 }
