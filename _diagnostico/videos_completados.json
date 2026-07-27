@@ -1,7 +1,5 @@
 {
   "ids": [
-    "2be8856f-6477-4b54-ad2e-d879874fcc6f",
-    "2be8856f-6477-4b54-ad2e-d879874fcc6f_asm",
     "0867583d-e798-422f-a234-5a7eaf428ca5",
     "0867583d-e798-422f-a234-5a7eaf428ca5_asm",
     "3f205c62-e836-4e94-8e31-dd6dd4c4ac77",
@@ -199,7 +197,9 @@
     "6de2d1b8-f20b-46b4-b9e9-64d1c3536821",
     "6de2d1b8-f20b-46b4-b9e9-64d1c3536821_asm",
     "b2f9d219-fb8e-481f-a578-3fef0b39fc80",
-    "b2f9d219-fb8e-481f-a578-3fef0b39fc80_asm"
+    "b2f9d219-fb8e-481f-a578-3fef0b39fc80_asm",
+    "16ba3fc2-1492-48e7-b650-3ff99de98c1f",
+    "16ba3fc2-1492-48e7-b650-3ff99de98c1f_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -877,6 +877,11 @@
       "duracion_real_seg": 123.0,
       "marca": "Umbral Alterno",
       "formato": "9:16"
+    },
+    "16ba3fc2-1492-48e7-b650-3ff99de98c1f": {
+      "duracion_real_seg": 2202.4,
+      "marca": "Monkygraff",
+      "formato": "16:9"
     }
   }
 }
