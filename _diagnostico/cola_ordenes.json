@@ -3699,5 +3699,240 @@
       "¿Y si no regresa?"
     ],
     "origen": "bot_pinpinela_cron"
+  },
+  {
+    "id": "f7964a84-90d9-47c2-84b5-6a9a2c86f556",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"digital screen displaying 'Error 404 Not Found', empty office, eerie glow, glitching, cyber attack, ultra detailed\", \"prompt_visual\": \"digital screen displaying 'Error 404 Not Found', empty office, eerie glow, glitching, cyber attack, ultra detailed\", \"texto_locucion\": \"Tus cuentas bancarias. Vacías. Tus datos, borrados.\", \"pexels_query\": \"digital error, empty screen\"}, {\"id\": 2, \"prompt\": \"ATM screen showing 'Service Unavailable', desolate street, dark, no people, wide shot\", \"prompt_visual\": \"ATM screen showing 'Service Unavailable', desolate street, dark, no people, wide shot\", \"texto_locucion\": \"Tus récords médicos, perdidos. Tu historial profesional, inexistente.\", \"pexels_query\": \"ATM error, dark street\"}, {\"id\": 3, \"prompt\": \"Passport photo frame, empty, on a desolate table, faint light, unsettling stillness\", \"prompt_visual\": \"Passport photo frame, empty, on a desolate table, faint light, unsettling stillness\", \"texto_locucion\": \"¿Quién eres realmente, sin tu identidad digital global?\", \"pexels_query\": \"empty passport, identity\"}, {\"id\": 4, \"prompt\": \"Blurred, distorted digital face on a screen, glitching, dark room, single accent light\", \"prompt_visual\": \"Blurred, distorted digital face on a screen, glitching, dark room, single accent light\", \"texto_locucion\": \"Algo no está bien. Lo sentiste antes. No puedes ignorarlo.\", \"pexels_query\": \"glitchy face, digital distortion\"}, {\"id\": 5, \"prompt\": \"Vast data center servers stretching into infinity, glowing blue, futuristic, no people\", \"prompt_visual\": \"Vast data center servers stretching into infinity, glowing blue, futuristic, no people\", \"texto_locucion\": \"Hoy, cada transacción digital define parte de tu existencia.\", \"pexels_query\": \"data center, server farm\"}, {\"id\": 6, \"prompt\": \"People using smartphones, blurred, generic city background, soft focus, desaturated\", \"prompt_visual\": \"People using smartphones, blurred, generic city background, soft focus, desaturated\", \"texto_locucion\": \"Desde tu trabajo hasta tu salud. Todo es un registro numérico.\", \"pexels_query\": \"smartphone users, city life\"}, {\"id\": 7, \"prompt\": \"Global map showing interconnected data lines, faint and complex, abstract digital network\", \"prompt_visual\": \"Global map showing interconnected data lines, faint and complex, abstract digital network\", \"texto_locucion\": \"Millones de servidores enlazados guardan cada fragmento tuyo.\", \"pexels_query\": \"global data network, internet map\"}, {\"id\": 8, \"prompt\": \"Single fingerprint on a glowing screen, abstract, security, biometric scanner\", \"prompt_visual\": \"Single fingerprint on a glowing screen, abstract, security, biometric scanner\", \"texto_locucion\": \"Esto permite verificar quién eres en cualquier momento.\", \"pexels_query\": \"fingerprint scan, biometric\"}, {\"id\": 9, \"prompt\": \"Empty city street at dawn, cars parked, quiet, light fog, wide shot\", \"prompt_visual\": \"Empty city street at dawn, cars parked, quiet, light fog, wide shot\", \"texto_locucion\": \"Pero eso fue antes. Ahora imagina que...\", \"pexels_query\": \"empty city street, dawn\"}, {\"id\": 10, \"prompt\": \"Single, massive, glowing red error icon on a global map projection, dark, urgent\", \"prompt_visual\": \"Single, massive, glowing red error icon on a global map projection, dark, urgent\", \"texto_locucion\": \"Un ataque cibernético masivo borra la identidad global.\", \"pexels_query\": \"global error, system failure\"}, {\"id\": 11, \"prompt\": \"Cascading lines of corrupted code on multiple screens, dark room, intense red glow\", \"prompt_visual\": \"Cascading lines of corrupted code on multiple screens, dark room, intense red glow\", \"texto_locucion\": \"No solo nombres. Datos biométricos, financieros y fiscales.\", \"pexels_query\": \"corrupted code, cyber attack\"}, {\"id\": 12, \"prompt\": \"People in line at a bank, confused, empty counter, dim lighting, frustration\", \"prompt_visual\": \"People in line at a bank, confused, empty counter, dim lighting, frustration\", \"texto_locucion\": \"Nadie puede retirar dinero. Los bancos colapsan.\", \"pexels_query\": \"empty bank, confused crowd\"}, {\"id\": 13, \"prompt\": \"Doctor looking at an empty computer screen, hospital hallway, few silhouettes, worried\", \"prompt_visual\": \"Doctor looking at an empty computer screen, hospital hallway, few silhouettes, worried\", \"texto_locucion\": \"Hospitales sin historiales médicos. Errores fatales aumentan.\", \"pexels_query\": \"doctor empty screen, hospital\"}, {\"id\": 14, \"prompt\": \"Border control gates, empty, with 'System Offline' signs, desolate, cold light\", \"prompt_visual\": \"Border control gates, empty, with 'System Offline' signs, desolate, cold light\", \"texto_locucion\": \"Fronteras cerradas. Viajes imposibles sin pasaporte digital.\", \"pexels_query\": \"border gates, system offline\"}, {\"id\": 15, \"prompt\": \"Classroom, student raising hand, teacher looking perplexed at empty projector screen\", \"prompt_visual\": \"Classroom, student raising hand, teacher looking perplexed at empty projector screen\", \"texto_locucion\": \"Sistemas educativos paralizados. Diplomas son ahora inútiles.\", \"pexels_query\": \"empty classroom, teacher perplexed\"}, {\"id\": 16, \"prompt\": \"Courtroom, empty seats, judge's bench dark, unsettling silence, wide shot\", \"prompt_visual\": \"Courtroom, empty seats, judge's bench dark, unsettling silence, wide shot\", \"texto_locucion\": \"La justicia no puede identificar a criminales o víctimas.\", \"pexels_query\": \"empty courtroom, justice system\"}, {\"id\": 17, \"prompt\": \"Supermarket shelves, half-empty, somber lighting, few distant silhouettes, scarcity\", \"prompt_visual\": \"Supermarket shelves, half-empty, somber lighting, few distant silhouettes, scarcity\", \"texto_locucion\": \"Cadenas de suministro fallan. Comida y bienes desaparecen.\", \"pexels_query\": \"empty supermarket shelves\"}, {\"id\": 18, \"prompt\": \"City skyline at dusk, no lights, just silhouettes, eerie quiet, dark city\", \"prompt_visual\": \"City skyline at dusk, no lights, just silhouettes, eerie quiet, dark city\", \"texto_locucion\": \"La sociedad se fragmenta. La confianza desaparece completamente.\", \"pexels_query\": \"dark city skyline, power outage\"}, {\"id\": 19, \"prompt\": \"Old analog radio, static, in a desolate room, dust, vintage, unsettling quiet\", \"prompt_visual\": \"Old analog radio, static, in a desolate room, dust, vintage, unsettling quiet\", \"texto_locucion\": \"El caos inicial da paso a un silencio absoluto.\", \"pexels_query\": \"old radio static, silence\"}, {\"id\": 20, \"prompt\": \"Lonely, forgotten keyboard on a dusty desk, faint light from a window, abandoned office\", \"prompt_visual\": \"Lonely, forgotten keyboard on a dusty desk, faint light from a window, abandoned office\", \"texto_locucion\": \"Tu nombre ya no tiene respaldo en ningún lugar digital.\", \"pexels_query\": \"dusty keyboard, abandoned office\"}, {\"id\": 21, \"prompt\": \"Hand writing on a paper document, focused, old-fashioned pen, warm light, revival\", \"prompt_visual\": \"Hand writing on a paper document, focused, old-fashioned pen, warm light, revival\", \"texto_locucion\": \"Sin datos. La humanidad regresa a la documentación física.\", \"pexels_query\": \"hand writing document, old paper\"}, {\"id\": 22, \"prompt\": \"Person looking at their reflection in a dusty, cracked mirror, pensive, identity crisis\", \"prompt_visual\": \"Person looking at their reflection in a dusty, cracked mirror, pensive, identity crisis\", \"texto_locucion\": \"Redefinir tu identidad ahora es tu único gran propósito.\", \"pexels_query\": \"cracked mirror, self reflection\"}, {\"id\": 23, \"prompt\": \"Group of people around a small fire, sharing a meal, primitive, warm glow, community\", \"prompt_visual\": \"Group of people around a small fire, sharing a meal, primitive, warm glow, community\", \"texto_locucion\": \"La confianza se reconstruye solo con interacciones cara a cara.\", \"pexels_query\": \"people around fire, community\"}, {\"id\": 24, \"prompt\": \"Single, ancient key on a wooden table, forgotten, symbolism, new beginning\", \"prompt_visual\": \"Single, ancient key on a wooden table, forgotten, symbolism, new beginning\", \"texto_locucion\": \"Lo que te define ya no está en la red. Está en ti.\", \"pexels_query\": \"old key on wood, forgotten\"}, {\"id\": 25, \"prompt\": \"Single, glowing circuit board, partially damaged, emitting faint blue light, close up\", \"prompt_visual\": \"Single, glowing circuit board, partially damaged, emitting faint blue light, close up\", \"texto_locucion\": \"El sistema es más frágil de lo que jamás imaginaste.\", \"pexels_query\": \"damaged circuit board, technology\"}, {\"id\": 26, \"prompt\": \"Dark screen with faint digital code flowing vertically, like rain, abstract, data loss\", \"prompt_visual\": \"Dark screen with faint digital code flowing vertically, like rain, abstract, data loss\", \"texto_locucion\": \"Esto fue una simulación. Por ahora.\", \"pexels_query\": \"digital code rain, data stream\"}, {\"id\": 27, \"prompt\": \"Question mark glowing in a dark, empty digital space, abstract, existential, void\", \"prompt_visual\": \"Question mark glowing in a dark, empty digital space, abstract, existential, void\", \"texto_locucion\": \"¿Estás listo para esta inmensa redefinición de tu ser?\", \"pexels_query\": \"glowing question mark, digital void\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "Tus cuentas bancarias. Vacías. Tus datos, borrados. Tus récords médicos, perdidos. Tu historial profesional, inexistente. ¿Quién eres realmente, sin tu identidad digital global? Algo no está bien. Lo sentiste antes. No puedes ignorarlo. Hoy, cada transacción digital define parte de tu existencia. Desde tu trabajo hasta tu salud. Todo es un registro numérico. Millones de servidores enlazados guardan cada fragmento tuyo. Esto permite verificar quién eres en cualquier momento. Pero eso fue antes. Ahora imagina que... Un ataque cibernético masivo borra la identidad global. No solo nombres. Datos biométricos, financieros y fiscales. Nadie puede retirar dinero. Los bancos colapsan. Hospitales sin historiales médicos. Errores fatales aumentan. Fronteras cerradas. Viajes imposibles sin pasaporte digital. Sistemas educativos paralizados. Diplomas son ahora inútiles. La justicia no puede identificar a criminales o víctimas. Cadenas de suministro fallan. Comida y bienes desaparecen. La sociedad se fragmenta. La confianza desaparece completamente. El caos inicial da paso a un silencio absoluto. Tu nombre ya no tiene respaldo en ningún lugar digital. Sin datos. La humanidad regresa a la documentación física. Redefinir tu identidad ahora es tu único gran propósito. La confianza se reconstruye solo con interacciones cara a cara. Lo que te define ya no está en la red. Está en ti. El sistema es más frágil de lo que jamás imaginaste. Esto fue una simulación. Por ahora. ¿Estás listo para esta inmensa redefinición de tu ser?",
+    "titulo_sugerido": "¿Qué pasa si tu identidad digital desaparece?",
+    "escenas_texto": [
+      "Tus cuentas bancarias. Vacías. Tus datos, borrados.",
+      "Tus récords médicos, perdidos. Tu historial profesional, inexistente.",
+      "¿Quién eres realmente, sin tu identidad digital global?",
+      "Algo no está bien. Lo sentiste antes. No puedes ignorarlo.",
+      "Hoy, cada transacción digital define parte de tu existencia.",
+      "Desde tu trabajo hasta tu salud. Todo es un registro numérico.",
+      "Millones de servidores enlazados guardan cada fragmento tuyo.",
+      "Esto permite verificar quién eres en cualquier momento.",
+      "Pero eso fue antes. Ahora imagina que...",
+      "Un ataque cibernético masivo borra la identidad global.",
+      "No solo nombres. Datos biométricos, financieros y fiscales.",
+      "Nadie puede retirar dinero. Los bancos colapsan.",
+      "Hospitales sin historiales médicos. Errores fatales aumentan.",
+      "Fronteras cerradas. Viajes imposibles sin pasaporte digital.",
+      "Sistemas educativos paralizados. Diplomas son ahora inútiles.",
+      "La justicia no puede identificar a criminales o víctimas.",
+      "Cadenas de suministro fallan. Comida y bienes desaparecen.",
+      "La sociedad se fragmenta. La confianza desaparece completamente.",
+      "El caos inicial da paso a un silencio absoluto.",
+      "Tu nombre ya no tiene respaldo en ningún lugar digital.",
+      "Sin datos. La humanidad regresa a la documentación física.",
+      "Redefinir tu identidad ahora es tu único gran propósito.",
+      "La confianza se reconstruye solo con interacciones cara a cara.",
+      "Lo que te define ya no está en la red. Está en ti.",
+      "El sistema es más frágil de lo que jamás imaginaste.",
+      "Esto fue una simulación. Por ahora.",
+      "¿Estás listo para esta inmensa redefinición de tu ser?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "digital screen displaying 'Error 404 Not Found', empty office, eerie glow, glitching, cyber attack, ultra detailed",
+        "prompt_visual": "digital screen displaying 'Error 404 Not Found', empty office, eerie glow, glitching, cyber attack, ultra detailed",
+        "texto_locucion": "Tus cuentas bancarias. Vacías. Tus datos, borrados.",
+        "pexels_query": "digital error, empty screen"
+      },
+      {
+        "id": 2,
+        "prompt": "ATM screen showing 'Service Unavailable', desolate street, dark, no people, wide shot",
+        "prompt_visual": "ATM screen showing 'Service Unavailable', desolate street, dark, no people, wide shot",
+        "texto_locucion": "Tus récords médicos, perdidos. Tu historial profesional, inexistente.",
+        "pexels_query": "ATM error, dark street"
+      },
+      {
+        "id": 3,
+        "prompt": "Passport photo frame, empty, on a desolate table, faint light, unsettling stillness",
+        "prompt_visual": "Passport photo frame, empty, on a desolate table, faint light, unsettling stillness",
+        "texto_locucion": "¿Quién eres realmente, sin tu identidad digital global?",
+        "pexels_query": "empty passport, identity"
+      },
+      {
+        "id": 4,
+        "prompt": "Blurred, distorted digital face on a screen, glitching, dark room, single accent light",
+        "prompt_visual": "Blurred, distorted digital face on a screen, glitching, dark room, single accent light",
+        "texto_locucion": "Algo no está bien. Lo sentiste antes. No puedes ignorarlo.",
+        "pexels_query": "glitchy face, digital distortion"
+      },
+      {
+        "id": 5,
+        "prompt": "Vast data center servers stretching into infinity, glowing blue, futuristic, no people",
+        "prompt_visual": "Vast data center servers stretching into infinity, glowing blue, futuristic, no people",
+        "texto_locucion": "Hoy, cada transacción digital define parte de tu existencia.",
+        "pexels_query": "data center, server farm"
+      },
+      {
+        "id": 6,
+        "prompt": "People using smartphones, blurred, generic city background, soft focus, desaturated",
+        "prompt_visual": "People using smartphones, blurred, generic city background, soft focus, desaturated",
+        "texto_locucion": "Desde tu trabajo hasta tu salud. Todo es un registro numérico.",
+        "pexels_query": "smartphone users, city life"
+      },
+      {
+        "id": 7,
+        "prompt": "Global map showing interconnected data lines, faint and complex, abstract digital network",
+        "prompt_visual": "Global map showing interconnected data lines, faint and complex, abstract digital network",
+        "texto_locucion": "Millones de servidores enlazados guardan cada fragmento tuyo.",
+        "pexels_query": "global data network, internet map"
+      },
+      {
+        "id": 8,
+        "prompt": "Single fingerprint on a glowing screen, abstract, security, biometric scanner",
+        "prompt_visual": "Single fingerprint on a glowing screen, abstract, security, biometric scanner",
+        "texto_locucion": "Esto permite verificar quién eres en cualquier momento.",
+        "pexels_query": "fingerprint scan, biometric"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty city street at dawn, cars parked, quiet, light fog, wide shot",
+        "prompt_visual": "Empty city street at dawn, cars parked, quiet, light fog, wide shot",
+        "texto_locucion": "Pero eso fue antes. Ahora imagina que...",
+        "pexels_query": "empty city street, dawn"
+      },
+      {
+        "id": 10,
+        "prompt": "Single, massive, glowing red error icon on a global map projection, dark, urgent",
+        "prompt_visual": "Single, massive, glowing red error icon on a global map projection, dark, urgent",
+        "texto_locucion": "Un ataque cibernético masivo borra la identidad global.",
+        "pexels_query": "global error, system failure"
+      },
+      {
+        "id": 11,
+        "prompt": "Cascading lines of corrupted code on multiple screens, dark room, intense red glow",
+        "prompt_visual": "Cascading lines of corrupted code on multiple screens, dark room, intense red glow",
+        "texto_locucion": "No solo nombres. Datos biométricos, financieros y fiscales.",
+        "pexels_query": "corrupted code, cyber attack"
+      },
+      {
+        "id": 12,
+        "prompt": "People in line at a bank, confused, empty counter, dim lighting, frustration",
+        "prompt_visual": "People in line at a bank, confused, empty counter, dim lighting, frustration",
+        "texto_locucion": "Nadie puede retirar dinero. Los bancos colapsan.",
+        "pexels_query": "empty bank, confused crowd"
+      },
+      {
+        "id": 13,
+        "prompt": "Doctor looking at an empty computer screen, hospital hallway, few silhouettes, worried",
+        "prompt_visual": "Doctor looking at an empty computer screen, hospital hallway, few silhouettes, worried",
+        "texto_locucion": "Hospitales sin historiales médicos. Errores fatales aumentan.",
+        "pexels_query": "doctor empty screen, hospital"
+      },
+      {
+        "id": 14,
+        "prompt": "Border control gates, empty, with 'System Offline' signs, desolate, cold light",
+        "prompt_visual": "Border control gates, empty, with 'System Offline' signs, desolate, cold light",
+        "texto_locucion": "Fronteras cerradas. Viajes imposibles sin pasaporte digital.",
+        "pexels_query": "border gates, system offline"
+      },
+      {
+        "id": 15,
+        "prompt": "Classroom, student raising hand, teacher looking perplexed at empty projector screen",
+        "prompt_visual": "Classroom, student raising hand, teacher looking perplexed at empty projector screen",
+        "texto_locucion": "Sistemas educativos paralizados. Diplomas son ahora inútiles.",
+        "pexels_query": "empty classroom, teacher perplexed"
+      },
+      {
+        "id": 16,
+        "prompt": "Courtroom, empty seats, judge's bench dark, unsettling silence, wide shot",
+        "prompt_visual": "Courtroom, empty seats, judge's bench dark, unsettling silence, wide shot",
+        "texto_locucion": "La justicia no puede identificar a criminales o víctimas.",
+        "pexels_query": "empty courtroom, justice system"
+      },
+      {
+        "id": 17,
+        "prompt": "Supermarket shelves, half-empty, somber lighting, few distant silhouettes, scarcity",
+        "prompt_visual": "Supermarket shelves, half-empty, somber lighting, few distant silhouettes, scarcity",
+        "texto_locucion": "Cadenas de suministro fallan. Comida y bienes desaparecen.",
+        "pexels_query": "empty supermarket shelves"
+      },
+      {
+        "id": 18,
+        "prompt": "City skyline at dusk, no lights, just silhouettes, eerie quiet, dark city",
+        "prompt_visual": "City skyline at dusk, no lights, just silhouettes, eerie quiet, dark city",
+        "texto_locucion": "La sociedad se fragmenta. La confianza desaparece completamente.",
+        "pexels_query": "dark city skyline, power outage"
+      },
+      {
+        "id": 19,
+        "prompt": "Old analog radio, static, in a desolate room, dust, vintage, unsettling quiet",
+        "prompt_visual": "Old analog radio, static, in a desolate room, dust, vintage, unsettling quiet",
+        "texto_locucion": "El caos inicial da paso a un silencio absoluto.",
+        "pexels_query": "old radio static, silence"
+      },
+      {
+        "id": 20,
+        "prompt": "Lonely, forgotten keyboard on a dusty desk, faint light from a window, abandoned office",
+        "prompt_visual": "Lonely, forgotten keyboard on a dusty desk, faint light from a window, abandoned office",
+        "texto_locucion": "Tu nombre ya no tiene respaldo en ningún lugar digital.",
+        "pexels_query": "dusty keyboard, abandoned office"
+      },
+      {
+        "id": 21,
+        "prompt": "Hand writing on a paper document, focused, old-fashioned pen, warm light, revival",
+        "prompt_visual": "Hand writing on a paper document, focused, old-fashioned pen, warm light, revival",
+        "texto_locucion": "Sin datos. La humanidad regresa a la documentación física.",
+        "pexels_query": "hand writing document, old paper"
+      },
+      {
+        "id": 22,
+        "prompt": "Person looking at their reflection in a dusty, cracked mirror, pensive, identity crisis",
+        "prompt_visual": "Person looking at their reflection in a dusty, cracked mirror, pensive, identity crisis",
+        "texto_locucion": "Redefinir tu identidad ahora es tu único gran propósito.",
+        "pexels_query": "cracked mirror, self reflection"
+      },
+      {
+        "id": 23,
+        "prompt": "Group of people around a small fire, sharing a meal, primitive, warm glow, community",
+        "prompt_visual": "Group of people around a small fire, sharing a meal, primitive, warm glow, community",
+        "texto_locucion": "La confianza se reconstruye solo con interacciones cara a cara.",
+        "pexels_query": "people around fire, community"
+      },
+      {
+        "id": 24,
+        "prompt": "Single, ancient key on a wooden table, forgotten, symbolism, new beginning",
+        "prompt_visual": "Single, ancient key on a wooden table, forgotten, symbolism, new beginning",
+        "texto_locucion": "Lo que te define ya no está en la red. Está en ti.",
+        "pexels_query": "old key on wood, forgotten"
+      },
+      {
+        "id": 25,
+        "prompt": "Single, glowing circuit board, partially damaged, emitting faint blue light, close up",
+        "prompt_visual": "Single, glowing circuit board, partially damaged, emitting faint blue light, close up",
+        "texto_locucion": "El sistema es más frágil de lo que jamás imaginaste.",
+        "pexels_query": "damaged circuit board, technology"
+      },
+      {
+        "id": 26,
+        "prompt": "Dark screen with faint digital code flowing vertically, like rain, abstract, data loss",
+        "prompt_visual": "Dark screen with faint digital code flowing vertically, like rain, abstract, data loss",
+        "texto_locucion": "Esto fue una simulación. Por ahora.",
+        "pexels_query": "digital code rain, data stream"
+      },
+      {
+        "id": 27,
+        "prompt": "Question mark glowing in a dark, empty digital space, abstract, existential, void",
+        "prompt_visual": "Question mark glowing in a dark, empty digital space, abstract, existential, void",
+        "texto_locucion": "¿Estás listo para esta inmensa redefinición de tu ser?",
+        "pexels_query": "glowing question mark, digital void"
+      }
+    ],
+    "hooks": [
+      "Tu identidad digital, borrada",
+      "La confianza global, rota",
+      "¿Quién eres ahora?"
+    ],
+    "origen": "bot_pinpinela_cron"
   }
 ]
