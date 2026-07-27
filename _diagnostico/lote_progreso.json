@@ -1,10 +1,7 @@
 {
-  "estado_lote": "produciendo",
-  "total": 10,
+  "estado_lote": "inactivo",
+  "total": 0,
   "completados": 0,
-  "fallidos": 6,
-  "trabajo_actual": "Generando video 7/10 (Umbral Alterno 9:16)",
-  "mensaje": "Produccion del video 7 iniciada.",
-  "resumen": "Umbral Alterno: 10s+0L",
-  "historial": []
+  "mensaje": "Lote cancelado por el operador.",
+  "resumen": ""
 }
