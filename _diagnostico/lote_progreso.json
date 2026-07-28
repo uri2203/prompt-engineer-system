@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 5,
+  "completados": 2,
   "fallidos": 0,
-  "trabajo_actual": "Video 6/25 (FiltradoMX) lleva 349 min — sigue en proceso, esperando...",
-  "mensaje": "Video 6 tarda más de lo normal (349 min) — sigue esperando.",
+  "trabajo_actual": "Video 3/25 (Monkygraff) lleva 1294 min — sigue en proceso, esperando...",
+  "mensaje": "Video 3 tarda más de lo normal (1294 min) — sigue esperando.",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
@@ -22,35 +22,8 @@
       "formato": "16:9",
       "tipo": "Largo",
       "duracion_sel": 28,
-      "duracion_real_seg": 2087.2,
-      "hora": "12:32"
-    },
-    {
-      "n": 3,
-      "marca": "Monkygraff",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1948.0,
-      "hora": "18:33"
-    },
-    {
-      "n": 4,
-      "marca": "Monkygraff",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 2073.0,
-      "hora": "00:37"
-    },
-    {
-      "n": 5,
-      "marca": "Monkygraff",
-      "formato": "16:9",
-      "tipo": "Largo",
-      "duracion_sel": 28,
-      "duracion_real_seg": 1898.3,
-      "hora": "07:19"
+      "duracion_real_seg": 2179.5,
+      "hora": "15:37"
     }
   ]
 }
