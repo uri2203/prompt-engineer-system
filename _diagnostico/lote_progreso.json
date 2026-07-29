@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 6,
-  "fallidos": 0,
-  "trabajo_actual": "Video 7/25 (FiltradoMX) lleva 184 min — sigue en proceso, esperando...",
-  "mensaje": "Video 7 tarda más de lo normal (184 min) — sigue esperando.",
+  "completados": 7,
+  "fallidos": 1,
+  "trabajo_actual": "Generando video 9/25 (FiltradoMX 16:9 28min)",
+  "mensaje": "Produccion del video 9 iniciada.",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
@@ -60,6 +60,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 2217.5,
       "hora": "13:52"
+    },
+    {
+      "n": 7,
+      "marca": "FiltradoMX",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 1821.3,
+      "hora": "17:58"
     }
   ]
 }
