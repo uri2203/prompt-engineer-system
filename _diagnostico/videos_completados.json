@@ -1,7 +1,5 @@
 {
   "ids": [
-    "d0299480-6744-42d7-b067-3a4f1f916061",
-    "d0299480-6744-42d7-b067-3a4f1f916061_asm",
     "21c99e7d-1829-4ed8-8c93-288291929073",
     "21c99e7d-1829-4ed8-8c93-288291929073_asm",
     "17d0d35e-fe32-4571-86e5-df8824fe8665",
@@ -199,7 +197,9 @@
     "4c05f692-c0d4-44ef-9124-0236d7451704",
     "4c05f692-c0d4-44ef-9124-0236d7451704_asm",
     "3f32010c-0c8d-45dd-b241-c5e031df5c82",
-    "3f32010c-0c8d-45dd-b241-c5e031df5c82_asm"
+    "3f32010c-0c8d-45dd-b241-c5e031df5c82_asm",
+    "3157ea13-0ec0-4bbc-a773-ddb53765c8dc",
+    "3157ea13-0ec0-4bbc-a773-ddb53765c8dc_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -941,6 +941,11 @@
     "3f32010c-0c8d-45dd-b241-c5e031df5c82": {
       "duracion_real_seg": 2149.8,
       "marca": "FiltradoMX",
+      "formato": "16:9"
+    },
+    "3157ea13-0ec0-4bbc-a773-ddb53765c8dc": {
+      "duracion_real_seg": 2371.7,
+      "marca": "LaesquinaRandom",
       "formato": "16:9"
     }
   }
