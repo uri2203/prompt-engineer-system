@@ -1,10 +1,10 @@
 {
-  "estado_lote": "produciendo",
+  "estado_lote": "esperando_nodo",
   "total": 25,
   "completados": 7,
-  "fallidos": 2,
-  "trabajo_actual": "Video 10/25 (FiltradoMX) lleva 460 min — sigue en proceso, esperando...",
-  "mensaje": "Video 10 tarda más de lo normal (460 min) — sigue esperando.",
+  "fallidos": 7,
+  "trabajo_actual": "Esperando nodo: SD (imagenes)",
+  "mensaje": "Nodo(s) caido(s): SD (imagenes). Esperando que vuelvan...",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
