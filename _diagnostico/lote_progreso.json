@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 8,
+  "completados": 9,
   "fallidos": 12,
   "trabajo_actual": "Video 21/25 (Umbral Alterno) lleva 519 min — sigue en proceso, esperando...",
-  "mensaje": "Video 21 tarda más de lo normal (519 min) — sigue esperando.",
+  "mensaje": "Video 21 completado",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
@@ -78,6 +78,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 2425.3,
       "hora": "05:47"
+    },
+    {
+      "n": 21,
+      "marca": "Umbral Alterno",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2160.2,
+      "hora": "14:37"
     }
   ]
 }
