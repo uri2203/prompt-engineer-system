@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 25,
-  "completados": 7,
+  "completados": 8,
   "fallidos": 12,
   "trabajo_actual": "Video 20/25 (TuIALista) lleva 867 min — sigue en proceso, esperando...",
-  "mensaje": "Video 20 tarda más de lo normal (867 min) — sigue esperando.",
+  "mensaje": "Video 20 completado",
   "resumen": "Monkygraff: 0s+5L | FiltradoMX: 0s+5L | LaesquinaRandom: 0s+5L | TuIALista: 0s+5L | Umbral Alterno: 0s+5L",
   "historial": [
     {
@@ -69,6 +69,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 1821.3,
       "hora": "17:58"
+    },
+    {
+      "n": 20,
+      "marca": "TuIALista",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2425.3,
+      "hora": "05:47"
     }
   ]
 }
