@@ -1,1 +1,261 @@
-[]
+[
+  {
+    "id": "2275d2f3-60c1-4da3-93f9-480b257f5bfd",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Front door ajar, dark hallway, keys on a small table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Front door ajar, dark hallway, keys on a small table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Cierras tu puerta con llave... y amanece entreabierta.\", \"pexels_query\": \"door ajar keys\"}, {\"id\": 2, \"prompt\": \"Bedroom nightstand, phone screen glowing, dim light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Bedroom nightstand, phone screen glowing, dim light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Al principio, pensé que era olvido mío, ¿sabes?\", \"pexels_query\": \"phone glowing nightstand\"}, {\"id\": 3, \"prompt\": \"Messy bed, crumpled sheets, morning light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Messy bed, crumpled sheets, morning light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Quizá la dejé mal cerrada, o estaba muy distraída.\", \"pexels_query\": \"crumpled bed sheets\"}, {\"id\": 4, \"prompt\": \"Kitchen counter, single dirty glass, subtle light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Kitchen counter, single dirty glass, subtle light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero luego, *algo no está bien* aquí, lo sentí.\", \"pexels_query\": \"single dirty glass\"}, {\"id\": 5, \"prompt\": \"Living room sofa, cushion slightly askew, empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Living room sofa, cushion slightly askew, empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empecé a notar cosas sutilmente fuera de lugar.\", \"pexels_query\": \"askew sofa cushion\"}, {\"id\": 6, \"prompt\": \"Remote control on coffee table, slightly shifted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Remote control on coffee table, slightly shifted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un vaso distinto en la tarja, a veces, un control movido.\", \"pexels_query\": \"remote control shifted\"}, {\"id\": 7, \"prompt\": \"Light switch in a hallway, faint glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Light switch in a hallway, faint glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una luz encendida que yo juraría que apagué al salir.\", \"pexels_query\": \"faint light switch\"}, {\"id\": 8, \"prompt\": \"Thermostat on a wall, digital display, cool blue light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Thermostat on a wall, digital display, cool blue light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El aire acondicionado más frío de lo normal en la sala.\", \"pexels_query\": \"thermostat cool blue\"}, {\"id\": 9, \"prompt\": \"Small security camera hidden on a bookshelf, barely visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Small security camera hidden on a bookshelf, barely visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Entonces puse cámaras pequeñas, discretas... por mi seguridad.\", \"pexels_query\": \"hidden security camera\"}, {\"id\": 10, \"prompt\": \"Laptop screen showing a blank security camera feed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Laptop screen showing a blank security camera feed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La primera noche no grabaron nada extraño, *nadie lo vio*.\", \"pexels_query\": \"laptop blank camera\"}, {\"id\": 11, \"prompt\": \"Empty living room at night, moonlight through window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty living room at night, moonlight through window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La segunda tampoco. Yo empezaba a dudar de mi cabeza.\", \"pexels_query\": \"empty living room night\"}, {\"id\": 12, \"prompt\": \"A calendar page turned to a new day, handwritten notes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A calendar page turned to a new day, handwritten notes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hasta que la tercera, regresé temprano de mi trabajo.\", \"pexels_query\": \"calendar new day\"}, {\"id\": 13, \"prompt\": \"Hand holding a phone, notification on screen, blurry background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand holding a phone, notification on screen, blurry background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Decidí revisar la cámara de la sala de inmediato.\", \"pexels_query\": \"hand holding phone notification\"}, {\"id\": 14, \"prompt\": \"Close-up of a paused video screen showing a blurry figure entering a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a paused video screen showing a blurry figure entering a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y lo que vi... me dejó helada, completamente pasmada.\", \"pexels_query\": \"paused video blurry figure\"}, {\"id\": 15, \"prompt\": \"Door handle slowly turning, light from behind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Door handle slowly turning, light from behind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"A las dos de la mañana se abría mi puerta.\", \"pexels_query\": \"door handle turning light\"}, {\"id\": 16, \"prompt\": \"A single house key on a polished surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single house key on a polished surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No había forzadura alguna, ella tenía una llave propia.\", \"pexels_query\": \"single house key\"}, {\"id\": 17, \"prompt\": \"Backpack on a chair, slightly open, interior visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Backpack on a chair, slightly open, interior visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era mi hermana menor. Con su mochila y hasta todo.\", \"pexels_query\": \"backpack on chair\"}, {\"id\": 18, \"prompt\": \"Kitchen counter with a bowl of cereal, spoon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Kitchen counter with a bowl of cereal, spoon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Se servía algo de cenar, miraba un rato televisión.\", \"pexels_query\": \"cereal bowl spoon\"}, {\"id\": 19, \"prompt\": \"Living room sofa, blanket draped, suggesting someone slept there, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Living room sofa, blanket draped, suggesting someone slept there, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Luego se acostaba en mi sillón, tranquilamente, durmiendo.\", \"pexels_query\": \"sofa blanket slept\"}, {\"id\": 20, \"prompt\": \"Empty house interior, ominous shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty house interior, ominous shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Todo este tiempo... *no estabas solo* en tu propia casa.\", \"pexels_query\": \"empty house ominous\"}, {\"id\": 21, \"prompt\": \"A blurred figure walking out a door, motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurred figure walking out a door, motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella vivía secretamente aquí cuando yo no estaba en casa.\", \"pexels_query\": \"blurred figure door\"}, {\"id\": 22, \"prompt\": \"Question mark shadow on a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Question mark shadow on a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Por qué, cómo... *nadie lo vio* venir, fue increíble.\", \"pexels_query\": \"question mark shadow\"}, {\"id\": 23, \"prompt\": \"Apartment building exterior, broken pipe with dripping water, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Apartment building exterior, broken pipe with dripping water, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su propio departamento tenía un gran problema de agua.\", \"pexels_query\": \"apartment broken pipe\"}, {\"id\": 24, \"prompt\": \"Suitcase half-packed on a bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Suitcase half-packed on a bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y decidió mudarse sin avisar, directamente a mi casa.\", \"pexels_query\": \"suitcase half-packed\"}, {\"id\": 25, \"prompt\": \"Empty coffee mug on a kitchen table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty coffee mug on a kitchen table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Usaba mi hogar como si fuera un hotel de paso.\", \"pexels_query\": \"empty coffee mug table\"}, {\"id\": 26, \"prompt\": \"Fridge door slightly ajar, interior light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Fridge door slightly ajar, interior light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Con mis cosas, mi comida... y mi completo *silencio absoluto*.\", \"pexels_query\": \"fridge door ajar\"}, {\"id\": 27, \"prompt\": \"Empty shoes by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty shoes by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y a la mañana siguiente, se iba sin decir nada.\", \"pexels_query\": \"empty shoes door\"}, {\"id\": 28, \"prompt\": \"Freshly made bed, perfectly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Freshly made bed, perfectly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sin dejar rastro, como si nada hubiera sucedido ahí.\", \"pexels_query\": \"freshly made bed\"}, {\"id\": 29, \"prompt\": \"Reflection of a concerned face in a window, blurry, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Reflection of a concerned face in a window, blurry, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Cómo enfrentarías una traición así de tu propia sangre?\", \"pexels_query\": \"reflection concerned face\"}, {\"id\": 30, \"prompt\": \"Two silhouettes of hands reaching out, almost touching, against a blurry backdrop, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two silhouettes of hands reaching out, almost touching, against a blurry backdrop, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Les ha pasado algo así con su familia, a ustedes?\", \"pexels_query\": \"hands almost touching\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Cierras tu puerta con llave... y amanece entreabierta. Al principio, pensé que era olvido mío, ¿sabes? Quizá la dejé mal cerrada, o estaba muy distraída. Pero luego, *algo no está bien* aquí, lo sentí. Empecé a notar cosas sutilmente fuera de lugar. Un vaso distinto en la tarja, a veces, un control movido. Una luz encendida que yo juraría que apagué al salir. El aire acondicionado más frío de lo normal en la sala. Entonces puse cámaras pequeñas, discretas... por mi seguridad. La primera noche no grabaron nada extraño, *nadie lo vio*. La segunda tampoco. Yo empezaba a dudar de mi cabeza. Hasta que la tercera, regresé temprano de mi trabajo. Decidí revisar la cámara de la sala de inmediato. Y lo que vi... me dejó helada, completamente pasmada. A las dos de la mañana se abría mi puerta. No había forzadura alguna, ella tenía una llave propia. Era mi hermana menor. Con su mochila y hasta todo. Se servía algo de cenar, miraba un rato televisión. Luego se acostaba en mi sillón, tranquilamente, durmiendo. Todo este tiempo... *no estabas solo* en tu propia casa. Ella vivía secretamente aquí cuando yo no estaba en casa. Por qué, cómo... *nadie lo vio* venir, fue increíble. Su propio departamento tenía un gran problema de agua. Y decidió mudarse sin avisar, directamente a mi casa. Usaba mi hogar como si fuera un hotel de paso. Con mis cosas, mi comida... y mi completo *silencio absoluto*. Y a la mañana siguiente, se iba sin decir nada. Sin dejar rastro, como si nada hubiera sucedido ahí. ¿Cómo enfrentarías una traición así de tu propia sangre? ¿Les ha pasado algo así con su familia, a ustedes?",
+    "titulo_sugerido": "Mi hermana vivía en secreto en mi casa",
+    "escenas_texto": [
+      "Cierras tu puerta con llave... y amanece entreabierta.",
+      "Al principio, pensé que era olvido mío, ¿sabes?",
+      "Quizá la dejé mal cerrada, o estaba muy distraída.",
+      "Pero luego, *algo no está bien* aquí, lo sentí.",
+      "Empecé a notar cosas sutilmente fuera de lugar.",
+      "Un vaso distinto en la tarja, a veces, un control movido.",
+      "Una luz encendida que yo juraría que apagué al salir.",
+      "El aire acondicionado más frío de lo normal en la sala.",
+      "Entonces puse cámaras pequeñas, discretas... por mi seguridad.",
+      "La primera noche no grabaron nada extraño, *nadie lo vio*.",
+      "La segunda tampoco. Yo empezaba a dudar de mi cabeza.",
+      "Hasta que la tercera, regresé temprano de mi trabajo.",
+      "Decidí revisar la cámara de la sala de inmediato.",
+      "Y lo que vi... me dejó helada, completamente pasmada.",
+      "A las dos de la mañana se abría mi puerta.",
+      "No había forzadura alguna, ella tenía una llave propia.",
+      "Era mi hermana menor. Con su mochila y hasta todo.",
+      "Se servía algo de cenar, miraba un rato televisión.",
+      "Luego se acostaba en mi sillón, tranquilamente, durmiendo.",
+      "Todo este tiempo... *no estabas solo* en tu propia casa.",
+      "Ella vivía secretamente aquí cuando yo no estaba en casa.",
+      "Por qué, cómo... *nadie lo vio* venir, fue increíble.",
+      "Su propio departamento tenía un gran problema de agua.",
+      "Y decidió mudarse sin avisar, directamente a mi casa.",
+      "Usaba mi hogar como si fuera un hotel de paso.",
+      "Con mis cosas, mi comida... y mi completo *silencio absoluto*.",
+      "Y a la mañana siguiente, se iba sin decir nada.",
+      "Sin dejar rastro, como si nada hubiera sucedido ahí.",
+      "¿Cómo enfrentarías una traición así de tu propia sangre?",
+      "¿Les ha pasado algo así con su familia, a ustedes?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Front door ajar, dark hallway, keys on a small table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Front door ajar, dark hallway, keys on a small table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Cierras tu puerta con llave... y amanece entreabierta.",
+        "pexels_query": "door ajar keys"
+      },
+      {
+        "id": 2,
+        "prompt": "Bedroom nightstand, phone screen glowing, dim light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Bedroom nightstand, phone screen glowing, dim light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Al principio, pensé que era olvido mío, ¿sabes?",
+        "pexels_query": "phone glowing nightstand"
+      },
+      {
+        "id": 3,
+        "prompt": "Messy bed, crumpled sheets, morning light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Messy bed, crumpled sheets, morning light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Quizá la dejé mal cerrada, o estaba muy distraída.",
+        "pexels_query": "crumpled bed sheets"
+      },
+      {
+        "id": 4,
+        "prompt": "Kitchen counter, single dirty glass, subtle light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Kitchen counter, single dirty glass, subtle light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero luego, *algo no está bien* aquí, lo sentí.",
+        "pexels_query": "single dirty glass"
+      },
+      {
+        "id": 5,
+        "prompt": "Living room sofa, cushion slightly askew, empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Living room sofa, cushion slightly askew, empty, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empecé a notar cosas sutilmente fuera de lugar.",
+        "pexels_query": "askew sofa cushion"
+      },
+      {
+        "id": 6,
+        "prompt": "Remote control on coffee table, slightly shifted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Remote control on coffee table, slightly shifted, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un vaso distinto en la tarja, a veces, un control movido.",
+        "pexels_query": "remote control shifted"
+      },
+      {
+        "id": 7,
+        "prompt": "Light switch in a hallway, faint glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Light switch in a hallway, faint glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una luz encendida que yo juraría que apagué al salir.",
+        "pexels_query": "faint light switch"
+      },
+      {
+        "id": 8,
+        "prompt": "Thermostat on a wall, digital display, cool blue light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Thermostat on a wall, digital display, cool blue light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El aire acondicionado más frío de lo normal en la sala.",
+        "pexels_query": "thermostat cool blue"
+      },
+      {
+        "id": 9,
+        "prompt": "Small security camera hidden on a bookshelf, barely visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Small security camera hidden on a bookshelf, barely visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Entonces puse cámaras pequeñas, discretas... por mi seguridad.",
+        "pexels_query": "hidden security camera"
+      },
+      {
+        "id": 10,
+        "prompt": "Laptop screen showing a blank security camera feed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Laptop screen showing a blank security camera feed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La primera noche no grabaron nada extraño, *nadie lo vio*.",
+        "pexels_query": "laptop blank camera"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty living room at night, moonlight through window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty living room at night, moonlight through window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La segunda tampoco. Yo empezaba a dudar de mi cabeza.",
+        "pexels_query": "empty living room night"
+      },
+      {
+        "id": 12,
+        "prompt": "A calendar page turned to a new day, handwritten notes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A calendar page turned to a new day, handwritten notes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hasta que la tercera, regresé temprano de mi trabajo.",
+        "pexels_query": "calendar new day"
+      },
+      {
+        "id": 13,
+        "prompt": "Hand holding a phone, notification on screen, blurry background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand holding a phone, notification on screen, blurry background, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Decidí revisar la cámara de la sala de inmediato.",
+        "pexels_query": "hand holding phone notification"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of a paused video screen showing a blurry figure entering a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a paused video screen showing a blurry figure entering a room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y lo que vi... me dejó helada, completamente pasmada.",
+        "pexels_query": "paused video blurry figure"
+      },
+      {
+        "id": 15,
+        "prompt": "Door handle slowly turning, light from behind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Door handle slowly turning, light from behind, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "A las dos de la mañana se abría mi puerta.",
+        "pexels_query": "door handle turning light"
+      },
+      {
+        "id": 16,
+        "prompt": "A single house key on a polished surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single house key on a polished surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No había forzadura alguna, ella tenía una llave propia.",
+        "pexels_query": "single house key"
+      },
+      {
+        "id": 17,
+        "prompt": "Backpack on a chair, slightly open, interior visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Backpack on a chair, slightly open, interior visible, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era mi hermana menor. Con su mochila y hasta todo.",
+        "pexels_query": "backpack on chair"
+      },
+      {
+        "id": 18,
+        "prompt": "Kitchen counter with a bowl of cereal, spoon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Kitchen counter with a bowl of cereal, spoon, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Se servía algo de cenar, miraba un rato televisión.",
+        "pexels_query": "cereal bowl spoon"
+      },
+      {
+        "id": 19,
+        "prompt": "Living room sofa, blanket draped, suggesting someone slept there, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Living room sofa, blanket draped, suggesting someone slept there, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Luego se acostaba en mi sillón, tranquilamente, durmiendo.",
+        "pexels_query": "sofa blanket slept"
+      },
+      {
+        "id": 20,
+        "prompt": "Empty house interior, ominous shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty house interior, ominous shadow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Todo este tiempo... *no estabas solo* en tu propia casa.",
+        "pexels_query": "empty house ominous"
+      },
+      {
+        "id": 21,
+        "prompt": "A blurred figure walking out a door, motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurred figure walking out a door, motion blur, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella vivía secretamente aquí cuando yo no estaba en casa.",
+        "pexels_query": "blurred figure door"
+      },
+      {
+        "id": 22,
+        "prompt": "Question mark shadow on a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Question mark shadow on a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Por qué, cómo... *nadie lo vio* venir, fue increíble.",
+        "pexels_query": "question mark shadow"
+      },
+      {
+        "id": 23,
+        "prompt": "Apartment building exterior, broken pipe with dripping water, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Apartment building exterior, broken pipe with dripping water, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su propio departamento tenía un gran problema de agua.",
+        "pexels_query": "apartment broken pipe"
+      },
+      {
+        "id": 24,
+        "prompt": "Suitcase half-packed on a bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Suitcase half-packed on a bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y decidió mudarse sin avisar, directamente a mi casa.",
+        "pexels_query": "suitcase half-packed"
+      },
+      {
+        "id": 25,
+        "prompt": "Empty coffee mug on a kitchen table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty coffee mug on a kitchen table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Usaba mi hogar como si fuera un hotel de paso.",
+        "pexels_query": "empty coffee mug table"
+      },
+      {
+        "id": 26,
+        "prompt": "Fridge door slightly ajar, interior light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Fridge door slightly ajar, interior light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Con mis cosas, mi comida... y mi completo *silencio absoluto*.",
+        "pexels_query": "fridge door ajar"
+      },
+      {
+        "id": 27,
+        "prompt": "Empty shoes by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty shoes by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y a la mañana siguiente, se iba sin decir nada.",
+        "pexels_query": "empty shoes door"
+      },
+      {
+        "id": 28,
+        "prompt": "Freshly made bed, perfectly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Freshly made bed, perfectly arranged, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sin dejar rastro, como si nada hubiera sucedido ahí.",
+        "pexels_query": "freshly made bed"
+      },
+      {
+        "id": 29,
+        "prompt": "Reflection of a concerned face in a window, blurry, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Reflection of a concerned face in a window, blurry, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Cómo enfrentarías una traición así de tu propia sangre?",
+        "pexels_query": "reflection concerned face"
+      },
+      {
+        "id": 30,
+        "prompt": "Two silhouettes of hands reaching out, almost touching, against a blurry backdrop, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two silhouettes of hands reaching out, almost touching, against a blurry backdrop, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Les ha pasado algo así con su familia, a ustedes?",
+        "pexels_query": "hands almost touching"
+      }
+    ],
+    "hooks": [
+      "Puerta abierta cada noche",
+      "Cámaras revelan la verdad",
+      "Mi hermana me traiciona"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
