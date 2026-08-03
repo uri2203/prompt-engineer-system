@@ -1,1 +1,253 @@
-[]
+[
+  {
+    "id": "21cf433c-c006-41b4-8250-818522783d8d",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, urban skyline at dawn, distant flash of light on horizon, eerie stillness, desaturated palette, wide angle establishing shot, no people, photojournalism aesthetic, golden hour\", \"prompt_visual\": \"cinematic hyperrealistic photograph, urban skyline at dawn, distant flash of light on horizon, eerie stillness, desaturated palette, wide angle establishing shot, no people, photojournalism aesthetic, golden hour\", \"texto_locucion\": \"Sientes el temblor antes del flash.\", \"pexels_query\": \"urban dawn flash\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, old apartment interior, subtle vibration causing dust to fall, dramatic natural lighting, desaturated, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, old apartment interior, subtle vibration causing dust to fall, dramatic natural lighting, desaturated, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"La onda de choque te atraviesa el cuerpo.\", \"pexels_query\": \"vibrating dust old\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, empty street, power lines sparking briefly then going dark, night, deep shadows, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty street, power lines sparking briefly then going dark, night, deep shadows, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Todo se vuelve un silencio absoluto de pronto.\", \"pexels_query\": \"dark street sparking\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, close-up of a blank smartphone screen, eerie glow from other devices also dead, dark room, desaturated palette, no people, photojournalism aesthetic, soft light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, close-up of a blank smartphone screen, eerie glow from other devices also dead, dark room, desaturated palette, no people, photojournalism aesthetic, soft light\", \"texto_locucion\": \"Tu teléfono no tiene señal. Nada funciona.\", \"pexels_query\": \"blank phone screen\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, empty highway, cars stopped with blank dashboards, an abandoned world, desaturated, dramatic natural lighting, wide angle, few distant silhouettes, eerie stillness\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty highway, cars stopped with blank dashboards, an abandoned world, desaturated, dramatic natural lighting, wide angle, few distant silhouettes, eerie stillness\", \"texto_locucion\": \"No puedes ignorarlo. Algo no está bien.\", \"pexels_query\": \"stopped cars highway\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, military command center map room, glowing projections of strategic zones, tense atmosphere, desaturated, deep shadows, no people or very few distant silhouettes\", \"prompt_visual\": \"cinematic hyperrealistic photograph, military command center map room, glowing projections of strategic zones, tense atmosphere, desaturated, deep shadows, no people or very few distant silhouettes\", \"texto_locucion\": \"Las armas tácticas cambian las reglas siempre.\", \"pexels_query\": \"command center map\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, barren, desolate field, a single weathered sign warning of danger, grey sky, desaturated with green accent, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, barren, desolate field, a single weathered sign warning of danger, grey sky, desaturated with green accent, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Diseñadas para un campo de batalla limitado.\", \"pexels_query\": \"barren field danger\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, a symbolic line drawn on cracked earth, sun setting dramatically, desaturated with orange accent, wide angle, no people, photojournalism aesthetic, golden hour\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a symbolic line drawn on cracked earth, sun setting dramatically, desaturated with orange accent, wide angle, no people, photojournalism aesthetic, golden hour\", \"texto_locucion\": \"Pero su uso rompe cualquier umbral de control.\", \"pexels_query\": \"cracked earth line\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, a chess board with pieces toppled, a single king standing, empty room, dramatic lighting, desaturated, no people, photojournalism aesthetic, soft light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a chess board with pieces toppled, a single king standing, empty room, dramatic lighting, desaturated, no people, photojournalism aesthetic, soft light\", \"texto_locucion\": \"La disuasión global mantiene un frágil pacto.\", \"pexels_query\": \"toppled chess board\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, a closed, heavy vault door, ominous shadows, desaturated, deep shadows, no people, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a closed, heavy vault door, ominous shadows, desaturated, deep shadows, no people, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"Nadie quiere cruzar esa línea invisible jamás.\", \"pexels_query\": \"heavy vault door\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, a missile launch silo opening, smoke, sense of immense power, desaturated with red accent, wide angle, no people, photojournalism aesthetic, dramatic lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a missile launch silo opening, smoke, sense of immense power, desaturated with red accent, wide angle, no people, photojournalism aesthetic, dramatic lighting\", \"texto_locucion\": \"Hasta hoy. Una nación decide actuar.\", \"pexels_query\": \"missile silo launch\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, a missile ascending against a dark sky, contrail visible, intense focus, desaturated, deep shadows, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a missile ascending against a dark sky, contrail visible, intense focus, desaturated, deep shadows, no people, photojournalism aesthetic\", \"texto_locucion\": \"Un proyectil vuela, su carga ya activa.\", \"pexels_query\": \"missile ascending night\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, a distant, blinding flash of light over a city, low angle, vast empty space, desaturated, wide angle, no people, photojournalism aesthetic, dark blue sky\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a distant, blinding flash of light over a city, low angle, vast empty space, desaturated, wide angle, no people, photojournalism aesthetic, dark blue sky\", \"texto_locucion\": \"Detona a baja altura. Luz cegadora.\", \"pexels_query\": \"blinding flash city\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, a city power grid diagram, lights going out progressively, digital interface, desaturated with blue accent, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a city power grid diagram, lights going out progressively, digital interface, desaturated with blue accent, no people, photojournalism aesthetic\", \"texto_locucion\": \"Primero el pulso electromagnético lo barre todo.\", \"pexels_query\": \"power grid lights\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, rows of server racks completely dark, tangled cables, dusty, desaturated, deep shadows, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, rows of server racks completely dark, tangled cables, dusty, desaturated, deep shadows, no people, photojournalism aesthetic\", \"texto_locucion\": \"Los sistemas se apagan, redes mueren lento.\", \"pexels_query\": \"dark server racks\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, a vast field of abandoned electronic devices, smartphones, laptops, eerie silence, desaturated, wide angle, no people, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast field of abandoned electronic devices, smartphones, laptops, eerie silence, desaturated, wide angle, no people, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"Millones de dispositivos quedan inservibles al instante.\", \"pexels_query\": \"abandoned electronics field\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, empty office, screens showing static, a discarded chair, desaturated with grey accent, no people, photojournalism aesthetic, soft light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty office, screens showing static, a discarded chair, desaturated with grey accent, no people, photojournalism aesthetic, soft light\", \"texto_locucion\": \"El caos digital se extiende por muchas horas.\", \"pexels_query\": \"empty office static\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, desolate landscape, subtle dust clouds in the air, a sense of quiet contamination, desaturated with green accent, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, desolate landscape, subtle dust clouds in the air, a sense of quiet contamination, desaturated with green accent, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Después llega la lluvia radiactiva. Localizada.\", \"pexels_query\": \"desolate dust clouds\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, global stock market ticker, numbers in freefall, red alerts, desaturated with red accent, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, global stock market ticker, numbers in freefall, red alerts, desaturated with red accent, no people, photojournalism aesthetic\", \"texto_locucion\": \"Un temor inunda los mercados globales sin freno.\", \"pexels_query\": \"stock market crash\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, an abandoned trading floor, chairs overturned, screens dark, eerie silence, desaturated, deep shadows, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an abandoned trading floor, chairs overturned, screens dark, eerie silence, desaturated, deep shadows, no people, photojournalism aesthetic\", \"texto_locucion\": \"Las bolsas caen, la confianza desaparece rápidamente.\", \"pexels_query\": \"abandoned trading floor\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, massive cargo ships idle in a harbor, no activity, calm water, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, massive cargo ships idle in a harbor, no activity, calm water, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"El comercio internacional se paraliza por completo.\", \"pexels_query\": \"idle cargo ships\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, empty supermarket shelves, stark lighting, a sense of scarcity, desaturated, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty supermarket shelves, stark lighting, a sense of scarcity, desaturated, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Las cadenas de suministro colapsan sin remedio.\", \"pexels_query\": \"empty supermarket shelves\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, a desolate, closed factory, overgrown with weeds, industrial decay, desaturated with grey accent, wide angle, no people, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a desolate, closed factory, overgrown with weeds, industrial decay, desaturated with grey accent, wide angle, no people, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"Naciones enteras entran en recesión severa pronto.\", \"pexels_query\": \"desolate closed factory\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, a solitary, untouched meal on an otherwise empty table, haunting stillness, desaturated, deep shadows, no people, photojournalism aesthetic, soft light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a solitary, untouched meal on an otherwise empty table, haunting stillness, desaturated, deep shadows, no people, photojournalism aesthetic, soft light\", \"texto_locucion\": \"La escasez empieza a sentirse en tu casa.\", \"pexels_query\": \"solitary meal table\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, a lone figure standing before a vast, unbreachable wall, sense of isolation, desaturated, wide angle, few distant silhouettes, eerie stillness, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a lone figure standing before a vast, unbreachable wall, sense of isolation, desaturated, wide angle, few distant silhouettes, eerie stillness, photojournalism aesthetic\", \"texto_locucion\": \"Nadie lo vio venir realmente de esta forma.\", \"pexels_query\": \"unbreachable wall isolation\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, a broken globe, fissures running through continents, symbolic of division, desaturated, deep shadows, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a broken globe, fissures running through continents, symbolic of division, desaturated, deep shadows, no people, photojournalism aesthetic\", \"texto_locucion\": \"No fue una guerra global convencional de armas.\", \"pexels_query\": \"broken globe fissures\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, a network of disconnected cables lying on the ground, cut ends, symbolic of lost connections, desaturated, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a network of disconnected cables lying on the ground, cut ends, symbolic of lost connections, desaturated, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Fue el fin de la interdependencia económica mundial.\", \"pexels_query\": \"disconnected cables ground\"}, {\"id\": 28, \"prompt\": \"cinematic hyperrealistic photograph, a lone lighthouse beaming into a dense, impenetrable fog, emphasizing isolation, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a lone lighthouse beaming into a dense, impenetrable fog, emphasizing isolation, desaturated with blue accent, wide angle, no people, photojournalism aesthetic\", \"texto_locucion\": \"Un mundo redefinido para siempre. Sin vuelta atrás.\", \"pexels_query\": \"lighthouse impenetrable fog\"}, {\"id\": 29, \"prompt\": \"cinematic hyperrealistic photograph, an empty, desolate landscape stretching to the horizon, a single, decaying road sign pointing nowhere, desaturated, wide angle, no people, photojournalism aesthetic, overcast light\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an empty, desolate landscape stretching to the horizon, a single, decaying road sign pointing nowhere, desaturated, wide angle, no people, photojournalism aesthetic, overcast light\", \"texto_locucion\": \"Esto fue una simulación. Por ahora, ¿tú qué harías?\", \"pexels_query\": \"desolate empty road\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "Sientes el temblor antes del flash. La onda de choque te atraviesa el cuerpo. Todo se vuelve un silencio absoluto de pronto. Tu teléfono no tiene señal. Nada funciona. No puedes ignorarlo. Algo no está bien. Las armas tácticas cambian las reglas siempre. Diseñadas para un campo de batalla limitado. Pero su uso rompe cualquier umbral de control. La disuasión global mantiene un frágil pacto. Nadie quiere cruzar esa línea invisible jamás. Hasta hoy. Una nación decide actuar. Un proyectil vuela, su carga ya activa. Detona a baja altura. Luz cegadora. Primero el pulso electromagnético lo barre todo. Los sistemas se apagan, redes mueren lento. Millones de dispositivos quedan inservibles al instante. El caos digital se extiende por muchas horas. Después llega la lluvia radiactiva. Localizada. Un temor inunda los mercados globales sin freno. Las bolsas caen, la confianza desaparece rápidamente. El comercio internacional se paraliza por completo. Las cadenas de suministro colapsan sin remedio. Naciones enteras entran en recesión severa pronto. La escasez empieza a sentirse en tu casa. Nadie lo vio venir realmente de esta forma. No fue una guerra global convencional de armas. Fue el fin de la interdependencia económica mundial. Un mundo redefinido para siempre. Sin vuelta atrás. Esto fue una simulación. Por ahora, ¿tú qué harías?",
+    "titulo_sugerido": "ARMA TÁCTICA: El mundo tras el primer umbral nuclear",
+    "escenas_texto": [
+      "Sientes el temblor antes del flash.",
+      "La onda de choque te atraviesa el cuerpo.",
+      "Todo se vuelve un silencio absoluto de pronto.",
+      "Tu teléfono no tiene señal. Nada funciona.",
+      "No puedes ignorarlo. Algo no está bien.",
+      "Las armas tácticas cambian las reglas siempre.",
+      "Diseñadas para un campo de batalla limitado.",
+      "Pero su uso rompe cualquier umbral de control.",
+      "La disuasión global mantiene un frágil pacto.",
+      "Nadie quiere cruzar esa línea invisible jamás.",
+      "Hasta hoy. Una nación decide actuar.",
+      "Un proyectil vuela, su carga ya activa.",
+      "Detona a baja altura. Luz cegadora.",
+      "Primero el pulso electromagnético lo barre todo.",
+      "Los sistemas se apagan, redes mueren lento.",
+      "Millones de dispositivos quedan inservibles al instante.",
+      "El caos digital se extiende por muchas horas.",
+      "Después llega la lluvia radiactiva. Localizada.",
+      "Un temor inunda los mercados globales sin freno.",
+      "Las bolsas caen, la confianza desaparece rápidamente.",
+      "El comercio internacional se paraliza por completo.",
+      "Las cadenas de suministro colapsan sin remedio.",
+      "Naciones enteras entran en recesión severa pronto.",
+      "La escasez empieza a sentirse en tu casa.",
+      "Nadie lo vio venir realmente de esta forma.",
+      "No fue una guerra global convencional de armas.",
+      "Fue el fin de la interdependencia económica mundial.",
+      "Un mundo redefinido para siempre. Sin vuelta atrás.",
+      "Esto fue una simulación. Por ahora, ¿tú qué harías?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, urban skyline at dawn, distant flash of light on horizon, eerie stillness, desaturated palette, wide angle establishing shot, no people, photojournalism aesthetic, golden hour",
+        "prompt_visual": "cinematic hyperrealistic photograph, urban skyline at dawn, distant flash of light on horizon, eerie stillness, desaturated palette, wide angle establishing shot, no people, photojournalism aesthetic, golden hour",
+        "texto_locucion": "Sientes el temblor antes del flash.",
+        "pexels_query": "urban dawn flash"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, old apartment interior, subtle vibration causing dust to fall, dramatic natural lighting, desaturated, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, old apartment interior, subtle vibration causing dust to fall, dramatic natural lighting, desaturated, few distant silhouettes, eerie stillness, photojournalism aesthetic, overcast light",
+        "texto_locucion": "La onda de choque te atraviesa el cuerpo.",
+        "pexels_query": "vibrating dust old"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, empty street, power lines sparking briefly then going dark, night, deep shadows, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty street, power lines sparking briefly then going dark, night, deep shadows, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Todo se vuelve un silencio absoluto de pronto.",
+        "pexels_query": "dark street sparking"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, close-up of a blank smartphone screen, eerie glow from other devices also dead, dark room, desaturated palette, no people, photojournalism aesthetic, soft light",
+        "prompt_visual": "cinematic hyperrealistic photograph, close-up of a blank smartphone screen, eerie glow from other devices also dead, dark room, desaturated palette, no people, photojournalism aesthetic, soft light",
+        "texto_locucion": "Tu teléfono no tiene señal. Nada funciona.",
+        "pexels_query": "blank phone screen"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, empty highway, cars stopped with blank dashboards, an abandoned world, desaturated, dramatic natural lighting, wide angle, few distant silhouettes, eerie stillness",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty highway, cars stopped with blank dashboards, an abandoned world, desaturated, dramatic natural lighting, wide angle, few distant silhouettes, eerie stillness",
+        "texto_locucion": "No puedes ignorarlo. Algo no está bien.",
+        "pexels_query": "stopped cars highway"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, military command center map room, glowing projections of strategic zones, tense atmosphere, desaturated, deep shadows, no people or very few distant silhouettes",
+        "prompt_visual": "cinematic hyperrealistic photograph, military command center map room, glowing projections of strategic zones, tense atmosphere, desaturated, deep shadows, no people or very few distant silhouettes",
+        "texto_locucion": "Las armas tácticas cambian las reglas siempre.",
+        "pexels_query": "command center map"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, barren, desolate field, a single weathered sign warning of danger, grey sky, desaturated with green accent, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, barren, desolate field, a single weathered sign warning of danger, grey sky, desaturated with green accent, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Diseñadas para un campo de batalla limitado.",
+        "pexels_query": "barren field danger"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, a symbolic line drawn on cracked earth, sun setting dramatically, desaturated with orange accent, wide angle, no people, photojournalism aesthetic, golden hour",
+        "prompt_visual": "cinematic hyperrealistic photograph, a symbolic line drawn on cracked earth, sun setting dramatically, desaturated with orange accent, wide angle, no people, photojournalism aesthetic, golden hour",
+        "texto_locucion": "Pero su uso rompe cualquier umbral de control.",
+        "pexels_query": "cracked earth line"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, a chess board with pieces toppled, a single king standing, empty room, dramatic lighting, desaturated, no people, photojournalism aesthetic, soft light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a chess board with pieces toppled, a single king standing, empty room, dramatic lighting, desaturated, no people, photojournalism aesthetic, soft light",
+        "texto_locucion": "La disuasión global mantiene un frágil pacto.",
+        "pexels_query": "toppled chess board"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, a closed, heavy vault door, ominous shadows, desaturated, deep shadows, no people, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a closed, heavy vault door, ominous shadows, desaturated, deep shadows, no people, photojournalism aesthetic, overcast light",
+        "texto_locucion": "Nadie quiere cruzar esa línea invisible jamás.",
+        "pexels_query": "heavy vault door"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, a missile launch silo opening, smoke, sense of immense power, desaturated with red accent, wide angle, no people, photojournalism aesthetic, dramatic lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a missile launch silo opening, smoke, sense of immense power, desaturated with red accent, wide angle, no people, photojournalism aesthetic, dramatic lighting",
+        "texto_locucion": "Hasta hoy. Una nación decide actuar.",
+        "pexels_query": "missile silo launch"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, a missile ascending against a dark sky, contrail visible, intense focus, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a missile ascending against a dark sky, contrail visible, intense focus, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "texto_locucion": "Un proyectil vuela, su carga ya activa.",
+        "pexels_query": "missile ascending night"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, a distant, blinding flash of light over a city, low angle, vast empty space, desaturated, wide angle, no people, photojournalism aesthetic, dark blue sky",
+        "prompt_visual": "cinematic hyperrealistic photograph, a distant, blinding flash of light over a city, low angle, vast empty space, desaturated, wide angle, no people, photojournalism aesthetic, dark blue sky",
+        "texto_locucion": "Detona a baja altura. Luz cegadora.",
+        "pexels_query": "blinding flash city"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, a city power grid diagram, lights going out progressively, digital interface, desaturated with blue accent, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a city power grid diagram, lights going out progressively, digital interface, desaturated with blue accent, no people, photojournalism aesthetic",
+        "texto_locucion": "Primero el pulso electromagnético lo barre todo.",
+        "pexels_query": "power grid lights"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, rows of server racks completely dark, tangled cables, dusty, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, rows of server racks completely dark, tangled cables, dusty, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "texto_locucion": "Los sistemas se apagan, redes mueren lento.",
+        "pexels_query": "dark server racks"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, a vast field of abandoned electronic devices, smartphones, laptops, eerie silence, desaturated, wide angle, no people, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast field of abandoned electronic devices, smartphones, laptops, eerie silence, desaturated, wide angle, no people, photojournalism aesthetic, overcast light",
+        "texto_locucion": "Millones de dispositivos quedan inservibles al instante.",
+        "pexels_query": "abandoned electronics field"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, empty office, screens showing static, a discarded chair, desaturated with grey accent, no people, photojournalism aesthetic, soft light",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty office, screens showing static, a discarded chair, desaturated with grey accent, no people, photojournalism aesthetic, soft light",
+        "texto_locucion": "El caos digital se extiende por muchas horas.",
+        "pexels_query": "empty office static"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, desolate landscape, subtle dust clouds in the air, a sense of quiet contamination, desaturated with green accent, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, desolate landscape, subtle dust clouds in the air, a sense of quiet contamination, desaturated with green accent, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Después llega la lluvia radiactiva. Localizada.",
+        "pexels_query": "desolate dust clouds"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, global stock market ticker, numbers in freefall, red alerts, desaturated with red accent, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, global stock market ticker, numbers in freefall, red alerts, desaturated with red accent, no people, photojournalism aesthetic",
+        "texto_locucion": "Un temor inunda los mercados globales sin freno.",
+        "pexels_query": "stock market crash"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, an abandoned trading floor, chairs overturned, screens dark, eerie silence, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, an abandoned trading floor, chairs overturned, screens dark, eerie silence, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "texto_locucion": "Las bolsas caen, la confianza desaparece rápidamente.",
+        "pexels_query": "abandoned trading floor"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, massive cargo ships idle in a harbor, no activity, calm water, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, massive cargo ships idle in a harbor, no activity, calm water, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "El comercio internacional se paraliza por completo.",
+        "pexels_query": "idle cargo ships"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, empty supermarket shelves, stark lighting, a sense of scarcity, desaturated, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty supermarket shelves, stark lighting, a sense of scarcity, desaturated, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Las cadenas de suministro colapsan sin remedio.",
+        "pexels_query": "empty supermarket shelves"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, a desolate, closed factory, overgrown with weeds, industrial decay, desaturated with grey accent, wide angle, no people, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a desolate, closed factory, overgrown with weeds, industrial decay, desaturated with grey accent, wide angle, no people, photojournalism aesthetic, overcast light",
+        "texto_locucion": "Naciones enteras entran en recesión severa pronto.",
+        "pexels_query": "desolate closed factory"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, a solitary, untouched meal on an otherwise empty table, haunting stillness, desaturated, deep shadows, no people, photojournalism aesthetic, soft light",
+        "prompt_visual": "cinematic hyperrealistic photograph, a solitary, untouched meal on an otherwise empty table, haunting stillness, desaturated, deep shadows, no people, photojournalism aesthetic, soft light",
+        "texto_locucion": "La escasez empieza a sentirse en tu casa.",
+        "pexels_query": "solitary meal table"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, a lone figure standing before a vast, unbreachable wall, sense of isolation, desaturated, wide angle, few distant silhouettes, eerie stillness, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a lone figure standing before a vast, unbreachable wall, sense of isolation, desaturated, wide angle, few distant silhouettes, eerie stillness, photojournalism aesthetic",
+        "texto_locucion": "Nadie lo vio venir realmente de esta forma.",
+        "pexels_query": "unbreachable wall isolation"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, a broken globe, fissures running through continents, symbolic of division, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a broken globe, fissures running through continents, symbolic of division, desaturated, deep shadows, no people, photojournalism aesthetic",
+        "texto_locucion": "No fue una guerra global convencional de armas.",
+        "pexels_query": "broken globe fissures"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, a network of disconnected cables lying on the ground, cut ends, symbolic of lost connections, desaturated, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a network of disconnected cables lying on the ground, cut ends, symbolic of lost connections, desaturated, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Fue el fin de la interdependencia económica mundial.",
+        "pexels_query": "disconnected cables ground"
+      },
+      {
+        "id": 28,
+        "prompt": "cinematic hyperrealistic photograph, a lone lighthouse beaming into a dense, impenetrable fog, emphasizing isolation, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a lone lighthouse beaming into a dense, impenetrable fog, emphasizing isolation, desaturated with blue accent, wide angle, no people, photojournalism aesthetic",
+        "texto_locucion": "Un mundo redefinido para siempre. Sin vuelta atrás.",
+        "pexels_query": "lighthouse impenetrable fog"
+      },
+      {
+        "id": 29,
+        "prompt": "cinematic hyperrealistic photograph, an empty, desolate landscape stretching to the horizon, a single, decaying road sign pointing nowhere, desaturated, wide angle, no people, photojournalism aesthetic, overcast light",
+        "prompt_visual": "cinematic hyperrealistic photograph, an empty, desolate landscape stretching to the horizon, a single, decaying road sign pointing nowhere, desaturated, wide angle, no people, photojournalism aesthetic, overcast light",
+        "texto_locucion": "Esto fue una simulación. Por ahora, ¿tú qué harías?",
+        "pexels_query": "desolate empty road"
+      }
+    ],
+    "hooks": [
+      "La onda de choque atraviesa.",
+      "El silencio absoluto llega.",
+      "Un mundo sin retorno."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
