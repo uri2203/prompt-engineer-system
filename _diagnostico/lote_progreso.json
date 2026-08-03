@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 20,
-  "completados": 16,
+  "completados": 17,
   "fallidos": 0,
   "trabajo_actual": "Generando video 17/20 (Umbral Alterno 9:16)",
-  "mensaje": "Produccion del video 17 iniciada.",
+  "mensaje": "Video 17 completado",
   "resumen": "FiltradoMX: 10s+0L | Umbral Alterno: 5s+5L",
   "historial": [
     {
@@ -150,6 +150,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 162.3,
       "hora": "12:01"
+    },
+    {
+      "n": 17,
+      "marca": "Umbral Alterno",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 117.2,
+      "hora": "12:59"
     }
   ]
 }
