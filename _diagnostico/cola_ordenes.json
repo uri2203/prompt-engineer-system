@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "486aac36-8ea8-4a99-b93d-d4a2f9be47b3",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty bedroom with slightly open door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty bedroom with slightly open door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Sientes una presencia extraña cuando estás en casa?\", \"pexels_query\": \"bedroom open door\"}, {\"id\": 2, \"prompt\": \"Kitchen counter with scattered keys, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Kitchen counter with scattered keys, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esta es la historia de alguien que lo vivió.\", \"pexels_query\": \"keys on counter\"}, {\"id\": 3, \"prompt\": \"Cozy apartment living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Cozy apartment living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una chica vivía tranquila, sola en su apartamento.\", \"pexels_query\": \"cozy living room\"}, {\"id\": 4, \"prompt\": \"Slightly moved coffee cup on table, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Slightly moved coffee cup on table, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empezó a notar pequeñas cosas, algo no estaba bien.\", \"pexels_query\": \"moved coffee cup\"}, {\"id\": 5, \"prompt\": \"Car keys on an unusual hook, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Car keys on an unusual hook, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las llaves aparecían en lugares donde no las dejaba.\", \"pexels_query\": \"keys unusual place\"}, {\"id\": 6, \"prompt\": \"Slightly ajar window in a bedroom, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Slightly ajar window in a bedroom, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una ventana, que juraba cerrar, a veces estaba abierta.\", \"pexels_query\": \"ajar window bedroom\"}, {\"id\": 7, \"prompt\": \"Empty hallway with a cold light coming from under a door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty hallway with a cold light coming from under a door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sentía un escalofrío, la sensación de no estar sola.\", \"pexels_query\": \"cold hallway light\"}, {\"id\": 8, \"prompt\": \"Headache pills on a nightstand, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Headache pills on a nightstand, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Primero pensó que su mente le jugaba una mala pasada.\", \"pexels_query\": \"pills nightstand\"}, {\"id\": 9, \"prompt\": \"Notebook with repeated anxious doodles, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Notebook with repeated anxious doodles, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero el patrón se hizo más claro, no podía ignorarlo.\", \"pexels_query\": \"anxious doodles notebook\"}, {\"id\": 10, \"prompt\": \"Dark corner of a room, subtle shadows, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark corner of a room, subtle shadows, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ruidos por la noche, crujidos, susurros, casi inaudibles.\", \"pexels_query\": \"dark room corner\"}, {\"id\": 11, \"prompt\": \"Empty room, perfectly neat, no visible disturbance, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty room, perfectly neat, no visible disturbance, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Revisaba todo, pero siempre encontraba silencio absoluto.\", \"pexels_query\": \"neat empty room\"}, {\"id\": 12, \"prompt\": \"Hand gripping a blanket tightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand gripping a blanket tightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su corazón latía rápido, un miedo irracional la invadía.\", \"pexels_query\": \"hand gripping blanket\"}, {\"id\": 13, \"prompt\": \"Small, hidden security camera lens subtly placed on a bookshelf, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Small, hidden security camera lens subtly placed on a bookshelf, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Decidió instalar cámaras discretas para su tranquilidad.\", \"pexels_query\": \"hidden camera bookshelf\"}, {\"id\": 14, \"prompt\": \"Goosebumps on an arm, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Goosebumps on an arm, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo sentía antes, su intuición le gritaba que algo ocurría.\", \"pexels_query\": \"goosebumps arm\"}, {\"id\": 15, \"prompt\": \"Blank computer screen showing security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blank computer screen showing security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pasaron días sin grabar nada, solo su rutina diaria.\", \"pexels_query\": \"blank security feed\"}, {\"id\": 16, \"prompt\": \"Computer screen showing blurred movement in a home, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Computer screen showing blurred movement in a home, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hasta que una madrugada, la cámara captó un movimiento.\", \"pexels_query\": \"blurred home movement\"}, {\"id\": 17, \"prompt\": \"Very faint, dark shadow against a wall in a living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Very faint, dark shadow against a wall in a living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una sombra se deslizó sigilosa por su propia sala.\", \"pexels_query\": \"faint shadow livingroom\"}, {\"id\": 18, \"prompt\": \"Gloved hand on a door frame in a dark apartment, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Gloved hand on a door frame in a dark apartment, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¡Era una persona! Alguien más estaba en su departamento.\", \"pexels_query\": \"gloved hand doorframe\"}, {\"id\": 19, \"prompt\": \"Pixelated screenshot of a security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Pixelated screenshot of a security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La imagen era borrosa, nadie lo vio con claridad.\", \"pexels_query\": \"pixelated security feed\"}, {\"id\": 20, \"prompt\": \"Intact jewelry box on a dresser, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Intact jewelry box on a dresser, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No era un ladrón, no se llevó nada, solo observaba.\", \"pexels_query\": \"intact jewelry box\"}, {\"id\": 21, \"prompt\": \"Police report on a table, blurred text, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Police report on a table, blurred text, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La policía investigó sin rastro, sin forcejeos evidentes.\", \"pexels_query\": \"blurred police report\"}, {\"id\": 22, \"prompt\": \"Locked door from inside, unsettling atmosphere, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Locked door from inside, unsettling atmosphere, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El misterio creció, ¿cómo entraba? ¿Quién era esa persona?\", \"pexels_query\": \"locked door inside\"}, {\"id\": 23, \"prompt\": \"Old, rusted spare key on a keychain, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old, rusted spare key on a keychain, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El giro: Semanas después, su ex novio lo confesó.\", \"pexels_query\": \"rusted spare key\"}, {\"id\": 24, \"prompt\": \"Hand holding an old spare key, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand holding an old spare key, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Él guardaba una llave, entraba por las noches.\", \"pexels_query\": \"hand old key\"}, {\"id\": 25, \"prompt\": \"Bedroom at night, very dark, a subtle glow, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Bedroom at night, very dark, a subtle glow, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Solo para verla dormir, para sentirla cerca.\", \"pexels_query\": \"dark bedroom night\"}, {\"id\": 26, \"prompt\": \"Shattered mirror reflecting a distorted room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shattered mirror reflecting a distorted room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su mente colapsó, el horror fue aún mayor.\", \"pexels_query\": \"shattered mirror room\"}, {\"id\": 27, \"prompt\": \"Creepy doll with button eyes in a dark room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Creepy doll with button eyes in a dark room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No era un fantasma... era algo mucho peor.\", \"pexels_query\": \"creepy doll eyes\"}, {\"id\": 28, \"prompt\": \"Empty porch swing moving slightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty porch swing moving slightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"A veces el miedo viene de donde menos lo esperas.\", \"pexels_query\": \"empty porch swing\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "¿Sientes una presencia extraña cuando estás en casa? Esta es la historia de alguien que lo vivió. Una chica vivía tranquila, sola en su apartamento. Empezó a notar pequeñas cosas, algo no estaba bien. Las llaves aparecían en lugares donde no las dejaba. Una ventana, que juraba cerrar, a veces estaba abierta. Sentía un escalofrío, la sensación de no estar sola. Primero pensó que su mente le jugaba una mala pasada. Pero el patrón se hizo más claro, no podía ignorarlo. Ruidos por la noche, crujidos, susurros, casi inaudibles. Revisaba todo, pero siempre encontraba silencio absoluto. Su corazón latía rápido, un miedo irracional la invadía. Decidió instalar cámaras discretas para su tranquilidad. Lo sentía antes, su intuición le gritaba que algo ocurría. Pasaron días sin grabar nada, solo su rutina diaria. Hasta que una madrugada, la cámara captó un movimiento. Una sombra se deslizó sigilosa por su propia sala. ¡Era una persona! Alguien más estaba en su departamento. La imagen era borrosa, nadie lo vio con claridad. No era un ladrón, no se llevó nada, solo observaba. La policía investigó sin rastro, sin forcejeos evidentes. El misterio creció, ¿cómo entraba? ¿Quién era esa persona? El giro: Semanas después, su ex novio lo confesó. Él guardaba una llave, entraba por las noches. Solo para verla dormir, para sentirla cerca. Su mente colapsó, el horror fue aún mayor. No era un fantasma... era algo mucho peor. A veces el miedo viene de donde menos lo esperas.",
+    "titulo_sugerido": "Descubrió quién la espiaba en casa, ¡fue aterrador!",
+    "escenas_texto": [
+      "¿Sientes una presencia extraña cuando estás en casa?",
+      "Esta es la historia de alguien que lo vivió.",
+      "Una chica vivía tranquila, sola en su apartamento.",
+      "Empezó a notar pequeñas cosas, algo no estaba bien.",
+      "Las llaves aparecían en lugares donde no las dejaba.",
+      "Una ventana, que juraba cerrar, a veces estaba abierta.",
+      "Sentía un escalofrío, la sensación de no estar sola.",
+      "Primero pensó que su mente le jugaba una mala pasada.",
+      "Pero el patrón se hizo más claro, no podía ignorarlo.",
+      "Ruidos por la noche, crujidos, susurros, casi inaudibles.",
+      "Revisaba todo, pero siempre encontraba silencio absoluto.",
+      "Su corazón latía rápido, un miedo irracional la invadía.",
+      "Decidió instalar cámaras discretas para su tranquilidad.",
+      "Lo sentía antes, su intuición le gritaba que algo ocurría.",
+      "Pasaron días sin grabar nada, solo su rutina diaria.",
+      "Hasta que una madrugada, la cámara captó un movimiento.",
+      "Una sombra se deslizó sigilosa por su propia sala.",
+      "¡Era una persona! Alguien más estaba en su departamento.",
+      "La imagen era borrosa, nadie lo vio con claridad.",
+      "No era un ladrón, no se llevó nada, solo observaba.",
+      "La policía investigó sin rastro, sin forcejeos evidentes.",
+      "El misterio creció, ¿cómo entraba? ¿Quién era esa persona?",
+      "El giro: Semanas después, su ex novio lo confesó.",
+      "Él guardaba una llave, entraba por las noches.",
+      "Solo para verla dormir, para sentirla cerca.",
+      "Su mente colapsó, el horror fue aún mayor.",
+      "No era un fantasma... era algo mucho peor.",
+      "A veces el miedo viene de donde menos lo esperas."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty bedroom with slightly open door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty bedroom with slightly open door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Sientes una presencia extraña cuando estás en casa?",
+        "pexels_query": "bedroom open door"
+      },
+      {
+        "id": 2,
+        "prompt": "Kitchen counter with scattered keys, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Kitchen counter with scattered keys, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esta es la historia de alguien que lo vivió.",
+        "pexels_query": "keys on counter"
+      },
+      {
+        "id": 3,
+        "prompt": "Cozy apartment living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Cozy apartment living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una chica vivía tranquila, sola en su apartamento.",
+        "pexels_query": "cozy living room"
+      },
+      {
+        "id": 4,
+        "prompt": "Slightly moved coffee cup on table, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Slightly moved coffee cup on table, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empezó a notar pequeñas cosas, algo no estaba bien.",
+        "pexels_query": "moved coffee cup"
+      },
+      {
+        "id": 5,
+        "prompt": "Car keys on an unusual hook, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Car keys on an unusual hook, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las llaves aparecían en lugares donde no las dejaba.",
+        "pexels_query": "keys unusual place"
+      },
+      {
+        "id": 6,
+        "prompt": "Slightly ajar window in a bedroom, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Slightly ajar window in a bedroom, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una ventana, que juraba cerrar, a veces estaba abierta.",
+        "pexels_query": "ajar window bedroom"
+      },
+      {
+        "id": 7,
+        "prompt": "Empty hallway with a cold light coming from under a door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty hallway with a cold light coming from under a door, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sentía un escalofrío, la sensación de no estar sola.",
+        "pexels_query": "cold hallway light"
+      },
+      {
+        "id": 8,
+        "prompt": "Headache pills on a nightstand, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Headache pills on a nightstand, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Primero pensó que su mente le jugaba una mala pasada.",
+        "pexels_query": "pills nightstand"
+      },
+      {
+        "id": 9,
+        "prompt": "Notebook with repeated anxious doodles, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Notebook with repeated anxious doodles, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero el patrón se hizo más claro, no podía ignorarlo.",
+        "pexels_query": "anxious doodles notebook"
+      },
+      {
+        "id": 10,
+        "prompt": "Dark corner of a room, subtle shadows, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark corner of a room, subtle shadows, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ruidos por la noche, crujidos, susurros, casi inaudibles.",
+        "pexels_query": "dark room corner"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty room, perfectly neat, no visible disturbance, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty room, perfectly neat, no visible disturbance, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Revisaba todo, pero siempre encontraba silencio absoluto.",
+        "pexels_query": "neat empty room"
+      },
+      {
+        "id": 12,
+        "prompt": "Hand gripping a blanket tightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand gripping a blanket tightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su corazón latía rápido, un miedo irracional la invadía.",
+        "pexels_query": "hand gripping blanket"
+      },
+      {
+        "id": 13,
+        "prompt": "Small, hidden security camera lens subtly placed on a bookshelf, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Small, hidden security camera lens subtly placed on a bookshelf, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Decidió instalar cámaras discretas para su tranquilidad.",
+        "pexels_query": "hidden camera bookshelf"
+      },
+      {
+        "id": 14,
+        "prompt": "Goosebumps on an arm, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Goosebumps on an arm, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo sentía antes, su intuición le gritaba que algo ocurría.",
+        "pexels_query": "goosebumps arm"
+      },
+      {
+        "id": 15,
+        "prompt": "Blank computer screen showing security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blank computer screen showing security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pasaron días sin grabar nada, solo su rutina diaria.",
+        "pexels_query": "blank security feed"
+      },
+      {
+        "id": 16,
+        "prompt": "Computer screen showing blurred movement in a home, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Computer screen showing blurred movement in a home, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hasta que una madrugada, la cámara captó un movimiento.",
+        "pexels_query": "blurred home movement"
+      },
+      {
+        "id": 17,
+        "prompt": "Very faint, dark shadow against a wall in a living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Very faint, dark shadow against a wall in a living room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una sombra se deslizó sigilosa por su propia sala.",
+        "pexels_query": "faint shadow livingroom"
+      },
+      {
+        "id": 18,
+        "prompt": "Gloved hand on a door frame in a dark apartment, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Gloved hand on a door frame in a dark apartment, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¡Era una persona! Alguien más estaba en su departamento.",
+        "pexels_query": "gloved hand doorframe"
+      },
+      {
+        "id": 19,
+        "prompt": "Pixelated screenshot of a security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Pixelated screenshot of a security camera feed, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La imagen era borrosa, nadie lo vio con claridad.",
+        "pexels_query": "pixelated security feed"
+      },
+      {
+        "id": 20,
+        "prompt": "Intact jewelry box on a dresser, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Intact jewelry box on a dresser, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No era un ladrón, no se llevó nada, solo observaba.",
+        "pexels_query": "intact jewelry box"
+      },
+      {
+        "id": 21,
+        "prompt": "Police report on a table, blurred text, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Police report on a table, blurred text, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La policía investigó sin rastro, sin forcejeos evidentes.",
+        "pexels_query": "blurred police report"
+      },
+      {
+        "id": 22,
+        "prompt": "Locked door from inside, unsettling atmosphere, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Locked door from inside, unsettling atmosphere, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El misterio creció, ¿cómo entraba? ¿Quién era esa persona?",
+        "pexels_query": "locked door inside"
+      },
+      {
+        "id": 23,
+        "prompt": "Old, rusted spare key on a keychain, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old, rusted spare key on a keychain, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El giro: Semanas después, su ex novio lo confesó.",
+        "pexels_query": "rusted spare key"
+      },
+      {
+        "id": 24,
+        "prompt": "Hand holding an old spare key, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand holding an old spare key, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Él guardaba una llave, entraba por las noches.",
+        "pexels_query": "hand old key"
+      },
+      {
+        "id": 25,
+        "prompt": "Bedroom at night, very dark, a subtle glow, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Bedroom at night, very dark, a subtle glow, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Solo para verla dormir, para sentirla cerca.",
+        "pexels_query": "dark bedroom night"
+      },
+      {
+        "id": 26,
+        "prompt": "Shattered mirror reflecting a distorted room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shattered mirror reflecting a distorted room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su mente colapsó, el horror fue aún mayor.",
+        "pexels_query": "shattered mirror room"
+      },
+      {
+        "id": 27,
+        "prompt": "Creepy doll with button eyes in a dark room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Creepy doll with button eyes in a dark room, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No era un fantasma... era algo mucho peor.",
+        "pexels_query": "creepy doll eyes"
+      },
+      {
+        "id": 28,
+        "prompt": "Empty porch swing moving slightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty porch swing moving slightly, warm natural light, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "A veces el miedo viene de donde menos lo esperas.",
+        "pexels_query": "empty porch swing"
+      }
+    ],
+    "hooks": [
+      "¿Quién entra a tu casa?",
+      "La cámara lo grabó.",
+      "Su ex tenía la llave."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
