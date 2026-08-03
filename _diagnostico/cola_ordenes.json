@@ -1,1 +1,253 @@
-[]
+[
+  {
+    "id": "dc9582b8-6dd8-481f-a04f-d4fdc4ee0868",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Old house key on a dusty wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old house key on a dusty wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nunca conté lo que hallé en esa casa nueva...\", \"pexels_query\": \"old house key\"}, {\"id\": 2, \"prompt\": \"Empty living room with moving boxes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty living room with moving boxes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi esposo y yo compramos una propiedad antigua.\", \"pexels_query\": \"moving boxes empty\"}, {\"id\": 3, \"prompt\": \"Woman's hand gently touching an old textured wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Woman's hand gently touching an old textured wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Queríamos renovarla y vivir allí felices.\", \"pexels_query\": \"hand old wall\"}, {\"id\": 4, \"prompt\": \"Faint crack in an old plaster wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Faint crack in an old plaster wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un día notamos algo raro en una pared.\", \"pexels_query\": \"crack plaster wall\"}, {\"id\": 5, \"prompt\": \"Hammer and chisel against a hidden wall opening, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hammer and chisel against a hidden wall opening, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Parecía haber sido reparada de forma extraña.\", \"pexels_query\": \"hammer hidden wall\"}, {\"id\": 6, \"prompt\": \"Dusty tools on a drop cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dusty tools on a drop cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi esposo decidió quitar una capa de yeso.\", \"pexels_query\": \"dusty tools\"}, {\"id\": 7, \"prompt\": \"Small dark opening in a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Small dark opening in a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Detrás, un hueco que llevaba a otro sitio.\", \"pexels_query\": \"dark wall opening\"}, {\"id\": 8, \"prompt\": \"Flashlight beam into a dark, small room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Flashlight beam into a dark, small room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era un cuarto diminuto, sin ventanas, muy oscuro.\", \"pexels_query\": \"flashlight dark room\"}, {\"id\": 9, \"prompt\": \"Dust motes dancing in a single shaft of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dust motes dancing in a single shaft of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio absoluto me heló la piel.\", \"pexels_query\": \"dust light shaft\"}, {\"id\": 10, \"prompt\": \"Old, threadbare blanket on a makeshift bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old, threadbare blanket on a makeshift bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Dentro había una colchoneta vieja en el suelo.\", \"pexels_query\": \"threadbare blanket bed\"}, {\"id\": 11, \"prompt\": \"Empty plastic water bottles scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty plastic water bottles scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"También algunas botellas de agua vacías y envoltorios.\", \"pexels_query\": \"empty water bottles\"}, {\"id\": 12, \"prompt\": \"Close-up of a dusty, worn notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a dusty, worn notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero lo que más nos inquietó... un cuaderno.\", \"pexels_query\": \"worn notebook dusty\"}, {\"id\": 13, \"prompt\": \"Fingers carefully opening an old, yellowed notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Fingers carefully opening an old, yellowed notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Contenía una caligrafía temblorosa, casi ilegible.\", \"pexels_query\": \"opening old notebook\"}, {\"id\": 14, \"prompt\": \"Hand pointing to a handwritten date in a diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Hand pointing to a handwritten date in a diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las fechas no eran de hace décadas, sino recientes.\", \"pexels_query\": \"handwritten date diary\"}, {\"id\": 15, \"prompt\": \"Close-up of a blurred calendar with recent dates, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a blurred calendar with recent dates, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La última entrada databa de hace solo dos meses.\", \"pexels_query\": \"recent calendar dates\"}, {\"id\": 16, \"prompt\": \"Shadow of a person on a wall, looking towards a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shadow of a person on a wall, looking towards a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Esto significaba que alguien había estado oculto allí...\", \"pexels_query\": \"shadow dark corner\"}, {\"id\": 17, \"prompt\": \"Blurred image of a worried face, out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred image of a worried face, out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Justo antes de que compráramos la casa.\", \"pexels_query\": \"worried blurred face\"}, {\"id\": 18, \"prompt\": \"Gloves handling an old dusty passport-like document, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Gloves handling an old dusty passport-like document, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Entre las hojas del diario, una identificación.\", \"pexels_query\": \"gloves dusty document\"}, {\"id\": 19, \"prompt\": \"Blurred police lights outside a house at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred police lights outside a house at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Llamamos a la policía de inmediato, por supuesto.\", \"pexels_query\": \"police lights house\"}, {\"id\": 20, \"prompt\": \"Dark hallway in an old house, a door slightly ajar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark hallway in an old house, a door slightly ajar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La identificación pertenecía a una persona desaparecida.\", \"pexels_query\": \"dark hallway ajar\"}, {\"id\": 21, \"prompt\": \"Old newspaper clipping with a missing person headline, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Old newspaper clipping with a missing person headline, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un caso sin resolver desde hacía casi un año.\", \"pexels_query\": \"missing person newspaper\"}, {\"id\": 22, \"prompt\": \"Dark corner of a room, a single light bulb hanging, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Dark corner of a room, a single light bulb hanging, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo sentiste antes, que algo no estaba bien.\", \"pexels_query\": \"dark room lightbulb\"}, {\"id\": 23, \"prompt\": \"Close-up of a shivering hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a shivering hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ahora vivíamos en una casa con un secreto terrible.\", \"pexels_query\": \"shivering hand\"}, {\"id\": 24, \"prompt\": \"Blurred reflection in a dark window at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred reflection in a dark window at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El antiguo dueño había vendido la propiedad muy rápido.\", \"pexels_query\": \"reflection dark window\"}, {\"id\": 25, \"prompt\": \"Empty, cold teacup on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty, cold teacup on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y nunca nos dio explicación, solo huyó.\", \"pexels_query\": \"cold teacup table\"}, {\"id\": 26, \"prompt\": \"A single, old, worn teddy bear in a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, old, worn teddy bear in a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie lo vio venir, ni podías ignorarlo.\", \"pexels_query\": \"old teddy bear\"}, {\"id\": 27, \"prompt\": \"Closed, heavy wooden door with an old lock, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Closed, heavy wooden door with an old lock, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La casa guardaba algo más que paredes viejas.\", \"pexels_query\": \"old locked door\"}, {\"id\": 28, \"prompt\": \"Shadow of a person standing at a window looking out, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Shadow of a person standing at a window looking out, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un misterio que nos perseguirá para siempre.\", \"pexels_query\": \"shadow person window\"}, {\"id\": 29, \"prompt\": \"Question mark drawn on a fogged window pane, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Question mark drawn on a fogged window pane, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Tú te lo hubieras imaginado?\", \"pexels_query\": \"question mark window\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Nunca conté lo que hallé en esa casa nueva... Mi esposo y yo compramos una propiedad antigua. Queríamos renovarla y vivir allí felices. Un día notamos algo raro en una pared. Parecía haber sido reparada de forma extraña. Mi esposo decidió quitar una capa de yeso. Detrás, un hueco que llevaba a otro sitio. Era un cuarto diminuto, sin ventanas, muy oscuro. El silencio absoluto me heló la piel. Dentro había una colchoneta vieja en el suelo. También algunas botellas de agua vacías y envoltorios. Pero lo que más nos inquietó... un cuaderno. Contenía una caligrafía temblorosa, casi ilegible. Las fechas no eran de hace décadas, sino recientes. La última entrada databa de hace solo dos meses. Esto significaba que alguien había estado oculto allí... Justo antes de que compráramos la casa. Entre las hojas del diario, una identificación. Llamamos a la policía de inmediato, por supuesto. La identificación pertenecía a una persona desaparecida. Un caso sin resolver desde hacía casi un año. Lo sentiste antes, que algo no estaba bien. Ahora vivíamos en una casa con un secreto terrible. El antiguo dueño había vendido la propiedad muy rápido. Y nunca nos dio explicación, solo huyó. Nadie lo vio venir, ni podías ignorarlo. La casa guardaba algo más que paredes viejas. Un misterio que nos perseguirá para siempre. ¿Tú te lo hubieras imaginado?",
+    "titulo_sugerido": "Nunca Conté lo Que Encontré en Mi Casa Nueva...",
+    "escenas_texto": [
+      "Nunca conté lo que hallé en esa casa nueva...",
+      "Mi esposo y yo compramos una propiedad antigua.",
+      "Queríamos renovarla y vivir allí felices.",
+      "Un día notamos algo raro en una pared.",
+      "Parecía haber sido reparada de forma extraña.",
+      "Mi esposo decidió quitar una capa de yeso.",
+      "Detrás, un hueco que llevaba a otro sitio.",
+      "Era un cuarto diminuto, sin ventanas, muy oscuro.",
+      "El silencio absoluto me heló la piel.",
+      "Dentro había una colchoneta vieja en el suelo.",
+      "También algunas botellas de agua vacías y envoltorios.",
+      "Pero lo que más nos inquietó... un cuaderno.",
+      "Contenía una caligrafía temblorosa, casi ilegible.",
+      "Las fechas no eran de hace décadas, sino recientes.",
+      "La última entrada databa de hace solo dos meses.",
+      "Esto significaba que alguien había estado oculto allí...",
+      "Justo antes de que compráramos la casa.",
+      "Entre las hojas del diario, una identificación.",
+      "Llamamos a la policía de inmediato, por supuesto.",
+      "La identificación pertenecía a una persona desaparecida.",
+      "Un caso sin resolver desde hacía casi un año.",
+      "Lo sentiste antes, que algo no estaba bien.",
+      "Ahora vivíamos en una casa con un secreto terrible.",
+      "El antiguo dueño había vendido la propiedad muy rápido.",
+      "Y nunca nos dio explicación, solo huyó.",
+      "Nadie lo vio venir, ni podías ignorarlo.",
+      "La casa guardaba algo más que paredes viejas.",
+      "Un misterio que nos perseguirá para siempre.",
+      "¿Tú te lo hubieras imaginado?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Old house key on a dusty wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old house key on a dusty wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nunca conté lo que hallé en esa casa nueva...",
+        "pexels_query": "old house key"
+      },
+      {
+        "id": 2,
+        "prompt": "Empty living room with moving boxes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty living room with moving boxes, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi esposo y yo compramos una propiedad antigua.",
+        "pexels_query": "moving boxes empty"
+      },
+      {
+        "id": 3,
+        "prompt": "Woman's hand gently touching an old textured wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Woman's hand gently touching an old textured wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Queríamos renovarla y vivir allí felices.",
+        "pexels_query": "hand old wall"
+      },
+      {
+        "id": 4,
+        "prompt": "Faint crack in an old plaster wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Faint crack in an old plaster wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un día notamos algo raro en una pared.",
+        "pexels_query": "crack plaster wall"
+      },
+      {
+        "id": 5,
+        "prompt": "Hammer and chisel against a hidden wall opening, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hammer and chisel against a hidden wall opening, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Parecía haber sido reparada de forma extraña.",
+        "pexels_query": "hammer hidden wall"
+      },
+      {
+        "id": 6,
+        "prompt": "Dusty tools on a drop cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dusty tools on a drop cloth, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi esposo decidió quitar una capa de yeso.",
+        "pexels_query": "dusty tools"
+      },
+      {
+        "id": 7,
+        "prompt": "Small dark opening in a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Small dark opening in a wall, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Detrás, un hueco que llevaba a otro sitio.",
+        "pexels_query": "dark wall opening"
+      },
+      {
+        "id": 8,
+        "prompt": "Flashlight beam into a dark, small room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Flashlight beam into a dark, small room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era un cuarto diminuto, sin ventanas, muy oscuro.",
+        "pexels_query": "flashlight dark room"
+      },
+      {
+        "id": 9,
+        "prompt": "Dust motes dancing in a single shaft of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dust motes dancing in a single shaft of light, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio absoluto me heló la piel.",
+        "pexels_query": "dust light shaft"
+      },
+      {
+        "id": 10,
+        "prompt": "Old, threadbare blanket on a makeshift bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old, threadbare blanket on a makeshift bed, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Dentro había una colchoneta vieja en el suelo.",
+        "pexels_query": "threadbare blanket bed"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty plastic water bottles scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty plastic water bottles scattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "También algunas botellas de agua vacías y envoltorios.",
+        "pexels_query": "empty water bottles"
+      },
+      {
+        "id": 12,
+        "prompt": "Close-up of a dusty, worn notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a dusty, worn notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero lo que más nos inquietó... un cuaderno.",
+        "pexels_query": "worn notebook dusty"
+      },
+      {
+        "id": 13,
+        "prompt": "Fingers carefully opening an old, yellowed notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Fingers carefully opening an old, yellowed notebook, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Contenía una caligrafía temblorosa, casi ilegible.",
+        "pexels_query": "opening old notebook"
+      },
+      {
+        "id": 14,
+        "prompt": "Hand pointing to a handwritten date in a diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Hand pointing to a handwritten date in a diary, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las fechas no eran de hace décadas, sino recientes.",
+        "pexels_query": "handwritten date diary"
+      },
+      {
+        "id": 15,
+        "prompt": "Close-up of a blurred calendar with recent dates, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a blurred calendar with recent dates, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La última entrada databa de hace solo dos meses.",
+        "pexels_query": "recent calendar dates"
+      },
+      {
+        "id": 16,
+        "prompt": "Shadow of a person on a wall, looking towards a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shadow of a person on a wall, looking towards a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Esto significaba que alguien había estado oculto allí...",
+        "pexels_query": "shadow dark corner"
+      },
+      {
+        "id": 17,
+        "prompt": "Blurred image of a worried face, out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred image of a worried face, out of focus, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Justo antes de que compráramos la casa.",
+        "pexels_query": "worried blurred face"
+      },
+      {
+        "id": 18,
+        "prompt": "Gloves handling an old dusty passport-like document, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Gloves handling an old dusty passport-like document, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Entre las hojas del diario, una identificación.",
+        "pexels_query": "gloves dusty document"
+      },
+      {
+        "id": 19,
+        "prompt": "Blurred police lights outside a house at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred police lights outside a house at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Llamamos a la policía de inmediato, por supuesto.",
+        "pexels_query": "police lights house"
+      },
+      {
+        "id": 20,
+        "prompt": "Dark hallway in an old house, a door slightly ajar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark hallway in an old house, a door slightly ajar, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La identificación pertenecía a una persona desaparecida.",
+        "pexels_query": "dark hallway ajar"
+      },
+      {
+        "id": 21,
+        "prompt": "Old newspaper clipping with a missing person headline, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Old newspaper clipping with a missing person headline, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un caso sin resolver desde hacía casi un año.",
+        "pexels_query": "missing person newspaper"
+      },
+      {
+        "id": 22,
+        "prompt": "Dark corner of a room, a single light bulb hanging, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Dark corner of a room, a single light bulb hanging, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo sentiste antes, que algo no estaba bien.",
+        "pexels_query": "dark room lightbulb"
+      },
+      {
+        "id": 23,
+        "prompt": "Close-up of a shivering hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a shivering hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ahora vivíamos en una casa con un secreto terrible.",
+        "pexels_query": "shivering hand"
+      },
+      {
+        "id": 24,
+        "prompt": "Blurred reflection in a dark window at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred reflection in a dark window at night, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El antiguo dueño había vendido la propiedad muy rápido.",
+        "pexels_query": "reflection dark window"
+      },
+      {
+        "id": 25,
+        "prompt": "Empty, cold teacup on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty, cold teacup on a table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y nunca nos dio explicación, solo huyó.",
+        "pexels_query": "cold teacup table"
+      },
+      {
+        "id": 26,
+        "prompt": "A single, old, worn teddy bear in a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, old, worn teddy bear in a dark corner, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie lo vio venir, ni podías ignorarlo.",
+        "pexels_query": "old teddy bear"
+      },
+      {
+        "id": 27,
+        "prompt": "Closed, heavy wooden door with an old lock, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Closed, heavy wooden door with an old lock, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La casa guardaba algo más que paredes viejas.",
+        "pexels_query": "old locked door"
+      },
+      {
+        "id": 28,
+        "prompt": "Shadow of a person standing at a window looking out, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Shadow of a person standing at a window looking out, blurred, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un misterio que nos perseguirá para siempre.",
+        "pexels_query": "shadow person window"
+      },
+      {
+        "id": 29,
+        "prompt": "Question mark drawn on a fogged window pane, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Question mark drawn on a fogged window pane, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Tú te lo hubieras imaginado?",
+        "pexels_query": "question mark window"
+      }
+    ],
+    "hooks": [
+      "Cuarto oculto en mi casa.",
+      "El diario tenía fechas recientes.",
+      "¿Quién vivía secretamente allí?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
