@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 20,
-  "completados": 8,
+  "completados": 9,
   "fallidos": 0,
   "trabajo_actual": "Generando video 9/20 (FiltradoMX 9:16)",
-  "mensaje": "Produccion del video 9 iniciada.",
+  "mensaje": "Video 9 completado",
   "resumen": "FiltradoMX: 10s+0L | Umbral Alterno: 5s+5L",
   "historial": [
     {
@@ -78,6 +78,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 148.7,
       "hora": "04:23"
+    },
+    {
+      "n": 9,
+      "marca": "FiltradoMX",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 132.5,
+      "hora": "05:32"
     }
   ]
 }
