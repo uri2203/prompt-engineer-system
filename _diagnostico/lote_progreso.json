@@ -1,10 +1,10 @@
 {
-  "estado_lote": "esperando_nodo",
+  "estado_lote": "produciendo",
   "total": 20,
   "completados": 5,
   "fallidos": 0,
-  "trabajo_actual": "Esperando nodo: SD (imagenes)",
-  "mensaje": "Nodo(s) caido(s): SD (imagenes). Esperando que vuelvan...",
+  "trabajo_actual": "Generando video 6 (FiltradoMX)",
+  "mensaje": "Produccion del video 6 iniciada.",
   "resumen": "FiltradoMX: 10s+0L | Umbral Alterno: 5s+5L",
   "historial": [
     {
