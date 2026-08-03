@@ -1,1 +1,253 @@
-[]
+[
+  {
+    "id": "62abd47e-e082-4ac1-b3f0-18c3b41ef9c7",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"cinematic hyperrealistic photograph, empty city street at night, flickering streetlights, abandoned vehicles, eerie stillness, desaturated palette with blue accents, wide angle establishing shot, no people or very few distant silhouettes, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty city street at night, flickering streetlights, abandoned vehicles, eerie stillness, desaturated palette with blue accents, wide angle establishing shot, no people or very few distant silhouettes, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"texto_locucion\": \"El silencio se apoderó de tu ciudad de golpe.\", \"pexels_query\": \"empty city night\"}, {\"id\": 2, \"prompt\": \"cinematic hyperrealistic photograph, empty supermarket aisle, shelves mostly bare, scattered items on floor, unsettling quiet, desaturated palette with green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty supermarket aisle, shelves mostly bare, scattered items on floor, unsettling quiet, desaturated palette with green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Calles vacías, comercios cerrados, sin un alma visible.\", \"pexels_query\": \"empty supermarket shelves\"}, {\"id\": 3, \"prompt\": \"cinematic hyperrealistic photograph, dark apartment building facade, only a few random lights on, sense of abandonment, desaturated palette with dark yellow accents, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, dark apartment building facade, only a few random lights on, sense of abandonment, desaturated palette with dark yellow accents, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"texto_locucion\": \"De repente, el miedo se hizo palpable, no puedes ignorarlo.\", \"pexels_query\": \"dark apartment building\"}, {\"id\": 4, \"prompt\": \"cinematic hyperrealistic photograph, a single, flickering fluorescent light in a dark, empty office corridor, profound sense of isolation, desaturated palette with grey accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single, flickering fluorescent light in a dark, empty office corridor, profound sense of isolation, desaturated palette with grey accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Esa noche, supiste que algo no está bien.\", \"pexels_query\": \"flickering office light\"}, {\"id\": 5, \"prompt\": \"cinematic hyperrealistic photograph, a dense urban cityscape at dawn, intricate web of power lines and communication towers, bustling activity implied, desaturated palette with warm morning light, wide angle establishing shot, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a dense urban cityscape at dawn, intricate web of power lines and communication towers, bustling activity implied, desaturated palette with warm morning light, wide angle establishing shot, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic\", \"texto_locucion\": \"Vivimos en ecosistemas urbanos complejos y frágiles, conectados.\", \"pexels_query\": \"urban cityscape dawn\"}, {\"id\": 6, \"prompt\": \"cinematic hyperrealistic photograph, a large power grid substation, intricate machinery and transformers, clean and functional, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a large power grid substation, intricate machinery and transformers, clean and functional, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Dependemos de redes eléctricas, agua potable constante y logística.\", \"pexels_query\": \"power grid substation\"}, {\"id\": 7, \"prompt\": \"cinematic hyperrealistic photograph, aerial view of a highway interchange, trucks transporting goods, seamless flow of traffic, desaturated palette with cool blue tones, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, aerial view of a highway interchange, trucks transporting goods, seamless flow of traffic, desaturated palette with cool blue tones, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Los sistemas de logística proveen alimento diariamente a millones.\", \"pexels_query\": \"highway logistics trucks\"}, {\"id\": 8, \"prompt\": \"cinematic hyperrealistic photograph, a modern, pristine hospital emergency room, empty but ready, advanced medical equipment, desaturated palette with clean white accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a modern, pristine hospital emergency room, empty but ready, advanced medical equipment, desaturated palette with clean white accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"La sanidad pública protege la salud global, cada día.\", \"pexels_query\": \"empty emergency room\"}, {\"id\": 9, \"prompt\": \"cinematic hyperrealistic photograph, a cross-section diagram of interconnected city infrastructure (pipes, wires, roads) overlaid on a blurred city, representing systemic complexity, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a cross-section diagram of interconnected city infrastructure (pipes, wires, roads) overlaid on a blurred city, representing systemic complexity, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Cada conexión interrelacionada, un sistema diseñado para la estabilidad.\", \"pexels_query\": \"city infrastructure diagram\"}, {\"id\": 10, \"prompt\": \"cinematic hyperrealistic photograph, a blurred image of a bustling crowd in a public square, hinting at widespread human interaction, desaturated palette, shallow depth of field, no clear faces, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a blurred image of a bustling crowd in a public square, hinting at widespread human interaction, desaturated palette, shallow depth of field, no clear faces, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Pero eso fue antes. Ahora imagina un cambio súbito.\", \"pexels_query\": \"crowd blur movement\"}, {\"id\": 11, \"prompt\": \"cinematic hyperrealistic photograph, extreme close-up of a petri dish showing rapid cellular division under a microscope, abstract and unsettling, desaturated palette with subtle red accent, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, extreme close-up of a petri dish showing rapid cellular division under a microscope, abstract and unsettling, desaturated palette with subtle red accent, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Un patógeno que desafía toda lógica conocida.\", \"pexels_query\": \"petri dish cells\"}, {\"id\": 12, \"prompt\": \"cinematic hyperrealistic photograph, a single person coughing discretely in a large, anonymous public space, blurred background, sense of isolation, desaturated palette, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single person coughing discretely in a large, anonymous public space, blurred background, sense of isolation, desaturated palette, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Un único individuo, la chispa de la alteración.\", \"pexels_query\": \"person coughing subtly\"}, {\"id\": 13, \"prompt\": \"cinematic hyperrealistic photograph, a map of a city with spreading red dots, abstract representation of infection, desaturated palette with red accent, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a map of a city with spreading red dots, abstract representation of infection, desaturated palette with red accent, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"La infección se propaga sigilosamente, en cuestión de horas.\", \"pexels_query\": \"city infection map\"}, {\"id\": 14, \"prompt\": \"cinematic hyperrealistic photograph, a deserted hospital waiting room, chairs askew, a discarded mask on the floor, unsettling stillness, desaturated palette with pale blue accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a deserted hospital waiting room, chairs askew, a discarded mask on the floor, unsettling stillness, desaturated palette with pale blue accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Los síntomas iniciales son confundibles con gripe común.\", \"pexels_query\": \"deserted hospital waiting room\"}, {\"id\": 15, \"prompt\": \"cinematic hyperrealistic photograph, a chaotic, unorganized queue outside a closed hospital entrance, silhouettes of people waiting anxiously, overcast light, desaturated palette, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a chaotic, unorganized queue outside a closed hospital entrance, silhouettes of people waiting anxiously, overcast light, desaturated palette, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Día 1: hospitales saturados, servicios básicos desbordados rápidamente.\", \"pexels_query\": \"people outside hospital\"}, {\"id\": 16, \"prompt\": \"cinematic hyperrealistic photograph, a hand reaching for a light switch in a dark room, only to find no power, sense of helplessness, desaturated palette, dramatic shadows, documentary style, ultra detailed, natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a hand reaching for a light switch in a dark room, only to find no power, sense of helplessness, desaturated palette, dramatic shadows, documentary style, ultra detailed, natural lighting\", \"texto_locucion\": \"El contagio acelera, el pánico se instaura globalmente.\", \"pexels_query\": \"hand light switch dark\"}, {\"id\": 17, \"prompt\": \"cinematic hyperrealistic photograph, a vast cityscape at night, almost entirely dark except for distant emergency lights, ominous and foreboding, desaturated palette with orange accents from fires, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast cityscape at night, almost entirely dark except for distant emergency lights, ominous and foreboding, desaturated palette with orange accents from fires, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Día 3: la electricidad falla intermitentemente, después cede.\", \"pexels_query\": \"dark cityscape emergency\"}, {\"id\": 18, \"prompt\": \"cinematic hyperrealistic photograph, a dead landline phone, dial tone absent, old technology representing communication breakdown, desaturated palette with brown accents, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a dead landline phone, dial tone absent, old technology representing communication breakdown, desaturated palette with brown accents, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Las comunicaciones caen. Ya no hay más noticias.\", \"pexels_query\": \"dead landline phone\"}, {\"id\": 19, \"prompt\": \"cinematic hyperrealistic photograph, empty grocery store shelves, desolate and abandoned, dust visible, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, empty grocery store shelves, desolate and abandoned, dust visible, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Las tiendas vacías; los alimentos escasean críticamente ahora.\", \"pexels_query\": \"empty grocery shelves\"}, {\"id\": 20, \"prompt\": \"cinematic hyperrealistic photograph, a single, discarded first aid kit on a deserted road, a symbol of abandoned efforts, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single, discarded first aid kit on a deserted road, a symbol of abandoned efforts, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Lo sentiste antes: una amenaza silenciosa, persistente, real.\", \"pexels_query\": \"discarded first aid\"}, {\"id\": 21, \"prompt\": \"cinematic hyperrealistic photograph, an overgrown urban park, path covered in debris, signs of nature reclaiming territory, unsettling quiet, desaturated palette with muted green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, an overgrown urban park, path covered in debris, signs of nature reclaiming territory, unsettling quiet, desaturated palette with muted green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Las calles se vuelven territorio inexplorado, ahora peligroso.\", \"pexels_query\": \"overgrown urban park\"}, {\"id\": 22, \"prompt\": \"cinematic hyperrealistic photograph, a police car abandoned on a street, door ajar, no visible people, symbolizing breakdown of order, desaturated palette with blue accents, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a police car abandoned on a street, door ajar, no visible people, symbolizing breakdown of order, desaturated palette with blue accents, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"La policía y los militares, superados por la crisis.\", \"pexels_query\": \"abandoned police car\"}, {\"id\": 23, \"prompt\": \"cinematic hyperrealistic photograph, a distant silhouette of a lone figure navigating urban rubble, sense of struggle and isolation, desaturated palette with warm sunset light, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a distant silhouette of a lone figure navigating urban rubble, sense of struggle and isolation, desaturated palette with warm sunset light, wide angle, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Nadie lo vio venir, la estructura global colapsando.\", \"pexels_query\": \"lone figure urban rubble\"}, {\"id\": 24, \"prompt\": \"cinematic hyperrealistic photograph, a hand clutching a worn, empty backpack in a dark, confined space, conveying desperation and resource scarcity, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a hand clutching a worn, empty backpack in a dark, confined space, conveying desperation and resource scarcity, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"La supervivencia individual se convierte en tu única meta.\", \"pexels_query\": \"hand empty backpack\"}, {\"id\": 25, \"prompt\": \"cinematic hyperrealistic photograph, a broken glass window looking out onto a desolate city, reflecting the shattered sense of security, desaturated palette with grey tones, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a broken glass window looking out onto a desolate city, reflecting the shattered sense of security, desaturated palette with grey tones, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"No es la enfermedad el mayor enemigo, sino otro.\", \"pexels_query\": \"broken window desolate city\"}, {\"id\": 26, \"prompt\": \"cinematic hyperrealistic photograph, a single, flickering candle in a dark, empty room, casting long shadows, profound solitude, desaturated palette with warm yellow light, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single, flickering candle in a dark, empty room, casting long shadows, profound solitude, desaturated palette with warm yellow light, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Es la ausencia de sociedad lo que aterra más.\", \"pexels_query\": \"single flickering candle\"}, {\"id\": 27, \"prompt\": \"cinematic hyperrealistic photograph, a vast, silent, and empty public square at night, lit by moonlight, profound sense of abandonment, desaturated palette with cool blue tones, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a vast, silent, and empty public square at night, lit by moonlight, profound sense of abandonment, desaturated palette with cool blue tones, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"El silencio absoluto lo confirma: estamos completamente solos.\", \"pexels_query\": \"silent empty public square\"}, {\"id\": 28, \"prompt\": \"cinematic hyperrealistic photograph, a crossroads of abandoned roads, overgrown with weeds, symbolic of lost choices and uncertain future, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a crossroads of abandoned roads, overgrown with weeds, symbolic of lost choices and uncertain future, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"¿Cómo enfrentarías este nuevo mundo post-colapso global?\", \"pexels_query\": \"overgrown abandoned crossroads\"}, {\"id\": 29, \"prompt\": \"cinematic hyperrealistic photograph, a single, unlit flashlight lying on a dusty floor, symbolizing lack of guidance or hope, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"prompt_visual\": \"cinematic hyperrealistic photograph, a single, unlit flashlight lying on a dusty floor, symbolizing lack of guidance or hope, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting\", \"texto_locucion\": \"Sin ley, sin ayuda, sin esperanza clara alguna. Esto fue una simulación. Por ahora.\", \"pexels_query\": \"unlit flashlight dusty\"}]",
+    "formato": "9:16",
+    "marca": "Umbral Alterno",
+    "texto_locucion": "El silencio se apoderó de tu ciudad de golpe. Calles vacías, comercios cerrados, sin un alma visible. De repente, el miedo se hizo palpable, no puedes ignorarlo. Esa noche, supiste que algo no está bien. Vivimos en ecosistemas urbanos complejos y frágiles, conectados. Dependemos de redes eléctricas, agua potable constante y logística. Los sistemas de logística proveen alimento diariamente a millones. La sanidad pública protege la salud global, cada día. Cada conexión interrelacionada, un sistema diseñado para la estabilidad. Pero eso fue antes. Ahora imagina un cambio súbito. Un patógeno que desafía toda lógica conocida. Un único individuo, la chispa de la alteración. La infección se propaga sigilosamente, en cuestión de horas. Los síntomas iniciales son confundibles con gripe común. Día 1: hospitales saturados, servicios básicos desbordados rápidamente. El contagio acelera, el pánico se instaura globalmente. Día 3: la electricidad falla intermitentemente, después cede. Las comunicaciones caen. Ya no hay más noticias. Las tiendas vacías; los alimentos escasean críticamente ahora. Lo sentiste antes: una amenaza silenciosa, persistente, real. Las calles se vuelven territorio inexplorado, ahora peligroso. La policía y los militares, superados por la crisis. Nadie lo vio venir, la estructura global colapsando. La supervivencia individual se convierte en tu única meta. No es la enfermedad el mayor enemigo, sino otro. Es la ausencia de sociedad lo que aterra más. El silencio absoluto lo confirma: estamos completamente solos. ¿Cómo enfrentarías este nuevo mundo post-colapso global? Sin ley, sin ayuda, sin esperanza clara alguna. Esto fue una simulación. Por ahora.",
+    "titulo_sugerido": "¿Qué Ocurre Cuando la Civilización Cae?",
+    "escenas_texto": [
+      "El silencio se apoderó de tu ciudad de golpe.",
+      "Calles vacías, comercios cerrados, sin un alma visible.",
+      "De repente, el miedo se hizo palpable, no puedes ignorarlo.",
+      "Esa noche, supiste que algo no está bien.",
+      "Vivimos en ecosistemas urbanos complejos y frágiles, conectados.",
+      "Dependemos de redes eléctricas, agua potable constante y logística.",
+      "Los sistemas de logística proveen alimento diariamente a millones.",
+      "La sanidad pública protege la salud global, cada día.",
+      "Cada conexión interrelacionada, un sistema diseñado para la estabilidad.",
+      "Pero eso fue antes. Ahora imagina un cambio súbito.",
+      "Un patógeno que desafía toda lógica conocida.",
+      "Un único individuo, la chispa de la alteración.",
+      "La infección se propaga sigilosamente, en cuestión de horas.",
+      "Los síntomas iniciales son confundibles con gripe común.",
+      "Día 1: hospitales saturados, servicios básicos desbordados rápidamente.",
+      "El contagio acelera, el pánico se instaura globalmente.",
+      "Día 3: la electricidad falla intermitentemente, después cede.",
+      "Las comunicaciones caen. Ya no hay más noticias.",
+      "Las tiendas vacías; los alimentos escasean críticamente ahora.",
+      "Lo sentiste antes: una amenaza silenciosa, persistente, real.",
+      "Las calles se vuelven territorio inexplorado, ahora peligroso.",
+      "La policía y los militares, superados por la crisis.",
+      "Nadie lo vio venir, la estructura global colapsando.",
+      "La supervivencia individual se convierte en tu única meta.",
+      "No es la enfermedad el mayor enemigo, sino otro.",
+      "Es la ausencia de sociedad lo que aterra más.",
+      "El silencio absoluto lo confirma: estamos completamente solos.",
+      "¿Cómo enfrentarías este nuevo mundo post-colapso global?",
+      "Sin ley, sin ayuda, sin esperanza clara alguna. Esto fue una simulación. Por ahora."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "cinematic hyperrealistic photograph, empty city street at night, flickering streetlights, abandoned vehicles, eerie stillness, desaturated palette with blue accents, wide angle establishing shot, no people or very few distant silhouettes, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty city street at night, flickering streetlights, abandoned vehicles, eerie stillness, desaturated palette with blue accents, wide angle establishing shot, no people or very few distant silhouettes, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "texto_locucion": "El silencio se apoderó de tu ciudad de golpe.",
+        "pexels_query": "empty city night"
+      },
+      {
+        "id": 2,
+        "prompt": "cinematic hyperrealistic photograph, empty supermarket aisle, shelves mostly bare, scattered items on floor, unsettling quiet, desaturated palette with green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty supermarket aisle, shelves mostly bare, scattered items on floor, unsettling quiet, desaturated palette with green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Calles vacías, comercios cerrados, sin un alma visible.",
+        "pexels_query": "empty supermarket shelves"
+      },
+      {
+        "id": 3,
+        "prompt": "cinematic hyperrealistic photograph, dark apartment building facade, only a few random lights on, sense of abandonment, desaturated palette with dark yellow accents, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, dark apartment building facade, only a few random lights on, sense of abandonment, desaturated palette with dark yellow accents, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "texto_locucion": "De repente, el miedo se hizo palpable, no puedes ignorarlo.",
+        "pexels_query": "dark apartment building"
+      },
+      {
+        "id": 4,
+        "prompt": "cinematic hyperrealistic photograph, a single, flickering fluorescent light in a dark, empty office corridor, profound sense of isolation, desaturated palette with grey accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single, flickering fluorescent light in a dark, empty office corridor, profound sense of isolation, desaturated palette with grey accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Esa noche, supiste que algo no está bien.",
+        "pexels_query": "flickering office light"
+      },
+      {
+        "id": 5,
+        "prompt": "cinematic hyperrealistic photograph, a dense urban cityscape at dawn, intricate web of power lines and communication towers, bustling activity implied, desaturated palette with warm morning light, wide angle establishing shot, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "prompt_visual": "cinematic hyperrealistic photograph, a dense urban cityscape at dawn, intricate web of power lines and communication towers, bustling activity implied, desaturated palette with warm morning light, wide angle establishing shot, documentary style, ultra detailed, dramatic natural lighting, photojournalism aesthetic",
+        "texto_locucion": "Vivimos en ecosistemas urbanos complejos y frágiles, conectados.",
+        "pexels_query": "urban cityscape dawn"
+      },
+      {
+        "id": 6,
+        "prompt": "cinematic hyperrealistic photograph, a large power grid substation, intricate machinery and transformers, clean and functional, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a large power grid substation, intricate machinery and transformers, clean and functional, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Dependemos de redes eléctricas, agua potable constante y logística.",
+        "pexels_query": "power grid substation"
+      },
+      {
+        "id": 7,
+        "prompt": "cinematic hyperrealistic photograph, aerial view of a highway interchange, trucks transporting goods, seamless flow of traffic, desaturated palette with cool blue tones, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, aerial view of a highway interchange, trucks transporting goods, seamless flow of traffic, desaturated palette with cool blue tones, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Los sistemas de logística proveen alimento diariamente a millones.",
+        "pexels_query": "highway logistics trucks"
+      },
+      {
+        "id": 8,
+        "prompt": "cinematic hyperrealistic photograph, a modern, pristine hospital emergency room, empty but ready, advanced medical equipment, desaturated palette with clean white accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a modern, pristine hospital emergency room, empty but ready, advanced medical equipment, desaturated palette with clean white accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "La sanidad pública protege la salud global, cada día.",
+        "pexels_query": "empty emergency room"
+      },
+      {
+        "id": 9,
+        "prompt": "cinematic hyperrealistic photograph, a cross-section diagram of interconnected city infrastructure (pipes, wires, roads) overlaid on a blurred city, representing systemic complexity, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a cross-section diagram of interconnected city infrastructure (pipes, wires, roads) overlaid on a blurred city, representing systemic complexity, desaturated palette, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Cada conexión interrelacionada, un sistema diseñado para la estabilidad.",
+        "pexels_query": "city infrastructure diagram"
+      },
+      {
+        "id": 10,
+        "prompt": "cinematic hyperrealistic photograph, a blurred image of a bustling crowd in a public square, hinting at widespread human interaction, desaturated palette, shallow depth of field, no clear faces, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a blurred image of a bustling crowd in a public square, hinting at widespread human interaction, desaturated palette, shallow depth of field, no clear faces, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Pero eso fue antes. Ahora imagina un cambio súbito.",
+        "pexels_query": "crowd blur movement"
+      },
+      {
+        "id": 11,
+        "prompt": "cinematic hyperrealistic photograph, extreme close-up of a petri dish showing rapid cellular division under a microscope, abstract and unsettling, desaturated palette with subtle red accent, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, extreme close-up of a petri dish showing rapid cellular division under a microscope, abstract and unsettling, desaturated palette with subtle red accent, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Un patógeno que desafía toda lógica conocida.",
+        "pexels_query": "petri dish cells"
+      },
+      {
+        "id": 12,
+        "prompt": "cinematic hyperrealistic photograph, a single person coughing discretely in a large, anonymous public space, blurred background, sense of isolation, desaturated palette, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single person coughing discretely in a large, anonymous public space, blurred background, sense of isolation, desaturated palette, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Un único individuo, la chispa de la alteración.",
+        "pexels_query": "person coughing subtly"
+      },
+      {
+        "id": 13,
+        "prompt": "cinematic hyperrealistic photograph, a map of a city with spreading red dots, abstract representation of infection, desaturated palette with red accent, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a map of a city with spreading red dots, abstract representation of infection, desaturated palette with red accent, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "La infección se propaga sigilosamente, en cuestión de horas.",
+        "pexels_query": "city infection map"
+      },
+      {
+        "id": 14,
+        "prompt": "cinematic hyperrealistic photograph, a deserted hospital waiting room, chairs askew, a discarded mask on the floor, unsettling stillness, desaturated palette with pale blue accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a deserted hospital waiting room, chairs askew, a discarded mask on the floor, unsettling stillness, desaturated palette with pale blue accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Los síntomas iniciales son confundibles con gripe común.",
+        "pexels_query": "deserted hospital waiting room"
+      },
+      {
+        "id": 15,
+        "prompt": "cinematic hyperrealistic photograph, a chaotic, unorganized queue outside a closed hospital entrance, silhouettes of people waiting anxiously, overcast light, desaturated palette, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a chaotic, unorganized queue outside a closed hospital entrance, silhouettes of people waiting anxiously, overcast light, desaturated palette, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Día 1: hospitales saturados, servicios básicos desbordados rápidamente.",
+        "pexels_query": "people outside hospital"
+      },
+      {
+        "id": 16,
+        "prompt": "cinematic hyperrealistic photograph, a hand reaching for a light switch in a dark room, only to find no power, sense of helplessness, desaturated palette, dramatic shadows, documentary style, ultra detailed, natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a hand reaching for a light switch in a dark room, only to find no power, sense of helplessness, desaturated palette, dramatic shadows, documentary style, ultra detailed, natural lighting",
+        "texto_locucion": "El contagio acelera, el pánico se instaura globalmente.",
+        "pexels_query": "hand light switch dark"
+      },
+      {
+        "id": 17,
+        "prompt": "cinematic hyperrealistic photograph, a vast cityscape at night, almost entirely dark except for distant emergency lights, ominous and foreboding, desaturated palette with orange accents from fires, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast cityscape at night, almost entirely dark except for distant emergency lights, ominous and foreboding, desaturated palette with orange accents from fires, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Día 3: la electricidad falla intermitentemente, después cede.",
+        "pexels_query": "dark cityscape emergency"
+      },
+      {
+        "id": 18,
+        "prompt": "cinematic hyperrealistic photograph, a dead landline phone, dial tone absent, old technology representing communication breakdown, desaturated palette with brown accents, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a dead landline phone, dial tone absent, old technology representing communication breakdown, desaturated palette with brown accents, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Las comunicaciones caen. Ya no hay más noticias.",
+        "pexels_query": "dead landline phone"
+      },
+      {
+        "id": 19,
+        "prompt": "cinematic hyperrealistic photograph, empty grocery store shelves, desolate and abandoned, dust visible, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, empty grocery store shelves, desolate and abandoned, dust visible, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Las tiendas vacías; los alimentos escasean críticamente ahora.",
+        "pexels_query": "empty grocery shelves"
+      },
+      {
+        "id": 20,
+        "prompt": "cinematic hyperrealistic photograph, a single, discarded first aid kit on a deserted road, a symbol of abandoned efforts, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single, discarded first aid kit on a deserted road, a symbol of abandoned efforts, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Lo sentiste antes: una amenaza silenciosa, persistente, real.",
+        "pexels_query": "discarded first aid"
+      },
+      {
+        "id": 21,
+        "prompt": "cinematic hyperrealistic photograph, an overgrown urban park, path covered in debris, signs of nature reclaiming territory, unsettling quiet, desaturated palette with muted green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, an overgrown urban park, path covered in debris, signs of nature reclaiming territory, unsettling quiet, desaturated palette with muted green accents, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Las calles se vuelven territorio inexplorado, ahora peligroso.",
+        "pexels_query": "overgrown urban park"
+      },
+      {
+        "id": 22,
+        "prompt": "cinematic hyperrealistic photograph, a police car abandoned on a street, door ajar, no visible people, symbolizing breakdown of order, desaturated palette with blue accents, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a police car abandoned on a street, door ajar, no visible people, symbolizing breakdown of order, desaturated palette with blue accents, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "La policía y los militares, superados por la crisis.",
+        "pexels_query": "abandoned police car"
+      },
+      {
+        "id": 23,
+        "prompt": "cinematic hyperrealistic photograph, a distant silhouette of a lone figure navigating urban rubble, sense of struggle and isolation, desaturated palette with warm sunset light, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a distant silhouette of a lone figure navigating urban rubble, sense of struggle and isolation, desaturated palette with warm sunset light, wide angle, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Nadie lo vio venir, la estructura global colapsando.",
+        "pexels_query": "lone figure urban rubble"
+      },
+      {
+        "id": 24,
+        "prompt": "cinematic hyperrealistic photograph, a hand clutching a worn, empty backpack in a dark, confined space, conveying desperation and resource scarcity, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a hand clutching a worn, empty backpack in a dark, confined space, conveying desperation and resource scarcity, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "La supervivencia individual se convierte en tu única meta.",
+        "pexels_query": "hand empty backpack"
+      },
+      {
+        "id": 25,
+        "prompt": "cinematic hyperrealistic photograph, a broken glass window looking out onto a desolate city, reflecting the shattered sense of security, desaturated palette with grey tones, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a broken glass window looking out onto a desolate city, reflecting the shattered sense of security, desaturated palette with grey tones, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "No es la enfermedad el mayor enemigo, sino otro.",
+        "pexels_query": "broken window desolate city"
+      },
+      {
+        "id": 26,
+        "prompt": "cinematic hyperrealistic photograph, a single, flickering candle in a dark, empty room, casting long shadows, profound solitude, desaturated palette with warm yellow light, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single, flickering candle in a dark, empty room, casting long shadows, profound solitude, desaturated palette with warm yellow light, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Es la ausencia de sociedad lo que aterra más.",
+        "pexels_query": "single flickering candle"
+      },
+      {
+        "id": 27,
+        "prompt": "cinematic hyperrealistic photograph, a vast, silent, and empty public square at night, lit by moonlight, profound sense of abandonment, desaturated palette with cool blue tones, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a vast, silent, and empty public square at night, lit by moonlight, profound sense of abandonment, desaturated palette with cool blue tones, wide angle establishing shot, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "El silencio absoluto lo confirma: estamos completamente solos.",
+        "pexels_query": "silent empty public square"
+      },
+      {
+        "id": 28,
+        "prompt": "cinematic hyperrealistic photograph, a crossroads of abandoned roads, overgrown with weeds, symbolic of lost choices and uncertain future, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a crossroads of abandoned roads, overgrown with weeds, symbolic of lost choices and uncertain future, desaturated palette with muted greens, wide angle, no people, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "¿Cómo enfrentarías este nuevo mundo post-colapso global?",
+        "pexels_query": "overgrown abandoned crossroads"
+      },
+      {
+        "id": 29,
+        "prompt": "cinematic hyperrealistic photograph, a single, unlit flashlight lying on a dusty floor, symbolizing lack of guidance or hope, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "prompt_visual": "cinematic hyperrealistic photograph, a single, unlit flashlight lying on a dusty floor, symbolizing lack of guidance or hope, desaturated palette, close-up, documentary style, ultra detailed, dramatic natural lighting",
+        "texto_locucion": "Sin ley, sin ayuda, sin esperanza clara alguna. Esto fue una simulación. Por ahora.",
+        "pexels_query": "unlit flashlight dusty"
+      }
+    ],
+    "hooks": [
+      "El sistema global cae.",
+      "La civilización, en silencio.",
+      "¿Podrías sobrevivir solo?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
