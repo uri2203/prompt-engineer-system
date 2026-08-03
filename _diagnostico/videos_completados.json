@@ -1,7 +1,5 @@
 {
   "ids": [
-    "c29dbfc4-9a98-4915-9b41-8ce14c074bb4",
-    "c29dbfc4-9a98-4915-9b41-8ce14c074bb4_asm",
     "a2e46f6f-ebbb-4049-a52a-8f74cf41d80f",
     "a2e46f6f-ebbb-4049-a52a-8f74cf41d80f_asm",
     "f042cdd8-f0b7-4c90-9e46-788beece4e90",
@@ -199,7 +197,9 @@
     "48b0a287-7b09-4b8c-b6cb-6162d24f76aa",
     "48b0a287-7b09-4b8c-b6cb-6162d24f76aa_asm",
     "a8338be3-7e2c-4375-886e-c520d49543df",
-    "a8338be3-7e2c-4375-886e-c520d49543df_asm"
+    "a8338be3-7e2c-4375-886e-c520d49543df_asm",
+    "61b0194a-2956-4138-9c56-e6adf9d6706b",
+    "61b0194a-2956-4138-9c56-e6adf9d6706b_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1100,6 +1100,11 @@
     },
     "a8338be3-7e2c-4375-886e-c520d49543df": {
       "duracion_real_seg": 1069.2,
+      "marca": "Umbral Alterno",
+      "formato": "16:9"
+    },
+    "61b0194a-2956-4138-9c56-e6adf9d6706b": {
+      "duracion_real_seg": 1331.7,
       "marca": "Umbral Alterno",
       "formato": "16:9"
     }
