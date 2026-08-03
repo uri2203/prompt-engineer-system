@@ -1,1 +1,229 @@
-[]
+[
+  {
+    "id": "a746bbc8-e202-4c1b-91bd-3887fb6e6a45",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty chair in a minimalist office, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty chair in a minimalist office, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella lo perdió todo, su negocio, sus sueños.\", \"pexels_query\": \"empty office chair\"}, {\"id\": 2, \"prompt\": \"Two coffee cups on a table, one slightly tilted, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two coffee cups on a table, one slightly tilted, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y el principio fue su mejor amiga.\", \"pexels_query\": \"coffee cups table\"}, {\"id\": 3, \"prompt\": \"A closed laptop with a sticker on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A closed laptop with a sticker on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Llevaban años juntas, una amistad inquebrantable.\", \"pexels_query\": \"closed laptop sticker\"}, {\"id\": 4, \"prompt\": \"Desk with a plant and some papers, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Desk with a plant and some papers, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Compartían todo, incluso la idea del negocio.\", \"pexels_query\": \"desk plant papers\"}, {\"id\": 5, \"prompt\": \"A phone screen with blurred notifications, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A phone screen with blurred notifications, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era un sueño juntas, o eso parecía.\", \"pexels_query\": \"phone screen notifications\"}, {\"id\": 6, \"prompt\": \"Blurred reflection in a window at dusk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred reflection in a window at dusk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El negocio empezó a crecer muy rápido.\", \"pexels_query\": \"window reflection dusk\"}, {\"id\": 7, \"prompt\": \"A notebook open to a blank page, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A notebook open to a blank page, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero la amiga empezó a cambiar lentamente...\", \"pexels_query\": \"notebook blank page\"}, {\"id\": 8, \"prompt\": \"A single, discarded crumpled paper ball on a desk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, discarded crumpled paper ball on a desk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pequeños sabotajes sin que nadie lo viera.\", \"pexels_query\": \"crumpled paper desk\"}, {\"id\": 9, \"prompt\": \"A half-eaten sandwich on a plate, forgotten, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-eaten sandwich on a plate, forgotten, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Cancelaciones de citas importantes, errores contables.\", \"pexels_query\": \"half-eaten sandwich plate\"}, {\"id\": 10, \"prompt\": \"Keys on a counter, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Keys on a counter, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella sentía algo raro, una vibra pesada.\", \"pexels_query\": \"keys counter askew\"}, {\"id\": 11, \"prompt\": \"A wilting flower in a small vase, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A wilting flower in a small vase, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Como si su éxito la estuviera asfixiando.\", \"pexels_query\": \"wilting flower vase\"}, {\"id\": 12, \"prompt\": \"A blurry window view of city lights at night, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurry window view of city lights at night, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Los clientes empezaron a quejarse seguido.\", \"pexels_query\": \"city lights night window\"}, {\"id\": 13, \"prompt\": \"A computer screen showing an error message, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A computer screen showing an error message, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Algo no estaba bien en absoluto... ¡lo sentiste antes!\", \"pexels_query\": \"computer error screen\"}, {\"id\": 14, \"prompt\": \"A half-closed door, letting light into a dark room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-closed door, letting light into a dark room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La amiga siempre estaba ahí, consolándola.\", \"pexels_query\": \"half-closed door light\"}, {\"id\": 15, \"prompt\": \"A single forgotten glove on a park bench, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single forgotten glove on a park bench, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero sus ojos... había algo de satisfacción.\", \"pexels_query\": \"forgotten glove bench\"}, {\"id\": 16, \"prompt\": \"A crumpled business card on a wooden table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A crumpled business card on a wooden table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El negocio estaba en bancarrota por completo.\", \"pexels_query\": \"crumpled business card\"}, {\"id\": 17, \"prompt\": \"A spilled drink on a table, creating a small puddle, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A spilled drink on a table, creating a small puddle, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hasta que un día, en su computadora...\", \"pexels_query\": \"spilled drink table\"}, {\"id\": 18, \"prompt\": \"A screenshot of an anonymous online chat, blurred content, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A screenshot of an anonymous online chat, blurred content, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Descubrió mensajes ocultos... de su amiga.\", \"pexels_query\": \"blurred anonymous chat\"}, {\"id\": 19, \"prompt\": \"A reflection of a hand covering a mouth in a mirror, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A reflection of a hand covering a mouth in a mirror, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ahí estaba el plan... ¡tú no puedes ignorarlo!\", \"pexels_query\": \"hand covering mouth reflection\"}, {\"id\": 20, \"prompt\": \"An empty coffee mug with lipstick stain on the rim, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An empty coffee mug with lipstick stain on the rim, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella la estaba traicionando desde el inicio.\", \"pexels_query\": \"lipstick stain mug\"}, {\"id\": 21, \"prompt\": \"A single discarded candy wrapper on a clean floor, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single discarded candy wrapper on a clean floor, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Robando ideas, saboteando clientes... por pura envidia.\", \"pexels_query\": \"discarded candy wrapper\"}, {\"id\": 22, \"prompt\": \"A slightly open drawer, showing blurred contents, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A slightly open drawer, showing blurred contents, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Quería verla caer... ¡y lo logró al final!\", \"pexels_query\": \"slightly open drawer\"}, {\"id\": 23, \"prompt\": \"A faded photograph of two smiling figures, faces blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A faded photograph of two smiling figures, faces blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tu mejor amiga... la que te destruye.\", \"pexels_query\": \"faded photograph blurred\"}, {\"id\": 24, \"prompt\": \"A single burning candle on a dark table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single burning candle on a dark table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio absoluto de la traición se rompió.\", \"pexels_query\": \"single burning candle\"}, {\"id\": 25, \"prompt\": \"A calendar page with a date circled, suggesting a past event, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A calendar page with a date circled, suggesting a past event, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Imagínate ese golpe en tu propio círculo.\", \"pexels_query\": \"calendar circled date\"}, {\"id\": 26, \"prompt\": \"A reflection of a hand reaching out to touch a blurred mirror image, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A reflection of a hand reaching out to touch a blurred mirror image, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Todavía confías en tus amigos después de algo así?\", \"pexels_query\": \"hand reaching mirror\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Ella lo perdió todo, su negocio, sus sueños. Y el principio fue su mejor amiga. Llevaban años juntas, una amistad inquebrantable. Compartían todo, incluso la idea del negocio. Era un sueño juntas, o eso parecía. El negocio empezó a crecer muy rápido. Pero la amiga empezó a cambiar lentamente... Pequeños sabotajes sin que nadie lo viera. Cancelaciones de citas importantes, errores contables. Ella sentía algo raro, una vibra pesada. Como si su éxito la estuviera asfixiando. Los clientes empezaron a quejarse seguido. Algo no estaba bien en absoluto... ¡lo sentiste antes! La amiga siempre estaba ahí, consolándola. Pero sus ojos... había algo de satisfacción. El negocio estaba en bancarrota por completo. Hasta que un día, en su computadora... Descubrió mensajes ocultos... de su amiga. Ahí estaba el plan... ¡tú no puedes ignorarlo! Ella la estaba traicionando desde el inicio. Robando ideas, saboteando clientes... por pura envidia. Quería verla caer... ¡y lo logró al final! Tu mejor amiga... la que te destruye. El silencio absoluto de la traición se rompió. Imagínate ese golpe en tu propio círculo. ¿Todavía confías en tus amigos después de algo así?",
+    "titulo_sugerido": "¿Tu mejor amiga te envidia en secreto? Escucha esto.",
+    "escenas_texto": [
+      "Ella lo perdió todo, su negocio, sus sueños.",
+      "Y el principio fue su mejor amiga.",
+      "Llevaban años juntas, una amistad inquebrantable.",
+      "Compartían todo, incluso la idea del negocio.",
+      "Era un sueño juntas, o eso parecía.",
+      "El negocio empezó a crecer muy rápido.",
+      "Pero la amiga empezó a cambiar lentamente...",
+      "Pequeños sabotajes sin que nadie lo viera.",
+      "Cancelaciones de citas importantes, errores contables.",
+      "Ella sentía algo raro, una vibra pesada.",
+      "Como si su éxito la estuviera asfixiando.",
+      "Los clientes empezaron a quejarse seguido.",
+      "Algo no estaba bien en absoluto... ¡lo sentiste antes!",
+      "La amiga siempre estaba ahí, consolándola.",
+      "Pero sus ojos... había algo de satisfacción.",
+      "El negocio estaba en bancarrota por completo.",
+      "Hasta que un día, en su computadora...",
+      "Descubrió mensajes ocultos... de su amiga.",
+      "Ahí estaba el plan... ¡tú no puedes ignorarlo!",
+      "Ella la estaba traicionando desde el inicio.",
+      "Robando ideas, saboteando clientes... por pura envidia.",
+      "Quería verla caer... ¡y lo logró al final!",
+      "Tu mejor amiga... la que te destruye.",
+      "El silencio absoluto de la traición se rompió.",
+      "Imagínate ese golpe en tu propio círculo.",
+      "¿Todavía confías en tus amigos después de algo así?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty chair in a minimalist office, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty chair in a minimalist office, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella lo perdió todo, su negocio, sus sueños.",
+        "pexels_query": "empty office chair"
+      },
+      {
+        "id": 2,
+        "prompt": "Two coffee cups on a table, one slightly tilted, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two coffee cups on a table, one slightly tilted, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y el principio fue su mejor amiga.",
+        "pexels_query": "coffee cups table"
+      },
+      {
+        "id": 3,
+        "prompt": "A closed laptop with a sticker on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A closed laptop with a sticker on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Llevaban años juntas, una amistad inquebrantable.",
+        "pexels_query": "closed laptop sticker"
+      },
+      {
+        "id": 4,
+        "prompt": "Desk with a plant and some papers, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Desk with a plant and some papers, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Compartían todo, incluso la idea del negocio.",
+        "pexels_query": "desk plant papers"
+      },
+      {
+        "id": 5,
+        "prompt": "A phone screen with blurred notifications, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A phone screen with blurred notifications, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era un sueño juntas, o eso parecía.",
+        "pexels_query": "phone screen notifications"
+      },
+      {
+        "id": 6,
+        "prompt": "Blurred reflection in a window at dusk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred reflection in a window at dusk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El negocio empezó a crecer muy rápido.",
+        "pexels_query": "window reflection dusk"
+      },
+      {
+        "id": 7,
+        "prompt": "A notebook open to a blank page, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A notebook open to a blank page, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero la amiga empezó a cambiar lentamente...",
+        "pexels_query": "notebook blank page"
+      },
+      {
+        "id": 8,
+        "prompt": "A single, discarded crumpled paper ball on a desk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, discarded crumpled paper ball on a desk, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pequeños sabotajes sin que nadie lo viera.",
+        "pexels_query": "crumpled paper desk"
+      },
+      {
+        "id": 9,
+        "prompt": "A half-eaten sandwich on a plate, forgotten, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-eaten sandwich on a plate, forgotten, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Cancelaciones de citas importantes, errores contables.",
+        "pexels_query": "half-eaten sandwich plate"
+      },
+      {
+        "id": 10,
+        "prompt": "Keys on a counter, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Keys on a counter, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella sentía algo raro, una vibra pesada.",
+        "pexels_query": "keys counter askew"
+      },
+      {
+        "id": 11,
+        "prompt": "A wilting flower in a small vase, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A wilting flower in a small vase, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Como si su éxito la estuviera asfixiando.",
+        "pexels_query": "wilting flower vase"
+      },
+      {
+        "id": 12,
+        "prompt": "A blurry window view of city lights at night, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurry window view of city lights at night, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Los clientes empezaron a quejarse seguido.",
+        "pexels_query": "city lights night window"
+      },
+      {
+        "id": 13,
+        "prompt": "A computer screen showing an error message, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A computer screen showing an error message, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Algo no estaba bien en absoluto... ¡lo sentiste antes!",
+        "pexels_query": "computer error screen"
+      },
+      {
+        "id": 14,
+        "prompt": "A half-closed door, letting light into a dark room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-closed door, letting light into a dark room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La amiga siempre estaba ahí, consolándola.",
+        "pexels_query": "half-closed door light"
+      },
+      {
+        "id": 15,
+        "prompt": "A single forgotten glove on a park bench, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single forgotten glove on a park bench, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero sus ojos... había algo de satisfacción.",
+        "pexels_query": "forgotten glove bench"
+      },
+      {
+        "id": 16,
+        "prompt": "A crumpled business card on a wooden table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A crumpled business card on a wooden table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El negocio estaba en bancarrota por completo.",
+        "pexels_query": "crumpled business card"
+      },
+      {
+        "id": 17,
+        "prompt": "A spilled drink on a table, creating a small puddle, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A spilled drink on a table, creating a small puddle, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hasta que un día, en su computadora...",
+        "pexels_query": "spilled drink table"
+      },
+      {
+        "id": 18,
+        "prompt": "A screenshot of an anonymous online chat, blurred content, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A screenshot of an anonymous online chat, blurred content, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Descubrió mensajes ocultos... de su amiga.",
+        "pexels_query": "blurred anonymous chat"
+      },
+      {
+        "id": 19,
+        "prompt": "A reflection of a hand covering a mouth in a mirror, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A reflection of a hand covering a mouth in a mirror, blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ahí estaba el plan... ¡tú no puedes ignorarlo!",
+        "pexels_query": "hand covering mouth reflection"
+      },
+      {
+        "id": 20,
+        "prompt": "An empty coffee mug with lipstick stain on the rim, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An empty coffee mug with lipstick stain on the rim, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella la estaba traicionando desde el inicio.",
+        "pexels_query": "lipstick stain mug"
+      },
+      {
+        "id": 21,
+        "prompt": "A single discarded candy wrapper on a clean floor, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single discarded candy wrapper on a clean floor, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Robando ideas, saboteando clientes... por pura envidia.",
+        "pexels_query": "discarded candy wrapper"
+      },
+      {
+        "id": 22,
+        "prompt": "A slightly open drawer, showing blurred contents, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A slightly open drawer, showing blurred contents, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Quería verla caer... ¡y lo logró al final!",
+        "pexels_query": "slightly open drawer"
+      },
+      {
+        "id": 23,
+        "prompt": "A faded photograph of two smiling figures, faces blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A faded photograph of two smiling figures, faces blurred, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tu mejor amiga... la que te destruye.",
+        "pexels_query": "faded photograph blurred"
+      },
+      {
+        "id": 24,
+        "prompt": "A single burning candle on a dark table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single burning candle on a dark table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio absoluto de la traición se rompió.",
+        "pexels_query": "single burning candle"
+      },
+      {
+        "id": 25,
+        "prompt": "A calendar page with a date circled, suggesting a past event, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A calendar page with a date circled, suggesting a past event, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Imagínate ese golpe en tu propio círculo.",
+        "pexels_query": "calendar circled date"
+      },
+      {
+        "id": 26,
+        "prompt": "A reflection of a hand reaching out to touch a blurred mirror image, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A reflection of a hand reaching out to touch a blurred mirror image, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Todavía confías en tus amigos después de algo así?",
+        "pexels_query": "hand reaching mirror"
+      }
+    ],
+    "hooks": [
+      "Amiga secreta, traición brutal",
+      "Negocio perdido por envidia",
+      "¿Confiarías en tu mejor amiga?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
