@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "6f6a48ff-62d9-43c9-9eed-41533286ff48",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark office, computer screen static, empty chair\", \"prompt_visual\": \"Dark office, computer screen static, empty chair\", \"texto_locucion\": \"Creaste tu historia más oscura. Crees que terminó.\", \"pexels_query\": \"computer static dark\"}, {\"id\": 2, \"prompt\": \"Shadowed hallway, slightly ajar door, subtle light\", \"prompt_visual\": \"Shadowed hallway, slightly ajar door, subtle light\", \"texto_locucion\": \"Pero algo quedó. Una resonancia invisible y helada.\", \"pexels_query\": \"dark hallway door\"}, {\"id\": 3, \"prompt\": \"Desk with one chair subtly moved, dark room\", \"prompt_visual\": \"Desk with one chair subtly moved, dark room\", \"texto_locucion\": \"Cosas pequeñas empezaron a cambiar. Apenas perceptibles.\", \"pexels_query\": \"chair moved dark\"}, {\"id\": 4, \"prompt\": \"Flickering desk lamp, casting long shadows\", \"prompt_visual\": \"Flickering desk lamp, casting long shadows\", \"texto_locucion\": \"La luz parpadeó. Un libro cayó sin explicación.\", \"pexels_query\": \"flickering lamp shadow\"}, {\"id\": 5, \"prompt\": \"Dark corner of a room, subtle, indistinct form\", \"prompt_visual\": \"Dark corner of a room, subtle, indistinct form\", \"texto_locucion\": \"Entonces sentiste la mirada. Como si no estuvieras solo.\", \"pexels_query\": \"dark corner blur\"}, {\"id\": 6, \"prompt\": \"Empty living room, curtain slightly swaying, no breeze\", \"prompt_visual\": \"Empty living room, curtain slightly swaying, no breeze\", \"texto_locucion\": \"El aire se sentía denso, pesado, distinto al usual.\", \"pexels_query\": \"curtain swaying empty\"}, {\"id\": 7, \"prompt\": \"Window reflecting a dark, empty room, blurry reflection\", \"prompt_visual\": \"Window reflecting a dark, empty room, blurry reflection\", \"texto_locucion\": \"Tu propio reflejo parecía mirarte con otros ojos.\", \"pexels_query\": \"window dark reflection\"}, {\"id\": 8, \"prompt\": \"Shadow under a closed door, unnaturally long\", \"prompt_visual\": \"Shadow under a closed door, unnaturally long\", \"texto_locucion\": \"Una sombra se deslizó bajo la puerta, muy lento.\", \"pexels_query\": \"shadow under door\"}, {\"id\": 9, \"prompt\": \"Empty bed, indentation on pillow, no one there\", \"prompt_visual\": \"Empty bed, indentation on pillow, no one there\", \"texto_locucion\": \"La cama. Siempre una pequeña hendidura. Como si alguien...\", \"pexels_query\": \"empty bed indentation\"}, {\"id\": 10, \"prompt\": \"Dark staircase, top step obscured by shadow\", \"prompt_visual\": \"Dark staircase, top step obscured by shadow\", \"texto_locucion\": \"Subes las escaleras. El último peldaño siempre cruje.\", \"pexels_query\": \"dark staircase shadow\"}, {\"id\": 11, \"prompt\": \"Closed closet door, handle slightly jiggling\", \"prompt_visual\": \"Closed closet door, handle slightly jiggling\", \"texto_locucion\": \"El armario. Jurarías que el pomo se movió.\", \"pexels_query\": \"closet door jiggle\"}, {\"id\": 12, \"prompt\": \"Bathroom mirror, fogged, indistinct shape in center\", \"prompt_visual\": \"Bathroom mirror, fogged, indistinct shape in center\", \"texto_locucion\": \"En el espejo empañado. Una forma. Nunca eres tú.\", \"pexels_query\": \"fogged mirror shape\"}, {\"id\": 13, \"prompt\": \"Kitchen counter, single object (e.g., a knife) slightly out of place\", \"prompt_visual\": \"Kitchen counter, single object (e.g., a knife) slightly out of place\", \"texto_locucion\": \"Los objetos cotidianos. Siempre un milímetro desviado.\", \"pexels_query\": \"kitchen knife misplaced\"}, {\"id\": 14, \"prompt\": \"Dark hallway, distant sound implied, subtle visual tremor\", \"prompt_visual\": \"Dark hallway, distant sound implied, subtle visual tremor\", \"texto_locucion\": \"Un ruido en la distancia. Un susurro que nadie oyó.\", \"pexels_query\": \"dark hallway tremor\"}, {\"id\": 15, \"prompt\": \"Close-up of a wall texture, pareidolia, subtle face\", \"prompt_visual\": \"Close-up of a wall texture, pareidolia, subtle face\", \"texto_locucion\": \"Las paredes. Formas que parecen observarte fijamente.\", \"pexels_query\": \"wall texture pareidolia\"}, {\"id\": 16, \"prompt\": \"Empty chair in a dark room, facing a window at night\", \"prompt_visual\": \"Empty chair in a dark room, facing a window at night\", \"texto_locucion\": \"Esa silla vacía. Siempre te espera en la oscuridad.\", \"pexels_query\": \"empty chair window\"}, {\"id\": 17, \"prompt\": \"Open book on a desk, page slightly turned, no one near\", \"prompt_visual\": \"Open book on a desk, page slightly turned, no one near\", \"texto_locucion\": \"Un libro abierto. Una página. ¿Quién la marcó anoche?\", \"pexels_query\": \"open book page turned\"}, {\"id\": 18, \"prompt\": \"Dark corridor, end obscured by deep shadow\", \"prompt_visual\": \"Dark corridor, end obscured by deep shadow\", \"texto_locucion\": \"El pasillo. Nadie lo vio. Pero algo no está bien.\", \"pexels_query\": \"dark corridor shadow end\"}, {\"id\": 19, \"prompt\": \"Subtle movement of a curtain in a closed room, no breeze\", \"prompt_visual\": \"Subtle movement of a curtain in a closed room, no breeze\", \"texto_locucion\": \"El visillo se movió. La ventana sigue completamente cerrada.\", \"pexels_query\": \"curtain movement closed\"}, {\"id\": 20, \"prompt\": \"Dark room, only a sliver of light from under a door\", \"prompt_visual\": \"Dark room, only a sliver of light from under a door\", \"texto_locucion\": \"La rendija de luz. Te mira desde la habitación vacía.\", \"pexels_query\": \"sliver light under door\"}, {\"id\": 21, \"prompt\": \"Empty coat rack, single coat slightly askew, in shadow\", \"prompt_visual\": \"Empty coat rack, single coat slightly askew, in shadow\", \"texto_locucion\": \"Tu abrigo. Siempre un poco ladeado. Como si alguien...\", \"pexels_query\": \"coat rack askew\"}, {\"id\": 22, \"prompt\": \"A single glass of water on a table, small ripple on surface\", \"prompt_visual\": \"A single glass of water on a table, small ripple on surface\", \"texto_locucion\": \"El vaso de agua. Una onda minúscula. No hay temblor.\", \"pexels_query\": \"glass water ripple\"}, {\"id\": 23, \"prompt\": \"Dark ceiling, indistinct shadow passing over\", \"prompt_visual\": \"Dark ceiling, indistinct shadow passing over\", \"texto_locucion\": \"Miraste al techo. Una sombra pasó. Pero no hay nubes.\", \"pexels_query\": \"ceiling shadow passing\"}, {\"id\": 24, \"prompt\": \"Old wooden floor, subtle dust motes disturbed, no wind\", \"prompt_visual\": \"Old wooden floor, subtle dust motes disturbed, no wind\", \"texto_locucion\": \"El polvo en el suelo. Ligeramente alterado. Nadie caminó.\", \"pexels_query\": \"wooden floor dust motes\"}, {\"id\": 25, \"prompt\": \"Dark room, door ajar, very subtle human-like silhouette deep in shadows\", \"prompt_visual\": \"Dark room, door ajar, very subtle human-like silhouette deep in shadows\", \"texto_locucion\": \"Y tú sabes. Lo sentiste antes. Nunca más estás solo.\", \"pexels_query\": \"dark room silhouette door\"}, {\"id\": 26, \"prompt\": \"Empty staircase, a distorted shadow figure at the bottom\", \"prompt_visual\": \"Empty staircase, a distorted shadow figure at the bottom\", \"texto_locucion\": \"¿Quién habita ahora tus historias? ¿Y por qué se quedó?\", \"pexels_query\": \"staircase distorted shadow\"}, {\"id\": 27, \"prompt\": \"Bedroom at night, a dark, indistinct form at the foot of the bed\", \"prompt_visual\": \"Bedroom at night, a dark, indistinct form at the foot of the bed\", \"texto_locucion\": \"Crear terror. A veces es más que solo escribir.\", \"pexels_query\": \"bedroom dark form\"}, {\"id\": 28, \"prompt\": \"Dark room, only a pair of glowing, sinister eyes in the absolute darkness\", \"prompt_visual\": \"Dark room, only a pair of glowing, sinister eyes in the absolute darkness\", \"texto_locucion\": \"Abre puertas que nunca debieron abrirse. No puedes ignorarlo.\", \"pexels_query\": \"glowing eyes dark room\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Creaste tu historia más oscura. Crees que terminó. Pero algo quedó. Una resonancia invisible y helada. Cosas pequeñas empezaron a cambiar. Apenas perceptibles. La luz parpadeó. Un libro cayó sin explicación. Entonces sentiste la mirada. Como si no estuvieras solo. El aire se sentía denso, pesado, distinto al usual. Tu propio reflejo parecía mirarte con otros ojos. Una sombra se deslizó bajo la puerta, muy lento. La cama. Siempre una pequeña hendidura. Como si alguien... Subes las escaleras. El último peldaño siempre cruje. El armario. Jurarías que el pomo se movió. En el espejo empañado. Una forma. Nunca eres tú. Los objetos cotidianos. Siempre un milímetro desviado. Un ruido en la distancia. Un susurro que nadie oyó. Las paredes. Formas que parecen observarte fijamente. Esa silla vacía. Siempre te espera en la oscuridad. Un libro abierto. Una página. ¿Quién la marcó anoche? El pasillo. Nadie lo vio. Pero algo no está bien. El visillo se movió. La ventana sigue completamente cerrada. La rendija de luz. Te mira desde la habitación vacía. Tu abrigo. Siempre un poco ladeado. Como si alguien... El vaso de agua. Una onda minúscula. No hay temblor. Miraste al techo. Una sombra pasó. Pero no hay nubes. El polvo en el suelo. Ligeramente alterado. Nadie caminó. Y tú sabes. Lo sentiste antes. Nunca más estás solo. ¿Quién habita ahora tus historias? ¿Y por qué se quedó? Crear terror. A veces es más que solo escribir. Abre puertas que nunca debieron abrirse. No puedes ignorarlo.",
+    "titulo_sugerido": "¿Tu Creación te Acecha? El Terror del Contenido",
+    "escenas_texto": [
+      "Creaste tu historia más oscura. Crees que terminó.",
+      "Pero algo quedó. Una resonancia invisible y helada.",
+      "Cosas pequeñas empezaron a cambiar. Apenas perceptibles.",
+      "La luz parpadeó. Un libro cayó sin explicación.",
+      "Entonces sentiste la mirada. Como si no estuvieras solo.",
+      "El aire se sentía denso, pesado, distinto al usual.",
+      "Tu propio reflejo parecía mirarte con otros ojos.",
+      "Una sombra se deslizó bajo la puerta, muy lento.",
+      "La cama. Siempre una pequeña hendidura. Como si alguien...",
+      "Subes las escaleras. El último peldaño siempre cruje.",
+      "El armario. Jurarías que el pomo se movió.",
+      "En el espejo empañado. Una forma. Nunca eres tú.",
+      "Los objetos cotidianos. Siempre un milímetro desviado.",
+      "Un ruido en la distancia. Un susurro que nadie oyó.",
+      "Las paredes. Formas que parecen observarte fijamente.",
+      "Esa silla vacía. Siempre te espera en la oscuridad.",
+      "Un libro abierto. Una página. ¿Quién la marcó anoche?",
+      "El pasillo. Nadie lo vio. Pero algo no está bien.",
+      "El visillo se movió. La ventana sigue completamente cerrada.",
+      "La rendija de luz. Te mira desde la habitación vacía.",
+      "Tu abrigo. Siempre un poco ladeado. Como si alguien...",
+      "El vaso de agua. Una onda minúscula. No hay temblor.",
+      "Miraste al techo. Una sombra pasó. Pero no hay nubes.",
+      "El polvo en el suelo. Ligeramente alterado. Nadie caminó.",
+      "Y tú sabes. Lo sentiste antes. Nunca más estás solo.",
+      "¿Quién habita ahora tus historias? ¿Y por qué se quedó?",
+      "Crear terror. A veces es más que solo escribir.",
+      "Abre puertas que nunca debieron abrirse. No puedes ignorarlo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark office, computer screen static, empty chair",
+        "prompt_visual": "Dark office, computer screen static, empty chair",
+        "texto_locucion": "Creaste tu historia más oscura. Crees que terminó.",
+        "pexels_query": "computer static dark"
+      },
+      {
+        "id": 2,
+        "prompt": "Shadowed hallway, slightly ajar door, subtle light",
+        "prompt_visual": "Shadowed hallway, slightly ajar door, subtle light",
+        "texto_locucion": "Pero algo quedó. Una resonancia invisible y helada.",
+        "pexels_query": "dark hallway door"
+      },
+      {
+        "id": 3,
+        "prompt": "Desk with one chair subtly moved, dark room",
+        "prompt_visual": "Desk with one chair subtly moved, dark room",
+        "texto_locucion": "Cosas pequeñas empezaron a cambiar. Apenas perceptibles.",
+        "pexels_query": "chair moved dark"
+      },
+      {
+        "id": 4,
+        "prompt": "Flickering desk lamp, casting long shadows",
+        "prompt_visual": "Flickering desk lamp, casting long shadows",
+        "texto_locucion": "La luz parpadeó. Un libro cayó sin explicación.",
+        "pexels_query": "flickering lamp shadow"
+      },
+      {
+        "id": 5,
+        "prompt": "Dark corner of a room, subtle, indistinct form",
+        "prompt_visual": "Dark corner of a room, subtle, indistinct form",
+        "texto_locucion": "Entonces sentiste la mirada. Como si no estuvieras solo.",
+        "pexels_query": "dark corner blur"
+      },
+      {
+        "id": 6,
+        "prompt": "Empty living room, curtain slightly swaying, no breeze",
+        "prompt_visual": "Empty living room, curtain slightly swaying, no breeze",
+        "texto_locucion": "El aire se sentía denso, pesado, distinto al usual.",
+        "pexels_query": "curtain swaying empty"
+      },
+      {
+        "id": 7,
+        "prompt": "Window reflecting a dark, empty room, blurry reflection",
+        "prompt_visual": "Window reflecting a dark, empty room, blurry reflection",
+        "texto_locucion": "Tu propio reflejo parecía mirarte con otros ojos.",
+        "pexels_query": "window dark reflection"
+      },
+      {
+        "id": 8,
+        "prompt": "Shadow under a closed door, unnaturally long",
+        "prompt_visual": "Shadow under a closed door, unnaturally long",
+        "texto_locucion": "Una sombra se deslizó bajo la puerta, muy lento.",
+        "pexels_query": "shadow under door"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty bed, indentation on pillow, no one there",
+        "prompt_visual": "Empty bed, indentation on pillow, no one there",
+        "texto_locucion": "La cama. Siempre una pequeña hendidura. Como si alguien...",
+        "pexels_query": "empty bed indentation"
+      },
+      {
+        "id": 10,
+        "prompt": "Dark staircase, top step obscured by shadow",
+        "prompt_visual": "Dark staircase, top step obscured by shadow",
+        "texto_locucion": "Subes las escaleras. El último peldaño siempre cruje.",
+        "pexels_query": "dark staircase shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "Closed closet door, handle slightly jiggling",
+        "prompt_visual": "Closed closet door, handle slightly jiggling",
+        "texto_locucion": "El armario. Jurarías que el pomo se movió.",
+        "pexels_query": "closet door jiggle"
+      },
+      {
+        "id": 12,
+        "prompt": "Bathroom mirror, fogged, indistinct shape in center",
+        "prompt_visual": "Bathroom mirror, fogged, indistinct shape in center",
+        "texto_locucion": "En el espejo empañado. Una forma. Nunca eres tú.",
+        "pexels_query": "fogged mirror shape"
+      },
+      {
+        "id": 13,
+        "prompt": "Kitchen counter, single object (e.g., a knife) slightly out of place",
+        "prompt_visual": "Kitchen counter, single object (e.g., a knife) slightly out of place",
+        "texto_locucion": "Los objetos cotidianos. Siempre un milímetro desviado.",
+        "pexels_query": "kitchen knife misplaced"
+      },
+      {
+        "id": 14,
+        "prompt": "Dark hallway, distant sound implied, subtle visual tremor",
+        "prompt_visual": "Dark hallway, distant sound implied, subtle visual tremor",
+        "texto_locucion": "Un ruido en la distancia. Un susurro que nadie oyó.",
+        "pexels_query": "dark hallway tremor"
+      },
+      {
+        "id": 15,
+        "prompt": "Close-up of a wall texture, pareidolia, subtle face",
+        "prompt_visual": "Close-up of a wall texture, pareidolia, subtle face",
+        "texto_locucion": "Las paredes. Formas que parecen observarte fijamente.",
+        "pexels_query": "wall texture pareidolia"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty chair in a dark room, facing a window at night",
+        "prompt_visual": "Empty chair in a dark room, facing a window at night",
+        "texto_locucion": "Esa silla vacía. Siempre te espera en la oscuridad.",
+        "pexels_query": "empty chair window"
+      },
+      {
+        "id": 17,
+        "prompt": "Open book on a desk, page slightly turned, no one near",
+        "prompt_visual": "Open book on a desk, page slightly turned, no one near",
+        "texto_locucion": "Un libro abierto. Una página. ¿Quién la marcó anoche?",
+        "pexels_query": "open book page turned"
+      },
+      {
+        "id": 18,
+        "prompt": "Dark corridor, end obscured by deep shadow",
+        "prompt_visual": "Dark corridor, end obscured by deep shadow",
+        "texto_locucion": "El pasillo. Nadie lo vio. Pero algo no está bien.",
+        "pexels_query": "dark corridor shadow end"
+      },
+      {
+        "id": 19,
+        "prompt": "Subtle movement of a curtain in a closed room, no breeze",
+        "prompt_visual": "Subtle movement of a curtain in a closed room, no breeze",
+        "texto_locucion": "El visillo se movió. La ventana sigue completamente cerrada.",
+        "pexels_query": "curtain movement closed"
+      },
+      {
+        "id": 20,
+        "prompt": "Dark room, only a sliver of light from under a door",
+        "prompt_visual": "Dark room, only a sliver of light from under a door",
+        "texto_locucion": "La rendija de luz. Te mira desde la habitación vacía.",
+        "pexels_query": "sliver light under door"
+      },
+      {
+        "id": 21,
+        "prompt": "Empty coat rack, single coat slightly askew, in shadow",
+        "prompt_visual": "Empty coat rack, single coat slightly askew, in shadow",
+        "texto_locucion": "Tu abrigo. Siempre un poco ladeado. Como si alguien...",
+        "pexels_query": "coat rack askew"
+      },
+      {
+        "id": 22,
+        "prompt": "A single glass of water on a table, small ripple on surface",
+        "prompt_visual": "A single glass of water on a table, small ripple on surface",
+        "texto_locucion": "El vaso de agua. Una onda minúscula. No hay temblor.",
+        "pexels_query": "glass water ripple"
+      },
+      {
+        "id": 23,
+        "prompt": "Dark ceiling, indistinct shadow passing over",
+        "prompt_visual": "Dark ceiling, indistinct shadow passing over",
+        "texto_locucion": "Miraste al techo. Una sombra pasó. Pero no hay nubes.",
+        "pexels_query": "ceiling shadow passing"
+      },
+      {
+        "id": 24,
+        "prompt": "Old wooden floor, subtle dust motes disturbed, no wind",
+        "prompt_visual": "Old wooden floor, subtle dust motes disturbed, no wind",
+        "texto_locucion": "El polvo en el suelo. Ligeramente alterado. Nadie caminó.",
+        "pexels_query": "wooden floor dust motes"
+      },
+      {
+        "id": 25,
+        "prompt": "Dark room, door ajar, very subtle human-like silhouette deep in shadows",
+        "prompt_visual": "Dark room, door ajar, very subtle human-like silhouette deep in shadows",
+        "texto_locucion": "Y tú sabes. Lo sentiste antes. Nunca más estás solo.",
+        "pexels_query": "dark room silhouette door"
+      },
+      {
+        "id": 26,
+        "prompt": "Empty staircase, a distorted shadow figure at the bottom",
+        "prompt_visual": "Empty staircase, a distorted shadow figure at the bottom",
+        "texto_locucion": "¿Quién habita ahora tus historias? ¿Y por qué se quedó?",
+        "pexels_query": "staircase distorted shadow"
+      },
+      {
+        "id": 27,
+        "prompt": "Bedroom at night, a dark, indistinct form at the foot of the bed",
+        "prompt_visual": "Bedroom at night, a dark, indistinct form at the foot of the bed",
+        "texto_locucion": "Crear terror. A veces es más que solo escribir.",
+        "pexels_query": "bedroom dark form"
+      },
+      {
+        "id": 28,
+        "prompt": "Dark room, only a pair of glowing, sinister eyes in the absolute darkness",
+        "prompt_visual": "Dark room, only a pair of glowing, sinister eyes in the absolute darkness",
+        "texto_locucion": "Abre puertas que nunca debieron abrirse. No puedes ignorarlo.",
+        "pexels_query": "glowing eyes dark room"
+      }
+    ],
+    "hooks": [
+      "Tu historia te persigue.",
+      "Lo creaste. Te encontró.",
+      "Nunca estás solo ahora."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
