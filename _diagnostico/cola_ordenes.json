@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "39d6322c-93c9-4742-8207-8dc14b71bb4c",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Overhead view of a complex microchip factory, manufacturing floor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Overhead view of a complex microchip factory, manufacturing floor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"chip factory, microchip production\"}, {\"id\": 2, \"prompt\": \"Close-up of a silicon wafer with intricate circuits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a silicon wafer with intricate circuits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"silicon wafer, integrated circuits\"}, {\"id\": 3, \"prompt\": \"Industrial clean room with automated machinery for chip manufacturing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial clean room with automated machinery for chip manufacturing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"clean room, chip manufacturing\"}, {\"id\": 4, \"prompt\": \"Map of global semiconductor supply chains, highlighting export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Map of global semiconductor supply chains, highlighting export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"semiconductor supply chain map\"}, {\"id\": 5, \"prompt\": \"Abstract representation of digital data flow and network security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of digital data flow and network security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"digital data flow, network security\"}, {\"id\": 6, \"prompt\": \"Research and development lab interior, empty, with advanced computing equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Research and development lab interior, empty, with advanced computing equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"tech lab, computing research\"}, {\"id\": 7, \"prompt\": \"Close-up of a circuit board with a processor chip, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a circuit board with a processor chip, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"processor chip, circuit board\"}, {\"id\": 8, \"prompt\": \"Empty high-tech manufacturing facility with robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty high-tech manufacturing facility with robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"robotic manufacturing, high-tech factory\"}, {\"id\": 9, \"prompt\": \"Industrial complex in an Asian city, seen from above at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Industrial complex in an Asian city, seen from above at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"Asian industrial complex, factory\"}, {\"id\": 10, \"prompt\": \"Close-up of a smartphone with blurred data display, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a smartphone with blurred data display, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"smartphone technology, data display\"}, {\"id\": 11, \"prompt\": \"Global map with arrows indicating technology trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global map with arrows indicating technology trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"global trade map, tech routes\"}, {\"id\": 12, \"prompt\": \"Server racks in a large data center, empty aisles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Server racks in a large data center, empty aisles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"data center, server racks\"}, {\"id\": 13, \"prompt\": \"Blueprints of advanced machinery or semiconductor design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Blueprints of advanced machinery or semiconductor design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"semiconductor blueprint, machine design\"}, {\"id\": 14, \"prompt\": \"Factory floor with automated assembly lines for electronic components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Factory floor with automated assembly lines for electronic components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"automated assembly line, electronics\"}, {\"id\": 15, \"prompt\": \"Abstract representation of economic graphs and charts overlaid on a global map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of economic graphs and charts overlaid on a global map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"economic graphs, global map\"}, {\"id\": 16, \"prompt\": \"Empty high-security government research facility, hallways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty high-security government research facility, hallways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"government research facility, secure\"}, {\"id\": 17, \"prompt\": \"Global satellite view highlighting major industrial regions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Global satellite view highlighting major industrial regions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"satellite industrial view, global\"}, {\"id\": 18, \"prompt\": \"Network cables converging in a dark server room, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Network cables converging in a dark server room, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"network cables, server room\"}, {\"id\": 19, \"prompt\": \"Aerial view of a vast modern port with container ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Aerial view of a vast modern port with container ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"modern port, container ships\"}, {\"id\": 20, \"prompt\": \"Close-up of rare earth elements samples in a lab, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of rare earth elements samples in a lab, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"rare earth elements, lab\"}, {\"id\": 21, \"prompt\": \"Large-scale industrial energy generation facility, power plant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Large-scale industrial energy generation facility, power plant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"industrial power plant, energy\"}, {\"id\": 22, \"prompt\": \"Abstract digital cityscape grid, representing technological infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract digital cityscape grid, representing technological infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"digital cityscape, tech infrastructure\"}, {\"id\": 23, \"prompt\": \"Contrast between two distinct internet server racks, symbolizing bifurcation, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Contrast between two distinct internet server racks, symbolizing bifurcation, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"internet server racks, bifurcation\"}, {\"id\": 24, \"prompt\": \"Empty modern vehicle assembly line, with robots, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Empty modern vehicle assembly line, with robots, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"car assembly line, robots\"}, {\"id\": 25, \"prompt\": \"Close-up of a generic electronic device, circuit visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Close-up of a generic electronic device, circuit visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"electronic device, circuit\"}, {\"id\": 26, \"prompt\": \"Abstract representation of interconnected global networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Abstract representation of interconnected global networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"global networks, interconnected\"}, {\"id\": 27, \"prompt\": \"Two parallel roads or digital pathways diverging, symbolizing different future directions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"prompt_visual\": \"Two parallel roads or digital pathways diverging, symbolizing different future directions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art\", \"texto_locucion\": \"\", \"pexels_query\": \"diverging pathways, future direction\"}]",
+    "formato": "9:16",
+    "marca": "Monkygraff",
+    "texto_locucion": "",
+    "titulo_sugerido": "CHINA: CÓMO ROMPIERON EL BLOQUEO DE CHIPS DE WASHINGTON",
+    "escenas_texto": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Overhead view of a complex microchip factory, manufacturing floor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Overhead view of a complex microchip factory, manufacturing floor, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "chip factory, microchip production"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up of a silicon wafer with intricate circuits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a silicon wafer with intricate circuits, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "silicon wafer, integrated circuits"
+      },
+      {
+        "id": 3,
+        "prompt": "Industrial clean room with automated machinery for chip manufacturing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial clean room with automated machinery for chip manufacturing, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "clean room, chip manufacturing"
+      },
+      {
+        "id": 4,
+        "prompt": "Map of global semiconductor supply chains, highlighting export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Map of global semiconductor supply chains, highlighting export routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "semiconductor supply chain map"
+      },
+      {
+        "id": 5,
+        "prompt": "Abstract representation of digital data flow and network security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of digital data flow and network security, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "digital data flow, network security"
+      },
+      {
+        "id": 6,
+        "prompt": "Research and development lab interior, empty, with advanced computing equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Research and development lab interior, empty, with advanced computing equipment, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "tech lab, computing research"
+      },
+      {
+        "id": 7,
+        "prompt": "Close-up of a circuit board with a processor chip, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a circuit board with a processor chip, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "processor chip, circuit board"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty high-tech manufacturing facility with robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty high-tech manufacturing facility with robotic arms, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "robotic manufacturing, high-tech factory"
+      },
+      {
+        "id": 9,
+        "prompt": "Industrial complex in an Asian city, seen from above at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Industrial complex in an Asian city, seen from above at dusk, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "Asian industrial complex, factory"
+      },
+      {
+        "id": 10,
+        "prompt": "Close-up of a smartphone with blurred data display, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a smartphone with blurred data display, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "smartphone technology, data display"
+      },
+      {
+        "id": 11,
+        "prompt": "Global map with arrows indicating technology trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global map with arrows indicating technology trade routes, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "global trade map, tech routes"
+      },
+      {
+        "id": 12,
+        "prompt": "Server racks in a large data center, empty aisles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Server racks in a large data center, empty aisles, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "data center, server racks"
+      },
+      {
+        "id": 13,
+        "prompt": "Blueprints of advanced machinery or semiconductor design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Blueprints of advanced machinery or semiconductor design, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "semiconductor blueprint, machine design"
+      },
+      {
+        "id": 14,
+        "prompt": "Factory floor with automated assembly lines for electronic components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Factory floor with automated assembly lines for electronic components, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "automated assembly line, electronics"
+      },
+      {
+        "id": 15,
+        "prompt": "Abstract representation of economic graphs and charts overlaid on a global map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of economic graphs and charts overlaid on a global map, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "economic graphs, global map"
+      },
+      {
+        "id": 16,
+        "prompt": "Empty high-security government research facility, hallways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty high-security government research facility, hallways, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "government research facility, secure"
+      },
+      {
+        "id": 17,
+        "prompt": "Global satellite view highlighting major industrial regions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Global satellite view highlighting major industrial regions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "satellite industrial view, global"
+      },
+      {
+        "id": 18,
+        "prompt": "Network cables converging in a dark server room, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Network cables converging in a dark server room, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "network cables, server room"
+      },
+      {
+        "id": 19,
+        "prompt": "Aerial view of a vast modern port with container ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Aerial view of a vast modern port with container ships, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "modern port, container ships"
+      },
+      {
+        "id": 20,
+        "prompt": "Close-up of rare earth elements samples in a lab, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of rare earth elements samples in a lab, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "rare earth elements, lab"
+      },
+      {
+        "id": 21,
+        "prompt": "Large-scale industrial energy generation facility, power plant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Large-scale industrial energy generation facility, power plant, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "industrial power plant, energy"
+      },
+      {
+        "id": 22,
+        "prompt": "Abstract digital cityscape grid, representing technological infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract digital cityscape grid, representing technological infrastructure, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "digital cityscape, tech infrastructure"
+      },
+      {
+        "id": 23,
+        "prompt": "Contrast between two distinct internet server racks, symbolizing bifurcation, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Contrast between two distinct internet server racks, symbolizing bifurcation, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "internet server racks, bifurcation"
+      },
+      {
+        "id": 24,
+        "prompt": "Empty modern vehicle assembly line, with robots, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Empty modern vehicle assembly line, with robots, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "car assembly line, robots"
+      },
+      {
+        "id": 25,
+        "prompt": "Close-up of a generic electronic device, circuit visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Close-up of a generic electronic device, circuit visible, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "electronic device, circuit"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract representation of interconnected global networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Abstract representation of interconnected global networks, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "global networks, interconnected"
+      },
+      {
+        "id": 27,
+        "prompt": "Two parallel roads or digital pathways diverging, symbolizing different future directions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "prompt_visual": "Two parallel roads or digital pathways diverging, symbolizing different future directions, RAW photo, photojournalism, real photography, shot on location, harsh natural lighting, gritty texture, no people, no faces, no cgi, no digital art",
+        "texto_locucion": "",
+        "pexels_query": "diverging pathways, future direction"
+      }
+    ],
+    "hooks": [
+      "China: chip 7nm",
+      "Bloqueo técnico roto",
+      "El mapa real"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
