@@ -1,1 +1,253 @@
-[]
+[
+  {
+    "id": "7718bb0e-d00e-427c-9c66-94192e3f0136",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark room, monitor displaying static, person silhouette editing video, high contrast, grain\", \"prompt_visual\": \"Dark room, monitor displaying static, person silhouette editing video, high contrast, grain\", \"texto_locucion\": \"Filmas el terror, lo editas, lo compartes.\", \"pexels_query\": \"dark editing room\"}, {\"id\": 2, \"prompt\": \"Empty, minimalist room, eerie silence, subtle dust motes, long shadows\", \"prompt_visual\": \"Empty, minimalist room, eerie silence, subtle dust motes, long shadows\", \"texto_locucion\": \"Crees que es solo tu trabajo diario.\", \"pexels_query\": \"empty silent room\"}, {\"id\": 3, \"prompt\": \"Long, dark hallway, slightly out of focus at the end, oppressive atmosphere\", \"prompt_visual\": \"Long, dark hallway, slightly out of focus at the end, oppressive atmosphere\", \"texto_locucion\": \"Pero algo te sigue hasta casa.\", \"pexels_query\": \"dark apartment hallway\"}, {\"id\": 4, \"prompt\": \"Flickering light bulb in a dark ceiling, casting unstable shadows, unsettling\", \"prompt_visual\": \"Flickering light bulb in a dark ceiling, casting unstable shadows, unsettling\", \"texto_locucion\": \"Las luces parpadean, demasiado a menudo.\", \"pexels_query\": \"flickering light bulb\"}, {\"id\": 5, \"prompt\": \"Close-up on a professional microphone, subtle static visible, dark background\", \"prompt_visual\": \"Close-up on a professional microphone, subtle static visible, dark background\", \"texto_locucion\": \"Tu cámara graba ruidos muy extraños.\", \"pexels_query\": \"microphone static\"}, {\"id\": 6, \"prompt\": \"Deep shadow in a corner of a dark room, indistinct, hint of a form\", \"prompt_visual\": \"Deep shadow in a corner of a dark room, indistinct, hint of a form\", \"texto_locucion\": \"Voces que no reconoces, apenas un susurro.\", \"pexels_query\": \"dark room shadow\"}, {\"id\": 7, \"prompt\": \"Laptop screen showing a still frame of a dark, empty room, unsettling, low light\", \"prompt_visual\": \"Laptop screen showing a still frame of a dark, empty room, unsettling, low light\", \"texto_locucion\": \"En tus propias grabaciones, de tu cuarto.\", \"pexels_query\": \"laptop dark room\"}, {\"id\": 8, \"prompt\": \"Hand scrolling through video timeline on a screen, dark ambiance, focused\", \"prompt_visual\": \"Hand scrolling through video timeline on a screen, dark ambiance, focused\", \"texto_locucion\": \"Empiezas a revisar tus noches en video.\", \"pexels_query\": \"video timeline dark\"}, {\"id\": 9, \"prompt\": \"Empty space in a bedroom, where something should logically be, unsettling void\", \"prompt_visual\": \"Empty space in a bedroom, where something should logically be, unsettling void\", \"texto_locucion\": \"Y notas cosas que no deberían estar.\", \"pexels_query\": \"empty bedroom space\"}, {\"id\": 10, \"prompt\": \"Long, distorted shadow stretching down a dimly lit hallway, no visible source\", \"prompt_visual\": \"Long, distorted shadow stretching down a dimly lit hallway, no visible source\", \"texto_locucion\": \"Una sombra al fondo del pasillo.\", \"pexels_query\": \"distorted hallway shadow\"}, {\"id\": 11, \"prompt\": \"A mundane object like a pen or a remote, slightly out of place on a table, stark lighting\", \"prompt_visual\": \"A mundane object like a pen or a remote, slightly out of place on a table, stark lighting\", \"texto_locucion\": \"Un pequeño objeto se movió solo.\", \"pexels_query\": \"object out of place\"}, {\"id\": 12, \"prompt\": \"Office chair pushed back at an odd angle from a desk in a dark room, empty\", \"prompt_visual\": \"Office chair pushed back at an odd angle from a desk in a dark room, empty\", \"texto_locucion\": \"La silla de tu escritorio está corrida.\", \"pexels_query\": \"askew office chair\"}, {\"id\": 13, \"prompt\": \"Dark room, a door slightly ajar, a sliver of eerie light escaping from inside\", \"prompt_visual\": \"Dark room, a door slightly ajar, a sliver of eerie light escaping from inside\", \"texto_locucion\": \"Una puerta cerrada, ahora entreabierta.\", \"pexels_query\": \"door ajar light\"}, {\"id\": 14, \"prompt\": \"Dark bedroom, a strong sense of unseen presence, heavy air, deep shadows\", \"prompt_visual\": \"Dark bedroom, a strong sense of unseen presence, heavy air, deep shadows\", \"texto_locucion\": \"Lo sentiste antes, esa extraña presencia.\", \"pexels_query\": \"dark bedroom presence\"}, {\"id\": 15, \"prompt\": \"Living room, seemingly normal, but with an unsettling, heavy atmosphere, empty couch\", \"prompt_visual\": \"Living room, seemingly normal, but with an unsettling, heavy atmosphere, empty couch\", \"texto_locucion\": \"Algo no está bien, sabes que no.\", \"pexels_query\": \"eerie living room\"}, {\"id\": 16, \"prompt\": \"Close-up of a paused video frame on a screen, showing an empty, static-filled room\", \"prompt_visual\": \"Close-up of a paused video frame on a screen, showing an empty, static-filled room\", \"texto_locucion\": \"Te obsesionas con cada cuadro de video.\", \"pexels_query\": \"paused video static\"}, {\"id\": 17, \"prompt\": \"Dark bedroom window, deep night outside, subtle reflection of a vague form in the glass\", \"prompt_visual\": \"Dark bedroom window, deep night outside, subtle reflection of a vague form in the glass\", \"texto_locucion\": \"Buscando qué se coló en tu vida.\", \"pexels_query\": \"dark window reflection\"}, {\"id\": 18, \"prompt\": \"Empty studio setup, dark and abandoned, instruments or equipment covered, unsettling\", \"prompt_visual\": \"Empty studio setup, dark and abandoned, instruments or equipment covered, unsettling\", \"texto_locucion\": \"¿Fue la oscuridad que tanto documentas?\", \"pexels_query\": \"empty dark studio\"}, {\"id\": 19, \"prompt\": \"Dark corner of a room, two subtle, glowing eyes barely visible in the gloom, pareidolia\", \"prompt_visual\": \"Dark corner of a room, two subtle, glowing eyes barely visible in the gloom, pareidolia\", \"texto_locucion\": \"¿O ya estaba ahí, esperando solo?\", \"pexels_query\": \"eyes in darkness\"}, {\"id\": 20, \"prompt\": \"Empty, silent apartment hallway at night, feeling of vast loneliness and exposure\", \"prompt_visual\": \"Empty, silent apartment hallway at night, feeling of vast loneliness and exposure\", \"texto_locucion\": \"Tú vives solo, tú lo sabes bien.\", \"pexels_query\": \"empty silent hallway\"}, {\"id\": 21, \"prompt\": \"Deep shadow in a doorway, vague humanoid silhouette, indistinct, almost blending with the wall\", \"prompt_visual\": \"Deep shadow in a doorway, vague humanoid silhouette, indistinct, almost blending with the wall\", \"texto_locucion\": \"Pero, a veces, no estabas solo.\", \"pexels_query\": \"doorway shadow figure\"}, {\"id\": 22, \"prompt\": \"Person's hands covering face in a dark room, overwhelming sense of fear and desperation\", \"prompt_visual\": \"Person's hands covering face in a dark room, overwhelming sense of fear and desperation\", \"texto_locucion\": \"La paranoia empieza, cada vez más fuerte.\", \"pexels_query\": \"hands covering face fear\"}, {\"id\": 23, \"prompt\": \"Distorted reflection in a dark mirror, no clear face, only a vague, unsettling form\", \"prompt_visual\": \"Distorted reflection in a dark mirror, no clear face, only a vague, unsettling form\", \"texto_locucion\": \"Tu reflejo parece mirar a otra parte.\", \"pexels_query\": \"distorted mirror reflection\"}, {\"id\": 24, \"prompt\": \"Dark room, suffocating silence, heavy, oppressive atmosphere, no visible source of light\", \"prompt_visual\": \"Dark room, suffocating silence, heavy, oppressive atmosphere, no visible source of light\", \"texto_locucion\": \"El silencio absoluto es el más pesado.\", \"pexels_query\": \"oppressive dark silence\"}, {\"id\": 25, \"prompt\": \"Figure in deep shadow watching from the end of a long, dark corridor, indistinct shape\", \"prompt_visual\": \"Figure in deep shadow watching from the end of a long, dark corridor, indistinct shape\", \"texto_locucion\": \"Te sigue, te envuelve, no puedes ignorarlo.\", \"pexels_query\": \"shadow figure corridor\"}, {\"id\": 26, \"prompt\": \"Computer screen, paused on a dark, empty frame of a room, nobody present, unsettling\", \"prompt_visual\": \"Computer screen, paused on a dark, empty frame of a room, nobody present, unsettling\", \"texto_locucion\": \"Nadie lo vio, solo tú en pantalla.\", \"pexels_query\": \"empty room video paused\"}, {\"id\": 27, \"prompt\": \"A single, faint light source illuminates a deep, dark living room, a long, thin shadow on the wall\", \"prompt_visual\": \"A single, faint light source illuminates a deep, dark living room, a long, thin shadow on the wall\", \"texto_locucion\": \"Pero tú sabes que esto es muy real.\", \"pexels_query\": \"long shadow living room\"}, {\"id\": 28, \"prompt\": \"Dark room, desk with equipment, empty chair, eerie quiet, feeling of lingering presence\", \"prompt_visual\": \"Dark room, desk with equipment, empty chair, eerie quiet, feeling of lingering presence\", \"texto_locucion\": \"¿Alguna vez sentiste que algo similar...\", \"pexels_query\": \"dark studio desk\"}, {\"id\": 29, \"prompt\": \"Long, dark hallway stretching into absolute blackness, sense of endless, empty space\", \"prompt_visual\": \"Long, dark hallway stretching into absolute blackness, sense of endless, empty space\", \"texto_locucion\": \"...te persiguió después de documentar miedo?\", \"pexels_query\": \"endless dark hallway\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Filmas el terror, lo editas, lo compartes. Crees que es solo tu trabajo diario. Pero algo te sigue hasta casa. Las luces parpadean, demasiado a menudo. Tu cámara graba ruidos muy extraños. Voces que no reconoces, apenas un susurro. En tus propias grabaciones, de tu cuarto. Empiezas a revisar tus noches en video. Y notas cosas que no deberían estar. Una sombra al fondo del pasillo. Un pequeño objeto se movió solo. La silla de tu escritorio está corrida. Una puerta cerrada, ahora entreabierta. Lo sentiste antes, esa extraña presencia. Algo no está bien, sabes que no. Te obsesionas con cada cuadro de video. Buscando qué se coló en tu vida. ¿Fue la oscuridad que tanto documentas? ¿O ya estaba ahí, esperando solo? Tú vives solo, tú lo sabes bien. Pero, a veces, no estabas solo. La paranoia empieza, cada vez más fuerte. Tu reflejo parece mirar a otra parte. El silencio absoluto es el más pesado. Te sigue, te envuelve, no puedes ignorarlo. Nadie lo vio, solo tú en pantalla. Pero tú sabes que esto es muy real. ¿Alguna vez sentiste que algo similar... ...te persiguió después de documentar miedo?",
+    "titulo_sugerido": "¿Y si el contenido que creas te sigue a casa?",
+    "escenas_texto": [
+      "Filmas el terror, lo editas, lo compartes.",
+      "Crees que es solo tu trabajo diario.",
+      "Pero algo te sigue hasta casa.",
+      "Las luces parpadean, demasiado a menudo.",
+      "Tu cámara graba ruidos muy extraños.",
+      "Voces que no reconoces, apenas un susurro.",
+      "En tus propias grabaciones, de tu cuarto.",
+      "Empiezas a revisar tus noches en video.",
+      "Y notas cosas que no deberían estar.",
+      "Una sombra al fondo del pasillo.",
+      "Un pequeño objeto se movió solo.",
+      "La silla de tu escritorio está corrida.",
+      "Una puerta cerrada, ahora entreabierta.",
+      "Lo sentiste antes, esa extraña presencia.",
+      "Algo no está bien, sabes que no.",
+      "Te obsesionas con cada cuadro de video.",
+      "Buscando qué se coló en tu vida.",
+      "¿Fue la oscuridad que tanto documentas?",
+      "¿O ya estaba ahí, esperando solo?",
+      "Tú vives solo, tú lo sabes bien.",
+      "Pero, a veces, no estabas solo.",
+      "La paranoia empieza, cada vez más fuerte.",
+      "Tu reflejo parece mirar a otra parte.",
+      "El silencio absoluto es el más pesado.",
+      "Te sigue, te envuelve, no puedes ignorarlo.",
+      "Nadie lo vio, solo tú en pantalla.",
+      "Pero tú sabes que esto es muy real.",
+      "¿Alguna vez sentiste que algo similar...",
+      "...te persiguió después de documentar miedo?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark room, monitor displaying static, person silhouette editing video, high contrast, grain",
+        "prompt_visual": "Dark room, monitor displaying static, person silhouette editing video, high contrast, grain",
+        "texto_locucion": "Filmas el terror, lo editas, lo compartes.",
+        "pexels_query": "dark editing room"
+      },
+      {
+        "id": 2,
+        "prompt": "Empty, minimalist room, eerie silence, subtle dust motes, long shadows",
+        "prompt_visual": "Empty, minimalist room, eerie silence, subtle dust motes, long shadows",
+        "texto_locucion": "Crees que es solo tu trabajo diario.",
+        "pexels_query": "empty silent room"
+      },
+      {
+        "id": 3,
+        "prompt": "Long, dark hallway, slightly out of focus at the end, oppressive atmosphere",
+        "prompt_visual": "Long, dark hallway, slightly out of focus at the end, oppressive atmosphere",
+        "texto_locucion": "Pero algo te sigue hasta casa.",
+        "pexels_query": "dark apartment hallway"
+      },
+      {
+        "id": 4,
+        "prompt": "Flickering light bulb in a dark ceiling, casting unstable shadows, unsettling",
+        "prompt_visual": "Flickering light bulb in a dark ceiling, casting unstable shadows, unsettling",
+        "texto_locucion": "Las luces parpadean, demasiado a menudo.",
+        "pexels_query": "flickering light bulb"
+      },
+      {
+        "id": 5,
+        "prompt": "Close-up on a professional microphone, subtle static visible, dark background",
+        "prompt_visual": "Close-up on a professional microphone, subtle static visible, dark background",
+        "texto_locucion": "Tu cámara graba ruidos muy extraños.",
+        "pexels_query": "microphone static"
+      },
+      {
+        "id": 6,
+        "prompt": "Deep shadow in a corner of a dark room, indistinct, hint of a form",
+        "prompt_visual": "Deep shadow in a corner of a dark room, indistinct, hint of a form",
+        "texto_locucion": "Voces que no reconoces, apenas un susurro.",
+        "pexels_query": "dark room shadow"
+      },
+      {
+        "id": 7,
+        "prompt": "Laptop screen showing a still frame of a dark, empty room, unsettling, low light",
+        "prompt_visual": "Laptop screen showing a still frame of a dark, empty room, unsettling, low light",
+        "texto_locucion": "En tus propias grabaciones, de tu cuarto.",
+        "pexels_query": "laptop dark room"
+      },
+      {
+        "id": 8,
+        "prompt": "Hand scrolling through video timeline on a screen, dark ambiance, focused",
+        "prompt_visual": "Hand scrolling through video timeline on a screen, dark ambiance, focused",
+        "texto_locucion": "Empiezas a revisar tus noches en video.",
+        "pexels_query": "video timeline dark"
+      },
+      {
+        "id": 9,
+        "prompt": "Empty space in a bedroom, where something should logically be, unsettling void",
+        "prompt_visual": "Empty space in a bedroom, where something should logically be, unsettling void",
+        "texto_locucion": "Y notas cosas que no deberían estar.",
+        "pexels_query": "empty bedroom space"
+      },
+      {
+        "id": 10,
+        "prompt": "Long, distorted shadow stretching down a dimly lit hallway, no visible source",
+        "prompt_visual": "Long, distorted shadow stretching down a dimly lit hallway, no visible source",
+        "texto_locucion": "Una sombra al fondo del pasillo.",
+        "pexels_query": "distorted hallway shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "A mundane object like a pen or a remote, slightly out of place on a table, stark lighting",
+        "prompt_visual": "A mundane object like a pen or a remote, slightly out of place on a table, stark lighting",
+        "texto_locucion": "Un pequeño objeto se movió solo.",
+        "pexels_query": "object out of place"
+      },
+      {
+        "id": 12,
+        "prompt": "Office chair pushed back at an odd angle from a desk in a dark room, empty",
+        "prompt_visual": "Office chair pushed back at an odd angle from a desk in a dark room, empty",
+        "texto_locucion": "La silla de tu escritorio está corrida.",
+        "pexels_query": "askew office chair"
+      },
+      {
+        "id": 13,
+        "prompt": "Dark room, a door slightly ajar, a sliver of eerie light escaping from inside",
+        "prompt_visual": "Dark room, a door slightly ajar, a sliver of eerie light escaping from inside",
+        "texto_locucion": "Una puerta cerrada, ahora entreabierta.",
+        "pexels_query": "door ajar light"
+      },
+      {
+        "id": 14,
+        "prompt": "Dark bedroom, a strong sense of unseen presence, heavy air, deep shadows",
+        "prompt_visual": "Dark bedroom, a strong sense of unseen presence, heavy air, deep shadows",
+        "texto_locucion": "Lo sentiste antes, esa extraña presencia.",
+        "pexels_query": "dark bedroom presence"
+      },
+      {
+        "id": 15,
+        "prompt": "Living room, seemingly normal, but with an unsettling, heavy atmosphere, empty couch",
+        "prompt_visual": "Living room, seemingly normal, but with an unsettling, heavy atmosphere, empty couch",
+        "texto_locucion": "Algo no está bien, sabes que no.",
+        "pexels_query": "eerie living room"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up of a paused video frame on a screen, showing an empty, static-filled room",
+        "prompt_visual": "Close-up of a paused video frame on a screen, showing an empty, static-filled room",
+        "texto_locucion": "Te obsesionas con cada cuadro de video.",
+        "pexels_query": "paused video static"
+      },
+      {
+        "id": 17,
+        "prompt": "Dark bedroom window, deep night outside, subtle reflection of a vague form in the glass",
+        "prompt_visual": "Dark bedroom window, deep night outside, subtle reflection of a vague form in the glass",
+        "texto_locucion": "Buscando qué se coló en tu vida.",
+        "pexels_query": "dark window reflection"
+      },
+      {
+        "id": 18,
+        "prompt": "Empty studio setup, dark and abandoned, instruments or equipment covered, unsettling",
+        "prompt_visual": "Empty studio setup, dark and abandoned, instruments or equipment covered, unsettling",
+        "texto_locucion": "¿Fue la oscuridad que tanto documentas?",
+        "pexels_query": "empty dark studio"
+      },
+      {
+        "id": 19,
+        "prompt": "Dark corner of a room, two subtle, glowing eyes barely visible in the gloom, pareidolia",
+        "prompt_visual": "Dark corner of a room, two subtle, glowing eyes barely visible in the gloom, pareidolia",
+        "texto_locucion": "¿O ya estaba ahí, esperando solo?",
+        "pexels_query": "eyes in darkness"
+      },
+      {
+        "id": 20,
+        "prompt": "Empty, silent apartment hallway at night, feeling of vast loneliness and exposure",
+        "prompt_visual": "Empty, silent apartment hallway at night, feeling of vast loneliness and exposure",
+        "texto_locucion": "Tú vives solo, tú lo sabes bien.",
+        "pexels_query": "empty silent hallway"
+      },
+      {
+        "id": 21,
+        "prompt": "Deep shadow in a doorway, vague humanoid silhouette, indistinct, almost blending with the wall",
+        "prompt_visual": "Deep shadow in a doorway, vague humanoid silhouette, indistinct, almost blending with the wall",
+        "texto_locucion": "Pero, a veces, no estabas solo.",
+        "pexels_query": "doorway shadow figure"
+      },
+      {
+        "id": 22,
+        "prompt": "Person's hands covering face in a dark room, overwhelming sense of fear and desperation",
+        "prompt_visual": "Person's hands covering face in a dark room, overwhelming sense of fear and desperation",
+        "texto_locucion": "La paranoia empieza, cada vez más fuerte.",
+        "pexels_query": "hands covering face fear"
+      },
+      {
+        "id": 23,
+        "prompt": "Distorted reflection in a dark mirror, no clear face, only a vague, unsettling form",
+        "prompt_visual": "Distorted reflection in a dark mirror, no clear face, only a vague, unsettling form",
+        "texto_locucion": "Tu reflejo parece mirar a otra parte.",
+        "pexels_query": "distorted mirror reflection"
+      },
+      {
+        "id": 24,
+        "prompt": "Dark room, suffocating silence, heavy, oppressive atmosphere, no visible source of light",
+        "prompt_visual": "Dark room, suffocating silence, heavy, oppressive atmosphere, no visible source of light",
+        "texto_locucion": "El silencio absoluto es el más pesado.",
+        "pexels_query": "oppressive dark silence"
+      },
+      {
+        "id": 25,
+        "prompt": "Figure in deep shadow watching from the end of a long, dark corridor, indistinct shape",
+        "prompt_visual": "Figure in deep shadow watching from the end of a long, dark corridor, indistinct shape",
+        "texto_locucion": "Te sigue, te envuelve, no puedes ignorarlo.",
+        "pexels_query": "shadow figure corridor"
+      },
+      {
+        "id": 26,
+        "prompt": "Computer screen, paused on a dark, empty frame of a room, nobody present, unsettling",
+        "prompt_visual": "Computer screen, paused on a dark, empty frame of a room, nobody present, unsettling",
+        "texto_locucion": "Nadie lo vio, solo tú en pantalla.",
+        "pexels_query": "empty room video paused"
+      },
+      {
+        "id": 27,
+        "prompt": "A single, faint light source illuminates a deep, dark living room, a long, thin shadow on the wall",
+        "prompt_visual": "A single, faint light source illuminates a deep, dark living room, a long, thin shadow on the wall",
+        "texto_locucion": "Pero tú sabes que esto es muy real.",
+        "pexels_query": "long shadow living room"
+      },
+      {
+        "id": 28,
+        "prompt": "Dark room, desk with equipment, empty chair, eerie quiet, feeling of lingering presence",
+        "prompt_visual": "Dark room, desk with equipment, empty chair, eerie quiet, feeling of lingering presence",
+        "texto_locucion": "¿Alguna vez sentiste que algo similar...",
+        "pexels_query": "dark studio desk"
+      },
+      {
+        "id": 29,
+        "prompt": "Long, dark hallway stretching into absolute blackness, sense of endless, empty space",
+        "prompt_visual": "Long, dark hallway stretching into absolute blackness, sense of endless, empty space",
+        "texto_locucion": "...te persiguió después de documentar miedo?",
+        "pexels_query": "endless dark hallway"
+      }
+    ],
+    "hooks": [
+      "El terror te sigue a casa.",
+      "Tu cuarto, ya no es tuyo.",
+      "¿Contenido o realidad?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
