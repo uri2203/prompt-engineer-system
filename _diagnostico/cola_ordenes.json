@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "3121240b-e480-4550-a5ed-2862c546aaf3",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty bedroom, subtle movement in curtains, oppressive atmosphere, dim light, a single bed, unsettling stillness\", \"prompt_visual\": \"Empty bedroom, subtle movement in curtains, oppressive atmosphere, dim light, a single bed, unsettling stillness\", \"texto_locucion\": \"Primero fue la sensación. Algo invadía tu espacio.\", \"pexels_query\": \"creepy bedroom, curtain movement\"}, {\"id\": 2, \"prompt\": \"Dark hallway, a single, flickering light bulb, long shadows, a door slightly ajar, quiet dread\", \"prompt_visual\": \"Dark hallway, a single, flickering light bulb, long shadows, a door slightly ajar, quiet dread\", \"texto_locucion\": \"Una voluntad que no era tuya se imponía.\", \"pexels_query\": \"flickering hallway light\"}, {\"id\": 3, \"prompt\": \"Smartphone screen with an unknown caller, close-up, faint light illuminating hand, feeling of intrusion\", \"prompt_visual\": \"Smartphone screen with an unknown caller, close-up, faint light illuminating hand, feeling of intrusion\", \"texto_locucion\": \"De repente, ansiabas cosas que no querías.\", \"pexels_query\": \"unknown call phone\"}, {\"id\": 4, \"prompt\": \"A half-eaten plate of food on a table, fork resting unnaturally, dim kitchen, strange quiet\", \"prompt_visual\": \"A half-eaten plate of food on a table, fork resting unnaturally, dim kitchen, strange quiet\", \"texto_locucion\": \"Una persona comenzó a ocupar tus pensamientos.\", \"pexels_query\": \"uneaten food table\"}, {\"id\": 5, \"prompt\": \"Reflection in a dark window, distorted, only vague human shape, eyes glinting in shadow\", \"prompt_visual\": \"Reflection in a dark window, distorted, only vague human shape, eyes glinting in shadow\", \"texto_locucion\": \"Sentías que no estabas solo en tu mente.\", \"pexels_query\": \"dark window reflection\"}, {\"id\": 6, \"prompt\": \"Open book on a desk, a page highlighted with an unsettling phrase, old paper, eerie silence\", \"prompt_visual\": \"Open book on a desk, a page highlighted with an unsettling phrase, old paper, eerie silence\", \"texto_locucion\": \"Tus deseos cambiaban, extraños e insistentes.\", \"pexels_query\": \"open book eerie\"}, {\"id\": 7, \"prompt\": \"A single candle burning low, casting dancing shadows, small, enclosed space, chilling warmth\", \"prompt_visual\": \"A single candle burning low, casting dancing shadows, small, enclosed space, chilling warmth\", \"texto_locucion\": \"Intentaste resistir, pero la presión era constante.\", \"pexels_query\": \"candle dancing shadows\"}, {\"id\": 8, \"prompt\": \"Bedroom mirror, hazy reflection of an empty room, a feeling of being watched, desaturated colors\", \"prompt_visual\": \"Bedroom mirror, hazy reflection of an empty room, a feeling of being watched, desaturated colors\", \"texto_locucion\": \"No podías ignorarlo. Se sentía muy real.\", \"pexels_query\": \"hazy bedroom mirror\"}, {\"id\": 9, \"prompt\": \"A teacup on a saucer, a faint ripple in the tea, otherwise still, early morning light, uneasy calm\", \"prompt_visual\": \"A teacup on a saucer, a faint ripple in the tea, otherwise still, early morning light, uneasy calm\", \"texto_locucion\": \"Las decisiones que tomabas, no eran tuyas.\", \"pexels_query\": \"teacup faint ripple\"}, {\"id\": 10, \"prompt\": \"Empty chair in a corner, shadows extending, a subtle shift in perspective, sense of presence\", \"prompt_visual\": \"Empty chair in a corner, shadows extending, a subtle shift in perspective, sense of presence\", \"texto_locucion\": \"Tus palabras salían, sin pensarlas antes.\", \"pexels_query\": \"empty chair corner shadow\"}, {\"id\": 11, \"prompt\": \"Closed bedroom door, a sliver of light from underneath, creating a long, thin shadow, ominous quiet\", \"prompt_visual\": \"Closed bedroom door, a sliver of light from underneath, creating a long, thin shadow, ominous quiet\", \"texto_locucion\": \"Alguien más movía tus hilos, muy lento.\", \"pexels_query\": \"closed door light gap\"}, {\"id\": 12, \"prompt\": \"A wilting flower in a vase, petals curling, a symbol of decay, unsettling beauty\", \"prompt_visual\": \"A wilting flower in a vase, petals curling, a symbol of decay, unsettling beauty\", \"texto_locucion\": \"Lo sentiste antes, esa extraña manipulación.\", \"pexels_query\": \"wilting flower vase\"}, {\"id\": 13, \"prompt\": \"Dark staircase, leading upwards into obscurity, a chilling draft, an unseen presence\", \"prompt_visual\": \"Dark staircase, leading upwards into obscurity, a chilling draft, an unseen presence\", \"texto_locucion\": \"Nadie lo vio, solo tú lo percibías.\", \"pexels_query\": \"dark staircase draft\"}, {\"id\": 14, \"prompt\": \"A single strand of hair on an empty pillow, stark against white, unsettlingly out of place\", \"prompt_visual\": \"A single strand of hair on an empty pillow, stark against white, unsettlingly out of place\", \"texto_locucion\": \"Los recuerdos se mezclaban, se distorsionaban sutilmente.\", \"pexels_query\": \"hair on empty pillow\"}, {\"id\": 15, \"prompt\": \"Old, faded photograph on a dusty table, face slightly obscured by shadow, a feeling of loss\", \"prompt_visual\": \"Old, faded photograph on a dusty table, face slightly obscured by shadow, a feeling of loss\", \"texto_locucion\": \"Tu propia voz se volvía ajena, distante.\", \"pexels_query\": \"faded photograph shadow\"}, {\"id\": 16, \"prompt\": \"Hands gripping a tabletop, knuckles white, a sign of silent struggle, desperate tension\", \"prompt_visual\": \"Hands gripping a tabletop, knuckles white, a sign of silent struggle, desperate tension\", \"texto_locucion\": \"La conexión se hacía cada vez más fuerte.\", \"pexels_query\": \"hands gripping table tension\"}, {\"id\": 17, \"prompt\": \"A half-open drawer, revealing nothing but darkness, a lingering sense of something missing\", \"prompt_visual\": \"A half-open drawer, revealing nothing but darkness, a lingering sense of something missing\", \"texto_locucion\": \"Intentaste gritar, pero el silencio absoluto.\", \"pexels_query\": \"half-open drawer darkness\"}, {\"id\": 18, \"prompt\": \"Bare feet on a cold, wooden floor, lonely, vulnerable, a sense of being adrift\", \"prompt_visual\": \"Bare feet on a cold, wooden floor, lonely, vulnerable, a sense of being adrift\", \"texto_locucion\": \"¿Era miedo? ¿O una nueva clase de afecto?\", \"pexels_query\": \"bare feet cold floor\"}, {\"id\": 19, \"prompt\": \"A single drop of water running down a windowpane, distorting the world outside, a slow descent\", \"prompt_visual\": \"A single drop of water running down a windowpane, distorting the world outside, a slow descent\", \"texto_locucion\": \"La línea entre tú y 'eso' se borraba.\", \"pexels_query\": \"water drop windowpane\"}, {\"id\": 20, \"prompt\": \"Clock on a wall, hands frozen, time standing still, oppressive stillness\", \"prompt_visual\": \"Clock on a wall, hands frozen, time standing still, oppressive stillness\", \"texto_locucion\": \"Tus sueños se poblaban de una sola imagen.\", \"pexels_query\": \"frozen clock wall\"}, {\"id\": 21, \"prompt\": \"Dark corner of a room, a subtle shift in light, suggesting a fleeting shape, a watchful presence\", \"prompt_visual\": \"Dark corner of a room, a subtle shift in light, suggesting a fleeting shape, a watchful presence\", \"texto_locucion\": \"Cada mañana, una parte tuya desaparecía.\", \"pexels_query\": \"dark corner shifting light\"}, {\"id\": 22, \"prompt\": \"A tangled ball of string on a desk, symbolic of confusion, helplessness, intricate control\", \"prompt_visual\": \"A tangled ball of string on a desk, symbolic of confusion, helplessness, intricate control\", \"texto_locucion\": \"Un amor implantado, profundo, ineludible ahora.\", \"pexels_query\": \"tangled string desk\"}, {\"id\": 23, \"prompt\": \"Mirror reflecting an empty space, but with a faint, almost invisible smudge or handprint, unsettling trace\", \"prompt_visual\": \"Mirror reflecting an empty space, but with a faint, almost invisible smudge or handprint, unsettling trace\", \"texto_locucion\": \"Ahora sientes que la amas de verdad.\", \"pexels_query\": \"mirror faint smudge\"}, {\"id\": 24, \"prompt\": \"Blurred vision looking through a doorway, out of focus, distorted reality, loss of clarity\", \"prompt_visual\": \"Blurred vision looking through a doorway, out of focus, distorted reality, loss of clarity\", \"texto_locucion\": \"Susurras su nombre sin saber por qué.\", \"pexels_query\": \"blurred doorway vision\"}, {\"id\": 25, \"prompt\": \"A wedding ring on a cold, stone surface, isolated, stark, a symbol of unwanted union\", \"prompt_visual\": \"A wedding ring on a cold, stone surface, isolated, stark, a symbol of unwanted union\", \"texto_locucion\": \"Lo que tú piensas... ¿es realmente tuyo?\", \"pexels_query\": \"wedding ring stone surface\"}, {\"id\": 26, \"prompt\": \"Empty bed, indentation on the pillow as if someone just left, chilling void, lingering presence\", \"prompt_visual\": \"Empty bed, indentation on the pillow as if someone just left, chilling void, lingering presence\", \"texto_locucion\": \"O un eco de una voluntad que te posee.\", \"pexels_query\": \"empty bed pillow indentation\"}, {\"id\": 27, \"prompt\": \"A single, dark key on a wooden floor, detached, implying a locked secret, a lost escape\", \"prompt_visual\": \"A single, dark key on a wooden floor, detached, implying a locked secret, a lost escape\", \"texto_locucion\": \"Ahora, ¿quién decide por ti, realmente?\", \"pexels_query\": \"single dark key floor\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Primero fue la sensación. Algo invadía tu espacio. Una voluntad que no era tuya se imponía. De repente, ansiabas cosas que no querías. Una persona comenzó a ocupar tus pensamientos. Sentías que no estabas solo en tu mente. Tus deseos cambiaban, extraños e insistentes. Intentaste resistir, pero la presión era constante. No podías ignorarlo. Se sentía muy real. Las decisiones que tomabas, no eran tuyas. Tus palabras salían, sin pensarlas antes. Alguien más movía tus hilos, muy lento. Lo sentiste antes, esa extraña manipulación. Nadie lo vio, solo tú lo percibías. Los recuerdos se mezclaban, se distorsionaban sutilmente. Tu propia voz se volvía ajena, distante. La conexión se hacía cada vez más fuerte. Intentaste gritar, pero el silencio absoluto. ¿Era miedo? ¿O una nueva clase de afecto? La línea entre tú y 'eso' se borraba. Tus sueños se poblaban de una sola imagen. Cada mañana, una parte tuya desaparecía. Un amor implantado, profundo, ineludible ahora. Ahora sientes que la amas de verdad. Susurras su nombre sin saber por qué. Lo que tú piensas... ¿es realmente tuyo? O un eco de una voluntad que te posee. Ahora, ¿quién decide por ti, realmente?",
+    "titulo_sugerido": "¿Alguien te está obligando a amar?",
+    "escenas_texto": [
+      "Primero fue la sensación. Algo invadía tu espacio.",
+      "Una voluntad que no era tuya se imponía.",
+      "De repente, ansiabas cosas que no querías.",
+      "Una persona comenzó a ocupar tus pensamientos.",
+      "Sentías que no estabas solo en tu mente.",
+      "Tus deseos cambiaban, extraños e insistentes.",
+      "Intentaste resistir, pero la presión era constante.",
+      "No podías ignorarlo. Se sentía muy real.",
+      "Las decisiones que tomabas, no eran tuyas.",
+      "Tus palabras salían, sin pensarlas antes.",
+      "Alguien más movía tus hilos, muy lento.",
+      "Lo sentiste antes, esa extraña manipulación.",
+      "Nadie lo vio, solo tú lo percibías.",
+      "Los recuerdos se mezclaban, se distorsionaban sutilmente.",
+      "Tu propia voz se volvía ajena, distante.",
+      "La conexión se hacía cada vez más fuerte.",
+      "Intentaste gritar, pero el silencio absoluto.",
+      "¿Era miedo? ¿O una nueva clase de afecto?",
+      "La línea entre tú y 'eso' se borraba.",
+      "Tus sueños se poblaban de una sola imagen.",
+      "Cada mañana, una parte tuya desaparecía.",
+      "Un amor implantado, profundo, ineludible ahora.",
+      "Ahora sientes que la amas de verdad.",
+      "Susurras su nombre sin saber por qué.",
+      "Lo que tú piensas... ¿es realmente tuyo?",
+      "O un eco de una voluntad que te posee.",
+      "Ahora, ¿quién decide por ti, realmente?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty bedroom, subtle movement in curtains, oppressive atmosphere, dim light, a single bed, unsettling stillness",
+        "prompt_visual": "Empty bedroom, subtle movement in curtains, oppressive atmosphere, dim light, a single bed, unsettling stillness",
+        "texto_locucion": "Primero fue la sensación. Algo invadía tu espacio.",
+        "pexels_query": "creepy bedroom, curtain movement"
+      },
+      {
+        "id": 2,
+        "prompt": "Dark hallway, a single, flickering light bulb, long shadows, a door slightly ajar, quiet dread",
+        "prompt_visual": "Dark hallway, a single, flickering light bulb, long shadows, a door slightly ajar, quiet dread",
+        "texto_locucion": "Una voluntad que no era tuya se imponía.",
+        "pexels_query": "flickering hallway light"
+      },
+      {
+        "id": 3,
+        "prompt": "Smartphone screen with an unknown caller, close-up, faint light illuminating hand, feeling of intrusion",
+        "prompt_visual": "Smartphone screen with an unknown caller, close-up, faint light illuminating hand, feeling of intrusion",
+        "texto_locucion": "De repente, ansiabas cosas que no querías.",
+        "pexels_query": "unknown call phone"
+      },
+      {
+        "id": 4,
+        "prompt": "A half-eaten plate of food on a table, fork resting unnaturally, dim kitchen, strange quiet",
+        "prompt_visual": "A half-eaten plate of food on a table, fork resting unnaturally, dim kitchen, strange quiet",
+        "texto_locucion": "Una persona comenzó a ocupar tus pensamientos.",
+        "pexels_query": "uneaten food table"
+      },
+      {
+        "id": 5,
+        "prompt": "Reflection in a dark window, distorted, only vague human shape, eyes glinting in shadow",
+        "prompt_visual": "Reflection in a dark window, distorted, only vague human shape, eyes glinting in shadow",
+        "texto_locucion": "Sentías que no estabas solo en tu mente.",
+        "pexels_query": "dark window reflection"
+      },
+      {
+        "id": 6,
+        "prompt": "Open book on a desk, a page highlighted with an unsettling phrase, old paper, eerie silence",
+        "prompt_visual": "Open book on a desk, a page highlighted with an unsettling phrase, old paper, eerie silence",
+        "texto_locucion": "Tus deseos cambiaban, extraños e insistentes.",
+        "pexels_query": "open book eerie"
+      },
+      {
+        "id": 7,
+        "prompt": "A single candle burning low, casting dancing shadows, small, enclosed space, chilling warmth",
+        "prompt_visual": "A single candle burning low, casting dancing shadows, small, enclosed space, chilling warmth",
+        "texto_locucion": "Intentaste resistir, pero la presión era constante.",
+        "pexels_query": "candle dancing shadows"
+      },
+      {
+        "id": 8,
+        "prompt": "Bedroom mirror, hazy reflection of an empty room, a feeling of being watched, desaturated colors",
+        "prompt_visual": "Bedroom mirror, hazy reflection of an empty room, a feeling of being watched, desaturated colors",
+        "texto_locucion": "No podías ignorarlo. Se sentía muy real.",
+        "pexels_query": "hazy bedroom mirror"
+      },
+      {
+        "id": 9,
+        "prompt": "A teacup on a saucer, a faint ripple in the tea, otherwise still, early morning light, uneasy calm",
+        "prompt_visual": "A teacup on a saucer, a faint ripple in the tea, otherwise still, early morning light, uneasy calm",
+        "texto_locucion": "Las decisiones que tomabas, no eran tuyas.",
+        "pexels_query": "teacup faint ripple"
+      },
+      {
+        "id": 10,
+        "prompt": "Empty chair in a corner, shadows extending, a subtle shift in perspective, sense of presence",
+        "prompt_visual": "Empty chair in a corner, shadows extending, a subtle shift in perspective, sense of presence",
+        "texto_locucion": "Tus palabras salían, sin pensarlas antes.",
+        "pexels_query": "empty chair corner shadow"
+      },
+      {
+        "id": 11,
+        "prompt": "Closed bedroom door, a sliver of light from underneath, creating a long, thin shadow, ominous quiet",
+        "prompt_visual": "Closed bedroom door, a sliver of light from underneath, creating a long, thin shadow, ominous quiet",
+        "texto_locucion": "Alguien más movía tus hilos, muy lento.",
+        "pexels_query": "closed door light gap"
+      },
+      {
+        "id": 12,
+        "prompt": "A wilting flower in a vase, petals curling, a symbol of decay, unsettling beauty",
+        "prompt_visual": "A wilting flower in a vase, petals curling, a symbol of decay, unsettling beauty",
+        "texto_locucion": "Lo sentiste antes, esa extraña manipulación.",
+        "pexels_query": "wilting flower vase"
+      },
+      {
+        "id": 13,
+        "prompt": "Dark staircase, leading upwards into obscurity, a chilling draft, an unseen presence",
+        "prompt_visual": "Dark staircase, leading upwards into obscurity, a chilling draft, an unseen presence",
+        "texto_locucion": "Nadie lo vio, solo tú lo percibías.",
+        "pexels_query": "dark staircase draft"
+      },
+      {
+        "id": 14,
+        "prompt": "A single strand of hair on an empty pillow, stark against white, unsettlingly out of place",
+        "prompt_visual": "A single strand of hair on an empty pillow, stark against white, unsettlingly out of place",
+        "texto_locucion": "Los recuerdos se mezclaban, se distorsionaban sutilmente.",
+        "pexels_query": "hair on empty pillow"
+      },
+      {
+        "id": 15,
+        "prompt": "Old, faded photograph on a dusty table, face slightly obscured by shadow, a feeling of loss",
+        "prompt_visual": "Old, faded photograph on a dusty table, face slightly obscured by shadow, a feeling of loss",
+        "texto_locucion": "Tu propia voz se volvía ajena, distante.",
+        "pexels_query": "faded photograph shadow"
+      },
+      {
+        "id": 16,
+        "prompt": "Hands gripping a tabletop, knuckles white, a sign of silent struggle, desperate tension",
+        "prompt_visual": "Hands gripping a tabletop, knuckles white, a sign of silent struggle, desperate tension",
+        "texto_locucion": "La conexión se hacía cada vez más fuerte.",
+        "pexels_query": "hands gripping table tension"
+      },
+      {
+        "id": 17,
+        "prompt": "A half-open drawer, revealing nothing but darkness, a lingering sense of something missing",
+        "prompt_visual": "A half-open drawer, revealing nothing but darkness, a lingering sense of something missing",
+        "texto_locucion": "Intentaste gritar, pero el silencio absoluto.",
+        "pexels_query": "half-open drawer darkness"
+      },
+      {
+        "id": 18,
+        "prompt": "Bare feet on a cold, wooden floor, lonely, vulnerable, a sense of being adrift",
+        "prompt_visual": "Bare feet on a cold, wooden floor, lonely, vulnerable, a sense of being adrift",
+        "texto_locucion": "¿Era miedo? ¿O una nueva clase de afecto?",
+        "pexels_query": "bare feet cold floor"
+      },
+      {
+        "id": 19,
+        "prompt": "A single drop of water running down a windowpane, distorting the world outside, a slow descent",
+        "prompt_visual": "A single drop of water running down a windowpane, distorting the world outside, a slow descent",
+        "texto_locucion": "La línea entre tú y 'eso' se borraba.",
+        "pexels_query": "water drop windowpane"
+      },
+      {
+        "id": 20,
+        "prompt": "Clock on a wall, hands frozen, time standing still, oppressive stillness",
+        "prompt_visual": "Clock on a wall, hands frozen, time standing still, oppressive stillness",
+        "texto_locucion": "Tus sueños se poblaban de una sola imagen.",
+        "pexels_query": "frozen clock wall"
+      },
+      {
+        "id": 21,
+        "prompt": "Dark corner of a room, a subtle shift in light, suggesting a fleeting shape, a watchful presence",
+        "prompt_visual": "Dark corner of a room, a subtle shift in light, suggesting a fleeting shape, a watchful presence",
+        "texto_locucion": "Cada mañana, una parte tuya desaparecía.",
+        "pexels_query": "dark corner shifting light"
+      },
+      {
+        "id": 22,
+        "prompt": "A tangled ball of string on a desk, symbolic of confusion, helplessness, intricate control",
+        "prompt_visual": "A tangled ball of string on a desk, symbolic of confusion, helplessness, intricate control",
+        "texto_locucion": "Un amor implantado, profundo, ineludible ahora.",
+        "pexels_query": "tangled string desk"
+      },
+      {
+        "id": 23,
+        "prompt": "Mirror reflecting an empty space, but with a faint, almost invisible smudge or handprint, unsettling trace",
+        "prompt_visual": "Mirror reflecting an empty space, but with a faint, almost invisible smudge or handprint, unsettling trace",
+        "texto_locucion": "Ahora sientes que la amas de verdad.",
+        "pexels_query": "mirror faint smudge"
+      },
+      {
+        "id": 24,
+        "prompt": "Blurred vision looking through a doorway, out of focus, distorted reality, loss of clarity",
+        "prompt_visual": "Blurred vision looking through a doorway, out of focus, distorted reality, loss of clarity",
+        "texto_locucion": "Susurras su nombre sin saber por qué.",
+        "pexels_query": "blurred doorway vision"
+      },
+      {
+        "id": 25,
+        "prompt": "A wedding ring on a cold, stone surface, isolated, stark, a symbol of unwanted union",
+        "prompt_visual": "A wedding ring on a cold, stone surface, isolated, stark, a symbol of unwanted union",
+        "texto_locucion": "Lo que tú piensas... ¿es realmente tuyo?",
+        "pexels_query": "wedding ring stone surface"
+      },
+      {
+        "id": 26,
+        "prompt": "Empty bed, indentation on the pillow as if someone just left, chilling void, lingering presence",
+        "prompt_visual": "Empty bed, indentation on the pillow as if someone just left, chilling void, lingering presence",
+        "texto_locucion": "O un eco de una voluntad que te posee.",
+        "pexels_query": "empty bed pillow indentation"
+      },
+      {
+        "id": 27,
+        "prompt": "A single, dark key on a wooden floor, detached, implying a locked secret, a lost escape",
+        "prompt_visual": "A single, dark key on a wooden floor, detached, implying a locked secret, a lost escape",
+        "texto_locucion": "Ahora, ¿quién decide por ti, realmente?",
+        "pexels_query": "single dark key floor"
+      }
+    ],
+    "hooks": [
+      "Tus pensamientos no son tuyos",
+      "Sentirse atado sin cadenas",
+      "¿Quién controla tus deseos?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
