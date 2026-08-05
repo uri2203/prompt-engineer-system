@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "ac60174a-1ae2-4b74-95fa-537a6a92215a",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Child's small hand holding a crumpled paper with a drawing, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's small hand holding a crumpled paper with a drawing, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"“Mamá, me prohibieron hablar de la comida…” susurró.\", \"pexels_query\": \"child drawing paper\"}, {\"id\": 2, \"prompt\": \"Happy family photo on a fridge, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Happy family photo on a fridge, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi hija amaba a mi nuevo novio, al principio.\", \"pexels_query\": \"fridge magnet photo\"}, {\"id\": 3, \"prompt\": \"Empty child's lunchbox on a kitchen counter, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty child's lunchbox on a kitchen counter, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero pronto, algo no estaba bien en casa.\", \"pexels_query\": \"empty lunchbox kitchen\"}, {\"id\": 4, \"prompt\": \"Child's small shoes neatly placed by the door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's small shoes neatly placed by the door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella dejó de comer sus almuerzos en la escuela.\", \"pexels_query\": \"child shoes door\"}, {\"id\": 5, \"prompt\": \"Measuring tape on a wall next to pencil marks, showing growth, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Measuring tape on a wall next to pencil marks, showing growth, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empezó a perder peso, parecía muy asustada.\", \"pexels_query\": \"growth chart wall\"}, {\"id\": 6, \"prompt\": \"A half-eaten dry cracker on a small plate, minimal crumbs, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-eaten dry cracker on a small plate, minimal crumbs, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi pareja siempre tenía una excusa convincente.\", \"pexels_query\": \"dry cracker plate\"}, {\"id\": 7, \"prompt\": \"A child's drawing of a sad face, on a table with crayons, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A child's drawing of a sad face, on a table with crayons, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero lo sentiste antes, un frío incómodo.\", \"pexels_query\": \"sad child drawing\"}, {\"id\": 8, \"prompt\": \"Mother's phone screen showing a text message, unread, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Mother's phone screen showing a text message, unread, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella me ignoraba cuando hablaba de la niña.\", \"pexels_query\": \"unread text message\"}, {\"id\": 9, \"prompt\": \"A half-closed door, with a sliver of light coming through, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-closed door, with a sliver of light coming through, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie más notaba su comportamiento extraño, ¿o sí?\", \"pexels_query\": \"half closed door\"}, {\"id\": 10, \"prompt\": \"A child's backpack on a floor next to a worn teddy bear, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A child's backpack on a floor next to a worn teddy bear, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Decidí que no podía ignorarlo por más tiempo.\", \"pexels_query\": \"child backpack teddy\"}, {\"id\": 11, \"prompt\": \"A small, plain diary or notebook hidden under a pillow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, plain diary or notebook hidden under a pillow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empecé a buscar pistas en la habitación de mi hija.\", \"pexels_query\": \"diary under pillow\"}, {\"id\": 12, \"prompt\": \"A single toy car left on the floor, in a quiet, slightly messy room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single toy car left on the floor, in a quiet, slightly messy room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Revisé sus juguetes, sus libros, sus cajones pequeños.\", \"pexels_query\": \"toy car room\"}, {\"id\": 13, \"prompt\": \"A small handwritten note, partially folded, peeking from under a mattress, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small handwritten note, partially folded, peeking from under a mattress, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Fue entonces cuando encontré algo debajo del colchón.\", \"pexels_query\": \"hidden note mattress\"}, {\"id\": 14, \"prompt\": \"Close-up of a child's shaky handwriting on a crumpled piece of paper, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a child's shaky handwriting on a crumpled piece of paper, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una nota pequeña, con letra temblorosa de niña.\", \"pexels_query\": \"child shaky handwriting\"}, {\"id\": 15, \"prompt\": \"A single tear drop on a written word on paper, blurring the ink slightly, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single tear drop on a written word on paper, blurring the ink slightly, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Decía: “Ella no me deja comer, solo galletas secas”.\", \"pexels_query\": \"tear drop paper\"}, {\"id\": 16, \"prompt\": \"A child's drawing of a figure with an X over its mouth, next to another drawing of food, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A child's drawing of a figure with an X over its mouth, next to another drawing of food, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y un dibujo de mi pareja tapando su boca.\", \"pexels_query\": \"drawing silenced food\"}, {\"id\": 17, \"prompt\": \"A hand clutching a small piece of paper tightly, knuckles white, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A hand clutching a small piece of paper tightly, knuckles white, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi corazón se detuvo. Silencio absoluto en el cuarto.\", \"pexels_query\": \"clutched paper hand\"}, {\"id\": 18, \"prompt\": \"Empty kitchen table, a single chair pulled out, early morning light, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty kitchen table, a single chair pulled out, early morning light, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella no solo le prohibía hablar de comida.\", \"pexels_query\": \"empty kitchen table\"}, {\"id\": 19, \"prompt\": \"Child's untouched bowl of cereal on a breakfast table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Child's untouched bowl of cereal on a breakfast table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Le estaba negando el alimento básico diario.\", \"pexels_query\": \"untouched cereal bowl\"}, {\"id\": 20, \"prompt\": \"A half-eaten dry cracker and a glass of water on a nightstand, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-eaten dry cracker and a glass of water on a nightstand, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mientras yo trabajaba, mi hija moría de hambre.\", \"pexels_query\": \"cracker water nightstand\"}, {\"id\": 21, \"prompt\": \"A key for a padlock resting on a wooden surface, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A key for a padlock resting on a wooden surface, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El monstruo vivía en nuestra propia casa.\", \"pexels_query\": \"padlock key wood\"}, {\"id\": 22, \"prompt\": \"A child's teddy bear sitting alone on a bed, looking towards a closed door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A child's teddy bear sitting alone on a bed, looking towards a closed door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi pareja, que parecía tan amable con todos.\", \"pexels_query\": \"teddy bear closed door\"}, {\"id\": 23, \"prompt\": \"A blurred image of a phone screen showing a contact being blocked, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurred image of a phone screen showing a contact being blocked, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Conmigo, era un dulce. Con mi hija...\", \"pexels_query\": \"phone blocked contact\"}, {\"id\": 24, \"prompt\": \"A single empty plate on a large dining table, casting a long shadow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single empty plate on a large dining table, casting a long shadow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Era una pesadilla silenciosa, nadie lo vio.\", \"pexels_query\": \"empty dining plate\"}, {\"id\": 25, \"prompt\": \"A blurry silhouette of a child's toy against a window, suggesting a hidden presence, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurry silhouette of a child's toy against a window, suggesting a hidden presence, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No estabas sola, mi amor, mamá te encontró.\", \"pexels_query\": \"toy silhouette window\"}, {\"id\": 26, \"prompt\": \"A small, colorful child's drawing, now pinned prominently on a wall, suggesting hope, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A small, colorful child's drawing, now pinned prominently on a wall, suggesting hope, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Tomé a mi hija y la saqué de allí.\", \"pexels_query\": \"child drawing hope\"}, {\"id\": 27, \"prompt\": \"A legal document partially visible, with a pen resting on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A legal document partially visible, with a pen resting on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las denuncias y el proceso fueron inmediatos.\", \"pexels_query\": \"legal document pen\"}, {\"id\": 28, \"prompt\": \"A child's hand holding an adult's hand protectively, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A child's hand holding an adult's hand protectively, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Cómo hubieras reaccionado ante tal traición familiar?\", \"pexels_query\": \"child adult hands\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "“Mamá, me prohibieron hablar de la comida…” susurró. Mi hija amaba a mi nuevo novio, al principio. Pero pronto, algo no estaba bien en casa. Ella dejó de comer sus almuerzos en la escuela. Empezó a perder peso, parecía muy asustada. Mi pareja siempre tenía una excusa convincente. Pero lo sentiste antes, un frío incómodo. Ella me ignoraba cuando hablaba de la niña. Nadie más notaba su comportamiento extraño, ¿o sí? Decidí que no podía ignorarlo por más tiempo. Empecé a buscar pistas en la habitación de mi hija. Revisé sus juguetes, sus libros, sus cajones pequeños. Fue entonces cuando encontré algo debajo del colchón. Una nota pequeña, con letra temblorosa de niña. Decía: “Ella no me deja comer, solo galletas secas”. Y un dibujo de mi pareja tapando su boca. Mi corazón se detuvo. Silencio absoluto en el cuarto. Ella no solo le prohibía hablar de comida. Le estaba negando el alimento básico diario. Mientras yo trabajaba, mi hija moría de hambre. El monstruo vivía en nuestra propia casa. Mi pareja, que parecía tan amable con todos. Conmigo, era un dulce. Con mi hija... Era una pesadilla silenciosa, nadie lo vio. No estabas sola, mi amor, mamá te encontró. Tomé a mi hija y la saqué de allí. Las denuncias y el proceso fueron inmediatos. ¿Cómo hubieras reaccionado ante tal traición familiar?",
+    "titulo_sugerido": "Mi hijo me reveló que le prohibían comer",
+    "escenas_texto": [
+      "“Mamá, me prohibieron hablar de la comida…” susurró.",
+      "Mi hija amaba a mi nuevo novio, al principio.",
+      "Pero pronto, algo no estaba bien en casa.",
+      "Ella dejó de comer sus almuerzos en la escuela.",
+      "Empezó a perder peso, parecía muy asustada.",
+      "Mi pareja siempre tenía una excusa convincente.",
+      "Pero lo sentiste antes, un frío incómodo.",
+      "Ella me ignoraba cuando hablaba de la niña.",
+      "Nadie más notaba su comportamiento extraño, ¿o sí?",
+      "Decidí que no podía ignorarlo por más tiempo.",
+      "Empecé a buscar pistas en la habitación de mi hija.",
+      "Revisé sus juguetes, sus libros, sus cajones pequeños.",
+      "Fue entonces cuando encontré algo debajo del colchón.",
+      "Una nota pequeña, con letra temblorosa de niña.",
+      "Decía: “Ella no me deja comer, solo galletas secas”.",
+      "Y un dibujo de mi pareja tapando su boca.",
+      "Mi corazón se detuvo. Silencio absoluto en el cuarto.",
+      "Ella no solo le prohibía hablar de comida.",
+      "Le estaba negando el alimento básico diario.",
+      "Mientras yo trabajaba, mi hija moría de hambre.",
+      "El monstruo vivía en nuestra propia casa.",
+      "Mi pareja, que parecía tan amable con todos.",
+      "Conmigo, era un dulce. Con mi hija...",
+      "Era una pesadilla silenciosa, nadie lo vio.",
+      "No estabas sola, mi amor, mamá te encontró.",
+      "Tomé a mi hija y la saqué de allí.",
+      "Las denuncias y el proceso fueron inmediatos.",
+      "¿Cómo hubieras reaccionado ante tal traición familiar?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Child's small hand holding a crumpled paper with a drawing, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's small hand holding a crumpled paper with a drawing, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "“Mamá, me prohibieron hablar de la comida…” susurró.",
+        "pexels_query": "child drawing paper"
+      },
+      {
+        "id": 2,
+        "prompt": "Happy family photo on a fridge, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Happy family photo on a fridge, slightly askew, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi hija amaba a mi nuevo novio, al principio.",
+        "pexels_query": "fridge magnet photo"
+      },
+      {
+        "id": 3,
+        "prompt": "Empty child's lunchbox on a kitchen counter, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty child's lunchbox on a kitchen counter, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero pronto, algo no estaba bien en casa.",
+        "pexels_query": "empty lunchbox kitchen"
+      },
+      {
+        "id": 4,
+        "prompt": "Child's small shoes neatly placed by the door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's small shoes neatly placed by the door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella dejó de comer sus almuerzos en la escuela.",
+        "pexels_query": "child shoes door"
+      },
+      {
+        "id": 5,
+        "prompt": "Measuring tape on a wall next to pencil marks, showing growth, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Measuring tape on a wall next to pencil marks, showing growth, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empezó a perder peso, parecía muy asustada.",
+        "pexels_query": "growth chart wall"
+      },
+      {
+        "id": 6,
+        "prompt": "A half-eaten dry cracker on a small plate, minimal crumbs, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-eaten dry cracker on a small plate, minimal crumbs, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi pareja siempre tenía una excusa convincente.",
+        "pexels_query": "dry cracker plate"
+      },
+      {
+        "id": 7,
+        "prompt": "A child's drawing of a sad face, on a table with crayons, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A child's drawing of a sad face, on a table with crayons, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero lo sentiste antes, un frío incómodo.",
+        "pexels_query": "sad child drawing"
+      },
+      {
+        "id": 8,
+        "prompt": "Mother's phone screen showing a text message, unread, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Mother's phone screen showing a text message, unread, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella me ignoraba cuando hablaba de la niña.",
+        "pexels_query": "unread text message"
+      },
+      {
+        "id": 9,
+        "prompt": "A half-closed door, with a sliver of light coming through, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-closed door, with a sliver of light coming through, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie más notaba su comportamiento extraño, ¿o sí?",
+        "pexels_query": "half closed door"
+      },
+      {
+        "id": 10,
+        "prompt": "A child's backpack on a floor next to a worn teddy bear, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A child's backpack on a floor next to a worn teddy bear, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Decidí que no podía ignorarlo por más tiempo.",
+        "pexels_query": "child backpack teddy"
+      },
+      {
+        "id": 11,
+        "prompt": "A small, plain diary or notebook hidden under a pillow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, plain diary or notebook hidden under a pillow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empecé a buscar pistas en la habitación de mi hija.",
+        "pexels_query": "diary under pillow"
+      },
+      {
+        "id": 12,
+        "prompt": "A single toy car left on the floor, in a quiet, slightly messy room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single toy car left on the floor, in a quiet, slightly messy room, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Revisé sus juguetes, sus libros, sus cajones pequeños.",
+        "pexels_query": "toy car room"
+      },
+      {
+        "id": 13,
+        "prompt": "A small handwritten note, partially folded, peeking from under a mattress, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small handwritten note, partially folded, peeking from under a mattress, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Fue entonces cuando encontré algo debajo del colchón.",
+        "pexels_query": "hidden note mattress"
+      },
+      {
+        "id": 14,
+        "prompt": "Close-up of a child's shaky handwriting on a crumpled piece of paper, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a child's shaky handwriting on a crumpled piece of paper, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una nota pequeña, con letra temblorosa de niña.",
+        "pexels_query": "child shaky handwriting"
+      },
+      {
+        "id": 15,
+        "prompt": "A single tear drop on a written word on paper, blurring the ink slightly, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single tear drop on a written word on paper, blurring the ink slightly, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Decía: “Ella no me deja comer, solo galletas secas”.",
+        "pexels_query": "tear drop paper"
+      },
+      {
+        "id": 16,
+        "prompt": "A child's drawing of a figure with an X over its mouth, next to another drawing of food, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A child's drawing of a figure with an X over its mouth, next to another drawing of food, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y un dibujo de mi pareja tapando su boca.",
+        "pexels_query": "drawing silenced food"
+      },
+      {
+        "id": 17,
+        "prompt": "A hand clutching a small piece of paper tightly, knuckles white, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A hand clutching a small piece of paper tightly, knuckles white, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi corazón se detuvo. Silencio absoluto en el cuarto.",
+        "pexels_query": "clutched paper hand"
+      },
+      {
+        "id": 18,
+        "prompt": "Empty kitchen table, a single chair pulled out, early morning light, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty kitchen table, a single chair pulled out, early morning light, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella no solo le prohibía hablar de comida.",
+        "pexels_query": "empty kitchen table"
+      },
+      {
+        "id": 19,
+        "prompt": "Child's untouched bowl of cereal on a breakfast table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Child's untouched bowl of cereal on a breakfast table, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Le estaba negando el alimento básico diario.",
+        "pexels_query": "untouched cereal bowl"
+      },
+      {
+        "id": 20,
+        "prompt": "A half-eaten dry cracker and a glass of water on a nightstand, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-eaten dry cracker and a glass of water on a nightstand, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mientras yo trabajaba, mi hija moría de hambre.",
+        "pexels_query": "cracker water nightstand"
+      },
+      {
+        "id": 21,
+        "prompt": "A key for a padlock resting on a wooden surface, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A key for a padlock resting on a wooden surface, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El monstruo vivía en nuestra propia casa.",
+        "pexels_query": "padlock key wood"
+      },
+      {
+        "id": 22,
+        "prompt": "A child's teddy bear sitting alone on a bed, looking towards a closed door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A child's teddy bear sitting alone on a bed, looking towards a closed door, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi pareja, que parecía tan amable con todos.",
+        "pexels_query": "teddy bear closed door"
+      },
+      {
+        "id": 23,
+        "prompt": "A blurred image of a phone screen showing a contact being blocked, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurred image of a phone screen showing a contact being blocked, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Conmigo, era un dulce. Con mi hija...",
+        "pexels_query": "phone blocked contact"
+      },
+      {
+        "id": 24,
+        "prompt": "A single empty plate on a large dining table, casting a long shadow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single empty plate on a large dining table, casting a long shadow, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Era una pesadilla silenciosa, nadie lo vio.",
+        "pexels_query": "empty dining plate"
+      },
+      {
+        "id": 25,
+        "prompt": "A blurry silhouette of a child's toy against a window, suggesting a hidden presence, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurry silhouette of a child's toy against a window, suggesting a hidden presence, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No estabas sola, mi amor, mamá te encontró.",
+        "pexels_query": "toy silhouette window"
+      },
+      {
+        "id": 26,
+        "prompt": "A small, colorful child's drawing, now pinned prominently on a wall, suggesting hope, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A small, colorful child's drawing, now pinned prominently on a wall, suggesting hope, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Tomé a mi hija y la saqué de allí.",
+        "pexels_query": "child drawing hope"
+      },
+      {
+        "id": 27,
+        "prompt": "A legal document partially visible, with a pen resting on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A legal document partially visible, with a pen resting on it, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las denuncias y el proceso fueron inmediatos.",
+        "pexels_query": "legal document pen"
+      },
+      {
+        "id": 28,
+        "prompt": "A child's hand holding an adult's hand protectively, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A child's hand holding an adult's hand protectively, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Cómo hubieras reaccionado ante tal traición familiar?",
+        "pexels_query": "child adult hands"
+      }
+    ],
+    "hooks": [
+      "Me prohibían hablar de comida",
+      "Ella solo comía galletas secas",
+      "¿Podrías perdonar una traición así?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
