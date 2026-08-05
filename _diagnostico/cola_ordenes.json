@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "57ce4912-6e2c-4aaf-8347-f3cfff8dbe34",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Empty, dimly lit room, with a single beam of light falling on a dusty wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Empty, dimly lit room, with a single beam of light falling on a dusty wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Imagina tu vida, una mentira desde el inicio.\", \"pexels_query\": \"dusty floor\"}, {\"id\": 2, \"prompt\": \"Blurred antique photograph of a landscape, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Blurred antique photograph of a landscape, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Todo lo que conocías, se derrumba de pronto.\", \"pexels_query\": \"old photograph\"}, {\"id\": 3, \"prompt\": \"Vintage desk with an old, closed diary and pen, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Vintage desk with an old, closed diary and pen, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La historia de mi padre era perfecta.\", \"pexels_query\": \"vintage diary\"}, {\"id\": 4, \"prompt\": \"Close-up of a neatly folded, unused suit jacket, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a neatly folded, unused suit jacket, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Un hombre trabajador, siempre ejemplar, intachable.\", \"pexels_query\": \"folded suit\"}, {\"id\": 5, \"prompt\": \"Cardboard delivery box on a porch, slightly open, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Cardboard delivery box on a porch, slightly open, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Hasta que un día, llegó un paquete extraño.\", \"pexels_query\": \"delivery box\"}, {\"id\": 6, \"prompt\": \"Plain white envelope with no address, slightly torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Plain white envelope with no address, slightly torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Sin remitente, solo mi nombre escrito.\", \"pexels_query\": \"empty envelope\"}, {\"id\": 7, \"prompt\": \"Stack of faded, sepia-toned photographs scattered on a wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Stack of faded, sepia-toned photographs scattered on a wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Dentro había fotos antiguas, muy viejas.\", \"pexels_query\": \"faded photos\"}, {\"id\": 8, \"prompt\": \"Pile of old, unfamiliar documents with blurred text on a dusty surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Pile of old, unfamiliar documents with blurred text on a dusty surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Y documentos que no reconocía, ajenos.\", \"pexels_query\": \"unfamiliar documents\"}, {\"id\": 9, \"prompt\": \"A single light bulb dimly illuminating a part of a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single light bulb dimly illuminating a part of a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Empecé a sentir que algo no está bien.\", \"pexels_query\": \"dim lightbulb\"}, {\"id\": 10, \"prompt\": \"Close-up of a blurry family photograph, faces obscured, showing a happy gathering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Close-up of a blurry family photograph, faces obscured, showing a happy gathering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Las imágenes mostraban a otra familia feliz.\", \"pexels_query\": \"blurred family\"}, {\"id\": 11, \"prompt\": \"Fragment of an old photo, showing only a familiar hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Fragment of an old photo, showing only a familiar hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi padre, sonriendo junto a desconocidos.\", \"pexels_query\": \"familiar hand\"}, {\"id\": 12, \"prompt\": \"Two small, child-sized shoes neatly placed by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two small, child-sized shoes neatly placed by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Una mujer y dos niños pequeños riendo.\", \"pexels_query\": \"small shoes\"}, {\"id\": 13, \"prompt\": \"Reflection in a rain-streaked window, distorted and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Reflection in a rain-streaked window, distorted and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Su rostro era idéntico, no había duda.\", \"pexels_query\": \"distorted reflection\"}, {\"id\": 14, \"prompt\": \"A world map on a wall, with a specific, highlighted region in red, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A world map on a wall, with a specific, highlighted region in red, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Pero no eran nuestra familia, ¿quiénes eran?\", \"pexels_query\": \"world map\"}, {\"id\": 15, \"prompt\": \"A single, old-fashioned clock showing 3:33 AM, with a subtle glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, old-fashioned clock showing 3:33 AM, with a subtle glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Lo sentí antes, esta verdad me perseguía.\", \"pexels_query\": \"old clock\"}, {\"id\": 16, \"prompt\": \"A heavy, closed curtain, blocking all light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A heavy, closed curtain, blocking all light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"El silencio absoluto de sus mentiras pesaba.\", \"pexels_query\": \"heavy curtain\"}, {\"id\": 17, \"prompt\": \"An open, empty wooden drawer in an old chest, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"An open, empty wooden drawer in an old chest, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nadie lo vio venir, el engaño era total.\", \"pexels_query\": \"empty drawer\"}, {\"id\": 18, \"prompt\": \"A single, discarded tissue on a worn-out bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, discarded tissue on a worn-out bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Confronté a mi madre, con miedo y dudas.\", \"pexels_query\": \"discarded tissue\"}, {\"id\": 19, \"prompt\": \"A blurred image of hands covering a face, suggesting distress, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurred image of hands covering a face, suggesting distress, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ella no dijo nada... solo lágrimas en silencio.\", \"pexels_query\": \"hands covering face\"}, {\"id\": 20, \"prompt\": \"A single, fallen photograph lying face down on a rug, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A single, fallen photograph lying face down on a rug, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Ahí supe la verdad, su mirada lo gritaba.\", \"pexels_query\": \"fallen photograph\"}, {\"id\": 21, \"prompt\": \"A half-packed suitcase in a dark room, with clothes spilling out, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A half-packed suitcase in a dark room, with clothes spilling out, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Mi padre vivió una doble vida entera.\", \"pexels_query\": \"half-packed suitcase\"}, {\"id\": 22, \"prompt\": \"Two distinct house keys on a wooden surface, separated, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"Two distinct house keys on a wooden surface, separated, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Otra familia, otro nombre, en otro país.\", \"pexels_query\": \"two house keys\"}, {\"id\": 23, \"prompt\": \"A lonely, empty chair facing a closed door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A lonely, empty chair facing a closed door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nosotros fuimos su segunda, su gran secreto.\", \"pexels_query\": \"empty chair\"}, {\"id\": 24, \"prompt\": \"A calendar page with a specific date circled in red, hinting at a recurring event, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A calendar page with a specific date circled in red, hinting at a recurring event, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"No puedes ignorarlo. Él nos abandonó.\", \"pexels_query\": \"circled calendar\"}, {\"id\": 25, \"prompt\": \"A blurry image of airport departure board, text unreadable, suggesting travel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A blurry image of airport departure board, text unreadable, suggesting travel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Volvía cada año para verlos, a escondidas.\", \"pexels_query\": \"blurred airport\"}, {\"id\": 26, \"prompt\": \"A crumpled, tear-stained letter on a table, partially unreadable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A crumpled, tear-stained letter on a table, partially unreadable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"La confesión fue brutal, devastadora para todos.\", \"pexels_query\": \"crumpled letter\"}, {\"id\": 27, \"prompt\": \"A broken photo frame lying on its side, glass shattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A broken photo frame lying on its side, glass shattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"Nuestra vida nunca más sería igual.\", \"pexels_query\": \"broken frame\"}, {\"id\": 28, \"prompt\": \"A dark, reflective surface showing a fragmented, indistinct view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"prompt_visual\": \"A dark, reflective surface showing a fragmented, indistinct view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain\", \"texto_locucion\": \"¿Tú te lo hubieras imaginado alguna vez?\", \"pexels_query\": \"fragmented reflection\"}]",
+    "formato": "9:16",
+    "marca": "FiltradoMX",
+    "texto_locucion": "Imagina tu vida, una mentira desde el inicio. Todo lo que conocías, se derrumba de pronto. La historia de mi padre era perfecta. Un hombre trabajador, siempre ejemplar, intachable. Hasta que un día, llegó un paquete extraño. Sin remitente, solo mi nombre escrito. Dentro había fotos antiguas, muy viejas. Y documentos que no reconocía, ajenos. Empecé a sentir que algo no está bien. Las imágenes mostraban a otra familia feliz. Mi padre, sonriendo junto a desconocidos. Una mujer y dos niños pequeños riendo. Su rostro era idéntico, no había duda. Pero no eran nuestra familia, ¿quiénes eran? Lo sentí antes, esta verdad me perseguía. El silencio absoluto de sus mentiras pesaba. Nadie lo vio venir, el engaño era total. Confronté a mi madre, con miedo y dudas. Ella no dijo nada... solo lágrimas en silencio. Ahí supe la verdad, su mirada lo gritaba. Mi padre vivió una doble vida entera. Otra familia, otro nombre, en otro país. Nosotros fuimos su segunda, su gran secreto. No puedes ignorarlo. Él nos abandonó. Volvía cada año para verlos, a escondidas. La confesión fue brutal, devastadora para todos. Nuestra vida nunca más sería igual. ¿Tú te lo hubieras imaginado alguna vez?",
+    "titulo_sugerido": "Mi vida entera fue una mentira: la doble vida de mi padre",
+    "escenas_texto": [
+      "Imagina tu vida, una mentira desde el inicio.",
+      "Todo lo que conocías, se derrumba de pronto.",
+      "La historia de mi padre era perfecta.",
+      "Un hombre trabajador, siempre ejemplar, intachable.",
+      "Hasta que un día, llegó un paquete extraño.",
+      "Sin remitente, solo mi nombre escrito.",
+      "Dentro había fotos antiguas, muy viejas.",
+      "Y documentos que no reconocía, ajenos.",
+      "Empecé a sentir que algo no está bien.",
+      "Las imágenes mostraban a otra familia feliz.",
+      "Mi padre, sonriendo junto a desconocidos.",
+      "Una mujer y dos niños pequeños riendo.",
+      "Su rostro era idéntico, no había duda.",
+      "Pero no eran nuestra familia, ¿quiénes eran?",
+      "Lo sentí antes, esta verdad me perseguía.",
+      "El silencio absoluto de sus mentiras pesaba.",
+      "Nadie lo vio venir, el engaño era total.",
+      "Confronté a mi madre, con miedo y dudas.",
+      "Ella no dijo nada... solo lágrimas en silencio.",
+      "Ahí supe la verdad, su mirada lo gritaba.",
+      "Mi padre vivió una doble vida entera.",
+      "Otra familia, otro nombre, en otro país.",
+      "Nosotros fuimos su segunda, su gran secreto.",
+      "No puedes ignorarlo. Él nos abandonó.",
+      "Volvía cada año para verlos, a escondidas.",
+      "La confesión fue brutal, devastadora para todos.",
+      "Nuestra vida nunca más sería igual.",
+      "¿Tú te lo hubieras imaginado alguna vez?"
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Empty, dimly lit room, with a single beam of light falling on a dusty wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Empty, dimly lit room, with a single beam of light falling on a dusty wooden floor, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Imagina tu vida, una mentira desde el inicio.",
+        "pexels_query": "dusty floor"
+      },
+      {
+        "id": 2,
+        "prompt": "Blurred antique photograph of a landscape, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Blurred antique photograph of a landscape, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Todo lo que conocías, se derrumba de pronto.",
+        "pexels_query": "old photograph"
+      },
+      {
+        "id": 3,
+        "prompt": "Vintage desk with an old, closed diary and pen, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Vintage desk with an old, closed diary and pen, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La historia de mi padre era perfecta.",
+        "pexels_query": "vintage diary"
+      },
+      {
+        "id": 4,
+        "prompt": "Close-up of a neatly folded, unused suit jacket, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a neatly folded, unused suit jacket, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Un hombre trabajador, siempre ejemplar, intachable.",
+        "pexels_query": "folded suit"
+      },
+      {
+        "id": 5,
+        "prompt": "Cardboard delivery box on a porch, slightly open, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Cardboard delivery box on a porch, slightly open, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Hasta que un día, llegó un paquete extraño.",
+        "pexels_query": "delivery box"
+      },
+      {
+        "id": 6,
+        "prompt": "Plain white envelope with no address, slightly torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Plain white envelope with no address, slightly torn, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Sin remitente, solo mi nombre escrito.",
+        "pexels_query": "empty envelope"
+      },
+      {
+        "id": 7,
+        "prompt": "Stack of faded, sepia-toned photographs scattered on a wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Stack of faded, sepia-toned photographs scattered on a wooden table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Dentro había fotos antiguas, muy viejas.",
+        "pexels_query": "faded photos"
+      },
+      {
+        "id": 8,
+        "prompt": "Pile of old, unfamiliar documents with blurred text on a dusty surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Pile of old, unfamiliar documents with blurred text on a dusty surface, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Y documentos que no reconocía, ajenos.",
+        "pexels_query": "unfamiliar documents"
+      },
+      {
+        "id": 9,
+        "prompt": "A single light bulb dimly illuminating a part of a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single light bulb dimly illuminating a part of a dark room, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Empecé a sentir que algo no está bien.",
+        "pexels_query": "dim lightbulb"
+      },
+      {
+        "id": 10,
+        "prompt": "Close-up of a blurry family photograph, faces obscured, showing a happy gathering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Close-up of a blurry family photograph, faces obscured, showing a happy gathering, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Las imágenes mostraban a otra familia feliz.",
+        "pexels_query": "blurred family"
+      },
+      {
+        "id": 11,
+        "prompt": "Fragment of an old photo, showing only a familiar hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Fragment of an old photo, showing only a familiar hand, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi padre, sonriendo junto a desconocidos.",
+        "pexels_query": "familiar hand"
+      },
+      {
+        "id": 12,
+        "prompt": "Two small, child-sized shoes neatly placed by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two small, child-sized shoes neatly placed by a door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Una mujer y dos niños pequeños riendo.",
+        "pexels_query": "small shoes"
+      },
+      {
+        "id": 13,
+        "prompt": "Reflection in a rain-streaked window, distorted and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Reflection in a rain-streaked window, distorted and indistinct, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Su rostro era idéntico, no había duda.",
+        "pexels_query": "distorted reflection"
+      },
+      {
+        "id": 14,
+        "prompt": "A world map on a wall, with a specific, highlighted region in red, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A world map on a wall, with a specific, highlighted region in red, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Pero no eran nuestra familia, ¿quiénes eran?",
+        "pexels_query": "world map"
+      },
+      {
+        "id": 15,
+        "prompt": "A single, old-fashioned clock showing 3:33 AM, with a subtle glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, old-fashioned clock showing 3:33 AM, with a subtle glow, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Lo sentí antes, esta verdad me perseguía.",
+        "pexels_query": "old clock"
+      },
+      {
+        "id": 16,
+        "prompt": "A heavy, closed curtain, blocking all light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A heavy, closed curtain, blocking all light from a window, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "El silencio absoluto de sus mentiras pesaba.",
+        "pexels_query": "heavy curtain"
+      },
+      {
+        "id": 17,
+        "prompt": "An open, empty wooden drawer in an old chest, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "An open, empty wooden drawer in an old chest, revealing nothing inside, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nadie lo vio venir, el engaño era total.",
+        "pexels_query": "empty drawer"
+      },
+      {
+        "id": 18,
+        "prompt": "A single, discarded tissue on a worn-out bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, discarded tissue on a worn-out bedside table, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Confronté a mi madre, con miedo y dudas.",
+        "pexels_query": "discarded tissue"
+      },
+      {
+        "id": 19,
+        "prompt": "A blurred image of hands covering a face, suggesting distress, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurred image of hands covering a face, suggesting distress, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ella no dijo nada... solo lágrimas en silencio.",
+        "pexels_query": "hands covering face"
+      },
+      {
+        "id": 20,
+        "prompt": "A single, fallen photograph lying face down on a rug, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A single, fallen photograph lying face down on a rug, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Ahí supe la verdad, su mirada lo gritaba.",
+        "pexels_query": "fallen photograph"
+      },
+      {
+        "id": 21,
+        "prompt": "A half-packed suitcase in a dark room, with clothes spilling out, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A half-packed suitcase in a dark room, with clothes spilling out, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Mi padre vivió una doble vida entera.",
+        "pexels_query": "half-packed suitcase"
+      },
+      {
+        "id": 22,
+        "prompt": "Two distinct house keys on a wooden surface, separated, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "Two distinct house keys on a wooden surface, separated, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Otra familia, otro nombre, en otro país.",
+        "pexels_query": "two house keys"
+      },
+      {
+        "id": 23,
+        "prompt": "A lonely, empty chair facing a closed door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A lonely, empty chair facing a closed door, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nosotros fuimos su segunda, su gran secreto.",
+        "pexels_query": "empty chair"
+      },
+      {
+        "id": 24,
+        "prompt": "A calendar page with a specific date circled in red, hinting at a recurring event, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A calendar page with a specific date circled in red, hinting at a recurring event, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "No puedes ignorarlo. Él nos abandonó.",
+        "pexels_query": "circled calendar"
+      },
+      {
+        "id": 25,
+        "prompt": "A blurry image of airport departure board, text unreadable, suggesting travel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A blurry image of airport departure board, text unreadable, suggesting travel, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Volvía cada año para verlos, a escondidas.",
+        "pexels_query": "blurred airport"
+      },
+      {
+        "id": 26,
+        "prompt": "A crumpled, tear-stained letter on a table, partially unreadable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A crumpled, tear-stained letter on a table, partially unreadable, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "La confesión fue brutal, devastadora para todos.",
+        "pexels_query": "crumpled letter"
+      },
+      {
+        "id": 27,
+        "prompt": "A broken photo frame lying on its side, glass shattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A broken photo frame lying on its side, glass shattered, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "Nuestra vida nunca más sería igual.",
+        "pexels_query": "broken frame"
+      },
+      {
+        "id": 28,
+        "prompt": "A dark, reflective surface showing a fragmented, indistinct view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "prompt_visual": "A dark, reflective surface showing a fragmented, indistinct view, RAW photo, candid photography, warm natural lighting, shallow depth of field, everyday objects, emotional atmosphere, no people, no faces, photorealistic, film grain",
+        "texto_locucion": "¿Tú te lo hubieras imaginado alguna vez?",
+        "pexels_query": "fragmented reflection"
+      }
+    ],
+    "hooks": [
+      "Vida entera, gran mentira.",
+      "Doble vida secreta.",
+      "¿Tú lo hubieras imaginado?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
