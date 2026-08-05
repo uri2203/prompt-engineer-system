@@ -1,1 +1,261 @@
-[]
+[
+  {
+    "id": "9f10ff19-8560-4b4c-bc63-d4ed5c905690",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Shadowy figure, dimly lit streetlamp, fog, desolate crossroad\", \"prompt_visual\": \"Shadowy figure, dimly lit streetlamp, fog, desolate crossroad\", \"texto_locucion\": \"Sientes que tus decisiones ya no son tuyas.\", \"pexels_query\": \"shadowy figure\"}, {\"id\": 2, \"prompt\": \"Distorted shadow of a hand, old telephone receiver, dark room\", \"prompt_visual\": \"Distorted shadow of a hand, old telephone receiver, dark room\", \"texto_locucion\": \"Como si una fuerza externa las dictara.\", \"pexels_query\": \"distorted shadow\"}, {\"id\": 3, \"prompt\": \"Empty coffee cup, blurred office desk, dim light, late night\", \"prompt_visual\": \"Empty coffee cup, blurred office desk, dim light, late night\", \"texto_locucion\": \"Pensaste que era estrés, cansancio, rutina.\", \"pexels_query\": \"empty coffee cup\"}, {\"id\": 4, \"prompt\": \"Distant silhouette, outside blurred window, rainy night, lonely\", \"prompt_visual\": \"Distant silhouette, outside blurred window, rainy night, lonely\", \"texto_locucion\": \"Pero esa persona regresó sin que tú quisieras.\", \"pexels_query\": \"distant silhouette\"}, {\"id\": 5, \"prompt\": \"Distorted mirror reflection, turning away figure, dark bathroom\", \"prompt_visual\": \"Distorted mirror reflection, turning away figure, dark bathroom\", \"texto_locucion\": \"Tú recuerdas haber dicho que no.\", \"pexels_query\": \"distorted reflection\"}, {\"id\": 6, \"prompt\": \"Dark empty hallway, closed door, sliver of light underneath\", \"prompt_visual\": \"Dark empty hallway, closed door, sliver of light underneath\", \"texto_locucion\": \"Un 'no' firme, absoluto, sin dudar.\", \"pexels_query\": \"dark empty hallway\"}, {\"id\": 7, \"prompt\": \"Old rotary phone, receiver off hook, heavy shadow, antique\", \"prompt_visual\": \"Old rotary phone, receiver off hook, heavy shadow, antique\", \"texto_locucion\": \"Entonces, ¿por qué aceptaste esa llamada?\", \"pexels_query\": \"rotary phone\"}, {\"id\": 8, \"prompt\": \"Shadowy hand, antique phone receiver, dark room, eerie\", \"prompt_visual\": \"Shadowy hand, antique phone receiver, dark room, eerie\", \"texto_locucion\": \"La mano tomó el teléfono sin tu permiso.\", \"pexels_query\": \"shadowy hand phone\"}, {\"id\": 9, \"prompt\": \"Dimly lit room, open laptop screen, vague message, empty desk\", \"prompt_visual\": \"Dimly lit room, open laptop screen, vague message, empty desk\", \"texto_locucion\": \"Tu voz dijo 'sí', sin que tú lo quisieras.\", \"pexels_query\": \"open laptop screen\"}, {\"id\": 10, \"prompt\": \"Single wooden chair, sparse room, tilted, deep shadow, unsettling\", \"prompt_visual\": \"Single wooden chair, sparse room, tilted, deep shadow, unsettling\", \"texto_locucion\": \"Algo no está bien, lo sentiste antes.\", \"pexels_query\": \"single wooden chair\"}, {\"id\": 11, \"prompt\": \"Close-up, arm with goosebumps, deep shadow, cold skin\", \"prompt_visual\": \"Close-up, arm with goosebumps, deep shadow, cold skin\", \"texto_locucion\": \"Un escalofrío que no era tuyo.\", \"pexels_query\": \"arm goosebumps\"}, {\"id\": 12, \"prompt\": \"Shadowy hand, turning old key in lock, rusty mechanism\", \"prompt_visual\": \"Shadowy hand, turning old key in lock, rusty mechanism\", \"texto_locucion\": \"Una decisión que no te pertenecía.\", \"pexels_query\": \"turning key\"}, {\"id\": 13, \"prompt\": \"Blurry feet, walking on dark pavement, unknown path, uncertain\", \"prompt_visual\": \"Blurry feet, walking on dark pavement, unknown path, uncertain\", \"texto_locucion\": \"Tu cuerpo, tus acciones, te traicionaban.\", \"pexels_query\": \"blurry feet walking\"}, {\"id\": 14, \"prompt\": \"Distorted mannequin hand, reaching from darkness, eerie, unsettling\", \"prompt_visual\": \"Distorted mannequin hand, reaching from darkness, eerie, unsettling\", \"texto_locucion\": \"Como un autómata, sin voluntad propia.\", \"pexels_query\": \"mannequin hand\"}, {\"id\": 15, \"prompt\": \"Dark silhouettes, whispering figures, blurred background, clandestine\", \"prompt_visual\": \"Dark silhouettes, whispering figures, blurred background, clandestine\", \"texto_locucion\": \"Tus amigos lo notaron, te preguntaron.\", \"pexels_query\": \"whispering silhouettes\"}, {\"id\": 16, \"prompt\": \"Close-up, shadowed mouth, slightly parted lips, unspoken words\", \"prompt_visual\": \"Close-up, shadowed mouth, slightly parted lips, unspoken words\", \"texto_locucion\": \"Tú no supiste qué responderles, solo callaste.\", \"pexels_query\": \"shadowed mouth\"}, {\"id\": 17, \"prompt\": \"Blank paper, old wooden desk, single pen, untouched, silent\", \"prompt_visual\": \"Blank paper, old wooden desk, single pen, untouched, silent\", \"texto_locucion\": \"Las palabras se negaban a salir de ti.\", \"pexels_query\": \"blank paper pen\"}, {\"id\": 18, \"prompt\": \"Empty soundproof room, textured walls, no furniture, oppressive silence\", \"prompt_visual\": \"Empty soundproof room, textured walls, no furniture, oppressive silence\", \"texto_locucion\": \"Un silencio absoluto te invadía por dentro.\", \"pexels_query\": \"soundproof room\"}, {\"id\": 19, \"prompt\": \"Intertwined shadowy forms, abstract neural pathways, dark mindscape\", \"prompt_visual\": \"Intertwined shadowy forms, abstract neural pathways, dark mindscape\", \"texto_locucion\": \"Ya no estabas solo en tu propia mente.\", \"pexels_query\": \"shadowy neural forms\"}, {\"id\": 20, \"prompt\": \"Distorted reflection, shadowy face in window, looking back\", \"prompt_visual\": \"Distorted reflection, shadowy face in window, looking back\", \"texto_locucion\": \"Alguien más pensaba por ti, vivía por ti.\", \"pexels_query\": \"distorted reflection window\"}, {\"id\": 21, \"prompt\": \"Thin, translucent threads, extending from darkness, subtle control\", \"prompt_visual\": \"Thin, translucent threads, extending from darkness, subtle control\", \"texto_locucion\": \"Pequeños hilos invisibles te controlaban ahora.\", \"pexels_query\": \"translucent threads\"}, {\"id\": 22, \"prompt\": \"Blurred human outline, disturbed expression, deep thought, despair\", \"prompt_visual\": \"Blurred human outline, disturbed expression, deep thought, despair\", \"texto_locucion\": \"Tú no puedes ignorarlo, es tu realidad.\", \"pexels_query\": \"disturbed outline\"}, {\"id\": 23, \"prompt\": \"Closed door, no handle, solid wall texture, feeling trapped\", \"prompt_visual\": \"Closed door, no handle, solid wall texture, feeling trapped\", \"texto_locucion\": \"La certeza de que no hay escapatoria.\", \"pexels_query\": \"door no handle\"}, {\"id\": 24, \"prompt\": \"Empty theater stage, single spotlight, dusty air, silent play\", \"prompt_visual\": \"Empty theater stage, single spotlight, dusty air, silent play\", \"texto_locucion\": \"Tu vida es una obra de teatro ajena.\", \"pexels_query\": \"empty stage spotlight\"}, {\"id\": 25, \"prompt\": \"Shadowy hand, puppet strings, empty dark space, controlled\", \"prompt_visual\": \"Shadowy hand, puppet strings, empty dark space, controlled\", \"texto_locucion\": \"Y tú eres solo un títere en ella.\", \"pexels_query\": \"puppet strings shadow\"}, {\"id\": 26, \"prompt\": \"Blurred string, extending upwards, deep dark void, unseen force\", \"prompt_visual\": \"Blurred string, extending upwards, deep dark void, unseen force\", \"texto_locucion\": \"Alguien moviendo los hilos, siempre invisible.\", \"pexels_query\": \"blurred string darkness\"}, {\"id\": 27, \"prompt\": \"Subtle air distortion, behind empty chair, dim light, presence\", \"prompt_visual\": \"Subtle air distortion, behind empty chair, dim light, presence\", \"texto_locucion\": \"Pero lo sientes, respirando detrás de ti.\", \"pexels_query\": \"air distortion chair\"}, {\"id\": 28, \"prompt\": \"Empty shoes, opposing directions, dark corridor, lost purpose\", \"prompt_visual\": \"Empty shoes, opposing directions, dark corridor, lost purpose\", \"texto_locucion\": \"Cada segundo. Cada decisión. Cada paso.\", \"pexels_query\": \"empty shoes corridor\"}, {\"id\": 29, \"prompt\": \"Single open unlabeled box, dark floor, mystery, unknown contents\", \"prompt_visual\": \"Single open unlabeled box, dark floor, mystery, unknown contents\", \"texto_locucion\": \"Quién te maneja, jamás lo sabrás con certeza.\", \"pexels_query\": \"open unlabeled box\"}, {\"id\": 30, \"prompt\": \"Shadowy hand, passing through smoke-like form, ephemeral control\", \"prompt_visual\": \"Shadowy hand, passing through smoke-like form, ephemeral control\", \"texto_locucion\": \"Pero lo que es tuyo, ya no te pertenece.\", \"pexels_query\": \"hand passing smoke\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Sientes que tus decisiones ya no son tuyas. Como si una fuerza externa las dictara. Pensaste que era estrés, cansancio, rutina. Pero esa persona regresó sin que tú quisieras. Tú recuerdas haber dicho que no. Un 'no' firme, absoluto, sin dudar. Entonces, ¿por qué aceptaste esa llamada? La mano tomó el teléfono sin tu permiso. Tu voz dijo 'sí', sin que tú lo quisieras. Algo no está bien, lo sentiste antes. Un escalofrío que no era tuyo. Una decisión que no te pertenecía. Tu cuerpo, tus acciones, te traicionaban. Como un autómata, sin voluntad propia. Tus amigos lo notaron, te preguntaron. Tú no supiste qué responderles, solo callaste. Las palabras se negaban a salir de ti. Un silencio absoluto te invadía por dentro. Ya no estabas solo en tu propia mente. Alguien más pensaba por ti, vivía por ti. Pequeños hilos invisibles te controlaban ahora. Tú no puedes ignorarlo, es tu realidad. La certeza de que no hay escapatoria. Tu vida es una obra de teatro ajena. Y tú eres solo un títere en ella. Alguien moviendo los hilos, siempre invisible. Pero lo sientes, respirando detrás de ti. Cada segundo. Cada decisión. Cada paso. Quién te maneja, jamás lo sabrás con certeza. Pero lo que es tuyo, ya no te pertenece.",
+    "titulo_sugerido": "¿Tus decisiones son realmente tuyas?",
+    "escenas_texto": [
+      "Sientes que tus decisiones ya no son tuyas.",
+      "Como si una fuerza externa las dictara.",
+      "Pensaste que era estrés, cansancio, rutina.",
+      "Pero esa persona regresó sin que tú quisieras.",
+      "Tú recuerdas haber dicho que no.",
+      "Un 'no' firme, absoluto, sin dudar.",
+      "Entonces, ¿por qué aceptaste esa llamada?",
+      "La mano tomó el teléfono sin tu permiso.",
+      "Tu voz dijo 'sí', sin que tú lo quisieras.",
+      "Algo no está bien, lo sentiste antes.",
+      "Un escalofrío que no era tuyo.",
+      "Una decisión que no te pertenecía.",
+      "Tu cuerpo, tus acciones, te traicionaban.",
+      "Como un autómata, sin voluntad propia.",
+      "Tus amigos lo notaron, te preguntaron.",
+      "Tú no supiste qué responderles, solo callaste.",
+      "Las palabras se negaban a salir de ti.",
+      "Un silencio absoluto te invadía por dentro.",
+      "Ya no estabas solo en tu propia mente.",
+      "Alguien más pensaba por ti, vivía por ti.",
+      "Pequeños hilos invisibles te controlaban ahora.",
+      "Tú no puedes ignorarlo, es tu realidad.",
+      "La certeza de que no hay escapatoria.",
+      "Tu vida es una obra de teatro ajena.",
+      "Y tú eres solo un títere en ella.",
+      "Alguien moviendo los hilos, siempre invisible.",
+      "Pero lo sientes, respirando detrás de ti.",
+      "Cada segundo. Cada decisión. Cada paso.",
+      "Quién te maneja, jamás lo sabrás con certeza.",
+      "Pero lo que es tuyo, ya no te pertenece."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Shadowy figure, dimly lit streetlamp, fog, desolate crossroad",
+        "prompt_visual": "Shadowy figure, dimly lit streetlamp, fog, desolate crossroad",
+        "texto_locucion": "Sientes que tus decisiones ya no son tuyas.",
+        "pexels_query": "shadowy figure"
+      },
+      {
+        "id": 2,
+        "prompt": "Distorted shadow of a hand, old telephone receiver, dark room",
+        "prompt_visual": "Distorted shadow of a hand, old telephone receiver, dark room",
+        "texto_locucion": "Como si una fuerza externa las dictara.",
+        "pexels_query": "distorted shadow"
+      },
+      {
+        "id": 3,
+        "prompt": "Empty coffee cup, blurred office desk, dim light, late night",
+        "prompt_visual": "Empty coffee cup, blurred office desk, dim light, late night",
+        "texto_locucion": "Pensaste que era estrés, cansancio, rutina.",
+        "pexels_query": "empty coffee cup"
+      },
+      {
+        "id": 4,
+        "prompt": "Distant silhouette, outside blurred window, rainy night, lonely",
+        "prompt_visual": "Distant silhouette, outside blurred window, rainy night, lonely",
+        "texto_locucion": "Pero esa persona regresó sin que tú quisieras.",
+        "pexels_query": "distant silhouette"
+      },
+      {
+        "id": 5,
+        "prompt": "Distorted mirror reflection, turning away figure, dark bathroom",
+        "prompt_visual": "Distorted mirror reflection, turning away figure, dark bathroom",
+        "texto_locucion": "Tú recuerdas haber dicho que no.",
+        "pexels_query": "distorted reflection"
+      },
+      {
+        "id": 6,
+        "prompt": "Dark empty hallway, closed door, sliver of light underneath",
+        "prompt_visual": "Dark empty hallway, closed door, sliver of light underneath",
+        "texto_locucion": "Un 'no' firme, absoluto, sin dudar.",
+        "pexels_query": "dark empty hallway"
+      },
+      {
+        "id": 7,
+        "prompt": "Old rotary phone, receiver off hook, heavy shadow, antique",
+        "prompt_visual": "Old rotary phone, receiver off hook, heavy shadow, antique",
+        "texto_locucion": "Entonces, ¿por qué aceptaste esa llamada?",
+        "pexels_query": "rotary phone"
+      },
+      {
+        "id": 8,
+        "prompt": "Shadowy hand, antique phone receiver, dark room, eerie",
+        "prompt_visual": "Shadowy hand, antique phone receiver, dark room, eerie",
+        "texto_locucion": "La mano tomó el teléfono sin tu permiso.",
+        "pexels_query": "shadowy hand phone"
+      },
+      {
+        "id": 9,
+        "prompt": "Dimly lit room, open laptop screen, vague message, empty desk",
+        "prompt_visual": "Dimly lit room, open laptop screen, vague message, empty desk",
+        "texto_locucion": "Tu voz dijo 'sí', sin que tú lo quisieras.",
+        "pexels_query": "open laptop screen"
+      },
+      {
+        "id": 10,
+        "prompt": "Single wooden chair, sparse room, tilted, deep shadow, unsettling",
+        "prompt_visual": "Single wooden chair, sparse room, tilted, deep shadow, unsettling",
+        "texto_locucion": "Algo no está bien, lo sentiste antes.",
+        "pexels_query": "single wooden chair"
+      },
+      {
+        "id": 11,
+        "prompt": "Close-up, arm with goosebumps, deep shadow, cold skin",
+        "prompt_visual": "Close-up, arm with goosebumps, deep shadow, cold skin",
+        "texto_locucion": "Un escalofrío que no era tuyo.",
+        "pexels_query": "arm goosebumps"
+      },
+      {
+        "id": 12,
+        "prompt": "Shadowy hand, turning old key in lock, rusty mechanism",
+        "prompt_visual": "Shadowy hand, turning old key in lock, rusty mechanism",
+        "texto_locucion": "Una decisión que no te pertenecía.",
+        "pexels_query": "turning key"
+      },
+      {
+        "id": 13,
+        "prompt": "Blurry feet, walking on dark pavement, unknown path, uncertain",
+        "prompt_visual": "Blurry feet, walking on dark pavement, unknown path, uncertain",
+        "texto_locucion": "Tu cuerpo, tus acciones, te traicionaban.",
+        "pexels_query": "blurry feet walking"
+      },
+      {
+        "id": 14,
+        "prompt": "Distorted mannequin hand, reaching from darkness, eerie, unsettling",
+        "prompt_visual": "Distorted mannequin hand, reaching from darkness, eerie, unsettling",
+        "texto_locucion": "Como un autómata, sin voluntad propia.",
+        "pexels_query": "mannequin hand"
+      },
+      {
+        "id": 15,
+        "prompt": "Dark silhouettes, whispering figures, blurred background, clandestine",
+        "prompt_visual": "Dark silhouettes, whispering figures, blurred background, clandestine",
+        "texto_locucion": "Tus amigos lo notaron, te preguntaron.",
+        "pexels_query": "whispering silhouettes"
+      },
+      {
+        "id": 16,
+        "prompt": "Close-up, shadowed mouth, slightly parted lips, unspoken words",
+        "prompt_visual": "Close-up, shadowed mouth, slightly parted lips, unspoken words",
+        "texto_locucion": "Tú no supiste qué responderles, solo callaste.",
+        "pexels_query": "shadowed mouth"
+      },
+      {
+        "id": 17,
+        "prompt": "Blank paper, old wooden desk, single pen, untouched, silent",
+        "prompt_visual": "Blank paper, old wooden desk, single pen, untouched, silent",
+        "texto_locucion": "Las palabras se negaban a salir de ti.",
+        "pexels_query": "blank paper pen"
+      },
+      {
+        "id": 18,
+        "prompt": "Empty soundproof room, textured walls, no furniture, oppressive silence",
+        "prompt_visual": "Empty soundproof room, textured walls, no furniture, oppressive silence",
+        "texto_locucion": "Un silencio absoluto te invadía por dentro.",
+        "pexels_query": "soundproof room"
+      },
+      {
+        "id": 19,
+        "prompt": "Intertwined shadowy forms, abstract neural pathways, dark mindscape",
+        "prompt_visual": "Intertwined shadowy forms, abstract neural pathways, dark mindscape",
+        "texto_locucion": "Ya no estabas solo en tu propia mente.",
+        "pexels_query": "shadowy neural forms"
+      },
+      {
+        "id": 20,
+        "prompt": "Distorted reflection, shadowy face in window, looking back",
+        "prompt_visual": "Distorted reflection, shadowy face in window, looking back",
+        "texto_locucion": "Alguien más pensaba por ti, vivía por ti.",
+        "pexels_query": "distorted reflection window"
+      },
+      {
+        "id": 21,
+        "prompt": "Thin, translucent threads, extending from darkness, subtle control",
+        "prompt_visual": "Thin, translucent threads, extending from darkness, subtle control",
+        "texto_locucion": "Pequeños hilos invisibles te controlaban ahora.",
+        "pexels_query": "translucent threads"
+      },
+      {
+        "id": 22,
+        "prompt": "Blurred human outline, disturbed expression, deep thought, despair",
+        "prompt_visual": "Blurred human outline, disturbed expression, deep thought, despair",
+        "texto_locucion": "Tú no puedes ignorarlo, es tu realidad.",
+        "pexels_query": "disturbed outline"
+      },
+      {
+        "id": 23,
+        "prompt": "Closed door, no handle, solid wall texture, feeling trapped",
+        "prompt_visual": "Closed door, no handle, solid wall texture, feeling trapped",
+        "texto_locucion": "La certeza de que no hay escapatoria.",
+        "pexels_query": "door no handle"
+      },
+      {
+        "id": 24,
+        "prompt": "Empty theater stage, single spotlight, dusty air, silent play",
+        "prompt_visual": "Empty theater stage, single spotlight, dusty air, silent play",
+        "texto_locucion": "Tu vida es una obra de teatro ajena.",
+        "pexels_query": "empty stage spotlight"
+      },
+      {
+        "id": 25,
+        "prompt": "Shadowy hand, puppet strings, empty dark space, controlled",
+        "prompt_visual": "Shadowy hand, puppet strings, empty dark space, controlled",
+        "texto_locucion": "Y tú eres solo un títere en ella.",
+        "pexels_query": "puppet strings shadow"
+      },
+      {
+        "id": 26,
+        "prompt": "Blurred string, extending upwards, deep dark void, unseen force",
+        "prompt_visual": "Blurred string, extending upwards, deep dark void, unseen force",
+        "texto_locucion": "Alguien moviendo los hilos, siempre invisible.",
+        "pexels_query": "blurred string darkness"
+      },
+      {
+        "id": 27,
+        "prompt": "Subtle air distortion, behind empty chair, dim light, presence",
+        "prompt_visual": "Subtle air distortion, behind empty chair, dim light, presence",
+        "texto_locucion": "Pero lo sientes, respirando detrás de ti.",
+        "pexels_query": "air distortion chair"
+      },
+      {
+        "id": 28,
+        "prompt": "Empty shoes, opposing directions, dark corridor, lost purpose",
+        "prompt_visual": "Empty shoes, opposing directions, dark corridor, lost purpose",
+        "texto_locucion": "Cada segundo. Cada decisión. Cada paso.",
+        "pexels_query": "empty shoes corridor"
+      },
+      {
+        "id": 29,
+        "prompt": "Single open unlabeled box, dark floor, mystery, unknown contents",
+        "prompt_visual": "Single open unlabeled box, dark floor, mystery, unknown contents",
+        "texto_locucion": "Quién te maneja, jamás lo sabrás con certeza.",
+        "pexels_query": "open unlabeled box"
+      },
+      {
+        "id": 30,
+        "prompt": "Shadowy hand, passing through smoke-like form, ephemeral control",
+        "prompt_visual": "Shadowy hand, passing through smoke-like form, ephemeral control",
+        "texto_locucion": "Pero lo que es tuyo, ya no te pertenece.",
+        "pexels_query": "hand passing smoke"
+      }
+    ],
+    "hooks": [
+      "Voluntad ajena te controla.",
+      "Tus deseos, no son tuyos.",
+      "Alguien eligió por ti."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
