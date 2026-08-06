@@ -1,1 +1,237 @@
-[]
+[
+  {
+    "id": "02e91905-dfc4-4ff3-8d26-96e637d3c356",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Dark room, monitor glow, empty chair in foreground, subtle distortion on screen, static on old CRT monitor\", \"prompt_visual\": \"Dark room, monitor glow, empty chair in foreground, subtle distortion on screen, static on old CRT monitor\", \"texto_locucion\": \"Tú creas el terror para la pantalla.\", \"pexels_query\": \"dark empty room\"}, {\"id\": 2, \"prompt\": \"Close-up on a computer keyboard in near darkness, single key slightly depressed, no hands visible, mysterious reflection on keys\", \"prompt_visual\": \"Close-up on a computer keyboard in near darkness, single key slightly depressed, no hands visible, mysterious reflection on keys\", \"texto_locucion\": \"Cuentas historias de lo más oscuro.\", \"pexels_query\": \"computer keyboard dark\"}, {\"id\": 3, \"prompt\": \"Shadowy outline of a figure near a desk, indistinct, almost blending with the wall, subtle movement blur\", \"prompt_visual\": \"Shadowy outline of a figure near a desk, indistinct, almost blending with the wall, subtle movement blur\", \"texto_locucion\": \"Pero algo te observa mientras trabajas.\", \"pexels_query\": \"shadow figure indistinct\"}, {\"id\": 4, \"prompt\": \"Empty office chair slowly turning, slightly out of alignment, low light, long shadows\", \"prompt_visual\": \"Empty office chair slowly turning, slightly out of alignment, low light, long shadows\", \"texto_locucion\": \"Y no es solo tu audiencia.\", \"pexels_query\": \"empty office chair turning\"}, {\"id\": 5, \"prompt\": \"Closed laptop, a single, almost imperceptible handprint on the lid, dark, reflective surface\", \"prompt_visual\": \"Closed laptop, a single, almost imperceptible handprint on the lid, dark, reflective surface\", \"texto_locucion\": \"Cierras la laptop. Lo sientes aún presente.\", \"pexels_query\": \"laptop dark handprint\"}, {\"id\": 6, \"prompt\": \"Dark hallway, a door slightly ajar, warm light escaping, ominous shadow near the threshold\", \"prompt_visual\": \"Dark hallway, a door slightly ajar, warm light escaping, ominous shadow near the threshold\", \"texto_locucion\": \"En tu casa, algo no está bien.\", \"pexels_query\": \"dark hallway door ajar\"}, {\"id\": 7, \"prompt\": \"Dust motes illuminated by a thin beam of light in a dark room, creating a sense of invisible movement\", \"prompt_visual\": \"Dust motes illuminated by a thin beam of light in a dark room, creating a sense of invisible movement\", \"texto_locucion\": \"El aire se siente distinto de noche.\", \"pexels_query\": \"dust motes light dark\"}, {\"id\": 8, \"prompt\": \"Empty bedroom, a wardrobe door slightly open, revealing only deep shadow inside, no contents visible\", \"prompt_visual\": \"Empty bedroom, a wardrobe door slightly open, revealing only deep shadow inside, no contents visible\", \"texto_locucion\": \"Tú sabes que no estabas solo.\", \"pexels_query\": \"wardrobe door open shadow\"}, {\"id\": 9, \"prompt\": \"A single, isolated child's toy on a clean, empty floor, slightly out of place, ominous stillness\", \"prompt_visual\": \"A single, isolated child's toy on a clean, empty floor, slightly out of place, ominous stillness\", \"texto_locucion\": \"¿Alguna vez sentiste que algo se arrastraba?\", \"pexels_query\": \"isolated toy floor\"}, {\"id\": 10, \"prompt\": \"Dark kitchen counter, a single, ordinary glass with a faint ripple in the water, as if disturbed\", \"prompt_visual\": \"Dark kitchen counter, a single, ordinary glass with a faint ripple in the water, as if disturbed\", \"texto_locucion\": \"Dejas el vaso. Lo encuentras en otro sitio.\", \"pexels_query\": \"dark kitchen glass water\"}, {\"id\": 11, \"prompt\": \"Empty staircase, a faint, almost transparent human-like silhouette at the bottom, looking up\", \"prompt_visual\": \"Empty staircase, a faint, almost transparent human-like silhouette at the bottom, looking up\", \"texto_locucion\": \"Subes las escaleras. Crees ver un atisbo.\", \"pexels_query\": \"empty staircase silhouette\"}, {\"id\": 12, \"prompt\": \"Close-up of a wall with old, peeling wallpaper, a subtle face-like pattern forming in the decay (pareidolia)\", \"prompt_visual\": \"Close-up of a wall with old, peeling wallpaper, a subtle face-like pattern forming in the decay (pareidolia)\", \"texto_locucion\": \"Cada sombra, te parece mirar fijamente.\", \"pexels_query\": \"peeling wallpaper face\"}, {\"id\": 13, \"prompt\": \"Empty bed, indentation on the pillow, as if someone just left, eerie warmth in the sheets\", \"prompt_visual\": \"Empty bed, indentation on the pillow, as if someone just left, eerie warmth in the sheets\", \"texto_locucion\": \"Sientes el hueco donde nadie durmió.\", \"pexels_query\": \"empty bed indentation pillow\"}, {\"id\": 14, \"prompt\": \"Window at night, looking out into absolute darkness, faint reflection of an unidentifiable shape inside\", \"prompt_visual\": \"Window at night, looking out into absolute darkness, faint reflection of an unidentifiable shape inside\", \"texto_locucion\": \"Amanece. El alivio dura poco tiempo.\", \"pexels_query\": \"window absolute darkness reflection\"}, {\"id\": 15, \"prompt\": \"A single, old, worn book on a shelf, slightly pulled out, title illegible, ominous presence\", \"prompt_visual\": \"A single, old, worn book on a shelf, slightly pulled out, title illegible, ominous presence\", \"texto_locucion\": \"Vuelves a crear. La inspiración, no es tuya.\", \"pexels_query\": \"old book shelf pulled\"}, {\"id\": 16, \"prompt\": \"Shadow of a hand stretching across a desktop, reaching towards a mouse, but no actual hand is visible\", \"prompt_visual\": \"Shadow of a hand stretching across a desktop, reaching towards a mouse, but no actual hand is visible\", \"texto_locucion\": \"Alguien está escribiendo contigo.\", \"pexels_query\": \"shadow hand desktop\"}, {\"id\": 17, \"prompt\": \"A pair of headphones resting on a desk, a faint, almost imperceptible glow from inside the earcups\", \"prompt_visual\": \"A pair of headphones resting on a desk, a faint, almost imperceptible glow from inside the earcups\", \"texto_locucion\": \"Escuchas los sonidos que nadie más oye.\", \"pexels_query\": \"headphones desk glow\"}, {\"id\": 18, \"prompt\": \"Flickering light bulb in an otherwise dark room, casting erratic, dancing shadows, unsettling atmosphere\", \"prompt_visual\": \"Flickering light bulb in an otherwise dark room, casting erratic, dancing shadows, unsettling atmosphere\", \"texto_locucion\": \"La bombilla parpadea. Ves algo allí.\", \"pexels_query\": \"flickering light bulb\"}, {\"id\": 19, \"prompt\": \"Empty doorway, a faint, cold mist drifting through, despite no open windows, unnatural air current\", \"prompt_visual\": \"Empty doorway, a faint, cold mist drifting through, despite no open windows, unnatural air current\", \"texto_locucion\": \"Un frío inexplicable te recorre la espalda.\", \"pexels_query\": \"empty doorway cold mist\"}, {\"id\": 20, \"prompt\": \"Close-up of a wooden floorboard, a single, sharp scratch mark that wasn't there before, ominous detail\", \"prompt_visual\": \"Close-up of a wooden floorboard, a single, sharp scratch mark that wasn't there before, ominous detail\", \"texto_locucion\": \"Las marcas en el suelo no existían.\", \"pexels_query\": \"floorboard scratch mark\"}, {\"id\": 21, \"prompt\": \"Empty chair pulled slightly away from a table, as if someone just stood up, unsettling absence\", \"prompt_visual\": \"Empty chair pulled slightly away from a table, as if someone just stood up, unsettling absence\", \"texto_locucion\": \"Cada cosa fuera de lugar, te alerta.\", \"pexels_query\": \"empty chair pulled table\"}, {\"id\": 22, \"prompt\": \"Dark reflection in a window at night, distorted, not fully human, just a vague outline\", \"prompt_visual\": \"Dark reflection in a window at night, distorted, not fully human, just a vague outline\", \"texto_locucion\": \"Lo que creas, se manifiesta.\", \"pexels_query\": \"dark window distorted reflection\"}, {\"id\": 23, \"prompt\": \"Empty hallway mirror, a faint, almost imperceptible shadow crossing it in the background\", \"prompt_visual\": \"Empty hallway mirror, a faint, almost imperceptible shadow crossing it in the background\", \"texto_locucion\": \"Tu mente juega contigo, ¿o no?\", \"pexels_query\": \"empty mirror shadow crossing\"}, {\"id\": 24, \"prompt\": \"Close-up of an old, worn wooden door with deep gouges, as if something tried to get out or in\", \"prompt_visual\": \"Close-up of an old, worn wooden door with deep gouges, as if something tried to get out or in\", \"texto_locucion\": \"Lo sientes antes de verlo.\", \"pexels_query\": \"old wooden door gouges\"}, {\"id\": 25, \"prompt\": \"Bedroom wall, a subtle dark stain slowly spreading, organic but unidentifiable, unsettling growth\", \"prompt_visual\": \"Bedroom wall, a subtle dark stain slowly spreading, organic but unidentifiable, unsettling growth\", \"texto_locucion\": \"No puedes ignorarlo. Te está cercando.\", \"pexels_query\": \"dark stain wall spreading\"}, {\"id\": 26, \"prompt\": \"A single, dark fingerprint on a clean, white light switch, too large or too many digits, unnatural\", \"prompt_visual\": \"A single, dark fingerprint on a clean, white light switch, too large or too many digits, unnatural\", \"texto_locucion\": \"Cada fragmento de terror tiene consecuencias.\", \"pexels_query\": \"dark fingerprint light switch\"}, {\"id\": 27, \"prompt\": \"A dimly lit computer monitor displaying glitching, distorted text, unintelligible and unsettling code\", \"prompt_visual\": \"A dimly lit computer monitor displaying glitching, distorted text, unintelligible and unsettling code\", \"texto_locucion\": \"Tú lo invocaste. Ahora es tu turno.\", \"pexels_query\": \"glitching distorted text monitor\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Tú creas el terror para la pantalla. Cuentas historias de lo más oscuro. Pero algo te observa mientras trabajas. Y no es solo tu audiencia. Cierras la laptop. Lo sientes aún presente. En tu casa, algo no está bien. El aire se siente distinto de noche. Tú sabes que no estabas solo. ¿Alguna vez sentiste que algo se arrastraba? Dejas el vaso. Lo encuentras en otro sitio. Subes las escaleras. Crees ver un atisbo. Cada sombra, te parece mirar fijamente. Sientes el hueco donde nadie durmió. Amanece. El alivio dura poco tiempo. Vuelves a crear. La inspiración, no es tuya. Alguien está escribiendo contigo. Escuchas los sonidos que nadie más oye. La bombilla parpadea. Ves algo allí. Un frío inexplicable te recorre la espalda. Las marcas en el suelo no existían. Cada cosa fuera de lugar, te alerta. Lo que creas, se manifiesta. Tu mente juega contigo, ¿o no? Lo sientes antes de verlo. No puedes ignorarlo. Te está cercando. Cada fragmento de terror tiene consecuencias. Tú lo invocaste. Ahora es tu turno.",
+    "titulo_sugerido": "Lo que creas en la pantalla, te acecha en casa",
+    "escenas_texto": [
+      "Tú creas el terror para la pantalla.",
+      "Cuentas historias de lo más oscuro.",
+      "Pero algo te observa mientras trabajas.",
+      "Y no es solo tu audiencia.",
+      "Cierras la laptop. Lo sientes aún presente.",
+      "En tu casa, algo no está bien.",
+      "El aire se siente distinto de noche.",
+      "Tú sabes que no estabas solo.",
+      "¿Alguna vez sentiste que algo se arrastraba?",
+      "Dejas el vaso. Lo encuentras en otro sitio.",
+      "Subes las escaleras. Crees ver un atisbo.",
+      "Cada sombra, te parece mirar fijamente.",
+      "Sientes el hueco donde nadie durmió.",
+      "Amanece. El alivio dura poco tiempo.",
+      "Vuelves a crear. La inspiración, no es tuya.",
+      "Alguien está escribiendo contigo.",
+      "Escuchas los sonidos que nadie más oye.",
+      "La bombilla parpadea. Ves algo allí.",
+      "Un frío inexplicable te recorre la espalda.",
+      "Las marcas en el suelo no existían.",
+      "Cada cosa fuera de lugar, te alerta.",
+      "Lo que creas, se manifiesta.",
+      "Tu mente juega contigo, ¿o no?",
+      "Lo sientes antes de verlo.",
+      "No puedes ignorarlo. Te está cercando.",
+      "Cada fragmento de terror tiene consecuencias.",
+      "Tú lo invocaste. Ahora es tu turno."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Dark room, monitor glow, empty chair in foreground, subtle distortion on screen, static on old CRT monitor",
+        "prompt_visual": "Dark room, monitor glow, empty chair in foreground, subtle distortion on screen, static on old CRT monitor",
+        "texto_locucion": "Tú creas el terror para la pantalla.",
+        "pexels_query": "dark empty room"
+      },
+      {
+        "id": 2,
+        "prompt": "Close-up on a computer keyboard in near darkness, single key slightly depressed, no hands visible, mysterious reflection on keys",
+        "prompt_visual": "Close-up on a computer keyboard in near darkness, single key slightly depressed, no hands visible, mysterious reflection on keys",
+        "texto_locucion": "Cuentas historias de lo más oscuro.",
+        "pexels_query": "computer keyboard dark"
+      },
+      {
+        "id": 3,
+        "prompt": "Shadowy outline of a figure near a desk, indistinct, almost blending with the wall, subtle movement blur",
+        "prompt_visual": "Shadowy outline of a figure near a desk, indistinct, almost blending with the wall, subtle movement blur",
+        "texto_locucion": "Pero algo te observa mientras trabajas.",
+        "pexels_query": "shadow figure indistinct"
+      },
+      {
+        "id": 4,
+        "prompt": "Empty office chair slowly turning, slightly out of alignment, low light, long shadows",
+        "prompt_visual": "Empty office chair slowly turning, slightly out of alignment, low light, long shadows",
+        "texto_locucion": "Y no es solo tu audiencia.",
+        "pexels_query": "empty office chair turning"
+      },
+      {
+        "id": 5,
+        "prompt": "Closed laptop, a single, almost imperceptible handprint on the lid, dark, reflective surface",
+        "prompt_visual": "Closed laptop, a single, almost imperceptible handprint on the lid, dark, reflective surface",
+        "texto_locucion": "Cierras la laptop. Lo sientes aún presente.",
+        "pexels_query": "laptop dark handprint"
+      },
+      {
+        "id": 6,
+        "prompt": "Dark hallway, a door slightly ajar, warm light escaping, ominous shadow near the threshold",
+        "prompt_visual": "Dark hallway, a door slightly ajar, warm light escaping, ominous shadow near the threshold",
+        "texto_locucion": "En tu casa, algo no está bien.",
+        "pexels_query": "dark hallway door ajar"
+      },
+      {
+        "id": 7,
+        "prompt": "Dust motes illuminated by a thin beam of light in a dark room, creating a sense of invisible movement",
+        "prompt_visual": "Dust motes illuminated by a thin beam of light in a dark room, creating a sense of invisible movement",
+        "texto_locucion": "El aire se siente distinto de noche.",
+        "pexels_query": "dust motes light dark"
+      },
+      {
+        "id": 8,
+        "prompt": "Empty bedroom, a wardrobe door slightly open, revealing only deep shadow inside, no contents visible",
+        "prompt_visual": "Empty bedroom, a wardrobe door slightly open, revealing only deep shadow inside, no contents visible",
+        "texto_locucion": "Tú sabes que no estabas solo.",
+        "pexels_query": "wardrobe door open shadow"
+      },
+      {
+        "id": 9,
+        "prompt": "A single, isolated child's toy on a clean, empty floor, slightly out of place, ominous stillness",
+        "prompt_visual": "A single, isolated child's toy on a clean, empty floor, slightly out of place, ominous stillness",
+        "texto_locucion": "¿Alguna vez sentiste que algo se arrastraba?",
+        "pexels_query": "isolated toy floor"
+      },
+      {
+        "id": 10,
+        "prompt": "Dark kitchen counter, a single, ordinary glass with a faint ripple in the water, as if disturbed",
+        "prompt_visual": "Dark kitchen counter, a single, ordinary glass with a faint ripple in the water, as if disturbed",
+        "texto_locucion": "Dejas el vaso. Lo encuentras en otro sitio.",
+        "pexels_query": "dark kitchen glass water"
+      },
+      {
+        "id": 11,
+        "prompt": "Empty staircase, a faint, almost transparent human-like silhouette at the bottom, looking up",
+        "prompt_visual": "Empty staircase, a faint, almost transparent human-like silhouette at the bottom, looking up",
+        "texto_locucion": "Subes las escaleras. Crees ver un atisbo.",
+        "pexels_query": "empty staircase silhouette"
+      },
+      {
+        "id": 12,
+        "prompt": "Close-up of a wall with old, peeling wallpaper, a subtle face-like pattern forming in the decay (pareidolia)",
+        "prompt_visual": "Close-up of a wall with old, peeling wallpaper, a subtle face-like pattern forming in the decay (pareidolia)",
+        "texto_locucion": "Cada sombra, te parece mirar fijamente.",
+        "pexels_query": "peeling wallpaper face"
+      },
+      {
+        "id": 13,
+        "prompt": "Empty bed, indentation on the pillow, as if someone just left, eerie warmth in the sheets",
+        "prompt_visual": "Empty bed, indentation on the pillow, as if someone just left, eerie warmth in the sheets",
+        "texto_locucion": "Sientes el hueco donde nadie durmió.",
+        "pexels_query": "empty bed indentation pillow"
+      },
+      {
+        "id": 14,
+        "prompt": "Window at night, looking out into absolute darkness, faint reflection of an unidentifiable shape inside",
+        "prompt_visual": "Window at night, looking out into absolute darkness, faint reflection of an unidentifiable shape inside",
+        "texto_locucion": "Amanece. El alivio dura poco tiempo.",
+        "pexels_query": "window absolute darkness reflection"
+      },
+      {
+        "id": 15,
+        "prompt": "A single, old, worn book on a shelf, slightly pulled out, title illegible, ominous presence",
+        "prompt_visual": "A single, old, worn book on a shelf, slightly pulled out, title illegible, ominous presence",
+        "texto_locucion": "Vuelves a crear. La inspiración, no es tuya.",
+        "pexels_query": "old book shelf pulled"
+      },
+      {
+        "id": 16,
+        "prompt": "Shadow of a hand stretching across a desktop, reaching towards a mouse, but no actual hand is visible",
+        "prompt_visual": "Shadow of a hand stretching across a desktop, reaching towards a mouse, but no actual hand is visible",
+        "texto_locucion": "Alguien está escribiendo contigo.",
+        "pexels_query": "shadow hand desktop"
+      },
+      {
+        "id": 17,
+        "prompt": "A pair of headphones resting on a desk, a faint, almost imperceptible glow from inside the earcups",
+        "prompt_visual": "A pair of headphones resting on a desk, a faint, almost imperceptible glow from inside the earcups",
+        "texto_locucion": "Escuchas los sonidos que nadie más oye.",
+        "pexels_query": "headphones desk glow"
+      },
+      {
+        "id": 18,
+        "prompt": "Flickering light bulb in an otherwise dark room, casting erratic, dancing shadows, unsettling atmosphere",
+        "prompt_visual": "Flickering light bulb in an otherwise dark room, casting erratic, dancing shadows, unsettling atmosphere",
+        "texto_locucion": "La bombilla parpadea. Ves algo allí.",
+        "pexels_query": "flickering light bulb"
+      },
+      {
+        "id": 19,
+        "prompt": "Empty doorway, a faint, cold mist drifting through, despite no open windows, unnatural air current",
+        "prompt_visual": "Empty doorway, a faint, cold mist drifting through, despite no open windows, unnatural air current",
+        "texto_locucion": "Un frío inexplicable te recorre la espalda.",
+        "pexels_query": "empty doorway cold mist"
+      },
+      {
+        "id": 20,
+        "prompt": "Close-up of a wooden floorboard, a single, sharp scratch mark that wasn't there before, ominous detail",
+        "prompt_visual": "Close-up of a wooden floorboard, a single, sharp scratch mark that wasn't there before, ominous detail",
+        "texto_locucion": "Las marcas en el suelo no existían.",
+        "pexels_query": "floorboard scratch mark"
+      },
+      {
+        "id": 21,
+        "prompt": "Empty chair pulled slightly away from a table, as if someone just stood up, unsettling absence",
+        "prompt_visual": "Empty chair pulled slightly away from a table, as if someone just stood up, unsettling absence",
+        "texto_locucion": "Cada cosa fuera de lugar, te alerta.",
+        "pexels_query": "empty chair pulled table"
+      },
+      {
+        "id": 22,
+        "prompt": "Dark reflection in a window at night, distorted, not fully human, just a vague outline",
+        "prompt_visual": "Dark reflection in a window at night, distorted, not fully human, just a vague outline",
+        "texto_locucion": "Lo que creas, se manifiesta.",
+        "pexels_query": "dark window distorted reflection"
+      },
+      {
+        "id": 23,
+        "prompt": "Empty hallway mirror, a faint, almost imperceptible shadow crossing it in the background",
+        "prompt_visual": "Empty hallway mirror, a faint, almost imperceptible shadow crossing it in the background",
+        "texto_locucion": "Tu mente juega contigo, ¿o no?",
+        "pexels_query": "empty mirror shadow crossing"
+      },
+      {
+        "id": 24,
+        "prompt": "Close-up of an old, worn wooden door with deep gouges, as if something tried to get out or in",
+        "prompt_visual": "Close-up of an old, worn wooden door with deep gouges, as if something tried to get out or in",
+        "texto_locucion": "Lo sientes antes de verlo.",
+        "pexels_query": "old wooden door gouges"
+      },
+      {
+        "id": 25,
+        "prompt": "Bedroom wall, a subtle dark stain slowly spreading, organic but unidentifiable, unsettling growth",
+        "prompt_visual": "Bedroom wall, a subtle dark stain slowly spreading, organic but unidentifiable, unsettling growth",
+        "texto_locucion": "No puedes ignorarlo. Te está cercando.",
+        "pexels_query": "dark stain wall spreading"
+      },
+      {
+        "id": 26,
+        "prompt": "A single, dark fingerprint on a clean, white light switch, too large or too many digits, unnatural",
+        "prompt_visual": "A single, dark fingerprint on a clean, white light switch, too large or too many digits, unnatural",
+        "texto_locucion": "Cada fragmento de terror tiene consecuencias.",
+        "pexels_query": "dark fingerprint light switch"
+      },
+      {
+        "id": 27,
+        "prompt": "A dimly lit computer monitor displaying glitching, distorted text, unintelligible and unsettling code",
+        "prompt_visual": "A dimly lit computer monitor displaying glitching, distorted text, unintelligible and unsettling code",
+        "texto_locucion": "Tú lo invocaste. Ahora es tu turno.",
+        "pexels_query": "glitching distorted text monitor"
+      }
+    ],
+    "hooks": [
+      "El terror digital no es virtual.",
+      "Atraes lo que no ves.",
+      "¿Quién está detrás de ti?"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
