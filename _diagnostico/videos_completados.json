@@ -1,7 +1,5 @@
 {
   "ids": [
-    "340c06f8-9fba-447f-a73f-0ce26d43f309",
-    "340c06f8-9fba-447f-a73f-0ce26d43f309_asm",
     "fde8935a-e3a4-4159-b5f4-11b1c67d8a43",
     "fde8935a-e3a4-4159-b5f4-11b1c67d8a43_asm",
     "b012bc94-94b5-41ff-bcef-72dfc54e3688",
@@ -199,7 +197,9 @@
     "8e785d3a-1544-41fb-b5a8-bd0bdcc9c56c",
     "8e785d3a-1544-41fb-b5a8-bd0bdcc9c56c_asm",
     "37eaf5f9-239d-474d-808e-d0bb99dac1cc",
-    "37eaf5f9-239d-474d-808e-d0bb99dac1cc_asm"
+    "37eaf5f9-239d-474d-808e-d0bb99dac1cc_asm",
+    "e8dd3e1d-e644-4b47-a335-a8b7951515ef",
+    "e8dd3e1d-e644-4b47-a335-a8b7951515ef_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1395,6 +1395,11 @@
       "formato": "9:16"
     },
     "8e785d3a-1544-41fb-b5a8-bd0bdcc9c56c": {},
-    "37eaf5f9-239d-474d-808e-d0bb99dac1cc": {}
+    "37eaf5f9-239d-474d-808e-d0bb99dac1cc": {},
+    "e8dd3e1d-e644-4b47-a335-a8b7951515ef": {
+      "duracion_real_seg": 120.9,
+      "marca": "Monkygraff",
+      "formato": "9:16"
+    }
   }
 }
