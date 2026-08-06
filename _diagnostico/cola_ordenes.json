@@ -1,1 +1,245 @@
-[]
+[
+  {
+    "id": "b2854559-9c74-4acb-bac3-a6368c78eb42",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"empty chair in dimly lit living room, distorted shadow on the wall, unsettling calm\", \"prompt_visual\": \"empty chair in dimly lit living room, distorted shadow on the wall, unsettling calm\", \"texto_locucion\": \"Si estás solo ahora mismo... quizás no deberías ver esto.\", \"pexels_query\": \"empty living room, dim light\"}, {\"id\": 2, \"prompt\": \"nape of neck, faint shiver lines, dark background, blurry edge\", \"prompt_visual\": \"nape of neck, faint shiver lines, dark background, blurry edge\", \"texto_locucion\": \"Esa sensación fría detrás de tu nuca, inexplicable.\", \"pexels_query\": \"neck back, cold feeling\"}, {\"id\": 3, \"prompt\": \"a slightly ajar closed door in a dark hallway, soft light from behind it\", \"prompt_visual\": \"a slightly ajar closed door in a dark hallway, soft light from behind it\", \"texto_locucion\": \"Cierras la puerta, ¿verdad? Estás seguro, ¿verdad?\", \"pexels_query\": \"ajar door, dark hallway\"}, {\"id\": 4, \"prompt\": \"extreme close-up of an ear, shadows, sense of hearing\", \"prompt_visual\": \"extreme close-up of an ear, shadows, sense of hearing\", \"texto_locucion\": \"Un susurro. Muy bajo. Pero, ¿de dónde vino?\", \"pexels_query\": \"ear close-up, hearing\"}, {\"id\": 5, \"prompt\": \"blurry edge of a dark hallway, subtle movement hint, no clear object\", \"prompt_visual\": \"blurry edge of a dark hallway, subtle movement hint, no clear object\", \"texto_locucion\": \"Algo se movió en el pasillo, justo en tu visión.\", \"pexels_query\": \"blurry hallway, subtle motion\"}, {\"id\": 6, \"prompt\": \"person rubbing eyes, face obscured by shadow, weary expression\", \"prompt_visual\": \"person rubbing eyes, face obscured by shadow, weary expression\", \"texto_locucion\": \"Siempre lo atribuyes al cansancio, a la imaginación.\", \"pexels_query\": \"tired eyes, shadow face\"}, {\"id\": 7, \"prompt\": \"old incandescent light bulb, flickering, then dark\", \"prompt_visual\": \"old incandescent light bulb, flickering, then dark\", \"texto_locucion\": \"Una lámpara parpadea sola. Luego se apaga por completo.\", \"pexels_query\": \"flickering light bulb\"}, {\"id\": 8, \"prompt\": \"dark empty room, subtle outline of an indistinct shadow figure in the corner\", \"prompt_visual\": \"dark empty room, subtle outline of an indistinct shadow figure in the corner\", \"texto_locucion\": \"Sientes una presencia. Sabes que no estabas solo.\", \"pexels_query\": \"dark room corner, shadow figure\"}, {\"id\": 9, \"prompt\": \"blurred empty space where something might have been, quick motion blur\", \"prompt_visual\": \"blurred empty space where something might have been, quick motion blur\", \"texto_locucion\": \"Giraste rápido, pero ya no había nada allí.\", \"pexels_query\": \"blurred empty space\"}, {\"id\": 10, \"prompt\": \"familiar living room, but with an unsettling, distorted perspective, off-kilter\", \"prompt_visual\": \"familiar living room, but with an unsettling, distorted perspective, off-kilter\", \"texto_locucion\": \"Tu propia casa, el lugar seguro, se siente... extraño.\", \"pexels_query\": \"distorted living room\"}, {\"id\": 11, \"prompt\": \"two abstract shapes representing mind and senses, clashing, dark\", \"prompt_visual\": \"two abstract shapes representing mind and senses, clashing, dark\", \"texto_locucion\": \"Tu mente te dice que es imposible. Pero tus sentidos.\", \"pexels_query\": \"abstract mind senses\"}, {\"id\": 12, \"prompt\": \"dark, empty space, only subtle ripples of sound waves\", \"prompt_visual\": \"dark, empty space, only subtle ripples of sound waves\", \"texto_locucion\": \"Oyes tu nombre, susurrado muy cerca. Nadie más está.\", \"pexels_query\": \"sound waves dark\"}, {\"id\": 13, \"prompt\": \"abstract question marks intertwined with shadowy tendrils\", \"prompt_visual\": \"abstract question marks intertwined with shadowy tendrils\", \"texto_locucion\": \"¿Qué es? ¿Qué quiere? No puedes ignorarlo.\", \"pexels_query\": \"question marks shadows\"}, {\"id\": 14, \"prompt\": \"dusty floor, no footprints, eerie emptiness\", \"prompt_visual\": \"dusty floor, no footprints, eerie emptiness\", \"texto_locucion\": \"Lo buscas, pero nunca hay rastro. Nadie lo vio.\", \"pexels_query\": \"dusty floor empty\"}, {\"id\": 15, \"prompt\": \"shoulder, faint, shadowy hand barely visible\", \"prompt_visual\": \"shoulder, faint, shadowy hand barely visible\", \"texto_locucion\": \"Un toque frío. Rápido. En tu hombro desnudo.\", \"pexels_query\": \"shoulder shadowy hand\"}, {\"id\": 16, \"prompt\": \"deep black void with slight texture, hint of something lurking within\", \"prompt_visual\": \"deep black void with slight texture, hint of something lurking within\", \"texto_locucion\": \"La oscuridad ya no es tu aliada, sino su cuna.\", \"pexels_query\": \"deep black void\"}, {\"id\": 17, \"prompt\": \"two glowing, unblinking eyes in a dark, textured background\", \"prompt_visual\": \"two glowing, unblinking eyes in a dark, textured background\", \"texto_locucion\": \"Sientes ojos sobre ti. Siempre. Aun en la luz.\", \"pexels_query\": \"glowing eyes dark\"}, {\"id\": 18, \"prompt\": \"dark bedroom, a disturbed crumpled bedsheet, no person\", \"prompt_visual\": \"dark bedroom, a disturbed crumpled bedsheet, no person\", \"texto_locucion\": \"Las noches son largas. El insomnio, tu nueva compañía.\", \"pexels_query\": \"dark crumpled bedsheet\"}, {\"id\": 19, \"prompt\": \"quiet room, exaggerated silence, no sound suggested\", \"prompt_visual\": \"quiet room, exaggerated silence, no sound suggested\", \"texto_locucion\": \"De repente, un silencio absoluto cae sobre todo.\", \"pexels_query\": \"quiet room, no sound\"}, {\"id\": 20, \"prompt\": \"distorted shadow on a wall, subtle movement, elongated\", \"prompt_visual\": \"distorted shadow on a wall, subtle movement, elongated\", \"texto_locucion\": \"Cada sombra parece moverse. Cada reflejo es sospechoso.\", \"pexels_query\": \"distorted shadow wall\"}, {\"id\": 21, \"prompt\": \"abstract representation of a building sense of dread, dark\", \"prompt_visual\": \"abstract representation of a building sense of dread, dark\", \"texto_locucion\": \"Lo sentiste antes. Ahora, es más fuerte que nunca.\", \"pexels_query\": \"abstract dread dark\"}, {\"id\": 22, \"prompt\": \"frosty window pane, interior warm glow, contradiction\", \"prompt_visual\": \"frosty window pane, interior warm glow, contradiction\", \"texto_locucion\": \"El frío inexplicable en una habitación cálida y cerrada.\", \"pexels_query\": \"frosty window pane\"}, {\"id\": 23, \"prompt\": \"blurry, indistinct faces looking away, sense of isolation\", \"prompt_visual\": \"blurry, indistinct faces looking away, sense of isolation\", \"texto_locucion\": \"Intentas contarlo. Te miran con escepticismo, con pena.\", \"pexels_query\": \"blurry faces turning\"}, {\"id\": 24, \"prompt\": \"person's back, hunched, looking into an empty, dark space\", \"prompt_visual\": \"person's back, hunched, looking into an empty, dark space\", \"texto_locucion\": \"Ya no luchas. Solo esperas el siguiente indicio.\", \"pexels_query\": \"back person, dark space\"}, {\"id\": 25, \"prompt\": \"a crack running through an otherwise normal floor, subtle but pervasive\", \"prompt_visual\": \"a crack running through an otherwise normal floor, subtle but pervasive\", \"texto_locucion\": \"Sabes que algo no está bien. Nunca lo estará.\", \"pexels_query\": \"crack floor subtle\"}, {\"id\": 26, \"prompt\": \"a single, thin wisp of smoke or mist, hovering motionless\", \"prompt_visual\": \"a single, thin wisp of smoke or mist, hovering motionless\", \"texto_locucion\": \"Incluso en el silencio, sientes su helada compañía.\", \"pexels_query\": \"thin mist hovering\"}, {\"id\": 27, \"prompt\": \"a pair of eyes, barely visible in deep shadow, unblinking\", \"prompt_visual\": \"a pair of eyes, barely visible in deep shadow, unblinking\", \"texto_locucion\": \"No es tu imaginación. Nunca lo fue realmente.\", \"pexels_query\": \"eyes deep shadow\"}, {\"id\": 28, \"prompt\": \"a slightly open door, darkness within, a sense of being watched from inside\", \"prompt_visual\": \"a slightly open door, darkness within, a sense of being watched from inside\", \"texto_locucion\": \"Y tú sabes que te está observando ahora mismo.\", \"pexels_query\": \"door slightly open, dark inside\"}]",
+    "formato": "9:16",
+    "marca": "La Viuda",
+    "texto_locucion": "Si estás solo ahora mismo... quizás no deberías ver esto. Esa sensación fría detrás de tu nuca, inexplicable. Cierras la puerta, ¿verdad? Estás seguro, ¿verdad? Un susurro. Muy bajo. Pero, ¿de dónde vino? Algo se movió en el pasillo, justo en tu visión. Siempre lo atribuyes al cansancio, a la imaginación. Una lámpara parpadea sola. Luego se apaga por completo. Sientes una presencia. Sabes que no estabas solo. Giraste rápido, pero ya no había nada allí. Tu propia casa, el lugar seguro, se siente... extraño. Tu mente te dice que es imposible. Pero tus sentidos. Oyes tu nombre, susurrado muy cerca. Nadie más está. ¿Qué es? ¿Qué quiere? No puedes ignorarlo. Lo buscas, pero nunca hay rastro. Nadie lo vio. Un toque frío. Rápido. En tu hombro desnudo. La oscuridad ya no es tu aliada, sino su cuna. Sientes ojos sobre ti. Siempre. Aun en la luz. Las noches son largas. El insomnio, tu nueva compañía. De repente, un silencio absoluto cae sobre todo. Cada sombra parece moverse. Cada reflejo es sospechoso. Lo sentiste antes. Ahora, es más fuerte que nunca. El frío inexplicable en una habitación cálida y cerrada. Intentas contarlo. Te miran con escepticismo, con pena. Ya no luchas. Solo esperas el siguiente indicio. Sabes que algo no está bien. Nunca lo estará. Incluso en el silencio, sientes su helada compañía. No es tu imaginación. Nunca lo fue realmente. Y tú sabes que te está observando ahora mismo.",
+    "titulo_sugerido": "¿Estás solo? Tu casa te esconde un secreto que nadie cree.",
+    "escenas_texto": [
+      "Si estás solo ahora mismo... quizás no deberías ver esto.",
+      "Esa sensación fría detrás de tu nuca, inexplicable.",
+      "Cierras la puerta, ¿verdad? Estás seguro, ¿verdad?",
+      "Un susurro. Muy bajo. Pero, ¿de dónde vino?",
+      "Algo se movió en el pasillo, justo en tu visión.",
+      "Siempre lo atribuyes al cansancio, a la imaginación.",
+      "Una lámpara parpadea sola. Luego se apaga por completo.",
+      "Sientes una presencia. Sabes que no estabas solo.",
+      "Giraste rápido, pero ya no había nada allí.",
+      "Tu propia casa, el lugar seguro, se siente... extraño.",
+      "Tu mente te dice que es imposible. Pero tus sentidos.",
+      "Oyes tu nombre, susurrado muy cerca. Nadie más está.",
+      "¿Qué es? ¿Qué quiere? No puedes ignorarlo.",
+      "Lo buscas, pero nunca hay rastro. Nadie lo vio.",
+      "Un toque frío. Rápido. En tu hombro desnudo.",
+      "La oscuridad ya no es tu aliada, sino su cuna.",
+      "Sientes ojos sobre ti. Siempre. Aun en la luz.",
+      "Las noches son largas. El insomnio, tu nueva compañía.",
+      "De repente, un silencio absoluto cae sobre todo.",
+      "Cada sombra parece moverse. Cada reflejo es sospechoso.",
+      "Lo sentiste antes. Ahora, es más fuerte que nunca.",
+      "El frío inexplicable en una habitación cálida y cerrada.",
+      "Intentas contarlo. Te miran con escepticismo, con pena.",
+      "Ya no luchas. Solo esperas el siguiente indicio.",
+      "Sabes que algo no está bien. Nunca lo estará.",
+      "Incluso en el silencio, sientes su helada compañía.",
+      "No es tu imaginación. Nunca lo fue realmente.",
+      "Y tú sabes que te está observando ahora mismo."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "empty chair in dimly lit living room, distorted shadow on the wall, unsettling calm",
+        "prompt_visual": "empty chair in dimly lit living room, distorted shadow on the wall, unsettling calm",
+        "texto_locucion": "Si estás solo ahora mismo... quizás no deberías ver esto.",
+        "pexels_query": "empty living room, dim light"
+      },
+      {
+        "id": 2,
+        "prompt": "nape of neck, faint shiver lines, dark background, blurry edge",
+        "prompt_visual": "nape of neck, faint shiver lines, dark background, blurry edge",
+        "texto_locucion": "Esa sensación fría detrás de tu nuca, inexplicable.",
+        "pexels_query": "neck back, cold feeling"
+      },
+      {
+        "id": 3,
+        "prompt": "a slightly ajar closed door in a dark hallway, soft light from behind it",
+        "prompt_visual": "a slightly ajar closed door in a dark hallway, soft light from behind it",
+        "texto_locucion": "Cierras la puerta, ¿verdad? Estás seguro, ¿verdad?",
+        "pexels_query": "ajar door, dark hallway"
+      },
+      {
+        "id": 4,
+        "prompt": "extreme close-up of an ear, shadows, sense of hearing",
+        "prompt_visual": "extreme close-up of an ear, shadows, sense of hearing",
+        "texto_locucion": "Un susurro. Muy bajo. Pero, ¿de dónde vino?",
+        "pexels_query": "ear close-up, hearing"
+      },
+      {
+        "id": 5,
+        "prompt": "blurry edge of a dark hallway, subtle movement hint, no clear object",
+        "prompt_visual": "blurry edge of a dark hallway, subtle movement hint, no clear object",
+        "texto_locucion": "Algo se movió en el pasillo, justo en tu visión.",
+        "pexels_query": "blurry hallway, subtle motion"
+      },
+      {
+        "id": 6,
+        "prompt": "person rubbing eyes, face obscured by shadow, weary expression",
+        "prompt_visual": "person rubbing eyes, face obscured by shadow, weary expression",
+        "texto_locucion": "Siempre lo atribuyes al cansancio, a la imaginación.",
+        "pexels_query": "tired eyes, shadow face"
+      },
+      {
+        "id": 7,
+        "prompt": "old incandescent light bulb, flickering, then dark",
+        "prompt_visual": "old incandescent light bulb, flickering, then dark",
+        "texto_locucion": "Una lámpara parpadea sola. Luego se apaga por completo.",
+        "pexels_query": "flickering light bulb"
+      },
+      {
+        "id": 8,
+        "prompt": "dark empty room, subtle outline of an indistinct shadow figure in the corner",
+        "prompt_visual": "dark empty room, subtle outline of an indistinct shadow figure in the corner",
+        "texto_locucion": "Sientes una presencia. Sabes que no estabas solo.",
+        "pexels_query": "dark room corner, shadow figure"
+      },
+      {
+        "id": 9,
+        "prompt": "blurred empty space where something might have been, quick motion blur",
+        "prompt_visual": "blurred empty space where something might have been, quick motion blur",
+        "texto_locucion": "Giraste rápido, pero ya no había nada allí.",
+        "pexels_query": "blurred empty space"
+      },
+      {
+        "id": 10,
+        "prompt": "familiar living room, but with an unsettling, distorted perspective, off-kilter",
+        "prompt_visual": "familiar living room, but with an unsettling, distorted perspective, off-kilter",
+        "texto_locucion": "Tu propia casa, el lugar seguro, se siente... extraño.",
+        "pexels_query": "distorted living room"
+      },
+      {
+        "id": 11,
+        "prompt": "two abstract shapes representing mind and senses, clashing, dark",
+        "prompt_visual": "two abstract shapes representing mind and senses, clashing, dark",
+        "texto_locucion": "Tu mente te dice que es imposible. Pero tus sentidos.",
+        "pexels_query": "abstract mind senses"
+      },
+      {
+        "id": 12,
+        "prompt": "dark, empty space, only subtle ripples of sound waves",
+        "prompt_visual": "dark, empty space, only subtle ripples of sound waves",
+        "texto_locucion": "Oyes tu nombre, susurrado muy cerca. Nadie más está.",
+        "pexels_query": "sound waves dark"
+      },
+      {
+        "id": 13,
+        "prompt": "abstract question marks intertwined with shadowy tendrils",
+        "prompt_visual": "abstract question marks intertwined with shadowy tendrils",
+        "texto_locucion": "¿Qué es? ¿Qué quiere? No puedes ignorarlo.",
+        "pexels_query": "question marks shadows"
+      },
+      {
+        "id": 14,
+        "prompt": "dusty floor, no footprints, eerie emptiness",
+        "prompt_visual": "dusty floor, no footprints, eerie emptiness",
+        "texto_locucion": "Lo buscas, pero nunca hay rastro. Nadie lo vio.",
+        "pexels_query": "dusty floor empty"
+      },
+      {
+        "id": 15,
+        "prompt": "shoulder, faint, shadowy hand barely visible",
+        "prompt_visual": "shoulder, faint, shadowy hand barely visible",
+        "texto_locucion": "Un toque frío. Rápido. En tu hombro desnudo.",
+        "pexels_query": "shoulder shadowy hand"
+      },
+      {
+        "id": 16,
+        "prompt": "deep black void with slight texture, hint of something lurking within",
+        "prompt_visual": "deep black void with slight texture, hint of something lurking within",
+        "texto_locucion": "La oscuridad ya no es tu aliada, sino su cuna.",
+        "pexels_query": "deep black void"
+      },
+      {
+        "id": 17,
+        "prompt": "two glowing, unblinking eyes in a dark, textured background",
+        "prompt_visual": "two glowing, unblinking eyes in a dark, textured background",
+        "texto_locucion": "Sientes ojos sobre ti. Siempre. Aun en la luz.",
+        "pexels_query": "glowing eyes dark"
+      },
+      {
+        "id": 18,
+        "prompt": "dark bedroom, a disturbed crumpled bedsheet, no person",
+        "prompt_visual": "dark bedroom, a disturbed crumpled bedsheet, no person",
+        "texto_locucion": "Las noches son largas. El insomnio, tu nueva compañía.",
+        "pexels_query": "dark crumpled bedsheet"
+      },
+      {
+        "id": 19,
+        "prompt": "quiet room, exaggerated silence, no sound suggested",
+        "prompt_visual": "quiet room, exaggerated silence, no sound suggested",
+        "texto_locucion": "De repente, un silencio absoluto cae sobre todo.",
+        "pexels_query": "quiet room, no sound"
+      },
+      {
+        "id": 20,
+        "prompt": "distorted shadow on a wall, subtle movement, elongated",
+        "prompt_visual": "distorted shadow on a wall, subtle movement, elongated",
+        "texto_locucion": "Cada sombra parece moverse. Cada reflejo es sospechoso.",
+        "pexels_query": "distorted shadow wall"
+      },
+      {
+        "id": 21,
+        "prompt": "abstract representation of a building sense of dread, dark",
+        "prompt_visual": "abstract representation of a building sense of dread, dark",
+        "texto_locucion": "Lo sentiste antes. Ahora, es más fuerte que nunca.",
+        "pexels_query": "abstract dread dark"
+      },
+      {
+        "id": 22,
+        "prompt": "frosty window pane, interior warm glow, contradiction",
+        "prompt_visual": "frosty window pane, interior warm glow, contradiction",
+        "texto_locucion": "El frío inexplicable en una habitación cálida y cerrada.",
+        "pexels_query": "frosty window pane"
+      },
+      {
+        "id": 23,
+        "prompt": "blurry, indistinct faces looking away, sense of isolation",
+        "prompt_visual": "blurry, indistinct faces looking away, sense of isolation",
+        "texto_locucion": "Intentas contarlo. Te miran con escepticismo, con pena.",
+        "pexels_query": "blurry faces turning"
+      },
+      {
+        "id": 24,
+        "prompt": "person's back, hunched, looking into an empty, dark space",
+        "prompt_visual": "person's back, hunched, looking into an empty, dark space",
+        "texto_locucion": "Ya no luchas. Solo esperas el siguiente indicio.",
+        "pexels_query": "back person, dark space"
+      },
+      {
+        "id": 25,
+        "prompt": "a crack running through an otherwise normal floor, subtle but pervasive",
+        "prompt_visual": "a crack running through an otherwise normal floor, subtle but pervasive",
+        "texto_locucion": "Sabes que algo no está bien. Nunca lo estará.",
+        "pexels_query": "crack floor subtle"
+      },
+      {
+        "id": 26,
+        "prompt": "a single, thin wisp of smoke or mist, hovering motionless",
+        "prompt_visual": "a single, thin wisp of smoke or mist, hovering motionless",
+        "texto_locucion": "Incluso en el silencio, sientes su helada compañía.",
+        "pexels_query": "thin mist hovering"
+      },
+      {
+        "id": 27,
+        "prompt": "a pair of eyes, barely visible in deep shadow, unblinking",
+        "prompt_visual": "a pair of eyes, barely visible in deep shadow, unblinking",
+        "texto_locucion": "No es tu imaginación. Nunca lo fue realmente.",
+        "pexels_query": "eyes deep shadow"
+      },
+      {
+        "id": 28,
+        "prompt": "a slightly open door, darkness within, a sense of being watched from inside",
+        "prompt_visual": "a slightly open door, darkness within, a sense of being watched from inside",
+        "texto_locucion": "Y tú sabes que te está observando ahora mismo.",
+        "pexels_query": "door slightly open, dark inside"
+      }
+    ],
+    "hooks": [
+      "Nunca estás realmente solo.",
+      "Tu casa te observa.",
+      "El silencio miente."
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
