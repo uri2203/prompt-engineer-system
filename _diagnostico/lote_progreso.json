@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 32,
+  "completados": 33,
   "fallidos": 0,
   "trabajo_actual": "Video 33/90 (LaesquinaRandom) lleva 182 min — sigue en proceso, esperando...",
-  "mensaje": "Video 33 tarda más de lo normal (182 min) — sigue esperando.",
+  "mensaje": "Video 33 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -294,6 +294,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 120.2,
       "hora": "23:41"
+    },
+    {
+      "n": 33,
+      "marca": "LaesquinaRandom",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 121.6,
+      "hora": "02:48"
     }
   ]
 }
