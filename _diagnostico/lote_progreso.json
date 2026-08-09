@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 44,
+  "completados": 45,
   "fallidos": 0,
   "trabajo_actual": "Generando video 45/90 (TuIALista 9:16)",
-  "mensaje": "Produccion del video 45 iniciada.",
+  "mensaje": "Video 45 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -402,6 +402,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 134.2,
       "hora": "16:59"
+    },
+    {
+      "n": 45,
+      "marca": "TuIALista",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 146.2,
+      "hora": "18:30"
     }
   ]
 }
