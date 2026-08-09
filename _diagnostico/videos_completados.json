@@ -1,7 +1,5 @@
 {
   "ids": [
-    "486aac36-8ea8-4a99-b93d-d4a2f9be47b3",
-    "486aac36-8ea8-4a99-b93d-d4a2f9be47b3_asm",
     "58df5270-0234-44b6-9629-48f25fb70bd7",
     "58df5270-0234-44b6-9629-48f25fb70bd7_asm",
     "50546f41-d326-40e3-95c4-67bec68a29a3",
@@ -199,7 +197,9 @@
     "8c36209d-edc3-444a-9b6d-4fe88692cf6c",
     "8c36209d-edc3-444a-9b6d-4fe88692cf6c_asm",
     "39c52de1-93c1-4647-9ed7-bbdbe238e490",
-    "39c52de1-93c1-4647-9ed7-bbdbe238e490_asm"
+    "39c52de1-93c1-4647-9ed7-bbdbe238e490_asm",
+    "51d339f8-5329-4364-8ef8-0b78d28e1074",
+    "51d339f8-5329-4364-8ef8-0b78d28e1074_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1636,6 +1636,11 @@
       "duracion_real_seg": 125.3,
       "marca": "Umbral Alterno",
       "formato": "9:16"
+    },
+    "51d339f8-5329-4364-8ef8-0b78d28e1074": {
+      "duracion_real_seg": 1931.2,
+      "marca": "La Viuda",
+      "formato": "16:9"
     }
   }
 }
