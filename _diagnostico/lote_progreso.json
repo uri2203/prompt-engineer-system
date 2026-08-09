@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 54,
+  "completados": 55,
   "fallidos": 0,
   "trabajo_actual": "Generando video 55/90 (Umbral Alterno 9:16)",
-  "mensaje": "Produccion del video 55 iniciada.",
+  "mensaje": "Video 55 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -492,6 +492,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 155.1,
       "hora": "06:44"
+    },
+    {
+      "n": 55,
+      "marca": "Umbral Alterno",
+      "formato": "9:16",
+      "tipo": "Short",
+      "duracion_sel": null,
+      "duracion_real_seg": 137.2,
+      "hora": "07:57"
     }
   ]
 }
