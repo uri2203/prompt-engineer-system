@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 60,
+  "completados": 61,
   "fallidos": 0,
   "trabajo_actual": "Video 61/90 (La Viuda) lleva 202 min — sigue en proceso, esperando...",
-  "mensaje": "Video 61 tarda más de lo normal (202 min) — sigue esperando.",
+  "mensaje": "Video 61 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -546,6 +546,15 @@
       "duracion_sel": null,
       "duracion_real_seg": 125.3,
       "hora": "13:28"
+    },
+    {
+      "n": 61,
+      "marca": "La Viuda",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 1931.2,
+      "hora": "16:56"
     }
   ]
 }
