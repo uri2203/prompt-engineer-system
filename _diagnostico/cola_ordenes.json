@@ -1,1 +1,229 @@
-[]
+[
+  {
+    "id": "94d46c70-6049-4a1a-a370-e438f6c841e2",
+    "tipo": "IMAGEN",
+    "prompt": "[{\"id\": 1, \"prompt\": \"Abstract digital brain with glowing circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract digital brain with glowing circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Crees que la IA nos dominará en diez años.\", \"pexels_query\": \"digital brain\"}, {\"id\": 2, \"prompt\": \"Gloomy server room with blinking red lights, RAW photo, technology editorial, dramatic lighting, data center, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Gloomy server room with blinking red lights, RAW photo, technology editorial, dramatic lighting, data center, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Elon Musk lo advierte: 'Perderemos el control'.\", \"pexels_query\": \"server room dark\"}, {\"id\": 3, \"prompt\": \"Complex circuit board with integrated chips, RAW photo, technology editorial, dramatic lighting, microchip design, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Complex circuit board with integrated chips, RAW photo, technology editorial, dramatic lighting, microchip design, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero la verdad es mucho más compleja.\", \"pexels_query\": \"circuit board intricate\"}, {\"id\": 4, \"prompt\": \"Isolated glowing data point on a dark grid, RAW photo, technology editorial, dramatic lighting, digital network, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Isolated glowing data point on a dark grid, RAW photo, technology editorial, dramatic lighting, digital network, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Nadie lo vio venir tan pronto, ¿verdad?\", \"pexels_query\": \"data point glow\"}, {\"id\": 5, \"prompt\": \"Human hand reaching for a virtual interface, without showing the hand clearly, blurred, RAW photo, technology editorial, dramatic lighting, futuristic UI, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Human hand reaching for a virtual interface, without showing the hand clearly, blurred, RAW photo, technology editorial, dramatic lighting, futuristic UI, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El control humano sobre IA es un espectro.\", \"pexels_query\": \"virtual interface hand\"}, {\"id\": 6, \"prompt\": \"Digital switches and toggles, RAW photo, technology editorial, dramatic lighting, control panel, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital switches and toggles, RAW photo, technology editorial, dramatic lighting, control panel, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No es un interruptor de 'on' a 'off'.\", \"pexels_query\": \"digital switches\"}, {\"id\": 7, \"prompt\": \"Autonomous robotic arm performing a precise task, RAW photo, technology editorial, dramatic lighting, industrial robot, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Autonomous robotic arm performing a precise task, RAW photo, technology editorial, dramatic lighting, industrial robot, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algunos sistemas ya deciden sin supervisión.\", \"pexels_query\": \"robotic arm precise\"}, {\"id\": 8, \"prompt\": \"Close-up of a complex algorithm flow on screen, RAW photo, technology editorial, dramatic lighting, code flow, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Close-up of a complex algorithm flow on screen, RAW photo, technology editorial, dramatic lighting, code flow, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Pero en tareas muy específicas y limitadas.\", \"pexels_query\": \"algorithm flow screen\"}, {\"id\": 9, \"prompt\": \"Digital grid over a city map, illustrating energy flow, RAW photo, technology editorial, dramatic lighting, smart grid, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital grid over a city map, illustrating energy flow, RAW photo, technology editorial, dramatic lighting, smart grid, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Como optimización de redes eléctricas, por ejemplo.\", \"pexels_query\": \"smart grid energy\"}, {\"id\": 10, \"prompt\": \"Empty, futuristic cityscape at night, with glowing digital lines, RAW photo, technology editorial, dramatic lighting, cyberpunk city, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Empty, futuristic cityscape at night, with glowing digital lines, RAW photo, technology editorial, dramatic lighting, cyberpunk city, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"No hay 'Terminator' en el horizonte cercano.\", \"pexels_query\": \"futuristic city night\"}, {\"id\": 11, \"prompt\": \"Abstract representation of artificial general intelligence (AGI), complex neural network, RAW photo, technology editorial, dramatic lighting, AGI concept, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of artificial general intelligence (AGI), complex neural network, RAW photo, technology editorial, dramatic lighting, AGI concept, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"La AGI aún es una meta lejana, no real.\", \"pexels_query\": \"AGI neural network\"}, {\"id\": 12, \"prompt\": \"Digital graph showing a long-term projection, RAW photo, technology editorial, dramatic lighting, data projection, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital graph showing a long-term projection, RAW photo, technology editorial, dramatic lighting, data projection, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Grandes expertos como Yann LeCun lo afirman.\", \"pexels_query\": \"data projection graph\"}, {\"id\": 13, \"prompt\": \"Blurred image of a worried person's silhouette looking at a screen, RAW photo, technology editorial, dramatic lighting, screen reflection, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Blurred image of a worried person's silhouette looking at a screen, RAW photo, technology editorial, dramatic lighting, screen reflection, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Lo sentiste antes, ¿este miedo te paraliza?\", \"pexels_query\": \"worried silhouette screen\"}, {\"id\": 14, \"prompt\": \"Magnifying glass over complex code lines, RAW photo, technology editorial, dramatic lighting, code analysis, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Magnifying glass over complex code lines, RAW photo, technology editorial, dramatic lighting, code analysis, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Hay algo que sí debes entender ahora.\", \"pexels_query\": \"code magnifying glass\"}, {\"id\": 15, \"prompt\": \"Distorted digital face made of pixels, indicating bias, RAW photo, technology editorial, dramatic lighting, AI bias, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Distorted digital face made of pixels, indicating bias, RAW photo, technology editorial, dramatic lighting, AI bias, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El riesgo real es el sesgo y la manipulación.\", \"pexels_query\": \"AI bias pixels\"}, {\"id\": 16, \"prompt\": \"Bar chart with unequal segments, representing algorithmic bias, RAW photo, technology editorial, dramatic lighting, biased data, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Bar chart with unequal segments, representing algorithmic bias, RAW photo, technology editorial, dramatic lighting, biased data, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Algoritmos con prejuicios nos afectan a diario.\", \"pexels_query\": \"biased data chart\"}, {\"id\": 17, \"prompt\": \"Medical scanner screen showing unusual patterns, RAW photo, technology editorial, dramatic lighting, medical AI error, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Medical scanner screen showing unusual patterns, RAW photo, technology editorial, dramatic lighting, medical AI error, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"En créditos, salud y hasta justicia, algo no está bien.\", \"pexels_query\": \"medical AI error\"}, {\"id\": 18, \"prompt\": \"Abstract representation of data flowing into a dark void, RAW photo, technology editorial, dramatic lighting, data privacy, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data flowing into a dark void, RAW photo, technology editorial, dramatic lighting, data privacy, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tus datos alimentan estos sistemas sin control.\", \"pexels_query\": \"data flowing privacy\"}, {\"id\": 19, \"prompt\": \"Digital lock icon breaking apart, RAW photo, technology editorial, dramatic lighting, data breach, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital lock icon breaking apart, RAW photo, technology editorial, dramatic lighting, data breach, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Esto sí puedes ignorarlo, pero no deberías.\", \"pexels_query\": \"data breach lock\"}, {\"id\": 20, \"prompt\": \"Shield icon surrounded by digital protection lines, RAW photo, technology editorial, dramatic lighting, cyber security, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Shield icon surrounded by digital protection lines, RAW photo, technology editorial, dramatic lighting, cyber security, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Proteger tu privacidad es ahora tu primera línea.\", \"pexels_query\": \"cyber security shield\"}, {\"id\": 21, \"prompt\": \"Digital interface showing permissions and data access, RAW photo, technology editorial, dramatic lighting, privacy settings, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital interface showing permissions and data access, RAW photo, technology editorial, dramatic lighting, privacy settings, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Conoce qué información compartes con cada IA.\", \"pexels_query\": \"privacy settings interface\"}, {\"id\": 22, \"prompt\": \"Broken alarm clock in a digital landscape, RAW photo, technology editorial, dramatic lighting, broken warning, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Broken alarm clock in a digital landscape, RAW photo, technology editorial, dramatic lighting, broken warning, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Desconfía de predicciones extremas sin datos.\", \"pexels_query\": \"broken alarm digital\"}, {\"id\": 23, \"prompt\": \"Multiple news headlines fading into static, RAW photo, technology editorial, dramatic lighting, fake news AI, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Multiple news headlines fading into static, RAW photo, technology editorial, dramatic lighting, fake news AI, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Investiga las fuentes antes de creerlas ciegamente.\", \"pexels_query\": \"fake news static\"}, {\"id\": 24, \"prompt\": \"Human hand silhouette interacting with glowing AI code, RAW photo, technology editorial, dramatic lighting, human AI interaction, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Human hand silhouette interacting with glowing AI code, RAW photo, technology editorial, dramatic lighting, human AI interaction, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"El futuro de la IA está en nuestras decisiones.\", \"pexels_query\": \"human AI code\"}, {\"id\": 25, \"prompt\": \"Digital path leading into a bright, unknown future, RAW photo, technology editorial, dramatic lighting, futuristic path, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Digital path leading into a bright, unknown future, RAW photo, technology editorial, dramatic lighting, futuristic path, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Comprende la verdad para usarla a tu favor.\", \"pexels_query\": \"futuristic digital path\"}, {\"id\": 26, \"prompt\": \"Abstract representation of data nodes connecting, forming a coherent network, RAW photo, technology editorial, dramatic lighting, connected data, no people, no faces, no cgi, photorealism\", \"prompt_visual\": \"Abstract representation of data nodes connecting, forming a coherent network, RAW photo, technology editorial, dramatic lighting, connected data, no people, no faces, no cgi, photorealism\", \"texto_locucion\": \"Tu control sí importa. Suscríbete para saber más.\", \"pexels_query\": \"data nodes network\"}]",
+    "formato": "9:16",
+    "marca": "TuIALista",
+    "texto_locucion": "Crees que la IA nos dominará en diez años. Elon Musk lo advierte: 'Perderemos el control'. Pero la verdad es mucho más compleja. Nadie lo vio venir tan pronto, ¿verdad? El control humano sobre IA es un espectro. No es un interruptor de 'on' a 'off'. Algunos sistemas ya deciden sin supervisión. Pero en tareas muy específicas y limitadas. Como optimización de redes eléctricas, por ejemplo. No hay 'Terminator' en el horizonte cercano. La AGI aún es una meta lejana, no real. Grandes expertos como Yann LeCun lo afirman. Lo sentiste antes, ¿este miedo te paraliza? Hay algo que sí debes entender ahora. El riesgo real es el sesgo y la manipulación. Algoritmos con prejuicios nos afectan a diario. En créditos, salud y hasta justicia, algo no está bien. Tus datos alimentan estos sistemas sin control. Esto sí puedes ignorarlo, pero no deberías. Proteger tu privacidad es ahora tu primera línea. Conoce qué información compartes con cada IA. Desconfía de predicciones extremas sin datos. Investiga las fuentes antes de creerlas ciegamente. El futuro de la IA está en nuestras decisiones. Comprende la verdad para usarla a tu favor. Tu control sí importa. Suscríbete para saber más.",
+    "titulo_sugerido": "Elon Musk sobre IA: ¿realmente perderemos el control en 10 años? Esto es lo que NO te cuentan",
+    "escenas_texto": [
+      "Crees que la IA nos dominará en diez años.",
+      "Elon Musk lo advierte: 'Perderemos el control'.",
+      "Pero la verdad es mucho más compleja.",
+      "Nadie lo vio venir tan pronto, ¿verdad?",
+      "El control humano sobre IA es un espectro.",
+      "No es un interruptor de 'on' a 'off'.",
+      "Algunos sistemas ya deciden sin supervisión.",
+      "Pero en tareas muy específicas y limitadas.",
+      "Como optimización de redes eléctricas, por ejemplo.",
+      "No hay 'Terminator' en el horizonte cercano.",
+      "La AGI aún es una meta lejana, no real.",
+      "Grandes expertos como Yann LeCun lo afirman.",
+      "Lo sentiste antes, ¿este miedo te paraliza?",
+      "Hay algo que sí debes entender ahora.",
+      "El riesgo real es el sesgo y la manipulación.",
+      "Algoritmos con prejuicios nos afectan a diario.",
+      "En créditos, salud y hasta justicia, algo no está bien.",
+      "Tus datos alimentan estos sistemas sin control.",
+      "Esto sí puedes ignorarlo, pero no deberías.",
+      "Proteger tu privacidad es ahora tu primera línea.",
+      "Conoce qué información compartes con cada IA.",
+      "Desconfía de predicciones extremas sin datos.",
+      "Investiga las fuentes antes de creerlas ciegamente.",
+      "El futuro de la IA está en nuestras decisiones.",
+      "Comprende la verdad para usarla a tu favor.",
+      "Tu control sí importa. Suscríbete para saber más."
+    ],
+    "escenas": [
+      {
+        "id": 1,
+        "prompt": "Abstract digital brain with glowing circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract digital brain with glowing circuits, RAW photo, technology editorial, dramatic lighting, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Crees que la IA nos dominará en diez años.",
+        "pexels_query": "digital brain"
+      },
+      {
+        "id": 2,
+        "prompt": "Gloomy server room with blinking red lights, RAW photo, technology editorial, dramatic lighting, data center, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Gloomy server room with blinking red lights, RAW photo, technology editorial, dramatic lighting, data center, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Elon Musk lo advierte: 'Perderemos el control'.",
+        "pexels_query": "server room dark"
+      },
+      {
+        "id": 3,
+        "prompt": "Complex circuit board with integrated chips, RAW photo, technology editorial, dramatic lighting, microchip design, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Complex circuit board with integrated chips, RAW photo, technology editorial, dramatic lighting, microchip design, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero la verdad es mucho más compleja.",
+        "pexels_query": "circuit board intricate"
+      },
+      {
+        "id": 4,
+        "prompt": "Isolated glowing data point on a dark grid, RAW photo, technology editorial, dramatic lighting, digital network, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Isolated glowing data point on a dark grid, RAW photo, technology editorial, dramatic lighting, digital network, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Nadie lo vio venir tan pronto, ¿verdad?",
+        "pexels_query": "data point glow"
+      },
+      {
+        "id": 5,
+        "prompt": "Human hand reaching for a virtual interface, without showing the hand clearly, blurred, RAW photo, technology editorial, dramatic lighting, futuristic UI, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Human hand reaching for a virtual interface, without showing the hand clearly, blurred, RAW photo, technology editorial, dramatic lighting, futuristic UI, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El control humano sobre IA es un espectro.",
+        "pexels_query": "virtual interface hand"
+      },
+      {
+        "id": 6,
+        "prompt": "Digital switches and toggles, RAW photo, technology editorial, dramatic lighting, control panel, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital switches and toggles, RAW photo, technology editorial, dramatic lighting, control panel, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No es un interruptor de 'on' a 'off'.",
+        "pexels_query": "digital switches"
+      },
+      {
+        "id": 7,
+        "prompt": "Autonomous robotic arm performing a precise task, RAW photo, technology editorial, dramatic lighting, industrial robot, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Autonomous robotic arm performing a precise task, RAW photo, technology editorial, dramatic lighting, industrial robot, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algunos sistemas ya deciden sin supervisión.",
+        "pexels_query": "robotic arm precise"
+      },
+      {
+        "id": 8,
+        "prompt": "Close-up of a complex algorithm flow on screen, RAW photo, technology editorial, dramatic lighting, code flow, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Close-up of a complex algorithm flow on screen, RAW photo, technology editorial, dramatic lighting, code flow, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Pero en tareas muy específicas y limitadas.",
+        "pexels_query": "algorithm flow screen"
+      },
+      {
+        "id": 9,
+        "prompt": "Digital grid over a city map, illustrating energy flow, RAW photo, technology editorial, dramatic lighting, smart grid, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital grid over a city map, illustrating energy flow, RAW photo, technology editorial, dramatic lighting, smart grid, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Como optimización de redes eléctricas, por ejemplo.",
+        "pexels_query": "smart grid energy"
+      },
+      {
+        "id": 10,
+        "prompt": "Empty, futuristic cityscape at night, with glowing digital lines, RAW photo, technology editorial, dramatic lighting, cyberpunk city, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Empty, futuristic cityscape at night, with glowing digital lines, RAW photo, technology editorial, dramatic lighting, cyberpunk city, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "No hay 'Terminator' en el horizonte cercano.",
+        "pexels_query": "futuristic city night"
+      },
+      {
+        "id": 11,
+        "prompt": "Abstract representation of artificial general intelligence (AGI), complex neural network, RAW photo, technology editorial, dramatic lighting, AGI concept, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of artificial general intelligence (AGI), complex neural network, RAW photo, technology editorial, dramatic lighting, AGI concept, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "La AGI aún es una meta lejana, no real.",
+        "pexels_query": "AGI neural network"
+      },
+      {
+        "id": 12,
+        "prompt": "Digital graph showing a long-term projection, RAW photo, technology editorial, dramatic lighting, data projection, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital graph showing a long-term projection, RAW photo, technology editorial, dramatic lighting, data projection, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Grandes expertos como Yann LeCun lo afirman.",
+        "pexels_query": "data projection graph"
+      },
+      {
+        "id": 13,
+        "prompt": "Blurred image of a worried person's silhouette looking at a screen, RAW photo, technology editorial, dramatic lighting, screen reflection, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Blurred image of a worried person's silhouette looking at a screen, RAW photo, technology editorial, dramatic lighting, screen reflection, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Lo sentiste antes, ¿este miedo te paraliza?",
+        "pexels_query": "worried silhouette screen"
+      },
+      {
+        "id": 14,
+        "prompt": "Magnifying glass over complex code lines, RAW photo, technology editorial, dramatic lighting, code analysis, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Magnifying glass over complex code lines, RAW photo, technology editorial, dramatic lighting, code analysis, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Hay algo que sí debes entender ahora.",
+        "pexels_query": "code magnifying glass"
+      },
+      {
+        "id": 15,
+        "prompt": "Distorted digital face made of pixels, indicating bias, RAW photo, technology editorial, dramatic lighting, AI bias, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Distorted digital face made of pixels, indicating bias, RAW photo, technology editorial, dramatic lighting, AI bias, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El riesgo real es el sesgo y la manipulación.",
+        "pexels_query": "AI bias pixels"
+      },
+      {
+        "id": 16,
+        "prompt": "Bar chart with unequal segments, representing algorithmic bias, RAW photo, technology editorial, dramatic lighting, biased data, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Bar chart with unequal segments, representing algorithmic bias, RAW photo, technology editorial, dramatic lighting, biased data, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Algoritmos con prejuicios nos afectan a diario.",
+        "pexels_query": "biased data chart"
+      },
+      {
+        "id": 17,
+        "prompt": "Medical scanner screen showing unusual patterns, RAW photo, technology editorial, dramatic lighting, medical AI error, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Medical scanner screen showing unusual patterns, RAW photo, technology editorial, dramatic lighting, medical AI error, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "En créditos, salud y hasta justicia, algo no está bien.",
+        "pexels_query": "medical AI error"
+      },
+      {
+        "id": 18,
+        "prompt": "Abstract representation of data flowing into a dark void, RAW photo, technology editorial, dramatic lighting, data privacy, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data flowing into a dark void, RAW photo, technology editorial, dramatic lighting, data privacy, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tus datos alimentan estos sistemas sin control.",
+        "pexels_query": "data flowing privacy"
+      },
+      {
+        "id": 19,
+        "prompt": "Digital lock icon breaking apart, RAW photo, technology editorial, dramatic lighting, data breach, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital lock icon breaking apart, RAW photo, technology editorial, dramatic lighting, data breach, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Esto sí puedes ignorarlo, pero no deberías.",
+        "pexels_query": "data breach lock"
+      },
+      {
+        "id": 20,
+        "prompt": "Shield icon surrounded by digital protection lines, RAW photo, technology editorial, dramatic lighting, cyber security, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Shield icon surrounded by digital protection lines, RAW photo, technology editorial, dramatic lighting, cyber security, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Proteger tu privacidad es ahora tu primera línea.",
+        "pexels_query": "cyber security shield"
+      },
+      {
+        "id": 21,
+        "prompt": "Digital interface showing permissions and data access, RAW photo, technology editorial, dramatic lighting, privacy settings, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital interface showing permissions and data access, RAW photo, technology editorial, dramatic lighting, privacy settings, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Conoce qué información compartes con cada IA.",
+        "pexels_query": "privacy settings interface"
+      },
+      {
+        "id": 22,
+        "prompt": "Broken alarm clock in a digital landscape, RAW photo, technology editorial, dramatic lighting, broken warning, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Broken alarm clock in a digital landscape, RAW photo, technology editorial, dramatic lighting, broken warning, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Desconfía de predicciones extremas sin datos.",
+        "pexels_query": "broken alarm digital"
+      },
+      {
+        "id": 23,
+        "prompt": "Multiple news headlines fading into static, RAW photo, technology editorial, dramatic lighting, fake news AI, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Multiple news headlines fading into static, RAW photo, technology editorial, dramatic lighting, fake news AI, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Investiga las fuentes antes de creerlas ciegamente.",
+        "pexels_query": "fake news static"
+      },
+      {
+        "id": 24,
+        "prompt": "Human hand silhouette interacting with glowing AI code, RAW photo, technology editorial, dramatic lighting, human AI interaction, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Human hand silhouette interacting with glowing AI code, RAW photo, technology editorial, dramatic lighting, human AI interaction, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "El futuro de la IA está en nuestras decisiones.",
+        "pexels_query": "human AI code"
+      },
+      {
+        "id": 25,
+        "prompt": "Digital path leading into a bright, unknown future, RAW photo, technology editorial, dramatic lighting, futuristic path, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Digital path leading into a bright, unknown future, RAW photo, technology editorial, dramatic lighting, futuristic path, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Comprende la verdad para usarla a tu favor.",
+        "pexels_query": "futuristic digital path"
+      },
+      {
+        "id": 26,
+        "prompt": "Abstract representation of data nodes connecting, forming a coherent network, RAW photo, technology editorial, dramatic lighting, connected data, no people, no faces, no cgi, photorealism",
+        "prompt_visual": "Abstract representation of data nodes connecting, forming a coherent network, RAW photo, technology editorial, dramatic lighting, connected data, no people, no faces, no cgi, photorealism",
+        "texto_locucion": "Tu control sí importa. Suscríbete para saber más.",
+        "pexels_query": "data nodes network"
+      }
+    ],
+    "hooks": [
+      "Musk: IA nos controla",
+      "Realidad: no en diez años",
+      "Conoce el verdadero riesgo"
+    ],
+    "origen": "bot_pinpinela_cron"
+  }
+]
