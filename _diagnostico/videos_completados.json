@@ -1,7 +1,5 @@
 {
   "ids": [
-    "c56bb48c-598d-4645-b8f7-e877bf1802be",
-    "c56bb48c-598d-4645-b8f7-e877bf1802be_asm",
     "48b0a287-7b09-4b8c-b6cb-6162d24f76aa",
     "48b0a287-7b09-4b8c-b6cb-6162d24f76aa_asm",
     "a8338be3-7e2c-4375-886e-c520d49543df",
@@ -199,7 +197,9 @@
     "e1f69722-235d-4441-ad65-cc2560b34bd0",
     "e1f69722-235d-4441-ad65-cc2560b34bd0_asm",
     "b46de0ec-25ff-4931-bbf0-b7cf58c7d3c6",
-    "b46de0ec-25ff-4931-bbf0-b7cf58c7d3c6_asm"
+    "b46de0ec-25ff-4931-bbf0-b7cf58c7d3c6_asm",
+    "30195cfe-f4a6-40e9-9ac8-3b2fe6e92c01",
+    "30195cfe-f4a6-40e9-9ac8-3b2fe6e92c01_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1571,6 +1571,11 @@
       "marca": "TuIALista",
       "formato": "9:16"
     },
-    "b46de0ec-25ff-4931-bbf0-b7cf58c7d3c6": {}
+    "b46de0ec-25ff-4931-bbf0-b7cf58c7d3c6": {},
+    "30195cfe-f4a6-40e9-9ac8-3b2fe6e92c01": {
+      "duracion_real_seg": 135.8,
+      "marca": "TuIALista",
+      "formato": "9:16"
+    }
   }
 }
