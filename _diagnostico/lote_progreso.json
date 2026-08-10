@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 65,
+  "completados": 66,
   "fallidos": 0,
   "trabajo_actual": "Video 66/90 (Monkygraff) lleva 340 min — sigue en proceso, esperando...",
-  "mensaje": "Video 66 tarda más de lo normal (340 min) — sigue esperando.",
+  "mensaje": "Video 66 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -591,6 +591,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 1612.6,
       "hora": "06:00"
+    },
+    {
+      "n": 66,
+      "marca": "Monkygraff",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2221.8,
+      "hora": "11:49"
     }
   ]
 }
