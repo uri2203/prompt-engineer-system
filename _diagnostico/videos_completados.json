@@ -1,7 +1,5 @@
 {
   "ids": [
-    "e48b1349-cf08-4e69-ae57-9a6d6627f6b6",
-    "e48b1349-cf08-4e69-ae57-9a6d6627f6b6_asm",
     "a59e2197-6c5e-4ba7-bcd3-a679d507adb6",
     "a59e2197-6c5e-4ba7-bcd3-a679d507adb6_asm",
     "131da7ea-7b85-43ea-97a9-293ec5c9c0fa",
@@ -199,7 +197,9 @@
     "785e2ab6-74ff-4fe7-80ca-eb61a7ed539d",
     "785e2ab6-74ff-4fe7-80ca-eb61a7ed539d_asm",
     "6094b381-4e18-4517-bd4e-6e3ec3e3033f",
-    "6094b381-4e18-4517-bd4e-6e3ec3e3033f_asm"
+    "6094b381-4e18-4517-bd4e-6e3ec3e3033f_asm",
+    "55db6371-8b7e-4933-a197-b66c6f3cd0aa",
+    "55db6371-8b7e-4933-a197-b66c6f3cd0aa_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1720,6 +1720,11 @@
     "6094b381-4e18-4517-bd4e-6e3ec3e3033f": {
       "duracion_real_seg": 2024.7,
       "marca": "Monkygraff",
+      "formato": "16:9"
+    },
+    "55db6371-8b7e-4933-a197-b66c6f3cd0aa": {
+      "duracion_real_seg": 1905.9,
+      "marca": "FiltradoMX",
       "formato": "16:9"
     }
   }
