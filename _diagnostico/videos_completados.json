@@ -1,7 +1,5 @@
 {
   "ids": [
-    "7f0abe66-bc0f-492e-b96f-3efda2ecb6dd",
-    "7f0abe66-bc0f-492e-b96f-3efda2ecb6dd_asm",
     "f0d6e219-5218-40bb-90e4-cb1c95b0eab6",
     "f0d6e219-5218-40bb-90e4-cb1c95b0eab6_asm",
     "05f93bf8-fbf2-46bf-8753-1974e5259876",
@@ -199,7 +197,9 @@
     "8873c7fc-2e0b-4162-bdae-ce2978572a76",
     "8873c7fc-2e0b-4162-bdae-ce2978572a76_asm",
     "f5033353-98ef-4b26-a81b-83e880d372b6",
-    "f5033353-98ef-4b26-a81b-83e880d372b6_asm"
+    "f5033353-98ef-4b26-a81b-83e880d372b6_asm",
+    "fa5e9c61-f459-466a-97e2-c708ec841fbf",
+    "fa5e9c61-f459-466a-97e2-c708ec841fbf_asm"
   ],
   "detalles": {
     "17d686fd-b719-4a3f-8895-5bd5c141bdb4": {
@@ -1749,6 +1749,11 @@
     },
     "f5033353-98ef-4b26-a81b-83e880d372b6": {
       "duracion_real_seg": 2235.2,
+      "marca": "FiltradoMX",
+      "formato": "16:9"
+    },
+    "fa5e9c61-f459-466a-97e2-c708ec841fbf": {
+      "duracion_real_seg": 2156.3,
       "marca": "FiltradoMX",
       "formato": "16:9"
     }
