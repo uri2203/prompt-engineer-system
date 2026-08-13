@@ -1,10 +1,10 @@
 {
   "estado_lote": "produciendo",
   "total": 90,
-  "completados": 71,
+  "completados": 72,
   "fallidos": 1,
   "trabajo_actual": "Video 73/90 (FiltradoMX) lleva 328 min — sigue en proceso, esperando...",
-  "mensaje": "Video 73 tarda más de lo normal (328 min) — sigue esperando.",
+  "mensaje": "Video 73 completado",
   "resumen": "La Viuda: 10s+5L | Monkygraff: 10s+5L | FiltradoMX: 10s+5L | LaesquinaRandom: 10s+5L | TuIALista: 10s+5L | Umbral Alterno: 10s+5L",
   "historial": [
     {
@@ -645,6 +645,15 @@
       "duracion_sel": 28,
       "duracion_real_seg": 2436.5,
       "hora": "15:58"
+    },
+    {
+      "n": 73,
+      "marca": "FiltradoMX",
+      "formato": "16:9",
+      "tipo": "Largo",
+      "duracion_sel": 28,
+      "duracion_real_seg": 2156.3,
+      "hora": "21:38"
     }
   ]
 }
