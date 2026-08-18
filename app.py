@@ -34,6 +34,8 @@ resultados_itinerantes = {}
 _videos_completados = set()  # IDs de videos cuyo ensamblaje terminó (para el orquestador)
 _videos_detalles = {}        # tarea_id base -> {duracion_real_seg, marca, formato} (para el historial)
 audios_temporales = {}  # Almacén temporal de audios grandes
+_lote_control_mem = None      # control del lote en memoria (sobrevive a GitHub roto)
+_lote_progreso_mem = None     # progreso del lote en memoria
 
 def login_required(f):
     @wraps(f)
@@ -1272,8 +1274,11 @@ def api_video_fallido():
 @app.route('/api/bot/lote_control', methods=['GET', 'POST'])
 def api_lote_control():
     """Controles del lote: pausar / reanudar / cancelar. GET = el orquestador lee
-    la orden actual. POST = el panel manda la orden."""
+    la orden actual. POST = el panel manda la orden.
+    El control vive en MEMORIA (GitHub es backup): si el token GH de Render está
+    roto, el orquestador igual recibe la orden."""
     CTRL_PATH = "_diagnostico/lote_control.json"
+    global _lote_control_mem
     if request.method == 'POST':
         data = request.json or {}
         accion = data.get("accion", "")  # "", pausar, reanudar, cancelar, iniciar
@@ -1282,13 +1287,17 @@ def api_lote_control():
         # (iniciar/pausar/reanudar/cancelar) sí requieren sesión del panel.
         if accion != "" and 'user' not in session:
             return jsonify({"status": "error", "message": "No autorizado"}), 401
-        _gh_guardar_json(CTRL_PATH, {"accion": accion, "ts": time.time()}, f"control: {accion or 'consumido'}")
+        _lote_control_mem = {"accion": accion, "ts": time.time()}
+        _gh_guardar_json(CTRL_PATH, _lote_control_mem, f"control: {accion or 'consumido'}")
         # Al CANCELAR: liberar el panel de inmediato reseteando el progreso a inactivo,
         # sin esperar a que el orquestador reporte (puede haberse detenido ya). Así el
         # panel no se queda trabado mostrando el estado viejo tras la cancelación.
         if accion == "cancelar":
             _worker_estado["ocupado"] = False
             _worker_estado["tarea_actual"] = ""
+            _lote_progreso_mem = {"estado_lote": "inactivo", "total": 0, "completados": 0,
+                                  "fallidos": 0, "trabajo_actual": "",
+                                  "mensaje": "Lote cancelado por el operador.", "resumen": ""}
             try:
                 _gh_guardar_json("_diagnostico/lote_progreso.json",
                                  {"estado_lote": "inactivo", "total": 0, "completados": 0,
@@ -1297,16 +1306,23 @@ def api_lote_control():
             except Exception:
                 pass
         return jsonify({"status": "ok", "accion": accion})
+    if _lote_control_mem is not None:
+        return jsonify(_lote_control_mem)
     return jsonify(_gh_leer_json(CTRL_PATH, {"accion": ""}))
 
 @app.route('/api/bot/lote_progreso', methods=['GET', 'POST'])
 def api_lote_progreso():
-    """Progreso del lote en vivo. POST = el orquestador reporta. GET = el panel lee."""
+    """Progreso del lote en vivo. POST = el orquestador reporta. GET = el panel lee.
+    Igual que el control: memoria primero, GitHub de respaldo."""
     PROG_PATH = "_diagnostico/lote_progreso.json"
+    global _lote_progreso_mem
     if request.method == 'POST':
         data = request.json or {}
+        _lote_progreso_mem = data
         _gh_guardar_json(PROG_PATH, data, "progreso lote")
         return jsonify({"status": "ok"})
+    if _lote_progreso_mem is not None:
+        return jsonify(_lote_progreso_mem)
     return jsonify(_gh_leer_json(PROG_PATH, {"estado_lote": "inactivo", "total": 0, "completados": 0}))
 
 @app.route('/api/bot/salud_llaves', methods=['GET'])
