@@ -1,42 +1,18 @@
 {
-  "marcas": [
-    {
-      "marca": "La Viuda",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    },
-    {
-      "marca": "Monkygraff",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    },
-    {
-      "marca": "FiltradoMX",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    },
-    {
-      "marca": "LaesquinaRandom",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    },
-    {
-      "marca": "TuIALista",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    },
-    {
-      "marca": "Umbral Alterno",
-      "shorts": 10,
-      "largos": 5,
-      "duracion_min": 28
-    }
-  ],
-  "enfriamiento_seg": 180,
-  "orden": "shorts_primero"
+    "marcas":  [
+                   {
+                       "marca":  "La Viuda",
+                       "largos":  1,
+                       "shorts":  3,
+                       "duracion_min":  15
+                   },
+                   {
+                       "marca":  "Monkygraff",
+                       "largos":  1,
+                       "shorts":  3,
+                       "duracion_min":  15
+                   }
+               ],
+    "enfriamiento_seg":  180,
+    "orden":  "largos_primero"
 }
