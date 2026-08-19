@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:21:00",
+ "ts": "2026-08-18 23:22:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,7 +89,6 @@
   "   [SD] Intento 1/3 escena 7..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +167,15 @@
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 7,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:21:03"
+  "ts": "23:22:03"
  },
  "lote": {
   "estado": "desconocido",
