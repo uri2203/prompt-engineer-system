@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 17:56:00",
+ "ts": "2026-08-19 17:57:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -148,9 +148,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 2462] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 2463] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +165,17 @@
   "[CICLO 2473] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 2474] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 2474] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 2476] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "17:56:01"
+  "ts": "17:57:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
