@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:53:00",
+ "ts": "2026-08-18 23:54:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -175,7 +175,7 @@
   "paso": 17,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:53:00"
+  "ts": "23:54:00"
  },
  "lote": {
   "estado": "desconocido",
@@ -192,7 +192,65 @@
   "trabajo": "Generando video 1 (La Viuda)",
   "videos_ok": 0,
   "en_proceso": 1,
-  "pendientes": 7
+  "pendientes": 7,
+  "trabajos": [
+   {
+    "n": 1,
+    "marca": "La Viuda",
+    "formato": "16:9",
+    "estado": "en_proceso",
+    "tarea": "34b68a34-9a03-419f-b1e1-0593d46fdd89"
+   },
+   {
+    "n": 2,
+    "marca": "Monkygraff",
+    "formato": "16:9",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 3,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 4,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 5,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 6,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 7,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 8,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   }
+  ]
  },
  "cola_local": 0,
  "render_lote": {
