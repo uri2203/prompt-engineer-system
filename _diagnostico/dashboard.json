@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:04:00",
+ "ts": "2026-08-18 23:05:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -90,12 +90,6 @@
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "Nodo caido: ['Voz'] - esperando (sin limite)",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "Nodo caido: ['Voz'] - esperando (sin limite)",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Nodo caido: ['Voz'] - esperando (sin limite)",
@@ -168,6 +162,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 1,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:04:00"
+  "ts": "23:05:00"
  },
  "lote": {
   "estado": "esperando_nodo",
