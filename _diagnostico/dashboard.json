@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 00:43:00",
+ "ts": "2026-08-19 00:44:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -123,12 +123,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CICLO 510] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 511] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +162,20 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 538] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 538] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 540] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "00:43:00"
+  "ts": "00:44:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
