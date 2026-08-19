@@ -1,9 +1,9 @@
 {
- "ts": "2026-08-19 09:40:00",
+ "ts": "2026-08-19 09:41:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
-  "voz": "on",
+  "voz": "off",
   "parallax": "on"
  },
  "worker_log": [
@@ -89,11 +89,6 @@
   "   [LIBRE] Worker disponible para la siguiente orden."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +163,19 @@
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 1549] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "09:40:01"
+  "ts": "09:41:07"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -197,7 +197,9 @@
   "marca": "",
   "formato": ""
  },
- "acciones_pendientes": [],
+ "acciones_pendientes": [
+  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
+ ],
  "lote_local": {
   "estado": "produciendo",
   "mensaje": "Produccion del video 1 iniciada.",
