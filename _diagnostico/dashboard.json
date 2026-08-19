@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 00:22:00",
+ "ts": "2026-08-19 00:23:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -95,11 +95,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 442] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 467] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +163,31 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 27,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "00:22:00"
+  "ts": "00:23:00"
+ },
+ "cadena": {
+  "ensamblaje_activo": true,
+  "locucion": "no_iniciada",
+  "escenas": {
+   "paso": 0,
+   "total": 0
+  },
+  "mezcla": false,
+  "entrega": false,
+  "hooks": 0,
+  "detalle_escena": ""
  },
  "lote": {
   "estado": "desconocido",
@@ -523,5 +535,9 @@
    "20260713_070017_LaesquinaRandom_4221cb28-2b99-44b9-a.json",
    "20260713_070356_LaesquinaRandom_4221cb28-2b99-44b9-a.json"
   ]
+ },
+ "videos_completados": {
+  "lote": 0,
+  "historico": 260
  }
 }
