@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:26:00",
+ "ts": "2026-08-18 23:27:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 20/30...",
-  "   [SD] Intento 1/3 escena 20...",
-  "   [OK] Nodo 1 — Escena 20 SD ✅",
   "⚙️ NODO 1: Escena 21/30...",
   "   [SD] Intento 1/3 escena 21...",
   "   [OK] Nodo 1 — Escena 21 SD ✅",
@@ -86,11 +83,12 @@
   "   [SD] Intento 1/3 escena 7...",
   "   [OK] Nodo 1 — Escena 7 SD ✅",
   "⚙️ NODO 1: Escena 8/30...",
-  "   [SD] Intento 1/3 escena 8..."
+  "   [SD] Intento 1/3 escena 8...",
+  "   [OK] Nodo 1 — Escena 8 SD ✅",
+  "⚙️ NODO 1: Escena 9/30...",
+  "   [SD] Intento 1/3 escena 9..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -166,16 +164,18 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 8,
+  "paso": 9,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:26:03"
+  "ts": "23:27:01"
  },
  "lote": {
   "estado": "desconocido",
