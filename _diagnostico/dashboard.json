@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 00:33:00",
+ "ts": "2026-08-19 00:34:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [SD] Intento 1/3 escena 11...",
   "   [OK] Nodo 1 — Escena 11 SD ✅",
   "⚙️ NODO 1: Escena 12/30...",
   "   [SD] Intento 1/3 escena 12...",
@@ -86,7 +85,8 @@
   "[VOICE LOCAL] Procesando chunk 1/16 (112 palabras)...",
   "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s...",
   "[VOICE LOCAL] Chunk 1 intento 2/4 — HTTP 500 — esperando 15s...",
-  "[VOICE LOCAL] Chunk 1 intento 3/4 — HTTP 500 — esperando 30s..."
+  "[VOICE LOCAL] Chunk 1 intento 3/4 — HTTP 500 — esperando 30s...",
+  "[VOICE LOCAL] Chunk 1 intento 4/4 — HTTP 500 — esperando 60s..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "00:33:00"
+  "ts": "00:34:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
