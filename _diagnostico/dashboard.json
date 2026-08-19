@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 22:43:40",
+ "ts": "2026-08-18 22:54:05",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,7 +89,6 @@
   "   [LIBRE] Worker disponible para la siguiente orden."
  ],
  "orquestador_log": [
-  "Nodo caido: ['Voz'] - esperando (sin limite)",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +167,15 @@
   "Nodo caido: ['Voz'] - esperando (sin limite)",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "Nodo caido: ['Voz'] - esperando (sin limite)"
  ],
  "fase": {
-  "nombre": "IMAGEN",
-  "paso": 10,
-  "total": 30,
-  "detalle": "Generando escena",
-  "ts": "22:43:42"
+  "nombre": "idle",
+  "paso": 0,
+  "total": 0,
+  "detalle": "Worker disponible",
+  "ts": "22:54:07"
  },
  "lote": {
   "estado": "esperando_nodo",
@@ -185,6 +185,11 @@
   "marca": "",
   "formato": ""
  },
+ "acciones_pendientes": [
+  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC",
+  "Orquestador esperando nodo: VOZ debe volver para lanzar video 1",
+  "Worker idle y lote sin producir: pendiente el arreglo de VOZ para que el orquestador lance el video 1"
+ ],
  "lote_local": {
   "estado": "esperando_nodo",
   "mensaje": "Nodo(s) caido(s): Voz. Esperando que vuelvan...",
