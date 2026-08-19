@@ -1,9 +1,9 @@
 {
- "ts": "2026-08-18 23:34:00",
+ "ts": "2026-08-18 23:34:40",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
-  "voz": "off",
+  "voz": "on",
   "parallax": "on"
  },
  "worker_log": [
@@ -142,9 +142,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,6 +165,9 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 409] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 11,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:34:01"
+  "ts": "23:34:40"
  },
  "lote": {
   "estado": "desconocido",
@@ -185,9 +185,7 @@
   "marca": "",
   "formato": ""
  },
- "acciones_pendientes": [
-  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
- ],
+ "acciones_pendientes": [],
  "lote_local": {
   "estado": "produciendo",
   "mensaje": "Produccion del video 1 iniciada.",
