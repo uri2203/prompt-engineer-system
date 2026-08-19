@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:00:00",
+ "ts": "2026-08-18 23:01:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -168,14 +168,14 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "Nodo caido: ['Voz'] - esperando (sin limite)"
+  "Lanzando video 1/8: La Viuda 16:9"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "23:00:02"
+  "ts": "23:01:00"
  },
  "lote": {
   "estado": "esperando_nodo",
