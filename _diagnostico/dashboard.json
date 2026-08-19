@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 00:18:00",
+ "ts": "2026-08-19 00:19:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "🚀 [ORDEN VISUAL] ID: 34b68a34-9a03-419f-b1e1-0593d46fdd89",
-  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
-  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
   "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
   "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
   "🎬 16:9 LARGO → 3060 [192.168.0.215]",
@@ -86,14 +83,12 @@
   "   [SD] Intento 1/3 escena 24...",
   "   [OK] Nodo 1 — Escena 24 SD ✅",
   "⚙️ NODO 1: Escena 25/30...",
-  "   [SD] Intento 1/3 escena 25..."
+  "   [SD] Intento 1/3 escena 25...",
+  "   [OK] Nodo 1 — Escena 25 SD ✅",
+  "⚙️ NODO 1: Escena 26/30...",
+  "   [SD] Intento 1/3 escena 26..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +163,19 @@
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 494] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 495] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 25,
+  "paso": 26,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "00:18:00"
+  "ts": "00:19:00"
  },
  "lote": {
   "estado": "desconocido",
