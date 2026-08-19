@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 00:09:00",
+ "ts": "2026-08-19 00:10:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
-  "   🔴 Nodo VOZ (http://192.168.0.251:8000)",
-  "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
   "❌ [PRE-FLIGHT] ABORTADO — nodos críticos caídos:",
   "      • Nodo de VOZ no responde en http://192.168.0.251:8000",
   "   No se generará nada para no desperdiciar tiempo. Activa los nodos y reintenta.",
@@ -86,7 +83,10 @@
   "   [SD] Intento 1/3 escena 21...",
   "   [OK] Nodo 1 — Escena 21 SD ✅",
   "⚙️ NODO 1: Escena 22/30...",
-  "   [SD] Intento 1/3 escena 22..."
+  "   [SD] Intento 1/3 escena 22...",
+  "   [OK] Nodo 1 — Escena 22 SD ✅",
+  "⚙️ NODO 1: Escena 23/30...",
+  "   [SD] Intento 1/3 escena 23..."
  ],
  "orquestador_log": [
   "[CICLO 414] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 22,
+  "paso": 23,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "00:09:00"
+  "ts": "00:10:00"
  },
  "lote": {
   "estado": "desconocido",
