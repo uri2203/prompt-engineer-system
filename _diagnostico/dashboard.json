@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 22:56:00",
+ "ts": "2026-08-18 22:57:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -90,8 +90,6 @@
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "Nodo caido: ['Voz'] - esperando (sin limite)",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Nodo caido: ['Voz'] - esperando (sin limite)",
@@ -168,14 +166,16 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Nodo caido: ['Voz'] - esperando (sin limite)",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "Nodo caido: ['Voz'] - esperando (sin limite)"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "22:56:02"
+  "ts": "22:57:02"
  },
  "lote": {
   "estado": "esperando_nodo",
