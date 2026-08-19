@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-19 10:47:00",
+ "ts": "2026-08-19 10:48:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,10 +89,6 @@
   "   [LIBRE] Worker disponible para la siguiente orden."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +164,18 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "10:47:00"
+  "ts": "10:48:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
