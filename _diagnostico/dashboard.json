@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-18 23:33:00",
+ "ts": "2026-08-18 23:34:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 22/30...",
-  "   [SD] Intento 1/3 escena 22...",
-  "   [OK] Nodo 1 — Escena 22 SD ✅",
   "⚙️ NODO 1: Escena 23/30...",
   "   [SD] Intento 1/3 escena 23...",
   "   [OK] Nodo 1 — Escena 23 SD ✅",
@@ -86,13 +83,12 @@
   "   [SD] Intento 1/3 escena 9...",
   "   [OK] Nodo 1 — Escena 9 SD ✅",
   "⚙️ NODO 1: Escena 10/30...",
-  "   [SD] Intento 1/3 escena 10..."
+  "   [SD] Intento 1/3 escena 10...",
+  "   [OK] Nodo 1 — Escena 10 SD ✅",
+  "⚙️ NODO 1: Escena 11/30...",
+  "   [SD] Intento 1/3 escena 11..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +164,18 @@
   "[CICLO 406] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 407] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 407] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 409] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 10,
+  "paso": 11,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "23:33:01"
+  "ts": "23:34:01"
  },
  "lote": {
   "estado": "desconocido",
