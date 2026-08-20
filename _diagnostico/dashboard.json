@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 09:14:00",
+ "ts": "2026-08-20 09:15:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -90,7 +90,6 @@
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CICLO 4165] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +167,15 @@
   "[PLAN] Leído desde GitHub (fallback directo)",
   "✅ LOTE CREADO: La Viuda: 3s+1L | Monkygraff: 3s+1L (8 videos)",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "Lanzando video 1/8: La Viuda 16:9"
+  "Lanzando video 1/8: La Viuda 16:9",
+  "[CICLO 4195] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 1,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "09:14:01"
+  "ts": "09:15:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
