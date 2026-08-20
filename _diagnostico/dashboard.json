@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 10:50:00",
+ "ts": "2026-08-20 10:51:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "🎬 16:9 LARGO → 3060 [192.168.0.215]",
-  "⚙️ NODO 1: Escena 1/30...",
-  "   [SD] Intento 1/3 escena 1...",
   "   [OK] Nodo 1 — Escena 1 SD ✅",
   "⚙️ NODO 1: Escena 2/30...",
   "   [SD] Intento 1/3 escena 2...",
@@ -86,7 +83,10 @@
   "   [SD] Intento 1/3 escena 25...",
   "   [OK] Nodo 1 — Escena 25 SD ✅",
   "⚙️ NODO 1: Escena 26/30...",
-  "   [SD] Intento 1/3 escena 26..."
+  "   [SD] Intento 1/3 escena 26...",
+  "   [OK] Nodo 1 — Escena 26 SD ✅",
+  "⚙️ NODO 1: Escena 27/30...",
+  "   [SD] Intento 1/3 escena 27..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 26,
+  "paso": 27,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "10:50:00"
+  "ts": "10:51:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
