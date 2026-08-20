@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 10:37:00",
+ "ts": "2026-08-20 10:38:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚠️ Error en voz local.",
-  "   [LIBRE] Worker disponible para la siguiente orden.",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e723b3c410>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "",
   "🚀 [ORDEN VISUAL] ID: a9c8ed02-e742-4f27-87c2-9eb257f60e95",
   "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
@@ -86,7 +83,10 @@
   "   [SD] Intento 1/3 escena 22...",
   "   [OK] Nodo 1 — Escena 22 SD ✅",
   "⚙️ NODO 1: Escena 23/30...",
-  "   [SD] Intento 1/3 escena 23..."
+  "   [SD] Intento 1/3 escena 23...",
+  "   [OK] Nodo 1 — Escena 23 SD ✅",
+  "⚙️ NODO 1: Escena 24/30...",
+  "   [SD] Intento 1/3 escena 24..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 23,
+  "paso": 24,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "10:37:00"
+  "ts": "10:38:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
