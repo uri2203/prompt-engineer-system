@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:36:00",
+ "ts": "2026-08-20 14:37:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Buscando: 'global trade map' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 7431508 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 28 — Pexels ✅",
   "⚙️ NODO 1: Escena 29/30...",
   "   [SD] Intento 1/3 escena 29...",
   "   [OK] Nodo 1 — Escena 29 SD ✅",
@@ -86,10 +82,13 @@
   "[VOICE LOCAL] Chunk 25 OK — 473591 bytes",
   "[VOICE LOCAL] Procesando chunk 26/33 (109 palabras)...",
   "[VOICE LOCAL] Chunk 26 OK — 712664 bytes",
-  "[VOICE LOCAL] Procesando chunk 27/33 (91 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 27/33 (91 palabras)...",
+  "[VOICE LOCAL] Chunk 27 OK — 521657 bytes",
+  "[VOICE LOCAL] Procesando chunk 28/33 (115 palabras)...",
+  "[VOICE LOCAL] Chunk 28 OK — 658747 bytes",
+  "[VOICE LOCAL] Procesando chunk 29/33 (113 palabras)..."
  ],
  "orquestador_log": [
-  "[CICLO 4736] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4750] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -168,14 +167,15 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4792] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "PRE_FLIGHT",
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "14:36:00"
+  "ts": "14:37:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
