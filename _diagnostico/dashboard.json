@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:29:00",
+ "ts": "2026-08-20 11:30:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [LIBRE] Worker disponible para la siguiente orden.",
-  "🧹 [LIMPIEZA] 1 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
-  "🛑 [BLOQUEO] Tarea a9c8ed02-e742-4f27-87c2-9eb257f60e95 ya se completó localmente. Evitando bucle infinito...",
   "",
   "🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...",
   "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
@@ -86,15 +83,12 @@
   "   [OK] Escena 12 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,zoom_punch,ken_burns_agresivo,rush_diagonal,zoom_punch,punch_in,slide_r,slide_l,ken_burns_agresivo,snap_zoom,ken_burns_agresivo,shake_zoom,rush_diagonal,slide_l",
   "   [OK] Escena 13 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,whip_pan,shake_zoom,ken_burns_agresivo,shake_zoom,punch_in,snap_zoom,punch_in,shake_zoom,snap_zoom,slide_r,ken_burns_agresivo,shake_zoom,punch_in",
   "   [OK] Escena 14 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,rush_diagonal,whip_pan,slide_l,shake_zoom,rush_diagonal,snap_zoom,zoom_punch,snap_zoom,zoom_punch,rush_diagonal,zoom_punch,whip_pan,ken_burns_agresivo",
-  "   [DEPTHFLOW] escena 14 → parallax 'vertical' OK"
+  "   [DEPTHFLOW] escena 14 → parallax 'vertical' OK",
+  "   [DEPTHFLOW] escena 15 → parallax 'horizontal' OK",
+  "   [DEPTHFLOW] escena 16 → parallax 'circle' OK",
+  "   [OK] Escena 18 (SD-Dinamica 14x) — tipo:impacto efectos:fast_push,flash_cut,zoom_punch,snap_zoom,flash_cut,pulse_punch,flash_cut,zoom_punch,punch_in,pulse_punch,fast_push,flash_cut,fast_push,flash_cut"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,6 +162,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:29:01"
+  "ts": "11:30:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
