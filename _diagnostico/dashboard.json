@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:30:00",
+ "ts": "2026-08-20 14:31:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Buscando: 'cargo port operations' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 10391545 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 22 — Pexels ✅",
   "⚙️ NODO 1: Escena 23/30...",
   "   [SD] Intento 1/3 escena 23...",
   "   [OK] Nodo 1 — Escena 23 SD ✅",
@@ -86,14 +82,13 @@
   "[VOICE LOCAL] Chunk 13 OK — 605248 bytes",
   "[VOICE LOCAL] Procesando chunk 14/33 (111 palabras)...",
   "[VOICE LOCAL] Chunk 14 OK — 653732 bytes",
-  "[VOICE LOCAL] Procesando chunk 15/33 (117 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 15/33 (117 palabras)...",
+  "[VOICE LOCAL] Chunk 15 OK — 648716 bytes",
+  "[VOICE LOCAL] Procesando chunk 16/33 (98 palabras)...",
+  "[VOICE LOCAL] Chunk 16 OK — 583933 bytes",
+  "[VOICE LOCAL] Procesando chunk 17/33 (117 palabras)..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4727] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4778] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4778] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4781] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4782] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "PRE_FLIGHT",
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "14:30:00"
+  "ts": "14:31:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
