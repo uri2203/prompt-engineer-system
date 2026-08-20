@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 09:12:00",
+ "ts": "2026-08-20 09:13:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,13 +89,6 @@
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e723b3c410>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
@@ -168,14 +161,21 @@
   "   [LIMPIEZA] Lote local borrado: C:\\NODO_PINPINELA\\estado_lote\\lote_actual.json",
   "[CONTROL] Leído desde GitHub (fallback directo): cancelar",
   "[CICLO 4191] accion='cancelar' | lote_activo=False | estado=None",
-  "[CICLO 4192] accion='' | lote_activo=False | estado=None"
+  "[CICLO 4192] accion='' | lote_activo=False | estado=None",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4194] accion='iniciar' | lote_activo=False | estado=None",
+  "[CONTROL] 'iniciar' RECIBIDO (ts=1787101000.0) — creando lote...",
+  "[PLAN] Leído desde GitHub (fallback directo)",
+  "✅ LOTE CREADO: La Viuda: 3s+1L | Monkygraff: 3s+1L (8 videos)",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "Lanzando video 1/8: La Viuda 16:9"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "09:12:01"
+  "ts": "09:13:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -198,7 +198,72 @@
   "formato": ""
  },
  "acciones_pendientes": [],
- "lote_local": null,
+ "lote_local": {
+  "estado": "produciendo",
+  "mensaje": "Lote creado, iniciando produccion.",
+  "trabajo": "",
+  "videos_ok": 0,
+  "en_proceso": 0,
+  "pendientes": 8,
+  "trabajos": [
+   {
+    "n": 1,
+    "marca": "La Viuda",
+    "formato": "16:9",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 2,
+    "marca": "Monkygraff",
+    "formato": "16:9",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 3,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 4,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 5,
+    "marca": "La Viuda",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 6,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 7,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   },
+   {
+    "n": 8,
+    "marca": "Monkygraff",
+    "formato": "9:16",
+    "estado": "pendiente",
+    "tarea": null
+   }
+  ]
+ },
  "cola_local": 0,
  "render_lote": {
   "completados": 0,
