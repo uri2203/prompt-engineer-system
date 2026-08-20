@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:22:00",
+ "ts": "2026-08-20 11:23:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [SD] Intento 1/3 escena 22...",
-  "   [OK] Nodo 1 — Escena 22 SD ✅",
-  "⚙️ NODO 1: Escena 23/30...",
-  "   [SD] Intento 1/3 escena 23...",
   "   [OK] Nodo 1 — Escena 23 SD ✅",
   "⚙️ NODO 1: Escena 24/30...",
   "   [SD] Intento 1/3 escena 24...",
@@ -86,7 +82,11 @@
   "[VOICE LOCAL] Chunk 17 OK — 781627 bytes",
   "[VOICE LOCAL] Procesando chunk 18/22 (117 palabras)...",
   "[VOICE LOCAL] Chunk 18 OK — 755714 bytes",
-  "[VOICE LOCAL] Procesando chunk 19/22 (113 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 19/22 (113 palabras)...",
+  "[VOICE LOCAL] Chunk 19 OK — 731054 bytes",
+  "[VOICE LOCAL] Procesando chunk 20/22 (115 palabras)...",
+  "[VOICE LOCAL] Chunk 20 OK — 697617 bytes",
+  "[VOICE LOCAL] Procesando chunk 21/22 (113 palabras)..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:22:01"
+  "ts": "11:23:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
