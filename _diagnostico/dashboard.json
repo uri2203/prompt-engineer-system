@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:44:00",
+ "ts": "2026-08-20 14:45:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,11 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 13 OK — 605248 bytes",
-  "[VOICE LOCAL] Procesando chunk 14/33 (111 palabras)...",
-  "[VOICE LOCAL] Chunk 14 OK — 653732 bytes",
-  "[VOICE LOCAL] Procesando chunk 15/33 (117 palabras)...",
-  "[VOICE LOCAL] Chunk 15 OK — 648716 bytes",
   "[VOICE LOCAL] Procesando chunk 16/33 (98 palabras)...",
   "[VOICE LOCAL] Chunk 16 OK — 583933 bytes",
   "[VOICE LOCAL] Procesando chunk 17/33 (117 palabras)...",
@@ -86,12 +81,14 @@
   "   [OK] Escena 23 (SD-Dinamica 14x) — tipo:transicion efectos:whip_pan,ken_burns_diagonal,fast_push,slide_r,fast_push,zoom_punch,snap_zoom,slide_up,zoom_punch,fast_push,whip_pan,slide_up,zoom_punch,fast_push",
   "   [OK] Escena 24 (SD-Dinamica 14x) — tipo:impacto efectos:pulse_punch,shake_zoom,snap_zoom,pulse_punch,shake_zoom,fast_push,snap_zoom,zoom_punch,snap_zoom,fast_push,shake_zoom,punch_in,fast_push,zoom_punch",
   "   [KINETIC] texto: cannot identify image file 'C:/DarkFactory_Renders/3bc65166-9833-4acd-b1a3-2f229a40a5e5/escena_25.mp4'",
-  "   [OK] Escena 25 (Pexels) — tipo:impacto efecto:shake_zoom"
+  "   [OK] Escena 25 (Pexels) — tipo:impacto efecto:shake_zoom",
+  "   [DEPTHFLOW] escena 25 → parallax 'circle' OK",
+  "   [DEPTHFLOW] escena 26 → parallax 'circle' OK",
+  "   [KINETIC] texto: cannot identify image file 'C:/DarkFactory_Renders/3bc65166-9833-4acd-b1a3-2f229a40a5e5/escena_28.mp4'",
+  "   [OK] Escena 28 (Pexels) — tipo:tension efecto:slide_r",
+  "   [OK] Escena 29 (SD-Dinamica 14x) — tipo:tension efectos:shake_zoom,slide_r,whip_pan,slide_r,ken_burns_agresivo,punch_in,shake_zoom,whip_pan,ken_burns_agresivo,rush_diagonal,whip_pan,snap_zoom,ken_burns_agresivo,rush_diagonal"
  ],
  "orquestador_log": [
-  "[CICLO 4770] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4772] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +165,10 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4804] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4804] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4807] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
