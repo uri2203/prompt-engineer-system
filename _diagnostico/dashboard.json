@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 13:34:00",
+ "ts": "2026-08-20 13:35:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Clip listo.",
   "   [OK] Escena 2 — Pexels ✅",
   "⚙️ NODO 1: Escena 3/30...",
   "   [PEXELS] Query de Gemini: 'natural gas pipeline infrastructure'",
@@ -86,13 +85,10 @@
   "   [OK] Nodo 1 — Escena 20 SD ✅",
   "⚙️ NODO 1: Escena 21/30...",
   "   [PEXELS] Query de Gemini: 'rare earth mine'",
-  "   [PEXELS] Buscando: 'rare earth mine' (landscape) [relevancia=sí]..."
+  "   [PEXELS] Buscando: 'rare earth mine' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 6618334 encontrado — descargando..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CICLO 4621] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4625] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +164,18 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 21,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:34:01"
+  "ts": "13:35:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
