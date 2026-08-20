@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 15:12:00",
+ "ts": "2026-08-20 15:13:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Escena 3 (Pexels) — tipo:transicion efecto:slide_up",
   "   [DEPTHFLOW] escena 3 → parallax 'circle' OK",
   "   [OK] Escena 5 (SD-Dinamica 14x) — tipo:transicion efectos:ken_burns_diagonal,slide_up,slide_l,slide_r,whip_pan,slide_l,ken_burns_diagonal,slide_up,zoom_punch,slide_up,zoom_punch,slide_r,fast_push,slide_r",
   "   [OK] Escena 6 (Pexels) — tipo:transicion efecto:whip_pan",
@@ -86,10 +85,10 @@
   "}",
   "",
   "Node.js v25.9.0",
-  ""
+  "",
+  "✅ [TAREA 3bc65166-9833-4acd-b1a3-2f229a40a5e5_asm] Cerrada (reportada como 3bc65166-9833-4acd-b1a3-2f229a40a5e5)."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,6 +167,7 @@
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): "
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Video finalizado",
-  "ts": "15:12:00"
+  "ts": "15:13:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
