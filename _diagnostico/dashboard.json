@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:38:00",
+ "ts": "2026-08-20 14:39:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,13 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).",
-  "",
-  "   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente",
-  "   [LIBRE] Worker disponible para la siguiente orden.",
-  "🧹 [LIMPIEZA] 1 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
-  "🛑 [BLOQUEO] Tarea 3bc65166-9833-4acd-b1a3-2f229a40a5e5 ya se completó localmente. Evitando bucle infinito...",
-  "",
   "🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...",
   "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
   "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
@@ -86,14 +79,16 @@
   "[VOICE LOCAL] Chunk 30 OK — 579753 bytes",
   "[VOICE LOCAL] Procesando chunk 31/33 (92 palabras)...",
   "[VOICE LOCAL] Chunk 31 OK — 488638 bytes",
-  "[VOICE LOCAL] Procesando chunk 32/33 (96 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 32/33 (96 palabras)...",
+  "[VOICE LOCAL] Chunk 32 OK — 528762 bytes",
+  "[VOICE LOCAL] Procesando chunk 33/33 (32 palabras)...",
+  "[VOICE LOCAL] Chunk 33 OK — 171825 bytes",
+  "[VOICE LOCAL] Uniendo y recodificando 33 chunks con FFmpeg...",
+  "[VOICE LOCAL] ✅ Audio ensamblado y sincronizado al 100%: C:\\DarkFactory_Renders\\3bc65166-9833-4acd-b1a3-2f229a40a5e5\\locucion.mp3",
+  "✅ Audio local generado: C:\\DarkFactory_Renders\\3bc65166-9833-4acd-b1a3-2f229a40a5e5\\locucion.mp3",
+  "   [SYNC] FFprobe leyó duración exacta: 1212.86s"
  ],
  "orquestador_log": [
-  "[CICLO 4752] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4755] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4756] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4762] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "PRE_FLIGHT",
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "14:38:00"
+  "ts": "14:39:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
