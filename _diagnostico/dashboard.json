@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 13:33:00",
+ "ts": "2026-08-20 13:34:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 2/30...",
-  "   [PEXELS] Query de Gemini: 'oil refinery infrastructure'",
-  "   [PEXELS] Buscando: 'oil refinery infrastructure' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 12891231 encontrado — descargando...",
   "   [PEXELS] Clip listo.",
   "   [OK] Escena 2 — Pexels ✅",
   "⚙️ NODO 1: Escena 3/30...",
@@ -86,14 +82,13 @@
   "   [PEXELS] Clip listo.",
   "   [OK] Escena 19 — Pexels ✅",
   "⚙️ NODO 1: Escena 20/30...",
-  "   [SD] Intento 1/3 escena 20..."
+  "   [SD] Intento 1/3 escena 20...",
+  "   [OK] Nodo 1 — Escena 20 SD ✅",
+  "⚙️ NODO 1: Escena 21/30...",
+  "   [PEXELS] Query de Gemini: 'rare earth mine'",
+  "   [PEXELS] Buscando: 'rare earth mine' (landscape) [relevancia=sí]..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CICLO 4621] accion='' | lote_activo=True | estado=produciendo",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 20,
+  "paso": 21,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:33:01"
+  "ts": "13:34:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
