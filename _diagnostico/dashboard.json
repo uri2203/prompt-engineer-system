@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:55:00",
+ "ts": "2026-08-20 14:56:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,9 +89,6 @@
   "   [DIAG] video_concat_mudo dura: 1217.6s (esperado ~1250.3s)"
  ],
  "orquestador_log": [
-  "[CICLO 4789] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,6 +165,9 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] No se pudo consumir en GitHub: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with ",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
+  "[CICLO 4819] accion='' | lote_activo=True | estado=produciendo",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): "
  ],
  "fase": {
@@ -265,7 +265,11 @@
   ]
  },
  "cola_local": 0,
- "render_lote": null,
+ "render_lote": {
+  "completados": 0,
+  "estado_lote": "inactivo",
+  "total": 0
+ },
  "videos_github": {
   "video_estado": null,
   "video_fallido": null,
