@@ -1,10 +1,10 @@
 {
- "ts": "2026-08-20 10:15:00",
+ "ts": "2026-08-20 10:16:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
-  "sd": "off",
+  "sd": "on",
   "voz": "on",
-  "parallax": "off"
+  "parallax": "on"
  },
  "worker_log": [
   "🎙️ Generando audio con motor de voz local (XTTS)...",
@@ -175,7 +175,7 @@
   "paso": 20,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "10:15:12"
+  "ts": "10:16:02"
  },
  "cadena": {
   "ensamblaje_activo": false,
