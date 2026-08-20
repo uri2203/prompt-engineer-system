@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 12:07:00",
+ "ts": "2026-08-20 12:08:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [MUSICA] ✓ Banda sonora completa: 4 tramos de fondo + 3 de tensión",
-  "💬 FASE 2.5: Subtítulos sincronizados a la voz REAL...",
-  "   [INFO] Subtítulos omitidos (sin bloques de habla o sin texto).",
-  "🎬 FASE 3: Evaluando inyección de Intro/Outro...",
   "   [OK] Detectado Intro: intro_169.mp4",
   "   [OK] Detectado Outro: outro_169.mp4",
   "🏆 [OPERACIÓN EXITOSA V8.4.8] Video finalizado: C:\\DarkFactory_Renders\\a9c8ed02-e742-4f27-87c2-9eb257f60e95\\00_FINAL_EXTREME_DYNAMICS.mp4",
@@ -86,11 +82,13 @@
   "⚙️ NODO 1: Escena 3/30...",
   "   [PEXELS] Query de Gemini: 'natural gas pipeline infrastructure'",
   "   [PEXELS] Buscando: 'natural gas pipeline infrastructure' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 12043107 encontrado — descargando..."
+  "   [PEXELS] Clip ID 12043107 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 3 — Pexels ✅",
+  "⚙️ NODO 1: Escena 4/30...",
+  "   [SD] Intento 1/3 escena 4..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4478] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +166,16 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4514] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 3,
+  "paso": 4,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "12:07:00"
+  "ts": "12:08:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
