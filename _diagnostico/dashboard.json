@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:50:00",
+ "ts": "2026-08-20 14:53:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Procesando chunk 19/33 (83 palabras)...",
   "[VOICE LOCAL] Chunk 19 OK — 461053 bytes",
   "[VOICE LOCAL] Procesando chunk 20/33 (88 palabras)...",
   "[VOICE LOCAL] Chunk 20 OK — 525418 bytes",
@@ -86,15 +85,10 @@
   "   [HOOKS] 284 pausas naturales detectadas para alinear re-hooks.",
   "🪝 HOOKS: 1 inicial + 12 re-hooks integrados (entre escenas, audio resincronizado)",
   "🔗 FASE 1: Ensamblando cuerpo principal...",
-  "   [DIAG] 43 clips suman 1250.3s | audio: 1249.5s"
+  "   [DIAG] 43 clips suman 1250.3s | audio: 1249.5s",
+  "   [DIAG] video_concat_mudo dura: 1217.6s (esperado ~1250.3s)"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4784] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +162,13 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[RED] No se pudo leer control de GitHub: HTTPSConnectionPool(host='api.github.com', port=443): Read timed out. (read time",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
+  "[CICLO 4816] accion='' | lote_activo=True | estado=produciendo",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): "
  ],
  "fase": {
   "nombre": "idle",
