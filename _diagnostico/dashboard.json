@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:41:00",
+ "ts": "2026-08-20 14:42:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,13 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Procesando chunk 2/33 (116 palabras)...",
-  "[VOICE LOCAL] Chunk 2 OK — 708066 bytes",
-  "[VOICE LOCAL] Procesando chunk 3/33 (117 palabras)...",
-  "[VOICE LOCAL] Chunk 3 OK — 646626 bytes",
-  "[VOICE LOCAL] Procesando chunk 4/33 (88 palabras)...",
-  "[VOICE LOCAL] Chunk 4 OK — 493235 bytes",
-  "[VOICE LOCAL] Procesando chunk 5/33 (84 palabras)...",
   "[VOICE LOCAL] Chunk 5 OK — 450186 bytes",
   "[VOICE LOCAL] Procesando chunk 6/33 (95 palabras)...",
   "[VOICE LOCAL] Chunk 6 OK — 540883 bytes",
@@ -86,14 +79,16 @@
   "   [DEPTHFLOW] escena 6 → parallax 'zoom' OK",
   "   [OK] Escena 8 (SD-Dinamica 14x) — tipo:impacto efectos:shake_zoom,snap_zoom,flash_cut,punch_in,shake_zoom,punch_in,zoom_punch,pulse_punch,snap_zoom,punch_in,fast_push,zoom_punch,shake_zoom,punch_in",
   "   [KINETIC] texto: cannot identify image file 'C:/DarkFactory_Renders/3bc65166-9833-4acd-b1a3-2f229a40a5e5/escena_09.mp4'",
-  "   [OK] Escena 9 (Pexels) — tipo:impacto efecto:shake_zoom"
+  "   [OK] Escena 9 (Pexels) — tipo:impacto efecto:shake_zoom",
+  "   [DEPTHFLOW] escena 9 → parallax 'zoom' OK",
+  "   [OK] Escena 11 (SD-Dinamica 14x) — tipo:tension efectos:rush_diagonal,ken_burns_agresivo,zoom_punch,ken_burns_agresivo,slide_r,rush_diagonal,shake_zoom,slide_l,shake_zoom,ken_burns_agresivo,zoom_punch,whip_pan,zoom_punch,slide_r",
+  "   [KINETIC] texto: cannot identify image file 'C:/DarkFactory_Renders/3bc65166-9833-4acd-b1a3-2f229a40a5e5/escena_12.mp4'",
+  "   [OK] Escena 12 (Pexels) — tipo:tension efecto:zoom_punch",
+  "   [KINETIC] texto: cannot identify image file 'C:/DarkFactory_Renders/3bc65166-9833-4acd-b1a3-2f229a40a5e5/escena_13.mp4'",
+  "   [OK] Escena 13 (Pexels) — tipo:tension efecto:slide_r",
+  "   [DEPTHFLOW] escena 13 → parallax 'circle' OK"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4765] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4768] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +163,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
