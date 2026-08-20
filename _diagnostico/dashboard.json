@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 12:05:00",
+ "ts": "2026-08-20 12:06:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,11 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [DIAG] 43 clips suman 1056.6s | audio: 1055.8s",
-  "   [DIAG] video_concat_mudo dura: 1056.6s (esperado ~1056.6s)",
-  "   [FIX] Audio extendido +0.8s para igualar video (hooks)",
-  "   [OK] Audio de narración integrado al video.",
-  "🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...",
   "   [MUSICA] LARGO — encadenando 4 tramos de fondo para cubrir 1056s (pistas: 4 fondo, 2 tensión)",
   "   [MUSICA] ✓ Banda sonora completa: 4 tramos de fondo + 3 de tensión",
   "💬 FASE 2.5: Subtítulos sincronizados a la voz REAL...",
@@ -86,15 +81,14 @@
   "⚙️ NODO 1: Escena 2/30...",
   "   [PEXELS] Query de Gemini: 'oil refinery infrastructure'",
   "   [PEXELS] Buscando: 'oil refinery infrastructure' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 12891231 encontrado — descargando..."
+  "   [PEXELS] Clip ID 12891231 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 2 — Pexels ✅",
+  "⚙️ NODO 1: Escena 3/30...",
+  "   [PEXELS] Query de Gemini: 'natural gas pipeline infrastructure'",
+  "   [PEXELS] Buscando: 'natural gas pipeline infrastructure' (landscape) [relevancia=sí]..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4473] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CICLO 4475] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4476] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +162,20 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4509] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 2,
+  "paso": 3,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "12:05:00"
+  "ts": "12:06:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
