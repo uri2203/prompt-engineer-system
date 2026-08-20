@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:35:00",
+ "ts": "2026-08-20 11:36:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 2 OK — 743593 bytes",
-  "[VOICE LOCAL] Procesando chunk 3/22 (111 palabras)...",
-  "[VOICE LOCAL] Chunk 3 OK — 773686 bytes",
   "[VOICE LOCAL] Procesando chunk 4/22 (120 palabras)...",
   "[VOICE LOCAL] Chunk 4 OK — 806705 bytes",
   "[VOICE LOCAL] Procesando chunk 5/22 (114 palabras)...",
@@ -86,10 +83,12 @@
   "   [OK] Escena 29 (SD-Dinamica 11x) — tipo:tension efectos:zoom_punch,whip_pan,slide_l,snap_zoom,rush_diagonal,slide_r,snap_zoom,zoom_punch,slide_l,punch_in,slide_l",
   "   [DEPTHFLOW] escena 29 → parallax 'horizontal' OK",
   "   [SYNC] Duraciones reales de 30 clips medidas (hooks y audio se alinean a ellas).",
-  "   [HOOKS] 258 pausas naturales detectadas para alinear re-hooks."
+  "   [HOOKS] 258 pausas naturales detectadas para alinear re-hooks.",
+  "🪝 HOOKS: 1 inicial + 12 re-hooks integrados (entre escenas, audio resincronizado)",
+  "🔗 FASE 1: Ensamblando cuerpo principal...",
+  "   [DIAG] 43 clips suman 1056.6s | audio: 1055.8s"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4420] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4421] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,7 +167,8 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CICLO 4459] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "idle",
