@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:23:00",
+ "ts": "2026-08-20 11:24:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,16 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Nodo 1 — Escena 23 SD ✅",
-  "⚙️ NODO 1: Escena 24/30...",
-  "   [SD] Intento 1/3 escena 24...",
-  "   [OK] Nodo 1 — Escena 24 SD ✅",
-  "⚙️ NODO 1: Escena 25/30...",
-  "   [SD] Intento 1/3 escena 25...",
-  "   [OK] Nodo 1 — Escena 25 SD ✅",
-  "⚙️ NODO 1: Escena 26/30...",
-  "   [SD] Intento 1/3 escena 26...",
-  "   [OK] Nodo 1 — Escena 26 SD ✅",
   "⚙️ NODO 1: Escena 27/30...",
   "   [SD] Intento 1/3 escena 27...",
   "   [OK] Nodo 1 — Escena 27 SD ✅",
@@ -86,7 +76,17 @@
   "[VOICE LOCAL] Chunk 19 OK — 731054 bytes",
   "[VOICE LOCAL] Procesando chunk 20/22 (115 palabras)...",
   "[VOICE LOCAL] Chunk 20 OK — 697617 bytes",
-  "[VOICE LOCAL] Procesando chunk 21/22 (113 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 21/22 (113 palabras)...",
+  "[VOICE LOCAL] Chunk 21 OK — 728964 bytes",
+  "[VOICE LOCAL] Procesando chunk 22/22 (40 palabras)...",
+  "[VOICE LOCAL] Chunk 22 OK — 237444 bytes",
+  "[VOICE LOCAL] Uniendo y recodificando 22 chunks con FFmpeg...",
+  "[VOICE LOCAL] ✅ Audio ensamblado y sincronizado al 100%: C:\\DarkFactory_Renders\\a9c8ed02-e742-4f27-87c2-9eb257f60e95\\locucion.mp3",
+  "✅ Audio local generado: C:\\DarkFactory_Renders\\a9c8ed02-e742-4f27-87c2-9eb257f60e95\\locucion.mp3",
+  "   [SYNC] FFprobe leyó duración exacta: 1019.20s",
+  "   [SYNC] Duraciones de escena alineadas a las pausas naturales del audio.",
+  "⚙️ Procesando 30 matrices visuales con CPU Xeon...",
+  "   [DEPTHFLOW] Servidor DISPONIBLE"
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:23:01"
+  "ts": "11:24:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
