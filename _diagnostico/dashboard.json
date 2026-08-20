@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 12:13:00",
+ "ts": "2026-08-20 12:14:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Detectado Intro: intro_169.mp4",
-  "   [OK] Detectado Outro: outro_169.mp4",
-  "🏆 [OPERACIÓN EXITOSA V8.4.8] Video finalizado: C:\\DarkFactory_Renders\\a9c8ed02-e742-4f27-87c2-9eb257f60e95\\00_FINAL_EXTREME_DYNAMICS.mp4",
   "",
   "📦 Generando paquete de publicación SEO...",
   "✅ [PAQUETE] Guardado en: C:\\DarkFactory_Renders\\a9c8ed02-e742-4f27-87c2-9eb257f60e95\\paquete_publicacion.json",
@@ -86,12 +83,12 @@
   "   [PEXELS] Clip listo.",
   "   [OK] Escena 3 — Pexels ✅",
   "⚙️ NODO 1: Escena 4/30...",
-  "   [SD] Intento 1/3 escena 4..."
+  "   [SD] Intento 1/3 escena 4...",
+  "   [OK] Nodo 1 — Escena 4 SD ✅",
+  "⚙️ NODO 1: Escena 5/30...",
+  "   [SD] Intento 1/3 escena 5..."
  ],
  "orquestador_log": [
-  "[CICLO 4489] accion='' | lote_activo=True | estado=produciendo",
-  "OK Video 1 (La Viuda) completado",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4490] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +165,17 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 4,
+  "paso": 5,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "12:13:00"
+  "ts": "12:14:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
