@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:42:01",
+ "ts": "2026-08-20 11:43:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Procesando chunk 5/22 (114 palabras)...",
-  "[VOICE LOCAL] Chunk 5 OK — 784971 bytes",
-  "[VOICE LOCAL] Procesando chunk 6/22 (118 palabras)...",
   "[VOICE LOCAL] Chunk 6 OK — 801689 bytes",
   "[VOICE LOCAL] Procesando chunk 7/22 (116 palabras)...",
   "[VOICE LOCAL] Chunk 7 OK — 724785 bytes",
@@ -86,12 +83,12 @@
   "🔗 FASE 1: Ensamblando cuerpo principal...",
   "   [DIAG] 43 clips suman 1056.6s | audio: 1055.8s",
   "   [DIAG] video_concat_mudo dura: 1056.6s (esperado ~1056.6s)",
-  "   [FIX] Audio extendido +0.8s para igualar video (hooks)"
+  "   [FIX] Audio extendido +0.8s para igualar video (hooks)",
+  "   [OK] Audio de narración integrado al video.",
+  "🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...",
+  "   [MUSICA] LARGO — encadenando 4 tramos de fondo para cubrir 1056s (pistas: 4 fondo, 2 tensión)"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +165,10 @@
   "[CICLO 4463] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4464] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4464] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4473] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
