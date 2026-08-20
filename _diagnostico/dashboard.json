@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 09:10:00",
+ "ts": "2026-08-20 09:11:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,11 +89,6 @@
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e723b3c410>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CICLO 4188] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4188] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): cancelar",
+  "[CICLO 4190] accion='cancelar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): cancelar",
+  "[CONTROL] Lote cancelado — depurando todo para la siguiente orden.",
+  "   [LIMPIEZA] Lote local borrado: C:\\NODO_PINPINELA\\estado_lote\\lote_actual.json"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "09:10:01"
+  "ts": "09:11:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -190,80 +190,15 @@
   "detalle_escena": ""
  },
  "lote": {
-  "estado": "desconocido",
-  "mensaje": "",
+  "estado": "cancelado",
+  "mensaje": "[CONTROL] Lote cancelado — depurando todo para la siguiente orden.",
   "video": 0,
   "total": 0,
   "marca": "",
   "formato": ""
  },
  "acciones_pendientes": [],
- "lote_local": {
-  "estado": "produciendo",
-  "mensaje": "Produccion del video 1 iniciada.",
-  "trabajo": "Generando video 1 (La Viuda)",
-  "videos_ok": 0,
-  "en_proceso": 1,
-  "pendientes": 7,
-  "trabajos": [
-   {
-    "n": 1,
-    "marca": "La Viuda",
-    "formato": "16:9",
-    "estado": "en_proceso",
-    "tarea": "34b68a34-9a03-419f-b1e1-0593d46fdd89"
-   },
-   {
-    "n": 2,
-    "marca": "Monkygraff",
-    "formato": "16:9",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 3,
-    "marca": "La Viuda",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 4,
-    "marca": "La Viuda",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 5,
-    "marca": "La Viuda",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 6,
-    "marca": "Monkygraff",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 7,
-    "marca": "Monkygraff",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   },
-   {
-    "n": 8,
-    "marca": "Monkygraff",
-    "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
-   }
-  ]
- },
+ "lote_local": null,
  "cola_local": 0,
  "render_lote": {
   "completados": 0,
