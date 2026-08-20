@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 12:43:00",
+ "ts": "2026-08-20 12:44:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)",
   "    at Module.require (node:internal/modules/cjs/loader:1575:12)",
   "    at require (node:internal/modules/helpers:191:16)",
   "    at Object.<anonymous> (C:\\Users\\Server\\AppData\\Local\\Temp\\tmpi21gdbkn.js:2:91)",
@@ -86,10 +85,10 @@
   "   [OK] Nodo 1 — Escena 8 SD ✅",
   "⚙️ NODO 1: Escena 9/30...",
   "   [PEXELS] Query de Gemini: 'military radar installation'",
-  "   [PEXELS] Buscando: 'military radar installation' (landscape) [relevancia=sí]..."
+  "   [PEXELS] Buscando: 'military radar installation' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 13075430 encontrado — descargando..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +167,15 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4579] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4580] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 9,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "12:43:00"
+  "ts": "12:44:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
