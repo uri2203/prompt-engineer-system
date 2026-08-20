@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:25:00",
+ "ts": "2026-08-20 11:26:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 27/30...",
-  "   [SD] Intento 1/3 escena 27...",
-  "   [OK] Nodo 1 — Escena 27 SD ✅",
   "⚙️ NODO 1: Escena 28/30...",
   "   [SD] Intento 1/3 escena 28...",
   "   [OK] Nodo 1 — Escena 28 SD ✅",
@@ -86,10 +83,12 @@
   "   [SYNC] FFprobe leyó duración exacta: 1019.20s",
   "   [SYNC] Duraciones de escena alineadas a las pausas naturales del audio.",
   "⚙️ Procesando 30 matrices visuales con CPU Xeon...",
-  "   [DEPTHFLOW] Servidor DISPONIBLE"
+  "   [DEPTHFLOW] Servidor DISPONIBLE",
+  "   [DEPTHFLOW] escena 0 → parallax 'circle' OK",
+  "   [DEPTHFLOW] escena 1 → parallax 'vertical' OK",
+  "   [OK] Escena 3 (SD-Dinamica 13x) — tipo:tension efectos:slide_r,shake_zoom,slide_l,slide_r,punch_in,shake_zoom,ken_burns_agresivo,whip_pan,rush_diagonal,slide_l,ken_burns_agresivo,punch_in,ken_burns_agresivo"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +167,15 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4442] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "PRE_FLIGHT",
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:25:01"
+  "ts": "11:26:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
