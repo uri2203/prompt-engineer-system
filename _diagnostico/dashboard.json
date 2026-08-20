@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 15:09:00",
+ "ts": "2026-08-20 15:10:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,7 +89,6 @@
   "   [OK] Detectado Outro: outro_169.mp4"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -159,6 +158,7 @@
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[CICLO 4819] accion='' | lote_activo=True | estado=produciendo",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
