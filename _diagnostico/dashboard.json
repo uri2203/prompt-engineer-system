@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 10:41:00",
+ "ts": "2026-08-20 10:42:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "",
-  "🚀 [ORDEN VISUAL] ID: a9c8ed02-e742-4f27-87c2-9eb257f60e95",
-  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
   "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
   "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
   "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
@@ -86,7 +83,10 @@
   "   [SD] Intento 1/3 escena 23...",
   "   [OK] Nodo 1 — Escena 23 SD ✅",
   "⚙️ NODO 1: Escena 24/30...",
-  "   [SD] Intento 1/3 escena 24..."
+  "   [SD] Intento 1/3 escena 24...",
+  "   [OK] Nodo 1 — Escena 24 SD ✅",
+  "⚙️ NODO 1: Escena 25/30...",
+  "   [SD] Intento 1/3 escena 25..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 24,
+  "paso": 25,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "10:41:00"
+  "ts": "10:42:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
