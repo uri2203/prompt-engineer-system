@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 06:32:00",
+ "ts": "2026-08-20 06:33:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,11 +89,6 @@
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e723b3c410>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))"
  ],
  "orquestador_log": [
-  "[CICLO 3853] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "06:32:00"
+  "ts": "06:33:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
