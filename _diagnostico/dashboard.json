@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:53:01",
+ "ts": "2026-08-20 11:54:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,8 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [DEPTHFLOW] escena 18 → parallax 'zoom' OK",
-  "   [OK] Escena 20 (SD-Dinamica 14x) — tipo:tension efectos:ken_burns_agresivo,snap_zoom,slide_r,slide_l,rush_diagonal,ken_burns_agresivo,zoom_punch,slide_r,punch_in,slide_l,punch_in,whip_pan,slide_l,zoom_punch",
   "   [OK] Escena 21 (SD-Dinamica 14x) — tipo:tension efectos:whip_pan,zoom_punch,slide_l,whip_pan,slide_r,punch_in,ken_burns_agresivo,slide_r,punch_in,slide_l,zoom_punch,punch_in,slide_l,punch_in",
   "   [OK] Escena 22 (SD-Dinamica 14x) — tipo:tension efectos:slide_r,ken_burns_agresivo,rush_diagonal,ken_burns_agresivo,slide_l,snap_zoom,slide_l,ken_burns_agresivo,punch_in,shake_zoom,whip_pan,punch_in,slide_r,shake_zoom",
   "   [DEPTHFLOW] escena 22 → parallax 'horizontal' OK",
@@ -86,14 +84,11 @@
   "",
   "Node.js v25.9.0",
   "",
-  "✅ [TAREA a9c8ed02-e742-4f27-87c2-9eb257f60e95_asm] Cerrada (reportada como a9c8ed02-e742-4f27-87c2-9eb257f60e95)."
+  "✅ [TAREA a9c8ed02-e742-4f27-87c2-9eb257f60e95_asm] Cerrada (reportada como a9c8ed02-e742-4f27-87c2-9eb257f60e95).",
+  "   [DIAG re-hooks] 12 re-hook(s) FUERA de pausa (12 re-hooks medidos en el video real)",
+  "   [LIBRE] Worker disponible para la siguiente orden."
  ],
  "orquestador_log": [
-  "[CICLO 4446] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -168,14 +163,19 @@
   "[CICLO 4488] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4489] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4489] accion='' | lote_activo=True | estado=produciendo",
+  "OK Video 1 (La Viuda) completado",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4490] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
-  "nombre": "TERMINADO",
+  "nombre": "idle",
   "paso": 0,
   "total": 0,
-  "detalle": "Video finalizado",
-  "ts": "11:53:01"
+  "detalle": "Worker disponible",
+  "ts": "11:54:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -200,17 +200,17 @@
  "acciones_pendientes": [],
  "lote_local": {
   "estado": "produciendo",
-  "mensaje": "Produccion del video 1 iniciada.",
-  "trabajo": "Generando video 1 (La Viuda)",
-  "videos_ok": 0,
-  "en_proceso": 1,
+  "mensaje": "Video 1 completado",
+  "trabajo": "Generando video 1/8 (La Viuda 16:9 15min)",
+  "videos_ok": 1,
+  "en_proceso": 0,
   "pendientes": 7,
   "trabajos": [
    {
     "n": 1,
     "marca": "La Viuda",
     "formato": "16:9",
-    "estado": "en_proceso",
+    "estado": "completado",
     "tarea": "a9c8ed02-e742-4f27-87c2-9eb257f60e95"
    },
    {
@@ -537,7 +537,7 @@
   ]
  },
  "videos_completados": {
-  "lote": 0,
+  "lote": 1,
   "historico": 260
  }
 }
