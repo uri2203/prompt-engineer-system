@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 13:19:00",
+ "ts": "2026-08-20 13:20:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "",
   "✅ [TAREA a9c8ed02-e742-4f27-87c2-9eb257f60e95_asm] Cerrada (reportada como a9c8ed02-e742-4f27-87c2-9eb257f60e95).",
   "   [DIAG re-hooks] 12 re-hook(s) FUERA de pausa (12 re-hooks medidos en el video real)",
   "   [LIBRE] Worker disponible para la siguiente orden.",
@@ -86,12 +85,10 @@
   "   [OK] Nodo 1 — Escena 16 SD ✅",
   "⚙️ NODO 1: Escena 17/30...",
   "   [PEXELS] Query de Gemini: 'railway tunnel infrastructure'",
-  "   [PEXELS] Buscando: 'railway tunnel infrastructure' (landscape) [relevancia=sí]..."
+  "   [PEXELS] Buscando: 'railway tunnel infrastructure' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 11507946 encontrado — descargando..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4600] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4601] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +165,17 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CICLO 4644] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4644] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4649] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 17,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:19:01"
+  "ts": "13:20:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
