@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:16:00",
+ "ts": "2026-08-20 11:17:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [SD] Intento 1/3 escena 16...",
-  "   [OK] Nodo 1 — Escena 16 SD ✅",
-  "⚙️ NODO 1: Escena 17/30...",
-  "   [SD] Intento 1/3 escena 17...",
   "   [OK] Nodo 1 — Escena 17 SD ✅",
   "⚙️ NODO 1: Escena 18/30...",
   "   [SD] Intento 1/3 escena 18...",
@@ -86,12 +82,13 @@
   "[VOICE LOCAL] Chunk 7 OK — 724785 bytes",
   "[VOICE LOCAL] Procesando chunk 8/22 (112 palabras)...",
   "[VOICE LOCAL] Chunk 8 OK — 741085 bytes",
-  "[VOICE LOCAL] Procesando chunk 9/22 (116 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 9/22 (116 palabras)...",
+  "[VOICE LOCAL] Chunk 9 OK — 775776 bytes",
+  "[VOICE LOCAL] Procesando chunk 10/22 (114 palabras)...",
+  "[VOICE LOCAL] Chunk 10 OK — 802525 bytes",
+  "[VOICE LOCAL] Procesando chunk 11/22 (120 palabras)..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4391] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4399] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -168,6 +165,9 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:16:01"
+  "ts": "11:17:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
