@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 13:21:00",
+ "ts": "2026-08-20 13:22:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,10 +89,6 @@
   "   [SD] Intento 1/3 escena 18..."
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4603] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4605] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +164,18 @@
   "[CICLO 4649] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4650] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4650] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4652] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
   "paso": 18,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:21:01"
+  "ts": "13:22:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
