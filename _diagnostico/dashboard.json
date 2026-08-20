@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 15:10:00",
+ "ts": "2026-08-20 15:11:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 24 OK — 618205 bytes",
-  "[VOICE LOCAL] Procesando chunk 25/33 (91 palabras)...",
-  "[VOICE LOCAL] Chunk 25 OK — 473591 bytes",
-  "[VOICE LOCAL] Procesando chunk 26/33 (109 palabras)...",
   "[VOICE LOCAL] Chunk 26 OK — 712664 bytes",
   "[VOICE LOCAL] Procesando chunk 27/33 (91 palabras)...",
   "[VOICE LOCAL] Chunk 27 OK — 521657 bytes",
@@ -86,7 +82,11 @@
   "   [INFO] Subtítulos omitidos (sin bloques de habla o sin texto).",
   "🎬 FASE 3: Evaluando inyección de Intro/Outro...",
   "   [OK] Detectado Intro: intro_169.mp4",
-  "   [OK] Detectado Outro: outro_169.mp4"
+  "   [OK] Detectado Outro: outro_169.mp4",
+  "🏆 [OPERACIÓN EXITOSA V8.4.8] Video finalizado: C:\\DarkFactory_Renders\\3bc65166-9833-4acd-b1a3-2f229a40a5e5\\00_FINAL_EXTREME_DYNAMICS.mp4",
+  "",
+  "📦 Generando paquete de publicación SEO...",
+  "⚠️ [PAQUETE] Error: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/interna/generar_paquete (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e724301a90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))"
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -171,11 +171,11 @@
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): "
  ],
  "fase": {
-  "nombre": "idle",
+  "nombre": "TERMINADO",
   "paso": 0,
   "total": 0,
-  "detalle": "",
-  "ts": ""
+  "detalle": "Video finalizado",
+  "ts": "15:11:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
