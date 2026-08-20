@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:29:00",
+ "ts": "2026-08-20 14:30:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 21 — Pexels ✅",
-  "⚙️ NODO 1: Escena 22/30...",
-  "   [PEXELS] Query de Gemini: 'cargo port operations'",
   "   [PEXELS] Buscando: 'cargo port operations' (landscape) [relevancia=sí]...",
   "   [PEXELS] Clip ID 10391545 encontrado — descargando...",
   "   [PEXELS] Clip listo.",
@@ -86,7 +82,11 @@
   "[VOICE LOCAL] Chunk 11 OK — 544644 bytes",
   "[VOICE LOCAL] Procesando chunk 12/33 (111 palabras)...",
   "[VOICE LOCAL] Chunk 12 OK — 641611 bytes",
-  "[VOICE LOCAL] Procesando chunk 13/33 (108 palabras)..."
+  "[VOICE LOCAL] Procesando chunk 13/33 (108 palabras)...",
+  "[VOICE LOCAL] Chunk 13 OK — 605248 bytes",
+  "[VOICE LOCAL] Procesando chunk 14/33 (111 palabras)...",
+  "[VOICE LOCAL] Chunk 14 OK — 653732 bytes",
+  "[VOICE LOCAL] Procesando chunk 15/33 (117 palabras)..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "14:29:00"
+  "ts": "14:30:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
