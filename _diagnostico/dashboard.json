@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:32:00",
+ "ts": "2026-08-20 11:33:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,11 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Canal: La Viuda | Palabras Totales: 2447 | Job: 9da7a8f2",
-  "[VOICE LOCAL] Modo CHUNKS (Reconstrucción de Metadatos Activa)",
-  "[VOICE LOCAL] Texto partido en 22 chunks de máximo 120 palabras.",
-  "[VOICE LOCAL] Procesando chunk 1/22 (108 palabras)...",
-  "[VOICE LOCAL] Chunk 1 OK — 691348 bytes",
   "[VOICE LOCAL] Procesando chunk 2/22 (117 palabras)...",
   "[VOICE LOCAL] Chunk 2 OK — 743593 bytes",
   "[VOICE LOCAL] Procesando chunk 3/22 (111 palabras)...",
@@ -86,15 +81,14 @@
   "   [DEPTHFLOW] escena 22 → parallax 'horizontal' OK",
   "   [OK] Escena 24 (SD-Dinamica 13x) — tipo:tension efectos:ken_burns_agresivo,whip_pan,slide_r,slide_l,shake_zoom,snap_zoom,ken_burns_agresivo,shake_zoom,whip_pan,ken_burns_agresivo,whip_pan,zoom_punch,ken_burns_agresivo",
   "   [OK] Escena 25 (SD-Dinamica 13x) — tipo:tension efectos:zoom_punch,ken_burns_agresivo,rush_diagonal,punch_in,whip_pan,shake_zoom,zoom_punch,rush_diagonal,snap_zoom,slide_l,slide_r,whip_pan,slide_r",
-  "   [OK] Escena 26 (SD-Dinamica 14x) — tipo:impacto efectos:pulse_punch,punch_in,zoom_punch,snap_zoom,punch_in,flash_cut,punch_in,pulse_punch,fast_push,zoom_punch,fast_push,shake_zoom,snap_zoom,fast_push"
+  "   [OK] Escena 26 (SD-Dinamica 14x) — tipo:impacto efectos:pulse_punch,punch_in,zoom_punch,snap_zoom,punch_in,flash_cut,punch_in,pulse_punch,fast_push,zoom_punch,fast_push,shake_zoom,snap_zoom,fast_push",
+  "   [DEPTHFLOW] escena 26 → parallax 'horizontal' OK",
+  "   [OK] Escena 28 (SD-Dinamica 12x) — tipo:tension efectos:whip_pan,ken_burns_agresivo,shake_zoom,slide_r,whip_pan,slide_r,snap_zoom,rush_diagonal,snap_zoom,ken_burns_agresivo,slide_r,ken_burns_agresivo",
+  "   [OK] Escena 29 (SD-Dinamica 11x) — tipo:tension efectos:zoom_punch,whip_pan,slide_l,snap_zoom,rush_diagonal,slide_r,snap_zoom,zoom_punch,slide_l,punch_in,slide_l",
+  "   [DEPTHFLOW] escena 29 → parallax 'horizontal' OK",
+  "   [SYNC] Duraciones reales de 30 clips medidas (hooks y audio se alinean a ellas)."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -146,6 +140,12 @@
   "[CICLO 4445] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4446] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
