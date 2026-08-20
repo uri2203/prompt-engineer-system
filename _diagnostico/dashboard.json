@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:11:00",
+ "ts": "2026-08-20 14:12:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Escena 9 — Pexels ✅",
-  "⚙️ NODO 1: Escena 10/30...",
-  "   [SD] Intento 1/3 escena 10...",
-  "   [OK] Nodo 1 — Escena 10 SD ✅",
   "⚙️ NODO 1: Escena 11/30...",
   "   [SD] Intento 1/3 escena 11...",
   "   [OK] Nodo 1 — Escena 11 SD ✅",
@@ -86,7 +82,11 @@
   "⚙️ NODO 1: Escena 28/30...",
   "   [PEXELS] Query de Gemini: 'global trade map'",
   "   [PEXELS] Buscando: 'global trade map' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 7431508 encontrado — descargando..."
+  "   [PEXELS] Clip ID 7431508 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 28 — Pexels ✅",
+  "⚙️ NODO 1: Escena 29/30...",
+  "   [SD] Intento 1/3 escena 29..."
  ],
  "orquestador_log": [
   "[CICLO 4707] accion='' | lote_activo=True | estado=produciendo",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 28,
+  "paso": 29,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "14:11:01"
+  "ts": "14:12:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
