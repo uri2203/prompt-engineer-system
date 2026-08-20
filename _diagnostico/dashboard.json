@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:57:00",
+ "ts": "2026-08-20 14:58:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Procesando chunk 20/33 (88 palabras)...",
-  "[VOICE LOCAL] Chunk 20 OK — 525418 bytes",
-  "[VOICE LOCAL] Procesando chunk 21/33 (110 palabras)...",
   "[VOICE LOCAL] Chunk 21 OK — 685497 bytes",
   "[VOICE LOCAL] Procesando chunk 22/33 (118 palabras)...",
   "[VOICE LOCAL] Chunk 22 OK — 686333 bytes",
@@ -86,7 +83,10 @@
   "🔗 FASE 1: Ensamblando cuerpo principal...",
   "   [DIAG] 43 clips suman 1250.3s | audio: 1249.5s",
   "   [DIAG] video_concat_mudo dura: 1217.6s (esperado ~1250.3s)",
-  "   [FIX] Faltaban 31.9s: video repetido en bucle para cubrir el audio (sin congelar)."
+  "   [FIX] Faltaban 31.9s: video repetido en bucle para cubrir el audio (sin congelar).",
+  "   [OK] Audio de narración integrado al video.",
+  "🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...",
+  "   [MUSICA] LARGO — encadenando 6 tramos de fondo para cubrir 1249s (pistas: 4 fondo, 2 tensión)"
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
