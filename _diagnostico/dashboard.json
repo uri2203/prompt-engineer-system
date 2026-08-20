@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:44:01",
+ "ts": "2026-08-20 11:45:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,12 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 6 OK — 801689 bytes",
-  "[VOICE LOCAL] Procesando chunk 7/22 (116 palabras)...",
-  "[VOICE LOCAL] Chunk 7 OK — 724785 bytes",
-  "[VOICE LOCAL] Procesando chunk 8/22 (112 palabras)...",
-  "[VOICE LOCAL] Chunk 8 OK — 741085 bytes",
-  "[VOICE LOCAL] Procesando chunk 9/22 (116 palabras)...",
   "[VOICE LOCAL] Chunk 9 OK — 775776 bytes",
   "[VOICE LOCAL] Procesando chunk 10/22 (114 palabras)...",
   "[VOICE LOCAL] Chunk 10 OK — 802525 bytes",
@@ -86,14 +80,15 @@
   "   [FIX] Audio extendido +0.8s para igualar video (hooks)",
   "   [OK] Audio de narración integrado al video.",
   "🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...",
-  "   [MUSICA] LARGO — encadenando 4 tramos de fondo para cubrir 1056s (pistas: 4 fondo, 2 tensión)"
+  "   [MUSICA] LARGO — encadenando 4 tramos de fondo para cubrir 1056s (pistas: 4 fondo, 2 tensión)",
+  "   [MUSICA] ✓ Banda sonora completa: 4 tramos de fondo + 3 de tensión",
+  "💬 FASE 2.5: Subtítulos sincronizados a la voz REAL...",
+  "   [INFO] Subtítulos omitidos (sin bloques de habla o sin texto).",
+  "🎬 FASE 3: Evaluando inyección de Intro/Outro...",
+  "   [OK] Detectado Intro: intro_169.mp4",
+  "   [OK] Detectado Outro: outro_169.mp4"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CICLO 4426] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4428] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,7 +163,12 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CICLO 4475] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4476] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "idle",
