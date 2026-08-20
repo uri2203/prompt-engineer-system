@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:27:00",
+ "ts": "2026-08-20 11:28:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [SD] Intento 1/3 escena 29...",
-  "   [OK] Nodo 1 — Escena 29 SD ✅",
-  "⚙️ NODO 1: Escena 30/30...",
-  "   [SD] Intento 1/3 escena 30...",
   "   [OK] Nodo 1 — Escena 30 SD ✅",
   "✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).",
   "",
@@ -86,13 +82,13 @@
   "   [DEPTHFLOW] escena 3 → parallax 'zoom' OK",
   "   [OK] Escena 5 (SD-Dinamica 13x) — tipo:tension efectos:slide_l,ken_burns_agresivo,snap_zoom,zoom_punch,snap_zoom,zoom_punch,whip_pan,shake_zoom,snap_zoom,slide_l,slide_r,punch_in,whip_pan",
   "   [OK] Escena 6 (SD-Dinamica 14x) — tipo:tension efectos:punch_in,slide_l,zoom_punch,whip_pan,snap_zoom,slide_r,slide_l,whip_pan,rush_diagonal,snap_zoom,whip_pan,slide_l,zoom_punch,slide_l",
-  "   [DEPTHFLOW] escena 6 → parallax 'circle' OK"
+  "   [DEPTHFLOW] escena 6 → parallax 'circle' OK",
+  "   [OK] Escena 8 (SD-Dinamica 14x) — tipo:tension efectos:slide_r,whip_pan,slide_l,rush_diagonal,shake_zoom,whip_pan,slide_l,whip_pan,slide_r,slide_l,shake_zoom,slide_r,snap_zoom,shake_zoom",
+  "   [OK] Escena 9 (SD-Dinamica 14x) — tipo:tension efectos:punch_in,slide_r,shake_zoom,punch_in,ken_burns_agresivo,snap_zoom,rush_diagonal,ken_burns_agresivo,zoom_punch,slide_l,zoom_punch,rush_diagonal,zoom_punch,whip_pan",
+  "   [OK] Escena 10 (SD-Dinamica 14x) — tipo:impacto efectos:zoom_punch,shake_zoom,flash_cut,zoom_punch,punch_in,fast_push,punch_in,flash_cut,fast_push,pulse_punch,zoom_punch,fast_push,flash_cut,snap_zoom",
+  "   [OK] Escena 11 (SD-Dinamica 14x) — tipo:tension efectos:ken_burns_agresivo,shake_zoom,snap_zoom,ken_burns_agresivo,punch_in,rush_diagonal,snap_zoom,rush_diagonal,slide_l,zoom_punch,shake_zoom,rush_diagonal,slide_l,punch_in"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +164,18 @@
   "[CICLO 4444] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4445] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 4445] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4446] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "PRE_FLIGHT",
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:27:01"
+  "ts": "11:28:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
