@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 11:28:00",
+ "ts": "2026-08-20 11:29:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Nodo 1 — Escena 30 SD ✅",
-  "✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).",
-  "",
-  "   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente",
   "   [LIBRE] Worker disponible para la siguiente orden.",
   "🧹 [LIMPIEZA] 1 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
   "🛑 [BLOQUEO] Tarea a9c8ed02-e742-4f27-87c2-9eb257f60e95 ya se completó localmente. Evitando bucle infinito...",
@@ -86,15 +82,13 @@
   "   [OK] Escena 8 (SD-Dinamica 14x) — tipo:tension efectos:slide_r,whip_pan,slide_l,rush_diagonal,shake_zoom,whip_pan,slide_l,whip_pan,slide_r,slide_l,shake_zoom,slide_r,snap_zoom,shake_zoom",
   "   [OK] Escena 9 (SD-Dinamica 14x) — tipo:tension efectos:punch_in,slide_r,shake_zoom,punch_in,ken_burns_agresivo,snap_zoom,rush_diagonal,ken_burns_agresivo,zoom_punch,slide_l,zoom_punch,rush_diagonal,zoom_punch,whip_pan",
   "   [OK] Escena 10 (SD-Dinamica 14x) — tipo:impacto efectos:zoom_punch,shake_zoom,flash_cut,zoom_punch,punch_in,fast_push,punch_in,flash_cut,fast_push,pulse_punch,zoom_punch,fast_push,flash_cut,snap_zoom",
-  "   [OK] Escena 11 (SD-Dinamica 14x) — tipo:tension efectos:ken_burns_agresivo,shake_zoom,snap_zoom,ken_burns_agresivo,punch_in,rush_diagonal,snap_zoom,rush_diagonal,slide_l,zoom_punch,shake_zoom,rush_diagonal,slide_l,punch_in"
+  "   [OK] Escena 11 (SD-Dinamica 14x) — tipo:tension efectos:ken_burns_agresivo,shake_zoom,snap_zoom,ken_burns_agresivo,punch_in,rush_diagonal,snap_zoom,rush_diagonal,slide_l,zoom_punch,shake_zoom,rush_diagonal,slide_l,punch_in",
+  "   [OK] Escena 12 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,zoom_punch,ken_burns_agresivo,rush_diagonal,zoom_punch,punch_in,slide_r,slide_l,ken_burns_agresivo,snap_zoom,ken_burns_agresivo,shake_zoom,rush_diagonal,slide_l",
+  "   [OK] Escena 13 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,whip_pan,shake_zoom,ken_burns_agresivo,shake_zoom,punch_in,snap_zoom,punch_in,shake_zoom,snap_zoom,slide_r,ken_burns_agresivo,shake_zoom,punch_in",
+  "   [OK] Escena 14 (SD-Dinamica 14x) — tipo:tension efectos:snap_zoom,rush_diagonal,whip_pan,slide_l,shake_zoom,rush_diagonal,snap_zoom,zoom_punch,snap_zoom,zoom_punch,rush_diagonal,zoom_punch,whip_pan,ken_burns_agresivo",
+  "   [DEPTHFLOW] escena 14 → parallax 'vertical' OK"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,6 +162,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4446] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "11:28:01"
+  "ts": "11:29:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
