@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:48:00",
+ "ts": "2026-08-20 14:49:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 17 OK — 642029 bytes",
-  "[VOICE LOCAL] Procesando chunk 18/33 (112 palabras)...",
-  "[VOICE LOCAL] Chunk 18 OK — 672540 bytes",
   "[VOICE LOCAL] Procesando chunk 19/33 (83 palabras)...",
   "[VOICE LOCAL] Chunk 19 OK — 461053 bytes",
   "[VOICE LOCAL] Procesando chunk 20/33 (88 palabras)...",
@@ -86,13 +83,12 @@
   "   [OK] Escena 29 (SD-Dinamica 14x) — tipo:tension efectos:shake_zoom,slide_r,whip_pan,slide_r,ken_burns_agresivo,punch_in,shake_zoom,whip_pan,ken_burns_agresivo,rush_diagonal,whip_pan,snap_zoom,ken_burns_agresivo,rush_diagonal",
   "   [DEPTHFLOW] escena 29 → parallax 'zoom' OK",
   "   [SYNC] Duraciones reales de 30 clips medidas (hooks y audio se alinean a ellas).",
-  "   [HOOKS] 284 pausas naturales detectadas para alinear re-hooks."
+  "   [HOOKS] 284 pausas naturales detectadas para alinear re-hooks.",
+  "🪝 HOOKS: 1 inicial + 12 re-hooks integrados (entre escenas, audio resincronizado)",
+  "🔗 FASE 1: Ensamblando cuerpo principal...",
+  "   [DIAG] 43 clips suman 1250.3s | audio: 1249.5s"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4778] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 4781] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4782] accion='' | lote_activo=True | estado=produciendo",
@@ -168,7 +164,11 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "idle",
