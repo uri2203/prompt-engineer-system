@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 14:59:00",
+ "ts": "2026-08-20 15:02:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,12 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 21 OK — 685497 bytes",
-  "[VOICE LOCAL] Procesando chunk 22/33 (118 palabras)...",
-  "[VOICE LOCAL] Chunk 22 OK — 686333 bytes",
-  "[VOICE LOCAL] Procesando chunk 23/33 (101 palabras)...",
-  "[VOICE LOCAL] Chunk 23 OK — 561781 bytes",
-  "[VOICE LOCAL] Procesando chunk 24/33 (110 palabras)...",
   "[VOICE LOCAL] Chunk 24 OK — 618205 bytes",
   "[VOICE LOCAL] Procesando chunk 25/33 (91 palabras)...",
   "[VOICE LOCAL] Chunk 25 OK — 473591 bytes",
@@ -86,11 +80,15 @@
   "   [FIX] Faltaban 31.9s: video repetido en bucle para cubrir el audio (sin congelar).",
   "   [OK] Audio de narración integrado al video.",
   "🎵 FASE 2: Inyección de música dinámica (fondo aleatorio + tensión al 60%)...",
-  "   [MUSICA] LARGO — encadenando 6 tramos de fondo para cubrir 1249s (pistas: 4 fondo, 2 tensión)"
+  "   [MUSICA] LARGO — encadenando 6 tramos de fondo para cubrir 1249s (pistas: 4 fondo, 2 tensión)",
+  "   [MUSICA] ✓ Banda sonora completa: 6 tramos de fondo + 3 de tensión",
+  "💬 FASE 2.5: Subtítulos sincronizados a la voz REAL...",
+  "   [INFO] Subtítulos omitidos (sin bloques de habla o sin texto).",
+  "🎬 FASE 3: Evaluando inyección de Intro/Outro...",
+  "   [OK] Detectado Intro: intro_169.mp4",
+  "   [OK] Detectado Outro: outro_169.mp4"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -167,6 +165,8 @@
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[CICLO 4819] accion='' | lote_activo=True | estado=produciendo",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
+  "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): ",
   "[RED] No se pudo conectar a Render: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): "
  ],
@@ -265,11 +265,7 @@
   ]
  },
  "cola_local": 0,
- "render_lote": {
-  "completados": 0,
-  "estado_lote": "inactivo",
-  "total": 0
- },
+ "render_lote": null,
  "videos_github": {
   "video_estado": null,
   "video_fallido": null,
