@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 09:11:00",
+ "ts": "2026-08-20 09:12:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -99,9 +99,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787087717.17626) ya procesado — esperando que el control se limpie...",
   "[CICLO 4165] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 4166] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +165,17 @@
   "[CICLO 4190] accion='cancelar' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): cancelar",
   "[CONTROL] Lote cancelado — depurando todo para la siguiente orden.",
-  "   [LIMPIEZA] Lote local borrado: C:\\NODO_PINPINELA\\estado_lote\\lote_actual.json"
+  "   [LIMPIEZA] Lote local borrado: C:\\NODO_PINPINELA\\estado_lote\\lote_actual.json",
+  "[CONTROL] Leído desde GitHub (fallback directo): cancelar",
+  "[CICLO 4191] accion='cancelar' | lote_activo=False | estado=None",
+  "[CICLO 4192] accion='' | lote_activo=False | estado=None"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "09:11:01"
+  "ts": "09:12:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
