@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-20 10:27:00",
+ "ts": "2026-08-20 10:28:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s...",
-  "[VOICE LOCAL] Chunk 1 intento 2/4 — HTTP 500 — esperando 15s...",
-  "[VOICE LOCAL] Chunk 1 intento 3/4 — HTTP 500 — esperando 30s...",
   "[VOICE LOCAL] Chunk 1 intento 4/4 — HTTP 500 — esperando 60s...",
   "[VOICE LOCAL] ❌ FATAL: Chunk 1 falló tras 4 intentos.",
   "[VOICE LOCAL] ❌ Abortando ensamblaje para evitar falso positivo. Destruyendo temporales...",
@@ -86,11 +83,12 @@
   "   [SD] Intento 2/3 escena 20...",
   "   [OK] Nodo 1 — Escena 20 SD ✅",
   "⚙️ NODO 1: Escena 21/30...",
-  "   [SD] Intento 1/3 escena 21..."
+  "   [SD] Intento 1/3 escena 21...",
+  "   [OK] Nodo 1 — Escena 21 SD ✅",
+  "⚙️ NODO 1: Escena 22/30...",
+  "   [SD] Intento 1/3 escena 22..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +166,16 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 4333] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 21,
+  "paso": 22,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "10:27:00"
+  "ts": "10:28:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
