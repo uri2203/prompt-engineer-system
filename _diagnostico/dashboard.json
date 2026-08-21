@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 17:19:00",
+ "ts": "2026-08-21 17:20:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,15 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Clip ID 36443290 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 19 — Pexels ✅",
-  "⚙️ NODO 1: Escena 20/30...",
-  "   [SD] Intento 1/3 escena 20...",
-  "   [OK] Nodo 1 — Escena 20 SD ✅",
-  "⚙️ NODO 1: Escena 21/30...",
-  "   [SD] Intento 1/3 escena 21...",
-  "   [OK] Nodo 1 — Escena 21 SD ✅",
   "⚙️ NODO 1: Escena 22/30...",
   "   [PEXELS] Query de Gemini: 'oil refinery tanks'",
   "   [PEXELS] Buscando: 'oil refinery tanks' (landscape) [relevancia=sí]...",
@@ -86,7 +77,16 @@
   "============================================================",
   ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
   ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
-  "============================================================"
+  "============================================================",
+  "",
+  "🚀 [ORDEN VISUAL] ID: 49ae240f-e58c-4828-9536-123bf73c5c60",
+  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
+  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
+  "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
+  "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
+  "📱 9:16 SHORT → 3060 [192.168.0.215]",
+  "⚙️ NODO 1: Escena 1/28...",
+  "   [SD] Intento 1/3 escena 1..."
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -171,11 +171,11 @@
   "^C"
  ],
  "fase": {
-  "nombre": "idle",
-  "paso": 0,
-  "total": 0,
-  "detalle": "Worker disponible",
-  "ts": "17:19:00"
+  "nombre": "IMAGEN",
+  "paso": 1,
+  "total": 28,
+  "detalle": "Generando escena",
+  "ts": "17:20:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
