@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 14:03:00",
+ "ts": "2026-08-21 14:04:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,11 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [PEXELS] Clip ID 12891228 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 3 — Pexels ✅",
-  "⚙️ NODO 1: Escena 4/30...",
-  "   [SD] Intento 1/3 escena 4...",
   "   [OK] Nodo 1 — Escena 4 SD ✅",
   "⚙️ NODO 1: Escena 5/30...",
   "   [SD] Intento 1/3 escena 5...",
@@ -86,7 +81,12 @@
   "   [SD] Intento 1/3 escena 20...",
   "   [OK] Nodo 1 — Escena 20 SD ✅",
   "⚙️ NODO 1: Escena 21/30...",
-  "   [SD] Intento 1/3 escena 21..."
+  "   [SD] Intento 1/3 escena 21...",
+  "   [OK] Nodo 1 — Escena 21 SD ✅",
+  "⚙️ NODO 1: Escena 22/30...",
+  "   [PEXELS] Query de Gemini: 'oil refinery tanks'",
+  "   [PEXELS] Buscando: 'oil refinery tanks' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 29959227 encontrado — descargando..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 21,
+  "paso": 22,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "14:03:01"
+  "ts": "14:04:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
