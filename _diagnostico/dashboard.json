@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 16:08:00",
+ "ts": "2026-08-21 16:09:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -102,12 +102,6 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 284] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 286] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +162,20 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 323] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 323] accion='' | lote_activo=True | estado=produciendo",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 334] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "16:08:01"
+  "ts": "16:09:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
