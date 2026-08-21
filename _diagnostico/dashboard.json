@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 13:08:00",
+ "ts": "2026-08-21 13:09:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
@@ -89,7 +89,6 @@
   "============================================================"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -168,7 +167,8 @@
   "[CONTROL] 'iniciar' ignorado: ya hay un lote en curso.",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
-  "[CICLO 6] accion='' | lote_activo=True | estado=esperando_nodo"
+  "[CICLO 6] accion='' | lote_activo=True | estado=esperando_nodo",
+  "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)"
  ],
  "fase": {
   "nombre": "idle",
