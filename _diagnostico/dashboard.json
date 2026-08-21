@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 14:25:01",
+ "ts": "2026-08-21 14:26:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,17 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 8/30...",
-  "   [SD] Intento 1/3 escena 8...",
-  "   [OK] Nodo 1 — Escena 8 SD ✅",
-  "⚙️ NODO 1: Escena 9/30...",
-  "   [SD] Intento 1/3 escena 9...",
-  "   ⚠️ SD error intento 1: ('Connection aborted.', ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None))",
-  "   [SD] Intento 2/3 escena 9...",
-  "   ⚠️ SD error intento 2: HTTPConnectionPool(host='192.168.0.215', port=7861): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.0.215', port=7861) at 0x1d59a0f6250>, 'Connection to 192.168.0.215 timed out. (connect timeout=600)'))",
-  "   [SD] Intento 3/3 escena 9...",
-  "   ⚠️ SD error intento 3: HTTPConnectionPool(host='192.168.0.215', port=7861): Max retries exceeded with url: /sdapi/v1/txt2img (Caused by ConnectTimeoutError(<HTTPConnection(host='192.168.0.215', port=7861) at 0x1d59a0f67a0>, 'Connection to 192.168.0.215 timed out. (connect timeout=600)'))",
-  "   ❌ Escena 9 sin imagen válida tras 3 intentos.",
   "   [FIX] Escena 9 sustituida por la escena 8 (evita pantalla negra).",
   "⚙️ NODO 1: Escena 10/30...",
   "   [PEXELS] Query de Gemini: 'container ship port operations'",
@@ -86,15 +75,20 @@
   "   [SD] Intento 1/3 escena 25...",
   "   [OK] Nodo 1 — Escena 25 SD ✅",
   "⚙️ NODO 1: Escena 26/30...",
-  "   [SD] Intento 1/3 escena 26..."
+  "   [SD] Intento 1/3 escena 26...",
+  "   [OK] Nodo 1 — Escena 26 SD ✅",
+  "⚙️ NODO 1: Escena 27/30...",
+  "   [PEXELS] Query de Gemini: 'data center servers empty'",
+  "   [PEXELS] Buscando: 'data center servers empty' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 14388669 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 27 — Pexels ✅",
+  "⚙️ NODO 1: Escena 28/30...",
+  "   [PEXELS] Query de Gemini: 'oil barrels warehouse'",
+  "   [PEXELS] Buscando: 'oil barrels warehouse' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 30390598 encontrado — descargando..."
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 107] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 116] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -168,14 +162,20 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 26,
+  "paso": 28,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "14:25:01"
+  "ts": "14:26:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
