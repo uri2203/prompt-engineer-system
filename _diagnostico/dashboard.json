@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 12:57:00",
+ "ts": "2026-08-21 12:58:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
@@ -7,7 +7,6 @@
   "parallax": "off"
  },
  "worker_log": [
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b3390>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b3110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2e90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2c10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
@@ -86,10 +85,10 @@
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256da990>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256dac10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256dae90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256db110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))"
+  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256db110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
+  "=== FIN WORKER 21/08/2026 12:58:20.66 === "
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 5403] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +167,8 @@
   "[CICLO 5443] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 5444] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 5444] accion='' | lote_activo=True | estado=produciendo",
+  "=== FIN ORQUESTADOR 21/08/2026 12:58:20.68 === "
  ],
  "fase": {
   "nombre": "idle",
