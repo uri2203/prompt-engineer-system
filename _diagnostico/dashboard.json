@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 16:22:00",
+ "ts": "2026-08-21 16:23:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 17/30...",
-  "   [SD] Intento 1/3 escena 17...",
-  "   [OK] Nodo 1 — Escena 17 SD ✅",
   "⚙️ NODO 1: Escena 18/30...",
   "   [SD] Intento 1/3 escena 18...",
   "   [OK] Nodo 1 — Escena 18 SD ✅",
@@ -86,11 +83,12 @@
   "[VOICE LOCAL] ❌ FATAL: Chunk 1 falló tras 4 intentos.",
   "[VOICE LOCAL] ❌ Abortando ensamblaje para evitar falso positivo. Destruyendo temporales...",
   "⚠️ Error en voz local.",
-  "   [LIBRE] Worker disponible para la siguiente orden."
+  "   [LIBRE] Worker disponible para la siguiente orden.",
+  "^C=== WRAPPER WORKER 21/08/2026 16:22:46.33 === ",
+  "El sistema no puede encontrar la ruta especificada.",
+  "=== FIN WORKER 21/08/2026 16:22:46.37 === "
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 309] accion='iniciar' | lote_activo=True | estado=produciendo",
@@ -168,14 +166,16 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "^C"
  ],
  "fase": {
   "nombre": "idle",
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "16:22:01"
+  "ts": "16:23:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
