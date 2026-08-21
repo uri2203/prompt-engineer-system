@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 13:51:00",
+ "ts": "2026-08-21 13:52:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,15 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 1/30...",
-  "   [SD] Intento 1/3 escena 1...",
-  "   [OK] Nodo 1 — Escena 1 SD ✅",
-  "⚙️ NODO 1: Escena 2/30...",
-  "   [PEXELS] Query de Gemini: 'Strait of Hormuz satellite map'",
-  "   [PEXELS] Buscando: 'Strait of Hormuz satellite map' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 6417823 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 2 — Pexels ✅",
   "⚙️ NODO 1: Escena 3/30...",
   "   [PEXELS] Query de Gemini: 'oil storage facility tanks'",
   "   [PEXELS] Buscando: 'oil storage facility tanks' (landscape) [relevancia=sí]...",
@@ -86,7 +77,16 @@
   "   [SD] Intento 1/3 escena 17...",
   "   [OK] Nodo 1 — Escena 17 SD ✅",
   "⚙️ NODO 1: Escena 18/30...",
-  "   [SD] Intento 1/3 escena 18..."
+  "   [SD] Intento 1/3 escena 18...",
+  "   [OK] Nodo 1 — Escena 18 SD ✅",
+  "⚙️ NODO 1: Escena 19/30...",
+  "   [PEXELS] Query de Gemini: 'middle east diplomacy meeting room'",
+  "   [PEXELS] Buscando: 'middle east diplomacy meeting room' (landscape) [relevancia=sí]...",
+  "   [PEXELS] Clip ID 36443290 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 19 — Pexels ✅",
+  "⚙️ NODO 1: Escena 20/30...",
+  "   [SD] Intento 1/3 escena 20..."
  ],
  "orquestador_log": [
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 18,
+  "paso": 20,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:51:01"
+  "ts": "13:52:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
