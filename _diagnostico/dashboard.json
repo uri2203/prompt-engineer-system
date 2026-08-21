@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 12:58:00",
+ "ts": "2026-08-21 13:00:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
@@ -7,12 +7,6 @@
   "parallax": "off"
  },
  "worker_log": [
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b3110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2e90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2c10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2990>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2710>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2490>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b2210>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b1f90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7259b1d10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
@@ -86,20 +80,15 @@
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256dac10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256dae90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e7256db110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "=== FIN WORKER 21/08/2026 12:58:20.66 === "
+  "=== FIN WORKER 21/08/2026 12:58:20.66 === ",
+  "=== WRAPPER WORKER 21/08/2026 13:00:20.25 === ",
+  "⚡ NODO XEON ONLINE",
+  "============================================================",
+  ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
+  ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
+  "============================================================"
  ],
  "orquestador_log": [
-  "[CICLO 5403] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CICLO 5405] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 5407] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 5409] accion='' | lote_activo=True | estado=produciendo",
@@ -168,7 +157,18 @@
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 5444] accion='' | lote_activo=True | estado=produciendo",
-  "=== FIN ORQUESTADOR 21/08/2026 12:58:20.68 === "
+  "=== FIN ORQUESTADOR 21/08/2026 12:58:20.68 === ",
+  "=== WRAPPER ORQUESTADOR 21/08/2026 13:00:25.34 === ",
+  "============================================================",
+  "  ORQUESTADOR DE LOTE — 2026-06-30_R2",
+  "============================================================",
+  "============================================================",
+  "ORQUESTADOR DE LOTE - Motor de Produccion Industrial",
+  "Vive en el Xeon - Espera indefinida - Retoma tras cortes de luz",
+  "============================================================",
+  "RECUPERACION: lote encontrado - 1/8 hechos",
+  "   Video 2 estaba a medias - se reintentara",
+  "[CICLO 1] accion='' | lote_activo=True | estado=produciendo"
  ],
  "fase": {
   "nombre": "idle",
@@ -205,8 +205,8 @@
   "mensaje": "Produccion del video 2 iniciada.",
   "trabajo": "Generando video 2 (Monkygraff)",
   "videos_ok": 1,
-  "en_proceso": 1,
-  "pendientes": 6,
+  "en_proceso": 0,
+  "pendientes": 7,
   "trabajos": [
    {
     "n": 1,
@@ -219,7 +219,7 @@
     "n": 2,
     "marca": "Monkygraff",
     "formato": "16:9",
-    "estado": "en_proceso",
+    "estado": "pendiente",
     "tarea": "3bc65166-9833-4acd-b1a3-2f229a40a5e5"
    },
    {
