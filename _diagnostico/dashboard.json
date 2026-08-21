@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 14:33:01",
+ "ts": "2026-08-21 14:34:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [OK] Escena 15 — Pexels ✅",
-  "⚙️ NODO 1: Escena 16/30...",
-  "   [PEXELS] Query de Gemini: 'oil refinery storage tanks'",
   "   [PEXELS] Buscando: 'oil refinery storage tanks' (landscape) [relevancia=sí]...",
   "   [PEXELS] Clip ID 30899591 encontrado — descargando...",
   "   [PEXELS] Clip listo.",
@@ -86,7 +83,10 @@
   "[VOICE LOCAL] Modo CHUNKS (Reconstrucción de Metadatos Activa)",
   "[VOICE LOCAL] Texto partido en 33 chunks de máximo 120 palabras.",
   "[VOICE LOCAL] Procesando chunk 1/33 (107 palabras)...",
-  "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s..."
+  "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s...",
+  "[VOICE LOCAL] Chunk 1 intento 2/4 — HTTP 500 — esperando 15s...",
+  "[VOICE LOCAL] Chunk 1 intento 3/4 — HTTP 500 — esperando 30s...",
+  "[VOICE LOCAL] Chunk 1 intento 4/4 — HTTP 500 — esperando 60s..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Verificando nodos",
-  "ts": "14:33:01"
+  "ts": "14:34:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
