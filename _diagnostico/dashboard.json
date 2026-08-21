@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 14:32:01",
+ "ts": "2026-08-21 14:33:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,26 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 11/30...",
-  "   [SD] Intento 1/3 escena 11...",
-  "   [OK] Nodo 1 — Escena 11 SD ✅",
-  "⚙️ NODO 1: Escena 12/30...",
-  "   [PEXELS] Query de Gemini: 'naval base persian gulf'",
-  "   [PEXELS] Buscando: 'naval base persian gulf' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 31330874 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
-  "   [OK] Escena 12 — Pexels ✅",
-  "⚙️ NODO 1: Escena 13/30...",
-  "   [SD] Intento 1/3 escena 13...",
-  "   [OK] Nodo 1 — Escena 13 SD ✅",
-  "⚙️ NODO 1: Escena 14/30...",
-  "   [SD] Intento 1/3 escena 14...",
-  "   [OK] Nodo 1 — Escena 14 SD ✅",
-  "⚙️ NODO 1: Escena 15/30...",
-  "   [PEXELS] Query de Gemini: 'global shipping lanes map'",
-  "   [PEXELS] Buscando: 'global shipping lanes map' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 13375650 encontrado — descargando...",
-  "   [PEXELS] Clip listo.",
   "   [OK] Escena 15 — Pexels ✅",
   "⚙️ NODO 1: Escena 16/30...",
   "   [PEXELS] Query de Gemini: 'oil refinery storage tanks'",
@@ -86,7 +66,27 @@
   "   [SD] Intento 1/3 escena 29...",
   "   [OK] Nodo 1 — Escena 29 SD ✅",
   "⚙️ NODO 1: Escena 30/30...",
-  "   [SD] Intento 1/3 escena 30..."
+  "   [SD] Intento 1/3 escena 30...",
+  "   [OK] Nodo 1 — Escena 30 SD ✅",
+  "✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).",
+  "",
+  "   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente",
+  "   [LIBRE] Worker disponible para la siguiente orden.",
+  "🧹 [LIMPIEZA] 1 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
+  "🛑 [BLOQUEO] Tarea 2aa57d1d-2a8d-4d51-9690-f849a69a087a ya se completó localmente. Evitando bucle infinito...",
+  "",
+  "🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...",
+  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
+  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
+  "   🟢 Nodo VOZ (http://192.168.0.251:8000)",
+  "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
+  "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
+  "🎙️ Generando audio con motor de voz local (XTTS)...",
+  "[VOICE LOCAL] Canal: Monkygraff | Palabras Totales: 3454 | Job: e9200ca3",
+  "[VOICE LOCAL] Modo CHUNKS (Reconstrucción de Metadatos Activa)",
+  "[VOICE LOCAL] Texto partido en 33 chunks de máximo 120 palabras.",
+  "[VOICE LOCAL] Procesando chunk 1/33 (107 palabras)...",
+  "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -171,11 +171,11 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
-  "nombre": "IMAGEN",
-  "paso": 30,
-  "total": 30,
-  "detalle": "Generando escena",
-  "ts": "14:32:01"
+  "nombre": "PRE_FLIGHT",
+  "paso": 0,
+  "total": 0,
+  "detalle": "Verificando nodos",
+  "ts": "14:33:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
