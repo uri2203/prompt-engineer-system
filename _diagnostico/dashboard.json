@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 13:22:00",
+ "ts": "2026-08-21 13:23:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,12 +89,6 @@
   "   [SD] Intento 1/3 escena 7..."
  ],
  "orquestador_log": [
-  "Vive en el Xeon - Espera indefinida - Retoma tras cortes de luz",
-  "============================================================",
-  "RECUPERACION: lote encontrado - 1/8 hechos",
-  "   Video 2 estaba a medias - se reintentara",
-  "[CICLO 1] accion='' | lote_activo=True | estado=produciendo",
-  "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
   "[CICLO 2] accion='' | lote_activo=True | estado=esperando_nodo",
   "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
   "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
@@ -168,6 +162,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
  ],
  "fase": {
@@ -175,7 +175,7 @@
   "paso": 7,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:22:01"
+  "ts": "13:23:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
