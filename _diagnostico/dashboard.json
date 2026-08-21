@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 13:15:00",
+ "ts": "2026-08-21 13:16:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,10 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8ee90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8f110>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8f390>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
-  "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8f610>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8f890>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8fb10>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
   "⚠️ Error en ciclo de ejecución: HTTPSConnectionPool(host='prompt-engineer-system-l2r6.onrender.com', port=443): Max retries exceeded with url: /api/nodo/polling (Caused by ConnectTimeoutError(<HTTPSConnection(host='prompt-engineer-system-l2r6.onrender.com', port=443) at 0x1e725b8fd90>, 'Connection to prompt-engineer-system-l2r6.onrender.com timed out. (connect timeout=400)'))",
@@ -86,14 +82,13 @@
   "⚙️ NODO 1: Escena 3/30...",
   "   [PEXELS] Query de Gemini: 'oil storage facility tanks'",
   "   [PEXELS] Buscando: 'oil storage facility tanks' (landscape) [relevancia=sí]...",
-  "   [PEXELS] Clip ID 12891228 encontrado — descargando..."
+  "   [PEXELS] Clip ID 12891228 encontrado — descargando...",
+  "   [PEXELS] Clip listo.",
+  "   [OK] Escena 3 — Pexels ✅",
+  "⚙️ NODO 1: Escena 4/30...",
+  "   [SD] Intento 1/3 escena 4..."
  ],
  "orquestador_log": [
-  "[CICLO 5423] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 5424] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 5426] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,14 +163,19 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar"
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie..."
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 3,
+  "paso": 4,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "13:15:03"
+  "ts": "13:16:02"
  },
  "cadena": {
   "ensamblaje_activo": false,
