@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 17:20:00",
+ "ts": "2026-08-21 17:21:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -175,7 +175,7 @@
   "paso": 1,
   "total": 28,
   "detalle": "Generando escena",
-  "ts": "17:20:00"
+  "ts": "17:21:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -200,11 +200,11 @@
  "acciones_pendientes": [],
  "lote_local": {
   "estado": "produciendo",
-  "mensaje": "Video 2 marcado fallido, orquestador debe continuar con video 3",
-  "trabajo": "Reanudando despues de fallo video 2",
+  "mensaje": "Video 3 (La Viuda 9:16) lanzado en Render, esperando worker",
+  "trabajo": "Generando video 3/8 (La Viuda 9:16)",
   "videos_ok": 1,
-  "en_proceso": 0,
-  "pendientes": 6,
+  "en_proceso": 1,
+  "pendientes": 5,
   "trabajos": [
    {
     "n": 1,
@@ -224,8 +224,8 @@
     "n": 3,
     "marca": "La Viuda",
     "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": null
+    "estado": "en_proceso",
+    "tarea": "49ae240f-e58c-4828-9536-123bf73c5c60"
    },
    {
     "n": 4,
