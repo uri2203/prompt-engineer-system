@@ -1,8 +1,8 @@
 {
- "ts": "2026-08-21 13:09:00",
+ "ts": "2026-08-21 13:10:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
-  "sd": "off",
+  "sd": "on",
   "voz": "off",
   "parallax": "on"
  },
@@ -89,11 +89,6 @@
   "============================================================"
  ],
  "orquestador_log": [
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +163,12 @@
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
   "[CICLO 6] accion='' | lote_activo=True | estado=esperando_nodo",
-  "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)"
+  "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CICLO 7] accion='iniciar' | lote_activo=True | estado=esperando_nodo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "Lanzando video 2/8: Monkygraff 16:9"
  ],
  "fase": {
   "nombre": "idle",
