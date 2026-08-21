@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 17:21:00",
+ "ts": "2026-08-21 17:22:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 22/30...",
-  "   [PEXELS] Query de Gemini: 'oil refinery tanks'",
-  "   [PEXELS] Buscando: 'oil refinery tanks' (landscape) [relevancia=sí]...",
   "   [PEXELS] Clip ID 29959227 encontrado — descargando...",
   "   [PEXELS] Clip listo.",
   "   [OK] Escena 22 — Pexels ✅",
@@ -86,7 +83,10 @@
   "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
   "📱 9:16 SHORT → 3060 [192.168.0.215]",
   "⚙️ NODO 1: Escena 1/28...",
-  "   [SD] Intento 1/3 escena 1..."
+  "   [SD] Intento 1/3 escena 1...",
+  "   [OK] Nodo 1 — Escena 1 SD ✅",
+  "⚙️ NODO 1: Escena 2/28...",
+  "   [SD] Intento 1/3 escena 2..."
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 1,
+  "paso": 2,
   "total": 28,
   "detalle": "Generando escena",
-  "ts": "17:21:00"
+  "ts": "17:22:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
