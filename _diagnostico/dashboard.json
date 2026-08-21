@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 13:00:00",
+ "ts": "2026-08-21 13:01:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
@@ -89,7 +89,6 @@
   "============================================================"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 5409] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -168,7 +167,8 @@
   "============================================================",
   "RECUPERACION: lote encontrado - 1/8 hechos",
   "   Video 2 estaba a medias - se reintentara",
-  "[CICLO 1] accion='' | lote_activo=True | estado=produciendo"
+  "[CICLO 1] accion='' | lote_activo=True | estado=produciendo",
+  "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)"
  ],
  "fase": {
   "nombre": "idle",
@@ -190,20 +190,22 @@
   "detalle_escena": ""
  },
  "lote": {
-  "estado": "desconocido",
-  "mensaje": "",
+  "estado": "esperando_nodo",
+  "mensaje": "Nodo caido: ['SD (imagenes)'] - esperando (sin limite)",
   "video": 0,
   "total": 0,
   "marca": "",
   "formato": ""
  },
  "acciones_pendientes": [
-  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
+  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC",
+  "Orquestador esperando nodo: VOZ debe volver para lanzar video 1",
+  "Worker idle y lote sin producir: pendiente el arreglo de VOZ para que el orquestador lance el video 1"
  ],
  "lote_local": {
-  "estado": "produciendo",
-  "mensaje": "Produccion del video 2 iniciada.",
-  "trabajo": "Generando video 2 (Monkygraff)",
+  "estado": "esperando_nodo",
+  "mensaje": "Nodo(s) caido(s): SD (imagenes). Esperando que vuelvan...",
+  "trabajo": "Esperando nodo: SD (imagenes)",
   "videos_ok": 1,
   "en_proceso": 0,
   "pendientes": 7,
