@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 19:14:00",
+ "ts": "2026-08-21 19:15:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,8 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "",
-  "🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...",
   "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
   "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
   "   🟢 Nodo VOZ (http://192.168.0.251:8000)",
@@ -86,7 +84,9 @@
   "   [SD] Intento 1/3 escena 2...",
   "   ⚠️ SD respondió 0 — reintentando...",
   "   ℹ️ ADetailer retirado del payload para este reintento (¿no instalado en la GPU?).",
-  "   [SD] Intento 2/3 escena 2..."
+  "   [SD] Intento 2/3 escena 2...",
+  "   ⚠️ SD respondió 0 — reintentando...",
+  "   [SD] Intento 3/3 escena 2..."
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -175,7 +175,7 @@
   "paso": 2,
   "total": 25,
   "detalle": "Generando escena",
-  "ts": "19:14:00"
+  "ts": "19:15:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
