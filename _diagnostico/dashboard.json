@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-22 08:14:00",
+ "ts": "2026-08-22 08:15:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -194,11 +194,11 @@
  "acciones_pendientes": [],
  "lote_local": {
   "estado": "produciendo",
-  "mensaje": "No se pudo encolar el video 3 (intento 1/3), reintentando...",
-  "trabajo": "Generando video 3/8 (La Viuda 9:16)",
+  "mensaje": "Produccion del video 3 iniciada.",
+  "trabajo": "Generando video 3 (La Viuda)",
   "videos_ok": 1,
-  "en_proceso": 0,
-  "pendientes": 6,
+  "en_proceso": 1,
+  "pendientes": 5,
   "trabajos": [
    {
     "n": 1,
@@ -218,8 +218,8 @@
     "n": 3,
     "marca": "La Viuda",
     "formato": "9:16",
-    "estado": "pendiente",
-    "tarea": "9f895144-826b-4653-a0b4-d4f4116221b8"
+    "estado": "en_proceso",
+    "tarea": "942b3918-a92d-4afd-a368-bb475976ac4c"
    },
    {
     "n": 4,
