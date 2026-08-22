@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 18:48:01",
+ "ts": "2026-08-21 18:49:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,11 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [SD] Intento 1/3 escena 26...",
-  "   [OK] Nodo 1 — Escena 26 SD ✅",
-  "⚙️ NODO 1: Escena 27/30...",
-  "   [PEXELS] Query de Gemini: 'data center servers empty'",
-  "   [PEXELS] Buscando: 'data center servers empty' (landscape) [relevancia=sí]...",
   "   [PEXELS] Clip ID 14388669 encontrado — descargando...",
   "   [PEXELS] Clip listo.",
   "   [OK] Escena 27 — Pexels ✅",
@@ -86,7 +81,12 @@
   "   [OK] Nodo 1 — Escena 5 SD ✅",
   "⚙️ NODO 1: Escena 6/28...",
   "   [SD] Intento 1/3 escena 6...",
-  "^C"
+  "^C=== WRAPPER WORKER 21/08/2026 18:49:06.35 === ",
+  "⚡ NODO XEON ONLINE",
+  "============================================================",
+  ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
+  ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
+  "============================================================"
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -175,7 +175,7 @@
   "paso": 6,
   "total": 28,
   "detalle": "Generando escena",
-  "ts": "18:48:01"
+  "ts": "18:49:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
