@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 19:12:00",
+ "ts": "2026-08-21 19:13:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "   [LIBRE] Worker disponible para la siguiente orden.",
-  "🧹 [LIMPIEZA] 1 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
-  "🛑 [BLOQUEO] Tarea 2aa57d1d-2a8d-4d51-9690-f849a69a087a ya se completó localmente. Evitando bucle infinito...",
   "",
   "🎬 [ENSAMBLAJE V8.4.8] Iniciando Motor Híbrido Multicapa...",
   "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
@@ -86,7 +83,10 @@
   "   ⚠️ SD respondió 0 — reintentando...",
   "   ❌ Escena 1 sin imagen válida tras 3 intentos.",
   "⚙️ NODO 1: Escena 2/25...",
-  "   [SD] Intento 1/3 escena 2..."
+  "   [SD] Intento 1/3 escena 2...",
+  "   ⚠️ SD respondió 0 — reintentando...",
+  "   ℹ️ ADetailer retirado del payload para este reintento (¿no instalado en la GPU?).",
+  "   [SD] Intento 2/3 escena 2..."
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -175,7 +175,7 @@
   "paso": 2,
   "total": 25,
   "detalle": "Generando escena",
-  "ts": "19:12:00"
+  "ts": "19:13:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
