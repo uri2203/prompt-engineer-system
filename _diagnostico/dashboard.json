@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 19:16:00",
+ "ts": "2026-08-21 19:17:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,13 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
-  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
-  "   🟢 Nodo VOZ (http://192.168.0.251:8000)",
-  "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
-  "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
-  "🎙️ Generando audio con motor de voz local (XTTS)...",
-  "[VOICE LOCAL] Canal: Monkygraff | Palabras Totales: 3454 | Job: e9200ca3",
   "[VOICE LOCAL] Modo CHUNKS (Reconstrucción de Metadatos Activa)",
   "[VOICE LOCAL] Texto partido en 33 chunks de máximo 120 palabras.",
   "[VOICE LOCAL] Procesando chunk 1/33 (107 palabras)...",
@@ -86,7 +79,14 @@
   "   ℹ️ ADetailer retirado del payload para este reintento (¿no instalado en la GPU?).",
   "   [SD] Intento 2/3 escena 2...",
   "   ⚠️ SD respondió 0 — reintentando...",
-  "   [SD] Intento 3/3 escena 2..."
+  "   [SD] Intento 3/3 escena 2...",
+  "   ⚠️ SD respondió 3221225786 — reintentando...",
+  "^C=== WRAPPER WORKER 21/08/2026 19:16:51.97 === ",
+  "⚡ NODO XEON ONLINE",
+  "============================================================",
+  ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
+  ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
+  "============================================================"
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -175,7 +175,7 @@
   "paso": 2,
   "total": 25,
   "detalle": "Generando escena",
-  "ts": "19:16:00"
+  "ts": "19:17:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
