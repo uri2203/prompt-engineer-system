@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-21 22:12:00",
+ "ts": "2026-08-21 22:13:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,7 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "[VOICE LOCAL] Modo CHUNKS (Reconstrucción de Metadatos Activa)",
   "[VOICE LOCAL] Texto partido en 33 chunks de máximo 120 palabras.",
   "[VOICE LOCAL] Procesando chunk 1/33 (107 palabras)...",
   "[VOICE LOCAL] Chunk 1 intento 1/4 — HTTP 500 — esperando 5s...",
@@ -86,7 +85,8 @@
   "============================================================",
   ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
   ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
-  "============================================================"
+  "============================================================",
+  "^C"
  ],
  "orquestador_log": [
   "[CICLO 307] accion='' | lote_activo=True | estado=produciendo",
@@ -175,7 +175,7 @@
   "paso": 2,
   "total": 25,
   "detalle": "Generando escena",
-  "ts": "22:12:01"
+  "ts": "22:13:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
