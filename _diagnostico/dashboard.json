@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-22 08:10:00",
+ "ts": "2026-08-22 08:11:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -197,8 +197,8 @@
   "mensaje": "Video 3 (La Viuda 9:16) lanzado en Render, esperando worker",
   "trabajo": "Generando video 3/8 (La Viuda 9:16)",
   "videos_ok": 1,
-  "en_proceso": 1,
-  "pendientes": 5,
+  "en_proceso": 0,
+  "pendientes": 6,
   "trabajos": [
    {
     "n": 1,
@@ -218,7 +218,7 @@
     "n": 3,
     "marca": "La Viuda",
     "formato": "9:16",
-    "estado": "en_proceso",
+    "estado": "pendiente",
     "tarea": "9f895144-826b-4653-a0b4-d4f4116221b8"
    },
    {
