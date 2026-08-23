@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-23 12:34:00",
+ "ts": "2026-08-23 12:35:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,13 +7,17 @@
   "parallax": "on"
  },
  "worker_log": [
-  " ",
-  "=== WRAPPER WORKER 23/08/2026 12:31:56.25 === ",
-  "⚡ NODO XEON ONLINE",
-  "============================================================",
-  ">>> VERSION_WORKER: 2026-08-18_v10_editor_pro <<<",
-  ">>> Video completo siempre + orden del lote + re-hook en pausa <<<",
-  "============================================================",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
+  "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
   "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
   "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
   "⚠️ Error en ciclo de ejecución: name '_json_mod' is not defined",
