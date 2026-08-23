@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-23 11:47:00",
+ "ts": "2026-08-23 11:48:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -89,12 +89,6 @@
   "⚠️ Error en ciclo de ejecución: 'dict' object has no attribute 'dumps'"
  ],
  "orquestador_log": [
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CICLO 1491] accion='' | lote_activo=True | estado=produciendo",
-  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
-  "[CICLO 1496] accion='iniciar' | lote_activo=True | estado=produciendo",
-  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
-  "[CICLO 1497] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 1531] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -128,6 +122,12 @@
   "[CICLO 1545] accion='' | lote_activo=True | estado=produciendo",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 1547] accion='iniciar' | lote_activo=True | estado=produciendo",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
