@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-23 19:28:00",
+ "ts": "2026-08-23 19:29:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 28/28...",
-  "   [SD] Intento 1/3 escena 28...",
-  "   [OK] Nodo 1 — Escena 28 SD ✅",
   "✅ [IMÁGENES LISTAS] Subidas a la nube. Falta ensamblar (voz+video).",
   "",
   "   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente",
@@ -86,7 +83,10 @@
   "   [SD] Intento 1/3 escena 21...",
   "   [OK] Nodo 1 — Escena 21 SD ✅",
   "⚙️ NODO 1: Escena 22/27...",
-  "   [SD] Intento 1/3 escena 22..."
+  "   [SD] Intento 1/3 escena 22...",
+  "   [OK] Nodo 1 — Escena 22 SD ✅",
+  "⚙️ NODO 1: Escena 23/27...",
+  "   [SD] Intento 1/3 escena 23..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 22,
+  "paso": 23,
   "total": 27,
   "detalle": "Generando escena",
-  "ts": "19:28:01"
+  "ts": "19:29:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
