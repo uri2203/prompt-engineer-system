@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-23 20:16:01",
+ "ts": "2026-08-23 20:17:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,9 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 6/27...",
-  "   [SD] Intento 1/3 escena 6...",
-  "   [OK] Nodo 1 — Escena 6 SD ✅",
   "⚙️ NODO 1: Escena 7/27...",
   "   [SD] Intento 1/3 escena 7...",
   "   [OK] Nodo 1 — Escena 7 SD ✅",
@@ -86,7 +83,10 @@
   "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
   "📱 9:16 SHORT → 3060 [192.168.0.215]",
   "⚙️ NODO 1: Escena 1/28...",
-  "   [SD] Intento 1/3 escena 1..."
+  "   [SD] Intento 1/3 escena 1...",
+  "   [OK] Nodo 1 — Escena 1 SD ✅",
+  "⚙️ NODO 1: Escena 2/28...",
+  "   [SD] Intento 1/3 escena 2..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -172,10 +172,10 @@
  ],
  "fase": {
   "nombre": "IMAGEN",
-  "paso": 1,
+  "paso": 2,
   "total": 28,
   "detalle": "Generando escena",
-  "ts": "20:16:01"
+  "ts": "20:17:00"
  },
  "cadena": {
   "ensamblaje_activo": false,
