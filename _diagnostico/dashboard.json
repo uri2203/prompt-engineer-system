@@ -1,9 +1,9 @@
 {
- "ts": "2026-08-23 22:32:01",
+ "ts": "2026-08-23 22:33:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
-  "voz": "on",
+  "voz": "off",
   "parallax": "on"
  },
  "worker_log": [
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "22:32:01"
+  "ts": "22:33:07"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -197,7 +197,9 @@
   "marca": "",
   "formato": ""
  },
- "acciones_pendientes": [],
+ "acciones_pendientes": [
+  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
+ ],
  "lote_local": {
   "estado": "produciendo",
   "mensaje": "Produccion del video 1 iniciada.",
