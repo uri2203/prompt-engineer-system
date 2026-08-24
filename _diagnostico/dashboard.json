@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-23 20:14:01",
+ "ts": "2026-08-23 20:15:01",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -7,15 +7,6 @@
   "parallax": "on"
  },
  "worker_log": [
-  "⚙️ NODO 1: Escena 3/27...",
-  "   [SD] Intento 1/3 escena 3...",
-  "   [OK] Nodo 1 — Escena 3 SD ✅",
-  "⚙️ NODO 1: Escena 4/27...",
-  "   [SD] Intento 1/3 escena 4...",
-  "   [OK] Nodo 1 — Escena 4 SD ✅",
-  "⚙️ NODO 1: Escena 5/27...",
-  "   [SD] Intento 1/3 escena 5...",
-  "   [OK] Nodo 1 — Escena 5 SD ✅",
   "⚙️ NODO 1: Escena 6/27...",
   "   [SD] Intento 1/3 escena 6...",
   "   [OK] Nodo 1 — Escena 6 SD ✅",
@@ -86,7 +77,16 @@
   "",
   "   [PIPELINE] Ensamblaje encolado localmente → continuará automáticamente",
   "   [LIBRE] Worker disponible para la siguiente orden.",
-  "🧹 [LIMPIEZA] 2 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos."
+  "🧹 [LIMPIEZA] 2 ensamblaje(s) pendiente(s) borrados de la cola local. Lote cancelado por el operador — no se producen videos viejos.",
+  "",
+  "🚀 [ORDEN VISUAL] ID: 9475fa95-ed03-474e-950f-9854bf291fb6",
+  "🔎 [PRE-FLIGHT] Verificando nodos antes de empezar...",
+  "   🟢 Nodo IMÁGENES (SD http://192.168.0.215:7861)",
+  "   🟢 Nodo PARALLAX (DepthFlow http://192.168.0.215:8500) ",
+  "✅ [PRE-FLIGHT] Todos los nodos críticos activos. Procediendo.",
+  "📱 9:16 SHORT → 3060 [192.168.0.215]",
+  "⚙️ NODO 1: Escena 1/28...",
+  "   [SD] Intento 1/3 escena 1..."
  ],
  "orquestador_log": [
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
@@ -171,11 +171,11 @@
   "^C"
  ],
  "fase": {
-  "nombre": "idle",
-  "paso": 0,
-  "total": 0,
-  "detalle": "Worker disponible",
-  "ts": "20:14:01"
+  "nombre": "IMAGEN",
+  "paso": 1,
+  "total": 28,
+  "detalle": "Generando escena",
+  "ts": "20:15:01"
  },
  "cadena": {
   "ensamblaje_activo": false,
