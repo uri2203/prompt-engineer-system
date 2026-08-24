@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-24 04:05:00",
+ "ts": "2026-08-24 04:06:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -132,15 +132,15 @@
   "mensaje": "Produccion del video 1 iniciada.",
   "trabajo": "Generando video 1 (La Viuda)",
   "videos_ok": 0,
-  "en_proceso": 0,
-  "pendientes": 8,
+  "en_proceso": 1,
+  "pendientes": 7,
   "trabajos": [
    {
     "n": 1,
     "marca": "La Viuda",
     "formato": "16:9",
-    "estado": "pendiente",
-    "tarea": "64cfff6e-fecf-4d78-a3ad-76e2a97c7ba6"
+    "estado": "en_proceso",
+    "tarea": "5395b9e0-191d-4f04-8fb1-60d0afe81327"
    },
    {
     "n": 2,
