@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-24 04:19:00",
+ "ts": "2026-08-24 04:20:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "on",
@@ -40,17 +40,17 @@
   "   [SD] Intento 1/3 escena 6..."
  ],
  "orquestador_log": [
-  "ORQUESTADOR DE LOTE - Motor de Produccion Industrial",
-  "Vive en el Xeon - Espera indefinida - Retoma tras cortes de luz",
-  "============================================================",
-  "RECUPERACION: lote encontrado - 0/8 hechos",
-  "   Video 1 estaba a medias - se reintentara",
-  "   Video 3 estaba a medias - se reintentara",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CICLO 1] accion='iniciar' | lote_activo=True | estado=produciendo",
   "[CONTROL] 'iniciar' ignorado: ya hay un lote en curso.",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "Lanzando video 1/8: La Viuda 16:9",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
+  "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
+  "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
   "[CONTROL] 'iniciar' (ts=1787101000.0) ya procesado — esperando que el control se limpie...",
   "[CONTROL] Leído desde GitHub (fallback directo): iniciar",
@@ -126,7 +126,7 @@
   "paso": 6,
   "total": 30,
   "detalle": "Generando escena",
-  "ts": "04:19:03"
+  "ts": "04:20:03"
  },
  "cadena": {
   "ensamblaje_activo": false,
