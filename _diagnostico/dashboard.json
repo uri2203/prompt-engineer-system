@@ -1,8 +1,8 @@
 {
- "ts": "2026-08-24 21:18:00",
+ "ts": "2026-08-24 21:19:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
-  "sd": "on",
+  "sd": "off",
   "voz": "off",
   "parallax": "off"
  },
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "21:18:09"
+  "ts": "21:19:15"
  },
  "cadena": {
   "ensamblaje_activo": false,
