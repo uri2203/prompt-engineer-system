@@ -1,10 +1,10 @@
 {
- "ts": "2026-08-25 10:31:00",
+ "ts": "2026-08-25 10:32:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
   "voz": "off",
-  "parallax": "off"
+  "parallax": "on"
  },
  "worker_log": [
   "   [SD] Intento 1/3 escena 14...",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "10:31:14"
+  "ts": "10:32:08"
  },
  "cadena": {
   "ensamblaje_activo": false,
