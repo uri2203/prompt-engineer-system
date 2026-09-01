@@ -1,5 +1,5 @@
 {
- "ts": "2026-08-31 21:22:00",
+ "ts": "2026-08-31 21:23:00",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
@@ -175,7 +175,7 @@
   "paso": 0,
   "total": 0,
   "detalle": "Worker disponible",
-  "ts": "21:22:14"
+  "ts": "21:23:14"
  },
  "cadena": {
   "ensamblaje_activo": false,
@@ -201,18 +201,18 @@
   "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
  ],
  "lote_local": {
-  "estado": "produciendo",
-  "mensaje": "Produccion del video 1 iniciada.",
-  "trabajo": "Generando video 1 (La Viuda)",
+  "estado": "esperando_nodo",
+  "mensaje": "Nodo(s) caido(s): SD (imagenes). Esperando que vuelvan...",
+  "trabajo": "Esperando nodo: SD (imagenes)",
   "videos_ok": 0,
-  "en_proceso": 1,
-  "pendientes": 7,
+  "en_proceso": 0,
+  "pendientes": 8,
   "trabajos": [
    {
     "n": 1,
     "marca": "La Viuda",
     "formato": "16:9",
-    "estado": "en_proceso",
+    "estado": "pendiente",
     "tarea": "5395b9e0-191d-4f04-8fb1-60d0afe81327"
    },
    {
