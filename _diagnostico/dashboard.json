@@ -1,9 +1,9 @@
 {
- "ts": "2026-09-01 08:36:01",
+ "ts": "2026-09-02 05:14:02",
  "origen": "watchdog local (PC SistemasTx)",
  "nodos": {
   "sd": "off",
-  "voz": "off",
+  "voz": "on",
   "parallax": "off"
  },
  "worker_log": [],
@@ -35,9 +35,7 @@
   "marca": "",
   "formato": ""
  },
- "acciones_pendientes": [
-  "Nodo VOZ caido en 192.168.0.251: falta doble clic a C:\\NODO_PINPINELA\\arreglar_voz.bat en esa PC"
- ],
+ "acciones_pendientes": [],
  "lote_local": null,
  "cola_local": 0,
  "render_lote": {
